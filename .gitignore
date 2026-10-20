@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Tauri / Rust build artifacts
+src-tauri/target/
+src-tauri/WixTools/
+
+# Local SQLite database & user packs (keep personal study data local or in Google Drive)
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.fofopack
+
+# Environment variables & API keys
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
