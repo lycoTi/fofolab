@@ -60,7 +60,7 @@ export interface StudentContextSnapshot {
   relatedPrerequisites: string[];
 }
 
-type RealProvider = 'GATEWAY' | 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK';
+type RealProvider = 'GATEWAY' | 'GROQ_FREE' | 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK';
 
 export interface AiStatus {
   configured: boolean;
@@ -72,6 +72,11 @@ const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_GEMINI_MODEL = 'gemini-flash-latest';
 // deepseek-chat foi desligado em 24/07/2026; deepseek-flash é o nome atual do modelo barato.
 const DEFAULT_DEEPSEEK_MODEL = 'deepseek-flash';
+const DEEPSEEK_URL = 'https://api.deepseek.com/chat/completions';
+// No teste de 21/10/2026 foi o único modelo grátis do Groq que acertou conceitos de auditoria (ISSAI);
+// os gpt-oss inventaram definições.
+const DEFAULT_GROQ_MODEL = 'qwen/qwen3.8-27b';
+const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 function readEnv(name: keyof ImportMetaEnv): string | undefined {
   const value = import.meta.env?.[name];
@@ -81,6 +86,7 @@ function readEnv(name: keyof ImportMetaEnv): string | undefined {
 export function getAiStatus(): AiStatus {
   const providers: RealProvider[] = [];
   if (readEnv('VITE_FOFOLAB_AI_GATEWAY_URL')) providers.push('GATEWAY');
+  if (readEnv('VITE_GROQ_API_KEY')) providers.push('GROQ_FREE');
   if (readEnv('VITE_GEMINI_API_KEY')) providers.push('GEMINI_FREE');
   if (readEnv('VITE_DEEPSEEK_API_KEY')) providers.push('DEEPSEEK_FALLBACK');
   return { configured: providers.length > 0, providers };
@@ -270,20 +276,38 @@ async function callGemini(apiKey: string, prompt: string, json: boolean): Promis
   return typeof text === 'string' && text.trim() ? text : null;
 }
 
-async function callDeepSeek(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
-  const data = (await fetchJson('https://api.deepseek.com/chat/completions', {
+/** Groq e DeepSeek falam o formato de chat da OpenAI; `extra` leva os campos próprios de cada um. */
+async function callOpenAiCompatible(
+  url: string,
+  apiKey: string,
+  model: string,
+  prompt: string,
+  json: boolean,
+  extra: Record<string, unknown> = {}
+): Promise<string | null> {
+  const data = (await fetchJson(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
-      model: readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL,
-      // O modo de raciocínio vem ligado por padrão e cobra os tokens de pensamento como saída.
-      thinking: { type: 'disabled' },
+      model,
+      ...extra,
       messages: [{ role: 'user', content: prompt }],
       ...(json ? { response_format: { type: 'json_object' } } : {}),
     }),
   })) as { choices?: { message?: { content?: unknown } }[] } | null;
   const text = data?.choices?.[0]?.message?.content;
   return typeof text === 'string' && text.trim() ? text : null;
+}
+
+function callGroq(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
+  const model = readEnv('VITE_GROQ_MODEL') ?? DEFAULT_GROQ_MODEL;
+  return callOpenAiCompatible(GROQ_URL, apiKey, model, prompt, json);
+}
+
+function callDeepSeek(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
+  const model = readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL;
+  // O modo de raciocínio vem ligado por padrão e cobra os tokens de pensamento como saída.
+  return callOpenAiCompatible(DEEPSEEK_URL, apiKey, model, prompt, json, { thinking: { type: 'disabled' } });
 }
 
 /** Tenta os provedores configurados em ordem; `null` se nenhum respondeu. */
@@ -297,6 +321,12 @@ async function callAiProviders(
   if (gatewayUrl) {
     const text = await callGateway(gatewayUrl, prompt, json);
     if (text) return { text, provider: 'GATEWAY' };
+  }
+
+  const groqKey = readEnv('VITE_GROQ_API_KEY');
+  if (groqKey) {
+    const text = await callGroq(groqKey, prompt, json);
+    if (text) return { text, provider: 'GROQ_FREE' };
   }
 
   const geminiKey = readEnv('VITE_GEMINI_API_KEY');

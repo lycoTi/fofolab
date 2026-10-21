@@ -67,6 +67,7 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
   // Sem chave configurada = modo demonstração (independe do .env de quem roda os testes)
   beforeEach(() => {
     vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', '');
+    vi.stubEnv('VITE_GROQ_API_KEY', '');
     vi.stubEnv('VITE_GEMINI_API_KEY', '');
     vi.stubEnv('VITE_DEEPSEEK_API_KEY', '');
   });

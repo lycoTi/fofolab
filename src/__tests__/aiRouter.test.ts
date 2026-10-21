@@ -13,6 +13,7 @@ const question = SEED_QUESTIONS[0];
 
 function stubNoAi() {
   vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', '');
+  vi.stubEnv('VITE_GROQ_API_KEY', '');
   vi.stubEnv('VITE_GEMINI_API_KEY', '');
   vi.stubEnv('VITE_DEEPSEEK_API_KEY', '');
 }
@@ -27,6 +28,7 @@ function geminiResponse(text: string) {
 afterEach(() => {
   vi.unstubAllEnvs();
   vi.unstubAllGlobals();
+  vi.restoreAllMocks();
 });
 
 describe('Roteador de IA: modo demonstração honesto, grounding e explicação guardada', () => {
@@ -73,6 +75,23 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     expect(reply.failed).toBe(true);
     expect(reply.simulated).toBe(false);
     expect(reply.reply).toMatch(/Não consegui falar com a IA/);
+  });
+
+  it('tenta o Groq primeiro e, se ele falhar, cai no Gemini', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    vi.stubEnv('VITE_GEMINI_API_KEY', 'chave-gemini');
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const fetchMock = vi.fn(async (url: string) =>
+      url.includes('groq.com') ? new Response('limite', { status: 429 }) : geminiResponse('Resposta do Gemini')
+    );
+    vi.stubGlobal('fetch', fetchMock);
+
+    const reply = await askReverseStudyTutor({ question, dissection: null, promptText: 'Explique' });
+    expect(reply).toEqual({ reply: 'Resposta do Gemini', provider: 'GEMINI_FREE', simulated: false });
+    const [groqUrl, groqInit] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
+    expect(groqUrl).toBe('https://api.groq.com/openai/v1/chat/completions');
+    expect(JSON.parse(String(groqInit.body)).model).toBe('qwen/qwen3.8-27b');
   });
 
   it('gera a explicação-base em JSON (aceitando cercas de código) e recusa formato inválido', async () => {
