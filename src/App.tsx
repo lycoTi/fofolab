@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   BookOpen,
-  Brain,
   CheckCircle2,
   Clock,
+  Database,
   FileText,
   FolderGit2,
   GraduationCap,
@@ -11,64 +11,249 @@ import {
   Layers,
   Network,
   Play,
+  Plus,
+  Save,
+  Settings2,
   ShieldAlert,
   Sparkles,
   Wrench,
 } from 'lucide-react';
+import { CurriculumManagerModal } from './components/CurriculumManagerModal';
+import {
+  createStudyPlan,
+  createSubject,
+  createTopic,
+  deleteStudyPlan,
+  deleteSubject,
+  deleteTopic,
+  exportDatabaseBinary,
+  getAdminCatalogAndBlueprints,
+  getNotebookForTopic,
+  getPdfSourceForTopic,
+  getQuestionsForTopicOrSubject,
+  getStudyPlans,
+  getSubjectsByPlan,
+  getTopicsBySubject,
+  initDatabase,
+  recordQuestionDiagnosis,
+  resetDatabaseToSeed,
+  saveTopicNotebook,
+  setActiveStudyPlan,
+  updateStudyPlan,
+  updateSubject,
+  updateTopic,
+} from './lib/database';
+import type {
+  AdminBoardBlueprint,
+  AiDissection,
+  CareerTrack,
+  CreateStudyPlanInput,
+  CreateSubjectInput,
+  CreateTopicInput,
+  Notebook,
+  PdfSource,
+  Question,
+  SelfDiagnosisType,
+  StudyPlan,
+  Subject,
+  Topic,
+} from './types/database';
 
 type WorkbenchTab = 'notebooks' | 'questions' | 'pdf' | 'cycle' | 'graph';
 type AppMode = 'student' | 'admin';
 
-const INITIAL_SUBJECTS = [
-  {
-    id: 'auditoria',
-    name: 'Auditoria Governamental',
-    category: 'ESPECIFICO',
-    mastery: 74,
-    cycleMinutes: 90,
-    topics: [
-      { id: 't1', code: '1.1', title: 'Normas Internacionais de Auditoria (ISSAI / NBC TA)', mastery: 82, pdfPage: '24/68' },
-      { id: 't2', code: '1.2', title: 'Controle Interno na Administração Pública Federal (CGU)', mastery: 68, pdfPage: '12/45' },
-    ],
-  },
-  {
-    id: 'ti-dev',
-    name: 'TI — Desenvolvimento & Arquitetura',
-    category: 'ESPECIFICO',
-    mastery: 86,
-    cycleMinutes: 60,
-    topics: [
-      { id: 't3', code: '2.1', title: 'Arquitetura Limpa, Microsserviços e APIs REST', mastery: 91, pdfPage: '40/40' },
-      { id: 't4', code: '2.2', title: 'Segurança de Aplicações (OWASP Top 10)', mastery: 79, pdfPage: '18/32' },
-    ],
-  },
-  {
-    id: 'contabilidade',
-    name: 'Contabilidade Pública (CASP)',
-    category: 'ESPECIFICO',
-    mastery: 42,
-    cycleMinutes: 120,
-    topics: [
-      { id: 't5', code: '3.1', title: 'Plano de Contas Aplicado ao Setor Público (PCASP)', mastery: 38, pdfPage: '9/95' },
-      { id: 't6', code: '3.2', title: 'Demonstrações Contábeis Aplicadas ao Setor Público (DCASP)', mastery: 45, pdfPage: '5/70' },
-    ],
-  },
-];
-
 export default function App() {
+  const [dbReady, setDbReady] = useState(false);
   const [mode, setMode] = useState<AppMode>('student');
-  const [selectedSubjectId, setSelectedSubjectId] = useState('auditoria');
-  const [selectedTopicId, setSelectedTopicId] = useState('t1');
   const [activeTab, setActiveTab] = useState<WorkbenchTab>('questions');
-  const [lastDiagnosis, setLastDiagnosis] = useState<string | null>(null);
 
-  const currentSubject = INITIAL_SUBJECTS.find((s) => s.id === selectedSubjectId) || INITIAL_SUBJECTS[0];
-  const currentTopic = currentSubject.topics.find((t) => t.id === selectedTopicId) || currentSubject.topics[0];
+  // Estado sincronizado com SQLite
+  const [plans, setPlans] = useState<StudyPlan[]>([]);
+  const [activePlan, setActivePlan] = useState<StudyPlan | null>(null);
+  const [subjects, setSubjects] = useState<Subject[]>([]);
+  const [selectedSubjectId, setSelectedSubjectId] = useState<string>('');
+  const [topicsBySubject, setTopicsBySubject] = useState<Record<string, Topic[]>>({});
+  const [selectedTopicId, setSelectedTopicId] = useState<string>('');
+
+  // Entidades da Bancada do Tópico atual
+  const [topicQuestions, setTopicQuestions] = useState<
+    { question: Question; dissection: AiDissection | null }[]
+  >([]);
+  const [selectedOptionIdx, setSelectedOptionIdx] = useState<number>(2);
+  const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
+  const [notebook, setNotebook] = useState<Notebook | null>(null);
+  const [notebookDraft, setNotebookDraft] = useState<string>('');
+  const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
+
+  // Admin state
+  const [adminData, setAdminData] = useState<{
+    tracks: CareerTrack[];
+    blueprints: AdminBoardBlueprint[];
+    stats: { plans: number; subjects: number; topics: number; questions: number; attempts: number };
+  } | null>(null);
+
+  // Modal de CRUD do Edital Verticalizado
+  const [crudModalOpen, setCrudModalOpen] = useState(false);
+  const [crudInitialSection, setCrudInitialSection] = useState<'plans' | 'subjects' | 'topics'>(
+    'topics'
+  );
+
+  const refreshFromSqlite = useCallback(
+    (preferredSubjectId?: string, preferredTopicId?: string) => {
+      const allPlans = getStudyPlans();
+      setPlans(allPlans);
+      const currentPlan = allPlans.find((p) => p.is_active === 1) || allPlans[0] || null;
+      setActivePlan(currentPlan);
+
+      if (!currentPlan) {
+        setSubjects([]);
+        setTopicsBySubject({});
+        return;
+      }
+
+      const planSubjects = getSubjectsByPlan(currentPlan.id);
+      setSubjects(planSubjects);
+
+      const topicsMap: Record<string, Topic[]> = {};
+      for (const s of planSubjects) {
+        topicsMap[s.id] = getTopicsBySubject(s.id);
+      }
+      setTopicsBySubject(topicsMap);
+
+      const targetSubjId =
+        preferredSubjectId && planSubjects.some((s) => s.id === preferredSubjectId)
+          ? preferredSubjectId
+          : planSubjects.some((s) => s.id === selectedSubjectId)
+            ? selectedSubjectId
+            : planSubjects[0]?.id || '';
+
+      setSelectedSubjectId(targetSubjId);
+
+      const subjTopics = topicsMap[targetSubjId] || [];
+      const targetTopicId =
+        preferredTopicId && subjTopics.some((t) => t.id === preferredTopicId)
+          ? preferredTopicId
+          : subjTopics.some((t) => t.id === selectedTopicId)
+            ? selectedTopicId
+            : subjTopics[0]?.id || '';
+
+      setSelectedTopicId(targetTopicId);
+      setAdminData(getAdminCatalogAndBlueprints());
+    },
+    [selectedSubjectId, selectedTopicId]
+  );
+
+  useEffect(() => {
+    initDatabase().then(() => {
+      setDbReady(true);
+      refreshFromSqlite();
+    });
+  }, []);
+
+  // Carrega Questões, Caderno e PDF quando muda a disciplina ou tópico
+  useEffect(() => {
+    if (!dbReady || !selectedSubjectId) return;
+    const qs = getQuestionsForTopicOrSubject(selectedTopicId, selectedSubjectId);
+    setTopicQuestions(qs);
+    setLastDiagnosisMsg(null);
+
+    const nb = getNotebookForTopic(selectedSubjectId, selectedTopicId);
+    setNotebook(nb);
+    setNotebookDraft(
+      nb?.content_markdown ||
+        `# Caderno do Tópico\n\nAnote seus resumos, mnemônicos e jurisprudências aqui...`
+    );
+
+    const pdf = getPdfSourceForTopic(selectedSubjectId, selectedTopicId);
+    setPdfSource(pdf);
+  }, [dbReady, selectedSubjectId, selectedTopicId]);
+
+  if (!dbReady || !activePlan) {
+    return (
+      <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200">
+        <div className="flex items-center gap-3 text-sm">
+          <div className="h-8 w-8 rounded-lg bg-orange-500/20 border border-orange-500/40 flex items-center justify-center animate-pulse">
+            🐹
+          </div>
+          <span>Inicializando motor SQLite local (01-database-schema.sql)...</span>
+        </div>
+      </div>
+    );
+  }
+
+  const currentSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
+  const currentTopics = currentSubject ? topicsBySubject[currentSubject.id] || [] : [];
+  const currentTopic =
+    currentTopics.find((t) => t.id === selectedTopicId) || currentTopics[0] || null;
+
+  const activeQuestionBundle = topicQuestions[0] || null;
+  const parsedOptions: string[] = activeQuestionBundle
+    ? (() => {
+        try {
+          return JSON.parse(activeQuestionBundle.question.options_json);
+        } catch {
+          return [];
+        }
+      })()
+    : [];
+
+  const handleSelectPlan = (planId: string) => {
+    setActiveStudyPlan(planId);
+    const nextSubjects = getSubjectsByPlan(planId);
+    const firstSubj = nextSubjects[0]?.id || '';
+    const firstTopic = firstSubj ? getTopicsBySubject(firstSubj)[0]?.id || '' : '';
+    refreshFromSqlite(firstSubj, firstTopic);
+  };
+
+  const handleDiagnosisClick = (diagnosis: SelfDiagnosisType, label: string) => {
+    if (!currentTopic || !activeQuestionBundle) return;
+    const optionLetter = ['A', 'B', 'C', 'D', 'E'][selectedOptionIdx] || 'C';
+    const isCorrect = optionLetter === activeQuestionBundle.question.final_answer;
+
+    const { updatedTopic, deltaMastery } = recordQuestionDiagnosis({
+      questionId: activeQuestionBundle.question.id,
+      topicId: currentTopic.id,
+      selectedOption: optionLetter,
+      isCorrect,
+      selfDiagnosis: diagnosis,
+    });
+
+    const sign = deltaMastery > 0 ? `+${deltaMastery}%` : `${deltaMastery}%`;
+    setLastDiagnosisMsg(
+      `${label} gravado no SQLite! Domínio do tópico: ${updatedTopic?.mastery_score ?? currentTopic.mastery_score}% (${sign})`
+    );
+    refreshFromSqlite(currentSubject?.id, currentTopic.id);
+  };
+
+  const handleAppendDissectionToNotebook = () => {
+    if (!currentSubject || !currentTopic || !activeQuestionBundle?.dissection) return;
+    const appended = `${notebookDraft}\n\n---\n### 🤖 Destrinchamento Anexado (${activeQuestionBundle.question.exam_board} ${activeQuestionBundle.question.exam_year})\n${activeQuestionBundle.dissection.dissection_markdown}`;
+    const saved = saveTopicNotebook({
+      subjectId: currentSubject.id,
+      topicId: currentTopic.id,
+      title: `Caderno ${currentTopic.code} — ${currentTopic.title}`,
+      contentMarkdown: appended,
+    });
+    setNotebook(saved);
+    setNotebookDraft(saved.content_markdown);
+    setActiveTab('notebooks');
+  };
+
+  const handleExportDatabase = () => {
+    const bytes = exportDatabaseBinary();
+    const blob = new Blob([new Uint8Array(bytes)], { type: 'application/x-sqlite3' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `fofolab-${activePlan.organ?.toLowerCase() || 'backup'}.sqlite`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-slate-950 text-slate-100">
-      {/* Sidebar Esquerda: Identidade FofoLab + Árvore do Edital */}
-      <aside className="w-80 border-r border-slate-800 bg-slate-900/70 flex flex-col">
+      {/* Sidebar Esquerda: Identidade FofoLab + Seletor de Plano + Árvore do Edital */}
+      <aside className="w-84 border-r border-slate-800 bg-slate-900/70 flex flex-col shrink-0">
         <div className="p-4 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-xl shadow-lg shadow-orange-500/20">
@@ -76,7 +261,10 @@ export default function App() {
             </div>
             <div>
               <h1 className="font-bold text-base tracking-tight flex items-center gap-1.5">
-                FofoLab <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-300 font-semibold">v0.1</span>
+                FofoLab{' '}
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-300 font-semibold">
+                  v0.2 SQLite
+                </span>
               </h1>
               <p className="text-xs text-slate-400">Bancada de Estudos Local</p>
             </div>
@@ -96,28 +284,69 @@ export default function App() {
           </button>
         </div>
 
-        {/* Plano Ativo / Meta CGU */}
-        <div className="p-3 mx-3 mt-3 rounded-xl bg-slate-800/70 border border-slate-700/70">
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-            <span>🎯 Edital Ativo</span>
-            <span className="text-orange-400 font-semibold">Foco: CGU + BACEN</span>
+        {/* Plano Ativo (CGU / BACEN) com troca em 1 clique + botão CRUD */}
+        <div className="p-3 mx-3 mt-3 rounded-xl bg-slate-800/70 border border-slate-700/70 space-y-2">
+          <div className="flex items-center justify-between text-xs text-slate-400">
+            <span className="flex items-center gap-1 font-medium text-slate-300">
+              🎯 Edital Ativo
+            </span>
+            <button
+              onClick={() => {
+                setCrudInitialSection('plans');
+                setCrudModalOpen(true);
+              }}
+              className="text-[11px] text-orange-400 hover:text-orange-300 flex items-center gap-1 font-semibold"
+            >
+              <Settings2 size={12} />
+              Gerenciar Edital
+            </button>
           </div>
-          <p className="text-sm font-semibold text-white truncate">CGU — Auditor Federal (TI)</p>
-          <div className="mt-2 flex items-center justify-between text-[11px] text-slate-300">
-            <span>Meta: 4h30/dia</span>
-            <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-              SQLite Sincronizado
+
+          <select
+            value={activePlan.id}
+            onChange={(e) => handleSelectPlan(e.target.value)}
+            className="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs font-semibold text-white focus:border-orange-500 outline-none"
+          >
+            {plans.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.organ ? `[${p.organ}] ` : ''}
+                {p.title}
+              </option>
+            ))}
+          </select>
+
+          <div className="flex items-center justify-between text-[11px] text-slate-300 pt-0.5">
+            <span>
+              Meta: {(activePlan.weekly_hours_target / 7).toFixed(1)}h/dia ({activePlan.exam_board})
+            </span>
+            <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+              <Database size={10} />
+              SQLite Ativo
             </span>
           </div>
         </div>
 
-        {/* Lista de Disciplinas e Tópicos */}
+        {/* Lista de Disciplinas e Tópicos Verticalizados */}
         <div className="flex-1 overflow-y-auto p-3 space-y-3">
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 px-1">
-            Disciplinas do Ciclo
+          <div className="flex items-center justify-between px-1">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+              Disciplinas ({subjects.length})
+            </span>
+            <button
+              onClick={() => {
+                setCrudInitialSection('subjects');
+                setCrudModalOpen(true);
+              }}
+              className="text-[11px] text-orange-400 hover:text-orange-300 flex items-center gap-0.5 font-medium"
+            >
+              <Plus size={12} />
+              Disciplina
+            </button>
           </div>
-          {INITIAL_SUBJECTS.map((subj) => {
-            const isSelected = subj.id === currentSubject.id;
+
+          {subjects.map((subj) => {
+            const isSelected = currentSubject?.id === subj.id;
+            const subjTopics = topicsBySubject[subj.id] || [];
             return (
               <div
                 key={subj.id}
@@ -130,39 +359,56 @@ export default function App() {
                 <button
                   onClick={() => {
                     setSelectedSubjectId(subj.id);
-                    setSelectedTopicId(subj.topics[0].id);
+                    const firstT = (topicsBySubject[subj.id] || [])[0];
+                    if (firstT) setSelectedTopicId(firstT.id);
                   }}
                   className="w-full text-left p-3 flex items-center justify-between"
                 >
-                  <div>
-                    <p className="text-sm font-medium text-slate-100">{subj.name}</p>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      Ciclo: {subj.cycleMinutes} min • Domínio: {subj.mastery}%
+                  <div className="pr-2">
+                    <p className="text-sm font-medium text-slate-100 leading-snug">{subj.name}</p>
+                    <p className="text-[11px] text-slate-400 mt-0.5">
+                      Ciclo: {subj.cycle_allocated_minutes} min • Peso: {subj.exam_weight}x
                     </p>
                   </div>
-                  <div className="text-xs font-bold px-2 py-1 rounded-lg bg-slate-900 text-orange-300">
-                    {subj.mastery}%
+                  <div className="text-xs font-bold px-2 py-1 rounded-lg bg-slate-900 text-orange-300 shrink-0">
+                    {subj.measured_mastery_score}%
                   </div>
                 </button>
 
                 {isSelected && (
                   <div className="px-2 pb-2 space-y-1 border-t border-slate-700/50 pt-2">
-                    {subj.topics.map((topic) => (
+                    {subjTopics.map((topic) => (
                       <button
                         key={topic.id}
                         onClick={() => setSelectedTopicId(topic.id)}
                         className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between transition ${
-                          topic.id === currentTopic.id
+                          topic.id === currentTopic?.id
                             ? 'bg-orange-500/20 text-orange-200 font-medium'
                             : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
                         }`}
                       >
                         <span className="truncate pr-2">
-                          {topic.code} {topic.title}
+                          <span className="font-mono text-[11px] text-orange-300/90 mr-1">
+                            {topic.code}
+                          </span>
+                          {topic.title}
                         </span>
-                        <span className="text-[10px] opacity-80">{topic.mastery}%</span>
+                        <span className="text-[10px] opacity-80 shrink-0">
+                          {topic.mastery_score}%
+                        </span>
                       </button>
                     ))}
+
+                    <button
+                      onClick={() => {
+                        setCrudInitialSection('topics');
+                        setCrudModalOpen(true);
+                      }}
+                      className="w-full mt-1 py-1.5 px-2.5 rounded-lg border border-dashed border-slate-700 hover:border-orange-500/50 text-[11px] text-slate-400 hover:text-orange-300 flex items-center justify-center gap-1 transition"
+                    >
+                      <Plus size={12} />
+                      Adicionar / Editar Tópicos ({subjTopics.length})
+                    </button>
                   </div>
                 )}
               </div>
@@ -179,15 +425,36 @@ export default function App() {
             <header className="border-b border-slate-800 bg-slate-900/40 px-6 py-4 flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-2 text-xs text-orange-400 font-medium">
-                  <span>{currentSubject.name}</span>
+                  <span>{activePlan.organ}</span>
                   <span>•</span>
-                  <span>Tópico {currentTopic.code}</span>
+                  <span>{currentSubject?.name || 'Sem disciplina'}</span>
+                  {currentTopic && (
+                    <>
+                      <span>•</span>
+                      <span>Tópico {currentTopic.code}</span>
+                      <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px]">
+                        {currentTopic.status} • {currentTopic.mastery_score}% domínio
+                      </span>
+                    </>
+                  )}
                 </div>
-                <h2 className="text-lg font-bold text-white mt-0.5">{currentTopic.title}</h2>
+                <h2 className="text-lg font-bold text-white mt-0.5">
+                  {currentTopic?.title || 'Adicione um tópico ao edital para iniciar a bancada'}
+                </h2>
               </div>
 
-              {/* Cronômetro Rápido do Ciclo */}
+              {/* Cronômetro Rápido do Ciclo + Atalho CRUD */}
               <div className="flex items-center gap-3">
+                <button
+                  onClick={() => {
+                    setCrudInitialSection('topics');
+                    setCrudModalOpen(true);
+                  }}
+                  className="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5"
+                >
+                  <Settings2 size={14} className="text-orange-400" />
+                  Edital Verticalizado
+                </button>
                 <div className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2 text-xs">
                   <Clock size={14} className="text-orange-400" />
                   <span className="font-mono text-sm font-semibold">00:49:12</span>
@@ -198,12 +465,16 @@ export default function App() {
               </div>
             </header>
 
-            {/* Abas da Bancada (Tudo conectado ao mesmo Tópico) */}
+            {/* Abas da Bancada (Tudo conectado ao mesmo Tópico no SQLite) */}
             <div className="px-6 pt-3 border-b border-slate-800 flex items-center gap-2 bg-slate-900/20">
               {[
                 { id: 'questions', label: 'Questões & Destrinchador IA', icon: HelpCircle },
                 { id: 'notebooks', label: 'Cadernos do Tópico', icon: BookOpen },
-                { id: 'pdf', label: `PDF Ancorado (${currentTopic.pdfPage})`, icon: FileText },
+                {
+                  id: 'pdf',
+                  label: `PDF Ancorado (${pdfSource ? `${pdfSource.current_page}/${pdfSource.total_pages}` : '1/1'})`,
+                  icon: FileText,
+                },
                 { id: 'cycle', label: 'Equilíbrio do Ciclo', icon: Layers },
                 { id: 'graph', label: 'Grafo de Micro-tópicos', icon: Network },
               ].map((tab) => {
@@ -226,149 +497,289 @@ export default function App() {
               })}
             </div>
 
-            {/* Conteúdo da Bancada */}
-            <div className="flex-1 overflow-y-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-              {/* Coluna Esquerda: Questão Oficial da Banca */}
-              <div className="lg:col-span-7 space-y-4">
-                <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="px-2.5 py-1 rounded-md bg-blue-500/15 text-blue-300 border border-blue-500/30 font-semibold">
-                      FGV • CGU — Auditor Federal de Finanças e Controle
-                    </span>
-                    <span className="text-slate-400">Gabarito Pós-Recurso: Letra C</span>
+            {/* Conteúdo Dinâmico da Bancada */}
+            <div className="flex-1 overflow-y-auto p-6">
+              {activeTab === 'questions' && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  {/* Coluna Esquerda: Questão Oficial da Banca vinda do SQLite */}
+                  <div className="lg:col-span-7 space-y-4">
+                    {activeQuestionBundle ? (
+                      <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="px-2.5 py-1 rounded-md bg-blue-500/15 text-blue-300 border border-blue-500/30 font-semibold">
+                            {activeQuestionBundle.question.exam_board} (
+                            {activeQuestionBundle.question.exam_year}) •{' '}
+                            {activeQuestionBundle.question.organ}
+                          </span>
+                          <span className="text-slate-400">
+                            Gabarito Pós-Recurso:{' '}
+                            <strong className="text-emerald-300">
+                              Letra {activeQuestionBundle.question.final_answer}
+                            </strong>
+                          </span>
+                        </div>
+
+                        <p className="text-sm leading-relaxed text-slate-200">
+                          {activeQuestionBundle.question.statement}
+                        </p>
+
+                        <div className="space-y-2 text-xs">
+                          {parsedOptions.map((opt, idx) => {
+                            const letter = ['A', 'B', 'C', 'D', 'E'][idx];
+                            const isAnswer = letter === activeQuestionBundle.question.final_answer;
+                            const isSelected = selectedOptionIdx === idx;
+                            return (
+                              <button
+                                key={idx}
+                                onClick={() => setSelectedOptionIdx(idx)}
+                                className={`w-full text-left p-3 rounded-xl border transition ${
+                                  isSelected && isAnswer
+                                    ? 'bg-emerald-500/15 border-emerald-500/50 text-emerald-200 font-medium'
+                                    : isSelected
+                                      ? 'bg-orange-500/15 border-orange-500/50 text-orange-200'
+                                      : 'bg-slate-950/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                                }`}
+                              >
+                                {opt}
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {/* Diagnóstico Pós-Questão de 1 Clique (Gravando no SQLite!) */}
+                        <div className="pt-3 border-t border-slate-800">
+                          <p className="text-xs text-slate-400 mb-2">
+                            🏷️ <strong>Auto-Diagnóstico Rápido (1 clique no SQLite):</strong>{' '}
+                            Consultar a IA não reduz sua nota! Clique para registrar seu domínio:
+                          </p>
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            {[
+                              {
+                                id: 'MASTERED' as SelfDiagnosisType,
+                                label: '🟢 Dominei / Só revisei',
+                                desc: '+10% Domínio',
+                              },
+                              {
+                                id: 'DOUBT' as SelfDiagnosisType,
+                                label: '🟡 Acertei na dúvida',
+                                desc: '+2% • Revisar 7d',
+                              },
+                              {
+                                id: 'BOARD_TRAP' as SelfDiagnosisType,
+                                label: '🟠 Pegadinha da Banca',
+                                desc: '0% (Não pune base)',
+                              },
+                              {
+                                id: 'BASE_GAP' as SelfDiagnosisType,
+                                label: '🔴 Lacuna de Base',
+                                desc: '-10% • +15m Ciclo',
+                              },
+                            ].map((btn) => (
+                              <button
+                                key={btn.id}
+                                onClick={() => handleDiagnosisClick(btn.id, btn.label)}
+                                className="p-2 rounded-xl border bg-slate-950 border-slate-800 hover:border-orange-500/50 text-slate-300 text-left transition"
+                              >
+                                <div className="text-xs font-semibold">{btn.label}</div>
+                                <div className="text-[10px] text-slate-400 mt-0.5">{btn.desc}</div>
+                              </button>
+                            ))}
+                          </div>
+
+                          {lastDiagnosisMsg && (
+                            <div className="mt-3 px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300">
+                              ✅ {lastDiagnosisMsg}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 text-xs text-slate-400">
+                        Nenhuma questão cadastrada para esta disciplina ainda.
+                      </div>
+                    )}
                   </div>
 
-                  <p className="text-sm leading-relaxed text-slate-200">
-                    No âmbito das Normas Internacionais de Auditoria Aplicadas ao Setor Público (ISSAI), o risco de
-                    auditoria compreende o risco de que o auditor expresse uma conclusão inadequada caso o objeto
-                    contenha distorção relevante. Assinale a alternativa que relaciona corretamente os três componentes
-                    do risco de auditoria:
-                  </p>
+                  {/* Coluna Direita: Destrinchador IA (Cache SQLite -> Gemini Free -> DeepSeek) */}
+                  <div className="lg:col-span-5 space-y-4">
+                    <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col h-full space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Sparkles size={16} className="text-orange-400" />
+                          <h3 className="text-sm font-bold">Destrinchador IA & Caderno</h3>
+                        </div>
+                        <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                          ⚡ Cache SQLite ({activeQuestionBundle?.dissection?.provider_used || '0 tokens'})
+                        </span>
+                      </div>
 
-                  <div className="space-y-2 text-xs">
-                    {[
-                      'A) Risco de Controle, Risco Operacional e Risco de Reputação.',
-                      'B) Risco Inerente, Risco Fiscal e Risco de Amostragem.',
-                      'C) Risco Inerente, Risco de Controle e Risco de Detecção.',
-                      'D) Risco de Detecção, Risco de Fraude e Risco Estratégico.',
-                    ].map((opt, idx) => (
-                      <div
-                        key={idx}
-                        className={`p-3 rounded-xl border ${
-                          idx === 2
-                            ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-200 font-medium'
-                            : 'bg-slate-950/60 border-slate-800 text-slate-300'
-                        }`}
+                      <div className="text-xs text-slate-300 space-y-2 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 whitespace-pre-line">
+                        {activeQuestionBundle?.dissection?.dissection_markdown ||
+                          'Destrinchamento pronto para ser consultado no roteador IA.'}
+                      </div>
+
+                      <div className="flex items-center gap-2 pt-2">
+                        <button
+                          onClick={handleAppendDissectionToNotebook}
+                          className="flex-1 py-2 px-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center justify-center gap-1.5"
+                        >
+                          <CheckCircle2 size={14} />
+                          Anexar Síntese ao Caderno do Tópico
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'notebooks' && currentSubject && currentTopic && (
+                <div className="max-w-4xl space-y-4">
+                  <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="text-sm font-bold text-white">
+                          📓 {notebook?.title || `Caderno ${currentTopic.code} — ${currentTopic.title}`}
+                        </h3>
+                        <p className="text-xs text-slate-400">
+                          Persistido na tabela <code>notebooks</code> do SQLite local
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => {
+                          const saved = saveTopicNotebook({
+                            subjectId: currentSubject.id,
+                            topicId: currentTopic.id,
+                            title: `Caderno ${currentTopic.code} — ${currentTopic.title}`,
+                            contentMarkdown: notebookDraft,
+                          });
+                          setNotebook(saved);
+                        }}
+                        className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center gap-1.5"
                       >
-                        {opt}
+                        <Save size={14} />
+                        Salvar no SQLite
+                      </button>
+                    </div>
+
+                    <textarea
+                      value={notebookDraft}
+                      onChange={(e) => setNotebookDraft(e.target.value)}
+                      rows={14}
+                      className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-200 focus:border-orange-500 outline-none leading-relaxed"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'pdf' && (
+                <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2">
+                  <h3 className="text-sm font-bold text-white">
+                    📄 Fonte PDF Ancorada: {pdfSource?.title || 'Nenhum PDF vinculado a este tópico'}
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Progresso salvo no SQLite (<code>pdf_sources</code>): Página{' '}
+                    <strong>{pdfSource?.current_page || 1}</strong> de{' '}
+                    <strong>{pdfSource?.total_pages || 1}</strong> • Caminho:{' '}
+                    <code>{pdfSource?.file_path || 'N/D'}</code>
+                  </p>
+                </div>
+              )}
+
+              {activeTab === 'cycle' && (
+                <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4">
+                  <h3 className="text-sm font-bold text-white">
+                    ⏱️ Alocação do Ciclo — {activePlan.title}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {subjects.map((s) => (
+                      <div
+                        key={s.id}
+                        className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between text-xs"
+                      >
+                        <div>
+                          <div className="font-semibold text-white">{s.name}</div>
+                          <div className="text-slate-400 mt-0.5">
+                            Peso: {s.exam_weight}x • Domínio: {s.measured_mastery_score}%
+                          </div>
+                        </div>
+                        <span className="px-2.5 py-1 rounded-lg bg-orange-500/15 text-orange-300 font-bold">
+                          {s.cycle_allocated_minutes} min
+                        </span>
                       </div>
                     ))}
                   </div>
-
-                  {/* Diagnóstico Pós-Questão de 1 Clique (Sem Viés de IA!) */}
-                  <div className="pt-3 border-t border-slate-800">
-                    <p className="text-xs text-slate-400 mb-2">
-                      🏷️ <strong>Auto-Diagnóstico Rápido (1 clique):</strong> Consultar a IA não reduz sua nota! Diga
-                      como foi resolver esta questão:
-                    </p>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                      {[
-                        { id: 'MASTERED', label: '🟢 Dominei / Só revisei', desc: '+Domínio' },
-                        { id: 'DOUBT', label: '🟡 Acertei na dúvida', desc: 'Revisar em 7d' },
-                        { id: 'BOARD_TRAP', label: '🟠 Pegadinha da Banca', desc: 'Não reduz base' },
-                        { id: 'BASE_GAP', label: '🔴 Lacuna de Base', desc: '+Tempo no Ciclo' },
-                      ].map((btn) => (
-                        <button
-                          key={btn.id}
-                          onClick={() => setLastDiagnosis(btn.label)}
-                          className={`p-2 rounded-xl border text-left transition ${
-                            lastDiagnosis === btn.label
-                              ? 'bg-orange-500/20 border-orange-500 text-white'
-                              : 'bg-slate-950 border-slate-800 hover:border-slate-700 text-slate-300'
-                          }`}
-                        >
-                          <div className="text-xs font-semibold">{btn.label}</div>
-                          <div className="text-[10px] text-slate-400 mt-0.5">{btn.desc}</div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
                 </div>
-              </div>
+              )}
 
-              {/* Coluna Direita: Destrinchador IA (Cache SQLite -> Gemini Free -> DeepSeek) */}
-              <div className="lg:col-span-5 space-y-4">
-                <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col h-full space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Sparkles size={16} className="text-orange-400" />
-                      <h3 className="text-sm font-bold">Destrinchador IA & Caderno</h3>
-                    </div>
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                      ⚡ Cache Local SQLite (0 tokens)
-                    </span>
-                  </div>
-
-                  <div className="text-xs text-slate-300 space-y-2 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800">
-                    <p className="font-semibold text-orange-300">📌 Mnemônico & Pré-requisito (ISSAI 100):</p>
-                    <p>
-                      <strong>Risco de Auditoria = RI × RC × RD</strong>
-                    </p>
-                    <ul className="list-disc pl-4 space-y-1">
-                      <li>
-                        <strong>Risco Inerente (RI) + Risco de Controle (RC):</strong> Existem na entidade auditada
-                        (independem do auditor).
-                      </li>
-                      <li>
-                        <strong>Risco de Detecção (RD):</strong> Único controlado diretamente pelo auditor (ajustando o
-                        tamanho da amostra e os testes substantivos).
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center gap-2 pt-2">
-                    <button className="flex-1 py-2 px-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center justify-center gap-1.5">
-                      <CheckCircle2 size={14} />
-                      Anexar Síntese ao Caderno do Tópico
-                    </button>
-                  </div>
+              {activeTab === 'graph' && (
+                <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2">
+                  <h3 className="text-sm font-bold text-white">
+                    🕸️ Grafo de Micro-tópicos (Tabela <code>topic_links</code>)
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Os vínculos de pré-requisito entre os tópicos estão persistidos no SQLite e serão
+                    renderizados visualmente na Fatia 6.
+                  </p>
                 </div>
-              </div>
+              )}
             </div>
           </>
         ) : (
           /* Visão Fábrica Admin: Trilhas Prontas, Dossiês & Blueprint das Bancas */
           <div className="flex-1 overflow-y-auto p-6 space-y-6">
-            <div>
-              <h2 className="text-xl font-bold flex items-center gap-2">
-                <Wrench className="text-purple-400" size={20} />
-                Modo Administrador ("A Fábrica" do FofoLab)
-              </h2>
-              <p className="text-xs text-slate-400 mt-1">
-                Gerencie o Catálogo de Trilhas Prontas, Dossiês de Pesquisa Profunda e o Verificador de Blueprint das
-                Bancas antes de exportar pacotes <code>.fofopack</code> para seus amigos e sobrinhos.
-              </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-bold flex items-center gap-2">
+                  <Wrench className="text-purple-400" size={20} />
+                  Modo Administrador ("A Fábrica" do FofoLab)
+                </h2>
+                <p className="text-xs text-slate-400 mt-1">
+                  Dados lidos em tempo real das tabelas <code>career_tracks</code> e{' '}
+                  <code>admin_board_blueprints</code> do SQLite local.
+                </p>
+              </div>
+              {adminData && (
+                <div className="flex items-center gap-2 text-xs">
+                  <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800">
+                    Planos: <strong>{adminData.stats.plans}</strong> • Disciplinas:{' '}
+                    <strong>{adminData.stats.subjects}</strong> • Tópicos:{' '}
+                    <strong>{adminData.stats.topics}</strong> • Resoluções:{' '}
+                    <strong>{adminData.stats.attempts}</strong>
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
                 <h3 className="text-sm font-bold flex items-center gap-2">
                   <FolderGit2 size={16} className="text-orange-400" />
-                  Catálogo de Trilhas Prontas
+                  Catálogo de Trilhas Prontas (SQLite)
                 </h3>
                 <div className="space-y-2 text-xs">
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>Trilha Federal — Controle & TI (CGU / TCU)</span>
-                    <span className="text-emerald-400 font-semibold">🟢 Catalogada</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>Trilha Autarquias — BACEN (Autorizado)</span>
-                    <span className="text-amber-400 font-semibold">🟡 Em Dossiê</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>Trilha Tribunais / Direito / Estadual & Municipal</span>
-                    <span className="text-slate-400">⚪ No Radar</span>
-                  </div>
+                  {adminData?.tracks.map((track) => (
+                    <div
+                      key={track.id}
+                      className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between"
+                    >
+                      <span>{track.name}</span>
+                      <span
+                        className={
+                          track.catalog_status === 'CATALOGED'
+                            ? 'text-emerald-400 font-semibold'
+                            : track.catalog_status === 'PARTIAL'
+                              ? 'text-amber-400 font-semibold'
+                              : 'text-slate-400'
+                        }
+                      >
+                        {track.catalog_status === 'CATALOGED'
+                          ? '🟢 Catalogada'
+                          : track.catalog_status === 'PARTIAL'
+                            ? '🟡 Parcial / Em Dossiê'
+                            : '⚪ No Radar'}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -378,24 +789,80 @@ export default function App() {
                   Blueprint de Layout das Bancas (DOM Drift Check)
                 </h3>
                 <div className="space-y-2 text-xs">
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>FGV Conhecimento (Provas + Gabarito Pós-Recurso)</span>
-                    <span className="text-emerald-400 font-semibold">🟢 Layout Intacto</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>Cebraspe (Com verificação de Anuladas)</span>
-                    <span className="text-emerald-400 font-semibold">🟢 Layout Intacto</span>
-                  </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
-                    <span>Roteador IA: Google AI Studio Free ➔ DeepSeek V3</span>
-                    <span className="text-emerald-400 font-semibold">🟢 Trava R$ 50 Ativa</span>
-                  </div>
+                  {adminData?.blueprints.map((bp) => (
+                    <div
+                      key={bp.id}
+                      className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between"
+                    >
+                      <span>
+                        {bp.board_name} ({bp.last_dom_hash})
+                      </span>
+                      <span className="text-emerald-400 font-semibold">
+                        {bp.health_status === 'OK' ? '🟢 Layout Intacto' : '🔴 Drift Detectado'}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         )}
       </main>
+
+      {/* Modal CRUD Completo (Planos, Disciplinas e Tópicos Verticalizados) */}
+      <CurriculumManagerModal
+        isOpen={crudModalOpen}
+        initialSection={crudInitialSection}
+        plans={plans}
+        activePlan={activePlan}
+        subjects={subjects}
+        selectedSubject={currentSubject}
+        topics={currentTopics}
+        onClose={() => setCrudModalOpen(false)}
+        onSelectPlan={handleSelectPlan}
+        onCreatePlan={(input: CreateStudyPlanInput) => {
+          const created = createStudyPlan(input);
+          refreshFromSqlite('', '');
+          handleSelectPlan(created.id);
+        }}
+        onUpdatePlan={(id, input) => {
+          updateStudyPlan({ id, ...input });
+          refreshFromSqlite(currentSubject?.id, currentTopic?.id);
+        }}
+        onDeletePlan={(id) => {
+          deleteStudyPlan(id);
+          refreshFromSqlite('', '');
+        }}
+        onCreateSubject={(input: CreateSubjectInput) => {
+          const created = createSubject(input);
+          refreshFromSqlite(created.id, '');
+        }}
+        onUpdateSubject={(id, input) => {
+          updateSubject({ id, ...input });
+          refreshFromSqlite(id, currentTopic?.id);
+        }}
+        onDeleteSubject={(id) => {
+          deleteSubject(id);
+          refreshFromSqlite('', '');
+        }}
+        onCreateTopic={(input: CreateTopicInput) => {
+          const created = createTopic(input);
+          refreshFromSqlite(currentSubject?.id, created.id);
+        }}
+        onUpdateTopic={(id, input) => {
+          updateTopic({ id, ...input });
+          refreshFromSqlite(currentSubject?.id, id);
+        }}
+        onDeleteTopic={(id) => {
+          deleteTopic(id);
+          refreshFromSqlite(currentSubject?.id, '');
+        }}
+        onExportDatabase={handleExportDatabase}
+        onResetSeed={async () => {
+          await resetDatabaseToSeed();
+          refreshFromSqlite('', '');
+        }}
+      />
     </div>
   );
 }

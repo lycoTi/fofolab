@@ -5,7 +5,7 @@
 ## 📌 Status Global
 - **Objetivo Imediato:** Uso pessoal nos estudos da **CGU** e **BACEN**, com exportação gratuita de pacotes (`.fofopack`) para familiares e amigos.
 - **Stack:** Tauri v2 (Rust) + React 19 + TypeScript + Vite + Tailwind CSS + SQLite Local + Roteador IA (Gemini Free ➔ DeepSeek Fallback).
-- **Fase Atual:** `Fatia 1 Concluída` ➔ Próxima: `Fatia 2 (Persistência SQLite + Edital Verticalizado)`.
+- **Fase Atual:** `Fatia 2 Concluída` ➔ Próxima: `Fatia 3 (Motor Matemático do Ciclo de Estudos & Pomodoro)`.
 
 ---
 
@@ -17,12 +17,12 @@
 - [x] Protótipo navegável da **Bancada de Estudos por Tópico** (Cadernos, Questões + Diagnóstico 1-Clique, PDFs, Ciclo e Modo Admin).
 - [x] Repositório Git inicializado e publicado no GitHub (`lycoTi/fofolab`).
 
-### [NEXT_10_MIN] Fatia 2 — Inicialização do Tauri v2 + Banco SQLite Real
-- [ ] Rodar `npm install` + `npx tauri init` (após garantir Rust instalado no PC).
-- [ ] Conectar o schema `docs/specs/01-database-schema.sql` ao SQLite local.
-- [ ] CRUD real de **Planos de Estudo (CGU / BACEN)**, **Disciplinas** e **Tópicos Verticalizados**.
+### [DONE] Fatia 2 — Inicialização do Tauri v2 + Banco SQLite Real
+- [x] Rodar `npm install` + `npx tauri init` (após garantir Rust instalado no PC) + ativar Graphify com git hooks.
+- [x] Conectar o schema `docs/specs/01-database-schema.sql` ao SQLite local (`src/lib/database.ts` via `sql.js` WASM + exportação `.sqlite`).
+- [x] CRUD real de **Planos de Estudo (CGU / BACEN)**, **Disciplinas** e **Tópicos Verticalizados** (`src/components/CurriculumManagerModal.tsx`).
 
-### [BACKLOG] Fatia 3 — Motor Matemático do Ciclo de Estudos & Pomodoro
+### [NEXT_10_MIN] Fatia 3 — Motor Matemático do Ciclo de Estudos & Pomodoro
 - [ ] Calculadora automática de horas por disciplina baseada em: `Dias até a prova`, `Peso/Dificuldade inicial (1-5)`, `Afinidade (1-3)` e `Domínio medido`.
 - [ ] Recálculo em tempo real ao aumentar/diminuir horas disponíveis na semana.
 - [ ] Cronômetro Pomodoro integrado que grava a sessão direto no tópico estudado e mede fricção comportamental.

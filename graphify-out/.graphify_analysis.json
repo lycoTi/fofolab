@@ -1,0 +1,209 @@
+{
+  "communities": {
+    "0": [
+      "autoprefixer",
+      "package_devdependencies",
+      "package_devdependencies_autoprefixer",
+      "package_devdependencies_postcss",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tauri_apps_cli",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "package_json_tailwindcss",
+      "postcss",
+      "tauri_apps_cli",
+      "types_react",
+      "types_react_dom",
+      "typescript",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "1": [
+      "ref_src",
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowimportingtsextensions",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduledetection",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_compileroptions_nounusedlocals",
+      "tsconfig_compileroptions_nounusedparameters",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_compileroptions_usedefineforclassfields",
+      "tsconfig_include"
+    ],
+    "2": [
+      "docs_specs_01_database_schema",
+      "docs_specs_01_database_schema_admin_board_blueprints",
+      "docs_specs_01_database_schema_ai_dissections",
+      "docs_specs_01_database_schema_career_tracks",
+      "docs_specs_01_database_schema_notebooks",
+      "docs_specs_01_database_schema_pdf_sources",
+      "docs_specs_01_database_schema_question_attempts",
+      "docs_specs_01_database_schema_questions",
+      "docs_specs_01_database_schema_study_plans",
+      "docs_specs_01_database_schema_study_sessions",
+      "docs_specs_01_database_schema_subjects",
+      "docs_specs_01_database_schema_topic_links",
+      "docs_specs_01_database_schema_topics"
+    ],
+    "3": [
+      "package",
+      "package_description",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_tauri_build",
+      "package_scripts_tauri_dev",
+      "package_type",
+      "package_version"
+    ],
+    "4": [
+      "clsx",
+      "lucide_react",
+      "package_dependencies",
+      "package_dependencies_clsx",
+      "package_dependencies_lucide_react",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "react",
+      "react_dom"
+    ],
+    "5": [
+      "src_app",
+      "src_app_app",
+      "src_app_appmode",
+      "src_app_initial_subjects",
+      "src_app_workbenchtab",
+      "src_main"
+    ],
+    "6": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2022",
+      "tsconfig_compileroptions_lib"
+    ],
+    "7": [
+      "postcss_config"
+    ],
+    "8": [
+      "tailwind_config"
+    ],
+    "9": [
+      "tailwindcss_tailwindcss"
+    ],
+    "10": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.10526315789473684,
+    "1": 0.1111111111111111,
+    "2": 0.358974358974359,
+    "3": 0.16666666666666666,
+    "4": 0.2222222222222222,
+    "5": 0.4,
+    "6": 0.5,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "docs_specs_01_database_schema_topics",
+      "label": "topics",
+      "degree": 10
+    },
+    {
+      "id": "docs_specs_01_database_schema_subjects",
+      "label": "subjects",
+      "degree": 7
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 6
+    },
+    {
+      "id": "docs_specs_01_database_schema_questions",
+      "label": "questions",
+      "degree": 5
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "docs_specs_01_database_schema_notebooks",
+      "label": "notebooks",
+      "degree": 3
+    },
+    {
+      "id": "docs_specs_01_database_schema_pdf_sources",
+      "label": "pdf_sources",
+      "degree": 3
+    },
+    {
+      "id": "docs_specs_01_database_schema_question_attempts",
+      "label": "question_attempts",
+      "degree": 3
+    },
+    {
+      "id": "docs_specs_01_database_schema_study_plans",
+      "label": "study_plans",
+      "degree": 3
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 0` to `Community 3`?",
+      "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 4` to `Community 3`?",
+      "why": "High betweenness centrality (0.078) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `Community 1` to `Community 6`?",
+      "why": "High betweenness centrality (0.058) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `AppMode`, `WorkbenchTab`, `autoprefixer` to the rest of the system?",
+      "why": "45 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
