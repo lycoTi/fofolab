@@ -1,4 +1,4 @@
-# 🛠️ Modo Administrador ("A Fábrica"): Trilhas, Dossiês e Crawler de Bancas
+# 🛠️ Modo Administrador ("A Fábrica"): Trilhas, Complexidade de Questões e Crawler
 
 ## 1. Catálogo de Trilhas de Estudos Prontas
 No Modo Admin, mapeamos e alimentamos as grandes trilhas para que o estudante possa escolher um caminho pronto:
@@ -15,7 +15,21 @@ Cada concurso dentro de uma trilha possui um selo claro:
 
 ---
 
-## 2. Verificador de Blueprint das Bancas (DOM Drift Detection)
+## 2. Matriz de Complexidade e Catalogação Cross-Trilhas das Questões
+Para permitir cruzar questões entre diferentes concursos, órgãos, áreas e trilhas, cada questão extraída ou catalogada recebe metadados estruturais (`Área`, `Disciplina`, `Tópico`, `Subtópico`, `Banca`, `Órgão`, `Ano`, `Cargo`) e um **Índice de Complexidade Multidimensional (1 a 5 estrelas)** calculado por 4 vetores:
+
+1. **Interdisciplinaridade / Densidade de Tópicos (`topic_count`):**
+   - A questão cobra um único conceito isolado (Nível 1) ou exige cruzar 3 subtópicos/pré-requisitos distintos (Nível 5)?
+2. **Complexidade Linguística e Cognitiva (`linguistic_load`):**
+   - Mede extensão do enunciado (estudos de caso longos típicos da FGV), presença de dupla negação, inversão de contexto ou vocabulário jurídico/técnico truncado projetado para induzir perda de foco.
+3. **Profundidade Normativa (`normative_specificity`):**
+   - Cobra a regra geral (núcleo 80/20 do edital) ou uma exceção de parágrafo/jurisprudência específica de informativo?
+4. **Telemetria Empírica (`empirical_friction`):**
+   - Tempo médio gasto na questão + proporção de diagnósticos `🟠 BOARD_TRAP` (pegadinha) e `🔴 BASE_GAP` registrados no estudo reverso.
+
+---
+
+## 3. Verificador de Blueprint das Bancas (DOM Drift Detection)
 Sites de bancas (FGV, Cebraspe, FCC, Cesgranrio, Vunesp) alteram seu HTML periodicamente. Para garantir que os scripts extratores nunca salvem dados corrompidos:
 
 1. **Snapshot / Blueprint (`admin_board_blueprints`):**
