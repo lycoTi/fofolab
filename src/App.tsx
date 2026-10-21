@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   BookOpen,
+  Calendar,
+  Compass,
   HelpCircle,
   Layers,
   Network,
@@ -14,7 +16,9 @@ import { PomodoroWidget } from './components/PomodoroWidget';
 import { QuestionWorkbench } from './components/QuestionWorkbench';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
+import { DailyFocusView } from './features/daily-focus/DailyFocusView';
 import { NotebookDockPanel } from './features/notebook-dock/NotebookDockPanel';
+import { OnboardingWizardModal, type OnboardingProfile } from './features/onboarding-wizard/OnboardingWizardModal';
 import { SyllabusTreeDock } from './features/syllabus-dock/SyllabusTreeDock';
 import type { StudentContextSnapshot } from './lib/aiRouter';
 import { calculateDynamicStudyCycle } from './lib/cycleEngine';
@@ -71,11 +75,16 @@ import type {
 
 type WorkbenchTab = 'questions' | 'cycle' | 'graph';
 type AppMode = 'student' | 'admin';
+type ExperienceMode = 'daily' | 'pro';
 
 export default function App() {
   const [dbReady, setDbReady] = useState(false);
   const [mode, setMode] = useState<AppMode>('student');
+  const [experienceMode, setExperienceMode] = useState<ExperienceMode>('daily');
   const [activeTab, setActiveTab] = useState<WorkbenchTab>('questions');
+
+  // Wizard "Pegar pela Mão"
+  const [wizardOpen, setWizardOpen] = useState(false);
 
   // Controles de Painéis Expansíveis (Microfrontends / Dock Slots)
   const [showSyllabusDock, setShowSyllabusDock] = useState(true);
@@ -162,6 +171,16 @@ export default function App() {
     initDatabase().then(() => {
       setDbReady(true);
       refreshData();
+
+      // Checa se é o 1º acesso para abrir o Wizard gentilmente
+      try {
+        const completed = localStorage.getItem('fofolab_onboarding_completed_v1');
+        if (!completed) {
+          setWizardOpen(true);
+        }
+      } catch {
+        // Ignora em caso de restrição de storage
+      }
     });
   }, []);
 
@@ -220,7 +239,7 @@ export default function App() {
       currentSubjectWeight: currentSubject.exam_weight,
       currentSubjectMastery: subjAlloc?.studiedTopicsMastery ?? currentSubject.measured_mastery_score,
       currentSubjectCoverage: subjAlloc?.coveragePercent ?? 0,
-      currentTopicCode: currentTopic.code,
+      currentTopicCode: currentTopic.code || '1.0',
       currentTopicTitle: currentTopic.title,
       currentTopicMastery: currentTopic.mastery_score,
       currentTopicConfidence: topicHeat?.sampleConfidencePercent ?? 0,
@@ -290,10 +309,22 @@ export default function App() {
     setAllNotebooks(getNotebooksByPlan(activePlan.id));
   };
 
+  const handleOnboardingComplete = (profile: OnboardingProfile, targetPlanId: string) => {
+    if (targetPlanId !== activePlan.id) {
+      handleSelectPlan(targetPlanId);
+    }
+    updateStudyPlan({
+      id: targetPlanId,
+      weekly_hours_target: profile.weeklyHours,
+    });
+    refreshData(currentSubject?.id, currentTopic?.id);
+    setExperienceMode('daily');
+  };
+
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-slate-950 text-slate-100">
-      {/* Slot 1: Dock Esquerdo (Árvore de Tópicos e Edital) */}
-      {showSyllabusDock && (
+      {/* Slot 1: Dock Esquerdo (Árvore de Tópicos e Edital) — Apenas no Modo Pro */}
+      {experienceMode === 'pro' && showSyllabusDock && (
         <SyllabusTreeDock
           mode={mode}
           onToggleMode={() => setMode(mode === 'student' ? 'admin' : 'student')}
@@ -316,86 +347,114 @@ export default function App() {
         />
       )}
 
-      {/* Slot 2: Bancada Central + Controles de Painéis Expansíveis */}
+      {/* Slot 2: Palco Central */}
       <main className="flex-1 flex flex-col overflow-hidden min-w-0">
         {mode === 'student' ? (
           <>
-            <header className="border-b border-slate-800 bg-slate-900/40 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
-              <div className="min-w-0">
-                <div className="flex items-center gap-2 text-xs text-orange-400 font-medium truncate">
-                  <span>{activePlan.organ}</span>
-                  <span>•</span>
-                  <span>{currentSubject?.name || 'Sem disciplina'}</span>
-                  {currentTopic && (
-                    <>
-                      <span>•</span>
-                      <span>Tópico {currentTopic.code}</span>
-                      <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px]">
-                        {currentTopic.mastery_score}% domínio
-                      </span>
-                    </>
-                  )}
+            {/* Header da Bancada com Alternador de Experiência (Essencial vs Pro) */}
+            <header className="border-b border-slate-800 bg-slate-900/40 px-5 py-3 flex flex-wrap items-center justify-between gap-3 shrink-0">
+              <div className="flex items-center gap-3 min-w-0">
+                {/* Seletor de Modo de Experiência */}
+                <div className="flex items-center p-1 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold">
+                  <button
+                    type="button"
+                    onClick={() => setExperienceMode('daily')}
+                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
+                      experienceMode === 'daily'
+                        ? 'bg-orange-500 text-white shadow-md'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    <Calendar size={13} />
+                    <span>Meu Dia de Hoje</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setExperienceMode('pro')}
+                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
+                      experienceMode === 'pro'
+                        ? 'bg-orange-500 text-white shadow-md'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    <span>Bancada Pro</span>
+                  </button>
                 </div>
-                <h2 className="text-base font-bold text-white mt-0.5 truncate">
-                  {currentTopic?.title || 'Selecione um tópico'}
-                </h2>
+
+                <div className="hidden sm:block text-xs text-slate-400 truncate">
+                  🎯 Concurso: <strong className="text-slate-200">[{activePlan.organ || 'Geral'}] {activePlan.title}</strong>
+                </div>
               </div>
 
-              {/* Barra de Controle dos Painéis Expansíveis (Dock Layout) */}
+              {/* Botões de Ação do Header */}
               <div className="flex flex-wrap items-center gap-2 shrink-0">
                 <button
                   type="button"
-                  onClick={() => setShowSyllabusDock((v) => !v)}
-                  className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
-                    showSyllabusDock
-                      ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
-                      : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
-                  }`}
-                  title="Expandir ou recolher lista de tópicos"
+                  onClick={() => setWizardOpen(true)}
+                  className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5 transition"
+                  title="Recalibrar momento, horas ou estratégia"
                 >
-                  <PanelLeft size={13} />
-                  Tópicos
+                  <Compass size={13} className="text-orange-400" />
+                  <span className="hidden md:inline">Recalibrar Perfil</span>
                 </button>
 
-                <button
-                  type="button"
-                  onClick={() => setShowNotebookDock((v) => !v)}
-                  className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
-                    showNotebookDock
-                      ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
-                      : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
-                  }`}
-                  title="Expandir ou recolher Caderno Lateral e PDF"
-                >
-                  <BookOpen size={13} />
-                  Caderno & PDF
-                </button>
+                {experienceMode === 'pro' && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => setShowSyllabusDock((v) => !v)}
+                      className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
+                        showSyllabusDock
+                          ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
+                          : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
+                      }`}
+                      title="Expandir ou recolher lista de tópicos"
+                    >
+                      <PanelLeft size={13} />
+                      Tópicos
+                    </button>
 
-                <button
-                  type="button"
-                  onClick={() => setShowAiCopilotDock((v) => !v)}
-                  className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
-                    showAiCopilotDock
-                      ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
-                      : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
-                  }`}
-                  title="Expandir ou recolher Copiloto IA Contextual"
-                >
-                  <Sparkles size={13} />
-                  Copiloto IA
-                </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowNotebookDock((v) => !v)}
+                      className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
+                        showNotebookDock
+                          ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
+                          : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
+                      }`}
+                      title="Expandir ou recolher Caderno Lateral e PDF"
+                    >
+                      <BookOpen size={13} />
+                      Caderno & PDF
+                    </button>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setCrudInitialSection('topics');
-                    setCrudModalOpen(true);
-                  }}
-                  className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5"
-                >
-                  <Settings2 size={13} className="text-orange-400" />
-                  Edital Verticalizado
-                </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowAiCopilotDock((v) => !v)}
+                      className={`px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
+                        showAiCopilotDock
+                          ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
+                          : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
+                      }`}
+                      title="Expandir ou recolher Copiloto IA Contextual"
+                    >
+                      <Sparkles size={13} />
+                      Copiloto IA
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCrudInitialSection('topics');
+                        setCrudModalOpen(true);
+                      }}
+                      className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5"
+                    >
+                      <Settings2 size={13} className="text-orange-400" />
+                      Edital Verticalizado
+                    </button>
+                  </>
+                )}
 
                 {currentSubject && (
                   <PomodoroWidget
@@ -419,142 +478,175 @@ export default function App() {
               </div>
             </header>
 
-            {/* Abas do Palco Central */}
-            <div className="px-6 pt-2.5 border-b border-slate-800 flex items-center gap-2 bg-slate-900/20">
-              {[
-                { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
-                { id: 'cycle', label: 'Ciclo & Mapa de Calor', icon: Layers },
-                { id: 'graph', label: 'Mapa de Conceitos', icon: Network },
-              ].map((tab) => {
-                const Icon = tab.icon;
-                const active = activeTab === tab.id;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id as WorkbenchTab)}
-                    className={`px-4 py-2 text-xs font-medium rounded-t-lg border-b-2 flex items-center gap-2 transition ${
-                      active
-                        ? 'border-orange-500 text-orange-300 bg-slate-900/70'
-                        : 'border-transparent text-slate-400 hover:text-slate-200'
-                    }`}
-                  >
-                    <Icon size={14} />
-                    {tab.label}
-                  </button>
-                );
-              })}
-            </div>
+            {/* Visualização 1: Modo "Meu Dia de Hoje" (Sem sobrecarga, direto ao ponto) */}
+            {experienceMode === 'daily' && (
+              <DailyFocusView
+                plan={activePlan}
+                cycleData={cycleData}
+                subjects={subjects}
+                topicsBySubject={topicsBySubject}
+                onStartBlock={(subjId, topId) => {
+                  setSelectedSubjectId(subjId);
+                  if (topId) setSelectedTopicId(topId);
+                  setExperienceMode('pro');
+                  setActiveTab('questions');
+                }}
+                onSwitchToProWorkbench={() => setExperienceMode('pro')}
+                onOpenWizard={() => setWizardOpen(true)}
+              />
+            )}
 
-            {/* Palco Central + Docks Laterais Lado a Lado */}
-            <div className="flex-1 flex overflow-hidden min-h-0">
-              <div className="flex-1 overflow-y-auto p-6 min-w-0">
-                {activeTab === 'questions' && (
-                  <QuestionWorkbench
-                    questions={topicQuestions}
-                    scopeFilter={questionScope}
-                    onChangeScopeFilter={setQuestionScope}
-                    onDiagnosis={handleDiagnosis}
-                    lastDiagnosisFeedback={lastDiagnosisMsg}
-                    onSaveToNotebook={handleAppendNotesToNotebook}
-                    onSaveChatHistory={(qId, chatJson) => saveQuestionChatHistory(qId, chatJson)}
-                    studentContext={studentContext}
-                  />
-                )}
+            {/* Visualização 2: Modo "Bancada Pro" (Tópicos, Questões, Ciclo, Grafo, Caderno, Copiloto) */}
+            {experienceMode === 'pro' && (
+              <>
+                {/* Abas do Palco Central Pro */}
+                <div className="px-6 pt-2.5 border-b border-slate-800 flex items-center gap-2 bg-slate-900/20">
+                  {[
+                    { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
+                    { id: 'cycle', label: 'Ciclo & Mapa de Calor', icon: Layers },
+                    { id: 'graph', label: 'Mapa de Conceitos', icon: Network },
+                  ].map((tab) => {
+                    const Icon = tab.icon;
+                    const active = activeTab === tab.id;
+                    return (
+                      <button
+                        key={tab.id}
+                        onClick={() => setActiveTab(tab.id as WorkbenchTab)}
+                        className={`px-4 py-2 text-xs font-medium rounded-t-lg border-b-2 flex items-center gap-2 transition ${
+                          active
+                            ? 'border-orange-500 text-orange-300 bg-slate-900/70'
+                            : 'border-transparent text-slate-400 hover:text-slate-200'
+                        }`}
+                      >
+                        <Icon size={14} />
+                        {tab.label}
+                      </button>
+                    );
+                  })}
+                </div>
 
-                {activeTab === 'cycle' && (
-                  <CycleDashboard
-                    plan={activePlan}
-                    cycleData={cycleData}
-                    onUpdateWeeklyHours={(newWeeklyHours) => {
-                      updateStudyPlan({ id: activePlan.id, weekly_hours_target: newWeeklyHours });
-                      refreshData(currentSubject?.id, currentTopic?.id);
-                    }}
-                    onApplyRecommendedCycle={(newAllocations) => {
-                      applyRecommendedCycleAllocations(newAllocations);
-                      refreshData(currentSubject?.id, currentTopic?.id);
-                    }}
-                    onJumpToTopic={(subjId, topId) => {
-                      setSelectedSubjectId(subjId);
-                      setSelectedTopicId(topId);
-                      setActiveTab('questions');
-                    }}
-                  />
-                )}
+                {/* Palco Central + Docks Laterais Lado a Lado */}
+                <div className="flex-1 flex overflow-hidden min-h-0">
+                  <div className="flex-1 overflow-y-auto p-6 min-w-0">
+                    {activeTab === 'questions' && (
+                      <QuestionWorkbench
+                        questions={topicQuestions}
+                        scopeFilter={questionScope}
+                        onChangeScopeFilter={setQuestionScope}
+                        onDiagnosis={handleDiagnosis}
+                        lastDiagnosisFeedback={lastDiagnosisMsg}
+                        onSaveToNotebook={handleAppendNotesToNotebook}
+                        onSaveChatHistory={(qId, chatJson) => saveQuestionChatHistory(qId, chatJson)}
+                        studentContext={studentContext}
+                      />
+                    )}
 
-                {activeTab === 'graph' && (
-                  <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
-                    <h3 className="text-sm font-bold text-white">
-                      🕸️ Conexões entre Tópicos e Pré-requisitos ({topicLinks.length})
-                    </h3>
-                    <div className="space-y-2 text-xs text-slate-300">
-                      {topicLinks.map((lnk) => (
-                        <div
-                          key={lnk.id}
-                          className="p-3 rounded-xl bg-slate-950 border border-slate-800"
-                        >
-                          🔗 <strong>{lnk.relation_type}:</strong> {lnk.notes}
+                    {activeTab === 'cycle' && (
+                      <CycleDashboard
+                        plan={activePlan}
+                        cycleData={cycleData}
+                        onUpdateWeeklyHours={(newWeeklyHours) => {
+                          updateStudyPlan({ id: activePlan.id, weekly_hours_target: newWeeklyHours });
+                          refreshData(currentSubject?.id, currentTopic?.id);
+                        }}
+                        onApplyRecommendedCycle={(newAllocations) => {
+                          applyRecommendedCycleAllocations(newAllocations);
+                          refreshData(currentSubject?.id, currentTopic?.id);
+                        }}
+                        onJumpToTopic={(subjId, topId) => {
+                          setSelectedSubjectId(subjId);
+                          setSelectedTopicId(topId);
+                          setActiveTab('questions');
+                        }}
+                      />
+                    )}
+
+                    {activeTab === 'graph' && (
+                      <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
+                        <h3 className="text-sm font-bold text-white">
+                          🕸️ Conexões entre Tópicos e Pré-requisitos ({topicLinks.length})
+                        </h3>
+                        <div className="space-y-2 text-xs text-slate-300">
+                          {topicLinks.map((lnk) => (
+                            <div
+                              key={lnk.id}
+                              className="p-3 rounded-xl bg-slate-950 border border-slate-800"
+                            >
+                              🔗 <strong>{lnk.relation_type}:</strong> {lnk.notes}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
 
-              {/* Slot 3: Dock Lateral de Caderno, Busca e Leitor PDF */}
-              {showNotebookDock && (
-                <NotebookDockPanel
-                  currentSubject={currentSubject}
-                  currentTopic={currentTopic}
-                  notebook={notebook}
-                  notebookDraft={notebookDraft}
-                  onChangeNotebookDraft={setNotebookDraft}
-                  onSaveNotebook={() => {
-                    if (!currentSubject || !currentTopic) return;
-                    const saved = saveTopicNotebook({
-                      subjectId: currentSubject.id,
-                      topicId: currentTopic.id,
-                      title: `Caderno ${currentTopic.code} — ${currentTopic.title}`,
-                      contentMarkdown: notebookDraft,
-                    });
-                    setNotebook(saved);
-                    setAllNotebooks(getNotebooksByPlan(activePlan.id));
-                  }}
-                  allNotebooks={allNotebooks}
-                  pdfSource={pdfSource}
-                  onSavePdfProgress={(params) => {
-                    if (!currentSubject || !currentTopic) return;
-                    const updatedPdf = savePdfSourceProgress({
-                      subjectId: currentSubject.id,
-                      topicId: currentTopic.id,
-                      ...params,
-                    });
-                    setPdfSource(updatedPdf);
-                  }}
-                  onJumpToTopic={(subjId, topId) => {
-                    setSelectedSubjectId(subjId);
-                    setSelectedTopicId(topId);
-                  }}
-                  onCloseDock={() => setShowNotebookDock(false)}
-                />
-              )}
+                  {/* Slot 3: Dock Lateral de Caderno, Busca e Leitor PDF */}
+                  {showNotebookDock && (
+                    <NotebookDockPanel
+                      currentSubject={currentSubject}
+                      currentTopic={currentTopic}
+                      notebook={notebook}
+                      notebookDraft={notebookDraft}
+                      onChangeNotebookDraft={setNotebookDraft}
+                      onSaveNotebook={() => {
+                        if (!currentSubject || !currentTopic) return;
+                        const saved = saveTopicNotebook({
+                          subjectId: currentSubject.id,
+                          topicId: currentTopic.id,
+                          title: `Caderno ${currentTopic.code} — ${currentTopic.title}`,
+                          contentMarkdown: notebookDraft,
+                        });
+                        setNotebook(saved);
+                        setAllNotebooks(getNotebooksByPlan(activePlan.id));
+                      }}
+                      allNotebooks={allNotebooks}
+                      pdfSource={pdfSource}
+                      onSavePdfProgress={(params) => {
+                        if (!currentSubject || !currentTopic) return;
+                        const updatedPdf = savePdfSourceProgress({
+                          subjectId: currentSubject.id,
+                          topicId: currentTopic.id,
+                          ...params,
+                        });
+                        setPdfSource(updatedPdf);
+                      }}
+                      onJumpToTopic={(subjId, topId) => {
+                        setSelectedSubjectId(subjId);
+                        setSelectedTopicId(topId);
+                      }}
+                      onCloseDock={() => setShowNotebookDock(false)}
+                    />
+                  )}
 
-              {/* Slot 4: Dock Lateral do Copiloto IA Contextual */}
-              {showAiCopilotDock && studentContext && (
-                <AiCopilotDockPanel
-                  context={studentContext}
-                  activeQuestion={topicQuestions[0]?.question || null}
-                  notebookExcerpt={notebookDraft}
-                  onSaveToNotebook={handleAppendNotesToNotebook}
-                  onCloseDock={() => setShowAiCopilotDock(false)}
-                />
-              )}
-            </div>
+                  {/* Slot 4: Dock Lateral do Copiloto IA Contextual */}
+                  {showAiCopilotDock && studentContext && (
+                    <AiCopilotDockPanel
+                      context={studentContext}
+                      activeQuestion={topicQuestions[0]?.question || null}
+                      notebookExcerpt={notebookDraft}
+                      onSaveToNotebook={handleAppendNotesToNotebook}
+                      onCloseDock={() => setShowAiCopilotDock(false)}
+                    />
+                  )}
+                </div>
+              </>
+            )}
           </>
         ) : (
           <AdminFactoryView adminData={adminData} />
         )}
       </main>
 
+      {/* Assistente Onboarding Wizard ("Pegar pela Mão") */}
+      <OnboardingWizardModal
+        isOpen={wizardOpen}
+        plans={plans}
+        activePlan={activePlan}
+        onClose={() => setWizardOpen(false)}
+        onComplete={handleOnboardingComplete}
+      />
+
+      {/* Modal de Gestão do Edital Verticalizado */}
       <CurriculumManagerModal
         isOpen={crudModalOpen}
         initialSection={crudInitialSection}

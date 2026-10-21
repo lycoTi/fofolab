@@ -1,0 +1,167 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
+import { DailyFocusView } from '../features/daily-focus/DailyFocusView';
+import { OnboardingWizardModal } from '../features/onboarding-wizard/OnboardingWizardModal';
+import { MetricExplainer } from '../components/MetricExplainer';
+import {
+  explainQuestionComplexity,
+  explainSampleConfidence,
+  explainSubjectAllocation,
+  explainTopicHeat,
+} from '../lib/explainabilityEngine';
+import {
+  SEED_STUDY_PLANS,
+  SEED_SUBJECTS,
+  SEED_TOPIC_LINKS,
+  SEED_TOPICS,
+} from '../data/initialSeed';
+import { calculateDynamicStudyCycle } from '../lib/cycleEngine';
+import type { Topic } from '../types/database';
+
+describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje', () => {
+  const cguPlan = SEED_STUDY_PLANS[0];
+  const cguSubjects = SEED_SUBJECTS.filter((s) => s.plan_id === cguPlan.id);
+  const topicsBySubject: Record<string, Topic[]> = {};
+  for (const s of cguSubjects) {
+    topicsBySubject[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+  }
+
+  const cycleData = calculateDynamicStudyCycle({
+    plan: cguPlan,
+    subjects: cguSubjects,
+    topicsBySubject,
+    attempts: [],
+    sessions: [],
+    topicLinks: SEED_TOPIC_LINKS,
+  });
+
+  it('gera explicações em linguagem humana (Nível 1) e bastidores matemáticos (Nível 2)', () => {
+    const alloc = cycleData.allocations[0];
+    const explanation = explainSubjectAllocation(alloc, 31.5, 90);
+
+    expect(explanation.humanSummary).toContain(alloc.subject.name);
+    expect(explanation.humanSummary).toContain(`${alloc.sharePercent}%`);
+    expect(explanation.formulaDetails?.variables.length).toBeGreaterThanOrEqual(2);
+
+    const confExplanation = explainSampleConfidence(25, 2, 4);
+    expect(confExplanation.humanSummary).toContain('calibração');
+
+    const heatExplanation = explainTopicHeat(cycleData.topicHeatmapRanking[0]);
+    expect(heatExplanation.humanSummary).toContain(cycleData.topicHeatmapRanking[0].topic.title);
+
+    const compExplanation = explainQuestionComplexity(
+      { stars: 4, levelLabel: 'Densa / Estudo de Caso', topicCount: 2, linguisticLoad: 'Alta', summaryTip: 'Dica' },
+      'FGV'
+    );
+    expect(compExplanation.humanSummary).toContain('4/5 estrelas');
+  });
+
+  it('renderiza o MetricExplainer como ícone discreto e abre o modal ao ser clicado', () => {
+    const alloc = cycleData.allocations[0];
+    const explanation = explainSubjectAllocation(alloc, 31.5, 90);
+
+    render(<MetricExplainer explanation={explanation} buttonLabel="Por que hoje?" />);
+
+    const button = screen.getByText('Por que hoje?');
+    expect(button).toBeTruthy();
+
+    fireEvent.click(button);
+    expect(screen.getByText(explanation.humanSummary)).toBeTruthy();
+
+    // Expande os bastidores matemáticos
+    const formulaBtn = screen.getByText(/Ver cálculo e bastidores matemáticos/i);
+    fireEvent.click(formulaBtn);
+    expect(screen.getByText(explanation.formulaDetails!.formulaLabel)).toBeTruthy();
+  });
+
+  it('renderiza a Visão "Meu Dia de Hoje" com os blocos de estudo e aciona o estudo direto', () => {
+    const onStartBlock = vi.fn();
+    const onSwitchPro = vi.fn();
+    const onOpenWizard = vi.fn();
+
+    render(
+      <DailyFocusView
+        plan={cguPlan}
+        cycleData={cycleData}
+        subjects={cguSubjects}
+        topicsBySubject={topicsBySubject}
+        onStartBlock={onStartBlock}
+        onSwitchToProWorkbench={onSwitchPro}
+        onOpenWizard={onOpenWizard}
+      />
+    );
+
+    // Deve exibir o roteiro de hoje e pelo menos 1 bloco de estudo
+    expect(screen.getByText(/Roteiro de Hoje • Modo Essencial/i)).toBeTruthy();
+    expect(screen.getAllByText(/Iniciar Estudo Direto 🚀/i).length).toBeGreaterThanOrEqual(1);
+
+    // Clica para iniciar o primeiro bloco
+    fireEvent.click(screen.getAllByText(/Iniciar Estudo Direto 🚀/i)[0]);
+    expect(onStartBlock).toHaveBeenCalledTimes(1);
+  });
+
+  it('permite avançar pelas 4 etapas do Onboarding Wizard e concluir', () => {
+    const onComplete = vi.fn();
+    const onClose = vi.fn();
+
+    render(
+      <OnboardingWizardModal
+        isOpen={true}
+        plans={SEED_STUDY_PLANS}
+        activePlan={cguPlan}
+        onClose={onClose}
+        onComplete={onComplete}
+      />
+    );
+
+    expect(screen.getByText(/Calibrar Meu Roteiro de Estudos/i)).toBeTruthy();
+
+    // Passo 1 -> Passo 2
+    fireEvent.click(screen.getByText(/Continuar/i));
+
+    // Passo 2 -> Passo 3
+    fireEvent.click(screen.getByText(/Continuar/i));
+
+    // Passo 3 -> Passo 4
+    fireEvent.click(screen.getByText(/Continuar/i));
+
+    // Passo 4 -> Concluir
+    const finishBtn = screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i);
+    fireEvent.click(finishBtn);
+
+    expect(onComplete).toHaveBeenCalledTimes(1);
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('AUDITORIA DE UX: garante que a Visão Meu Dia e o Wizard não contêm jargões técnicos proibidos', () => {
+    const { container: dailyContainer } = render(
+      <DailyFocusView
+        plan={cguPlan}
+        cycleData={cycleData}
+        subjects={cguSubjects}
+        topicsBySubject={topicsBySubject}
+        onStartBlock={vi.fn()}
+        onSwitchToProWorkbench={vi.fn()}
+        onOpenWizard={vi.fn()}
+      />
+    );
+
+    const { container: wizardContainer } = render(
+      <OnboardingWizardModal
+        isOpen={true}
+        plans={SEED_STUDY_PLANS}
+        activePlan={cguPlan}
+        onClose={vi.fn()}
+        onComplete={vi.fn()}
+      />
+    );
+
+    const combined = `${dailyContainer.textContent || ''} ${wizardContainer.textContent || ''}`;
+    const forbidden = ['SQLite', '0 tokens', '_score', 'Elasticsearch', 'Anti-Alucinação', 'Restaurar Seed'];
+
+    for (const term of forbidden) {
+      expect(combined).not.toContain(term);
+    }
+  });
+});
+

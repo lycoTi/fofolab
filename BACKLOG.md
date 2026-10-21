@@ -33,10 +33,11 @@
 
 ---
 
-## 🧭 Épicos de Experiência Humana & Onboarding ("Pegar pela Mão")
+## 🧭 Épicos de Experiência Humana & Onboarding ("Pegar pela Mão") — `docs/specs/05-onboarding-wizard-and-daily-focus.md`
 - [ ] **Épico A — Explicabilidade Discreta sob Demanda (`?` / `ⓘ`):** Dicionário centralizado que explica em linguagem humana (e nos bastidores matemáticos para quem quiser expandir) como calculamos cada métrica (Prioridade no Ciclo, Confiança da Amostra, Domínio vs. Cobertura, Mapa de Calor e Estrelas de Complexidade).
-- [ ] **Épico B — Divulgação Progressiva (*Progressive Disclosure*):** Modo Essencial para iniciantes ou usuários com pouca familiaridade digital (mostrando apenas o grosso: *Meu Cronograma*, *Ler PDF/Caderno* e *Questões*), revelando gradualmente ferramentas avançadas conforme o uso.
-- [ ] **Épico C — Wizard "Pegar pela Mão" & Matchmaker de Concursos:** Entrevista guiada passo a passo (objetivo, horas disponíveis, escolaridade/formação, áreas de interesse) cruzando o perfil do estudante com concursos compatíveis por status real (*Edital Publicado*, *Banca Definida*, *Iminente*, *Autorizado*, *Homologado*).
+- [ ] **Épico B — Modo "Meu Dia de Hoje" & Divulgação Progressiva:** Visão simplificada para iniciantes mostrando apenas o roteiro do dia calculado com base no tempo disponível e na estratégia de custo-benefício.
+- [ ] **Épico C — Wizard "Pegar pela Mão" & Matchmaker de Concursos:** Entrevista guiada passo a passo (momento atual, horas diárias, escolaridade, estratégia) que gera a configuração inicial pronta.
+- [ ] **Épico D — Módulo de Vídeo / Navegador Gran & YouTube (Backlog Futuro):** Mini-navegador ou leitor de título da janela que sincroniza a aula assistida no Gran/YouTube com o tópico e caderno do FofoLab.
 
 ---
 

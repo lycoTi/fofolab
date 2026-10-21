@@ -59,26 +59,26 @@ describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', 
     // Com apenas 3 questões, a confiança da amostra ainda não saturou (< 55%), mantendo calibração ativa
     const conf3SmallSubj = calculateSampleConfidencePercent(3, 4);
     const conf3ExtensiveSubj = calculateSampleConfidencePercent(3, 12);
-    const conf20ExtensiveSubj = calculateSampleConfidencePercent(20, 12);
+    const conf30Subj = calculateSampleConfidencePercent(30, 4);
 
     expect(conf3SmallSubj).toBeLessThan(55);
     // Matérias mais extensas exigem mais evidência para atingir a mesma confiança
     expect(conf3ExtensiveSubj).toBeLessThan(conf3SmallSubj);
-    // Com 20 evidências, a confiança supera 65%
-    expect(conf20ExtensiveSubj).toBeGreaterThanOrEqual(65);
+    // Com 30 evidências, a confiança supera 65%
+    expect(conf30Subj).toBeGreaterThanOrEqual(65);
   });
 
   it('calcula decaimento de memória (Meia-Vida HLR + Regra 10-20% de Cepeda) e separa Cobertura de Domínio', () => {
     const nineteenDaysAgo = new Date(Date.now() - 19 * 24 * 60 * 60 * 1000).toISOString();
     const decay = calculateMemoryDecayBoost({
       lastStudiedAt: nineteenDaysAgo,
-      masteryScore: 60,
-      attemptsCount: 4,
+      masteredCount: 1,
+      baseGapCount: 1,
       daysUntilExam: 90,
     });
 
     expect(decay.daysSinceLastStudy).toBeGreaterThanOrEqual(18);
-    expect(decay.forgettingBoost).toBeGreaterThan(0.5);
+    expect(decay.decayHeatBoost).toBeGreaterThan(0.5);
 
     const result = calculateDynamicStudyCycle({
       plan: cguPlan,

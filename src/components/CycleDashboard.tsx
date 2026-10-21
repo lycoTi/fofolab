@@ -11,6 +11,8 @@ import {
   Sliders,
   Sparkles,
 } from 'lucide-react';
+import { MetricExplainer } from './MetricExplainer';
+import { explainSubjectAllocation, explainTopicHeat } from '../lib/explainabilityEngine';
 import type { CycleCalculationResult, CycleSuggestion } from '../lib/cycleEngine';
 import type { StudyPlan } from '../types/database';
 
@@ -230,6 +232,9 @@ export function CycleDashboard({
                   <span className="px-1.5 py-0.5 rounded bg-slate-950 text-orange-300 font-mono">
                     {(item.recommendedWeeklyMinutes / 60).toFixed(1)}h
                   </span>
+                  <MetricExplainer
+                    explanation={explainSubjectAllocation(item, plan.weekly_hours_target, daysUntilExam)}
+                  />
                 </div>
               </div>
             ))}
@@ -391,11 +396,14 @@ export function CycleDashboard({
                   </p>
                 </div>
 
-                <span
-                  className={`px-2 py-1 rounded-lg text-xs font-bold shrink-0 ${getHeatBadgeClass(item.heatScore)}`}
-                >
-                  🔥 {item.heatScore}
-                </span>
+                <div className="flex items-center gap-1 shrink-0">
+                  <span
+                    className={`px-2 py-1 rounded-lg text-xs font-bold ${getHeatBadgeClass(item.heatScore)}`}
+                  >
+                    🔥 {item.heatScore}
+                  </span>
+                  <MetricExplainer explanation={explainTopicHeat(item)} />
+                </div>
               </div>
 
               <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-900">

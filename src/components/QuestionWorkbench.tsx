@@ -12,6 +12,8 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react';
+import { MetricExplainer } from './MetricExplainer';
+import { explainQuestionComplexity } from '../lib/explainabilityEngine';
 import {
   askReverseStudyTutor,
   getQuestionComplexityProfile,
@@ -316,6 +318,9 @@ export function QuestionWorkbench({
                   </span>
                   <span className="text-[11px] text-slate-300 ml-1">{complexity.levelLabel}</span>
                 </span>
+                <MetricExplainer
+                  explanation={explainQuestionComplexity(complexity, question.exam_board)}
+                />
               </div>
 
               {showAnswer && (

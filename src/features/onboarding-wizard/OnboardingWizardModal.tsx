@@ -1,0 +1,307 @@
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Compass, Sparkles, Target, X } from 'lucide-react';
+import type { StudyPlan } from '../../types/database';
+
+export interface OnboardingProfile {
+  studyMoment: 'PRE_EDITAL' | 'POS_EDITAL';
+  dailyHours: number;
+  weeklyHours: number;
+  targetTrackArea: 'CONTROLE' | 'BANCARIO' | 'TRIBUNAIS' | 'TI' | 'GERAL';
+  strategyMode: 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
+}
+
+interface OnboardingWizardModalProps {
+  isOpen: boolean;
+  plans: StudyPlan[];
+  activePlan: StudyPlan;
+  onClose: () => void;
+  onComplete: (profile: OnboardingProfile, targetPlanId: string) => void;
+}
+
+export function OnboardingWizardModal({
+  isOpen,
+  plans,
+  activePlan,
+  onClose,
+  onComplete,
+}: OnboardingWizardModalProps) {
+  const [step, setStep] = useState<number>(1);
+  const [profile, setProfile] = useState<OnboardingProfile>({
+    studyMoment: 'PRE_EDITAL',
+    dailyHours: 1.5,
+    weeklyHours: 10.5,
+    targetTrackArea: 'CONTROLE',
+    strategyMode: 'BASE_COMUM',
+  });
+  const [selectedPlanId, setSelectedPlanId] = useState<string>(activePlan.id);
+
+  if (!isOpen) return null;
+
+  const handleNext = () => {
+    if (step < 4) {
+      setStep(step + 1);
+    } else {
+      // Conclui e salva perfil no localStorage
+      try {
+        localStorage.setItem('fofolab_onboarding_completed_v1', 'true');
+        localStorage.setItem('fofolab_onboarding_profile_v1', JSON.stringify(profile));
+      } catch (e) {
+        console.warn('Erro ao salvar perfil do onboarding:', e);
+      }
+      onComplete(profile, selectedPlanId);
+      onClose();
+    }
+  };
+
+  const handlePrev = () => {
+    if (step > 1) setStep(step - 1);
+  };
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md animate-fade-in"
+    >
+      <div className="w-full max-w-xl rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl p-6 space-y-6 text-slate-100">
+        {/* Cabeçalho do Wizard */}
+        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-xl shadow-lg shadow-orange-500/20">
+              🐹
+            </div>
+            <div>
+              <h2 className="text-sm font-bold text-white flex items-center gap-2">
+                <span>Calibrar Meu Roteiro de Estudos</span>
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">
+                  Passo {step} de 4
+                </span>
+              </h2>
+              <p className="text-xs text-slate-400">Pegando você pela mão para estudar sem sobrecarga</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition"
+            aria-label="Fechar assistente"
+          >
+            <X size={16} />
+          </button>
+        </div>
+
+        {/* Barra de Progresso visual */}
+        <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-gradient-to-r from-orange-500 to-amber-400 transition-all duration-300"
+            style={{ width: `${(step / 4) * 100}%` }}
+          />
+        </div>
+
+        {/* Passo 1: Momento de Estudo */}
+        {step === 1 && (
+          <div className="space-y-4 animate-fade-in">
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <Compass size={16} className="text-orange-400" />
+                Qual o seu momento atual de preparação?
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Isso define se o FofoLab vai focar em construir sua base com calma ou priorizar o que mais cai para a prova.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3">
+              {[
+                {
+                  id: 'PRE_EDITAL' as const,
+                  title: '🛡️ Modo Pré-Edital (Recomendado)',
+                  subtitle: 'Construção da base sólida nas matérias principais com antecedência, sem pressa nem sufoco.',
+                },
+                {
+                  id: 'POS_EDITAL' as const,
+                  title: '🔥 Modo Pós-Edital (Edital Publicado)',
+                  subtitle: 'Tiro curto e intensivo. Foco total em custo-benefício e descarte de tópicos com baixo retorno.',
+                },
+              ].map((opt) => (
+                <button
+                  key={opt.id}
+                  type="button"
+                  onClick={() => setProfile((p) => ({ ...p, studyMoment: opt.id }))}
+                  className={`p-4 rounded-xl border text-left transition ${
+                    profile.studyMoment === opt.id
+                      ? 'bg-orange-500/15 border-orange-500 text-white shadow-lg shadow-orange-500/10'
+                      : 'bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700'
+                  }`}
+                >
+                  <div className="font-semibold text-xs text-orange-200">{opt.title}</div>
+                  <div className="text-[11px] text-slate-400 mt-1 leading-relaxed">{opt.subtitle}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Passo 2: Disponibilidade Diária Real */}
+        {step === 2 && (
+          <div className="space-y-4 animate-fade-in">
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <Clock size={16} className="text-orange-400" />
+                Quanto tempo real você consegue estudar por dia?
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Seja realista com sua rotina de casa e trabalho. Menos horas cumpridas com consistência vencem promessas exageradas!
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              {[
+                { daily: 1.0, weekly: 7.0, label: '1h por dia (7h/sem)', desc: 'Perfeito para quem tem rotina puxada' },
+                { daily: 1.5, weekly: 10.5, label: '1h30 por dia (10.5h/sem)', desc: 'Ritmo constante e sustentável' },
+                { daily: 2.0, weekly: 14.0, label: '2h por dia (14h/sem)', desc: 'Equilíbrio ideal entre teoria e questões' },
+                { daily: 3.0, weekly: 21.0, label: '3h por dia (21h/sem)', desc: 'Foco intenso e avanço rápido' },
+                { daily: 4.5, weekly: 31.5, label: '4h30 por dia (31.5h/sem)', desc: 'Dedicação exclusiva / Reta final' },
+              ].map((item) => (
+                <button
+                  key={item.daily}
+                  type="button"
+                  onClick={() => setProfile((p) => ({ ...p, dailyHours: item.daily, weeklyHours: item.weekly }))}
+                  className={`p-3 rounded-xl border text-left transition ${
+                    profile.dailyHours === item.daily
+                      ? 'bg-orange-500/15 border-orange-500 text-white'
+                      : 'bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700'
+                  }`}
+                >
+                  <div className="font-semibold text-xs text-orange-200">{item.label}</div>
+                  <div className="text-[10px] text-slate-400 mt-0.5">{item.desc}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Passo 3: Área / Concurso Alvo */}
+        {step === 3 && (
+          <div className="space-y-4 animate-fade-in">
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <Target size={16} className="text-orange-400" />
+                Qual edital você quer focar agora?
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Você pode trocar ou adicionar editais a qualquer momento. Escolha o edital principal para carregar o edital verticalizado:
+              </p>
+            </div>
+
+            <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
+              {plans.map((p) => (
+                <button
+                  key={p.id}
+                  type="button"
+                  onClick={() => setSelectedPlanId(p.id)}
+                  className={`w-full p-3.5 rounded-xl border text-left transition flex items-center justify-between ${
+                    selectedPlanId === p.id
+                      ? 'bg-orange-500/15 border-orange-500 text-white shadow-lg shadow-orange-500/10'
+                      : 'bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700'
+                  }`}
+                >
+                  <div>
+                    <div className="font-bold text-xs text-white">
+                      {p.organ ? `[${p.organ}] ` : ''}
+                      {p.title}
+                    </div>
+                    <div className="text-[11px] text-slate-400 mt-0.5">
+                      Banca: <strong className="text-slate-300">{p.exam_board || 'FGV'}</strong> • Cargo: {p.role_title || 'Auditor'}
+                    </div>
+                  </div>
+                  {selectedPlanId === p.id && <CheckCircle2 size={16} className="text-orange-400 shrink-0" />}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Passo 4: Estratégia de Custo-Benefício */}
+        {step === 4 && (
+          <div className="space-y-4 animate-fade-in">
+            <div className="space-y-1">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <Sparkles size={16} className="text-orange-400" />
+                Qual estratégia de Custo-Benefício você prefere?
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                O FofoLab vai reorganizar as matérias automaticamente para maximizar sua nota com o menor esforço desperdiçado:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-2.5">
+              {[
+                {
+                  id: 'BASE_COMUM' as const,
+                  title: '🛡️ Garantir 100% da Base Comum',
+                  desc: 'Foco prioritário em Português, Dir. Administrativo, Constitucional e Raciocínio Lógico (o feijão com arroz que garante aprovação).',
+                },
+                {
+                  id: 'MAIS_COBRADOS' as const,
+                  title: '🎯 Atacar o que Mais Cai e Meus Pontos Fracos',
+                  desc: 'Foco em análise empírica de provas anteriores da banca, atacando os tópicos mais recorrentes.',
+                },
+                {
+                  id: 'ALTO_PESO_CURTO' as const,
+                  title: '⚡ Alta Rentabilidade (Pós-Edital / Tempo Escasso)',
+                  desc: 'Dedicação quase exclusiva às disciplinas de maior peso. Descarta tópicos densos de baixo retorno na prova.',
+                },
+              ].map((strat) => (
+                <button
+                  key={strat.id}
+                  type="button"
+                  onClick={() => setProfile((p) => ({ ...p, strategyMode: strat.id }))}
+                  className={`p-3.5 rounded-xl border text-left transition ${
+                    profile.strategyMode === strat.id
+                      ? 'bg-orange-500/15 border-orange-500 text-white'
+                      : 'bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700'
+                  }`}
+                >
+                  <div className="font-semibold text-xs text-orange-200">{strat.title}</div>
+                  <div className="text-[11px] text-slate-400 mt-1 leading-relaxed">{strat.desc}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Controles do Rodapé */}
+        <div className="flex items-center justify-between border-t border-slate-800 pt-4">
+          <button
+            type="button"
+            disabled={step === 1}
+            onClick={handlePrev}
+            className="px-3.5 py-2 rounded-xl border border-slate-800 text-xs font-semibold text-slate-400 hover:text-white disabled:opacity-30 disabled:pointer-events-none flex items-center gap-1.5 transition"
+          >
+            <ArrowLeft size={14} />
+            Voltar
+          </button>
+
+          <button
+            type="button"
+            onClick={handleNext}
+            className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-orange-500/20 transition"
+          >
+            {step === 4 ? (
+              <>
+                <span>Gerar Meu Roteiro de Hoje 🚀</span>
+              </>
+            ) : (
+              <>
+                <span>Continuar</span>
+                <ArrowRight size={14} />
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
