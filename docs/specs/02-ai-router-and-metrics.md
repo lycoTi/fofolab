@@ -6,7 +6,7 @@ Para que o estudo reverso funcione com custo mínimo e **risco mínimo de alucin
 1. **Camada 0 — Cache SQLite Local (`ai_dissections`):**
    - Consulta instantânea (`0 tokens` / `R$ 0,00`) caso a questão já tenha sido destrinchada.
    - **[5.5]** Questão sem explicação + IA configurada → botão "Gerar explicação com IA" (`generateQuestionDissection` pede JSON `{explicacao_markdown, pre_requisitos}`) e o resultado é guardado aqui (`saveAiDissection`). `provider_used = 'EXAMPLE'` marca as explicações de exemplo do seed.
-2. **Camada 1 — Google AI Studio (`gemini-2.5-flash` Free Tier)** ➔ **Camada 2 — Fallback DeepSeek V3 (`deepseek-chat`, trava pré-paga R$ 50)**.
+2. **Camada 1 — Google AI Studio (`gemini-flash-latest`, configurável em `VITE_GEMINI_MODEL`)** ➔ **Camada 2 — Fallback DeepSeek (`deepseek-flash` sem modo de raciocínio, configurável em `VITE_DEEPSEEK_MODEL`; saldo pré-pago funciona como teto de gasto)**.
    - **[5.5]** Antes delas, o Gateway próprio (`VITE_FOFOLAB_AI_GATEWAY_URL`), recomendado para o `.exe` distribuído. Variáveis em `.env.example`; tempo limite de 30 s por chamada.
    - **[5.5] Modo demonstração:** sem nenhuma variável, tutor e copiloto respondem com exemplos montados localmente, **sempre** marcados "Exemplo simulado" na tela e nunca gravados como explicação. IA configurada que falha mostra aviso de falha (não um exemplo).
 3. **Protocolo Anti-Alucinação no Estudo Reverso (Grounding Estrito):**

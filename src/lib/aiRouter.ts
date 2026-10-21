@@ -68,7 +68,10 @@ export interface AiStatus {
 }
 
 const REQUEST_TIMEOUT_MS = 30000;
-const DEFAULT_GEMINI_MODEL = 'gemini-2.5-flash';
+// Alias que o Google mantém apontando para o Flash atual; nomes fixos (ex.: gemini-2.5-flash) são desligados.
+const DEFAULT_GEMINI_MODEL = 'gemini-flash-latest';
+// deepseek-chat foi desligado em 24/07/2026; deepseek-flash é o nome atual do modelo barato.
+const DEFAULT_DEEPSEEK_MODEL = 'deepseek-flash';
 
 function readEnv(name: keyof ImportMetaEnv): string | undefined {
   const value = import.meta.env?.[name];
@@ -228,7 +231,11 @@ async function fetchJson(url: string, init: RequestInit): Promise<unknown | null
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
     const response = await fetch(url, { ...init, signal: controller.signal });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      const body = await response.text().catch(() => '');
+      console.warn(`IA respondeu ${response.status}; usando o próximo provedor ou o exemplo simulado.`, body.slice(0, 500));
+      return null;
+    }
     return await response.json();
   } catch {
     return null;
@@ -268,7 +275,9 @@ async function callDeepSeek(apiKey: string, prompt: string, json: boolean): Prom
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
-      model: 'deepseek-chat',
+      model: readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL,
+      // O modo de raciocínio vem ligado por padrão e cobra os tokens de pensamento como saída.
+      thinking: { type: 'disabled' },
       messages: [{ role: 'user', content: prompt }],
       ...(json ? { response_format: { type: 'json_object' } } : {}),
     }),

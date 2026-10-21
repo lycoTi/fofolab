@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly VITE_GEMINI_API_KEY?: string;
   readonly VITE_GEMINI_MODEL?: string;
   readonly VITE_DEEPSEEK_API_KEY?: string;
+  readonly VITE_DEEPSEEK_MODEL?: string;
 }
 
 declare module 'sql.js' {
