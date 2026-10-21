@@ -24,6 +24,21 @@ flowchart TD
 2. **🎯 Atacar o que mais cai e onde tenho mais dificuldade:** Foco baseado nos dados de provas anteriores e nos tópicos com maior probabilidade de questão.
 3. **⚡ Tiro Curto de Pós-Edital (Alta Rentabilidade):** Prioridade máxima para as matérias com maior peso na prova e descarte planejado de tópicos de baixo custo-benefício.
 
+### Como o Wizard age de verdade (implementado na Fatia 5.5)
+- O perfil é gravado **no plano** (`study_plans.weekly_hours_target`, `strategy_mode`, `study_moment`), não no localStorage. O localStorage guarda só a marca "assistente já visto".
+- Ao concluir, o Wizard **aplica ao ciclo** a distribuição recomendada pela estratégia (é a "Geração Automática"). Fora do Wizard, mudanças de prioridade continuam sendo só **sugestão** ("Aplicar Sugestão no Próximo Ciclo").
+- O momento (pré/pós-edital) pré-seleciona a estratégia (Pré → Base Comum; Pós → Alta Rentabilidade) até o estudante escolher outra.
+- **Multiplicadores v1** sobre a prioridade de cada disciplina (`STRATEGY_FACTORS` em `src/lib/cycleEngine.ts`), sem estratégia = 1:
+  - *Base Comum:* Básico ×1,3 • Geral ×1,1 • Específico ×1,0.
+  - *O que mais cai / pontos fracos:* 1 + 0,06 × calor médio dos tópicos (a parte "o que mais cai" vai usar a frequência das questões das provas importadas — Fatia 7).
+  - *Alta rentabilidade:* (peso ÷ peso médio)^0,75.
+
+### Como o "Meu Dia" escolhe os blocos (`src/lib/dailyPlanner.ts`)
+- Matérias ordenadas pelo que **falta do ciclo nesta semana** (minutos do ciclo − minutos registrados no Pomodoro desde segunda), empate pela prioridade.
+- Até 2 blocos: com até 1h/dia, um bloco; acima disso, 60%/40% do tempo do dia, sem passar do que falta da matéria (mínimo 20 min).
+- Semana toda cumprida → blocos extras de revisão pela maior prioridade.
+- "Iniciar Estudo Direto" abre a bancada no tópico e ajusta o Pomodoro para a duração do bloco.
+
 ---
 
 ## 📅 3. A Visão "Meu Dia de Hoje" (Modo Essencial)

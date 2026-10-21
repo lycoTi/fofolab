@@ -11,4 +11,6 @@ A interface do FofoLab é voltada para o estudante, nunca para o desenvolvedor.
 
 ## 2. Qualidade & Suíte de Testes Obrigatória
 - Toda nova funcionalidade ou fatia do backlog deve ser acompanhada de testes automatizados em `src/**/__tests__/*.test.ts(x)` cobrindo regras de negócio, fluxos intermediários e limpeza de UI.
-- Antes de encerrar uma entrega ou fazer commit, execute `npm test` e `npm run build`.
+- Fluxos que atravessam telas (importar, responder e diagnosticar, backup/restauração, leitura) também ganham teste E2E em `e2e/*.spec.ts` (Playwright).
+- Antes de encerrar uma entrega ou fazer commit, execute `npm test`, `npm run test:e2e` e `npm run build`.
+- Marcar algo como `[DONE]` segue `.agents/rules/definition-of-done.md`.

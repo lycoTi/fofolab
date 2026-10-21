@@ -5,13 +5,16 @@ Aplicação desktop ultraleve (`.exe`), local-first e gratuita para estudo ativo
 ---
 
 ## 🧭 Para IAs (Antigravity, Claude, Cursor, Gemini)
-Antes de alterar qualquer código em sessões de 10 minutos:
-1. Leia o arquivo **[`BACKLOG.md`](./BACKLOG.md)** (menos de 80 linhas) para identificar a tarefa atual (`[NEXT_10_MIN]`).
+Antes de alterar qualquer código:
+1. Leia **[`BACKLOG.md`](./BACKLOG.md)** — estado **real** de cada área, definição de pronto e próximas fatias. (Claude Code: [`CLAUDE.md`](./CLAUDE.md) resume as regras.)
 2. Consulte apenas a especificação necessária dentro de **[`docs/specs/`](./docs/specs/)**:
-   - [`docs/specs/01-database-schema.sql`](./docs/specs/01-database-schema.sql) — Contrato fixo do banco SQLite local.
-   - [`docs/specs/02-ai-router-and-metrics.md`](./docs/specs/02-ai-router-and-metrics.md) — Roteador Gemini Free ➔ DeepSeek V3 e cálculo de Domínio/Afinidade sem viés.
-   - [`docs/specs/03-admin-tracks-and-crawler.md`](./docs/specs/03-admin-tracks-and-crawler.md) — Modo Admin, Trilhas Prontas, Dossiês e Crawler com Blueprint de Bancas.
-3. Se a pasta `graphify-out/` existir, consulte `graphify-out/GRAPH_REPORT.md` antes de fazer buscas amplas no código.
+   - [`01-database-schema.sql`](./docs/specs/01-database-schema.sql) — Contrato do banco local (versão 2; mudanças exigem migração em `src/lib/migrations.ts`).
+   - [`02-ai-router-and-metrics.md`](./docs/specs/02-ai-router-and-metrics.md) — Roteador Gateway ➔ Gemini ➔ DeepSeek, modo demonstração e cálculo de Domínio sem viés.
+   - [`03-admin-tracks-and-crawler.md`](./docs/specs/03-admin-tracks-and-crawler.md) — Modo Admin, Trilhas Prontas, Dossiês e Crawler (não implementado).
+   - [`05-onboarding-wizard-and-daily-focus.md`](./docs/specs/05-onboarding-wizard-and-daily-focus.md) — Wizard, estratégias e "Meu Dia de Hoje".
+   - [`06-importacao-e-persistencia.md`](./docs/specs/06-importacao-e-persistencia.md) — Onde os dados ficam, backups, migrações e formatos de importação.
+3. Decisões e diagnóstico: [`docs/reviews/`](./docs/reviews/). Regras dos agentes: [`.agents/rules/`](./.agents/rules/).
+4. Se a pasta `graphify-out/` existir, use `graphify query` antes de buscas amplas — e rode `graphify update .` depois de mudar código.
 
 ---
 
@@ -34,8 +37,9 @@ Para continuar desenvolvendo no **PC de casa** ou no **PC do trabalho**, confira
   - Requer Python `>= 3.10`.
   - Verificar: `python -c "import graphify; print('OK')"`
   - Instalar: `pip install graphifyy`
-* **Playwright (Apenas para o Modo Admin / Crawler de Bancas futuro):**
-  - Será instalado sob demanda via `npx playwright install chromium` quando formos trabalhar no módulo Admin.
+* **Playwright (testes E2E):**
+  - Já vem no `npm install` e usa o **Microsoft Edge** instalado no Windows (mesmo motor do WebView2 do `.exe`), sem baixar navegador.
+  - Em outro sistema: `npx playwright install chromium` e rode com `PLAYWRIGHT_CHANNEL=chromium npm run test:e2e`.
 
 ---
 
@@ -57,6 +61,17 @@ npm install
 npm run dev
 ```
 
+### Testes e IA
+```powershell
+npm test            # Vitest: regras, componentes e o banco real rodando no Node
+npm run test:e2e    # Playwright no Microsoft Edge instalado (sobe o npm run dev sozinho)
+npm run build       # Checagem de tipos + build de produção
+
+# IA (opcional): sem variáveis o app roda em modo demonstração, com respostas marcadas como simulação
+copy .env.example .env.local   # e preencha a chave ou o gateway
+```
+> Os dados do `npm run dev` ficam no armazenamento interno do navegador; os do `.exe`, em `%APPDATA%\com.fofolab.desktop\fofolab.db`. Para levar estudos de um PC para outro: **Organizar Edital → Backup & Segurança → Fazer Backup** e, no outro PC, **Restaurar de um arquivo de backup**.
+
 ### Para empacotar ou rodar como Janela Desktop Nativa (`.exe` via Tauri v2)
 *(Após instalar o `Rustup` e o `VS C++ Build Tools` da tabela acima)*:
 ```powershell
@@ -73,19 +88,24 @@ npm run tauri:build
 
 ```text
 fofolab/
-├── BACKLOG.md                  # Índice ultracompacto de progresso (leitura obrigatória p/ IA)
+├── BACKLOG.md                  # Estado real + próximas fatias (leitura obrigatória p/ IA)
+├── CLAUDE.md                   # Regras e mapa rápido para o Claude Code
 ├── README.md                   # Este guia de setup e arquitetura
+├── .env.example                # Variáveis da IA (copie para .env.local)
 ├── docs/
-│   └── specs/                  # Especificações técnicas isoladas por módulo
-│       ├── 01-database-schema.sql
-│       ├── 02-ai-router-and-metrics.md
-│       └── 03-admin-tracks-and-crawler.md
+│   ├── specs/                  # Especificações técnicas por módulo (01 banco … 06 persistência/importação)
+│   └── reviews/                # Revisões de estado e decisões tomadas
+├── e2e/                        # Testes de ponta a ponta (Playwright)
+├── src-tauri/                  # App desktop (Rust): plugin de arquivos e permissões
 ├── public/
 │   └── favicon-fofolab.svg     # Mascote oficial do ecossistema Fofo (Hamster)
 └── src/
-    ├── types/                  # Contratos TypeScript espelhando o SQLite
-    ├── data/                   # Dados iniciais de exemplo (Edital CGU / Questões)
-    ├── components/             # Componentes modulares da Bancada e do Modo Admin
+    ├── lib/                    # Regras: banco, armazenamento, migrações, ciclo, IA, importadores
+    ├── components/             # Componentes da Bancada (questões, ciclo, backup, diálogos…)
+    ├── features/               # Módulos de tela (Meu Dia, Wizard, caderno/PDF, copiloto, importação…)
+    ├── types/                  # Contratos TypeScript espelhando o banco
+    ├── data/                   # Exemplo inicial (CGU + BACEN)
+    ├── __tests__/              # Testes Vitest
     ├── App.tsx                 # Shell principal da Bancada FofoLab
     └── main.tsx                # Entrypoint React
 ```
