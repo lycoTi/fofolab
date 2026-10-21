@@ -16,7 +16,10 @@ export interface TopicHeatItem {
   doubtCount: number;
   boardTrapCount: number;
   masteredCount: number;
-  isReverseStudyDiscovery: boolean; // True quando <= 3 questões (1º contato no Estudo Reverso)
+  sampleConfidencePercent: number;  // Confiança amostral contínua estilo BM25 (0..100%)
+  memoryHalfLifeDays: number;       // Meia-vida da memória (Duolingo HLR, em dias)
+  daysSinceLastStudy: number | null;
+  isReverseStudyDiscovery: boolean; // Derivado de sampleConfidencePercent < 35% (sem número mágico fixo!)
   heatScore: number;                // Pontuação estilo Elasticsearch (_score de urgência 0..10)
   relatedPrerequisiteTitles: string[];
 }
@@ -25,6 +28,8 @@ export interface SubjectCycleAllocation {
   subject: Subject;
   elasticScore: number;             // _score bruto calculado estilo Elasticsearch
   sharePercent: number;             // % da pizza no ciclo (soma = 100%)
+  coveragePercent: number;          // % de tópicos do edital já iniciados (evita média diluída)
+  studiedTopicsMastery: number;     // Domínio médio real dos tópicos já estudados
   currentWeeklyMinutes: number;     // Minutos atuais alocados na semana
   recommendedWeeklyMinutes: number; // Minutos sugeridos pelo Score mantendo o teto fixo semanal
   deltaMinutes: number;             // Diferença sugerida para o próximo ciclo (soma zero!)
@@ -49,6 +54,59 @@ export interface CycleCalculationResult {
   allocations: SubjectCycleAllocation[];
   topicHeatmapRanking: TopicHeatItem[];
   suggestions: CycleSuggestion[];
+}
+
+/**
+ * Calcula a Confiança Amostral Contínua estilo BM25 (Mandinach & Gummer, 2016).
+ * Substitui números mágicos fixos (como `< 3 questões`) por uma curva de saturação:
+ * C_n = W / (W + k), onde k escala com a extensão da disciplina.
+ */
+export function calculateSampleConfidencePercent(
+  attemptsCount: number,
+  topicCountInSubject = 4
+): number {
+  if (attemptsCount <= 0) return 0;
+  // Constante de saturação k cresce conforme a amplitude da matéria (mínimo 8, padrão 10-14)
+  const saturationK = Math.max(8, 6 + topicCountInSubject * 1.5);
+  const confidenceRatio = attemptsCount / (attemptsCount + saturationK);
+  return Math.round(confidenceRatio * 100);
+}
+
+/**
+ * Calcula a Meia-Vida da Memória (Duolingo Half-Life Regression — Settles & Meeder, 2016)
+ * combinada com a Regra dos 10–20% do Horizonte até a Prova (Cepeda et al., 2006).
+ */
+export function calculateMemoryDecayBoost(params: {
+  lastStudiedAt: string | null;
+  masteredCount: number;
+  baseGapCount: number;
+  daysUntilExam: number | null;
+}): { memoryHalfLifeDays: number; daysSinceLastStudy: number | null; decayHeatBoost: number } {
+  const { lastStudiedAt, masteredCount, baseGapCount, daysUntilExam } = params;
+
+  // Intervalo ótimo base segundo Cepeda et al. (10-20% do horizonte até a prova, entre 3 e 21 dias)
+  const optimalHorizonDays =
+    daysUntilExam && daysUntilExam > 0
+      ? Math.max(3, Math.min(21, Math.round(daysUntilExam * 0.12)))
+      : 7;
+
+  // Cada recuperação bem-sucedida expande a meia-vida; lacunas reduzem
+  const rawHalfLife = optimalHorizonDays * Math.pow(1.45, masteredCount) * Math.pow(0.75, baseGapCount);
+  const memoryHalfLifeDays = Math.max(2, Math.min(45, Math.round(rawHalfLife)));
+
+  if (!lastStudiedAt) {
+    return { memoryHalfLifeDays, daysSinceLastStudy: null, decayHeatBoost: 0 };
+  }
+
+  const elapsedMs = Date.now() - new Date(lastStudiedAt).getTime();
+  const daysSinceLastStudy = Math.max(0, Math.floor(elapsedMs / (1000 * 60 * 60 * 24)));
+
+  // Probabilidade de retenção R(t) = 2^(-t / h). O risco de esquecimento é 1 - R(t)
+  const recallProbability = Math.pow(2, -daysSinceLastStudy / memoryHalfLifeDays);
+  const forgettingRisk = 1 - recallProbability;
+  const decayHeatBoost = Number((forgettingRisk * 2.2).toFixed(2));
+
+  return { memoryHalfLifeDays, daysSinceLastStudy, decayHeatBoost };
 }
 
 /**
@@ -108,7 +166,7 @@ export function getSampleSubtopicsForCalibration(subjectName: string): string[] 
 
 /**
  * Motor Matemático do Ciclo de Estudos (Estilo Elasticsearch `_score` + Orçamento Fixo Soma Zero).
- * Nunca estoura o limite de horas semanais do estudante!
+ * Incorpora Confiança Amostral Contínua (BM25 saturation) e Meia-Vida da Memória (Duolingo HLR).
  */
 export function calculateDynamicStudyCycle(params: {
   plan: StudyPlan;
@@ -136,10 +194,10 @@ export function calculateDynamicStudyCycle(params: {
   const avgMinutesPerSubject = subjects.length > 0 ? totalWeeklyMinutesBudget / subjects.length : 0;
   const isOverloaded = subjects.length >= 5 && avgMinutesPerSubject < 180;
   const overloadMessage = isOverloaded
-    ? `Você está com ${subjects.length} disciplinas simultâneas para ${plan.weekly_hours_target}h/semana (~${Math.round(avgMinutesPerSubject / 60 * 10) / 10}h por matéria). Considere focar em 4 a 5 matérias principais neste ciclo para não pulverizar sua retenção.`
+    ? `Você está com ${subjects.length} disciplinas simultâneas para ${plan.weekly_hours_target}h/semana (~${Math.round((avgMinutesPerSubject / 60) * 10) / 10}h por matéria). Considere focar em 4 a 5 matérias principais neste ciclo para não pulverizar sua retenção.`
     : null;
 
-  // Mapa rápido de todos os tópicos para cruzar pré-requisitos (topic_links)
+  // 3. Mapa rápido de todos os tópicos para cruzar pré-requisitos (topic_links)
   const allTopicsMap = new Map<string, Topic>();
   for (const subj of subjects) {
     for (const t of topicsBySubject[subj.id] || []) {
@@ -147,11 +205,10 @@ export function calculateDynamicStudyCycle(params: {
     }
   }
 
-  // 3. Construção do Mapa de Calor de Tópicos (Heatmap Ranking)
+  // 4. Construção do Mapa de Calor de Tópicos (Heatmap Ranking)
   const topicHeatmapRanking: TopicHeatItem[] = [];
   const prerequisiteBoostByTopic = new Map<string, number>();
 
-  // Primeiro passo: contabilizar tentativas por tópico e propagar calor para pré-requisitos
   for (const subj of subjects) {
     const subjTopics = topicsBySubject[subj.id] || [];
     for (const topic of subjTopics) {
@@ -159,7 +216,6 @@ export function calculateDynamicStudyCycle(params: {
       const baseGapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BASE_GAP').length;
 
       if (baseGapCount > 0 || topic.mastery_score < 50) {
-        // Se este tópico tem lacuna de base, propaga um boost para os seus tópicos pré-requisitos!
         const incomingPrereqs = topicLinks.filter((l) => l.target_topic_id === topic.id);
         for (const link of incomingPrereqs) {
           const prev = prerequisiteBoostByTopic.get(link.source_topic_id) || 0;
@@ -169,7 +225,6 @@ export function calculateDynamicStudyCycle(params: {
     }
   }
 
-  // Segundo passo: calcular o heatScore de cada tópico
   for (const subj of subjects) {
     const subjTopics = topicsBySubject[subj.id] || [];
     for (const topic of subjTopics) {
@@ -180,10 +235,21 @@ export function calculateDynamicStudyCycle(params: {
       const boardTrapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BOARD_TRAP').length;
       const masteredCount = topicAttempts.filter((a) => a.self_diagnosis === 'MASTERED').length;
 
-      // No Estudo Reverso, até 3 questões resolvidas no tópico é fase de Mapeamento/Descoberta!
-      const isReverseStudyDiscovery = attemptsCount <= 3 && topic.status !== 'MASTERED';
+      const sampleConfidencePercent = calculateSampleConfidencePercent(
+        attemptsCount,
+        subjTopics.length
+      );
+      const isReverseStudyDiscovery =
+        sampleConfidencePercent < 35 && topic.status !== 'MASTERED';
 
-      // Score de Calor estilo Elasticsearch (BM25-like saturation):
+      const { memoryHalfLifeDays, daysSinceLastStudy, decayHeatBoost } =
+        calculateMemoryDecayBoost({
+          lastStudiedAt: topic.last_studied_at,
+          masteredCount,
+          baseGapCount,
+          daysUntilExam,
+        });
+
       const masteryDeficit = (100 - topic.mastery_score) / 25; // 0.0 a 4.0
       const diagnosisSignal =
         baseGapCount * 1.35 +
@@ -194,7 +260,11 @@ export function calculateDynamicStudyCycle(params: {
       const prereqBoost = prerequisiteBoostByTopic.get(topic.id) || 0;
       const rawHeat = Math.max(
         0.5,
-        Math.min(10, (masteryDeficit + Math.max(0, diagnosisSignal) + prereqBoost) * (0.7 + subj.exam_weight * 0.2))
+        Math.min(
+          10,
+          (masteryDeficit + Math.max(0, diagnosisSignal) + prereqBoost + decayHeatBoost) *
+            (0.7 + subj.exam_weight * 0.2)
+        )
       );
 
       const relatedPrerequisiteTitles = topicLinks
@@ -215,6 +285,9 @@ export function calculateDynamicStudyCycle(params: {
         doubtCount,
         boardTrapCount,
         masteredCount,
+        sampleConfidencePercent,
+        memoryHalfLifeDays,
+        daysSinceLastStudy,
         isReverseStudyDiscovery,
         heatScore: Number(rawHeat.toFixed(1)),
         relatedPrerequisiteTitles,
@@ -224,7 +297,7 @@ export function calculateDynamicStudyCycle(params: {
 
   topicHeatmapRanking.sort((a, b) => b.heatScore - a.heatScore);
 
-  // 4. Cálculo do Score estilo Elasticsearch por Disciplina e Normalização (Soma = Orçamento Semanal)
+  // 5. Cálculo do Score estilo Elasticsearch por Disciplina e Normalização (Soma = Orçamento Semanal)
   const rawSubjectScores = subjects.map((subj) => {
     const subjTopics = topicHeatmapRanking.filter((t) => t.topic.subject_id === subj.id);
     const avgTopicHeat =
@@ -232,34 +305,55 @@ export function calculateDynamicStudyCycle(params: {
         ? subjTopics.reduce((acc, item) => acc + item.heatScore, 0) / subjTopics.length
         : 4.0;
 
-    // Fator de partida a frio (Nível inicial 1..4 -> quanto menor a base, maior o impulso inicial)
+    // Separa Cobertura do Edital de Domínio dos Tópicos Estudados (evita média diluída!)
+    const startedTopics = subjTopics.filter(
+      (t) => t.topic.mastery_score > 0 || t.attemptsCount > 0 || t.topic.status !== 'PENDING'
+    );
+    const coveragePercent =
+      subjTopics.length > 0
+        ? Math.round((startedTopics.length / subjTopics.length) * 100)
+        : 0;
+    const studiedTopicsMastery =
+      startedTopics.length > 0
+        ? Math.round(
+            startedTopics.reduce((acc, t) => acc + t.topic.mastery_score, 0) /
+              startedTopics.length
+          )
+        : subj.measured_mastery_score;
+
     const coldStartFactor = (5 - subj.initial_knowledge_level) * 0.35;
-    // Fator de afinidade (Afinidade 1..3 -> matérias com maior resistência recebem blocos mais bem distribuídos)
     const affinityFactor = (4 - subj.initial_affinity_level) * 0.2;
-    // Fator de domínio medido (quanto menor o domínio, maior a necessidade)
-    const masteryNeed = (100 - subj.measured_mastery_score) / 35;
-    // Fricção comportamental (pausas/pulos no Pomodoro)
+    const masteryNeed = (100 - studiedTopicsMastery) / 35;
+    const unvisitedCoverageBoost = ((100 - coveragePercent) / 100) * 0.45;
     const frictionBoost = subj.behavioral_friction_score * 0.8;
 
     const elasticScore = Number(
       (
         subj.exam_weight *
-        (1.0 + coldStartFactor + affinityFactor + masteryNeed * 0.6 + avgTopicHeat * 0.25 + frictionBoost)
+        (1.0 +
+          coldStartFactor +
+          affinityFactor +
+          masteryNeed * 0.6 +
+          unvisitedCoverageBoost +
+          avgTopicHeat * 0.25 +
+          frictionBoost)
       ).toFixed(2)
     );
 
-    let dominantReason = `Peso ${subj.exam_weight}x no edital`;
-    if (subj.measured_mastery_score < 50) {
-      dominantReason = `Prioridade alta no Mapa de Calor (Domínio ${subj.measured_mastery_score}%)`;
-    } else if (subj.measured_mastery_score >= 80) {
-      dominantReason = `Base consolidada (${subj.measured_mastery_score}%) — Modo manutenção/revisão`;
+    let dominantReason = `Peso ${subj.exam_weight}x no edital • Cobertura ${coveragePercent}%`;
+    if (studiedTopicsMastery < 50) {
+      dominantReason = `Prioridade alta no Mapa de Calor (Domínio ${studiedTopicsMastery}% • Cobertura ${coveragePercent}%)`;
+    } else if (studiedTopicsMastery >= 80 && coveragePercent >= 80) {
+      dominantReason = `Base consolidada (${studiedTopicsMastery}%) — Modo manutenção espaçada`;
     } else if (subj.initial_affinity_level === 1) {
-      dominantReason = `Alta fricção / baixa afinidade — Sessões curtas mais frequentes`;
+      dominantReason = `Baixa afinidade inicial — Sessões curtas e frequentes`;
     }
 
     return {
       subject: subj,
       elasticScore,
+      coveragePercent,
+      studiedTopicsMastery,
       dominantReason,
     };
   });
@@ -267,14 +361,12 @@ export function calculateDynamicStudyCycle(params: {
   const totalElasticScore =
     rawSubjectScores.reduce((acc, item) => acc + item.elasticScore, 0) || 1;
 
-  // Normaliza as fatias atuais da semana para que possamos comparar com o recomendado na mesma base semanal
   const totalCurrentCycleMinutes =
     subjects.reduce((acc, s) => acc + s.cycle_allocated_minutes, 0) || 1;
 
   const allocations: SubjectCycleAllocation[] = rawSubjectScores.map((item) => {
     const shareRatio = item.elasticScore / totalElasticScore;
     const sharePercent = Math.round(shareRatio * 100);
-    // Arredonda para múltiplos de 15 min
     const recommendedWeeklyMinutes = Math.max(
       30,
       Math.round((shareRatio * totalWeeklyMinutesBudget) / 15) * 15
@@ -289,6 +381,8 @@ export function calculateDynamicStudyCycle(params: {
       subject: item.subject,
       elasticScore: item.elasticScore,
       sharePercent,
+      coveragePercent: item.coveragePercent,
+      studiedTopicsMastery: item.studiedTopicsMastery,
       currentWeeklyMinutes,
       recommendedWeeklyMinutes,
       deltaMinutes,
@@ -297,7 +391,7 @@ export function calculateDynamicStudyCycle(params: {
     };
   });
 
-  // 5. Geração de Sugestões Não-Invasivas para o Próximo Ciclo
+  // 6. Geração de Sugestões Não-Invasivas para o Próximo Ciclo
   const suggestions: CycleSuggestion[] = [];
 
   const needMoreTime = [...allocations].sort((a, b) => b.deltaMinutes - a.deltaMinutes)[0];
@@ -313,7 +407,7 @@ export function calculateDynamicStudyCycle(params: {
       id: 'sug-rebalance',
       type: 'REBALANCE',
       title: `Sugestão para o Próximo Ciclo: Rebalancear ${Math.abs(needMoreTime.deltaMinutes)} min/sem`,
-      description: `O Mapa de Calor aponta maior urgência em "${needMoreTime.subject.name}" (Score ${needMoreTime.elasticScore}) enquanto "${canDonateTime.subject.name}" já está com ${canDonateTime.subject.measured_mastery_score}% de domínio. Você pode transferir ~${Math.abs(needMoreTime.deltaMinutes)} min/sem entre elas no próximo ciclo sem aumentar 1 minuto na sua rotina de ${plan.weekly_hours_target}h/semana!`,
+      description: `O Mapa de Calor aponta maior urgência em "${needMoreTime.subject.name}" (Prioridade ${needMoreTime.elasticScore}) enquanto "${canDonateTime.subject.name}" já está com ${canDonateTime.studiedTopicsMastery}% de domínio nos tópicos estudados. Você pode transferir ~${Math.abs(needMoreTime.deltaMinutes)} min/sem entre elas mantendo suas ${plan.weekly_hours_target}h/semana fixas!`,
       actionLabel: 'Aplicar Equilíbrio Sugerido ao Próximo Ciclo',
     });
   }
@@ -334,7 +428,7 @@ export function calculateDynamicStudyCycle(params: {
     suggestions.push({
       id: 'sug-prereq',
       type: 'PREREQUISITE_ALERT',
-      title: `🔗 Conexão Detectada no Grafo: ${hotTopicWithPrereq.topic.code} ${hotTopicWithPrereq.topic.title}`,
+      title: `🔗 Conexão Detectada: ${hotTopicWithPrereq.topic.code} ${hotTopicWithPrereq.topic.title}`,
       description: `Este tópico está quente no Mapa de Calor (${hotTopicWithPrereq.heatScore}/10) e possui vínculo direto com: ${hotTopicWithPrereq.relatedPrerequisiteTitles.join(', ')}. Revisar o pré-requisito destrava os acertos aqui!`,
     });
   }
@@ -342,9 +436,9 @@ export function calculateDynamicStudyCycle(params: {
   suggestions.push({
     id: 'sug-reverse-study',
     type: 'REVERSE_STUDY_INFO',
-    title: '🛡️ Estudo Reverso (Mapeamento sem Pressão)',
+    title: '🛡️ Confiança Amostral Progressiva & Estudo Reverso',
     description:
-      'Errar questões no primeiro contato com um tópico nunca aumenta suas horas semanais: os diagnósticos apenas priorizam os assuntos que você mais precisa revisar no próximo ciclo.',
+      'Sua proficiência é ponderada pela maturidade da amostra de questões resolvidas e pela curva de esquecimento, sem nunca estourar seu limite de horas semanais.',
   });
 
   return {
@@ -358,4 +452,3 @@ export function calculateDynamicStudyCycle(params: {
     suggestions,
   };
 }
-

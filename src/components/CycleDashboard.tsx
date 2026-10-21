@@ -11,7 +11,7 @@ import {
   Sliders,
   Sparkles,
 } from 'lucide-react';
-import type { CycleCalculationResult } from '../lib/cycleEngine';
+import type { CycleCalculationResult, CycleSuggestion } from '../lib/cycleEngine';
 import type { StudyPlan } from '../types/database';
 
 interface CycleDashboardProps {
@@ -20,6 +20,29 @@ interface CycleDashboardProps {
   onUpdateWeeklyHours: (newWeeklyHours: number) => void;
   onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
   onJumpToTopic: (subjectId: string, topicId: string) => void;
+}
+
+function getSuggestionCardClass(type: CycleSuggestion['type']): string {
+  if (type === 'OVERLOAD_WARNING') {
+    return 'bg-amber-500/10 border-amber-500/30 text-amber-200';
+  }
+  if (type === 'REBALANCE') {
+    return 'bg-orange-500/10 border-orange-500/30 text-slate-200';
+  }
+  if (type === 'PREREQUISITE_ALERT') {
+    return 'bg-purple-500/10 border-purple-500/30 text-purple-200';
+  }
+  return 'bg-slate-950/70 border-slate-800 text-slate-300';
+}
+
+function getHeatBadgeClass(heatScore: number): string {
+  if (heatScore >= 6.5) {
+    return 'bg-red-500/20 text-red-300 border border-red-500/30';
+  }
+  if (heatScore >= 4.0) {
+    return 'bg-amber-500/20 text-amber-300 border border-amber-500/30';
+  }
+  return 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30';
 }
 
 export function CycleDashboard({
@@ -251,15 +274,7 @@ export function CycleDashboard({
               {suggestions.map((sug) => (
                 <div
                   key={sug.id}
-                  className={`p-3.5 rounded-xl border text-xs space-y-1 ${
-                    sug.type === 'OVERLOAD_WARNING'
-                      ? 'bg-amber-500/10 border-amber-500/30 text-amber-200'
-                      : sug.type === 'REBALANCE'
-                        ? 'bg-orange-500/10 border-orange-500/30 text-slate-200'
-                        : sug.type === 'PREREQUISITE_ALERT'
-                          ? 'bg-purple-500/10 border-purple-500/30 text-purple-200'
-                          : 'bg-slate-950/70 border-slate-800 text-slate-300'
-                  }`}
+                  className={`p-3.5 rounded-xl border text-xs space-y-1 ${getSuggestionCardClass(sug.type)}`}
                 >
                   <div className="font-bold flex items-center gap-1.5">
                     {sug.type === 'OVERLOAD_WARNING' && <AlertTriangle size={14} />}
@@ -310,10 +325,11 @@ export function CycleDashboard({
                     />
                   </div>
 
-                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400">
                     <span>💡 {item.dominantReason}</span>
                     <span>
-                      Domínio: {item.subject.measured_mastery_score}% • Afinidade:{' '}
+                      Domínio: <strong>{item.studiedTopicsMastery}%</strong> • Cobertura do Edital:{' '}
+                      <strong>{item.coveragePercent}%</strong> • Afinidade:{' '}
                       {item.subject.initial_affinity_level}/3
                     </span>
                   </div>
@@ -333,77 +349,75 @@ export function CycleDashboard({
               Mapa de Calor dos Tópicos (Prioridade de Revisão)
             </h3>
             <p className="text-xs text-slate-400 mt-0.5">
-              Ranking cruzando todas as disciplinas e pré-requisitos do edital. Clique em qualquer
-              tópico para abrir na bancada!
+              Ranking cruzando todas as disciplinas, confiança da amostra e retenção espaçada.
+              Clique em qualquer tópico para abrir na bancada!
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {topicHeatmapRanking.map((item, idx) => {
-            const isHot = item.heatScore >= 6.5;
-            const isWarm = item.heatScore >= 4.0 && item.heatScore < 6.5;
-            return (
-              <div
-                key={item.topic.id}
-                onClick={() => onJumpToTopic(item.topic.subject_id, item.topic.id)}
-                className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-orange-500/50 cursor-pointer transition flex flex-col justify-between gap-2"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-[11px]">
-                      <span className="font-mono font-bold text-slate-400">#{idx + 1}</span>
-                      <span
-                        className="px-1.5 py-0.5 rounded font-semibold"
-                        style={{
-                          backgroundColor: `${item.subjectColor}20`,
-                          color: item.subjectColor,
-                        }}
-                      >
-                        {item.subjectName}
+          {topicHeatmapRanking.map((item, idx) => (
+            <div
+              key={item.topic.id}
+              onClick={() => onJumpToTopic(item.topic.subject_id, item.topic.id)}
+              className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 hover:border-orange-500/50 cursor-pointer transition flex flex-col justify-between gap-2"
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span className="font-mono font-bold text-slate-400">#{idx + 1}</span>
+                    <span
+                      className="px-1.5 py-0.5 rounded font-semibold"
+                      style={{
+                        backgroundColor: `${item.subjectColor}20`,
+                        color: item.subjectColor,
+                      }}
+                    >
+                      {item.subjectName}
+                    </span>
+                    {item.isReverseStudyDiscovery && (
+                      <span className="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[10px]">
+                        🔍 Calibrando Amostra ({item.sampleConfidencePercent}%)
                       </span>
-                      {item.isReverseStudyDiscovery && (
-                        <span className="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[10px]">
-                          🔍 Em Mapeamento
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-xs font-semibold text-white mt-1">
-                      {item.topic.code} {item.topic.title}
-                    </p>
+                    )}
+                    {!item.isReverseStudyDiscovery && (
+                      <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 text-[10px]">
+                        📊 Confiança {item.sampleConfidencePercent}%
+                      </span>
+                    )}
                   </div>
-
-                  <span
-                    className={`px-2 py-1 rounded-lg text-xs font-bold shrink-0 ${
-                      isHot
-                        ? 'bg-red-500/20 text-red-300 border border-red-500/30'
-                        : isWarm
-                          ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                          : 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
-                    }`}
-                  >
-                    🔥 {item.heatScore}
-                  </span>
+                  <p className="text-xs font-semibold text-white mt-1">
+                    {item.topic.code} {item.topic.title}
+                  </p>
                 </div>
 
-                <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-900">
-                  <span>
-                    Domínio: <strong className="text-slate-200">{item.topic.mastery_score}%</strong>{' '}
-                    • Questões resolvidas: {item.attemptsCount}
-                  </span>
-                  <span className="text-orange-400 flex items-center gap-1 font-medium">
-                    Estudar Tópico <ArrowRight size={12} />
-                  </span>
-                </div>
-
-                {item.relatedPrerequisiteTitles.length > 0 && (
-                  <div className="text-[10px] text-purple-300 bg-purple-500/10 px-2 py-1 rounded border border-purple-500/20">
-                    🔗 Conectado a: {item.relatedPrerequisiteTitles.join(' • ')}
-                  </div>
-                )}
+                <span
+                  className={`px-2 py-1 rounded-lg text-xs font-bold shrink-0 ${getHeatBadgeClass(item.heatScore)}`}
+                >
+                  🔥 {item.heatScore}
+                </span>
               </div>
-            );
-          })}
+
+              <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-900">
+                <span>
+                  Domínio: <strong className="text-slate-200">{item.topic.mastery_score}%</strong> •
+                  Questões: {item.attemptsCount}
+                  {item.daysSinceLastStudy !== null
+                    ? ` • Visto há ${item.daysSinceLastStudy}d`
+                    : ''}
+                </span>
+                <span className="text-orange-400 flex items-center gap-1 font-medium">
+                  Estudar Tópico <ArrowRight size={12} />
+                </span>
+              </div>
+
+              {item.relatedPrerequisiteTitles.length > 0 && (
+                <div className="text-[10px] text-purple-300 bg-purple-500/10 px-2 py-1 rounded border border-purple-500/20">
+                  🔗 Conectado a: {item.relatedPrerequisiteTitles.join(' • ')}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

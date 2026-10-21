@@ -4,6 +4,7 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  Eye,
   Filter,
   MessageSquarePlus,
   Search,
@@ -15,6 +16,7 @@ import {
   askReverseStudyTutor,
   getQuestionComplexityProfile,
   type ChatTurn,
+  type StudentContextSnapshot,
 } from '../lib/aiRouter';
 import type { AiDissection, Question, SelfDiagnosisType } from '../types/database';
 
@@ -32,6 +34,7 @@ interface QuestionWorkbenchProps {
   lastDiagnosisFeedback: string | null;
   onSaveToNotebook: (markdownToAppend: string) => void;
   onSaveChatHistory?: (questionId: string, chatJson: string) => void;
+  studentContext?: StudentContextSnapshot;
 }
 
 export function QuestionWorkbench({
@@ -42,6 +45,7 @@ export function QuestionWorkbench({
   lastDiagnosisFeedback,
   onSaveToNotebook,
   onSaveChatHistory,
+  studentContext,
 }: QuestionWorkbenchProps) {
   const [boardFilter, setBoardFilter] = useState<string>('ALL');
   const [complexityFilter, setComplexityFilter] = useState<string>('ALL');
@@ -50,6 +54,8 @@ export function QuestionWorkbench({
 
   const [selectedOptionIdx, setSelectedOptionIdx] = useState<number | null>(null);
   const [showAnswer, setShowAnswer] = useState<boolean>(false);
+  const [revealFirstContactBase, setRevealFirstContactBase] = useState<boolean>(false);
+  const [savedNotebookToast, setSavedNotebookToast] = useState<boolean>(false);
 
   // Estado do Chat de Estudo Reverso
   const [chatTurns, setChatTurns] = useState<ChatTurn[]>([]);
@@ -84,19 +90,24 @@ export function QuestionWorkbench({
     });
   }, [enrichedQuestions, boardFilter, complexityFilter, searchQuery]);
 
-  // Reseta índice ao mudar filtros
+  // Reseta índice apenas quando o usuário altera filtros intencionalmente (preserva índice ao diagnosticar/salvar)
   useEffect(() => {
     setCurrentIndex(0);
     setSelectedOptionIdx(null);
     setShowAnswer(false);
-  }, [boardFilter, complexityFilter, searchQuery, scopeFilter, questions]);
+    setRevealFirstContactBase(false);
+  }, [boardFilter, complexityFilter, searchQuery, scopeFilter]);
 
-  const activeItem = filteredQuestions[currentIndex] || filteredQuestions[0] || null;
+  const safeIndex =
+    filteredQuestions.length > 0 ? Math.min(currentIndex, filteredQuestions.length - 1) : 0;
+  const activeItem = filteredQuestions[safeIndex] || filteredQuestions[0] || null;
 
   // Carrega histórico de dúvidas salvo na questão quando muda de questão
   useEffect(() => {
     setSelectedOptionIdx(null);
     setShowAnswer(false);
+    setRevealFirstContactBase(false);
+    setSavedNotebookToast(false);
     if (!activeItem?.dissection?.chat_history_json) {
       setChatTurns([]);
       return;
@@ -165,6 +176,7 @@ export function QuestionWorkbench({
   const handleAskTutor = async (promptText: string) => {
     if (!promptText.trim() || isLoadingTutor) return;
     setIsLoadingTutor(true);
+    setRevealFirstContactBase(true);
 
     const studentTurn: ChatTurn = {
       id: `turn-s-${Date.now()}`,
@@ -177,6 +189,7 @@ export function QuestionWorkbench({
       question,
       dissection,
       promptText: promptText.trim(),
+      context: studentContext,
     });
 
     const tutorTurn: ChatTurn = {
@@ -199,6 +212,7 @@ export function QuestionWorkbench({
   const selectedLetter =
     selectedOptionIdx !== null ? ['A', 'B', 'C', 'D', 'E'][selectedOptionIdx] || 'A' : null;
   const isSelectedCorrect = selectedLetter === question.final_answer;
+  const isExplanationVisible = showAnswer || revealFirstContactBase;
 
   return (
     <div className="space-y-4">
@@ -258,11 +272,11 @@ export function QuestionWorkbench({
         {/* Paginação de Questões */}
         <div className="flex items-center gap-2">
           <span className="text-slate-400">
-            Questão <strong className="text-white">{currentIndex + 1}</strong> de{' '}
+            Questão <strong className="text-white">{safeIndex + 1}</strong> de{' '}
             <strong className="text-white">{filteredQuestions.length}</strong>
           </span>
           <button
-            disabled={currentIndex === 0}
+            disabled={safeIndex === 0}
             onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
             className="p-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 disabled:opacity-40 hover:border-slate-700"
             title="Questão anterior"
@@ -270,7 +284,7 @@ export function QuestionWorkbench({
             <ChevronLeft size={14} />
           </button>
           <button
-            disabled={currentIndex >= filteredQuestions.length - 1}
+            disabled={safeIndex >= filteredQuestions.length - 1}
             onClick={() => setCurrentIndex((i) => Math.min(filteredQuestions.length - 1, i + 1))}
             className="p-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 disabled:opacity-40 hover:border-slate-700"
             title="Próxima questão"
@@ -326,7 +340,8 @@ export function QuestionWorkbench({
                   'bg-slate-950/60 border-slate-800 hover:border-slate-700 text-slate-300';
                 if (showAnswer) {
                   if (isAnswer) {
-                    styleClass = 'bg-emerald-500/15 border-emerald-500/50 text-emerald-200 font-medium';
+                    styleClass =
+                      'bg-emerald-500/15 border-emerald-500/50 text-emerald-200 font-medium';
                   } else if (isSelected && !isAnswer) {
                     styleClass = 'bg-rose-500/15 border-rose-500/50 text-rose-200';
                   }
@@ -369,8 +384,8 @@ export function QuestionWorkbench({
             {/* Auto-Diagnóstico Rápido (1 Clique) */}
             <div className="pt-3 border-t border-slate-800">
               <p className="text-xs text-slate-400 mb-2">
-                🏷️ <strong>Como foi resolver esta questão?</strong> (Ajuda a organizar suas
-                sugestões de revisão sem alterar seu limite de horas da semana):
+                🏷️ <strong>Como foi resolver esta questão?</strong> (Alimenta a Confiança da Amostra
+                e o Mapa de Calor sem alterar suas horas semanais):
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
@@ -426,7 +441,7 @@ export function QuestionWorkbench({
         {/* Coluna Direita: Explicação Comentada + Chat de Estudo Reverso */}
         <div className="lg:col-span-5 space-y-4">
           <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col space-y-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <Sparkles size={16} className="text-orange-400" />
                 <h3 className="text-sm font-bold text-white">Explicação & Estudo Reverso</h3>
@@ -442,6 +457,8 @@ export function QuestionWorkbench({
                     .filter(Boolean)
                     .join('\n');
                   onSaveToNotebook(fullNotes);
+                  setSavedNotebookToast(true);
+                  setTimeout(() => setSavedNotebookToast(false), 3000);
                 }}
                 className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center gap-1.5 transition"
               >
@@ -449,6 +466,13 @@ export function QuestionWorkbench({
                 Salvar Aula no Caderno
               </button>
             </div>
+
+            {savedNotebookToast && (
+              <div className="px-3 py-2 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-xs text-emerald-300 flex items-center gap-1.5">
+                <CheckCircle2 size={14} />
+                Anotação adicionada ao Caderno do Tópico sem sair desta questão!
+              </div>
+            )}
 
             {/* Pré-requisitos identificados */}
             {prerequisites.length > 0 && (
@@ -465,11 +489,28 @@ export function QuestionWorkbench({
               </div>
             )}
 
-            {/* Síntese Principal da Questão */}
-            <div className="text-xs text-slate-200 space-y-2 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 whitespace-pre-line">
-              {dissection?.dissection_markdown ||
-                'Selecione uma opção abaixo para explorar os conceitos desta questão.'}
-            </div>
+            {/* Proteção contra Descarga Cognitiva (Kapur, 2016) + Modo 1º Contato */}
+            {isExplanationVisible ? (
+              <div className="text-xs text-slate-200 space-y-2 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 whitespace-pre-line">
+                {dissection?.dissection_markdown ||
+                  'Selecione uma opção abaixo para explorar os conceitos desta questão.'}
+              </div>
+            ) : (
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3 text-xs">
+                <p className="text-slate-300 leading-relaxed">
+                  🧠 <strong>Recuperação Ativa:</strong> Tente selecionar uma alternativa ao lado
+                  para testar seu raciocínio antes de ver a resposta comentada.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setRevealFirstContactBase(true)}
+                  className="w-full py-2 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-orange-500/30 text-orange-300 font-medium flex items-center justify-center gap-1.5 transition"
+                >
+                  <Eye size={14} />
+                  🌱 1º Contato: Ver Explicação Base Antes de Responder
+                </button>
+              </div>
+            )}
 
             {/* Botões de Aprofundamento em 1 Clique (Estudo Reverso) */}
             <div className="space-y-2">

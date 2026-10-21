@@ -1,6 +1,7 @@
 import initSqlJs, { type Database } from 'sql.js';
 import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 import schemaSql from '../../docs/specs/01-database-schema.sql?raw';
+import { calculateSampleConfidencePercent } from './cycleEngine';
 import {
   SEED_ADMIN_BLUEPRINTS,
   SEED_AI_DISSECTIONS,
@@ -439,18 +440,16 @@ export function getSubjectsByPlan(planId: string): Subject[] {
 
 export function recalculateSubjectMastery(subjectId: string): void {
   const db = getDb();
-  const row = queryOne<{ avg_mastery: number | null }>(
+  const startedRow = queryOne<{ avg_mastery: number | null }>(
     db,
-    'SELECT ROUND(AVG(mastery_score), 1) as avg_mastery FROM topics WHERE subject_id = ?',
+    `SELECT ROUND(AVG(mastery_score), 1) as avg_mastery
+     FROM topics
+     WHERE subject_id = ? AND (mastery_score > 0 OR status != 'PENDING' OR last_studied_at IS NOT NULL)`,
     [subjectId]
   );
-  if (row && row.avg_mastery !== null) {
-    db.run('UPDATE subjects SET measured_mastery_score = ? WHERE id = ?', [
-      row.avg_mastery,
-      subjectId,
-    ]);
-    persistDatabase();
-  }
+  const nextMastery = startedRow?.avg_mastery ?? 0;
+  db.run('UPDATE subjects SET measured_mastery_score = ? WHERE id = ?', [nextMastery, subjectId]);
+  persistDatabase();
 }
 
 export function createSubject(input: CreateSubjectInput): Subject {
@@ -552,6 +551,13 @@ export function createTopic(input: CreateTopicInput): Topic {
   return queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [id])!;
 }
 
+function resolveTopicStatus(masteryScore: number): Topic['status'] {
+  if (masteryScore >= 85) return 'MASTERED';
+  if (masteryScore >= 70) return 'REVIEW';
+  if (masteryScore > 0) return 'STUDYING';
+  return 'PENDING';
+}
+
 export function updateTopic(input: UpdateTopicInput): Topic | null {
   const db = getDb();
   const existing = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [input.id]);
@@ -562,9 +568,7 @@ export function updateTopic(input: UpdateTopicInput): Topic | null {
       ? Math.max(0, Math.min(100, input.mastery_score))
       : existing.mastery_score;
 
-  const newStatus =
-    input.status ??
-    (newMastery >= 85 ? 'MASTERED' : newMastery >= 70 ? 'REVIEW' : newMastery > 0 ? 'STUDYING' : 'PENDING');
+  const newStatus = input.status ?? resolveTopicStatus(newMastery);
 
   db.run(
     `UPDATE topics
@@ -605,7 +609,12 @@ export function recordQuestionDiagnosis(params: {
   selectedOption: string;
   isCorrect: boolean;
   selfDiagnosis: SelfDiagnosisType;
-}): { updatedTopic: Topic | null; deltaMastery: number; isColdStartDiscovery: boolean } {
+}): {
+  updatedTopic: Topic | null;
+  deltaMastery: number;
+  isColdStartDiscovery: boolean;
+  sampleConfidencePercent: number;
+} {
   const db = getDb();
   const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [params.topicId]);
 
@@ -616,15 +625,31 @@ export function recordQuestionDiagnosis(params: {
       [params.topicId]
     )?.c ?? 0;
 
-  // Proteção de 1º Contato (Estudo Reverso): nas 3 primeiras questões do tópico,
-  // errar (BASE_GAP) mapeia o Mapa de Calor estilo Elasticsearch sem derrubar bruscamente a nota nem somar horas!
-  const isColdStartDiscovery = prevAttemptsCount < 3;
+  const subjectTopicCount = topic
+    ? (queryOne<{ c: number }>(
+        db,
+        'SELECT COUNT(*) as c FROM topics WHERE subject_id = ?',
+        [topic.subject_id]
+      )?.c ?? 4)
+    : 4;
+
+  // Curva Contínua de Confiança da Amostra (estilo saturação BM25 + Mandinach & Gummer):
+  // Substitui a regra fixa de "3 questões" por uma saturação proporcional à extensão da matéria.
+  const sampleConfidencePercent = calculateSampleConfidencePercent(
+    prevAttemptsCount + 1,
+    subjectTopicCount
+  );
+  const isColdStartDiscovery = sampleConfidencePercent < 55;
+
+  // Enquanto a amostra ainda está em fase de calibração (<55% confiança), o erro de 1º contato
+  // aplica ajuste suave (-2 a -3) para mapear o Mapa de Calor sem derrubar abruptamente a nota.
+  const baseGapPenalty = Math.round(-2 - 4 * (sampleConfidencePercent / 100));
 
   const deltaMap: Record<SelfDiagnosisType, number> = {
     MASTERED: 8,
     DOUBT: 2,
     BOARD_TRAP: 0,
-    BASE_GAP: isColdStartDiscovery ? -2 : -6,
+    BASE_GAP: baseGapPenalty,
   };
   const deltaMastery = deltaMap[params.selfDiagnosis];
 
@@ -645,7 +670,12 @@ export function recordQuestionDiagnosis(params: {
 
   if (!topic) {
     persistDatabase();
-    return { updatedTopic: null, deltaMastery, isColdStartDiscovery };
+    return {
+      updatedTopic: null,
+      deltaMastery,
+      isColdStartDiscovery,
+      sampleConfidencePercent,
+    };
   }
 
   const nextMastery = Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery)));
@@ -657,7 +687,12 @@ export function recordQuestionDiagnosis(params: {
 
   // IMPORTANTE: O ciclo atual NÃO soma minutos soltos por questão errada (respeita o teto de horas semanais).
   // O diagnóstico alimenta o Mapa de Calor (question_attempts) para sugerir rebalanceamento no próximo ciclo!
-  return { updatedTopic, deltaMastery, isColdStartDiscovery };
+  return {
+    updatedTopic,
+    deltaMastery,
+    isColdStartDiscovery,
+    sampleConfidencePercent,
+  };
 }
 
 export function applyRecommendedCycleAllocations(
@@ -837,6 +872,61 @@ export function getPdfSourceForTopic(subjectId: string, topicId: string): PdfSou
   );
 }
 
+export function savePdfSourceProgress(params: {
+  subjectId: string;
+  topicId: string;
+  title: string;
+  filePath: string;
+  currentPage: number;
+  totalPages: number;
+}): PdfSource {
+  const db = getDb();
+  const existing = getPdfSourceForTopic(params.subjectId, params.topicId);
+  const now = new Date().toISOString();
+  const safeTotal = Math.max(1, params.totalPages);
+  const safeCurrent = Math.max(1, Math.min(safeTotal, params.currentPage));
+
+  if (existing) {
+    db.run(
+      `UPDATE pdf_sources
+       SET title = ?, file_path = ?, current_page = ?, total_pages = ?, last_opened_at = ?
+       WHERE id = ?`,
+      [params.title, params.filePath, safeCurrent, safeTotal, now, existing.id]
+    );
+    persistDatabase();
+    return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [existing.id])!;
+  }
+
+  const id = `pdf-${Date.now()}`;
+  db.run(
+    `INSERT INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, '[]', ?)`,
+    [
+      id,
+      params.subjectId,
+      params.topicId,
+      params.title,
+      params.filePath,
+      safeCurrent,
+      safeTotal,
+      now,
+    ]
+  );
+  persistDatabase();
+  return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [id])!;
+}
+
+export function getNotebooksByPlan(planId: string): Notebook[] {
+  return queryAll<Notebook>(
+    getDb(),
+    `SELECT n.* FROM notebooks n
+     INNER JOIN subjects s ON s.id = n.subject_id
+     WHERE s.plan_id = ?
+     ORDER BY n.updated_at DESC`,
+    [planId]
+  );
+}
+
 export function getTopicLinks(): TopicLink[] {
   return queryAll<TopicLink>(getDb(), 'SELECT * FROM topic_links');
 }
@@ -873,4 +963,3 @@ export function getAdminCatalogAndBlueprints(): {
     stats: { plans, subjects, topics, questions, attempts },
   };
 }
-
