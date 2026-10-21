@@ -26,6 +26,8 @@ import type {
   QuestionAttempt,
   SelfDiagnosisType,
   StudyPlan,
+  StudySession,
+  StudySessionType,
   Subject,
   Topic,
   TopicLink,
@@ -603,17 +605,26 @@ export function recordQuestionDiagnosis(params: {
   selectedOption: string;
   isCorrect: boolean;
   selfDiagnosis: SelfDiagnosisType;
-}): { updatedTopic: Topic | null; deltaMastery: number } {
+}): { updatedTopic: Topic | null; deltaMastery: number; isColdStartDiscovery: boolean } {
   const db = getDb();
   const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [params.topicId]);
 
-  // Impacto exato definido em docs/specs/02-ai-router-and-metrics.md:
-  // MASTERED: +10% | DOUBT: +2% | BOARD_TRAP: 0% (não pune teoria!) | BASE_GAP: -10% (+tempo no ciclo)
+  const prevAttemptsCount =
+    queryOne<{ c: number }>(
+      db,
+      'SELECT COUNT(*) as c FROM question_attempts WHERE topic_id = ?',
+      [params.topicId]
+    )?.c ?? 0;
+
+  // Proteção de 1º Contato (Estudo Reverso): nas 3 primeiras questões do tópico,
+  // errar (BASE_GAP) mapeia o Mapa de Calor estilo Elasticsearch sem derrubar bruscamente a nota nem somar horas!
+  const isColdStartDiscovery = prevAttemptsCount < 3;
+
   const deltaMap: Record<SelfDiagnosisType, number> = {
-    MASTERED: 10,
+    MASTERED: 8,
     DOUBT: 2,
     BOARD_TRAP: 0,
-    BASE_GAP: -10,
+    BASE_GAP: isColdStartDiscovery ? -2 : -6,
   };
   const deltaMastery = deltaMap[params.selfDiagnosis];
 
@@ -634,7 +645,7 @@ export function recordQuestionDiagnosis(params: {
 
   if (!topic) {
     persistDatabase();
-    return { updatedTopic: null, deltaMastery };
+    return { updatedTopic: null, deltaMastery, isColdStartDiscovery };
   }
 
   const nextMastery = Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery)));
@@ -644,16 +655,89 @@ export function recordQuestionDiagnosis(params: {
     last_studied_at: new Date().toISOString(),
   });
 
-  // Se for Lacuna de Base (BASE_GAP), aumenta +15 min na alocação da matéria no Ciclo
-  if (params.selfDiagnosis === 'BASE_GAP') {
-    db.run(
-      'UPDATE subjects SET cycle_allocated_minutes = cycle_allocated_minutes + 15 WHERE id = ?',
-      [topic.subject_id]
-    );
+  // IMPORTANTE: O ciclo atual NÃO soma minutos soltos por questão errada (respeita o teto de horas semanais).
+  // O diagnóstico alimenta o Mapa de Calor (question_attempts) para sugerir rebalanceamento no próximo ciclo!
+  return { updatedTopic, deltaMastery, isColdStartDiscovery };
+}
+
+export function applyRecommendedCycleAllocations(
+  allocations: { subjectId: string; minutes: number }[]
+): void {
+  const db = getDb();
+  db.run('BEGIN TRANSACTION;');
+  try {
+    for (const item of allocations) {
+      db.run('UPDATE subjects SET cycle_allocated_minutes = ? WHERE id = ?', [
+        item.minutes,
+        item.subjectId,
+      ]);
+    }
+    db.run('COMMIT;');
     persistDatabase();
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+}
+
+export function recordStudySession(params: {
+  subjectId: string;
+  topicId: string | null;
+  durationMinutes: number;
+  sessionType?: StudySessionType;
+  pausesCount: number;
+  wasSkipped: boolean;
+}): StudySession {
+  const db = getDb();
+  const id = `sess-${Date.now()}`;
+  const now = new Date().toISOString();
+
+  db.run(
+    `INSERT INTO study_sessions (
+      id, subject_id, topic_id, duration_minutes, session_type, pauses_count, was_skipped, started_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      id,
+      params.subjectId,
+      params.topicId,
+      params.durationMinutes,
+      params.sessionType ?? 'POMODORO',
+      params.pausesCount,
+      params.wasSkipped ? 1 : 0,
+      now,
+    ]
+  );
+
+  // Atualiza fricção comportamental da disciplina suavemente (média móvel 0.0 a 1.0)
+  const subj = queryOne<Subject>(db, 'SELECT * FROM subjects WHERE id = ?', [params.subjectId]);
+  if (subj) {
+    const sessionFriction = Math.min(
+      1.0,
+      params.pausesCount * 0.15 + (params.wasSkipped ? 0.35 : 0)
+    );
+    const updatedFriction = Number(
+      (subj.behavioral_friction_score * 0.7 + sessionFriction * 0.3).toFixed(2)
+    );
+    db.run('UPDATE subjects SET behavioral_friction_score = ? WHERE id = ?', [
+      updatedFriction,
+      params.subjectId,
+    ]);
   }
 
-  return { updatedTopic, deltaMastery };
+  if (params.topicId) {
+    db.run('UPDATE topics SET last_studied_at = ? WHERE id = ?', [now, params.topicId]);
+  }
+
+  persistDatabase();
+  return queryOne<StudySession>(db, 'SELECT * FROM study_sessions WHERE id = ?', [id])!;
+}
+
+export function getStudySessions(limit = 50): StudySession[] {
+  return queryAll<StudySession>(
+    getDb(),
+    'SELECT * FROM study_sessions ORDER BY started_at DESC LIMIT ?',
+    [limit]
+  );
 }
 
 export function getQuestionsForTopicOrSubject(

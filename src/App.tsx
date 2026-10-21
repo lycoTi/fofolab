@@ -1,8 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   BookOpen,
   CheckCircle2,
-  Clock,
   Database,
   FileText,
   FolderGit2,
@@ -10,7 +9,6 @@ import {
   HelpCircle,
   Layers,
   Network,
-  Play,
   Plus,
   Save,
   Settings2,
@@ -19,7 +17,11 @@ import {
   Wrench,
 } from 'lucide-react';
 import { CurriculumManagerModal } from './components/CurriculumManagerModal';
+import { CycleDashboard } from './components/CycleDashboard';
+import { PomodoroWidget } from './components/PomodoroWidget';
+import { calculateDynamicStudyCycle } from './lib/cycleEngine';
 import {
+  applyRecommendedCycleAllocations,
   createStudyPlan,
   createSubject,
   createTopic,
@@ -31,11 +33,15 @@ import {
   getNotebookForTopic,
   getPdfSourceForTopic,
   getQuestionsForTopicOrSubject,
+  getRecentAttempts,
   getStudyPlans,
+  getStudySessions,
   getSubjectsByPlan,
+  getTopicLinks,
   getTopicsBySubject,
   initDatabase,
   recordQuestionDiagnosis,
+  recordStudySession,
   resetDatabaseToSeed,
   saveTopicNotebook,
   setActiveStudyPlan,
@@ -53,10 +59,13 @@ import type {
   Notebook,
   PdfSource,
   Question,
+  QuestionAttempt,
   SelfDiagnosisType,
   StudyPlan,
+  StudySession,
   Subject,
   Topic,
+  TopicLink,
 } from './types/database';
 
 type WorkbenchTab = 'notebooks' | 'questions' | 'pdf' | 'cycle' | 'graph';
@@ -74,6 +83,9 @@ export default function App() {
   const [selectedSubjectId, setSelectedSubjectId] = useState<string>('');
   const [topicsBySubject, setTopicsBySubject] = useState<Record<string, Topic[]>>({});
   const [selectedTopicId, setSelectedTopicId] = useState<string>('');
+  const [attempts, setAttempts] = useState<QuestionAttempt[]>([]);
+  const [sessions, setSessions] = useState<StudySession[]>([]);
+  const [topicLinks, setTopicLinks] = useState<TopicLink[]>([]);
 
   // Entidades da Bancada do Tópico atual
   const [topicQuestions, setTopicQuestions] = useState<
@@ -138,6 +150,9 @@ export default function App() {
             : subjTopics[0]?.id || '';
 
       setSelectedTopicId(targetTopicId);
+      setAttempts(getRecentAttempts(200));
+      setSessions(getStudySessions(100));
+      setTopicLinks(getTopicLinks());
       setAdminData(getAdminCatalogAndBlueprints());
     },
     [selectedSubjectId, selectedTopicId]
@@ -168,7 +183,20 @@ export default function App() {
     setPdfSource(pdf);
   }, [dbReady, selectedSubjectId, selectedTopicId]);
 
-  if (!dbReady || !activePlan) {
+  // Motor Matemático do Ciclo (Estilo Elasticsearch _score + Orçamento Fixo Semanal)
+  const cycleData = useMemo(() => {
+    if (!activePlan) return null;
+    return calculateDynamicStudyCycle({
+      plan: activePlan,
+      subjects,
+      topicsBySubject,
+      attempts,
+      sessions,
+      topicLinks,
+    });
+  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks]);
+
+  if (!dbReady || !activePlan || !cycleData) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200">
         <div className="flex items-center gap-3 text-sm">
@@ -210,7 +238,7 @@ export default function App() {
     const optionLetter = ['A', 'B', 'C', 'D', 'E'][selectedOptionIdx] || 'C';
     const isCorrect = optionLetter === activeQuestionBundle.question.final_answer;
 
-    const { updatedTopic, deltaMastery } = recordQuestionDiagnosis({
+    const { updatedTopic, deltaMastery, isColdStartDiscovery } = recordQuestionDiagnosis({
       questionId: activeQuestionBundle.question.id,
       topicId: currentTopic.id,
       selectedOption: optionLetter,
@@ -219,8 +247,12 @@ export default function App() {
     });
 
     const sign = deltaMastery > 0 ? `+${deltaMastery}%` : `${deltaMastery}%`;
+    const coldStartNote =
+      diagnosis === 'BASE_GAP' && isColdStartDiscovery
+        ? ' • 🛡️ Proteção de 1º Contato (Estudo Reverso): registrado no Mapa de Calor sem estourar suas horas semanais!'
+        : ' • Mapa de Calor atualizado p/ sugestão do próximo ciclo!';
     setLastDiagnosisMsg(
-      `${label} gravado no SQLite! Domínio do tópico: ${updatedTopic?.mastery_score ?? currentTopic.mastery_score}% (${sign})`
+      `${label} gravado! Domínio do tópico: ${updatedTopic?.mastery_score ?? currentTopic.mastery_score}% (${sign})${coldStartNote}`
     );
     refreshFromSqlite(currentSubject?.id, currentTopic.id);
   };
@@ -263,7 +295,7 @@ export default function App() {
               <h1 className="font-bold text-base tracking-tight flex items-center gap-1.5">
                 FofoLab{' '}
                 <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-300 font-semibold">
-                  v0.2 SQLite
+                  v0.3 Ciclo
                 </span>
               </h1>
               <p className="text-xs text-slate-400">Bancada de Estudos Local</p>
@@ -317,7 +349,8 @@ export default function App() {
 
           <div className="flex items-center justify-between text-[11px] text-slate-300 pt-0.5">
             <span>
-              Meta: {(activePlan.weekly_hours_target / 7).toFixed(1)}h/dia ({activePlan.exam_board})
+              Teto: {activePlan.weekly_hours_target}h/sem (
+              {(activePlan.weekly_hours_target / 7).toFixed(1)}h/dia)
             </span>
             <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
               <Database size={10} />
@@ -347,6 +380,7 @@ export default function App() {
           {subjects.map((subj) => {
             const isSelected = currentSubject?.id === subj.id;
             const subjTopics = topicsBySubject[subj.id] || [];
+            const alloc = cycleData.allocations.find((a) => a.subject.id === subj.id);
             return (
               <div
                 key={subj.id}
@@ -365,9 +399,15 @@ export default function App() {
                   className="w-full text-left p-3 flex items-center justify-between"
                 >
                   <div className="pr-2">
-                    <p className="text-sm font-medium text-slate-100 leading-snug">{subj.name}</p>
+                    <div className="flex items-center gap-1.5">
+                      <span
+                        className="h-2.5 w-2.5 rounded-full shrink-0"
+                        style={{ backgroundColor: subj.color }}
+                      />
+                      <p className="text-sm font-medium text-slate-100 leading-snug">{subj.name}</p>
+                    </div>
                     <p className="text-[11px] text-slate-400 mt-0.5">
-                      Ciclo: {subj.cycle_allocated_minutes} min • Peso: {subj.exam_weight}x
+                      Pizza: {alloc?.sharePercent ?? 25}% • _score: {alloc?.elasticScore ?? 1.0}
                     </p>
                   </div>
                   <div className="text-xs font-bold px-2 py-1 rounded-lg bg-slate-900 text-orange-300 shrink-0">
@@ -421,8 +461,8 @@ export default function App() {
       <main className="flex-1 flex flex-col overflow-hidden">
         {mode === 'student' ? (
           <>
-            {/* Header da Bancada do Tópico */}
-            <header className="border-b border-slate-800 bg-slate-900/40 px-6 py-4 flex items-center justify-between">
+            {/* Header da Bancada do Tópico + Pomodoro Integrado */}
+            <header className="border-b border-slate-800 bg-slate-900/40 px-6 py-4 flex items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-2 text-xs text-orange-400 font-medium">
                   <span>{activePlan.organ}</span>
@@ -443,8 +483,8 @@ export default function App() {
                 </h2>
               </div>
 
-              {/* Cronômetro Rápido do Ciclo + Atalho CRUD */}
-              <div className="flex items-center gap-3">
+              {/* Cronômetro Pomodoro Real + Atalho CRUD */}
+              <div className="flex items-center gap-3 shrink-0">
                 <button
                   onClick={() => {
                     setCrudInitialSection('topics');
@@ -455,27 +495,40 @@ export default function App() {
                   <Settings2 size={14} className="text-orange-400" />
                   Edital Verticalizado
                 </button>
-                <div className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2 text-xs">
-                  <Clock size={14} className="text-orange-400" />
-                  <span className="font-mono text-sm font-semibold">00:49:12</span>
-                  <button className="ml-1 p-1 rounded bg-orange-500 hover:bg-orange-600 text-white">
-                    <Play size={12} />
-                  </button>
-                </div>
+
+                {currentSubject && (
+                  <PomodoroWidget
+                    subjectId={currentSubject.id}
+                    subjectName={currentSubject.name}
+                    topicId={currentTopic?.id || null}
+                    topicCode={currentTopic?.code || null}
+                    onSessionComplete={({ durationMinutes, pausesCount, wasSkipped }) => {
+                      recordStudySession({
+                        subjectId: currentSubject.id,
+                        topicId: currentTopic?.id || null,
+                        durationMinutes,
+                        sessionType: 'POMODORO',
+                        pausesCount,
+                        wasSkipped,
+                      });
+                      refreshFromSqlite(currentSubject.id, currentTopic?.id);
+                    }}
+                  />
+                )}
               </div>
             </header>
 
             {/* Abas da Bancada (Tudo conectado ao mesmo Tópico no SQLite) */}
             <div className="px-6 pt-3 border-b border-slate-800 flex items-center gap-2 bg-slate-900/20">
               {[
-                { id: 'questions', label: 'Questões & Destrinchador IA', icon: HelpCircle },
+                { id: 'questions', label: 'Questões & Estudo Reverso IA', icon: HelpCircle },
+                { id: 'cycle', label: 'Pizza do Ciclo & Mapa de Calor', icon: Layers },
                 { id: 'notebooks', label: 'Cadernos do Tópico', icon: BookOpen },
                 {
                   id: 'pdf',
-                  label: `PDF Ancorado (${pdfSource ? `${pdfSource.current_page}/${pdfSource.total_pages}` : '1/1'})`,
+                  label: `PDF Local Ancorado (${pdfSource ? `${pdfSource.current_page}/${pdfSource.total_pages}` : '1/1'})`,
                   icon: FileText,
                 },
-                { id: 'cycle', label: 'Equilíbrio do Ciclo', icon: Layers },
                 { id: 'graph', label: 'Grafo de Micro-tópicos', icon: Network },
               ].map((tab) => {
                 const Icon = tab.icon;
@@ -546,33 +599,34 @@ export default function App() {
                           })}
                         </div>
 
-                        {/* Diagnóstico Pós-Questão de 1 Clique (Gravando no SQLite!) */}
+                        {/* Diagnóstico Pós-Questão de 1 Clique (Estudo Reverso + Mapa de Calor) */}
                         <div className="pt-3 border-t border-slate-800">
                           <p className="text-xs text-slate-400 mb-2">
-                            🏷️ <strong>Auto-Diagnóstico Rápido (1 clique no SQLite):</strong>{' '}
-                            Consultar a IA não reduz sua nota! Clique para registrar seu domínio:
+                            🏷️ <strong>Auto-Diagnóstico Rápido (Estudo Reverso):</strong> Consultar
+                            a IA nunca reduz sua nota, e errar nunca infla suas horas semanais!
+                            Calibre apenas o <strong>Mapa de Calor</strong> do próximo ciclo:
                           </p>
                           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                             {[
                               {
                                 id: 'MASTERED' as SelfDiagnosisType,
                                 label: '🟢 Dominei / Só revisei',
-                                desc: '+10% Domínio',
+                                desc: 'Esfria tópico no Mapa',
                               },
                               {
                                 id: 'DOUBT' as SelfDiagnosisType,
                                 label: '🟡 Acertei na dúvida',
-                                desc: '+2% • Revisar 7d',
+                                desc: '+0.30 Score • Revisar',
                               },
                               {
                                 id: 'BOARD_TRAP' as SelfDiagnosisType,
                                 label: '🟠 Pegadinha da Banca',
-                                desc: '0% (Não pune base)',
+                                desc: '0% perda • Alerta banca',
                               },
                               {
                                 id: 'BASE_GAP' as SelfDiagnosisType,
-                                label: '🔴 Lacuna de Base',
-                                desc: '-10% • +15m Ciclo',
+                                label: '🔴 Lacuna / 1º Contato',
+                                desc: '+Calor p/ Próximo Ciclo',
                               },
                             ].map((btn) => (
                               <button
@@ -600,13 +654,13 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Coluna Direita: Destrinchador IA (Cache SQLite -> Gemini Free -> DeepSeek) */}
+                  {/* Coluna Direita: Destrinchador IA (Grounding Anti-Alucinação) */}
                   <div className="lg:col-span-5 space-y-4">
                     <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col h-full space-y-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Sparkles size={16} className="text-orange-400" />
-                          <h3 className="text-sm font-bold">Destrinchador IA & Caderno</h3>
+                          <h3 className="text-sm font-bold">Destrinchador IA (Estudo Reverso)</h3>
                         </div>
                         <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
                           ⚡ Cache SQLite ({activeQuestionBundle?.dissection?.provider_used || '0 tokens'})
@@ -618,7 +672,13 @@ export default function App() {
                           'Destrinchamento pronto para ser consultado no roteador IA.'}
                       </div>
 
-                      <div className="flex items-center gap-2 pt-2">
+                      <div className="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-200">
+                        🛡️ <strong>Grounding Anti-Alucinação Ativo:</strong> Explicações ancoradas
+                        estritamente na letra da norma/lei e no gabarito definitivo pós-recurso da
+                        banca ({activeQuestionBundle?.question.exam_board}).
+                      </div>
+
+                      <div className="flex items-center gap-2 pt-1">
                         <button
                           onClick={handleAppendDissectionToNotebook}
                           className="flex-1 py-2 px-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center justify-center gap-1.5"
@@ -630,6 +690,29 @@ export default function App() {
                     </div>
                   </div>
                 </div>
+              )}
+
+              {activeTab === 'cycle' && (
+                <CycleDashboard
+                  plan={activePlan}
+                  cycleData={cycleData}
+                  onUpdateWeeklyHours={(newWeeklyHours) => {
+                    updateStudyPlan({
+                      id: activePlan.id,
+                      weekly_hours_target: newWeeklyHours,
+                    });
+                    refreshFromSqlite(currentSubject?.id, currentTopic?.id);
+                  }}
+                  onApplyRecommendedCycle={(newAllocations) => {
+                    applyRecommendedCycleAllocations(newAllocations);
+                    refreshFromSqlite(currentSubject?.id, currentTopic?.id);
+                  }}
+                  onJumpToTopic={(subjId, topId) => {
+                    setSelectedSubjectId(subjId);
+                    setSelectedTopicId(topId);
+                    setActiveTab('questions');
+                  }}
+                />
               )}
 
               {activeTab === 'notebooks' && currentSubject && currentTopic && (
@@ -672,41 +755,26 @@ export default function App() {
               )}
 
               {activeTab === 'pdf' && (
-                <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2">
+                <div className="max-w-4xl p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
                   <h3 className="text-sm font-bold text-white">
-                    📄 Fonte PDF Ancorada: {pdfSource?.title || 'Nenhum PDF vinculado a este tópico'}
+                    📄 Fonte PDF Local Ancorada: {pdfSource?.title || 'Nenhum PDF vinculado a este tópico'}
                   </h3>
                   <p className="text-xs text-slate-400">
                     Progresso salvo no SQLite (<code>pdf_sources</code>): Página{' '}
                     <strong>{pdfSource?.current_page || 1}</strong> de{' '}
-                    <strong>{pdfSource?.total_pages || 1}</strong> • Caminho:{' '}
+                    <strong>{pdfSource?.total_pages || 1}</strong> • Caminho Local:{' '}
                     <code>{pdfSource?.file_path || 'N/D'}</code>
                   </p>
-                </div>
-              )}
-
-              {activeTab === 'cycle' && (
-                <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4">
-                  <h3 className="text-sm font-bold text-white">
-                    ⏱️ Alocação do Ciclo — {activePlan.title}
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {subjects.map((s) => (
-                      <div
-                        key={s.id}
-                        className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between text-xs"
-                      >
-                        <div>
-                          <div className="font-semibold text-white">{s.name}</div>
-                          <div className="text-slate-400 mt-0.5">
-                            Peso: {s.exam_weight}x • Domínio: {s.measured_mastery_score}%
-                          </div>
-                        </div>
-                        <span className="px-2.5 py-1 rounded-lg bg-orange-500/15 text-orange-300 font-bold">
-                          {s.cycle_allocated_minutes} min
-                        </span>
-                      </div>
-                    ))}
+                  <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-1">
+                    <div className="font-semibold text-orange-300">
+                      🔒 Política de Direitos Autorais (Estratégia / Gran Cursos):
+                    </div>
+                    <p className="text-slate-400 leading-relaxed">
+                      Seus PDFs pessoais nunca são copiados para a nuvem nem incluídos nos pacotes{' '}
+                      <code>.fofopack</code>. Cada estudante aponta seus próprios PDFs no disco local
+                      e o FofoLab salva apenas a página de parada, grifos e vínculo com os tópicos do
+                      edital.
+                    </p>
                   </div>
                 </div>
               )}
@@ -717,8 +785,9 @@ export default function App() {
                     🕸️ Grafo de Micro-tópicos (Tabela <code>topic_links</code>)
                   </h3>
                   <p className="text-xs text-slate-400">
-                    Os vínculos de pré-requisito entre os tópicos estão persistidos no SQLite e serão
-                    renderizados visualmente na Fatia 6.
+                    Os vínculos de pré-requisito entre os tópicos ({topicLinks.length} conexões
+                    ativas) já alimentam o Mapa de Calor na aba do Ciclo e serão renderizados em
+                    grafo visual na Fatia 6.
                   </p>
                 </div>
               )}

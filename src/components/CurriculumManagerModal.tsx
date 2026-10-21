@@ -10,6 +10,7 @@ import {
   Trash2,
   X,
 } from 'lucide-react';
+import { getSampleSubtopicsForCalibration } from '../lib/cycleEngine';
 import type {
   CreateStudyPlanInput,
   CreateSubjectInput,
@@ -437,6 +438,20 @@ export function CurriculumManagerModal({
                         className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-orange-500 outline-none"
                       />
                     </div>
+                  </div>
+
+                  {/* Preview de Subtópicos Reais para ajudar a calibrar Base e Afinidade */}
+                  <div className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 space-y-1">
+                    <div className="text-[10px] font-semibold text-orange-300">
+                      🔎 O que cai nesta matéria (use p/ calibrar Base e Afinidade):
+                    </div>
+                    <ul className="text-[11px] text-slate-400 list-disc pl-4 space-y-0.5">
+                      {getSampleSubtopicsForCalibration(subjName || selectedSubject?.name || '').map(
+                        (sample, idx) => (
+                          <li key={idx}>{sample}</li>
+                        )
+                      )}
+                    </ul>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2">

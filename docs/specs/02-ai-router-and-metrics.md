@@ -1,29 +1,39 @@
-# 🤖 Roteador Inteligente de IA & Métricas Sem Viés
+# 🤖 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucinação
 
-## 1. Roteador de IA Transparente (Zero Config para o Usuário Final)
-Para que familiares, sobrinhos e amigos não precisem criar conta em plataforma de desenvolvedor nem configurar chaves de API:
+## 1. Roteador de IA Transparente (Zero Config + Grounding Anti-Alucinação)
+Para que o estudo reverso funcione com custo mínimo e **risco mínimo de alucinação**:
 
 1. **Camada 0 — Cache SQLite Local (`ai_dissections`):**
-   - Antes de qualquer chamada de rede, o FofoLab consulta `SELECT * FROM ai_dissections WHERE question_id = ?`.
-   - Se a questão já foi destrinchada antes (por você ou em um pacote `.fofopack` importado), a explicação abre instantaneamente com **custo R$ 0,00 e 0 tokens**.
-2. **Camada 1 — Google AI Studio (Cota Gratuita):**
-   - Requisição enviada para `gemini-2.5-flash` usando a cota gratuita do Google AI Studio.
-3. **Camada 2 — Fallback Automático para DeepSeek V3 (`deepseek-chat`):**
-   - Se a Camada 1 retornar `HTTP 429 (Rate Limit)` ou indisponibilidade, o roteador redireciona automaticamente para a API da DeepSeek.
-   - **Trava Financeira Segura:** A conta DeepSeek opera no formato pré-pago (*Top-up* manual de ex: R$ 50/mês sem recarga automática), garantindo risco zero de cobrança extra.
-4. **Gateway Opcional na Oracle Cloud:**
-   - Para não expor as chaves dentro do binário `.exe`, o app pode apontar para um micro-proxy hospedado na instância gratuita da Oracle Cloud.
+   - Consulta instantânea (`0 tokens` / `R$ 0,00`) caso a questão já tenha sido destrinchada.
+2. **Camada 1 — Google AI Studio (`gemini-2.5-flash` Free Tier)** ➔ **Camada 2 — Fallback DeepSeek V3 (`deepseek-chat`, trava pré-paga R$ 50)**.
+3. **Protocolo Anti-Alucinação no Estudo Reverso (Grounding Estrito):**
+   - Toda explicação ou conversa com a IA recebe como **âncora imutável**:
+     - O enunciado oficial da prova + o **Gabarito Definitivo Pós-Recurso** da banca;
+     - Os tópicos/pré-requisitos oficiais do edital verticalizado;
+     - Exigência de **citação normativa explícita** (ex: *Lei 14.133/2021, Art. 75*, *ISSAI 100, item 40*, *MCASP 10ª Ed.*) e separação clara entre *Letra da Lei*, *Jurisprudência (TCU/STF)* e *Entendimento específico da banca (FGV vs. Cebraspe)*.
 
 ---
 
-## 2. Cálculo de Domínio e Afinidade Sem Penalizar o Uso da IA
-**Regra Fundamental:** Abrir o chat da IA para revisar um conceito, pedir exemplos ou explorar aprofundamentos **nunca diminui o nível do estudante**.
+## 2. Política de PDFs Locais (Estratégia / Gran Cursos — Direitos Autorais)
+- **Zero Armazenamento de Material Autoral:** PDFs de cursinhos (Estratégia, Gran Cursos, Direção) possuem direitos autorais e marca d'água pessoal. O FofoLab **nunca copia nem inclui arquivos PDF dentro de pacotes `.fofopack` ou repositórios**.
+- **Ancoragem Local por Metadados:** Cada estudante vincula seus próprios arquivos PDF locais no seu computador (`file_path`). O SQLite guarda apenas o progresso pessoal (página atual, total de páginas, coordenadas de grifos locais e vínculo com o tópico do edital).
 
-O **Índice de Domínio do Tópico (`mastery_score` de 0 a 100)** é atualizado a cada questão resolvida combinando o acerto com o **Diagnóstico de 1 Clique (`self_diagnosis`)**:
+---
 
-| Botão de Diagnóstico Pós-Questão | Impacto no Domínio Teórico | Impacto no Ciclo de Estudos |
-| :--- | :--- | :--- |
-| 🟢 **Dominei / Só revisei detalhe** (`MASTERED`) | `+8%` a `+12%` (ponderado pela recência) | Reduz gradualmente a urgência de teoria; move para revisão espaçada. |
-| 🟡 **Acertei na dúvida** (`DOUBT`) | `+2%` | Agenda bateria curta de questões similares em 7 dias. |
-| 🟠 **Pegadinha da Banca / Desatenção** (`BOARD_TRAP`) | **`0%` (Não pune a nota teórica!)** | Mantém a nota de teoria intacta e adiciona flag *"Treinar malícia da banca"*. |
-| 🔴 **Lacuna de Base** (`BASE_GAP`) | `-10%` | Aumenta automaticamente a fatia de minutos da matéria no Ciclo de Estudos. |
+## 3. Estudo Reverso & Motor de Pontuação estilo Elasticsearch (`Relevance Score`)
+No **Estudo Reverso** (resolver questões primeiro para mapear o que a banca realmente cobra), **errar questões no 1º contato é parte natural e esperada do mapeamento**, e o estudante possui um **teto fixo de horas na semana** (rotina de trabalho, alimentação, descanso).
+
+Por isso:
+1. **Regra do Orçamento Fixo (Soma Zero):**
+   - Errar 10 questões **nunca soma minutos extras soltos** na semana. O total de horas semanais (`weekly_hours_target`) é **travado** na realidade do estudante.
+2. **Proteção de 1º Contato (*Cold Start* no Estudo Reverso):**
+   - Nas primeiras questões de um tópico ainda em fase de reconhecimento (`PENDING` / `STUDYING`), os erros alimentam o **Mapa de Calor de Prioridade** sem penalizar emocionalmente o aluno e sem bagunçar o ciclo em andamento.
+3. **Cálculo de Prioridade inspirado no Elasticsearch (`_score`):**
+   Cada tópico $t$ e disciplina $d$ recebe um **Score de Relevância (`relevance_score`)** combinando:
+   $$\text{Score}_d = \text{PesoEdital}_d \times \left(1 + \text{FatorBaseInicial}_d + \text{BoostMapaDeCalor}_d + \text{BoostPreRequisitos}_d\right)$$
+   - **` MASTERED` (🟢 Dominei / Só revisei):** Reduz a temperatura de urgência do tópico (`-0.25 no calor`) e consolida domínio (`+8% a +10%`).
+   - **`DOUBT` (🟡 Acertei na dúvida):** Leve aumento de temperatura (`+0.30 no calor`) para revisão espaçada.
+   - **`BOARD_TRAP` (🟠 Pegadinha da Banca / Desatenção):** **`0%` de perda na base teórica!** Soma apenas no indicador de *"Atenção à malícia da banca"* (`+0.20`).
+   - **`BASE_GAP` (🔴 Lacuna de Base / Estudo Reverso):** Aumenta a temperatura do tópico no **Mapa de Calor (`+0.65`)** e propaga `+0.25` de calor para seus **tópicos pré-requisitos** (`topic_links`).
+4. **Sugestão Não-Invasiva para o Próximo Ciclo:**
+   - Em vez de alterar o ciclo durante o estudo ou criar vários botões manuais, o FofoLab cruza o **Mapa de Calor** e apresenta uma **Sugestão de Rebalanceamento para o Próximo Ciclo** (mantendo as horas totais fixas), além de alertar caso o estudante tenha colocado matérias demais para poucas horas semanais.
