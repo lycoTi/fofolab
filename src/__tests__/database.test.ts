@@ -1,0 +1,341 @@
+// @vitest-environment node
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import initSqlJs from 'sql.js';
+import schemaV1Sql from './fixtures/schema-v1.sql?raw';
+import { createMemoryStorage, LEGACY_LOCALSTORAGE_KEY, type MemoryStorage } from '../lib/storage';
+import { LATEST_SCHEMA_VERSION } from '../lib/migrations';
+
+// No Node o sql.js encontra o próprio .wasm ao lado do pacote (config vazia)
+const sqlJsConfig = {};
+const SQL = await initSqlJs(sqlJsConfig);
+
+type DatabaseModule = typeof import('../lib/database');
+type SaveStatusModule = typeof import('../lib/saveStatus');
+
+let dbModule: DatabaseModule | null = null;
+
+async function openDatabase(
+  storage: MemoryStorage = createMemoryStorage()
+): Promise<{ db: DatabaseModule; status: SaveStatusModule; storage: MemoryStorage }> {
+  vi.resetModules();
+  const db = await import('../lib/database');
+  const status = await import('../lib/saveStatus');
+  dbModule = db;
+  await db.initDatabase({ storage, sqlJsConfig });
+  return { db, status, storage };
+}
+
+function scalar(db: DatabaseModule, sql: string, params: (string | number)[] = []): unknown {
+  return db.getDb().exec(sql, params)[0]?.values[0]?.[0];
+}
+
+function bytesOfV1Database(setup: (db: InstanceType<typeof SQL.Database>) => void): Uint8Array {
+  const legacy = new SQL.Database();
+  legacy.run(schemaV1Sql);
+  setup(legacy);
+  const bytes = legacy.export();
+  legacy.close();
+  return bytes;
+}
+
+afterEach(async () => {
+  await dbModule?.closeDatabase();
+  dbModule = null;
+  vi.unstubAllGlobals();
+});
+
+describe('Banco local: inicialização, salvamento e proteção dos dados', () => {
+  it('cria banco novo na versão mais recente com o exemplo inicial e grava no armazenamento', async () => {
+    const { db, storage } = await openDatabase();
+
+    expect(storage.current).not.toBeNull();
+    expect(storage.saveCount).toBeGreaterThanOrEqual(1);
+    expect(scalar(db, 'PRAGMA user_version')).toBe(LATEST_SCHEMA_VERSION);
+    expect(db.getStudyPlans().map((p) => p.id).sort()).toEqual(['plan-bacen', 'plan-cgu']);
+  });
+
+  it('mantém as chaves estrangeiras ligadas depois de salvar: excluir disciplina apaga tópicos e questões', async () => {
+    const { db } = await openDatabase();
+    db.exportDatabaseBinary(); // export() do sql.js reabre a conexão
+
+    expect(scalar(db, 'PRAGMA foreign_keys')).toBe(1);
+    db.deleteSubject('subj-cgu-auditoria');
+    expect(scalar(db, "SELECT COUNT(*) FROM topics WHERE subject_id = 'subj-cgu-auditoria'")).toBe(0);
+    expect(scalar(db, "SELECT COUNT(*) FROM questions WHERE subject_id = 'subj-cgu-auditoria'")).toBe(0);
+  });
+
+  it('migra banco antigo (v1) preservando os dados, com cópia de segurança antes da atualização', async () => {
+    const legacyBytes = bytesOfV1Database((legacy) => {
+      legacy.run("INSERT INTO study_plans (id, title, is_active) VALUES ('plan-meu', 'Meu Plano Real', 1)");
+    });
+    const { db, storage } = await openDatabase(createMemoryStorage(legacyBytes));
+
+    expect(scalar(db, 'PRAGMA user_version')).toBe(LATEST_SCHEMA_VERSION);
+    expect(db.getStudyPlans().map((p) => p.title)).toEqual(['Meu Plano Real']);
+    expect(db.getStudyPlans()[0].strategy_mode).toBeNull();
+    const backups = await storage.listBackups();
+    expect(backups.some((b) => b.label === `antes-da-atualizacao-v${LATEST_SCHEMA_VERSION}`)).toBe(true);
+  });
+
+  it('banco salvo que não abre vai para a quarentena (não é sobrescrito sem cópia) e o app começa pelo exemplo', async () => {
+    const garbage = new Uint8Array(Array.from({ length: 64 }, (_, i) => (i * 37) % 251));
+    const { db, status, storage } = await openDatabase(createMemoryStorage(garbage));
+
+    expect(storage.quarantined).toHaveLength(1);
+    expect(Array.from(storage.quarantined[0].bytes)).toEqual(Array.from(garbage));
+    expect(db.getStudyPlans()).toHaveLength(2);
+    expect(status.getSaveStatus().warning).toMatch(/guardados à parte/);
+  });
+
+  it('nunca grava por cima de um banco criado por versão mais nova do app', async () => {
+    const newer = new SQL.Database();
+    newer.run(`PRAGMA user_version = ${LATEST_SCHEMA_VERSION + 5};`);
+    newer.run('CREATE TABLE study_plans (id TEXT PRIMARY KEY, title TEXT);');
+    const newerBytes = newer.export();
+    newer.close();
+
+    const original = createMemoryStorage(newerBytes);
+    const { status } = await openDatabase(original);
+
+    expect(original.saveCount).toBe(0);
+    expect(Array.from(original.current ?? [])).toEqual(Array.from(newerBytes));
+    expect(status.getSaveStatus().storageKind).toBe('memory');
+    expect(status.getSaveStatus().warning).toMatch(/versão mais nova/);
+  });
+
+  it('agrupa várias alterações em uma única gravação e grava na hora ao chamar flushDatabase', async () => {
+    const { db, storage } = await openDatabase();
+    const before = storage.saveCount;
+
+    for (let i = 0; i < 3; i++) {
+      db.createTopic({ subject_id: 'subj-cgu-auditoria', code: `9.${i}`, title: `Tópico ${i}` });
+    }
+    expect(storage.saveCount).toBe(before);
+
+    await db.flushDatabase();
+    expect(storage.saveCount).toBe(before + 1);
+  });
+
+  it('falha ao gravar vira erro visível (não fica só no console) e a próxima gravação recupera', async () => {
+    const { db, status, storage } = await openDatabase();
+    storage.failSaves = true;
+
+    db.createTopic({ subject_id: 'subj-cgu-auditoria', code: '9.9', title: 'Vai falhar' });
+    await db.flushDatabase();
+    expect(status.getSaveStatus().state).toBe('error');
+    expect(status.getSaveStatus().errorMessage).toMatch(/Não foi possível salvar/);
+
+    storage.failSaves = false;
+    await db.flushDatabase();
+    expect(status.getSaveStatus().state).toBe('saved');
+  });
+
+  it('migra o formato antigo (base64 no localStorage) e só apaga a cópia antiga depois de gravar', async () => {
+    const legacyBytes = bytesOfV1Database((legacy) => {
+      legacy.run("INSERT INTO study_plans (id, title, is_active) VALUES ('plan-ls', 'Plano do localStorage', 1)");
+    });
+    let binary = '';
+    for (const byte of legacyBytes) binary += String.fromCharCode(byte);
+    const data = new Map<string, string>([[LEGACY_LOCALSTORAGE_KEY, btoa(binary)]]);
+    vi.stubGlobal('localStorage', {
+      getItem: (k: string) => data.get(k) ?? null,
+      setItem: (k: string, v: string) => data.set(k, v),
+      removeItem: (k: string) => data.delete(k),
+    });
+
+    const { db, storage } = await openDatabase();
+
+    expect(db.getStudyPlans().map((p) => p.title)).toEqual(['Plano do localStorage']);
+    expect(storage.current).not.toBeNull();
+    expect(data.has(LEGACY_LOCALSTORAGE_KEY)).toBe(false);
+  });
+
+  it('gera IDs únicos mesmo criando dezenas de registros no mesmo instante', async () => {
+    const { db } = await openDatabase();
+    const ids = new Set<string>();
+    for (let i = 0; i < 50; i++) {
+      ids.add(db.createTopic({ subject_id: 'subj-cgu-ti-dev', code: `7.${i}`, title: `Lote ${i}` }).id);
+    }
+    expect(ids.size).toBe(50);
+  });
+
+  it('faz a cópia automática do dia no primeiro salvamento', async () => {
+    const { db } = await openDatabase();
+    const backups = await db.listDatabaseBackups();
+    expect(backups.filter((b) => b.label === 'diaria')).toHaveLength(1);
+  });
+});
+
+describe('Backup e restauração', () => {
+  it('restaura um backup: valida, guarda cópia do estado atual e substitui tudo', async () => {
+    const { db } = await openDatabase();
+    db.createStudyPlan({ title: 'Plano X', organ: 'X', exam_board: 'FGV', role_title: 'R', exam_date: null, weekly_hours_target: 10 });
+    const backupBytes = db.exportDatabaseBinary();
+    db.createStudyPlan({ title: 'Plano Y', organ: 'Y', exam_board: 'FGV', role_title: 'R', exam_date: null, weekly_hours_target: 10 });
+
+    await db.restoreDatabaseFromBytes(backupBytes, 'arquivo');
+
+    const titles = db.getStudyPlans().map((p) => p.title);
+    expect(titles).toContain('Plano X');
+    expect(titles).not.toContain('Plano Y');
+    const labels = (await db.listDatabaseBackups()).map((b) => b.label);
+    expect(labels).toContain('antes-de-restaurar-arquivo');
+  });
+
+  it('recusa arquivo que não é backup do FofoLab sem mexer nos estudos atuais', async () => {
+    const { db } = await openDatabase();
+    const before = db.getStudyPlans().length;
+
+    await expect(db.restoreDatabaseFromBytes(new Uint8Array([1, 2, 3, 4, 5]), 'arquivo')).rejects.toBeInstanceOf(
+      db.InvalidBackupError
+    );
+    expect(db.getStudyPlans()).toHaveLength(before);
+  });
+
+  it('restaurar o exemplo inicial guarda uma cópia antes de apagar', async () => {
+    const { db } = await openDatabase();
+    db.createStudyPlan({ title: 'Plano Pessoal', organ: 'P', exam_board: 'FGV', role_title: 'R', exam_date: null, weekly_hours_target: 10 });
+
+    await db.resetDatabaseToSeed();
+
+    expect(db.getStudyPlans().map((p) => p.title)).not.toContain('Plano Pessoal');
+    const copy = (await db.listDatabaseBackups()).find((b) => b.label === 'antes-de-restaurar-exemplo');
+    expect(copy).toBeDefined();
+
+    await db.restoreDatabaseBackup(copy!.id);
+    expect(db.getStudyPlans().map((p) => p.title)).toContain('Plano Pessoal');
+  });
+
+  it('conta o que uma exclusão vai levar junto (para a confirmação)', async () => {
+    const { db } = await openDatabase();
+    const deps = db.countDependents('plan', 'plan-cgu');
+    expect(deps.subjects).toBe(4);
+    expect(deps.topics).toBeGreaterThanOrEqual(8);
+    expect(deps.questions).toBeGreaterThanOrEqual(5);
+  });
+});
+
+describe('Bancada: cadernos, PDFs e diagnóstico gravados no lugar certo', () => {
+  it('caderno é sempre do próprio tópico (não mostra o caderno de outro tópico da disciplina)', async () => {
+    const { db } = await openDatabase();
+    expect(db.getNotebookForTopic('t-cgu-1-1')?.id).toBe('nb-cgu-1-1');
+    expect(db.getNotebookForTopic('t-cgu-1-3')).toBeNull();
+  });
+
+  it('salvar o PDF de um tópico nunca sobrescreve o PDF de outro tópico', async () => {
+    const { db } = await openDatabase();
+
+    // Mesmo recebendo o id do PDF do tópico 1.1, salvar para o 1.3 cria/atualiza o registro do 1.3
+    const saved = db.savePdfSourceProgress({
+      pdfSourceId: 'pdf-cgu-1-1',
+      subjectId: 'subj-cgu-auditoria',
+      topicId: 't-cgu-1-3',
+      title: 'Amostragem.pdf',
+      filePath: 'Amostragem.pdf',
+      currentPage: 3,
+      totalPages: 20,
+    });
+
+    expect(saved.id).not.toBe('pdf-cgu-1-1');
+    expect(saved.topic_id).toBe('t-cgu-1-3');
+    const original = db.getPdfSourceForTopic('subj-cgu-auditoria', 't-cgu-1-1');
+    expect(original?.title).toBe('Manual de Auditoria Governamental & ISSAI 100-400.pdf');
+    expect(original?.current_page).toBe(24);
+  });
+
+  it('recusa diagnóstico incoerente e grava tempo gasto e uso da explicação de verdade', async () => {
+    const { db } = await openDatabase();
+    const base = { questionId: 'q-fgv-cgu-issai-1', topicId: 't-cgu-1-1' };
+
+    expect(() =>
+      db.recordQuestionDiagnosis({ ...base, selectedOption: 'A', isCorrect: false, selfDiagnosis: 'MASTERED' })
+    ).toThrow(db.InconsistentDiagnosisError);
+    expect(() =>
+      db.recordQuestionDiagnosis({ ...base, selectedOption: null, isCorrect: false, selfDiagnosis: 'DOUBT' })
+    ).toThrow(db.InconsistentDiagnosisError);
+
+    db.recordQuestionDiagnosis({
+      ...base,
+      selectedOption: 'C',
+      isCorrect: true,
+      selfDiagnosis: 'MASTERED',
+      timeSpentSeconds: 73,
+      usedAiReview: false,
+    });
+    db.recordQuestionDiagnosis({ ...base, selectedOption: null, isCorrect: false, selfDiagnosis: 'BASE_GAP', usedAiReview: true });
+
+    const [firstContact, answered] = db.getRecentAttempts(2);
+    expect(answered.time_spent_seconds).toBe(73);
+    expect(answered.used_ai_review).toBe(0);
+    expect(firstContact.selected_option).toBe('');
+    expect(firstContact.used_ai_review).toBe(1);
+  });
+});
+
+describe('Importação de questões, tópicos e explicações', () => {
+  it('importa questões em lote e não duplica ao importar de novo', async () => {
+    const { db } = await openDatabase();
+    const items = [
+      {
+        statement: 'Questão importada número 1 sobre auditoria?',
+        options: ['A) Sim', 'B) Não'],
+        finalAnswer: 'A',
+        examBoard: 'FGV',
+        examYear: 2024,
+        organ: 'CGU',
+        topicId: 't-cgu-1-1',
+      },
+      {
+        statement: 'Item Certo/Errado importado.',
+        options: ['C) Certo', 'E) Errado'],
+        finalAnswer: 'E',
+        examBoard: 'Cebraspe',
+        examYear: 2023,
+        organ: 'TCU',
+        topicId: null,
+      },
+    ];
+
+    expect(db.importQuestions('subj-cgu-auditoria', items).inserted).toBe(2);
+    const again = db.importQuestions('subj-cgu-auditoria', items);
+    expect(again.inserted).toBe(0);
+    expect(again.skippedDuplicates).toBe(2);
+
+    const imported = db.getQuestionsForTopicOrSubject('', 'subj-cgu-auditoria', 'subject');
+    const certoErrado = imported.find((q) => q.question.final_answer === 'E');
+    expect(JSON.parse(certoErrado!.question.options_json)).toEqual(['C) Certo', 'E) Errado']);
+  });
+
+  it('importa tópicos do edital ligando subtópicos ao tópico pai', async () => {
+    const { db } = await openDatabase();
+    const result = db.importSyllabusTopics('subj-cgu-ti-dev', [
+      { code: '5', title: 'Banco de Dados' },
+      { code: '5.1', title: 'Modelagem relacional' },
+    ]);
+    expect(result.inserted).toBe(2);
+
+    const topics = db.getTopicsBySubject('subj-cgu-ti-dev');
+    const parent = topics.find((t) => t.code === '5')!;
+    expect(topics.find((t) => t.code === '5.1')?.parent_id).toBe(parent.id);
+
+    expect(db.importSyllabusTopics('subj-cgu-ti-dev', [{ code: '5', title: 'Banco de Dados' }]).skippedDuplicates).toBe(1);
+  });
+
+  it('guarda a explicação gerada pela IA e atualiza se gerar de novo, sem perder o histórico de dúvidas', async () => {
+    const { db } = await openDatabase();
+    const [{ insertedIds }] = [
+      db.importQuestions('subj-cgu-auditoria', [
+        { statement: 'Nova questão sem explicação?', options: ['A) x', 'B) y'], finalAnswer: 'B', examBoard: 'FGV', examYear: 2024, organ: 'CGU', topicId: null },
+      ]),
+    ];
+    const questionId = insertedIds[0];
+
+    db.saveAiDissection({ questionId, provider: 'GEMINI_FREE', dissectionMarkdown: 'v1', prerequisites: ['A'] });
+    db.saveQuestionChatHistory(questionId, '[{"id":"1"}]');
+    const updated = db.saveAiDissection({ questionId, provider: 'DEEPSEEK_FALLBACK', dissectionMarkdown: 'v2', prerequisites: [] });
+
+    expect(updated.dissection_markdown).toBe('v2');
+    expect(updated.provider_used).toBe('DEEPSEEK_FALLBACK');
+    expect(updated.chat_history_json).toBe('[{"id":"1"}]');
+  });
+});

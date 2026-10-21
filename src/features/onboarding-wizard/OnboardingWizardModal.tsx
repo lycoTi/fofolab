@@ -1,13 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Compass, Sparkles, Target, X } from 'lucide-react';
-import type { StudyPlan } from '../../types/database';
+import type { StudyMoment, StudyPlan, StudyStrategy } from '../../types/database';
 
 export interface OnboardingProfile {
-  studyMoment: 'PRE_EDITAL' | 'POS_EDITAL';
+  studyMoment: StudyMoment;
   dailyHours: number;
   weeklyHours: number;
-  targetTrackArea: 'CONTROLE' | 'BANCARIO' | 'TRIBUNAIS' | 'TI' | 'GERAL';
-  strategyMode: 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
+  strategyMode: StudyStrategy;
 }
 
 interface OnboardingWizardModalProps {
@@ -18,6 +17,25 @@ interface OnboardingWizardModalProps {
   onComplete: (profile: OnboardingProfile, targetPlanId: string) => void;
 }
 
+export const ONBOARDING_COMPLETED_KEY = 'fofolab_onboarding_completed_v1';
+
+/** Estratégia sugerida para cada momento (o estudante pode trocar no passo 4). */
+const STRATEGY_FOR_MOMENT: Record<StudyMoment, StudyStrategy> = {
+  PRE_EDITAL: 'BASE_COMUM',
+  POS_EDITAL: 'ALTO_PESO_CURTO',
+};
+
+function profileFromPlan(plan: StudyPlan): OnboardingProfile {
+  const studyMoment = plan.study_moment ?? 'PRE_EDITAL';
+  const weeklyHours = plan.weekly_hours_target || 10.5;
+  return {
+    studyMoment,
+    dailyHours: Math.round((weeklyHours / 7) * 10) / 10,
+    weeklyHours,
+    strategyMode: plan.strategy_mode ?? STRATEGY_FOR_MOMENT[studyMoment],
+  };
+}
+
 export function OnboardingWizardModal({
   isOpen,
   plans,
@@ -26,32 +44,43 @@ export function OnboardingWizardModal({
   onComplete,
 }: OnboardingWizardModalProps) {
   const [step, setStep] = useState<number>(1);
-  const [profile, setProfile] = useState<OnboardingProfile>({
-    studyMoment: 'PRE_EDITAL',
-    dailyHours: 1.5,
-    weeklyHours: 10.5,
-    targetTrackArea: 'CONTROLE',
-    strategyMode: 'BASE_COMUM',
-  });
+  const [profile, setProfile] = useState<OnboardingProfile>(() => profileFromPlan(activePlan));
+  const [strategyTouched, setStrategyTouched] = useState<boolean>(false);
   const [selectedPlanId, setSelectedPlanId] = useState<string>(activePlan.id);
+
+  // Ao (re)abrir, parte do que já está gravado no plano ativo ("Recalibrar Perfil").
+  // Só na abertura: recarregar os dados com o assistente aberto não pode voltar ao passo 1.
+  useEffect(() => {
+    if (!isOpen) return;
+    setStep(1);
+    setProfile(profileFromPlan(activePlan));
+    setStrategyTouched(Boolean(activePlan.strategy_mode));
+    setSelectedPlanId(activePlan.id);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   const handleNext = () => {
     if (step < 4) {
       setStep(step + 1);
-    } else {
-      // Conclui e salva perfil no localStorage
-      try {
-        localStorage.setItem('fofolab_onboarding_completed_v1', 'true');
-        localStorage.setItem('fofolab_onboarding_profile_v1', JSON.stringify(profile));
-      } catch (e) {
-        console.warn('Erro ao salvar perfil do onboarding:', e);
-      }
-      onComplete(profile, selectedPlanId);
-      onClose();
+      return;
     }
+    // O perfil vai para o plano (banco); aqui só fica a marca de "assistente já visto"
+    try {
+      localStorage.setItem(ONBOARDING_COMPLETED_KEY, 'true');
+    } catch (e) {
+      console.warn('Erro ao salvar a conclusão do assistente:', e);
+    }
+    onComplete(profile, selectedPlanId);
+    onClose();
   };
+
+  const selectMoment = (studyMoment: StudyMoment) =>
+    setProfile((p) => ({
+      ...p,
+      studyMoment,
+      strategyMode: strategyTouched ? p.strategyMode : STRATEGY_FOR_MOMENT[studyMoment],
+    }));
 
   const handlePrev = () => {
     if (step > 1) setStep(step - 1);
@@ -127,7 +156,7 @@ export function OnboardingWizardModal({
                 <button
                   key={opt.id}
                   type="button"
-                  onClick={() => setProfile((p) => ({ ...p, studyMoment: opt.id }))}
+                  onClick={() => selectMoment(opt.id)}
                   className={`p-4 rounded-xl border text-left transition ${
                     profile.studyMoment === opt.id
                       ? 'bg-orange-500/15 border-orange-500 text-white shadow-lg shadow-orange-500/10'
@@ -231,7 +260,7 @@ export function OnboardingWizardModal({
                 Qual estratégia de Custo-Benefício você prefere?
               </h3>
               <p className="text-xs text-slate-400 leading-relaxed">
-                O FofoLab vai reorganizar as matérias automaticamente para maximizar sua nota com o menor esforço desperdiçado:
+                A estratégia ajusta a prioridade das matérias no seu ciclo (o efeito aparece em “Por que hoje?”):
               </p>
             </div>
 
@@ -256,7 +285,10 @@ export function OnboardingWizardModal({
                 <button
                   key={strat.id}
                   type="button"
-                  onClick={() => setProfile((p) => ({ ...p, strategyMode: strat.id }))}
+                  onClick={() => {
+                    setStrategyTouched(true);
+                    setProfile((p) => ({ ...p, strategyMode: strat.id }));
+                  }}
                   className={`p-3.5 rounded-xl border text-left transition ${
                     profile.strategyMode === strat.id
                       ? 'bg-orange-500/15 border-orange-500 text-white'

@@ -16,3 +16,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
+
+/* Enquanto uma divisória de painel é arrastada, iframes (PDF) não podem roubar o ponteiro */
+body.fofolab-resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+body.fofolab-resizing iframe {
+  pointer-events: none;
+}

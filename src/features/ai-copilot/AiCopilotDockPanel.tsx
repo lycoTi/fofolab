@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookPlus, CheckCircle2, MessageSquare, Send, Sparkles, X } from 'lucide-react';
+import { BookPlus, CheckCircle2, Loader2, MessageSquare, Send, Sparkles, X } from 'lucide-react';
 import {
   askContextualStudyCopilot,
   type ChatTurn,
@@ -8,32 +8,41 @@ import {
 import type { Question } from '../../types/database';
 
 interface AiCopilotDockPanelProps {
+  width?: number;
   context: StudentContextSnapshot;
   activeQuestion?: Question | null;
   notebookExcerpt?: string;
   onSaveToNotebook: (markdownToAppend: string) => void;
   onCloseDock?: () => void;
+  aiConfigured?: boolean;
+}
+
+function buildWelcome(context: StudentContextSnapshot, aiConfigured: boolean): ChatTurn {
+  const demoNote = aiConfigured
+    ? ''
+    : '\n\n🧪 **Modo demonstração:** a IA ainda não foi configurada, então minhas respostas por enquanto são exemplos de como vou te ajudar.';
+  return {
+    id: 'welcome-copilot',
+    role: 'tutor',
+    content:
+      `🐹 **Olá! Sou seu Copiloto Contextual para a prova da ${context.organ} (${context.examBoard}).**\n\n` +
+      `Estou acompanhando seu estudo em **${context.currentSubjectName} → ${context.currentTopicCode} ${context.currentTopicTitle}** ` +
+      `(Domínio: **${context.currentTopicMastery}%** | Confiança da Amostra: **${context.currentTopicConfidence}%**).\n\n` +
+      `Posso relacionar este tópico com o que você já domina ou montar seu foco de hoje com base no Mapa de Calor!${demoNote}`,
+    createdAt: new Date().toISOString(),
+  };
 }
 
 export function AiCopilotDockPanel({
+  width = 384,
   context,
   activeQuestion,
   notebookExcerpt,
   onSaveToNotebook,
   onCloseDock,
+  aiConfigured = false,
 }: AiCopilotDockPanelProps) {
-  const [turns, setTurns] = useState<ChatTurn[]>([
-    {
-      id: 'welcome-copilot',
-      role: 'tutor',
-      content:
-        `🐹 **Olá! Sou seu Copiloto Contextual para a prova da ${context.organ} (${context.examBoard}).**\n\n` +
-        `Estou acompanhando seu estudo em **${context.currentSubjectName} → ${context.currentTopicCode} ${context.currentTopicTitle}** ` +
-        `(Domínio: **${context.currentTopicMastery}%** | Confiança da Amostra: **${context.currentTopicConfidence}%**).\n\n` +
-        `Posso relacionar este tópico com o que você já domina ou montar seu foco de hoje com base no Mapa de Calor!`,
-      createdAt: new Date().toISOString(),
-    },
-  ]);
+  const [turns, setTurns] = useState<ChatTurn[]>(() => [buildWelcome(context, aiConfigured)]);
   const [inputPrompt, setInputPrompt] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [savedTurnId, setSavedTurnId] = useState<string | null>(null);
@@ -49,31 +58,33 @@ export function AiCopilotDockPanel({
       createdAt: new Date().toISOString(),
     };
 
-    const { reply } = await askContextualStudyCopilot({
-      context,
-      promptText: promptText.trim(),
-      activeQuestion,
-      notebookExcerpt,
-    });
-
-    const tutorTurn: ChatTurn = {
-      id: `cop-t-${Date.now() + 1}`,
-      role: 'tutor',
-      content: reply,
-      createdAt: new Date().toISOString(),
-    };
-
-    setTurns((prev) => [...prev, studentTurn, tutorTurn]);
-    setInputPrompt('');
-    setIsLoading(false);
+    try {
+      const { reply, simulated } = await askContextualStudyCopilot({
+        context,
+        promptText: promptText.trim(),
+        activeQuestion,
+        notebookExcerpt,
+      });
+      const tutorTurn: ChatTurn = {
+        id: `cop-t-${Date.now() + 1}`,
+        role: 'tutor',
+        content: reply,
+        createdAt: new Date().toISOString(),
+        simulated,
+      };
+      setTurns((prev) => [...prev, studentTurn, tutorTurn]);
+      setInputPrompt('');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <section
       aria-label="Painel Copiloto IA Contextual"
-      className="w-96 border-l border-slate-800 bg-slate-900/75 flex flex-col shrink-0 h-full"
+      style={{ width }}
+      className="border-l border-slate-800 bg-slate-900/75 flex flex-col shrink-0 h-full min-w-0"
     >
-      {/* Cabeçalho do Copiloto */}
       <div className="p-3.5 border-b border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="p-1.5 rounded-lg bg-orange-500/20 text-orange-400">
@@ -82,7 +93,9 @@ export function AiCopilotDockPanel({
           <div>
             <h3 className="text-xs font-bold text-white">Copiloto IA Contextual</h3>
             <p className="text-[10px] text-slate-400">
-              Conectado ao seu Edital, Desempenho e Tópicos
+              {aiConfigured
+                ? 'Conectado ao seu Edital, Desempenho e Tópicos'
+                : 'Modo demonstração — respostas de exemplo até a IA ser configurada'}
             </p>
           </div>
         </div>
@@ -93,6 +106,7 @@ export function AiCopilotDockPanel({
             onClick={onCloseDock}
             className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800"
             title="Recolher Copiloto IA"
+            aria-label="Recolher Copiloto IA"
           >
             <X size={14} />
           </button>
@@ -111,8 +125,7 @@ export function AiCopilotDockPanel({
           </span>
         </div>
         <div className="text-slate-400 truncate">
-          📍 Tópico: <strong className="text-slate-200">{context.currentTopicCode}</strong>{' '}
-          {context.currentTopicTitle}
+          📍 Tópico: <strong className="text-slate-200">{context.currentTopicCode}</strong> {context.currentTopicTitle}
         </div>
         {context.strongTopics.length > 0 && (
           <div className="text-[10px] text-emerald-300/90 truncate">
@@ -121,7 +134,6 @@ export function AiCopilotDockPanel({
         )}
       </div>
 
-      {/* Atalhos de Conversa Contextual */}
       <div className="px-3.5 py-2.5 border-b border-slate-800/60 flex flex-wrap gap-1.5">
         {[
           'Relacione este tópico com o que já domino',
@@ -132,14 +144,14 @@ export function AiCopilotDockPanel({
             key={quickPrompt}
             type="button"
             onClick={() => handleSend(quickPrompt)}
-            className="px-2.5 py-1 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-orange-500/40 text-[10px] text-slate-300 hover:text-orange-200 transition"
+            disabled={isLoading}
+            className="px-2.5 py-1 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-orange-500/40 text-[10px] text-slate-300 hover:text-orange-200 transition disabled:opacity-50"
           >
             {quickPrompt}
           </button>
         ))}
       </div>
 
-      {/* Mensagens do Chat */}
       <div className="flex-1 overflow-y-auto p-3.5 space-y-3">
         {turns.map((turn) => (
           <div
@@ -150,8 +162,13 @@ export function AiCopilotDockPanel({
                 : 'bg-slate-950 border border-slate-800 text-slate-200'
             }`}
           >
+            {turn.simulated && (
+              <div className="text-[10px] font-semibold text-amber-300">
+                Exemplo simulado — a IA ainda não está configurada
+              </div>
+            )}
             <div>{turn.content}</div>
-            {turn.role === 'tutor' && (
+            {turn.role === 'tutor' && turn.id !== 'welcome-copilot' && !turn.simulated && (
               <div className="pt-1.5 border-t border-slate-900 flex items-center justify-end">
                 <button
                   type="button"
@@ -180,7 +197,6 @@ export function AiCopilotDockPanel({
         ))}
       </div>
 
-      {/* Input Livre */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -201,11 +217,11 @@ export function AiCopilotDockPanel({
           disabled={isLoading || !inputPrompt.trim()}
           className="p-2 rounded-xl bg-orange-500 hover:bg-orange-600 disabled:opacity-40 text-white transition"
           title="Enviar mensagem ao Copiloto"
+          aria-label="Enviar mensagem ao Copiloto"
         >
-          <Send size={14} />
+          {isLoading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
         </button>
       </form>
     </section>
   );
 }
-

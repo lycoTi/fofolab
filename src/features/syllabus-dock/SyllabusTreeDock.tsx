@@ -3,6 +3,7 @@ import type { SubjectCycleAllocation } from '../../lib/cycleEngine';
 import type { StudyPlan, Subject, Topic } from '../../types/database';
 
 interface SyllabusTreeDockProps {
+  width?: number;
   mode: 'student' | 'admin';
   onToggleMode: () => void;
   plans: StudyPlan[];
@@ -18,6 +19,7 @@ interface SyllabusTreeDockProps {
 }
 
 export function SyllabusTreeDock({
+  width = 320,
   mode,
   onToggleMode,
   plans,
@@ -34,7 +36,8 @@ export function SyllabusTreeDock({
   return (
     <aside
       aria-label="Painel de Tópicos e Edital"
-      className="w-80 border-r border-slate-800 bg-slate-900/70 flex flex-col shrink-0 h-full"
+      style={{ width }}
+      className="border-r border-slate-800 bg-slate-900/70 flex flex-col shrink-0 h-full min-w-0"
     >
       <div className="p-4 border-b border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-3">

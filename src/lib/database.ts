@@ -1,7 +1,26 @@
-import initSqlJs, { type Database } from 'sql.js';
+import initSqlJs, { type Database, type SqlJsConfig, type SqlJsStatic } from 'sql.js';
 import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 import schemaSql from '../../docs/specs/01-database-schema.sql?raw';
 import { calculateSampleConfidencePercent } from './cycleEngine';
+import { isDiagnosisAllowed } from './diagnosis';
+import { newId } from './ids';
+import {
+  detectSchemaVersion,
+  LATEST_SCHEMA_VERSION,
+  prepareSchema,
+  SchemaTooNewError,
+} from './migrations';
+import { normalizeStatement } from './questionImport';
+import { getSaveStatus, updateSaveStatus } from './saveStatus';
+import {
+  clearLegacyLocalStorageDatabase,
+  createDefaultStorage,
+  createMemoryStorage,
+  readLegacyLocalStorageDatabase,
+  type BackupEntry,
+  type DatabaseStorage,
+} from './storage';
+import { parentTopicCode } from './syllabusImport';
 import {
   SEED_ADMIN_BLUEPRINTS,
   SEED_AI_DISSECTIONS,
@@ -17,10 +36,13 @@ import {
 import type {
   AdminBoardBlueprint,
   AiDissection,
+  AiProviderUsed,
   CareerTrack,
   CreateStudyPlanInput,
   CreateSubjectInput,
   CreateTopicInput,
+  ImportQuestionItem,
+  ImportTopicItem,
   Notebook,
   PdfSource,
   Question,
@@ -37,39 +59,57 @@ import type {
   UpdateTopicInput,
 } from '../types/database';
 
-const STORAGE_KEY = 'fofolab_sqlite_db_v1';
+// ============================================================================
+// Estado do módulo
+// ============================================================================
 
+/**
+ * Intervalo mínimo entre gravações. A 1ª alteração depois de um tempo parado é gravada na hora
+ * (no mesmo ciclo, juntando tudo o que o clique alterou); rajadas (digitar, arrastar o controle de
+ * horas) viram no máximo 1 gravação a cada intervalo + 1 final. Assim fechar/recarregar logo depois
+ * de um clique não perde a alteração (uma espera fixa de 300 ms perdia — visto no teste E2E).
+ */
+export const SAVE_THROTTLE_MS = 400;
+const SAVE_RETRY_BASE_MS = 2500;
+const SAVE_RETRY_MAX_MS = 60000;
+
+let SQL: SqlJsStatic | null = null;
 let dbInstance: Database | null = null;
 let initPromise: Promise<Database> | null = null;
+let storage: DatabaseStorage | null = null;
+let saveTimer: ReturnType<typeof setTimeout> | null = null;
+let lastSaveStartedAt = 0;
+let retryTimer: ReturnType<typeof setTimeout> | null = null;
+let retryDelayMs = 0;
+let dirty = false;
+let saveChain: Promise<void> = Promise.resolve();
+let dailyBackupCheckedFor: string | null = null;
+let lifecycleRegistered = false;
 
-function uint8ToBase64(bytes: Uint8Array): string {
-  let binary = '';
-  const chunkSize = 0x8000;
-  for (let i = 0; i < bytes.length; i += chunkSize) {
-    const chunk = bytes.subarray(i, i + chunkSize);
-    binary += String.fromCharCode(...chunk);
-  }
-  return btoa(binary);
+export interface InitDatabaseOptions {
+  /** Onde gravar (testes injetam `createMemoryStorage()`); padrão: arquivo no Tauri, IndexedDB no navegador. */
+  storage?: DatabaseStorage;
+  /** Configuração do sql.js (testes em Node passam `{ wasmBinary }`). */
+  sqlJsConfig?: SqlJsConfig;
 }
 
-function base64ToUint8(base64: string): Uint8Array {
-  const binary = atob(base64);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) {
-    bytes[i] = binary.charCodeAt(i);
+export class InvalidBackupError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InvalidBackupError';
   }
-  return bytes;
 }
 
-export function persistDatabase(): void {
-  if (!dbInstance) return;
-  try {
-    const data = dbInstance.export();
-    localStorage.setItem(STORAGE_KEY, uint8ToBase64(data));
-  } catch (err) {
-    console.error('[FofoLab SQLite] Erro ao persistir banco local:', err);
+export class InconsistentDiagnosisError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InconsistentDiagnosisError';
   }
 }
+
+// ============================================================================
+// Utilitários de consulta
+// ============================================================================
 
 function queryAll<T>(db: Database, sql: string, params: (string | number | null)[] = []): T[] {
   const results = db.exec(sql, params);
@@ -88,6 +128,68 @@ function queryOne<T>(db: Database, sql: string, params: (string | number | null)
   const rows = queryAll<T>(db, sql, params);
   return rows[0] ?? null;
 }
+
+function enableForeignKeys(db: Database): void {
+  db.run('PRAGMA foreign_keys = ON;');
+}
+
+/**
+ * `Database.export()` do sql.js fecha e reabre a conexão, o que zera os PRAGMAs.
+ * Antes desta correção, `foreign_keys` ficava desligado após o 1º salvamento e nenhuma
+ * exclusão cascateava. Toda exportação passa por aqui e religa as chaves estrangeiras.
+ */
+function exportBytes(db: Database): Uint8Array {
+  const bytes = db.export();
+  enableForeignKeys(db);
+  return bytes;
+}
+
+function requireSql(): SqlJsStatic {
+  if (!SQL) throw new Error('SQLite ainda não foi inicializado. Chame await initDatabase() primeiro.');
+  return SQL;
+}
+
+function requireStorage(): DatabaseStorage {
+  if (!storage) throw new Error('Armazenamento ainda não inicializado. Chame await initDatabase() primeiro.');
+  return storage;
+}
+
+function openDatabaseFromBytes(bytes: Uint8Array): Database {
+  const db = new (requireSql().Database)(bytes);
+  try {
+    // O sql.js só lê o cabeçalho na 1ª consulta: força aqui para detectar arquivo inválido
+    db.exec('SELECT count(*) FROM sqlite_master;');
+  } catch (err) {
+    db.close();
+    throw err;
+  }
+  return db;
+}
+
+function createFreshDatabase(): Database {
+  const db = new (requireSql().Database)();
+  prepareSchema(db, schemaSql);
+  enableForeignKeys(db);
+  seedInitialData(db);
+  return db;
+}
+
+function localDateKey(date: Date): string {
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
+
+function describeStorageError(err: unknown): string {
+  const name = err instanceof Error || err instanceof DOMException ? err.name : '';
+  if (name === 'QuotaExceededError') {
+    return 'Sem espaço para salvar seus estudos neste computador. Faça um backup agora e libere espaço.';
+  }
+  return 'Não foi possível salvar seus estudos agora. Vamos tentar de novo automaticamente — se o aviso continuar, faça um backup.';
+}
+
+// ============================================================================
+// Seed (exemplo inicial CGU + BACEN)
+// ============================================================================
 
 function seedInitialData(db: Database): void {
   db.run('BEGIN TRANSACTION;');
@@ -110,8 +212,10 @@ function seedInitialData(db: Database): void {
 
     for (const plan of SEED_STUDY_PLANS) {
       db.run(
-        `INSERT OR IGNORE INTO study_plans (id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target, is_active, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        `INSERT OR IGNORE INTO study_plans (
+          id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target,
+          is_active, created_at, strategy_mode, study_moment
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           plan.id,
           plan.track_id,
@@ -123,6 +227,8 @@ function seedInitialData(db: Database): void {
           plan.weekly_hours_target,
           plan.is_active,
           plan.created_at,
+          plan.strategy_mode,
+          plan.study_moment,
         ]
       );
     }
@@ -273,44 +379,136 @@ function seedInitialData(db: Database): void {
   }
 }
 
-export async function initDatabase(): Promise<Database> {
+// ============================================================================
+// Inicialização, salvamento, cópias de segurança e restauração
+// ============================================================================
+
+async function resolveDefaultStorage(): Promise<DatabaseStorage> {
+  try {
+    return await createDefaultStorage();
+  } catch (err) {
+    console.error('[FofoLab] Armazenamento persistente indisponível:', err);
+    updateSaveStatus({
+      warning:
+        'Não foi possível acessar o armazenamento deste computador: seus estudos ficam só nesta sessão. Use "Fazer Backup" para não perder nada.',
+    });
+    return createMemoryStorage();
+  }
+}
+
+/** Troca para memória sem gravar nada (protege um banco que não podemos sobrescrever). */
+function switchToMemoryStorage(warning: string): void {
+  storage = createMemoryStorage();
+  updateSaveStatus({ storageKind: 'memory', warning });
+}
+
+async function safelyQuarantine(bytes: Uint8Array, reason: string): Promise<void> {
+  try {
+    await requireStorage().quarantine(bytes, reason);
+  } catch (err) {
+    console.error('[FofoLab] Falha ao guardar cópia em quarentena:', err);
+  }
+}
+
+async function safelyBackup(bytes: Uint8Array, label: string): Promise<void> {
+  try {
+    await requireStorage().createBackup(bytes, label);
+  } catch (err) {
+    console.error('[FofoLab] Falha ao criar cópia de segurança:', err);
+  }
+}
+
+async function openStoredDatabase(bytes: Uint8Array): Promise<Database | null> {
+  let db: Database;
+  try {
+    db = openDatabaseFromBytes(bytes);
+  } catch (err) {
+    console.error('[FofoLab] O banco salvo não abriu; guardando cópia em quarentena:', err);
+    await safelyQuarantine(bytes, 'banco-nao-abriu');
+    updateSaveStatus({
+      warning:
+        'Seus estudos salvos não puderam ser abertos e foram guardados à parte. Começamos com o exemplo inicial — restaure um backup em "Organizar Edital → Backup".',
+    });
+    return null;
+  }
+
+  const version = detectSchemaVersion(db);
+  if (version > LATEST_SCHEMA_VERSION) {
+    db.close();
+    switchToMemoryStorage(
+      `${new SchemaTooNewError(version).message} Nada será gravado nesta sessão para não estragar o arquivo.`
+    );
+    return null;
+  }
+
+  if (version > 0 && version < LATEST_SCHEMA_VERSION) {
+    await safelyBackup(bytes, `antes-da-atualizacao-v${LATEST_SCHEMA_VERSION}`);
+  }
+
+  try {
+    prepareSchema(db, schemaSql);
+  } catch (err) {
+    console.error('[FofoLab] Falha ao atualizar a estrutura do banco salvo:', err);
+    db.close();
+    await safelyQuarantine(bytes, 'falha-na-atualizacao');
+    updateSaveStatus({
+      warning:
+        'Não conseguimos atualizar seus estudos salvos para esta versão. Uma cópia foi guardada à parte — restaure um backup em "Organizar Edital → Backup".',
+    });
+    return null;
+  }
+
+  return db;
+}
+
+function registerLifecycleFlush(): void {
+  if (lifecycleRegistered || typeof window === 'undefined' || typeof document === 'undefined') return;
+  lifecycleRegistered = true;
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') void flushDatabase();
+  });
+  window.addEventListener('pagehide', () => {
+    void flushDatabase();
+  });
+}
+
+export async function initDatabase(options: InitDatabaseOptions = {}): Promise<Database> {
   if (dbInstance) return dbInstance;
-  if (initPromise) return initPromise;
+  if (initPromise !== null) return initPromise;
 
   initPromise = (async () => {
-    const SQL = await initSqlJs({
-      locateFile: () => sqlWasmUrl,
-    });
+    SQL = await initSqlJs(options.sqlJsConfig ?? { locateFile: () => sqlWasmUrl });
+    storage = options.storage ?? (await resolveDefaultStorage());
+    updateSaveStatus({ storageKind: storage.kind });
 
-    const savedBase64 = localStorage.getItem(STORAGE_KEY);
-    let db: Database;
-
-    if (savedBase64) {
-      try {
-        const bytes = base64ToUint8(savedBase64);
-        db = new SQL.Database(bytes);
-        db.run('PRAGMA foreign_keys = ON;');
-        db.run(schemaSql);
-      } catch (err) {
-        console.warn('[FofoLab SQLite] Banco salvo corrompido, recriando a partir do contrato SQL:', err);
-        db = new SQL.Database();
-        db.run(schemaSql);
-        seedInitialData(db);
-      }
-    } else {
-      db = new SQL.Database();
-      db.run(schemaSql);
-      seedInitialData(db);
+    let storedBytes: Uint8Array | null = null;
+    try {
+      storedBytes = await storage.load();
+    } catch (err) {
+      // Não conseguimos LER o que está salvo: nunca sobrescrever. Segue em memória e avisa.
+      console.error('[FofoLab] Falha ao ler os estudos salvos:', err);
+      switchToMemoryStorage(
+        'Não foi possível abrir seus estudos salvos. Nada será gravado nesta sessão para não sobrescrevê-los — feche o FofoLab e abra de novo.'
+      );
     }
 
-    // Caso o banco esteja sem planos (ex: migração inicial), popula o seed
+    const legacyBytes = storedBytes ? null : readLegacyLocalStorageDatabase();
+    const bytesToOpen = storedBytes ?? legacyBytes;
+
+    let db = bytesToOpen ? await openStoredDatabase(bytesToOpen) : null;
+    db ??= createFreshDatabase();
+    enableForeignKeys(db);
+
     const countRow = queryOne<{ total: number }>(db, 'SELECT COUNT(*) as total FROM study_plans');
-    if (!countRow || countRow.total === 0) {
-      seedInitialData(db);
-    }
+    if (!countRow || countRow.total === 0) seedInitialData(db);
 
     dbInstance = db;
-    persistDatabase();
+    registerLifecycleFlush();
+    dirty = true;
+    await flushDatabase();
+
+    // Formato antigo (base64 no localStorage) só é apagado depois de gravado no lugar novo
+    if (legacyBytes && getSaveStatus().state === 'saved') clearLegacyLocalStorageDatabase();
     return db;
   })();
 
@@ -324,18 +522,172 @@ export function getDb(): Database {
   return dbInstance;
 }
 
-export async function resetDatabaseToSeed(): Promise<void> {
-  localStorage.removeItem(STORAGE_KEY);
-  if (dbInstance) {
-    dbInstance.close();
-    dbInstance = null;
+/** Marca o banco como alterado e agenda a gravação (imediata se estava parado; ver `SAVE_THROTTLE_MS`). */
+export function persistDatabase(): void {
+  if (!dbInstance) return;
+  dirty = true;
+  updateSaveStatus({ state: 'pending' });
+  if (saveTimer) return; // já há uma gravação agendada, que vai levar esta alteração junto
+  const wait = Math.max(0, lastSaveStartedAt + SAVE_THROTTLE_MS - Date.now());
+  saveTimer = setTimeout(() => {
+    saveTimer = null;
+    void flushDatabase();
+  }, wait);
+}
+
+/** Grava imediatamente o que estiver pendente (fila única: nunca há duas gravações simultâneas). */
+export function flushDatabase(): Promise<void> {
+  if (saveTimer) {
+    clearTimeout(saveTimer);
+    saveTimer = null;
   }
-  initPromise = null;
-  await initDatabase();
+  if (!dirty) return saveChain;
+  saveChain = saveChain.then(runSave, runSave);
+  return saveChain;
+}
+
+function scheduleRetry(): void {
+  if (retryTimer) return;
+  retryDelayMs = retryDelayMs ? Math.min(SAVE_RETRY_MAX_MS, retryDelayMs * 2) : SAVE_RETRY_BASE_MS;
+  retryTimer = setTimeout(() => {
+    retryTimer = null;
+    void flushDatabase();
+  }, retryDelayMs);
+}
+
+async function runSave(): Promise<void> {
+  if (!dbInstance || !storage || !dirty) return;
+  dirty = false;
+  lastSaveStartedAt = Date.now();
+  const bytes = exportBytes(dbInstance);
+  updateSaveStatus({ state: 'saving' });
+
+  try {
+    await storage.save(bytes);
+  } catch (err) {
+    dirty = true;
+    console.error('[FofoLab] Falha ao salvar os estudos:', err);
+    updateSaveStatus({ state: 'error', errorMessage: describeStorageError(err) });
+    scheduleRetry();
+    return;
+  }
+
+  retryDelayMs = 0;
+  updateSaveStatus({
+    state: dirty ? 'pending' : 'saved',
+    lastSavedAt: new Date().toISOString(),
+    errorMessage: null,
+  });
+  await maybeCreateDailyBackup(bytes);
+}
+
+/** Uma cópia automática por dia (a do 1º salvamento do dia = como os estudos estavam ao começar). */
+async function maybeCreateDailyBackup(bytes: Uint8Array): Promise<void> {
+  if (!storage) return;
+  const today = localDateKey(new Date());
+  if (dailyBackupCheckedFor === today) return;
+  dailyBackupCheckedFor = today;
+  try {
+    const backups = await storage.listBackups();
+    const hasToday = backups.some(
+      (b) => b.label === 'diaria' && localDateKey(new Date(b.createdAt)) === today
+    );
+    if (!hasToday) await storage.createBackup(bytes, 'diaria');
+  } catch (err) {
+    console.error('[FofoLab] Falha ao criar a cópia diária:', err);
+  }
+}
+
+/** Cópia de segurança imediata — chamada antes de qualquer ação que apaga ou substitui dados. */
+export async function createSafetyBackup(label: string): Promise<BackupEntry> {
+  const db = getDb();
+  await flushDatabase();
+  return requireStorage().createBackup(exportBytes(db), label);
+}
+
+export async function listDatabaseBackups(): Promise<BackupEntry[]> {
+  return requireStorage().listBackups();
+}
+
+function replaceDatabase(next: Database): void {
+  const previous = dbInstance;
+  dbInstance = next;
+  previous?.close();
+  dirty = true;
+}
+
+/**
+ * Substitui todos os estudos pelo conteúdo de um backup (arquivo baixado ou cópia automática).
+ * Valida ANTES de trocar, atualiza backups de versões antigas e guarda uma cópia do estado atual.
+ */
+export async function restoreDatabaseFromBytes(bytes: Uint8Array, originLabel: string): Promise<void> {
+  getDb();
+  let candidate: Database;
+  try {
+    candidate = openDatabaseFromBytes(bytes);
+  } catch {
+    throw new InvalidBackupError('Este arquivo não é um backup do FofoLab.');
+  }
+
+  if (detectSchemaVersion(candidate) === 0) {
+    candidate.close();
+    throw new InvalidBackupError('Este arquivo não contém estudos do FofoLab.');
+  }
+
+  try {
+    prepareSchema(candidate, schemaSql);
+  } catch (err) {
+    candidate.close();
+    if (err instanceof SchemaTooNewError) throw err;
+    throw new InvalidBackupError('Não foi possível atualizar este backup para a versão atual do FofoLab.');
+  }
+  enableForeignKeys(candidate);
+
+  await createSafetyBackup(`antes-de-restaurar-${originLabel}`);
+  replaceDatabase(candidate);
+  await flushDatabase();
+}
+
+export async function restoreDatabaseBackup(backupId: string): Promise<void> {
+  const bytes = await requireStorage().readBackup(backupId);
+  if (!bytes) throw new InvalidBackupError('Cópia de segurança não encontrada.');
+  await restoreDatabaseFromBytes(bytes, 'copia-automatica');
+}
+
+export async function resetDatabaseToSeed(): Promise<void> {
+  getDb();
+  await createSafetyBackup('antes-de-restaurar-exemplo');
+  replaceDatabase(createFreshDatabase());
+  await flushDatabase();
 }
 
 export function exportDatabaseBinary(): Uint8Array {
-  return getDb().export();
+  return exportBytes(getDb());
+}
+
+/** Fecha o banco e zera o estado do módulo (testes; futura troca de arquivo). */
+export async function closeDatabase(): Promise<void> {
+  if (initPromise !== null) {
+    try {
+      await initPromise;
+    } catch {
+      // Falha na inicialização: nada a fechar
+    }
+  }
+  if (dbInstance && storage) await flushDatabase();
+  if (saveTimer) clearTimeout(saveTimer);
+  if (retryTimer) clearTimeout(retryTimer);
+  saveTimer = null;
+  retryTimer = null;
+  dbInstance?.close();
+  dbInstance = null;
+  initPromise = null;
+  storage = null;
+  dirty = false;
+  retryDelayMs = 0;
+  lastSaveStartedAt = 0;
+  dailyBackupCheckedFor = null;
+  saveChain = Promise.resolve();
 }
 
 // ============================================================================
@@ -367,7 +719,7 @@ export function setActiveStudyPlan(planId: string): StudyPlan[] {
 
 export function createStudyPlan(input: CreateStudyPlanInput): StudyPlan {
   const db = getDb();
-  const id = `plan-${Date.now()}`;
+  const id = newId('plan');
   const now = new Date().toISOString();
 
   db.run('UPDATE study_plans SET is_active = 0');
@@ -398,7 +750,8 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
 
   db.run(
     `UPDATE study_plans
-     SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?
+     SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?,
+         strategy_mode = ?, study_moment = ?
      WHERE id = ?`,
     [
       input.title ?? existing.title,
@@ -407,6 +760,8 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
       input.role_title ?? existing.role_title,
       input.exam_date !== undefined ? input.exam_date : existing.exam_date,
       input.weekly_hours_target ?? existing.weekly_hours_target,
+      input.strategy_mode !== undefined ? input.strategy_mode : existing.strategy_mode,
+      input.study_moment !== undefined ? input.study_moment : existing.study_moment,
       input.id,
     ]
   );
@@ -454,7 +809,7 @@ export function recalculateSubjectMastery(subjectId: string): void {
 
 export function createSubject(input: CreateSubjectInput): Subject {
   const db = getDb();
-  const id = `subj-${Date.now()}`;
+  const id = newId('subj');
   const allocatedMinutes =
     input.cycle_allocated_minutes ??
     Math.round(45 + input.exam_weight * 25 + (4 - input.initial_knowledge_level) * 10);
@@ -530,7 +885,7 @@ export function getTopicsBySubject(subjectId: string): Topic[] {
 
 export function createTopic(input: CreateTopicInput): Topic {
   const db = getDb();
-  const id = `topic-${Date.now()}`;
+  const id = newId('topic');
 
   db.run(
     `INSERT INTO topics (id, subject_id, parent_id, code, title, mastery_score, status, last_studied_at)
@@ -599,22 +954,125 @@ export function deleteTopic(topicId: string): void {
   persistDatabase();
 }
 
+/** Conta o que uma exclusão vai levar junto (para a confirmação mostrar o tamanho do estrago). */
+export function countDependents(
+  kind: 'plan' | 'subject' | 'topic',
+  id: string
+): { subjects: number; topics: number; questions: number; notebooks: number } {
+  const db = getDb();
+  const count = (sql: string, params: string[]) => queryOne<{ c: number }>(db, sql, params)?.c ?? 0;
+
+  if (kind === 'plan') {
+    return {
+      subjects: count('SELECT COUNT(*) as c FROM subjects WHERE plan_id = ?', [id]),
+      topics: count(
+        'SELECT COUNT(*) as c FROM topics WHERE subject_id IN (SELECT id FROM subjects WHERE plan_id = ?)',
+        [id]
+      ),
+      questions: count(
+        'SELECT COUNT(*) as c FROM questions WHERE subject_id IN (SELECT id FROM subjects WHERE plan_id = ?)',
+        [id]
+      ),
+      notebooks: count(
+        'SELECT COUNT(*) as c FROM notebooks WHERE subject_id IN (SELECT id FROM subjects WHERE plan_id = ?)',
+        [id]
+      ),
+    };
+  }
+  if (kind === 'subject') {
+    return {
+      subjects: 0,
+      topics: count('SELECT COUNT(*) as c FROM topics WHERE subject_id = ?', [id]),
+      questions: count('SELECT COUNT(*) as c FROM questions WHERE subject_id = ?', [id]),
+      notebooks: count('SELECT COUNT(*) as c FROM notebooks WHERE subject_id = ?', [id]),
+    };
+  }
+  return {
+    subjects: 0,
+    topics: count('SELECT COUNT(*) as c FROM topics WHERE parent_id = ?', [id]),
+    questions: count('SELECT COUNT(*) as c FROM questions WHERE topic_id = ?', [id]),
+    notebooks: count('SELECT COUNT(*) as c FROM notebooks WHERE topic_id = ?', [id]),
+  };
+}
+
+/**
+ * Adiciona em lote os tópicos colados do conteúdo programático. Liga subtópicos ao pai pelo
+ * código ("2.1" → "2") e ignora os que já existem (mesmo código e título) na disciplina.
+ */
+export function importSyllabusTopics(
+  subjectId: string,
+  items: ImportTopicItem[]
+): { inserted: number; skippedDuplicates: number } {
+  const db = getDb();
+  const existing = getTopicsBySubject(subjectId);
+  const idByCode = new Map(existing.filter((t) => t.code).map((t) => [String(t.code), t.id]));
+  const existingKeys = new Set(
+    existing.map((t) => `${t.code ?? ''}|${normalizeStatement(t.title)}`)
+  );
+
+  let inserted = 0;
+  let skippedDuplicates = 0;
+  db.run('BEGIN TRANSACTION;');
+  try {
+    for (const item of items) {
+      const key = `${item.code ?? ''}|${normalizeStatement(item.title)}`;
+      if (existingKeys.has(key)) {
+        skippedDuplicates++;
+        continue;
+      }
+      existingKeys.add(key);
+
+      const id = newId('topic');
+      const parentCode = parentTopicCode(item.code);
+      db.run(
+        `INSERT INTO topics (id, subject_id, parent_id, code, title, mastery_score, status, last_studied_at)
+         VALUES (?, ?, ?, ?, ?, 0, 'PENDING', NULL)`,
+        [id, subjectId, parentCode ? (idByCode.get(parentCode) ?? null) : null, item.code, item.title]
+      );
+      if (item.code) idByCode.set(item.code, id);
+      inserted++;
+    }
+    db.run('COMMIT;');
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+
+  recalculateSubjectMastery(subjectId);
+  return { inserted, skippedDuplicates };
+}
+
 // ============================================================================
 // Domínio Sem Viés (docs/specs/02-ai-router-and-metrics.md) & Entidades da Bancada
 // ============================================================================
 
+function describeAnswer(answered: boolean, isCorrect: boolean): string {
+  if (!answered) return 'um 1º contato sem resposta';
+  return isCorrect ? 'um acerto' : 'um erro';
+}
+
 export function recordQuestionDiagnosis(params: {
   questionId: string;
   topicId: string;
-  selectedOption: string;
+  /** Letra marcada; `null` = 1º contato (abriu a explicação sem responder). */
+  selectedOption: string | null;
   isCorrect: boolean;
   selfDiagnosis: SelfDiagnosisType;
+  timeSpentSeconds?: number;
+  usedAiReview?: boolean;
 }): {
   updatedTopic: Topic | null;
   deltaMastery: number;
   isColdStartDiscovery: boolean;
   sampleConfidencePercent: number;
 } {
+  const answered = params.selectedOption !== null;
+  if (!isDiagnosisAllowed({ answered, isCorrect: params.isCorrect }, params.selfDiagnosis)) {
+    throw new InconsistentDiagnosisError(
+      `Diagnóstico ${params.selfDiagnosis} não combina com ${describeAnswer(answered, params.isCorrect)}.`
+    );
+  }
+
   const db = getDb();
   const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [params.topicId]);
 
@@ -652,18 +1110,21 @@ export function recordQuestionDiagnosis(params: {
     BASE_GAP: baseGapPenalty,
   };
   const deltaMastery = deltaMap[params.selfDiagnosis];
+  const timeSpentSeconds = Math.max(0, Math.min(3600, Math.round(params.timeSpentSeconds ?? 0)));
 
   db.run(
     `INSERT INTO question_attempts (
       id, question_id, topic_id, selected_option, is_correct, used_ai_review, self_diagnosis, time_spent_seconds, attempted_at
-    ) VALUES (?, ?, ?, ?, ?, 1, ?, 45, ?)`,
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
-      `att-${Date.now()}`,
+      newId('att'),
       params.questionId,
       params.topicId,
-      params.selectedOption,
+      params.selectedOption ?? '',
       params.isCorrect ? 1 : 0,
+      params.usedAiReview ? 1 : 0,
       params.selfDiagnosis,
+      timeSpentSeconds,
       new Date().toISOString(),
     ]
   );
@@ -724,7 +1185,7 @@ export function recordStudySession(params: {
   wasSkipped: boolean;
 }): StudySession {
   const db = getDb();
-  const id = `sess-${Date.now()}`;
+  const id = newId('sess');
   const now = new Date().toISOString();
 
   db.run(
@@ -775,6 +1236,19 @@ export function getStudySessions(limit = 50): StudySession[] {
   );
 }
 
+/** Sessões a partir de uma data (ISO) — usado para saber o que já foi estudado na semana. */
+export function getStudySessionsSince(sinceIso: string): StudySession[] {
+  return queryAll<StudySession>(
+    getDb(),
+    'SELECT * FROM study_sessions WHERE started_at >= ? ORDER BY started_at DESC',
+    [sinceIso]
+  );
+}
+
+// ============================================================================
+// Questões, explicações e importação
+// ============================================================================
+
 export function getQuestionsForTopicOrSubject(
   topicId: string,
   subjectId: string,
@@ -816,6 +1290,97 @@ export function getQuestionsForTopicOrSubject(
   });
 }
 
+/**
+ * Grava em lote as questões importadas (texto/JSON). Ignora enunciados que já existem na
+ * disciplina, para que importar o mesmo arquivo duas vezes não duplique nada.
+ */
+export function importQuestions(
+  subjectId: string,
+  items: ImportQuestionItem[]
+): { inserted: number; skippedDuplicates: number; insertedIds: string[] } {
+  const db = getDb();
+  const existing = new Set(
+    queryAll<{ statement: string }>(db, 'SELECT statement FROM questions WHERE subject_id = ?', [
+      subjectId,
+    ]).map((row) => normalizeStatement(row.statement))
+  );
+
+  const insertedIds: string[] = [];
+  let skippedDuplicates = 0;
+  db.run('BEGIN TRANSACTION;');
+  try {
+    for (const item of items) {
+      const key = normalizeStatement(item.statement);
+      if (existing.has(key)) {
+        skippedDuplicates++;
+        continue;
+      }
+      existing.add(key);
+
+      const id = newId('q');
+      db.run(
+        `INSERT INTO questions (
+          id, subject_id, topic_id, exam_board, exam_year, organ,
+          statement, options_json, preliminary_answer, final_answer, is_annulled, annulment_reason
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NULL, ?, 0, NULL)`,
+        [
+          id,
+          subjectId,
+          item.topicId,
+          item.examBoard,
+          item.examYear,
+          item.organ,
+          item.statement,
+          JSON.stringify(item.options),
+          item.finalAnswer,
+        ]
+      );
+      insertedIds.push(id);
+    }
+    db.run('COMMIT;');
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+
+  persistDatabase();
+  return { inserted: insertedIds.length, skippedDuplicates, insertedIds };
+}
+
+/**
+ * Guarda a explicação gerada pela IA REAL (Camada 0 do roteador: consultas futuras não gastam tokens).
+ * Respostas simuladas do modo demonstração nunca passam por aqui.
+ */
+export function saveAiDissection(params: {
+  questionId: string;
+  provider: AiProviderUsed;
+  dissectionMarkdown: string;
+  prerequisites: string[];
+}): AiDissection {
+  const db = getDb();
+  db.run(
+    `INSERT INTO ai_dissections (
+      id, question_id, provider_used, dissection_markdown, prerequisites_json, chat_history_json, created_at
+    ) VALUES (?, ?, ?, ?, ?, '[]', ?)
+    ON CONFLICT(question_id) DO UPDATE SET
+      provider_used = excluded.provider_used,
+      dissection_markdown = excluded.dissection_markdown,
+      prerequisites_json = excluded.prerequisites_json`,
+    [
+      newId('diss'),
+      params.questionId,
+      params.provider,
+      params.dissectionMarkdown,
+      JSON.stringify(params.prerequisites),
+      new Date().toISOString(),
+    ]
+  );
+  persistDatabase();
+  return queryOne<AiDissection>(db, 'SELECT * FROM ai_dissections WHERE question_id = ?', [
+    params.questionId,
+  ])!;
+}
+
 export function saveQuestionChatHistory(questionId: string, chatHistoryJson: string): void {
   const db = getDb();
   db.run('UPDATE ai_dissections SET chat_history_json = ? WHERE question_id = ?', [
@@ -825,11 +1390,15 @@ export function saveQuestionChatHistory(questionId: string, chatHistoryJson: str
   persistDatabase();
 }
 
-export function getNotebookForTopic(subjectId: string, topicId: string): Notebook | null {
+// ============================================================================
+// Cadernos e PDFs — sempre do PRÓPRIO tópico (nunca o de outro tópico da disciplina)
+// ============================================================================
+
+export function getNotebookForTopic(topicId: string): Notebook | null {
   return queryOne<Notebook>(
     getDb(),
-    'SELECT * FROM notebooks WHERE topic_id = ? OR subject_id = ? ORDER BY CASE WHEN topic_id = ? THEN 0 ELSE 1 END LIMIT 1',
-    [topicId, subjectId, topicId]
+    'SELECT * FROM notebooks WHERE topic_id = ? ORDER BY updated_at DESC LIMIT 1',
+    [topicId]
   );
 }
 
@@ -840,9 +1409,7 @@ export function saveTopicNotebook(params: {
   contentMarkdown: string;
 }): Notebook {
   const db = getDb();
-  const existing = queryOne<Notebook>(db, 'SELECT * FROM notebooks WHERE topic_id = ?', [
-    params.topicId,
-  ]);
+  const existing = getNotebookForTopic(params.topicId);
   const now = new Date().toISOString();
 
   if (existing) {
@@ -854,7 +1421,7 @@ export function saveTopicNotebook(params: {
     return queryOne<Notebook>(db, 'SELECT * FROM notebooks WHERE id = ?', [existing.id])!;
   }
 
-  const id = `nb-${Date.now()}`;
+  const id = newId('nb');
   db.run(
     `INSERT INTO notebooks (id, subject_id, topic_id, title, content_markdown, ai_summary_markdown, updated_at)
      VALUES (?, ?, ?, ?, ?, NULL, ?)`,
@@ -864,15 +1431,25 @@ export function saveTopicNotebook(params: {
   return queryOne<Notebook>(db, 'SELECT * FROM notebooks WHERE id = ?', [id])!;
 }
 
+/** PDF do próprio tópico ou, na falta dele, o PDF geral da disciplina (sem tópico). */
 export function getPdfSourceForTopic(subjectId: string, topicId: string): PdfSource | null {
   return queryOne<PdfSource>(
     getDb(),
-    'SELECT * FROM pdf_sources WHERE topic_id = ? OR subject_id = ? ORDER BY CASE WHEN topic_id = ? THEN 0 ELSE 1 END LIMIT 1',
+    `SELECT * FROM pdf_sources
+     WHERE topic_id = ? OR (subject_id = ? AND topic_id IS NULL)
+     ORDER BY CASE WHEN topic_id = ? THEN 0 ELSE 1 END, last_opened_at DESC
+     LIMIT 1`,
     [topicId, subjectId, topicId]
   );
 }
 
+/**
+ * Atualiza o progresso do PDF exibido (`pdfSourceId`, só se for do próprio tópico ou o geral da
+ * disciplina) ou o PDF do tópico; se não houver, cria um registro novo PARA ESTE TÓPICO.
+ * Antes, salvar o PDF do tópico B sobrescrevia o registro do tópico A da mesma disciplina.
+ */
 export function savePdfSourceProgress(params: {
+  pdfSourceId?: string | null;
   subjectId: string;
   topicId: string;
   title: string;
@@ -881,36 +1458,40 @@ export function savePdfSourceProgress(params: {
   totalPages: number;
 }): PdfSource {
   const db = getDb();
-  const existing = getPdfSourceForTopic(params.subjectId, params.topicId);
   const now = new Date().toISOString();
-  const safeTotal = Math.max(1, params.totalPages);
-  const safeCurrent = Math.max(1, Math.min(safeTotal, params.currentPage));
+  const safeTotal = Math.max(1, Math.round(params.totalPages));
+  const safeCurrent = Math.max(1, Math.min(safeTotal, Math.round(params.currentPage)));
 
-  if (existing) {
+  let target: PdfSource | null = null;
+  if (params.pdfSourceId) {
+    target = queryOne<PdfSource>(
+      db,
+      'SELECT * FROM pdf_sources WHERE id = ? AND (topic_id = ? OR (subject_id = ? AND topic_id IS NULL))',
+      [params.pdfSourceId, params.topicId, params.subjectId]
+    );
+  }
+  target ??= queryOne<PdfSource>(
+    db,
+    'SELECT * FROM pdf_sources WHERE topic_id = ? ORDER BY last_opened_at DESC LIMIT 1',
+    [params.topicId]
+  );
+
+  if (target) {
     db.run(
       `UPDATE pdf_sources
        SET title = ?, file_path = ?, current_page = ?, total_pages = ?, last_opened_at = ?
        WHERE id = ?`,
-      [params.title, params.filePath, safeCurrent, safeTotal, now, existing.id]
+      [params.title, params.filePath, safeCurrent, safeTotal, now, target.id]
     );
     persistDatabase();
-    return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [existing.id])!;
+    return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [target.id])!;
   }
 
-  const id = `pdf-${Date.now()}`;
+  const id = newId('pdf');
   db.run(
     `INSERT INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at)
      VALUES (?, ?, ?, ?, ?, ?, ?, '[]', ?)`,
-    [
-      id,
-      params.subjectId,
-      params.topicId,
-      params.title,
-      params.filePath,
-      safeCurrent,
-      safeTotal,
-      now,
-    ]
+    [id, params.subjectId, params.topicId, params.title, params.filePath, safeCurrent, safeTotal, now]
   );
   persistDatabase();
   return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [id])!;
@@ -934,7 +1515,7 @@ export function getTopicLinks(): TopicLink[] {
 export function getRecentAttempts(limit = 10): QuestionAttempt[] {
   return queryAll<QuestionAttempt>(
     getDb(),
-    'SELECT * FROM question_attempts ORDER BY attempted_at DESC LIMIT ?',
+    'SELECT * FROM question_attempts ORDER BY attempted_at DESC, rowid DESC LIMIT ?',
     [limit]
   );
 }

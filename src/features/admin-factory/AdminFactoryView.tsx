@@ -46,6 +46,11 @@ export function AdminFactoryView({ adminData }: AdminFactoryViewProps) {
         )}
       </div>
 
+      <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
+        ⚠️ Dados de exemplo: o catálogo de trilhas e a verificação automática das páginas das bancas ainda não
+        foram implementados — os status abaixo não vêm de uma checagem real.
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
           <h3 className="text-sm font-bold flex items-center gap-2">
@@ -79,8 +84,8 @@ export function AdminFactoryView({ adminData }: AdminFactoryViewProps) {
                 className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between"
               >
                 <span>{bp.board_name}</span>
-                <span className="text-emerald-400 font-semibold">
-                  {bp.health_status === 'OK' ? '🟢 Estrutura Íntegra' : '🔴 Mudança Detectada'}
+                <span className="text-slate-400 font-semibold">
+                  {bp.health_status === 'OK' ? '🟢 Estrutura Íntegra (exemplo)' : '🔴 Mudança Detectada (exemplo)'}
                 </span>
               </div>
             ))}

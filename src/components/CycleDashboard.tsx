@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { MetricExplainer } from './MetricExplainer';
 import { explainSubjectAllocation, explainTopicHeat } from '../lib/explainabilityEngine';
-import type { CycleCalculationResult, CycleSuggestion } from '../lib/cycleEngine';
+import { STRATEGY_LABELS, type CycleCalculationResult, type CycleSuggestion } from '../lib/cycleEngine';
 import type { StudyPlan } from '../types/database';
 
 interface CycleDashboardProps {
@@ -97,6 +97,12 @@ export function CycleDashboard({
           <p className="text-xs text-slate-400">
             Sua carga horária semanal é fixa e respeita sua rotina. O ciclo redistribui apenas a
             proporção entre as disciplinas.
+          </p>
+          <p className="text-[11px] text-slate-500">
+            Estratégia:{' '}
+            <strong className="text-slate-300">
+              {cycleData.strategy ? STRATEGY_LABELS[cycleData.strategy] : 'neutra (escolha em “Recalibrar Perfil”)'}
+            </strong>
           </p>
         </div>
 
@@ -233,7 +239,7 @@ export function CycleDashboard({
                     {(item.recommendedWeeklyMinutes / 60).toFixed(1)}h
                   </span>
                   <MetricExplainer
-                    explanation={explainSubjectAllocation(item, plan.weekly_hours_target, daysUntilExam)}
+                    explanation={explainSubjectAllocation(item, plan.weekly_hours_target, daysUntilExam, cycleData.strategy)}
                   />
                 </div>
               </div>
@@ -335,7 +341,10 @@ export function CycleDashboard({
                     <span>
                       Domínio: <strong>{item.studiedTopicsMastery}%</strong> • Cobertura do Edital:{' '}
                       <strong>{item.coveragePercent}%</strong> • Afinidade:{' '}
-                      {item.subject.initial_affinity_level}/3
+                      {item.subject.initial_affinity_level}/3 • Nesta semana:{' '}
+                      <strong>
+                        {item.studiedThisWeekMinutes}/{item.currentWeeklyMinutes} min
+                      </strong>
                     </span>
                   </div>
                 </div>

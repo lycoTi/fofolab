@@ -1,6 +1,9 @@
 -- ============================================================================
 -- FofoLab — Contrato Oficial do Banco de Dados Local (SQLite)
--- Arquivo único portátil: fofolab.sqlite (sincronizável via Google Drive)
+-- Versão do contrato: 2 (PRAGMA user_version). Sempre a versão MAIS RECENTE.
+-- Bancos existentes são atualizados pelas migrações em src/lib/migrations.ts:
+-- toda mudança aqui exige uma migração equivalente (há teste comparando os dois caminhos).
+-- Arquivo: fofolab.db (Tauri: pasta de dados do app; navegador: armazenamento interno).
 -- ============================================================================
 
 PRAGMA foreign_keys = ON;
@@ -27,7 +30,10 @@ CREATE TABLE IF NOT EXISTS study_plans (
     exam_date DATE,                        -- Data da prova (para cálculo de dias restantes)
     weekly_hours_target REAL DEFAULT 28.0, -- Ex: 4h/dia * 7 = 28h semanais
     is_active INTEGER DEFAULT 1,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    -- [v2] Escolhas do Wizard "Pegar pela Mão" (NULL = ainda não escolhido / estratégia neutra)
+    strategy_mode TEXT,                    -- 'BASE_COMUM', 'MAIS_COBRADOS', 'ALTO_PESO_CURTO'
+    study_moment TEXT                      -- 'PRE_EDITAL', 'POS_EDITAL'
 );
 
 -- 3. Disciplinas / Matérias do Edital
@@ -112,7 +118,7 @@ CREATE TABLE IF NOT EXISTS questions (
 CREATE TABLE IF NOT EXISTS ai_dissections (
     id TEXT PRIMARY KEY,
     question_id TEXT UNIQUE NOT NULL REFERENCES questions(id) ON DELETE CASCADE,
-    provider_used TEXT NOT NULL,           -- 'GEMINI_FREE' ou 'DEEPSEEK_FALLBACK'
+    provider_used TEXT NOT NULL,           -- 'GEMINI_FREE', 'DEEPSEEK_FALLBACK', 'GATEWAY' ou 'EXAMPLE' (exemplo escrito à mão)
     dissection_markdown TEXT NOT NULL,     -- Explicação completa + alternativas comentadas
     prerequisites_json TEXT DEFAULT '[]',  -- Micro-tópicos pré-requisitos identificados
     chat_history_json TEXT DEFAULT '[]',   -- Dúvidas extras tiradas pelo estudante nessa questão

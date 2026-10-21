@@ -1,6 +1,19 @@
-import type { SubjectCycleAllocation, TopicHeatItem } from './cycleEngine';
+import {
+  sampleSaturationK,
+  STRATEGY_LABELS,
+  SUBJECT_SCORE_WEIGHTS as W,
+  TOPIC_HEAT_WEIGHTS as H,
+  type SubjectCycleAllocation,
+  type TopicHeatItem,
+} from './cycleEngine';
 import type { QuestionComplexityProfile } from './aiRouter';
+import type { StudyStrategy } from '../types/database';
 
+/**
+ * Explicabilidade sob demanda (docs/specs/05): Nível 1 em linguagem do dia a dia, Nível 2 com a
+ * conta. Os números do Nível 2 vêm do detalhamento calculado pelo próprio motor
+ * (`scoreBreakdown` / `heatBreakdown`), então a fórmula exibida é a que o código executa.
+ */
 export interface MetricExplanation {
   title: string;
   humanSummary: string;
@@ -11,16 +24,22 @@ export interface MetricExplanation {
   };
 }
 
-/**
- * Explicação em linguagem humana (Nível 1) e fórmula detalhada (Nível 2)
- * para a Prioridade e Tempo Alocado de uma disciplina no Ciclo.
- */
+/** Número em formato brasileiro com casas fixas (0.35 → "0,35"). */
+export function formatDecimal(value: number, digits = 2): string {
+  return value.toFixed(digits).replace('.', ',');
+}
+
+function describeStrategy(strategy: StudyStrategy | null | undefined): string {
+  return strategy ? STRATEGY_LABELS[strategy] : 'Neutra (ainda não escolhida no assistente)';
+}
+
 export function explainSubjectAllocation(
   allocation: SubjectCycleAllocation,
   weeklyTargetHours: number,
-  daysUntilExam: number | null
+  daysUntilExam: number | null,
+  strategy: StudyStrategy | null = null
 ): MetricExplanation {
-  const { subject, sharePercent, recommendedWeeklyMinutes, elasticScore } = allocation;
+  const { subject, sharePercent, recommendedWeeklyMinutes, elasticScore, scoreBreakdown: b } = allocation;
   const weeklyHours = (recommendedWeeklyMinutes / 60).toFixed(1);
 
   const humanSummary =
@@ -31,10 +50,11 @@ export function explainSubjectAllocation(
   const bulletPoints = [
     `Peso no Edital: ${subject.exam_weight}x (matérias com mais questões recebem prioridade natural).`,
     `Cobertura do Edital: ${allocation.coveragePercent}% dos tópicos verticalizados já foram iniciados.`,
-    `Afinidade e Facilidade: Nível ${subject.initial_affinity_level}/3 (matérias com maior atrito comportamental ganham suporte espaçado).`,
+    `Afinidade: ${subject.initial_affinity_level}/3 (matérias de menor afinidade recebem um pouco mais de prioridade e sessões espaçadas).`,
     daysUntilExam !== null
-      ? `Horizonte de Prova: Faltam ${daysUntilExam} dias para o exame, acelerando revisões de matérias de maior peso.`
-      : 'Horizonte de Prova: Modo Pré-Edital / Aberto, priorizando construção sólida de base.',
+      ? `Horizonte de Prova: faltam ${daysUntilExam} dias (as revisões são espaçadas em função desse prazo).`
+      : 'Horizonte de Prova: sem data definida, priorizando construção sólida de base.',
+    `Estratégia: ${describeStrategy(strategy)}.`,
   ];
 
   return {
@@ -42,76 +62,118 @@ export function explainSubjectAllocation(
     humanSummary,
     bulletPoints,
     formulaDetails: {
-      formulaLabel: 'Score de Relevância = (Peso × 1.8) + (Lacunas × 1.2) + (Tempo sem Revisar) + Ajuste de Afinidade',
+      formulaLabel:
+        'Prioridade = Peso × (1 + Base inicial + Afinidade + Necessidade de domínio + Edital não iniciado + Calor médio + Atrito) × Estratégia',
       variables: [
-        { label: 'Score Calculado', value: elasticScore.toFixed(1), description: 'Pontuação relativa na semana' },
-        { label: 'Fatia da Pizza', value: `${sharePercent}%`, description: 'Proporção do tempo semanal total' },
-        { label: 'Carga Semanal Sugerida', value: `${weeklyHours}h (${recommendedWeeklyMinutes}m)`, description: 'Distribuído em blocos de estudo' },
+        { label: 'Peso no edital', value: formatDecimal(b.examWeight, 1), description: 'Multiplica todos os termos' },
+        {
+          label: 'Base inicial',
+          value: formatDecimal(b.coldStart),
+          description: `(5 − nível ${subject.initial_knowledge_level}) × ${formatDecimal(W.coldStartPerLevel)}`,
+        },
+        {
+          label: 'Afinidade',
+          value: formatDecimal(b.affinity),
+          description: `(4 − afinidade ${subject.initial_affinity_level}) × ${formatDecimal(W.affinityPerLevel, 1)}`,
+        },
+        {
+          label: 'Necessidade de domínio',
+          value: formatDecimal(b.masteryNeed),
+          description: `(100 − ${allocation.studiedTopicsMastery}%) ÷ ${W.masteryNeedDivisor} × ${formatDecimal(W.masteryNeedFactor, 1)}`,
+        },
+        {
+          label: 'Edital não iniciado',
+          value: formatDecimal(b.unvisitedCoverage),
+          description: `(100% − ${allocation.coveragePercent}%) × ${formatDecimal(W.unvisitedCoverage)}`,
+        },
+        {
+          label: 'Calor médio dos tópicos',
+          value: formatDecimal(b.topicHeat),
+          description: `calor médio × ${formatDecimal(W.topicHeat)}`,
+        },
+        {
+          label: 'Atrito (pausas e pulos)',
+          value: formatDecimal(b.friction),
+          description: `atrito ${formatDecimal(subject.behavioral_friction_score)} × ${formatDecimal(W.friction, 1)}`,
+        },
+        {
+          label: 'Estratégia',
+          value: `× ${formatDecimal(b.strategyMultiplier)}`,
+          description: describeStrategy(strategy),
+        },
+        {
+          label: 'Prioridade final',
+          value: formatDecimal(elasticScore),
+          description: 'Resultado da conta acima',
+        },
+        {
+          label: 'Fatia da semana',
+          value: `${sharePercent}% (${recommendedWeeklyMinutes} min)`,
+          description: 'Esta prioridade ÷ soma das prioridades de todas as matérias',
+        },
       ],
     },
   };
 }
 
-/**
- * Explicação da Confiança da Amostra (BM25 Saturation).
- */
 export function explainSampleConfidence(
   confidencePercent: number,
   attemptsCount: number,
   subjectTopicCount = 4
 ): MetricExplanation {
   const isCalibrating = confidencePercent < 55;
+  const k = sampleSaturationK(subjectTopicCount);
 
   const humanSummary = isCalibrating
     ? `Sua confiança amostral está em ${confidencePercent}% porque você resolveu ${attemptsCount} questão(ões) deste assunto. ` +
-      `Nesta fase inicial de calibração, eventuais erros servem apenas para mapear o conteúdo e NÃO derrubam bruscamente sua pontuação.`
+      'Nesta fase inicial de calibração, eventuais erros servem para mapear o conteúdo e NÃO derrubam bruscamente sua pontuação.'
     : `Sua confiança amostral está em ${confidencePercent}% (${attemptsCount} questões resolvidas). ` +
-      `Essa amostra já é estatisticamente sólida para prever seu desempenho real na banca da prova.`;
-
-  const bulletPoints = [
-    `Evidências acumuladas: ${attemptsCount} questão(ões) resolvidas com gabarito oficial.`,
-    `Extensão da disciplina: A matéria possui cerca de ${subjectTopicCount} subtópicos, exigindo volume proporcional de questões para saturação.`,
-    isCalibrating
-      ? 'Status: Fase de Calibração Ativa (Proteção contra desmotivação ao errar no 1º contato).'
-      : 'Status: Amostra Confiável (Diagnóstico consistente do seu nível de retenção).',
-  ];
+      'Com essa quantidade de questões, o domínio estimado já é um retrato razoável do seu nível neste assunto.';
 
   return {
     title: `O que significa ${confidencePercent}% de Confiança da Amostra?`,
     humanSummary,
-    bulletPoints,
+    bulletPoints: [
+      `Questões resolvidas neste tópico: ${attemptsCount}.`,
+      `Extensão da disciplina: cerca de ${subjectTopicCount} tópicos — matérias maiores exigem mais questões para a mesma confiança.`,
+      isCalibrating
+        ? 'Status: fase de calibração (proteção contra desmotivação ao errar no 1º contato).'
+        : 'Status: amostra razoável (o domínio estimado já reflete bem o seu desempenho).',
+    ],
     formulaDetails: {
-      formulaLabel: 'Confiança = Questões / (Questões + k_saturação)',
+      formulaLabel: 'Confiança = Questões ÷ (Questões + k)',
       variables: [
-        { label: 'Questões Feitas (W)', value: attemptsCount, description: 'Número total de tentativas no tópico' },
-        { label: 'Constante de Saturação (k)', value: Math.max(8, 6 + subjectTopicCount * 1.5).toFixed(0), description: 'Cresce com a amplitude da matéria' },
-        { label: 'Confiança Resultante', value: `${confidencePercent}%`, description: 'Percentual de certeza estatística da sua nota' },
+        { label: 'Questões feitas', value: attemptsCount, description: 'Tentativas registradas no tópico' },
+        {
+          label: 'k (saturação)',
+          value: formatDecimal(k, 1),
+          description: `máx(8; 6 + ${subjectTopicCount} tópicos × 1,5)`,
+        },
+        { label: 'Confiança resultante', value: `${confidencePercent}%`, description: 'Quanto a amostra de questões já pesa na estimativa' },
       ],
     },
   };
 }
 
-/**
- * Explicação do Mapa de Calor de um Tópico (Urgência de Estudo).
- */
 export function explainTopicHeat(item: TopicHeatItem): MetricExplanation {
+  const b = item.heatBreakdown;
   const isHighHeat = item.heatScore >= 6.5;
   const humanSummary = isHighHeat
     ? `O tópico "${item.topic.code} ${item.topic.title}" está com alta temperatura (Urgência ${item.heatScore}) ` +
-      `porque apresenta lacunas recentes ou tempo sem revisão, combinadas com alta probabilidade de cobrança pela banca.`
+      'porque combina pouco domínio, lacunas nas questões ou tempo sem revisão, numa matéria de peso na prova.'
     : `O tópico "${item.topic.code} ${item.topic.title}" está em temperatura estável (Urgência ${item.heatScore}), ` +
-      `indicando que seu conhecimento está consolidado ou que ele foi revisado recentemente.`;
+      'indicando que seu conhecimento está consolidado ou que ele foi revisado recentemente.';
 
   const bulletPoints = [
-    `Domínio medido: ${item.topic.mastery_score}% de acerto nas questões.`,
+    `Domínio estimado: ${item.topic.mastery_score}% (sobe com "Dominei"/"Acertei na dúvida" e desce com "Lacuna").`,
     item.daysSinceLastStudy !== null
-      ? `Último contato: Há ${item.daysSinceLastStudy} dia(s). Meia-vida estimada de memória: ${item.memoryHalfLifeDays} dias.`
-      : 'Último contato: Ainda não iniciado formalmente nesta sessão de estudos.',
+      ? `Último contato: há ${item.daysSinceLastStudy} dia(s). Meia-vida estimada da memória: ${item.memoryHalfLifeDays} dias.`
+      : 'Último contato: ainda não estudado.',
     item.baseGapCount > 0
-      ? `Lacunas de base detectadas: ${item.baseGapCount} questão(ões) marcadas como 1º Contato/Lacuna.`
-      : 'Nenhuma lacuna crítica aberta recentemente.',
+      ? `Lacunas de base: ${item.baseGapCount} questão(ões) marcadas como 1º Contato/Lacuna.`
+      : 'Nenhuma lacuna de base registrada.',
     item.relatedPrerequisiteTitles.length > 0
-      ? `Pré-requisitos conectados: Este tópico serve de alicerce para: ${item.relatedPrerequisiteTitles.join(', ')}.`
+      ? `Conectado a: ${item.relatedPrerequisiteTitles.join(', ')}.`
       : 'Conceito direto e autocontido no edital.',
   ];
 
@@ -120,36 +182,69 @@ export function explainTopicHeat(item: TopicHeatItem): MetricExplanation {
     humanSummary,
     bulletPoints,
     formulaDetails: {
-      formulaLabel: 'Urgência = (100 - Domínio) × 0.4 + (Lacunas × 1.5) + Risco_Esquecimento(HLR) + Conexões',
+      formulaLabel:
+        'Urgência = (Déficit de domínio + Sinais das questões + Pré-requisitos + Esquecimento) × Peso da matéria — limitada entre 0,5 e 10',
       variables: [
-        { label: 'Pontuação de Urgência', value: item.heatScore, description: 'De 0 a 10 (quanto maior, mais indicado para hoje)' },
-        { label: 'Meia-Vida da Memória', value: `${item.memoryHalfLifeDays} dias`, description: 'Estimativa científica de esquecimento (Duolingo HLR)' },
+        {
+          label: 'Déficit de domínio',
+          value: formatDecimal(b.masteryDeficit),
+          description: `(100 − ${item.topic.mastery_score}%) ÷ ${H.masteryDeficitDivisor}`,
+        },
+        {
+          label: 'Sinais das questões',
+          value: formatDecimal(b.diagnosisSignal),
+          description: `lacunas × ${formatDecimal(H.baseGap)} + dúvidas × ${formatDecimal(H.doubt)} + pegadinhas × ${formatDecimal(H.boardTrap)} − domínios × ${formatDecimal(H.mastered, 1)} (mínimo 0)`,
+        },
+        {
+          label: 'Pré-requisitos',
+          value: formatDecimal(b.prerequisiteBoost),
+          description: `${formatDecimal(H.prerequisitePerLink, 1)} por tópico dependente com dificuldade`,
+        },
+        {
+          label: 'Esquecimento',
+          value: formatDecimal(b.forgettingBoost),
+          description: `(1 − 2^(−dias ÷ ${item.memoryHalfLifeDays})) × ${formatDecimal(H.forgettingScale, 1)} — curva inspirada no modelo de revisão do Duolingo (regra fixa, não treinada)`,
+        },
+        {
+          label: 'Peso da matéria',
+          value: `× ${formatDecimal(b.examWeightMultiplier)}`,
+          description: `${formatDecimal(H.examWeightBase, 1)} + peso × ${formatDecimal(H.examWeightFactor, 1)}`,
+        },
+        { label: 'Urgência final', value: item.heatScore, description: 'De 0,5 a 10 (quanto maior, mais indicado para hoje)' },
       ],
     },
   };
 }
 
-/**
- * Explicação do Perfil de Complexidade da Questão.
- */
 export function explainQuestionComplexity(
   profile: QuestionComplexityProfile,
   examBoard: string
 ): MetricExplanation {
   const humanSummary =
     `Esta questão foi classificada com ${profile.stars}/5 estrelas (${profile.levelLabel}). ` +
-    `Avaliamos o tamanho do enunciado, a densidade de termos jurídicos/técnicos e o estilo tradicional da banca ${examBoard}.`;
+    `Contamos o tamanho do enunciado, quantos conceitos ela cruza e o estilo da banca ${examBoard} (estudos de caso longos).`;
 
   const bulletPoints = [
-    `Carga Linguística: ${profile.linguisticLoad} (enunciados longos demandam maior foco na leitura da pergunta final).`,
-    `Conceitos Cruzados: Exige domínio de ${profile.topicCount} conceito(s) deste tópico do edital.`,
-    `Dica da Banca: ${profile.summaryTip}`,
+    `Carga de leitura: ${profile.linguisticLoad} (enunciados longos pedem foco no comando final da questão).`,
+    `Conceitos cruzados: ${profile.topicCount} conceito(s) identificado(s) na explicação.`,
+    `Dica: ${profile.summaryTip}`,
   ];
 
   return {
     title: `Como calculamos ${profile.stars} estrelas para esta questão?`,
     humanSummary,
     bulletPoints,
+    formulaDetails: {
+      formulaLabel: 'Estrelas = 2 + (enunciado > 250 caracteres) + (cruza 2+ conceitos) + (FGV com enunciado > 200 caracteres)',
+      variables: [
+        {
+          label: 'Tamanho do enunciado',
+          value: profile.statementLength !== undefined ? `${profile.statementLength} caracteres` : '—',
+          description: 'Carga de leitura',
+        },
+        { label: 'Conceitos cruzados', value: profile.topicCount, description: 'Pré-requisitos listados na explicação' },
+        { label: 'Estrelas', value: profile.stars, description: 'De 1 a 5' },
+      ],
+    },
   };
 }
-

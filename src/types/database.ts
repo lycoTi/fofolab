@@ -7,8 +7,11 @@ export type CatalogStatus = 'CATALOGED' | 'PARTIAL' | 'RADAR';
 export type SubjectCategory = 'BASICO' | 'GERAL' | 'ESPECIFICO';
 export type TopicStatus = 'PENDING' | 'STUDYING' | 'REVIEW' | 'MASTERED';
 export type TopicRelationType = 'PREREQUISITE' | 'RELATED' | 'JURISPRUDENCE';
-export type AiProviderUsed = 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK';
+/** Quem escreveu a explicação guardada. `EXAMPLE` = exemplo escrito à mão (seed), não gerado pela IA. */
+export type AiProviderUsed = 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK' | 'GATEWAY' | 'EXAMPLE';
 export type SelfDiagnosisType = 'MASTERED' | 'DOUBT' | 'BOARD_TRAP' | 'BASE_GAP';
+export type StudyStrategy = 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
+export type StudyMoment = 'PRE_EDITAL' | 'POS_EDITAL';
 export type StudySessionType = 'PDF_READING' | 'QUESTIONS' | 'REVIEW' | 'POMODORO';
 export type BlueprintHealthStatus = 'OK' | 'DRIFT_DETECTED';
 
@@ -35,6 +38,8 @@ export interface StudyPlan {
   weekly_hours_target: number;
   is_active: number; // 0 | 1
   created_at: string;
+  strategy_mode: StudyStrategy | null; // [v2] null = estratégia neutra (Wizard ainda não respondido)
+  study_moment: StudyMoment | null;    // [v2]
 }
 
 // 3. subjects
@@ -174,6 +179,8 @@ export interface CreateStudyPlanInput {
 export interface UpdateStudyPlanInput extends Partial<CreateStudyPlanInput> {
   id: string;
   is_active?: number;
+  strategy_mode?: StudyStrategy | null;
+  study_moment?: StudyMoment | null;
 }
 
 export interface CreateSubjectInput {
@@ -204,5 +211,22 @@ export interface CreateTopicInput {
 export interface UpdateTopicInput extends Partial<Omit<CreateTopicInput, 'subject_id'>> {
   id: string;
   last_studied_at?: string | null;
+}
+
+/** Questão já analisada pelo importador, pronta para gravar (Fatia 5.5). */
+export interface ImportQuestionItem {
+  statement: string;
+  options: string[]; // Sempre com prefixo de letra: "A) ...", ou ["C) Certo", "E) Errado"]
+  finalAnswer: string;
+  examBoard: string;
+  examYear: number;
+  organ: string | null;
+  topicId: string | null;
+}
+
+/** Tópico do conteúdo programático já analisado pelo importador. */
+export interface ImportTopicItem {
+  code: string | null;
+  title: string;
 }
 

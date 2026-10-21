@@ -1,20 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   BookOpen,
+  ClipboardList,
+  DatabaseBackup,
   Download,
   Edit3,
   Layers,
   Plus,
-  RotateCcw,
   Target,
   Trash2,
   X,
 } from 'lucide-react';
+import { BackupPanel } from './BackupPanel';
 import { getSampleSubtopicsForCalibration } from '../lib/cycleEngine';
+import type { BackupEntry } from '../lib/storage';
+import { parseSyllabusTopics } from '../lib/syllabusImport';
 import type {
   CreateStudyPlanInput,
   CreateSubjectInput,
   CreateTopicInput,
+  ImportTopicItem,
   StudyPlan,
   Subject,
   SubjectCategory,
@@ -22,9 +27,11 @@ import type {
   TopicStatus,
 } from '../types/database';
 
+export type CurriculumSection = 'plans' | 'subjects' | 'topics' | 'backup';
+
 interface CurriculumManagerModalProps {
   isOpen: boolean;
-  initialSection?: 'plans' | 'subjects' | 'topics';
+  initialSection?: CurriculumSection;
   plans: StudyPlan[];
   activePlan: StudyPlan;
   subjects: Subject[];
@@ -41,8 +48,13 @@ interface CurriculumManagerModalProps {
   onCreateTopic: (input: CreateTopicInput) => void;
   onUpdateTopic: (id: string, input: Partial<CreateTopicInput>) => void;
   onDeleteTopic: (id: string) => void;
+  onImportTopics: (items: ImportTopicItem[]) => { inserted: number; skippedDuplicates: number };
   onExportDatabase: () => void;
-  onResetSeed: () => void;
+  /** Ações confirmadas pelo App: devolvem `false` quando o estudante cancela. */
+  onRestoreFromFile: (file: File) => Promise<boolean>;
+  onLoadBackups: () => Promise<BackupEntry[]>;
+  onRestoreBackup: (backup: BackupEntry) => Promise<boolean>;
+  onResetSeed: () => Promise<boolean>;
 }
 
 export function CurriculumManagerModal({
@@ -64,10 +76,24 @@ export function CurriculumManagerModal({
   onCreateTopic,
   onUpdateTopic,
   onDeleteTopic,
+  onImportTopics,
   onExportDatabase,
+  onRestoreFromFile,
+  onLoadBackups,
+  onRestoreBackup,
   onResetSeed,
 }: CurriculumManagerModalProps) {
-  const [section, setSection] = useState<'plans' | 'subjects' | 'topics'>(initialSection);
+  const [section, setSection] = useState<CurriculumSection>(initialSection);
+
+  // Colar conteúdo programático do edital (vários tópicos de uma vez)
+  const [showSyllabusPaste, setShowSyllabusPaste] = useState(false);
+  const [syllabusText, setSyllabusText] = useState('');
+  const [syllabusPreview, setSyllabusPreview] = useState<(ImportTopicItem & { include: boolean })[] | null>(null);
+  const [syllabusResult, setSyllabusResult] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen) setSection(initialSection);
+  }, [isOpen, initialSection]);
 
   // Estado do formulário de Plano
   const [editingPlanId, setEditingPlanId] = useState<string | null>(null);
@@ -127,7 +153,12 @@ export function CurriculumManagerModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Organizar edital"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4"
+    >
       <div className="w-full max-w-4xl max-h-[90vh] rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl flex flex-col overflow-hidden">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
@@ -148,23 +179,18 @@ export function CurriculumManagerModal({
 
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={onExportDatabase}
               className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-slate-200 flex items-center gap-1.5"
-              title="Salvar cópia de backup dos seus estudos"
+              title="Baixar uma cópia de backup dos seus estudos"
             >
               <Download size={13} />
               Fazer Backup
             </button>
             <button
-              onClick={onResetSeed}
-              className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/40 text-xs text-slate-300 hover:text-red-300 flex items-center gap-1.5"
-              title="Restaurar editais de exemplo (CGU + BACEN)"
-            >
-              <RotateCcw size={13} />
-              Restaurar Padrão
-            </button>
-            <button
+              type="button"
               onClick={onClose}
+              aria-label="Fechar organização do edital"
               className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white"
             >
               <X size={16} />
@@ -182,13 +208,15 @@ export function CurriculumManagerModal({
               label: `3. Tópicos de ${selectedSubject?.name || 'Disciplina'} (${topics.length})`,
               icon: BookOpen,
             },
+            { id: 'backup', label: '4. Backup & Segurança', icon: DatabaseBackup },
           ].map((tab) => {
             const Icon = tab.icon;
             const active = section === tab.id;
             return (
               <button
+                type="button"
                 key={tab.id}
-                onClick={() => setSection(tab.id as 'plans' | 'subjects' | 'topics')}
+                onClick={() => setSection(tab.id as CurriculumSection)}
                 className={`px-4 py-2.5 text-xs font-semibold rounded-t-xl border-b-2 flex items-center gap-2 transition ${
                   active
                     ? 'border-orange-500 text-orange-300 bg-slate-900'
@@ -700,6 +728,37 @@ export function CurriculumManagerModal({
               </div>
 
               <div className="md:col-span-7 space-y-2.5">
+                {selectedSubject && (
+                  <SyllabusPasteBox
+                    open={showSyllabusPaste}
+                    onToggle={() => setShowSyllabusPaste((v) => !v)}
+                    text={syllabusText}
+                    onChangeText={(value) => {
+                      setSyllabusText(value);
+                      setSyllabusPreview(null);
+                      setSyllabusResult(null);
+                    }}
+                    preview={syllabusPreview}
+                    onAnalyze={() =>
+                      setSyllabusPreview(parseSyllabusTopics(syllabusText).map((t) => ({ ...t, include: true })))
+                    }
+                    onToggleItem={(idx, include) =>
+                      setSyllabusPreview((prev) => prev?.map((p, i) => (i === idx ? { ...p, include } : p)) ?? null)
+                    }
+                    onConfirm={() => {
+                      if (!syllabusPreview) return;
+                      const result = onImportTopics(
+                        syllabusPreview.filter((t) => t.include).map(({ code, title }) => ({ code, title }))
+                      );
+                      const skipped = result.skippedDuplicates > 0 ? ` • ${result.skippedDuplicates} já existiam` : '';
+                      setSyllabusResult(`${result.inserted} tópico(s) adicionado(s)${skipped}.`);
+                      setSyllabusPreview(null);
+                      setSyllabusText('');
+                    }}
+                    result={syllabusResult}
+                  />
+                )}
+
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Tópicos Verticalizados de {selectedSubject?.name || 'Disciplina'}
                 </h3>
@@ -754,8 +813,117 @@ export function CurriculumManagerModal({
               </div>
             </div>
           )}
+
+          {/* ================= ABA 4: BACKUP & SEGURANÇA ================= */}
+          {section === 'backup' && (
+            <BackupPanel
+              onExportDatabase={onExportDatabase}
+              onRestoreFromFile={onRestoreFromFile}
+              onLoadBackups={onLoadBackups}
+              onRestoreBackup={onRestoreBackup}
+              onResetSeed={onResetSeed}
+            />
+          )}
         </div>
       </div>
+    </div>
+  );
+}
+
+const SYLLABUS_PLACEHOLDER =
+  '1 Conceitos de auditoria. 2 Normas de auditoria. 2.1 ISSAI 100. 2.2 NBC TA 200.\n' +
+  'ou um tópico por linha:\n3 Controle interno\n3.1 COSO';
+
+function SyllabusPasteBox({
+  open,
+  onToggle,
+  text,
+  onChangeText,
+  preview,
+  onAnalyze,
+  onToggleItem,
+  onConfirm,
+  result,
+}: {
+  open: boolean;
+  onToggle: () => void;
+  text: string;
+  onChangeText: (value: string) => void;
+  preview: (ImportTopicItem & { include: boolean })[] | null;
+  onAnalyze: () => void;
+  onToggleItem: (index: number, include: boolean) => void;
+  onConfirm: () => void;
+  result: string | null;
+}) {
+  const selectedCount = preview?.filter((t) => t.include).length ?? 0;
+
+  return (
+    <div className="rounded-xl border border-slate-800 bg-slate-950/60 text-xs">
+      <button
+        type="button"
+        onClick={onToggle}
+        className="w-full px-3.5 py-2.5 flex items-center justify-between text-slate-200 font-semibold"
+      >
+        <span className="flex items-center gap-1.5">
+          <ClipboardList size={14} className="text-orange-400" />
+          Colar o conteúdo programático do edital (vários tópicos de uma vez)
+        </span>
+        <span className="text-slate-500">{open ? 'Fechar' : 'Abrir'}</span>
+      </button>
+      {open && (
+        <div className="px-3.5 pb-3.5 space-y-2.5">
+          <textarea
+            value={text}
+            onChange={(e) => onChangeText(e.target.value)}
+            aria-label="Conteúdo programático do edital"
+            placeholder={SYLLABUS_PLACEHOLDER}
+            className="w-full h-28 p-2.5 rounded-lg bg-slate-900 border border-slate-700 font-mono text-[11px] text-slate-200 focus:border-orange-500 outline-none resize-y"
+          />
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              disabled={!text.trim()}
+              onClick={onAnalyze}
+              className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold disabled:opacity-40"
+            >
+              Analisar
+            </button>
+            {preview && (
+              <button
+                type="button"
+                disabled={selectedCount === 0}
+                onClick={onConfirm}
+                className="px-3 py-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-bold disabled:opacity-40"
+              >
+                Adicionar {selectedCount} tópico(s)
+              </button>
+            )}
+          </div>
+          {result && <p className="text-emerald-300">✅ {result}</p>}
+          {preview && (
+            <div className="max-h-56 overflow-y-auto space-y-1 pr-1">
+              {preview.length === 0 && (
+                <p className="text-amber-300">Não reconhecemos nenhum tópico. Confira a numeração.</p>
+              )}
+              {preview.map((item, idx) => (
+                <label
+                  key={`${idx}-${item.code ?? ''}`}
+                  className="flex items-start gap-2 px-2 py-1 rounded hover:bg-slate-900 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    checked={item.include}
+                    onChange={(e) => onToggleItem(idx, e.target.checked)}
+                    className="mt-0.5 accent-orange-500"
+                  />
+                  <span className="font-mono text-orange-300 shrink-0">{item.code ?? '—'}</span>
+                  <span className="text-slate-300">{item.title}</span>
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

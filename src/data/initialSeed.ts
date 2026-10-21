@@ -55,6 +55,8 @@ export const SEED_STUDY_PLANS: StudyPlan[] = [
     weekly_hours_target: 31.5, // 4h30/dia
     is_active: 1,
     created_at: '2026-10-20T12:00:00Z',
+    strategy_mode: null,
+    study_moment: null,
   },
   {
     id: 'plan-bacen',
@@ -67,6 +69,8 @@ export const SEED_STUDY_PLANS: StudyPlan[] = [
     weekly_hours_target: 28.0, // 4h/dia
     is_active: 0,
     created_at: '2026-10-20T12:00:00Z',
+    strategy_mode: null,
+    study_moment: null,
   },
 ];
 
@@ -495,7 +499,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-1',
     question_id: 'q-fgv-cgu-issai-1',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **Síntese Direta (ISSAI 100, item 40):**\n\n**Risco de Auditoria = RI × RC × RD**\n\n- **Risco Inerente (RI) + Risco de Controle (RC):** Existem na entidade auditada (independem do auditor e formam o Risco de Distorção Relevante).\n- **Risco de Detecção (RD):** Único controlado diretamente pelo auditor (ajustando o tamanho da amostra e os testes substantivos).`,
     prerequisites_json: JSON.stringify(['ISSAI 100', 'Risco de Distorção Relevante (RDR)']),
     chat_history_json: '[]',
@@ -504,7 +508,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-2',
     question_id: 'q-fgv-cgu-pcasp-1',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **Divisão das 8 Classes do PCASP (MCASP 10ª Ed.):**\n\n- **Patrimonial (Classes 1, 2, 3 e 4):** 1-Ativo, 2-Passivo/PL, 3-VPD, 4-VPA.\n- **Orçamentária (Classes 5 e 6):** 5-Planejamento/Aprovação do Orçamento, 6-Execução do Orçamento.\n- **Controle (Classes 7 e 8):** 7-Controles Devedores, 8-Controles Credores.`,
     prerequisites_json: JSON.stringify(['Estrutura do PCASP', 'Regime de Competência vs Caixa']),
     chat_history_json: '[]',
@@ -513,7 +517,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-3',
     question_id: 'q-cebraspe-bacen-sfn-1',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **BACEN no Ecossistema Pix (Resolução BCB nº 1/2020):**\n\nDiferente de outros arranjos, no Pix o **Banco Central do Brasil (BCB)** não é apenas regulador — ele **opera diretamente** as duas infraestruturas críticas:\n1. **SPI (Sistema de Pagamentos Instantâneos):** liquidação bruta em tempo real (LBTR).\n2. **DICT:** base centralizada que vincula chaves Pix (CPF, e-mail, telefone, EVP) às contas.`,
     prerequisites_json: JSON.stringify(['SFN', 'Liquidação Bruta em Tempo Real (LBTR)']),
     chat_history_json: '[]',
@@ -522,7 +526,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-4',
     question_id: 'q-cebraspe-cgu-auditoria-2',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **Relação Inversa entre RDR e Risco de Detecção (ISSAI 200):**\n\n- Quando o **Risco de Controle (RC)** é alto (falhas graves nos controles internos do órgão), o **Risco de Distorção Relevante (RDR)** sobe.\n- Como o auditor **não pode alterar** o RI nem o RC da entidade, a única forma de manter o Risco de Auditoria baixo é **reduzir o Risco de Detecção (RD)**, realizando **mais testes substantivos** e aumentando a amostra.`,
     prerequisites_json: JSON.stringify(['ISSAI 100', 'Amostragem em Auditoria (NBC TA 530)']),
     chat_history_json: '[]',
@@ -531,7 +535,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-5',
     question_id: 'q-fgv-cgu-ti-1',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **Regra de Dependência na Clean Architecture:**\n\n- **Camada 1 (Centro):** Entidades (Regras de negócio corporativas).\n- **Camada 2:** Casos de Uso (*Use Cases* — Regras de negócio da aplicação).\n- **Camada 3:** Adaptadores de Interface (Controllers, Presenters, Gateways).\n- **Camada 4 (Externa):** Frameworks, Banco de Dados e Web.\n\nOs *Use Cases* conhecem apenas as *Entidades* e definem interfaces (Portas) que a infraestrutura externa implementa (Inversão de Dependência - SOLID).`,
     prerequisites_json: JSON.stringify(['Princípios SOLID (DIP)', 'Arquitetura Hexagonal']),
     chat_history_json: '[]',
@@ -540,7 +544,7 @@ export const SEED_AI_DISSECTIONS: AiDissection[] = [
   {
     id: 'diss-6',
     question_id: 'q-fgv-cgu-dir-1',
-    provider_used: 'GEMINI_FREE',
+    provider_used: 'EXAMPLE',
     dissection_markdown: `📌 **Modalidades na Lei 14.133/2021 (Art. 6º, XLI e Art. 28):**\n\n- **Pregão:** Obrigatório para bens e serviços comuns (critérios: *menor preço* ou *maior desconto*).\n- **Atenção (Pegadinha clássica):** *Tomada de Preços* e *Convite* foram **extintos** pela Nova Lei de Licitações!`,
     prerequisites_json: JSON.stringify(['Lei 14.133/2021 Art. 6º e 28', 'Bens e Serviços Comuns vs Especiais']),
     chat_history_json: '[]',
