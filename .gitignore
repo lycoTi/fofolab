@@ -31,3 +31,6 @@ Thumbs.db
 test-results/
 playwright-report/
 e2e/.screens/
+
+# Cache incremental do TypeScript (muda a cada build; conflita entre PCs)
+*.tsbuildinfo
