@@ -342,9 +342,9 @@ export function calculateDynamicStudyCycle(params: {
   suggestions.push({
     id: 'sug-reverse-study',
     type: 'REVERSE_STUDY_INFO',
-    title: '🛡️ Modo Estudo Reverso Ativo (Proteção de 1º Contato)',
+    title: '🛡️ Estudo Reverso (Mapeamento sem Pressão)',
     description:
-      'Errar questões no primeiro contato com um tópico nunca estoura suas horas semanais nem reduz sua confiança: os erros servem apenas como radar (estilo Elasticsearch) para calibrar o Mapa de Calor dos tópicos que mais caem.',
+      'Errar questões no primeiro contato com um tópico nunca aumenta suas horas semanais: os diagnósticos apenas priorizam os assuntos que você mais precisa revisar no próximo ciclo.',
   });
 
   return {
@@ -358,3 +358,4 @@ export function calculateDynamicStudyCycle(params: {
     suggestions,
   };
 }
+

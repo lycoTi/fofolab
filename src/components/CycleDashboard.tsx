@@ -35,7 +35,6 @@ export function CycleDashboard({
   const { allocations, topicHeatmapRanking, suggestions, daysUntilExam, totalWeeklyMinutesBudget } =
     cycleData;
 
-  // Construção geométrica do Gráfico Pizza / Donut em SVG (Estilo Estudaqui + Moderno)
   const radius = 76;
   const circumference = 2 * Math.PI * radius;
   let cumulativePercent = 0;
@@ -59,26 +58,26 @@ export function CycleDashboard({
 
   return (
     <div className="space-y-6 max-w-6xl">
-      {/* 1. Barra Superior: Orçamento Fixo de Vida Real + Contador até a Prova */}
+      {/* 1. Barra Superior: Carga Horária Semanal + Contagem Regressiva */}
       <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         <div className="lg:col-span-5 space-y-1">
           <div className="flex items-center gap-2 text-xs text-orange-400 font-semibold">
             <Sliders size={14} />
-            <span>Orçamento Fixo de Rotina (Soma Zero)</span>
+            <span>Planejamento Semanal</span>
           </div>
           <h3 className="text-base font-bold text-white">
-            {plan.weekly_hours_target}h / semana ({(plan.weekly_hours_target / 7).toFixed(1)}h por
+            {plan.weekly_hours_target}h por semana ({(plan.weekly_hours_target / 7).toFixed(1)}h /
             dia)
           </h3>
           <p className="text-xs text-slate-400">
-            Errar questões nunca infla sua carga horária: o FofoLab respeita seu trabalho e rotina,
-            redistribuindo apenas a fatia da pizza.
+            Sua carga horária semanal é fixa e respeita sua rotina. O ciclo redistribui apenas a
+            proporção entre as disciplinas.
           </p>
         </div>
 
         <div className="lg:col-span-4 space-y-2">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-slate-400">Ajustar Horas Disponíveis na Semana:</span>
+            <span className="text-slate-400">Horas disponíveis na semana:</span>
             <span className="font-bold text-orange-300">
               {plan.weekly_hours_target}h ({totalWeeklyMinutesBudget} min)
             </span>
@@ -88,6 +87,7 @@ export function CycleDashboard({
             min={7}
             max={49}
             step={3.5}
+            aria-label="Horas disponíveis na semana"
             value={plan.weekly_hours_target}
             onChange={(e) => onUpdateWeeklyHours(Number(e.target.value))}
             className="w-full accent-orange-500 cursor-pointer"
@@ -116,14 +116,13 @@ export function CycleDashboard({
         </div>
       </div>
 
-      {/* 2. Gráfico Pizza / Donut (Estilo Estudaqui) + Score estilo Elasticsearch por Matéria */}
+      {/* 2. Gráfico Pizza / Donut + Sugestões de Equilíbrio */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Card Gráfico Pizza / Donut Interativo */}
         <div className="lg:col-span-5 p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col justify-between space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-bold text-white flex items-center gap-2">
               <PieChart size={16} className="text-orange-400" />
-              Pizza do Ciclo de Estudos
+              Distribuição do Ciclo
             </h3>
             <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300">
               Passe o mouse nas fatias
@@ -161,7 +160,6 @@ export function CycleDashboard({
                 })}
               </svg>
 
-              {/* Centro do Donut */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-none">
                 {hoveredItem ? (
                   <>
@@ -186,7 +184,6 @@ export function CycleDashboard({
             </div>
           </div>
 
-          {/* Legenda Rápida da Pizza */}
           <div className="space-y-1.5 pt-2 border-t border-slate-800/80">
             {allocations.map((item) => (
               <div
@@ -206,7 +203,6 @@ export function CycleDashboard({
                   <span className="truncate font-medium">{item.subject.name}</span>
                 </div>
                 <div className="flex items-center gap-2 shrink-0 text-[11px]">
-                  <span className="text-slate-400">_score: {item.elasticScore}</span>
                   <span className="font-bold text-white">{item.sharePercent}%</span>
                   <span className="px-1.5 py-0.5 rounded bg-slate-950 text-orange-300 font-mono">
                     {(item.recommendedWeeklyMinutes / 60).toFixed(1)}h
@@ -217,13 +213,13 @@ export function CycleDashboard({
           </div>
         </div>
 
-        {/* Coluna Direita: Sugestões para o Próximo Ciclo + Detalhamento do Score */}
+        {/* Coluna Direita: Sugestões para o Próximo Ciclo + Equilíbrio por Matéria */}
         <div className="lg:col-span-7 space-y-4">
           <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
                 <Sparkles size={16} className="text-orange-400" />
-                Sugestões Inteligentes para o Próximo Ciclo (Não-Invasivo)
+                Sugestões para o Próximo Ciclo
               </h3>
               <button
                 onClick={() => {
@@ -239,15 +235,15 @@ export function CycleDashboard({
                 className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center gap-1.5 transition"
               >
                 <RefreshCw size={13} />
-                Aplicar Equilíbrio Sugerido
+                Aplicar Sugestão no Próximo Ciclo
               </button>
             </div>
 
             {appliedBanner && (
               <div className="p-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-xs text-emerald-300 flex items-center gap-2">
                 <CheckCircle2 size={14} />
-                Alocação do próximo ciclo atualizada no SQLite mantendo suas{' '}
-                {plan.weekly_hours_target}h semanais intactas!
+                Equilíbrio atualizado para o próximo ciclo mantendo suas {plan.weekly_hours_target}h
+                semanais!
               </div>
             )}
 
@@ -267,7 +263,9 @@ export function CycleDashboard({
                 >
                   <div className="font-bold flex items-center gap-1.5">
                     {sug.type === 'OVERLOAD_WARNING' && <AlertTriangle size={14} />}
-                    {sug.type === 'REVERSE_STUDY_INFO' && <Info size={14} className="text-blue-400" />}
+                    {sug.type === 'REVERSE_STUDY_INFO' && (
+                      <Info size={14} className="text-blue-400" />
+                    )}
                     <span>{sug.title}</span>
                   </div>
                   <p className="text-slate-300/90 leading-relaxed">{sug.description}</p>
@@ -276,11 +274,9 @@ export function CycleDashboard({
             </div>
           </div>
 
-          {/* Ranking de Relevância por Disciplina (Estilo Elasticsearch _score) */}
+          {/* Detalhamento por Disciplina */}
           <div className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
-            <h3 className="text-sm font-bold text-white">
-              📊 Cálculo de Relevância (Estilo Elasticsearch <code>_score</code>)
-            </h3>
+            <h3 className="text-sm font-bold text-white">📊 Carga Recomendada por Disciplina</h3>
             <div className="space-y-2.5">
               {allocations.map((item) => (
                 <div
@@ -294,8 +290,8 @@ export function CycleDashboard({
                         style={{ backgroundColor: item.subject.color }}
                       />
                       <span className="font-semibold text-white">{item.subject.name}</span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-orange-300 font-mono">
-                        _score: {item.elasticScore}
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-orange-300">
+                        Prioridade {item.elasticScore.toFixed(1)}
                       </span>
                     </div>
                     <div className="text-slate-300">
@@ -334,11 +330,11 @@ export function CycleDashboard({
           <div>
             <h3 className="text-sm font-bold text-white flex items-center gap-2">
               <Flame size={16} className="text-orange-400" />
-              Mapa de Calor dos Tópicos (Ranking de Prioridade no Estudo Reverso)
+              Mapa de Calor dos Tópicos (Prioridade de Revisão)
             </h3>
             <p className="text-xs text-slate-400 mt-0.5">
-              Ordenado pelo Score de Temperatura (0 a 10) cruzando todas as disciplinas e
-              pré-requisitos do edital. Clique em qualquer tópico para abrir na bancada!
+              Ranking cruzando todas as disciplinas e pré-requisitos do edital. Clique em qualquer
+              tópico para abrir na bancada!
             </p>
           </div>
         </div>
@@ -368,7 +364,7 @@ export function CycleDashboard({
                       </span>
                       {item.isReverseStudyDiscovery && (
                         <span className="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[10px]">
-                          🔍 1º Contato (Estudo Reverso)
+                          🔍 Em Mapeamento
                         </span>
                       )}
                     </div>
@@ -393,7 +389,7 @@ export function CycleDashboard({
                 <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-900">
                   <span>
                     Domínio: <strong className="text-slate-200">{item.topic.mastery_score}%</strong>{' '}
-                    • Questões: {item.attemptsCount}
+                    • Questões resolvidas: {item.attemptsCount}
                   </span>
                   <span className="text-orange-400 flex items-center gap-1 font-medium">
                     Estudar Tópico <ArrowRight size={12} />
@@ -402,7 +398,7 @@ export function CycleDashboard({
 
                 {item.relatedPrerequisiteTitles.length > 0 && (
                   <div className="text-[10px] text-purple-300 bg-purple-500/10 px-2 py-1 rounded border border-purple-500/20">
-                    🔗 Relacionado a: {item.relatedPrerequisiteTitles.join(' • ')}
+                    🔗 Conectado a: {item.relatedPrerequisiteTitles.join(' • ')}
                   </div>
                 )}
               </div>

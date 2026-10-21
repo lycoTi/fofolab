@@ -56,6 +56,19 @@
       "source_location": "L21"
     },
     {
+      "id": "src_components_pomodorowidget_pomodorowidgetprops",
+      "label": "PomodoroWidgetProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "PomodoroWidget.tsx",
+      "file_type": "code",
+      "norm_label": "pomodorowidgetprops",
+      "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L4"
+    },
+    {
       "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
       "label": "CurriculumManagerModalProps",
       "_callable": true,
@@ -66,7 +79,72 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodalprops",
       "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_components_cycledashboard_cycledashboardprops",
+      "label": "CycleDashboardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cycledashboardprops",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_cycleengine_cyclecalculationresult",
+      "label": "CycleCalculationResult",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cyclecalculationresult",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_cycleengine_cyclesuggestion",
+      "label": "CycleSuggestion",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cyclesuggestion",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_lib_cycleengine_subjectcycleallocation",
+      "label": "SubjectCycleAllocation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "subjectcycleallocation",
+      "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L24"
+    },
+    {
+      "id": "src_lib_cycleengine_topicheatitem",
+      "label": "TopicHeatItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "topicheatitem",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L10"
     },
     {
       "id": "src_types_database_adminboardblueprint",
@@ -430,7 +508,7 @@
       "file_type": "code",
       "norm_label": "appmode",
       "source_file": "src/App.tsx",
-      "source_location": "L63"
+      "source_location": "L72"
     },
     {
       "id": "src_app_workbenchtab",
@@ -443,7 +521,7 @@
       "file_type": "code",
       "norm_label": "workbenchtab",
       "source_file": "src/App.tsx",
-      "source_location": "L62"
+      "source_location": "L71"
     },
     {
       "id": "src_vite_env_d_database_close",
@@ -506,6 +584,18 @@
       "source_location": "L15"
     },
     {
+      "id": "src_components_pomodorowidget_pomodorowidget",
+      "label": "PomodoroWidget()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "PomodoroWidget.tsx",
+      "file_type": "code",
+      "norm_label": "pomodorowidget()",
+      "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L16"
+    },
+    {
       "id": "src_components_curriculummanagermodal_curriculummanagermodal",
       "label": "CurriculumManagerModal()",
       "_callable": true,
@@ -515,7 +605,55 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodal()",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L47"
+      "source_location": "L48"
+    },
+    {
+      "id": "src_components_cycledashboard_cycledashboard",
+      "label": "CycleDashboard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cycledashboard()",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "label": "getSampleSubtopicsForCalibration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "getsamplesubtopicsforcalibration()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_lib_database_base64touint8",
+      "label": "base64ToUint8()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "base64touint8()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_lib_database_seedinitialdata",
+      "label": "seedInitialData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "seedinitialdata()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L91"
     },
     {
       "id": "src_lib_database_uint8tobase64",
@@ -527,7 +665,7 @@
       "file_type": "code",
       "norm_label": "uint8tobase64()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L42"
+      "source_location": "L44"
     },
     {
       "id": "src_app_app",
@@ -539,19 +677,31 @@
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "src/App.tsx",
-      "source_location": "L65"
+      "source_location": "L74"
     },
     {
-      "id": "src_lib_database_base64touint8",
-      "label": "base64ToUint8()",
+      "id": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "label": "calculateDynamicStudyCycle()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
       "community_name": "App.tsx",
       "file_type": "code",
-      "norm_label": "base64touint8()",
+      "norm_label": "calculatedynamicstudycycle()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L113"
+    },
+    {
+      "id": "src_lib_database_applyrecommendedcycleallocations",
+      "label": "applyRecommendedCycleAllocations()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "applyrecommendedcycleallocations()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L52"
+      "source_location": "L663"
     },
     {
       "id": "src_lib_database_createstudyplan",
@@ -563,7 +713,7 @@
       "file_type": "code",
       "norm_label": "createstudyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L365"
+      "source_location": "L367"
     },
     {
       "id": "src_lib_database_createsubject",
@@ -575,7 +725,7 @@
       "file_type": "code",
       "norm_label": "createsubject()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L454"
+      "source_location": "L456"
     },
     {
       "id": "src_lib_database_createtopic",
@@ -587,7 +737,7 @@
       "file_type": "code",
       "norm_label": "createtopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L530"
+      "source_location": "L532"
     },
     {
       "id": "src_lib_database_deletestudyplan",
@@ -599,7 +749,7 @@
       "file_type": "code",
       "norm_label": "deletestudyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L415"
+      "source_location": "L417"
     },
     {
       "id": "src_lib_database_deletesubject",
@@ -611,7 +761,7 @@
       "file_type": "code",
       "norm_label": "deletesubject()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L512"
+      "source_location": "L514"
     },
     {
       "id": "src_lib_database_deletetopic",
@@ -623,7 +773,7 @@
       "file_type": "code",
       "norm_label": "deletetopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L586"
+      "source_location": "L588"
     },
     {
       "id": "src_lib_database_exportdatabasebinary",
@@ -635,7 +785,7 @@
       "file_type": "code",
       "norm_label": "exportdatabasebinary()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L334"
+      "source_location": "L336"
     },
     {
       "id": "src_lib_database_getactivestudyplan",
@@ -647,7 +797,7 @@
       "file_type": "code",
       "norm_label": "getactivestudyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L349"
+      "source_location": "L351"
     },
     {
       "id": "src_lib_database_getadmincatalogandblueprints",
@@ -659,7 +809,7 @@
       "file_type": "code",
       "norm_label": "getadmincatalogandblueprints()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L745"
+      "source_location": "L829"
     },
     {
       "id": "src_lib_database_getdb",
@@ -671,7 +821,7 @@
       "file_type": "code",
       "norm_label": "getdb()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L317"
+      "source_location": "L319"
     },
     {
       "id": "src_lib_database_getnotebookfortopic",
@@ -683,7 +833,7 @@
       "file_type": "code",
       "norm_label": "getnotebookfortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L686"
+      "source_location": "L770"
     },
     {
       "id": "src_lib_database_getpdfsourcefortopic",
@@ -695,7 +845,7 @@
       "file_type": "code",
       "norm_label": "getpdfsourcefortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L725"
+      "source_location": "L809"
     },
     {
       "id": "src_lib_database_getquestionsfortopicorsubject",
@@ -707,7 +857,7 @@
       "file_type": "code",
       "norm_label": "getquestionsfortopicorsubject()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L659"
+      "source_location": "L743"
     },
     {
       "id": "src_lib_database_getrecentattempts",
@@ -719,7 +869,7 @@
       "file_type": "code",
       "norm_label": "getrecentattempts()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L737"
+      "source_location": "L821"
     },
     {
       "id": "src_lib_database_getstudyplans",
@@ -731,7 +881,19 @@
       "file_type": "code",
       "norm_label": "getstudyplans()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L342"
+      "source_location": "L344"
+    },
+    {
+      "id": "src_lib_database_getstudysessions",
+      "label": "getStudySessions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "getstudysessions()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L735"
     },
     {
       "id": "src_lib_database_getsubjectsbyplan",
@@ -743,7 +905,7 @@
       "file_type": "code",
       "norm_label": "getsubjectsbyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L430"
+      "source_location": "L432"
     },
     {
       "id": "src_lib_database_gettopiclinks",
@@ -755,7 +917,7 @@
       "file_type": "code",
       "norm_label": "gettopiclinks()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L733"
+      "source_location": "L817"
     },
     {
       "id": "src_lib_database_gettopicsbysubject",
@@ -767,7 +929,7 @@
       "file_type": "code",
       "norm_label": "gettopicsbysubject()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L522"
+      "source_location": "L524"
     },
     {
       "id": "src_lib_database_initdatabase",
@@ -779,7 +941,7 @@
       "file_type": "code",
       "norm_label": "initdatabase()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L273"
+      "source_location": "L275"
     },
     {
       "id": "src_lib_database_persistdatabase",
@@ -791,7 +953,7 @@
       "file_type": "code",
       "norm_label": "persistdatabase()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L61"
+      "source_location": "L63"
     },
     {
       "id": "src_lib_database_queryall",
@@ -803,7 +965,7 @@
       "file_type": "code",
       "norm_label": "queryall()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L71"
+      "source_location": "L73"
     },
     {
       "id": "src_lib_database_queryone",
@@ -815,7 +977,7 @@
       "file_type": "code",
       "norm_label": "queryone()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L84"
+      "source_location": "L86"
     },
     {
       "id": "src_lib_database_recalculatesubjectmastery",
@@ -827,7 +989,7 @@
       "file_type": "code",
       "norm_label": "recalculatesubjectmastery()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L438"
+      "source_location": "L440"
     },
     {
       "id": "src_lib_database_recordquestiondiagnosis",
@@ -839,7 +1001,19 @@
       "file_type": "code",
       "norm_label": "recordquestiondiagnosis()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L600"
+      "source_location": "L602"
+    },
+    {
+      "id": "src_lib_database_recordstudysession",
+      "label": "recordStudySession()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "App.tsx",
+      "file_type": "code",
+      "norm_label": "recordstudysession()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L683"
     },
     {
       "id": "src_lib_database_resetdatabasetoseed",
@@ -851,7 +1025,7 @@
       "file_type": "code",
       "norm_label": "resetdatabasetoseed()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L324"
+      "source_location": "L326"
     },
     {
       "id": "src_lib_database_savetopicnotebook",
@@ -863,19 +1037,7 @@
       "file_type": "code",
       "norm_label": "savetopicnotebook()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L694"
-    },
-    {
-      "id": "src_lib_database_seedinitialdata",
-      "label": "seedInitialData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "seedinitialdata()",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L89"
+      "source_location": "L778"
     },
     {
       "id": "src_lib_database_setactivestudyplan",
@@ -887,7 +1049,7 @@
       "file_type": "code",
       "norm_label": "setactivestudyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L358"
+      "source_location": "L360"
     },
     {
       "id": "src_lib_database_updatestudyplan",
@@ -899,7 +1061,7 @@
       "file_type": "code",
       "norm_label": "updatestudyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L391"
+      "source_location": "L393"
     },
     {
       "id": "src_lib_database_updatesubject",
@@ -911,7 +1073,7 @@
       "file_type": "code",
       "norm_label": "updatesubject()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L484"
+      "source_location": "L486"
     },
     {
       "id": "src_lib_database_updatetopic",
@@ -923,7 +1085,7 @@
       "file_type": "code",
       "norm_label": "updatetopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L553"
+      "source_location": "L555"
     },
     {
       "id": "package_devdependencies",
@@ -1422,26 +1584,14 @@
       "source_location": "L1"
     },
     {
-      "id": "backlog_backlog_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek",
-      "label": "[BACKLOG] Fatia 4 \u2014 Quest\u00f5es + Destrinchador IA (Roteador Gemini \u2794 DeepSeek)",
+      "id": "backlog_backlog_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
+      "label": "[BACKLOG] Fatia 5 \u2014 Leitor de PDF Local Virtualizado (Prote\u00e7\u00e3o Autoral) & Cadernos Markdown",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[backlog] fatia 4 \u2014 questoes + destrinchador ia (roteador gemini \u2794 deepseek)",
-      "source_file": "BACKLOG.md",
-      "source_location": "L30"
-    },
-    {
-      "id": "backlog_backlog_fatia_5_leitor_de_pdf_virtualizado_cadernos_markdown",
-      "label": "[BACKLOG] Fatia 5 \u2014 Leitor de PDF Virtualizado & Cadernos Markdown",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[backlog] fatia 5 \u2014 leitor de pdf virtualizado & cadernos markdown",
+      "norm_label": "[backlog] fatia 5 \u2014 leitor de pdf local virtualizado (protecao autoral) & cadernos markdown",
       "source_file": "BACKLOG.md",
       "source_location": "L36"
     },
@@ -1494,6 +1644,18 @@
       "source_location": "L20"
     },
     {
+      "id": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_elasticsearch_pizza_mapa_de_calor_pomodoro",
+      "label": "[DONE] Fatia 3 \u2014 Motor Matem\u00e1tico do Ciclo (Score Elasticsearch + Pizza + Mapa de Calor) & Pomodoro",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[done] fatia 3 \u2014 motor matematico do ciclo (score elasticsearch + pizza + mapa de calor) & pomodoro",
+      "source_file": "BACKLOG.md",
+      "source_location": "L25"
+    },
+    {
       "id": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
       "label": "\ud83d\udc39\ud83e\uddea FofoLab \u2014 Backlog & Estado do Projeto (\u00cdndice para IA)",
       "_origin": "ast",
@@ -1506,16 +1668,16 @@
       "source_location": "L1"
     },
     {
-      "id": "backlog_next_10_min_fatia_3_motor_matem\u00e1tico_do_ciclo_de_estudos_pomodoro",
-      "label": "[NEXT_10_MIN] Fatia 3 \u2014 Motor Matem\u00e1tico do Ciclo de Estudos & Pomodoro",
+      "id": "backlog_next_10_min_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek_grounding",
+      "label": "[NEXT_10_MIN] Fatia 4 \u2014 Quest\u00f5es + Destrinchador IA (Roteador Gemini \u2794 DeepSeek + Grounding)",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[next_10_min] fatia 3 \u2014 motor matematico do ciclo de estudos & pomodoro",
+      "norm_label": "[next_10_min] fatia 4 \u2014 questoes + destrinchador ia (roteador gemini \u2794 deepseek + grounding)",
       "source_file": "BACKLOG.md",
-      "source_location": "L25"
+      "source_location": "L31"
     },
     {
       "id": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
@@ -1554,38 +1716,50 @@
       "source_location": "L1"
     },
     {
-      "id": "docs_specs_02_ai_router_and_metrics_1_roteador_de_ia_transparente_zero_config_para_o_usu\u00e1rio_final",
-      "label": "1. Roteador de IA Transparente (Zero Config para o Usu\u00e1rio Final)",
+      "id": "docs_specs_02_ai_router_and_metrics_1_roteador_de_ia_transparente_zero_config_grounding_anti_alucina\u00e7\u00e3o",
+      "label": "1. Roteador de IA Transparente (Zero Config + Grounding Anti-Alucina\u00e7\u00e3o)",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. roteador de ia transparente (zero config para o usuario final)",
+      "norm_label": "1. roteador de ia transparente (zero config + grounding anti-alucinacao)",
       "source_file": "docs/specs/02-ai-router-and-metrics.md",
       "source_location": "L3"
     },
     {
-      "id": "docs_specs_02_ai_router_and_metrics_2_c\u00e1lculo_de_dom\u00ednio_e_afinidade_sem_penalizar_o_uso_da_ia",
-      "label": "2. C\u00e1lculo de Dom\u00ednio e Afinidade Sem Penalizar o Uso da IA",
+      "id": "docs_specs_02_ai_router_and_metrics_2_pol\u00edtica_de_pdfs_locais_estrat\u00e9gia_gran_cursos_direitos_autorais",
+      "label": "2. Pol\u00edtica de PDFs Locais (Estrat\u00e9gia / Gran Cursos \u2014 Direitos Autorais)",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. calculo de dominio e afinidade sem penalizar o uso da ia",
+      "norm_label": "2. politica de pdfs locais (estrategia / gran cursos \u2014 direitos autorais)",
       "source_file": "docs/specs/02-ai-router-and-metrics.md",
-      "source_location": "L19"
+      "source_location": "L17"
     },
     {
-      "id": "docs_specs_02_ai_router_and_metrics_roteador_inteligente_de_ia_m\u00e9tricas_sem_vi\u00e9s",
-      "label": "\ud83e\udd16 Roteador Inteligente de IA & M\u00e9tricas Sem Vi\u00e9s",
+      "id": "docs_specs_02_ai_router_and_metrics_3_estudo_reverso_motor_de_pontua\u00e7\u00e3o_estilo_elasticsearch_relevance_score",
+      "label": "3. Estudo Reverso & Motor de Pontua\u00e7\u00e3o estilo Elasticsearch (`Relevance Score`)",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\udd16 roteador inteligente de ia & metricas sem vies",
+      "norm_label": "3. estudo reverso & motor de pontuacao estilo elasticsearch (`relevance score`)",
+      "source_file": "docs/specs/02-ai-router-and-metrics.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "docs_specs_02_ai_router_and_metrics_roteador_ia_estudo_reverso_score_estilo_elasticsearch_anti_alucina\u00e7\u00e3o",
+      "label": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83e\udd16 roteador ia, estudo reverso, score estilo elasticsearch & anti-alucinacao",
       "source_file": "docs/specs/02-ai-router-and-metrics.md",
       "source_location": "L1"
     },
@@ -1614,26 +1788,38 @@
       "source_location": "L3"
     },
     {
-      "id": "docs_specs_03_admin_tracks_and_crawler_2_verificador_de_blueprint_das_bancas_dom_drift_detection",
-      "label": "2. Verificador de Blueprint das Bancas (DOM Drift Detection)",
+      "id": "docs_specs_03_admin_tracks_and_crawler_2_matriz_de_complexidade_e_cataloga\u00e7\u00e3o_cross_trilhas_das_quest\u00f5es",
+      "label": "2. Matriz de Complexidade e Cataloga\u00e7\u00e3o Cross-Trilhas das Quest\u00f5es",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. verificador de blueprint das bancas (dom drift detection)",
+      "norm_label": "2. matriz de complexidade e catalogacao cross-trilhas das questoes",
       "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
       "source_location": "L18"
     },
     {
-      "id": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_dossi\u00eas_e_crawler_de_bancas",
-      "label": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Dossi\u00eas e Crawler de Bancas",
+      "id": "docs_specs_03_admin_tracks_and_crawler_3_verificador_de_blueprint_das_bancas_dom_drift_detection",
+      "label": "3. Verificador de Blueprint das Bancas (DOM Drift Detection)",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udee0\ufe0f modo administrador (\"a fabrica\"): trilhas, dossies e crawler de bancas",
+      "norm_label": "3. verificador de blueprint das bancas (dom drift detection)",
+      "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_complexidade_de_quest\u00f5es_e_crawler",
+      "label": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udee0\ufe0f modo administrador (\"a fabrica\"): trilhas, complexidade de questoes e crawler",
       "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
       "source_location": "L1"
     },
@@ -1756,6 +1942,17 @@
       "norm_label": "\ud83d\udcbb stack de desenvolvimento & pre-requisitos (checklist de ambiente)",
       "source_file": "README.md",
       "source_location": "L18"
+    },
+    {
+      "id": "src_components_pomodorowidget",
+      "label": "PomodoroWidget.tsx",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "PomodoroWidget.tsx",
+      "file_type": "code",
+      "norm_label": "pomodorowidget.tsx",
+      "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L1"
     },
     {
       "id": "src_tauri_capabilities_default",
@@ -2389,6 +2586,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_cycledashboard",
+      "label": "CycleDashboard.tsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cycledashboard.tsx",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_data_initialseed",
       "label": "initialSeed.ts",
       "_origin": "ast",
@@ -2508,6 +2716,17 @@
       "norm_label": "seed_topics",
       "source_file": "src/data/initialSeed.ts",
       "source_location": "L170"
+    },
+    {
+      "id": "src_lib_cycleengine",
+      "label": "cycleEngine.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "cycleengine.ts",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_lib_database",
@@ -2872,7 +3091,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L103",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -2884,7 +3103,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L114",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -2896,7 +3115,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L119",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_getrecentattempts",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_getstudysessions",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_gettopiclinks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -2908,7 +3163,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L141",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -2920,7 +3175,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L147",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -2932,7 +3187,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L156",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -2944,7 +3199,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L160",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -2956,7 +3211,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L167",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -2968,7 +3235,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L201",
+      "source_location": "L229",
       "weight": 1.0
     },
     {
@@ -2980,7 +3247,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L213",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -2992,7 +3259,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L231",
+      "source_location": "L263",
       "weight": 1.0
     },
     {
@@ -3004,19 +3271,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L243",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
       "source": "src_app_app",
-      "target": "src_lib_database_createstudyplan",
+      "target": "src_lib_database_recordstudysession",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L824",
+      "source_location": "L506",
       "weight": 1.0
     },
     {
@@ -3028,7 +3295,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L829",
+      "source_location": "L700",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_applyrecommendedcycleallocations",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L707",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_createstudyplan",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L893",
       "weight": 1.0
     },
     {
@@ -3040,7 +3331,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L833",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -3052,7 +3343,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L837",
+      "source_location": "L906",
       "weight": 1.0
     },
     {
@@ -3064,7 +3355,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L841",
+      "source_location": "L910",
       "weight": 1.0
     },
     {
@@ -3076,7 +3367,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L845",
+      "source_location": "L914",
       "weight": 1.0
     },
     {
@@ -3088,7 +3379,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L849",
+      "source_location": "L918",
       "weight": 1.0
     },
     {
@@ -3100,7 +3391,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L853",
+      "source_location": "L922",
       "weight": 1.0
     },
     {
@@ -3112,7 +3403,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L857",
+      "source_location": "L926",
       "weight": 1.0
     },
     {
@@ -3124,7 +3415,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L862",
+      "source_location": "L931",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_curriculummanagermodal_curriculummanagermodal",
+      "target": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L449",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_applyrecommendedcycleallocations",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L666",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_applyrecommendedcycleallocations",
+      "target": "src_lib_database_persistdatabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L676",
       "weight": 1.0
     },
     {
@@ -3136,7 +3463,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L366",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -3148,7 +3475,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L387",
+      "source_location": "L389",
       "weight": 1.0
     },
     {
@@ -3160,7 +3487,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L388",
+      "source_location": "L390",
       "weight": 1.0
     },
     {
@@ -3172,7 +3499,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L455",
+      "source_location": "L457",
       "weight": 1.0
     },
     {
@@ -3184,7 +3511,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L480",
+      "source_location": "L482",
       "weight": 1.0
     },
     {
@@ -3196,7 +3523,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L481",
+      "source_location": "L483",
       "weight": 1.0
     },
     {
@@ -3208,7 +3535,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L531",
+      "source_location": "L533",
       "weight": 1.0
     },
     {
@@ -3220,7 +3547,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L548",
+      "source_location": "L550",
       "weight": 1.0
     },
     {
@@ -3232,7 +3559,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L549",
+      "source_location": "L551",
       "weight": 1.0
     },
     {
@@ -3244,7 +3571,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L550",
+      "source_location": "L552",
       "weight": 1.0
     },
     {
@@ -3256,7 +3583,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L416",
+      "source_location": "L418",
       "weight": 1.0
     },
     {
@@ -3268,7 +3595,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L419",
+      "source_location": "L421",
       "weight": 1.0
     },
     {
@@ -3280,7 +3607,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L423",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -3292,7 +3619,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L513",
+      "source_location": "L515",
       "weight": 1.0
     },
     {
@@ -3304,7 +3631,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L515",
+      "source_location": "L517",
       "weight": 1.0
     },
     {
@@ -3316,7 +3643,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L587",
+      "source_location": "L589",
       "weight": 1.0
     },
     {
@@ -3328,7 +3655,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L588",
+      "source_location": "L590",
       "weight": 1.0
     },
     {
@@ -3340,7 +3667,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L591",
+      "source_location": "L593",
       "weight": 1.0
     },
     {
@@ -3352,7 +3679,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L593",
+      "source_location": "L595",
       "weight": 1.0
     },
     {
@@ -3364,7 +3691,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L335",
+      "source_location": "L337",
       "weight": 1.0
     },
     {
@@ -3376,7 +3703,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L350",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -3388,7 +3715,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L351",
+      "source_location": "L353",
       "weight": 1.0
     },
     {
@@ -3400,7 +3727,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L750",
+      "source_location": "L834",
       "weight": 1.0
     },
     {
@@ -3412,7 +3739,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L751",
+      "source_location": "L835",
       "weight": 1.0
     },
     {
@@ -3424,7 +3751,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L756",
+      "source_location": "L840",
       "weight": 1.0
     },
     {
@@ -3436,7 +3763,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L687",
+      "source_location": "L771",
       "weight": 1.0
     },
     {
@@ -3448,7 +3775,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L688",
+      "source_location": "L772",
       "weight": 1.0
     },
     {
@@ -3460,7 +3787,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L726",
+      "source_location": "L810",
       "weight": 1.0
     },
     {
@@ -3472,7 +3799,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L727",
+      "source_location": "L811",
       "weight": 1.0
     },
     {
@@ -3484,7 +3811,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L663",
+      "source_location": "L747",
       "weight": 1.0
     },
     {
@@ -3496,7 +3823,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L664",
+      "source_location": "L748",
       "weight": 1.0
     },
     {
@@ -3508,7 +3835,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L677",
+      "source_location": "L761",
       "weight": 1.0
     },
     {
@@ -3520,7 +3847,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L738",
+      "source_location": "L822",
       "weight": 1.0
     },
     {
@@ -3532,7 +3859,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L739",
+      "source_location": "L823",
       "weight": 1.0
     },
     {
@@ -3544,7 +3871,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L343",
+      "source_location": "L345",
       "weight": 1.0
     },
     {
@@ -3556,7 +3883,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L344",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getstudysessions",
+      "target": "src_lib_database_queryall",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L736",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getstudysessions",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -3568,7 +3919,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L431",
+      "source_location": "L433",
       "weight": 1.0
     },
     {
@@ -3580,7 +3931,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L432",
+      "source_location": "L434",
       "weight": 1.0
     },
     {
@@ -3592,7 +3943,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L734",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -3604,7 +3955,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L734",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -3616,7 +3967,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L523",
+      "source_location": "L525",
       "weight": 1.0
     },
     {
@@ -3628,7 +3979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L524",
+      "source_location": "L526",
       "weight": 1.0
     },
     {
@@ -3640,7 +3991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L287",
+      "source_location": "L289",
       "weight": 1.0
     },
     {
@@ -3652,7 +4003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L295",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -3664,7 +4015,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L304",
+      "source_location": "L306",
       "weight": 1.0
     },
     {
@@ -3676,7 +4027,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L310",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -3688,7 +4039,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L65",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -3700,7 +4051,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L85",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -3712,7 +4063,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L439",
+      "source_location": "L441",
       "weight": 1.0
     },
     {
@@ -3724,7 +4075,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L440",
+      "source_location": "L442",
       "weight": 1.0
     },
     {
@@ -3736,7 +4087,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L450",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -3748,7 +4099,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L607",
+      "source_location": "L609",
       "weight": 1.0
     },
     {
@@ -3760,7 +4111,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L608",
+      "source_location": "L610",
       "weight": 1.0
     },
     {
@@ -3772,7 +4123,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L636",
+      "source_location": "L647",
       "weight": 1.0
     },
     {
@@ -3784,7 +4135,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L641",
+      "source_location": "L652",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordstudysession",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L691",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordstudysession",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L712",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordstudysession",
+      "target": "src_lib_database_persistdatabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L731",
       "weight": 1.0
     },
     {
@@ -3796,7 +4183,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L331",
+      "source_location": "L333",
       "weight": 1.0
     },
     {
@@ -3808,7 +4195,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L700",
+      "source_location": "L784",
       "weight": 1.0
     },
     {
@@ -3820,7 +4207,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L701",
+      "source_location": "L785",
       "weight": 1.0
     },
     {
@@ -3832,24 +4219,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L711",
+      "source_location": "L795",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_setactivestudyplan",
       "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L359",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_setactivestudyplan",
-      "target": "src_lib_database_persistdatabase",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3861,6 +4236,18 @@
     },
     {
       "source": "src_lib_database_setactivestudyplan",
+      "target": "src_lib_database_persistdatabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L363",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_setactivestudyplan",
       "target": "src_lib_database_getstudyplans",
       "relation": "calls",
       "_origin": "ast",
@@ -3868,7 +4255,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L362",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -3880,7 +4267,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L392",
+      "source_location": "L394",
       "weight": 1.0
     },
     {
@@ -3892,7 +4279,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L393",
+      "source_location": "L395",
       "weight": 1.0
     },
     {
@@ -3904,7 +4291,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L411",
+      "source_location": "L413",
       "weight": 1.0
     },
     {
@@ -3916,7 +4303,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L485",
+      "source_location": "L487",
       "weight": 1.0
     },
     {
@@ -3928,7 +4315,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L486",
+      "source_location": "L488",
       "weight": 1.0
     },
     {
@@ -3940,7 +4327,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L508",
+      "source_location": "L510",
       "weight": 1.0
     },
     {
@@ -3952,7 +4339,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L554",
+      "source_location": "L556",
       "weight": 1.0
     },
     {
@@ -3964,7 +4351,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L555",
+      "source_location": "L557",
       "weight": 1.0
     },
     {
@@ -3976,7 +4363,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L581",
+      "source_location": "L583",
       "weight": 1.0
     },
     {
@@ -3988,7 +4375,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L582",
+      "source_location": "L584",
       "weight": 1.0
     },
     {
@@ -4000,7 +4387,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -4012,7 +4399,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -4024,7 +4411,55 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L31",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard_cycledashboardprops",
+      "target": "src_types_database_studyplan",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard_cycledashboardprops",
+      "target": "src_lib_cycleengine_cyclecalculationresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine_subjectcycleallocation",
+      "target": "src_types_database_subject",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine_topicheatitem",
+      "target": "src_types_database_topic",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -4036,7 +4471,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -4048,7 +4483,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -4060,7 +4495,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -4372,7 +4807,55 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_cycledashboard_cycledashboard",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_pomodorowidget_pomodorowidget",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_applyrecommendedcycleallocations",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4384,7 +4867,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4396,7 +4879,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4408,7 +4891,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4420,7 +4903,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4432,7 +4915,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4444,7 +4927,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4456,7 +4939,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4468,7 +4951,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4480,7 +4963,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4492,7 +4975,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4504,7 +4987,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_getrecentattempts",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4516,7 +5011,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_getstudysessions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4528,7 +5035,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_gettopiclinks",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4540,7 +5059,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4552,7 +5071,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4564,7 +5083,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_recordstudysession",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4576,7 +5107,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4588,7 +5119,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4600,7 +5131,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4612,7 +5143,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4624,7 +5155,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4636,7 +5167,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4648,7 +5179,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4660,7 +5191,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4672,7 +5203,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4684,7 +5215,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4696,7 +5227,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4708,7 +5239,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4720,7 +5251,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4732,7 +5263,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4744,7 +5275,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_types_database_questionattempt",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4756,7 +5299,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4768,7 +5311,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_types_database_studysession",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4780,7 +5335,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -4792,7 +5347,31 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_types_database_topiclink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_curriculummanagermodal",
+      "target": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -4804,7 +5383,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4816,7 +5395,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4828,7 +5407,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4840,7 +5419,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4852,7 +5431,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4864,7 +5443,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4876,7 +5455,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4888,7 +5467,31 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_lib_cycleengine_cyclecalculationresult",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_types_database_studyplan",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -5008,6 +5611,78 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/data/initialSeed.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_questionattempt",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_studyplan",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_studysession",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_subject",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database_topiclink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -5146,6 +5821,30 @@
     {
       "source": "src_lib_database",
       "target": "src_types_database_studyplan",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_types_database_studysession",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_types_database_studysessiontype",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5368,12 +6067,36 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_cycledashboard",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_pomodorowidget",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
       "source_location": "L21",
       "weight": 1.0
     },
     {
       "source": "src_app",
-      "target": "src_lib_database",
+      "target": "src_lib_cycleengine",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5385,6 +6108,18 @@
     },
     {
       "source": "src_app",
+      "target": "src_lib_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
       "target": "src_types_database",
       "relation": "imports_from",
       "_origin": "ast",
@@ -5392,8 +6127,20 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L46",
+      "source_location": "L52",
       "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_curriculummanagermodal",
+      "target": "src_lib_cycleengine",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -5405,7 +6152,33 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_lib_cycleengine",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L14",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L15",
       "type_only": true,
       "weight": 1.0
     },
@@ -5418,6 +6191,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/data/initialSeed.ts",
+      "source_location": "L1",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L1",
       "type_only": true,
       "weight": 1.0
@@ -5549,7 +6335,7 @@
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_next_10_min_fatia_3_motor_matem\u00e1tico_do_ciclo_de_estudos_pomodoro",
+      "target": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_elasticsearch_pizza_mapa_de_calor_pomodoro",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5560,18 +6346,18 @@
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_backlog_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek",
+      "target": "backlog_next_10_min_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek_grounding",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_backlog_fatia_5_leitor_de_pdf_virtualizado_cadernos_markdown",
+      "target": "backlog_backlog_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5725,7 +6511,7 @@
     },
     {
       "source": "docs_specs_02_ai_router_and_metrics",
-      "target": "docs_specs_02_ai_router_and_metrics_roteador_inteligente_de_ia_m\u00e9tricas_sem_vi\u00e9s",
+      "target": "docs_specs_02_ai_router_and_metrics_roteador_ia_estudo_reverso_score_estilo_elasticsearch_anti_alucina\u00e7\u00e3o",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5735,19 +6521,30 @@
       "weight": 1.0
     },
     {
-      "source": "docs_specs_02_ai_router_and_metrics_roteador_inteligente_de_ia_m\u00e9tricas_sem_vi\u00e9s",
-      "target": "docs_specs_02_ai_router_and_metrics_2_c\u00e1lculo_de_dom\u00ednio_e_afinidade_sem_penalizar_o_uso_da_ia",
+      "source": "docs_specs_02_ai_router_and_metrics_roteador_ia_estudo_reverso_score_estilo_elasticsearch_anti_alucina\u00e7\u00e3o",
+      "target": "docs_specs_02_ai_router_and_metrics_2_pol\u00edtica_de_pdfs_locais_estrat\u00e9gia_gran_cursos_direitos_autorais",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/specs/02-ai-router-and-metrics.md",
-      "source_location": "L19",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
-      "source": "docs_specs_02_ai_router_and_metrics_roteador_inteligente_de_ia_m\u00e9tricas_sem_vi\u00e9s",
-      "target": "docs_specs_02_ai_router_and_metrics_1_roteador_de_ia_transparente_zero_config_para_o_usu\u00e1rio_final",
+      "source": "docs_specs_02_ai_router_and_metrics_roteador_ia_estudo_reverso_score_estilo_elasticsearch_anti_alucina\u00e7\u00e3o",
+      "target": "docs_specs_02_ai_router_and_metrics_3_estudo_reverso_motor_de_pontua\u00e7\u00e3o_estilo_elasticsearch_relevance_score",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/02-ai-router-and-metrics.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_02_ai_router_and_metrics_roteador_ia_estudo_reverso_score_estilo_elasticsearch_anti_alucina\u00e7\u00e3o",
+      "target": "docs_specs_02_ai_router_and_metrics_1_roteador_de_ia_transparente_zero_config_grounding_anti_alucina\u00e7\u00e3o",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5758,7 +6555,7 @@
     },
     {
       "source": "docs_specs_03_admin_tracks_and_crawler",
-      "target": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_dossi\u00eas_e_crawler_de_bancas",
+      "target": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_complexidade_de_quest\u00f5es_e_crawler",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5768,8 +6565,8 @@
       "weight": 1.0
     },
     {
-      "source": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_dossi\u00eas_e_crawler_de_bancas",
-      "target": "docs_specs_03_admin_tracks_and_crawler_2_verificador_de_blueprint_das_bancas_dom_drift_detection",
+      "source": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_complexidade_de_quest\u00f5es_e_crawler",
+      "target": "docs_specs_03_admin_tracks_and_crawler_2_matriz_de_complexidade_e_cataloga\u00e7\u00e3o_cross_trilhas_das_quest\u00f5es",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5779,7 +6576,7 @@
       "weight": 1.0
     },
     {
-      "source": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_dossi\u00eas_e_crawler_de_bancas",
+      "source": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_complexidade_de_quest\u00f5es_e_crawler",
       "target": "docs_specs_03_admin_tracks_and_crawler_1_cat\u00e1logo_de_trilhas_de_estudos_prontas",
       "relation": "contains",
       "_origin": "ast",
@@ -5787,6 +6584,17 @@
       "confidence_score": 1.0,
       "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_03_admin_tracks_and_crawler_modo_administrador_a_f\u00e1brica_trilhas_complexidade_de_quest\u00f5es_e_crawler",
+      "target": "docs_specs_03_admin_tracks_and_crawler_3_verificador_de_blueprint_das_bancas_dom_drift_detection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -6193,7 +7001,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L62",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -6204,7 +7012,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L63",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -6215,7 +7023,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L65",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -6226,7 +7034,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -6237,7 +7045,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L47",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_components_cycledashboard_cycledashboardprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_cycledashboard",
+      "target": "src_components_cycledashboard_cycledashboard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_pomodorowidget",
+      "target": "src_components_pomodorowidget_pomodorowidget",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_pomodorowidget",
+      "target": "src_components_pomodorowidget_pomodorowidgetprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6351,6 +7203,72 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_topicheatitem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_subjectcycleallocation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_cyclesuggestion",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_cyclecalculationresult",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_cycleengine",
+      "target": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_database",
       "target": "src_lib_database_initdatabase",
       "relation": "contains",
@@ -6358,7 +7276,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L273",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
@@ -6369,7 +7287,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L317",
+      "source_location": "L319",
       "weight": 1.0
     },
     {
@@ -6380,7 +7298,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L324",
+      "source_location": "L326",
       "weight": 1.0
     },
     {
@@ -6391,7 +7309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L334",
+      "source_location": "L336",
       "weight": 1.0
     },
     {
@@ -6402,7 +7320,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L342",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -6413,7 +7331,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L349",
+      "source_location": "L351",
       "weight": 1.0
     },
     {
@@ -6424,7 +7342,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L358",
+      "source_location": "L360",
       "weight": 1.0
     },
     {
@@ -6435,7 +7353,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L365",
+      "source_location": "L367",
       "weight": 1.0
     },
     {
@@ -6446,7 +7364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L391",
+      "source_location": "L393",
       "weight": 1.0
     },
     {
@@ -6457,18 +7375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L415",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database",
-      "target": "src_lib_database_uint8tobase64",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/database.ts",
-      "source_location": "L42",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -6479,7 +7386,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L430",
+      "source_location": "L432",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_uint8tobase64",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -6490,7 +7408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L438",
+      "source_location": "L440",
       "weight": 1.0
     },
     {
@@ -6501,7 +7419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L454",
+      "source_location": "L456",
       "weight": 1.0
     },
     {
@@ -6512,7 +7430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L484",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -6523,18 +7441,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L512",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database",
-      "target": "src_lib_database_base64touint8",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/database.ts",
-      "source_location": "L52",
+      "source_location": "L514",
       "weight": 1.0
     },
     {
@@ -6545,7 +7452,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L522",
+      "source_location": "L524",
       "weight": 1.0
     },
     {
@@ -6556,7 +7463,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L530",
+      "source_location": "L532",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_base64touint8",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -6567,7 +7485,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L553",
+      "source_location": "L555",
       "weight": 1.0
     },
     {
@@ -6578,7 +7496,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L586",
+      "source_location": "L588",
       "weight": 1.0
     },
     {
@@ -6589,7 +7507,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L600",
+      "source_location": "L602",
       "weight": 1.0
     },
     {
@@ -6600,40 +7518,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L61",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
       "source": "src_lib_database",
-      "target": "src_lib_database_getquestionsfortopicorsubject",
+      "target": "src_lib_database_applyrecommendedcycleallocations",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L659",
+      "source_location": "L663",
       "weight": 1.0
     },
     {
       "source": "src_lib_database",
-      "target": "src_lib_database_getnotebookfortopic",
+      "target": "src_lib_database_recordstudysession",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L686",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database",
-      "target": "src_lib_database_savetopicnotebook",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/database.ts",
-      "source_location": "L694",
+      "source_location": "L683",
       "weight": 1.0
     },
     {
@@ -6644,7 +7551,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L71",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_getstudysessions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L735",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_getquestionsfortopicorsubject",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L743",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_getnotebookfortopic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L770",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
+      "target": "src_lib_database_savetopicnotebook",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L778",
       "weight": 1.0
     },
     {
@@ -6655,7 +7606,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L725",
+      "source_location": "L809",
       "weight": 1.0
     },
     {
@@ -6666,7 +7617,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L733",
+      "source_location": "L817",
       "weight": 1.0
     },
     {
@@ -6677,7 +7628,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L737",
+      "source_location": "L821",
       "weight": 1.0
     },
     {
@@ -6688,7 +7639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L745",
+      "source_location": "L829",
       "weight": 1.0
     },
     {
@@ -6699,7 +7650,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L84",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -6710,7 +7661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -7815,5 +8766,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "51d474d389f2502edb2b9b0b80054d71c3ebf508"
+  "built_at_commit": "423443507b13c8b89167a222e31be3854150a130"
 }

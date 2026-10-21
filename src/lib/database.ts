@@ -742,21 +742,35 @@ export function getStudySessions(limit = 50): StudySession[] {
 
 export function getQuestionsForTopicOrSubject(
   topicId: string,
-  subjectId: string
+  subjectId: string,
+  scope: 'topic' | 'subject' | 'all' = 'topic'
 ): { question: Question; dissection: AiDissection | null }[] {
   const db = getDb();
-  let questions = queryAll<Question>(
-    db,
-    'SELECT * FROM questions WHERE topic_id = ? ORDER BY exam_year DESC',
-    [topicId]
-  );
-  if (questions.length === 0) {
+  let questions: Question[] = [];
+
+  if (scope === 'all') {
+    questions = queryAll<Question>(db, 'SELECT * FROM questions ORDER BY exam_year DESC');
+  } else if (scope === 'subject') {
     questions = queryAll<Question>(
       db,
       'SELECT * FROM questions WHERE subject_id = ? ORDER BY exam_year DESC',
       [subjectId]
     );
+  } else {
+    questions = queryAll<Question>(
+      db,
+      'SELECT * FROM questions WHERE topic_id = ? ORDER BY exam_year DESC',
+      [topicId]
+    );
+    if (questions.length === 0) {
+      questions = queryAll<Question>(
+        db,
+        'SELECT * FROM questions WHERE subject_id = ? ORDER BY exam_year DESC',
+        [subjectId]
+      );
+    }
   }
+
   return questions.map((question) => {
     const dissection = queryOne<AiDissection>(
       db,
@@ -765,6 +779,15 @@ export function getQuestionsForTopicOrSubject(
     );
     return { question, dissection };
   });
+}
+
+export function saveQuestionChatHistory(questionId: string, chatHistoryJson: string): void {
+  const db = getDb();
+  db.run('UPDATE ai_dissections SET chat_history_json = ? WHERE question_id = ?', [
+    chatHistoryJson,
+    questionId,
+  ]);
+  persistDatabase();
 }
 
 export function getNotebookForTopic(subjectId: string, topicId: string): Notebook | null {

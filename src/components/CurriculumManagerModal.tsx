@@ -133,7 +133,7 @@ export function CurriculumManagerModal({
         <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
           <div>
             <h2 className="text-base font-bold text-white flex items-center gap-2">
-              🗂️ Gerenciador do Edital Verticalizado (SQLite Local)
+              🗂️ Organizar Edital, Disciplinas e Tópicos
             </h2>
             <p className="text-xs text-slate-400 mt-0.5">
               Plano ativo: <strong className="text-orange-300">{activePlan.title}</strong>
@@ -150,18 +150,18 @@ export function CurriculumManagerModal({
             <button
               onClick={onExportDatabase}
               className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-slate-200 flex items-center gap-1.5"
-              title="Exportar arquivo binário fofolab.sqlite"
+              title="Salvar cópia de backup dos seus estudos"
             >
               <Download size={13} />
-              Exportar .sqlite
+              Fazer Backup
             </button>
             <button
               onClick={onResetSeed}
               className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/40 text-xs text-slate-300 hover:text-red-300 flex items-center gap-1.5"
-              title="Restaurar dados originais CGU + BACEN"
+              title="Restaurar editais de exemplo (CGU + BACEN)"
             >
               <RotateCcw size={13} />
-              Restaurar Seed
+              Restaurar Padrão
             </button>
             <button
               onClick={onClose}
@@ -303,7 +303,7 @@ export function CurriculumManagerModal({
                       className="flex-1 py-2 px-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-1.5"
                     >
                       <Plus size={14} />
-                      {editingPlanId ? 'Salvar Alterações' : 'Criar Plano SQLite'}
+                      {editingPlanId ? 'Salvar Alterações' : 'Criar Plano de Estudo'}
                     </button>
                     {editingPlanId && (
                       <button
@@ -319,7 +319,7 @@ export function CurriculumManagerModal({
 
               <div className="md:col-span-7 space-y-2.5">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                  Planos Cadastrados no Banco Local
+                  Meus Planos de Estudo
                 </h3>
                 {plans.map((p) => {
                   const isActive = p.id === activePlan.id;
@@ -627,10 +627,10 @@ export function CurriculumManagerModal({
                           onChange={(e) => setTopicStatus(e.target.value as TopicStatus)}
                           className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-orange-500 outline-none"
                         >
-                          <option value="PENDING">⚪ Pendente (PENDING)</option>
-                          <option value="STUDYING">🔵 Estudando (STUDYING)</option>
-                          <option value="REVIEW">🟡 Em Revisão (REVIEW)</option>
-                          <option value="MASTERED">🟢 Dominado (MASTERED)</option>
+                          <option value="PENDING">⚪ Pendente</option>
+                          <option value="STUDYING">🔵 Em Estudo</option>
+                          <option value="REVIEW">🟡 Em Revisão</option>
+                          <option value="MASTERED">🟢 Dominado</option>
                         </select>
                       </div>
                     </div>

@@ -69,13 +69,104 @@
       "source_location": "L4"
     },
     {
+      "id": "src_components_questionworkbench_questionworkbenchprops",
+      "label": "QuestionWorkbenchProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questionworkbenchprops",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_lib_airouter_chatturn",
+      "label": "ChatTurn",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "chatturn",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_lib_airouter_questioncomplexityprofile",
+      "label": "QuestionComplexityProfile",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questioncomplexityprofile",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_types_database_aidissection",
+      "label": "AiDissection",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "aidissection",
+      "source_file": "src/types/database.ts",
+      "source_location": "L117"
+    },
+    {
+      "id": "src_types_database_aiproviderused",
+      "label": "AiProviderUsed",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "aiproviderused",
+      "source_file": "src/types/database.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_types_database_question",
+      "label": "Question",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "question",
+      "source_file": "src/types/database.ts",
+      "source_location": "L101"
+    },
+    {
+      "id": "src_types_database_selfdiagnosistype",
+      "label": "SelfDiagnosisType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "selfdiagnosistype",
+      "source_file": "src/types/database.ts",
+      "source_location": "L11"
+    },
+    {
       "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
       "label": "CurriculumManagerModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "curriculummanagermodalprops",
       "source_file": "src/components/CurriculumManagerModal.tsx",
@@ -88,7 +179,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cycledashboardprops",
       "source_file": "src/components/CycleDashboard.tsx",
@@ -101,7 +192,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cyclecalculationresult",
       "source_file": "src/lib/cycleEngine.ts",
@@ -114,7 +205,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cyclesuggestion",
       "source_file": "src/lib/cycleEngine.ts",
@@ -127,7 +218,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "subjectcycleallocation",
       "source_file": "src/lib/cycleEngine.ts",
@@ -140,7 +231,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "topicheatitem",
       "source_file": "src/lib/cycleEngine.ts",
@@ -153,37 +244,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "adminboardblueprint",
       "source_file": "src/types/database.ts",
       "source_location": "L153"
-    },
-    {
-      "id": "src_types_database_aidissection",
-      "label": "AiDissection",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "aidissection",
-      "source_file": "src/types/database.ts",
-      "source_location": "L117"
-    },
-    {
-      "id": "src_types_database_aiproviderused",
-      "label": "AiProviderUsed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "aiproviderused",
-      "source_file": "src/types/database.ts",
-      "source_location": "L10"
     },
     {
       "id": "src_types_database_blueprinthealthstatus",
@@ -192,7 +257,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "blueprinthealthstatus",
       "source_file": "src/types/database.ts",
@@ -205,7 +270,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "careersphere",
       "source_file": "src/types/database.ts",
@@ -218,7 +283,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "careertrack",
       "source_file": "src/types/database.ts",
@@ -231,7 +296,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "catalogstatus",
       "source_file": "src/types/database.ts",
@@ -244,7 +309,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "createstudyplaninput",
       "source_file": "src/types/database.ts",
@@ -257,7 +322,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "createsubjectinput",
       "source_file": "src/types/database.ts",
@@ -270,7 +335,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "createtopicinput",
       "source_file": "src/types/database.ts",
@@ -283,7 +348,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "notebook",
       "source_file": "src/types/database.ts",
@@ -296,24 +361,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "pdfsource",
       "source_file": "src/types/database.ts",
       "source_location": "L88"
-    },
-    {
-      "id": "src_types_database_question",
-      "label": "Question",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "question",
-      "source_file": "src/types/database.ts",
-      "source_location": "L101"
     },
     {
       "id": "src_types_database_questionattempt",
@@ -322,24 +374,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "questionattempt",
       "source_file": "src/types/database.ts",
       "source_location": "L128"
-    },
-    {
-      "id": "src_types_database_selfdiagnosistype",
-      "label": "SelfDiagnosisType",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "selfdiagnosistype",
-      "source_file": "src/types/database.ts",
-      "source_location": "L11"
     },
     {
       "id": "src_types_database_studyplan",
@@ -348,7 +387,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "studyplan",
       "source_file": "src/types/database.ts",
@@ -361,7 +400,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "studysession",
       "source_file": "src/types/database.ts",
@@ -374,7 +413,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "studysessiontype",
       "source_file": "src/types/database.ts",
@@ -387,7 +426,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "subject",
       "source_file": "src/types/database.ts",
@@ -400,7 +439,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "subjectcategory",
       "source_file": "src/types/database.ts",
@@ -413,7 +452,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "topic",
       "source_file": "src/types/database.ts",
@@ -426,7 +465,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "topiclink",
       "source_file": "src/types/database.ts",
@@ -439,7 +478,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "topicrelationtype",
       "source_file": "src/types/database.ts",
@@ -452,7 +491,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "topicstatus",
       "source_file": "src/types/database.ts",
@@ -465,7 +504,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "updatestudyplaninput",
       "source_file": "src/types/database.ts",
@@ -478,7 +517,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "updatesubjectinput",
       "source_file": "src/types/database.ts",
@@ -491,7 +530,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "updatetopicinput",
       "source_file": "src/types/database.ts",
@@ -504,11 +543,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "appmode",
       "source_file": "src/App.tsx",
-      "source_location": "L72"
+      "source_location": "L71"
     },
     {
       "id": "src_app_workbenchtab",
@@ -517,11 +556,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "workbenchtab",
       "source_file": "src/App.tsx",
-      "source_location": "L71"
+      "source_location": "L70"
     },
     {
       "id": "src_vite_env_d_database_close",
@@ -596,12 +635,48 @@
       "source_location": "L16"
     },
     {
+      "id": "src_components_questionworkbench_questionworkbench",
+      "label": "QuestionWorkbench()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questionworkbench()",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_lib_airouter_askreversestudytutor",
+      "label": "askReverseStudyTutor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "askreversestudytutor()",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L72"
+    },
+    {
+      "id": "src_lib_airouter_getquestioncomplexityprofile",
+      "label": "getQuestionComplexityProfile()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "getquestioncomplexityprofile()",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L25"
+    },
+    {
       "id": "src_components_curriculummanagermodal_curriculummanagermodal",
       "label": "CurriculumManagerModal()",
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "curriculummanagermodal()",
       "source_file": "src/components/CurriculumManagerModal.tsx",
@@ -613,11 +688,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cycledashboard()",
       "source_file": "src/components/CycleDashboard.tsx",
       "source_location": "L25"
+    },
+    {
+      "id": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "label": "calculateDynamicStudyCycle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "calculatedynamicstudycycle()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L113"
     },
     {
       "id": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
@@ -625,47 +712,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "getsamplesubtopicsforcalibration()",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L58"
-    },
-    {
-      "id": "src_lib_database_base64touint8",
-      "label": "base64ToUint8()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "base64touint8()",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L54"
-    },
-    {
-      "id": "src_lib_database_seedinitialdata",
-      "label": "seedInitialData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "seedinitialdata()",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L91"
-    },
-    {
-      "id": "src_lib_database_uint8tobase64",
-      "label": "uint8ToBase64()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "uint8tobase64()",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L44"
     },
     {
       "id": "src_app_app",
@@ -673,23 +724,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "src/App.tsx",
-      "source_location": "L74"
-    },
-    {
-      "id": "src_lib_cycleengine_calculatedynamicstudycycle",
-      "label": "calculateDynamicStudyCycle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "App.tsx",
-      "file_type": "code",
-      "norm_label": "calculatedynamicstudycycle()",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L113"
+      "source_location": "L73"
     },
     {
       "id": "src_lib_database_applyrecommendedcycleallocations",
@@ -697,11 +736,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "applyrecommendedcycleallocations()",
       "source_file": "src/lib/database.ts",
       "source_location": "L663"
+    },
+    {
+      "id": "src_lib_database_base64touint8",
+      "label": "base64ToUint8()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "base64touint8()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L54"
     },
     {
       "id": "src_lib_database_createstudyplan",
@@ -709,7 +760,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "createstudyplan()",
       "source_file": "src/lib/database.ts",
@@ -721,7 +772,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "createsubject()",
       "source_file": "src/lib/database.ts",
@@ -733,7 +784,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "createtopic()",
       "source_file": "src/lib/database.ts",
@@ -745,7 +796,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "deletestudyplan()",
       "source_file": "src/lib/database.ts",
@@ -757,7 +808,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "deletesubject()",
       "source_file": "src/lib/database.ts",
@@ -769,7 +820,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "deletetopic()",
       "source_file": "src/lib/database.ts",
@@ -781,7 +832,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "exportdatabasebinary()",
       "source_file": "src/lib/database.ts",
@@ -793,7 +844,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getactivestudyplan()",
       "source_file": "src/lib/database.ts",
@@ -805,11 +856,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getadmincatalogandblueprints()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L829"
+      "source_location": "L852"
     },
     {
       "id": "src_lib_database_getdb",
@@ -817,7 +868,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getdb()",
       "source_file": "src/lib/database.ts",
@@ -829,11 +880,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getnotebookfortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L770"
+      "source_location": "L793"
     },
     {
       "id": "src_lib_database_getpdfsourcefortopic",
@@ -841,11 +892,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getpdfsourcefortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L809"
+      "source_location": "L832"
     },
     {
       "id": "src_lib_database_getquestionsfortopicorsubject",
@@ -853,7 +904,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getquestionsfortopicorsubject()",
       "source_file": "src/lib/database.ts",
@@ -865,11 +916,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getrecentattempts()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L821"
+      "source_location": "L844"
     },
     {
       "id": "src_lib_database_getstudyplans",
@@ -877,7 +928,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getstudyplans()",
       "source_file": "src/lib/database.ts",
@@ -889,7 +940,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getstudysessions()",
       "source_file": "src/lib/database.ts",
@@ -901,7 +952,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "getsubjectsbyplan()",
       "source_file": "src/lib/database.ts",
@@ -913,11 +964,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "gettopiclinks()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L817"
+      "source_location": "L840"
     },
     {
       "id": "src_lib_database_gettopicsbysubject",
@@ -925,7 +976,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "gettopicsbysubject()",
       "source_file": "src/lib/database.ts",
@@ -937,7 +988,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "initdatabase()",
       "source_file": "src/lib/database.ts",
@@ -949,7 +1000,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "persistdatabase()",
       "source_file": "src/lib/database.ts",
@@ -961,7 +1012,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "queryall()",
       "source_file": "src/lib/database.ts",
@@ -973,7 +1024,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "queryone()",
       "source_file": "src/lib/database.ts",
@@ -985,7 +1036,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "recalculatesubjectmastery()",
       "source_file": "src/lib/database.ts",
@@ -997,7 +1048,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "recordquestiondiagnosis()",
       "source_file": "src/lib/database.ts",
@@ -1009,7 +1060,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "recordstudysession()",
       "source_file": "src/lib/database.ts",
@@ -1021,11 +1072,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "resetdatabasetoseed()",
       "source_file": "src/lib/database.ts",
       "source_location": "L326"
+    },
+    {
+      "id": "src_lib_database_savequestionchathistory",
+      "label": "saveQuestionChatHistory()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "savequestionchathistory()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L784"
     },
     {
       "id": "src_lib_database_savetopicnotebook",
@@ -1033,11 +1096,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "savetopicnotebook()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L778"
+      "source_location": "L801"
+    },
+    {
+      "id": "src_lib_database_seedinitialdata",
+      "label": "seedInitialData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "seedinitialdata()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L91"
     },
     {
       "id": "src_lib_database_setactivestudyplan",
@@ -1045,11 +1120,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "setactivestudyplan()",
       "source_file": "src/lib/database.ts",
       "source_location": "L360"
+    },
+    {
+      "id": "src_lib_database_uint8tobase64",
+      "label": "uint8ToBase64()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "uint8tobase64()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L44"
     },
     {
       "id": "src_lib_database_updatestudyplan",
@@ -1057,7 +1144,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "updatestudyplan()",
       "source_file": "src/lib/database.ts",
@@ -1069,7 +1156,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "updatesubject()",
       "source_file": "src/lib/database.ts",
@@ -1081,7 +1168,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "updatetopic()",
       "source_file": "src/lib/database.ts",
@@ -1096,7 +1183,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L21"
+      "source_location": "L23"
     },
     {
       "id": "package_devdependencies_autoprefixer",
@@ -1107,7 +1194,18 @@
       "file_type": "code",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L30"
+    },
+    {
+      "id": "package_devdependencies_jsdom",
+      "label": "jsdom",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "jsdom",
+      "source_file": "package.json",
+      "source_location": "L31"
     },
     {
       "id": "package_devdependencies_postcss",
@@ -1118,7 +1216,7 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L32"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -1129,7 +1227,7 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L33"
     },
     {
       "id": "package_devdependencies_tauri_apps_cli",
@@ -1140,7 +1238,29 @@
       "file_type": "code",
       "norm_label": "@tauri-apps/cli",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L24"
+    },
+    {
+      "id": "package_devdependencies_testing_library_jest_dom",
+      "label": "@testing-library/jest-dom",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@testing-library/jest-dom",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "package_devdependencies_testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -1151,7 +1271,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L27"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -1162,7 +1282,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -1173,7 +1293,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L34"
     },
     {
       "id": "package_devdependencies_vite",
@@ -1184,7 +1304,7 @@
       "file_type": "code",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L35"
     },
     {
       "id": "package_devdependencies_vitejs_plugin_react",
@@ -1195,7 +1315,18 @@
       "file_type": "code",
       "norm_label": "@vitejs/plugin-react",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L29"
+    },
+    {
+      "id": "package_devdependencies_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L36"
     },
     {
       "id": "autoprefixer",
@@ -1206,7 +1337,18 @@
       "file_type": "concept",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L30"
+    },
+    {
+      "id": "jsdom",
+      "label": "jsdom",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "jsdom",
+      "source_file": "package.json",
+      "source_location": "L31"
     },
     {
       "id": "package_json_tailwindcss",
@@ -1217,7 +1359,7 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L33"
     },
     {
       "id": "postcss",
@@ -1228,7 +1370,7 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L32"
     },
     {
       "id": "tauri_apps_cli",
@@ -1239,7 +1381,29 @@
       "file_type": "concept",
       "norm_label": "@tauri-apps/cli",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L24"
+    },
+    {
+      "id": "testing_library_jest_dom",
+      "label": "@testing-library/jest-dom",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "@testing-library/jest-dom",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "testing_library_react",
+      "label": "@testing-library/react",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "@testing-library/react",
+      "source_file": "package.json",
+      "source_location": "L26"
     },
     {
       "id": "types_react",
@@ -1250,7 +1414,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L27"
     },
     {
       "id": "types_react_dom",
@@ -1261,7 +1425,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L28"
     },
     {
       "id": "typescript",
@@ -1272,7 +1436,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L34"
     },
     {
       "id": "vite",
@@ -1283,7 +1447,7 @@
       "file_type": "concept",
       "norm_label": "vite",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L35"
     },
     {
       "id": "vitejs_plugin_react",
@@ -1294,7 +1458,18 @@
       "file_type": "concept",
       "norm_label": "@vitejs/plugin-react",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L29"
+    },
+    {
+      "id": "vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L36"
     },
     {
       "id": "tsconfig",
@@ -1584,18 +1759,6 @@
       "source_location": "L1"
     },
     {
-      "id": "backlog_backlog_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
-      "label": "[BACKLOG] Fatia 5 \u2014 Leitor de PDF Local Virtualizado (Prote\u00e7\u00e3o Autoral) & Cadernos Markdown",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[backlog] fatia 5 \u2014 leitor de pdf local virtualizado (protecao autoral) & cadernos markdown",
-      "source_file": "BACKLOG.md",
-      "source_location": "L36"
-    },
-    {
       "id": "backlog_backlog_fatia_6_grafo_de_micro_t\u00f3picos_pacotes_fofopack_google_drive",
       "label": "[BACKLOG] Fatia 6 \u2014 Grafo de Micro-t\u00f3picos & Pacotes `.fofopack` (Google Drive)",
       "_origin": "ast",
@@ -1644,16 +1807,28 @@
       "source_location": "L20"
     },
     {
-      "id": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_elasticsearch_pizza_mapa_de_calor_pomodoro",
-      "label": "[DONE] Fatia 3 \u2014 Motor Matem\u00e1tico do Ciclo (Score Elasticsearch + Pizza + Mapa de Calor) & Pomodoro",
+      "id": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_pizza_mapa_de_calor_pomodoro",
+      "label": "[DONE] Fatia 3 \u2014 Motor Matem\u00e1tico do Ciclo (Score + Pizza + Mapa de Calor) & Pomodoro",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[done] fatia 3 \u2014 motor matematico do ciclo (score elasticsearch + pizza + mapa de calor) & pomodoro",
+      "norm_label": "[done] fatia 3 \u2014 motor matematico do ciclo (score + pizza + mapa de calor) & pomodoro",
       "source_file": "BACKLOG.md",
       "source_location": "L25"
+    },
+    {
+      "id": "backlog_done_fatia_4_quest\u00f5es_estudo_reverso_ia_su\u00edte_de_testes_vitest_limpeza_de_ux",
+      "label": "[DONE] Fatia 4 \u2014 Quest\u00f5es + Estudo Reverso IA + Su\u00edte de Testes (Vitest) & Limpeza de UX",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[done] fatia 4 \u2014 questoes + estudo reverso ia + suite de testes (vitest) & limpeza de ux",
+      "source_file": "BACKLOG.md",
+      "source_location": "L31"
     },
     {
       "id": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
@@ -1668,16 +1843,16 @@
       "source_location": "L1"
     },
     {
-      "id": "backlog_next_10_min_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek_grounding",
-      "label": "[NEXT_10_MIN] Fatia 4 \u2014 Quest\u00f5es + Destrinchador IA (Roteador Gemini \u2794 DeepSeek + Grounding)",
+      "id": "backlog_next_10_min_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
+      "label": "[NEXT_10_MIN] Fatia 5 \u2014 Leitor de PDF Local Virtualizado (Prote\u00e7\u00e3o Autoral) & Cadernos Markdown",
       "_origin": "ast",
       "community": 12,
       "community_name": "\ud83c\udfaf Sprints de 10 Minutos (Vis\u00e3o Estudante \u2014 MVP CGU/BACEN)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[next_10_min] fatia 4 \u2014 questoes + destrinchador ia (roteador gemini \u2794 deepseek + grounding)",
+      "norm_label": "[next_10_min] fatia 5 \u2014 leitor de pdf local virtualizado (protecao autoral) & cadernos markdown",
       "source_file": "BACKLOG.md",
-      "source_location": "L31"
+      "source_location": "L36"
     },
     {
       "id": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
@@ -1952,6 +2127,28 @@
       "file_type": "code",
       "norm_label": "pomodorowidget.tsx",
       "source_file": "src/components/PomodoroWidget.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_questionworkbench",
+      "label": "QuestionWorkbench.tsx",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questionworkbench.tsx",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_airouter",
+      "label": "aiRouter.ts",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "airouter.ts",
+      "source_file": "src/lib/aiRouter.ts",
       "source_location": "L1"
     },
     {
@@ -2322,6 +2519,146 @@
       "version": "0.1.0"
     },
     {
+      "id": "agents_rules_ui_clean_design_and_tdd",
+      "label": "ui-clean-design-and-tdd.md",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "ui-clean-design-and-tdd.md",
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_rules_ui_clean_design_and_tdd_1_proibi\u00e7\u00e3o_de_jarg\u00e3o_t\u00e9cnico_na_interface_ux_ui_foco_no_estudante",
+      "label": "1. Proibi\u00e7\u00e3o de Jarg\u00e3o T\u00e9cnico na Interface (UX/UI Foco no Estudante)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. proibicao de jargao tecnico na interface (ux/ui foco no estudante)",
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "agents_rules_ui_clean_design_and_tdd_2_qualidade_su\u00edte_de_testes_obrigat\u00f3ria",
+      "label": "2. Qualidade & Su\u00edte de Testes Obrigat\u00f3ria",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. qualidade & suite de testes obrigatoria",
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "agents_rules_ui_clean_design_and_tdd_diretrizes_de_ux_ui_limpa_desenvolvimento_orientado_a_testes_tdd",
+      "label": "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "diretrizes de ux/ui limpa & desenvolvimento orientado a testes (tdd)",
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_tdd_suite_skill",
+      "label": "tdd-suite/SKILL.md",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "Su\u00edte de Testes & TDD (FofoLab)",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "tdd-suite",
+        "description": "&gt;-"
+      },
+      "node_kind": "page",
+      "norm_label": "tdd-suite/skill.md",
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_tdd_suite_skill_1_camadas_de_teste",
+      "label": "1. Camadas de Teste",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "Su\u00edte de Testes & TDD (FofoLab)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. camadas de teste",
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "agents_skills_tdd_suite_skill_2_comandos_de_verifica\u00e7\u00e3o",
+      "label": "2. Comandos de Verifica\u00e7\u00e3o",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "Su\u00edte de Testes & TDD (FofoLab)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. comandos de verificacao",
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "agents_skills_tdd_suite_skill_su\u00edte_de_testes_tdd_fofolab",
+      "label": "Su\u00edte de Testes & TDD (FofoLab)",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "Su\u00edte de Testes & TDD (FofoLab)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "suite de testes & tdd (fofolab)",
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "agents_skills_ux_ui_clean_skill",
+      "label": "ux-ui-clean/SKILL.md",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "Design System & UX/UI Limpa (FofoLab)",
+      "file_type": "document",
+      "frontmatter": {
+        "name": "ux-ui-clean",
+        "description": "&gt;-"
+      },
+      "node_kind": "page",
+      "norm_label": "ux-ui-clean/skill.md",
+      "source_file": ".agents/skills/ux-ui-clean/SKILL.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_ux_ui_clean_skill_1_princ\u00edpios_visuais_e_de_usabilidade",
+      "label": "1. Princ\u00edpios Visuais e de Usabilidade",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "Design System & UX/UI Limpa (FofoLab)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. principios visuais e de usabilidade",
+      "source_file": ".agents/skills/ux-ui-clean/SKILL.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "agents_skills_ux_ui_clean_skill_design_system_ux_ui_limpa_fofolab",
+      "label": "Design System & UX/UI Limpa (FofoLab)",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "Design System & UX/UI Limpa (FofoLab)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "design system & ux/ui limpa (fofolab)",
+      "source_file": ".agents/skills/ux-ui-clean/SKILL.md",
+      "source_location": "L9"
+    },
+    {
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
@@ -2341,7 +2678,7 @@
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L16"
     },
     {
       "id": "package_dependencies_clsx",
@@ -2352,7 +2689,7 @@
       "file_type": "code",
       "norm_label": "clsx",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "package_dependencies_lucide_react",
@@ -2363,7 +2700,7 @@
       "file_type": "code",
       "norm_label": "lucide-react",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "package_dependencies_react",
@@ -2374,7 +2711,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L19"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -2385,7 +2722,7 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "package_dependencies_sql_js",
@@ -2396,7 +2733,7 @@
       "file_type": "code",
       "norm_label": "sql.js",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "package_description",
@@ -2484,7 +2821,7 @@
       "file_type": "code",
       "norm_label": "tauri:build",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L14"
     },
     {
       "id": "package_scripts_tauri_dev",
@@ -2495,7 +2832,29 @@
       "file_type": "code",
       "norm_label": "tauri:dev",
       "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "package_scripts_test",
+      "label": "test",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "test",
+      "source_file": "package.json",
       "source_location": "L11"
+    },
+    {
+      "id": "package_scripts_test_watch",
+      "label": "test:watch",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "test:watch",
+      "source_file": "package.json",
+      "source_location": "L12"
     },
     {
       "id": "package_type",
@@ -2528,7 +2887,7 @@
       "file_type": "concept",
       "norm_label": "clsx",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L17"
     },
     {
       "id": "lucide_react",
@@ -2539,7 +2898,7 @@
       "file_type": "concept",
       "norm_label": "lucide-react",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L18"
     },
     {
       "id": "react",
@@ -2550,7 +2909,7 @@
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L19"
     },
     {
       "id": "react_dom",
@@ -2561,7 +2920,7 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L20"
     },
     {
       "id": "sql_js",
@@ -2572,14 +2931,14 @@
       "file_type": "concept",
       "norm_label": "sql.js",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "src_components_curriculummanagermodal",
       "label": "CurriculumManagerModal.tsx",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "curriculummanagermodal.tsx",
       "source_file": "src/components/CurriculumManagerModal.tsx",
@@ -2590,7 +2949,7 @@
       "label": "CycleDashboard.tsx",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cycledashboard.tsx",
       "source_file": "src/components/CycleDashboard.tsx",
@@ -2601,7 +2960,7 @@
       "label": "initialSeed.ts",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "initialseed.ts",
       "source_file": "src/data/initialSeed.ts",
@@ -2612,29 +2971,29 @@
       "label": "SEED_ADMIN_BLUEPRINTS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_admin_blueprints",
       "source_file": "src/data/initialSeed.ts",
-      "source_location": "L464"
+      "source_location": "L551"
     },
     {
       "id": "src_data_initialseed_seed_ai_dissections",
       "label": "SEED_AI_DISSECTIONS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_ai_dissections",
       "source_file": "src/data/initialSeed.ts",
-      "source_location": "L434"
+      "source_location": "L494"
     },
     {
       "id": "src_data_initialseed_seed_career_tracks",
       "label": "SEED_CAREER_TRACKS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_career_tracks",
       "source_file": "src/data/initialSeed.ts",
@@ -2645,7 +3004,7 @@
       "label": "SEED_NOTEBOOKS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_notebooks",
       "source_file": "src/data/initialSeed.ts",
@@ -2656,7 +3015,7 @@
       "label": "SEED_PDF_SOURCES",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_pdf_sources",
       "source_file": "src/data/initialSeed.ts",
@@ -2667,7 +3026,7 @@
       "label": "SEED_QUESTIONS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_questions",
       "source_file": "src/data/initialSeed.ts",
@@ -2678,7 +3037,7 @@
       "label": "SEED_STUDY_PLANS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_study_plans",
       "source_file": "src/data/initialSeed.ts",
@@ -2689,7 +3048,7 @@
       "label": "SEED_SUBJECTS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_subjects",
       "source_file": "src/data/initialSeed.ts",
@@ -2700,7 +3059,7 @@
       "label": "SEED_TOPIC_LINKS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_topic_links",
       "source_file": "src/data/initialSeed.ts",
@@ -2711,7 +3070,7 @@
       "label": "SEED_TOPICS",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "seed_topics",
       "source_file": "src/data/initialSeed.ts",
@@ -2722,21 +3081,32 @@
       "label": "cycleEngine.ts",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "cycleengine.ts",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_database",
-      "label": "lib/database.ts",
+      "id": "src_tests_cycleengine_test",
+      "label": "cycleEngine.test.ts",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "lib/database.ts",
-      "source_file": "src/lib/database.ts",
+      "norm_label": "cycleengine.test.ts",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_questionworkbenchandrouter_test",
+      "label": "questionWorkbenchAndRouter.test.tsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "questionworkbenchandrouter.test.tsx",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
       "source_location": "L1"
     },
     {
@@ -2744,7 +3114,7 @@
       "label": "types/database.ts",
       "_origin": "ast",
       "community": 4,
-      "community_name": "lib/database.ts",
+      "community_name": "types/database.ts",
       "file_type": "code",
       "norm_label": "types/database.ts",
       "source_file": "src/types/database.ts",
@@ -2755,10 +3125,21 @@
       "label": "App.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "app.tsx",
       "source_file": "src/App.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_database",
+      "label": "lib/database.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "lib/database.ts",
+      "source_file": "src/lib/database.ts",
       "source_location": "L1"
     },
     {
@@ -2766,7 +3147,7 @@
       "label": "main.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "App.tsx",
+      "community_name": "lib/database.ts",
       "file_type": "code",
       "norm_label": "main.tsx",
       "source_file": "src/main.tsx",
@@ -3091,7 +3472,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L115",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -3103,7 +3484,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L126",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -3115,7 +3496,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L131",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -3127,7 +3508,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L153",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -3139,7 +3520,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L154",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -3151,7 +3532,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L155",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -3163,7 +3544,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L156",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -3175,7 +3556,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L162",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -3187,7 +3568,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L171",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -3199,7 +3580,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L175",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -3211,7 +3592,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L182",
+      "source_location": "L180",
       "weight": 1.0
     },
     {
@@ -3223,7 +3604,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L189",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -3235,7 +3616,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L229",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -3247,7 +3628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L241",
+      "source_location": "L232",
       "weight": 1.0
     },
     {
@@ -3259,7 +3640,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L263",
+      "source_location": "L254",
       "weight": 1.0
     },
     {
@@ -3271,7 +3652,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L275",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -3283,7 +3664,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L506",
+      "source_location": "L493",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_app",
+      "target": "src_lib_database_savequestionchathistory",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/App.tsx",
+      "source_location": "L551",
       "weight": 1.0
     },
     {
@@ -3295,7 +3688,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L700",
+      "source_location": "L561",
       "weight": 1.0
     },
     {
@@ -3307,7 +3700,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L707",
+      "source_location": "L568",
       "weight": 1.0
     },
     {
@@ -3319,7 +3712,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L893",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -3331,7 +3724,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L902",
+      "source_location": "L746",
       "weight": 1.0
     },
     {
@@ -3343,7 +3736,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L906",
+      "source_location": "L750",
       "weight": 1.0
     },
     {
@@ -3355,7 +3748,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L910",
+      "source_location": "L754",
       "weight": 1.0
     },
     {
@@ -3367,7 +3760,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L914",
+      "source_location": "L758",
       "weight": 1.0
     },
     {
@@ -3379,7 +3772,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L918",
+      "source_location": "L762",
       "weight": 1.0
     },
     {
@@ -3391,7 +3784,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L922",
+      "source_location": "L766",
       "weight": 1.0
     },
     {
@@ -3403,7 +3796,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L926",
+      "source_location": "L770",
       "weight": 1.0
     },
     {
@@ -3415,7 +3808,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L931",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -3428,6 +3821,30 @@
       "context": "call",
       "source_file": "src/components/CurriculumManagerModal.tsx",
       "source_location": "L449",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench_questionworkbench",
+      "target": "src_lib_airouter_askreversestudytutor",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench_questionworkbench",
+      "target": "src_lib_airouter_getquestioncomplexityprofile",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -3727,96 +4144,84 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
+      "source_location": "L857",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getadmincatalogandblueprints",
+      "target": "src_lib_database_queryall",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L858",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getadmincatalogandblueprints",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L863",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getnotebookfortopic",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L794",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getnotebookfortopic",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L795",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getpdfsourcefortopic",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L833",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getpdfsourcefortopic",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
       "source_location": "L834",
       "weight": 1.0
     },
     {
-      "source": "src_lib_database_getadmincatalogandblueprints",
-      "target": "src_lib_database_queryall",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L835",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getadmincatalogandblueprints",
-      "target": "src_lib_database_queryone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L840",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getnotebookfortopic",
-      "target": "src_lib_database_queryone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L771",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getnotebookfortopic",
-      "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L772",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getpdfsourcefortopic",
-      "target": "src_lib_database_queryone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L810",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getpdfsourcefortopic",
-      "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L811",
-      "weight": 1.0
-    },
-    {
       "source": "src_lib_database_getquestionsfortopicorsubject",
       "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L747",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getquestionsfortopicorsubject",
-      "target": "src_lib_database_queryall",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3828,6 +4233,18 @@
     },
     {
       "source": "src_lib_database_getquestionsfortopicorsubject",
+      "target": "src_lib_database_queryall",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L752",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_getquestionsfortopicorsubject",
       "target": "src_lib_database_queryone",
       "relation": "calls",
       "_origin": "ast",
@@ -3835,7 +4252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L761",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -3847,7 +4264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L822",
+      "source_location": "L845",
       "weight": 1.0
     },
     {
@@ -3859,7 +4276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L823",
+      "source_location": "L846",
       "weight": 1.0
     },
     {
@@ -3943,7 +4360,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L818",
+      "source_location": "L841",
       "weight": 1.0
     },
     {
@@ -3955,7 +4372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L818",
+      "source_location": "L841",
       "weight": 1.0
     },
     {
@@ -4187,6 +4604,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_database_savequestionchathistory",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L785",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_savequestionchathistory",
+      "target": "src_lib_database_persistdatabase",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L790",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_database_savetopicnotebook",
       "target": "src_lib_database_getdb",
       "relation": "calls",
@@ -4195,7 +4636,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L784",
+      "source_location": "L807",
       "weight": 1.0
     },
     {
@@ -4207,7 +4648,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L785",
+      "source_location": "L808",
       "weight": 1.0
     },
     {
@@ -4219,7 +4660,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L795",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -4439,6 +4880,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_questionworkbench_questionworkbenchprops",
+      "target": "src_types_database_aidissection",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench_questionworkbenchprops",
+      "target": "src_types_database_question",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench_questionworkbenchprops",
+      "target": "src_types_database_selfdiagnosistype",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_cycleengine_subjectcycleallocation",
       "target": "src_types_database_subject",
       "relation": "references",
@@ -4639,7 +5116,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -4651,7 +5128,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4663,7 +5140,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -4675,7 +5152,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -4687,7 +5164,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4699,7 +5176,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_jsdom",
+      "target": "jsdom",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -4711,7 +5200,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -4723,7 +5212,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4735,7 +5224,31 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_testing_library_jest_dom",
+      "target": "testing_library_jest_dom",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_testing_library_react",
+      "target": "testing_library_react",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -4747,7 +5260,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -4759,7 +5272,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -4771,7 +5284,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -4783,7 +5296,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -4795,7 +5308,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_vitest",
+      "target": "vitest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -4807,7 +5332,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L19",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -4819,7 +5344,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L20",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -4831,7 +5356,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L21",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_questionworkbench_questionworkbench",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -4843,7 +5380,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -4855,7 +5392,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4867,7 +5404,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4879,7 +5416,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4891,7 +5428,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4903,7 +5440,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4915,7 +5452,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4927,7 +5464,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4939,7 +5476,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4951,7 +5488,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4963,7 +5500,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4975,7 +5512,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4987,7 +5524,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4999,7 +5536,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5011,7 +5548,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5023,7 +5560,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5035,7 +5572,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5047,7 +5584,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5059,7 +5596,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5071,7 +5608,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5083,7 +5620,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5095,7 +5632,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5107,7 +5644,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_lib_database_savequestionchathistory",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5119,7 +5668,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5131,7 +5680,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5143,7 +5692,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5155,7 +5704,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5167,7 +5716,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5179,7 +5728,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5191,7 +5740,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5203,7 +5752,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5215,7 +5764,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5227,7 +5776,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5239,7 +5788,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5251,7 +5800,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5263,7 +5812,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5275,7 +5824,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5287,7 +5836,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5299,7 +5848,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5311,7 +5860,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5323,7 +5872,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5335,7 +5884,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5347,7 +5896,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5359,7 +5908,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -5495,6 +6044,78 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_questionworkbench",
+      "target": "src_lib_airouter_askreversestudytutor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_lib_airouter_chatturn",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_lib_airouter_getquestioncomplexityprofile",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_types_database_aidissection",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_types_database_question",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_types_database_selfdiagnosistype",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "src_data_initialseed",
       "target": "src_types_database_adminboardblueprint",
       "relation": "imports",
@@ -5611,6 +6232,42 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/data/initialSeed.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_types_database_aidissection",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_types_database_aiproviderused",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_types_database_question",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/aiRouter.ts",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -6059,6 +6716,246 @@
       "weight": 1.0
     },
     {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_types_database_questionattempt",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_types_database_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_data_initialseed_seed_study_plans",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_data_initialseed_seed_subjects",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_data_initialseed_seed_topic_links",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_data_initialseed_seed_topics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_lib_airouter_askreversestudytutor",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_lib_airouter_getquestioncomplexityprofile",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_lib_cycleengine_calculatedynamicstudycycle",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_types_database_topic",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_components_cycledashboard_cycledashboard",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_components_questionworkbench_questionworkbench",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_ai_dissections",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_questions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_study_plans",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_subjects",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_topic_links",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed_seed_topics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_app",
       "target": "src_components_curriculummanagermodal",
       "relation": "imports_from",
@@ -6067,7 +6964,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L19",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -6079,7 +6976,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L20",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6091,7 +6988,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L21",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_components_questionworkbench",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/App.tsx",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6103,7 +7012,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L22",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6115,7 +7024,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6127,7 +7036,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/App.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "type_only": true,
       "weight": 1.0
     },
@@ -6183,6 +7092,31 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_questionworkbench",
+      "target": "src_lib_airouter",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L19",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
       "source": "src_data_initialseed",
       "target": "src_types_database",
       "relation": "imports_from",
@@ -6191,6 +7125,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/data/initialSeed.ts",
+      "source_location": "L1",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/aiRouter.ts",
       "source_location": "L1",
       "type_only": true,
       "weight": 1.0
@@ -6246,6 +7193,116 @@
       "weight": 1.0
     },
     {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L12",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_lib_cycleengine",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_cycleengine_test",
+      "target": "src_data_initialseed",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_lib_airouter",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_lib_cycleengine",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_types_database",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L15",
+      "type_only": true,
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_components_cycledashboard",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_components_questionworkbench",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_questionworkbenchandrouter_test",
+      "target": "src_data_initialseed",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "agents_rules_graphify",
       "target": "agents_rules_graphify_graphify",
       "relation": "contains",
@@ -6254,6 +7311,94 @@
       "confidence_score": 1.0,
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_rules_ui_clean_design_and_tdd",
+      "target": "agents_rules_ui_clean_design_and_tdd_diretrizes_de_ux_ui_limpa_desenvolvimento_orientado_a_testes_tdd",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_rules_ui_clean_design_and_tdd_diretrizes_de_ux_ui_limpa_desenvolvimento_orientado_a_testes_tdd",
+      "target": "agents_rules_ui_clean_design_and_tdd_2_qualidade_su\u00edte_de_testes_obrigat\u00f3ria",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_rules_ui_clean_design_and_tdd_diretrizes_de_ux_ui_limpa_desenvolvimento_orientado_a_testes_tdd",
+      "target": "agents_rules_ui_clean_design_and_tdd_1_proibi\u00e7\u00e3o_de_jarg\u00e3o_t\u00e9cnico_na_interface_ux_ui_foco_no_estudante",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/rules/ui-clean-design-and-tdd.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_tdd_suite_skill",
+      "target": "agents_skills_tdd_suite_skill_su\u00edte_de_testes_tdd_fofolab",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_tdd_suite_skill_su\u00edte_de_testes_tdd_fofolab",
+      "target": "agents_skills_tdd_suite_skill_1_camadas_de_teste",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_tdd_suite_skill_su\u00edte_de_testes_tdd_fofolab",
+      "target": "agents_skills_tdd_suite_skill_2_comandos_de_verifica\u00e7\u00e3o",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/tdd-suite/SKILL.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_ux_ui_clean_skill",
+      "target": "agents_skills_ux_ui_clean_skill_design_system_ux_ui_limpa_fofolab",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/ux-ui-clean/SKILL.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_ux_ui_clean_skill_design_system_ux_ui_limpa_fofolab",
+      "target": "agents_skills_ux_ui_clean_skill_1_princ\u00edpios_visuais_e_de_usabilidade",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/ux-ui-clean/SKILL.md",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -6335,7 +7480,7 @@
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_elasticsearch_pizza_mapa_de_calor_pomodoro",
+      "target": "backlog_done_fatia_3_motor_matem\u00e1tico_do_ciclo_score_pizza_mapa_de_calor_pomodoro",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6346,7 +7491,7 @@
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_next_10_min_fatia_4_quest\u00f5es_destrinchador_ia_roteador_gemini_deepseek_grounding",
+      "target": "backlog_done_fatia_4_quest\u00f5es_estudo_reverso_ia_su\u00edte_de_testes_vitest_limpeza_de_ux",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6357,7 +7502,7 @@
     },
     {
       "source": "backlog_sprints_de_10_minutos_vis\u00e3o_estudante_mvp_cgu_bacen",
-      "target": "backlog_backlog_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
+      "target": "backlog_next_10_min_fatia_5_leitor_de_pdf_local_virtualizado_prote\u00e7\u00e3o_autoral_cadernos_markdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6605,7 +7750,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -6627,7 +7772,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -6693,7 +7838,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6704,7 +7849,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -6715,7 +7860,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6726,7 +7871,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6737,7 +7882,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6748,34 +7893,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L23",
-      "weight": 1.0
-    },
-    {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
       "source_location": "L24",
       "weight": 1.0
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vitejs_plugin_react",
+      "target": "package_devdependencies_testing_library_jest_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6786,7 +7909,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_autoprefixer",
+      "target": "package_devdependencies_testing_library_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6797,7 +7920,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_types_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6808,7 +7931,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_types_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6819,7 +7942,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_vitejs_plugin_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6830,13 +7953,79 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite",
+      "target": "package_devdependencies_autoprefixer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jsdom",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_postcss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vitest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -6852,7 +8041,7 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_tauri_dev",
+      "target": "package_scripts_test",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6863,13 +8052,35 @@
     },
     {
       "source": "package_scripts",
-      "target": "package_scripts_tauri_build",
+      "target": "package_scripts_test_watch",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_tauri_dev",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_tauri_build",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -7001,7 +8212,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L71",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -7012,7 +8223,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L72",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -7023,7 +8234,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.tsx",
-      "source_location": "L74",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -7090,6 +8301,28 @@
       "confidence_score": 1.0,
       "source_file": "src/components/PomodoroWidget.tsx",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_components_questionworkbench_questionworkbenchprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_questionworkbench",
+      "target": "src_components_questionworkbench_questionworkbench",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/QuestionWorkbench.tsx",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -7160,17 +8393,6 @@
     },
     {
       "source": "src_data_initialseed",
-      "target": "src_data_initialseed_seed_ai_dissections",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L434",
-      "weight": 1.0
-    },
-    {
-      "source": "src_data_initialseed",
       "target": "src_data_initialseed_seed_study_plans",
       "relation": "contains",
       "_origin": "ast",
@@ -7182,13 +8404,24 @@
     },
     {
       "source": "src_data_initialseed",
+      "target": "src_data_initialseed_seed_ai_dissections",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L494",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_initialseed",
       "target": "src_data_initialseed_seed_admin_blueprints",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/data/initialSeed.ts",
-      "source_location": "L464",
+      "source_location": "L551",
       "weight": 1.0
     },
     {
@@ -7200,6 +8433,50 @@
       "confidence_score": 1.0,
       "source_file": "src/data/initialSeed.ts",
       "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_lib_airouter_questioncomplexityprofile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_lib_airouter_getquestioncomplexityprofile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_lib_airouter_chatturn",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_airouter",
+      "target": "src_lib_airouter_askreversestudytutor",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -7578,13 +8855,24 @@
     },
     {
       "source": "src_lib_database",
+      "target": "src_lib_database_savequestionchathistory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/database.ts",
+      "source_location": "L784",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database",
       "target": "src_lib_database_getnotebookfortopic",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L770",
+      "source_location": "L793",
       "weight": 1.0
     },
     {
@@ -7595,7 +8883,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L778",
+      "source_location": "L801",
       "weight": 1.0
     },
     {
@@ -7606,7 +8894,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L809",
+      "source_location": "L832",
       "weight": 1.0
     },
     {
@@ -7617,7 +8905,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L817",
+      "source_location": "L840",
       "weight": 1.0
     },
     {
@@ -7628,7 +8916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L821",
+      "source_location": "L844",
       "weight": 1.0
     },
     {
@@ -7639,7 +8927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L829",
+      "source_location": "L852",
       "weight": 1.0
     },
     {
@@ -8766,5 +10054,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "423443507b13c8b89167a222e31be3854150a130"
+  "built_at_commit": "4384da4b0363913ce36ee9bbdb2428f841262bd1"
 }
