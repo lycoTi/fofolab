@@ -77,6 +77,6 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   (reduz prioridade), nunca escondido.
 - **TEC só por registro manual:** trocar "desempenho do TEC por arquivo salvo" (spec 07 §9) pelo registro rápido da 7b —
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
-- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias); tópicos relacionados entre matérias.
+- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias — formato preferido pela esposa do dono, segunda usuária); tópicos relacionados entre matérias.
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
 - **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` (~1180) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
