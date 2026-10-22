@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineSiblings } from '../lib/dailyRoutine';
 import type { DailyFocusBlock, DailyPlan } from '../lib/dailyPlanner';
+import { recalibrationHint } from '../lib/recalibrationHint';
+import type { SubjectCycleAllocation, TopicHeatItem } from '../lib/cycleEngine';
 import type { FrozenBlock, StudySession, Subject, Topic } from '../types/database';
 
 const subject = (id: string, name: string) => ({ id, name, color: '#f97316' }) as unknown as Subject;
@@ -82,5 +84,30 @@ describe('roteiro do dia classificado', () => {
     } as unknown as DailyPlan;
     expect(pickExtraBlock(live, blocks)?.topicId).toBe('jwt');
     expect(pickExtraBlock({ blocks: [] } as unknown as DailyPlan, blocks)).toBeNull();
+  });
+});
+
+describe('aviso discreto de recalibrar', () => {
+  const alloc = (id: string, name: string, level: number, mastery: number, weight = 1) =>
+    ({ subject: { id, name, initial_knowledge_level: level, exam_weight: weight }, studiedTopicsMastery: mastery }) as unknown as SubjectCycleAllocation;
+  const heat = (subjectId: string, confidence: number) =>
+    ({ topic: { subject_id: subjectId }, sampleConfidencePercent: confidence }) as unknown as TopicHeatItem;
+
+  it('matéria marcada como dominada e errando muito, com amostra suficiente, sugere recalibrar', () => {
+    const hint = recalibrationHint([alloc('casp', 'CASP', 3, 35)], [heat('casp', 60), heat('casp', 60)]);
+    expect(hint).toEqual({ subjectName: 'CASP', direction: 'harder' });
+  });
+
+  it('com amostra pequena não sugere nada', () => {
+    expect(recalibrationHint([alloc('casp', 'CASP', 3, 35)], [heat('casp', 30)])).toBeNull();
+  });
+
+  it('marcou "nunca vi" e está acertando muito: sugere recalibrar para mais fácil', () => {
+    expect(recalibrationHint([alloc('ti', 'TI', 1, 75)], [heat('ti', 55)])).toEqual({ subjectName: 'TI', direction: 'easier' });
+  });
+
+  it('com várias, fala primeiro da que pesa mais na prova', () => {
+    const hint = recalibrationHint([alloc('a', 'A', 3, 30, 1), alloc('b', 'B', 4, 40, 2)], [heat('a', 60), heat('b', 60)]);
+    expect(hint?.subjectName).toBe('B');
   });
 });
