@@ -17,11 +17,68 @@
   background: #475569;
 }
 
-/* Enquanto uma divisória de painel é arrastada, iframes (PDF) não podem roubar o ponteiro */
+/* Enquanto uma divisória de painel é arrastada, o leitor de PDF não pode selecionar texto */
 body.fofolab-resizing {
   cursor: col-resize;
   user-select: none;
 }
-body.fofolab-resizing iframe {
-  pointer-events: none;
+
+/*
+ * Camada de texto do leitor de PDF (texto invisível sobre o desenho da página, para selecionar e
+ * copiar). Trecho essencial de pdfjs-dist/web/pdf_viewer.css; a escala vem de --total-scale-factor.
+ */
+.textLayer {
+  position: absolute;
+  inset: 0;
+  overflow: clip;
+  opacity: 1;
+  line-height: 1;
+  text-align: initial;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  z-index: 0;
+  --min-font-size: 1;
+  --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size));
+  --min-font-size-inv: calc(1 / var(--min-font-size));
+}
+.textLayer :is(span, br) {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+.textLayer > :not(.markedContent),
+.textLayer .markedContent span:not(.markedContent) {
+  z-index: 1;
+  --font-height: 0;
+  font-size: calc(var(--text-scale-factor) * var(--font-height));
+  --scale-x: 1;
+  --rotate: 0deg;
+  transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv));
+}
+.textLayer .markedContent {
+  display: contents;
+}
+.textLayer span[role='img'] {
+  user-select: none;
+  cursor: default;
+}
+.textLayer ::selection {
+  background: rgb(249 115 22 / 0.3);
+}
+.textLayer br::selection {
+  background: transparent;
+}
+.textLayer .endOfContent {
+  display: block;
+  position: absolute;
+  inset: 100% 0 0;
+  z-index: 0;
+  cursor: default;
+  user-select: none;
+}
+.textLayer.selecting .endOfContent {
+  top: 0;
 }

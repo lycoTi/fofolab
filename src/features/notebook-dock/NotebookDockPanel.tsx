@@ -1,19 +1,8 @@
 import { useState } from 'react';
-import {
-  BookOpen,
-  CheckCircle2,
-  Eye,
-  FileText,
-  Loader2,
-  Maximize2,
-  PenLine,
-  Save,
-  Search,
-  X,
-} from 'lucide-react';
+import { BookOpen, CheckCircle2, ChevronRight, Eye, FileText, Loader2, PenLine, Save, Search, X } from 'lucide-react';
 import type { Notebook, PdfSource, Subject, Topic } from '../../types/database';
 import type { NotebookDraftStatus } from './useNotebookDraft';
-import { PdfFilePicker, PdfFrame, PdfPageControls, type PdfProgressUpdate } from './PdfReader';
+import { parseReadPages } from '../pdf-reader/readProgress';
 
 interface NotebookDockPanelProps {
   width?: number;
@@ -25,11 +14,9 @@ interface NotebookDockPanelProps {
   onSaveNotebook: () => void;
   draftStatus?: NotebookDraftStatus;
   allNotebooks: Notebook[];
+  /** PDF do tópico: o painel só mostra o progresso; a leitura acontece na aba Leitura de PDF. */
   pdfSource: PdfSource | null;
-  pdfFileUrl?: string | null;
-  onOpenPdfFile?: (file: File) => void;
-  onSavePdfProgress: (update: PdfProgressUpdate) => void;
-  /** Abre o PDF no palco central, em tela grande. */
+  /** Abre a aba de leitura (omitido quando ela já está aberta). */
   onOpenReader?: () => void;
   onJumpToTopic: (subjectId: string, topicId: string) => void;
   onCloseDock?: () => void;
@@ -66,14 +53,11 @@ export function NotebookDockPanel({
   draftStatus = 'idle',
   allNotebooks,
   pdfSource,
-  pdfFileUrl = null,
-  onOpenPdfFile,
-  onSavePdfProgress,
   onOpenReader,
   onJumpToTopic,
   onCloseDock,
 }: NotebookDockPanelProps) {
-  const [subTab, setSubTab] = useState<'editor' | 'search' | 'pdf'>('editor');
+  const [subTab, setSubTab] = useState<'editor' | 'search'>('editor');
   const [previewMode, setPreviewMode] = useState<boolean>(false);
   const [savedBadge, setSavedBadge] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -84,11 +68,13 @@ export function NotebookDockPanel({
     return nb.title.toLowerCase().includes(q) || nb.content_markdown.toLowerCase().includes(q);
   });
 
-  const pdfTabLabel = pdfSource ? `PDF (${pdfSource.current_page}/${pdfSource.total_pages})` : 'PDF';
+  const readPercent = pdfSource
+    ? Math.round((parseReadPages(pdfSource.read_pages_json, pdfSource.total_pages).length / pdfSource.total_pages) * 100)
+    : 0;
 
   return (
     <section
-      aria-label="Painel Lateral de Caderno e PDF"
+      aria-label="Painel Lateral do Caderno"
       style={{ width }}
       className="border-l border-slate-800 bg-slate-900/60 flex flex-col shrink-0 h-full min-w-0"
     >
@@ -98,7 +84,6 @@ export function NotebookDockPanel({
             [
               { id: 'editor', label: 'Caderno', icon: BookOpen },
               { id: 'search', label: `Buscar (${allNotebooks.length})`, icon: Search },
-              { id: 'pdf', label: pdfTabLabel, icon: FileText },
             ] as const
           ).map((tab) => {
             const Icon = tab.icon;
@@ -132,6 +117,27 @@ export function NotebookDockPanel({
           </button>
         )}
       </div>
+
+      {pdfSource && onOpenReader && (
+        <button
+          type="button"
+          onClick={onOpenReader}
+          title="Abrir a leitura do PDF deste tópico"
+          className="mx-4 mt-3 px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 hover:border-orange-500/40 text-left flex items-center gap-2 transition"
+        >
+          <FileText size={14} className="text-orange-400 shrink-0" />
+          <span className="min-w-0 flex-1">
+            <span className="block text-[11px] font-semibold text-slate-200 truncate">{pdfSource.title}</span>
+            <span className="block text-[10px] text-slate-400">
+              {readPercent}% lido · parou na página {pdfSource.current_page}
+            </span>
+          </span>
+          <span className="text-[11px] text-orange-300 flex items-center shrink-0">
+            Continuar leitura
+            <ChevronRight size={12} />
+          </span>
+        </button>
+      )}
 
       {/* Aba 1: Editor / Leitura do Caderno do Tópico */}
       {subTab === 'editor' && (
@@ -225,48 +231,6 @@ export function NotebookDockPanel({
               </button>
             ))}
           </div>
-        </div>
-      )}
-
-      {/* Aba 3: Leitor de PDF (compacto) + atalho para a tela grande */}
-      {subTab === 'pdf' && (
-        <div className="flex-1 flex flex-col p-4 space-y-3 overflow-hidden">
-          <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5 text-xs">
-            <div className="font-semibold text-white truncate">
-              📄 {pdfSource?.title || `PDF — ${currentTopic?.title || 'Tópico'}`}
-            </div>
-            {pdfSource && <PdfPageControls pdfSource={pdfSource} onChange={onSavePdfProgress} />}
-            {onOpenPdfFile && <PdfFilePicker onOpenFile={onOpenPdfFile} />}
-            {onOpenReader && (
-              <button
-                type="button"
-                onClick={onOpenReader}
-                className="w-full py-2 px-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-1.5"
-              >
-                <Maximize2 size={13} />
-                Ler em tela grande
-              </button>
-            )}
-          </div>
-
-          {pdfFileUrl ? (
-            <PdfFrame fileUrl={pdfFileUrl} page={pdfSource?.current_page ?? 1} title="Leitor de PDF Local" />
-          ) : (
-            <div className="flex-1 rounded-xl border border-slate-800 bg-slate-950/60 p-4 flex flex-col items-center justify-center text-center text-xs text-slate-400 space-y-2">
-              <FileText size={24} className="text-slate-600" />
-              {pdfSource ? (
-                <p>
-                  Seu marcador está salvo na página <strong>{pdfSource.current_page}</strong> de{' '}
-                  <strong>{pdfSource.total_pages}</strong>.
-                </p>
-              ) : (
-                <p>Nenhum PDF vinculado a este tópico ainda.</p>
-              )}
-              <p className="text-[11px] text-slate-500">
-                Abra o arquivo do seu computador para ler aqui ou em tela grande, ao lado das questões e do caderno.
-              </p>
-            </div>
-          )}
         </div>
       )}
     </section>

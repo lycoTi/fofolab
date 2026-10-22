@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 2;
+export const LATEST_SCHEMA_VERSION = 3;
 
 export interface Migration {
   version: number;
@@ -40,6 +40,13 @@ export const MIGRATIONS: Migration[] = [
       // Até a v1, `PRAGMA foreign_keys` era desligado silenciosamente a cada salvamento
       // (o `export()` do sql.js reabre a conexão). Exclusões não cascateavam e deixaram órfãos.
       removeOrphanRows(db);
+    },
+  },
+  {
+    version: 3,
+    description: 'Páginas lidas de cada PDF (marcadas pelo leitor)',
+    up: (db) => {
+      db.run("ALTER TABLE pdf_sources ADD COLUMN read_pages_json TEXT DEFAULT '[]'");
     },
   },
 ];

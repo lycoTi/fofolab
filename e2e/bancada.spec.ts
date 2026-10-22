@@ -29,16 +29,30 @@ async function waitSaved(page: Page) {
   await expect(page.getByText('Salvo', { exact: true })).toBeVisible();
 }
 
-function minimalPdf(pages: number): Buffer {
-  const kids = Array.from({ length: pages }, (_, i) => `${i + 3} 0 R`).join(' ');
-  const pageObjects = Array.from(
-    { length: pages },
-    (_, i) => `${i + 3} 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 200 200] >> endobj`
-  ).join('\n');
-  return Buffer.from(
-    `%PDF-1.4\n1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj\n2 0 obj << /Type /Pages /Kids [${kids}] /Count ${pages} >> endobj\n${pageObjects}\ntrailer << /Root 1 0 R >>\n%%EOF\n`,
-    'latin1'
-  );
+/** PDF válido (com tabela xref) e uma linha de texto por página: "Pagina N do material". */
+function textPdf(pages: number): Buffer {
+  const objects: string[] = [];
+  const pageIds = Array.from({ length: pages }, (_, i) => 4 + i * 2);
+  objects[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+  objects[2] = `<< /Type /Pages /Kids [${pageIds.map((id) => `${id} 0 R`).join(' ')}] /Count ${pages} >>`;
+  objects[3] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>';
+  pageIds.forEach((id, i) => {
+    const stream = `BT /F1 28 Tf 72 700 Td (Pagina ${i + 1} do material) Tj ET`;
+    objects[id] = `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents ${id + 1} 0 R >>`;
+    objects[id + 1] = `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`;
+  });
+
+  let out = '%PDF-1.4\n';
+  const offsets: number[] = [];
+  for (let n = 1; n < objects.length; n++) {
+    offsets.push(out.length);
+    out += `${n} 0 obj\n${objects[n]}\nendobj\n`;
+  }
+  const xrefOffset = out.length;
+  out += `xref\n0 ${objects.length}\n0000000000 65535 f \n`;
+  out += offsets.map((o) => `${String(o).padStart(10, '0')} 00000 n \n`).join('');
+  out += `trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`;
+  return Buffer.from(out, 'latin1');
 }
 
 test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu Dia usa isso', async ({ page }) => {
@@ -177,38 +191,95 @@ test('excluir e restaurar o exemplo pedem confirmação; a cópia automática pe
   await expect(dialog.getByText('Plano Pessoal E2E').first()).toBeVisible();
 });
 
-test('lê PDF em tela grande com o caderno ao lado, e a largura das colunas fica salva', async ({ page }) => {
+const TEST_PDF = { name: 'material-teste.pdf', mimeType: 'application/pdf', buffer: textPdf(6) };
+
+async function openReaderTab(page: Page) {
+  await page.getByRole('button', { name: /Leitura de PDF/ }).click();
+  await expect(page.getByRole('region', { name: 'Leitura de PDF' })).toBeVisible();
+}
+
+test('leitor de PDF: acha o total de páginas, segue a página na tela e marca as lidas sozinho', async ({ page }) => {
+  // Relógio controlado pelo teste, para "esperar" os 15 s sem esperar de verdade
+  await page.clock.install();
   await skipWizard(page);
   await page.goto('/');
   await openPro(page);
+  await openReaderTab(page);
 
-  await page.getByRole('button', { name: /Caderno & PDF/ }).click();
-  await page.getByRole('button', { name: /^PDF/ }).click();
-  await page
-    .getByLabel('Escolher arquivo PDF')
-    .first()
-    .setInputFiles({ name: 'material-teste.pdf', mimeType: 'application/pdf', buffer: minimalPdf(3) });
-  await expect(page.getByLabel('Total de páginas').first()).toHaveValue('3');
+  // Um leitor só: o painel lateral não tem mais a aba "PDF"
+  await expect(page.getByRole('button', { name: /^PDF/ })).toHaveCount(0);
 
-  await page.getByRole('button', { name: 'Ler em tela grande' }).click();
-  const reader = page.getByTitle('Leitor de PDF em tela grande');
-  await expect(reader).toBeVisible();
+  await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
+  const progress = page.getByRole('progressbar', { name: 'Páginas lidas' });
+  await expect(progress).toHaveAttribute('aria-valuemax', '6');
+  await expect(page.getByText('Pagina 1 do material')).toBeVisible();
+  await expect(progress).toHaveAttribute('aria-valuenow', '0');
+
+  await page.clock.runFor(16_000);
+  await expect(progress).toHaveAttribute('aria-valuenow', '1');
+  await expect(page.getByRole('button', { name: 'Página lida' })).toHaveAttribute('aria-pressed', 'true');
+
+  const pageInput = page.getByLabel('Ir para a página');
+  await pageInput.fill('4');
+  await pageInput.press('Enter');
+  await expect(page.getByText('Pagina 4 do material')).toBeInViewport();
+  await expect(page.getByRole('button', { name: 'Marcar lida' })).toBeVisible();
+  await page.screenshot({ path: `${SCREENS}/06-leitor-pdf.png` });
+
+  // A página onde parou é gravada; ao reabrir o arquivo, volta nela com o progresso
+  await page.clock.runFor(2_000);
+  await waitSaved(page);
+  await page.reload();
+  await openPro(page);
+  await openReaderTab(page);
+  await expect(page.getByText(/Você parou na página 4/)).toBeVisible();
+  await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
+  await expect(page.getByText('Pagina 4 do material')).toBeInViewport();
+  await expect(page.getByLabel('Ir para a página')).toHaveValue('4');
+  await expect(progress).toHaveAttribute('aria-valuenow', '1');
+
+  // Desmarcar à mão vale (e o leitor não remarca sozinho)
+  await pageInput.fill('1');
+  await pageInput.press('Enter');
+  await page.getByRole('button', { name: 'Página lida' }).click();
+  await page.clock.runFor(30_000);
+  await expect(progress).toHaveAttribute('aria-valuenow', '0');
+});
+
+test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do caderno fica salva', async ({ page }) => {
+  await skipWizard(page);
+  await page.goto('/');
+  await openPro(page);
+  await openReaderTab(page);
   // Para sobrar espaço ao PDF, a árvore de tópicos e o copiloto se recolhem
   await expect(page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' })).toHaveCount(0);
   await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toHaveCount(0);
-  expect((await reader.boundingBox())!.width).toBeGreaterThan(800);
 
-  const handle = page.getByRole('separator', { name: 'Largura do caderno e PDF' });
+  await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
+  await expect(page.getByText('Pagina 1 do material')).toBeVisible();
+  const scroll = page.getByTestId('pdf-scroll');
+  const normalWidth = (await scroll.boundingBox())!.width;
+
+  const handle = page.getByRole('separator', { name: 'Largura do caderno' });
   await handle.focus();
   for (let i = 0; i < 5; i++) await handle.press('ArrowLeft');
   await expect(handle).toHaveAttribute('aria-valuenow', '464');
-
-  // Caderno com salvamento automático ao lado do PDF
-  await page.getByRole('button', { name: /^Caderno$/ }).click();
-  await page.getByLabel('Conteúdo do caderno do tópico').fill('Anotação feita lendo o PDF em tela grande');
+  await page.getByLabel('Conteúdo do caderno do tópico').fill('Anotação feita lendo o PDF');
   await expect(page.getByText('Salvo automaticamente')).toBeVisible();
   await waitSaved(page);
-  await page.screenshot({ path: `${SCREENS}/06-leitura-tela-grande.png` });
+
+  await page.getByRole('button', { name: 'Maximizar leitura' }).click();
+  await expect(page.getByRole('button', { name: 'Bancada Pro' })).toBeHidden();
+  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeHidden();
+  // O caderno continua ao lado até ser escondido pelo botão do próprio leitor
+  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toBeVisible();
+  await page.getByTitle('Mostrar ou esconder o caderno ao lado').click();
+  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveCount(0);
+  expect((await scroll.boundingBox())!.width).toBeGreaterThan(normalWidth + 300);
+  await page.screenshot({ path: `${SCREENS}/07-leitura-maximizada.png` });
+
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('button', { name: 'Bancada Pro' })).toBeVisible();
 
   // Saindo da leitura, os painéis voltam como estavam
   await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
@@ -217,7 +288,9 @@ test('lê PDF em tela grande com o caderno ao lado, e a largura das colunas fica
 
   await page.reload();
   await openPro(page);
-  await page.getByRole('button', { name: /Caderno & PDF/ }).click();
-  await expect(page.getByRole('separator', { name: 'Largura do caderno e PDF' })).toHaveAttribute('aria-valuenow', '464');
-  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveValue('Anotação feita lendo o PDF em tela grande');
+  await page.locator('header').getByRole('button', { name: 'Caderno', exact: true }).click();
+  await expect(page.getByRole('separator', { name: 'Largura do caderno' })).toHaveAttribute('aria-valuenow', '464');
+  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveValue('Anotação feita lendo o PDF');
+  // Fora da leitura, o painel lateral leva de volta ao PDF do tópico
+  await expect(page.getByRole('button', { name: /Continuar leitura/ })).toBeVisible();
 });

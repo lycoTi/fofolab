@@ -243,6 +243,26 @@ describe('Bancada: cadernos, PDFs e diagnóstico gravados no lugar certo', () =>
     expect(original?.current_page).toBe(24);
   });
 
+  it('páginas lidas do PDF: ficam com o mesmo arquivo, zeram ao trocar de arquivo e respeitam o total', async () => {
+    const { db } = await openDatabase();
+    const base = { subjectId: 'subj-cgu-auditoria', topicId: 't-cgu-1-1', currentPage: 3 };
+    const sourceId = 'pdf-cgu-1-1';
+    const title = 'Manual de Auditoria Governamental & ISSAI 100-400.pdf';
+    const filePath = 'docs/pdfs/issai-100-cgu.pdf';
+
+    const marked = db.savePdfSourceProgress({ ...base, pdfSourceId: sourceId, title, filePath, totalPages: 68, readPages: [1, 2, 99] });
+    expect(JSON.parse(marked.read_pages_json)).toEqual([1, 2]);
+
+    // Só mudar a página atual mantém o que já foi lido
+    const moved = db.savePdfSourceProgress({ ...base, pdfSourceId: sourceId, title, filePath, totalPages: 68, currentPage: 10 });
+    expect(JSON.parse(moved.read_pages_json)).toEqual([1, 2]);
+
+    // Outro arquivo no mesmo tópico começa do zero
+    const other = db.savePdfSourceProgress({ ...base, pdfSourceId: sourceId, title: 'Outro.pdf', filePath: 'Outro.pdf', totalPages: 5 });
+    expect(other.id).toBe(sourceId);
+    expect(JSON.parse(other.read_pages_json)).toEqual([]);
+  });
+
   it('recusa diagnóstico incoerente e grava tempo gasto e uso da explicação de verdade', async () => {
     const { db } = await openDatabase();
     const base = { questionId: 'q-fgv-cgu-issai-1', topicId: 't-cgu-1-1' };

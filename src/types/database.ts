@@ -100,6 +100,8 @@ export interface PdfSource {
   total_pages: number;
   highlights_json: string;
   last_opened_at: string | null;
+  /** Números das páginas lidas, ex.: "[1,2,5]". */
+  read_pages_json: string;
 }
 
 // 8. questions

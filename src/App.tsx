@@ -22,7 +22,7 @@ import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
 import { DailyFocusView } from './features/daily-focus/DailyFocusView';
 import { NotebookDockPanel } from './features/notebook-dock/NotebookDockPanel';
-import { estimatePdfPageCount, PdfReaderStage, type PdfProgressUpdate } from './features/notebook-dock/PdfReader';
+import { PdfReaderStage, type PdfProgressUpdate } from './features/pdf-reader/PdfReaderStage';
 import { useNotebookDraft } from './features/notebook-dock/useNotebookDraft';
 import {
   ONBOARDING_COMPLETED_KEY,
@@ -160,6 +160,9 @@ export default function App() {
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
   const pdfUrlRef = useRef<string | null>(null);
   const docksBeforeReaderRef = useRef<{ syllabus: boolean; copilot: boolean } | null>(null);
+  // Leitura ampliada: esconde cabeçalho, abas e painéis (o caderno abre por um botão do leitor)
+  const [readerMaximized, setReaderMaximized] = useState(false);
+  const [readerFullscreen, setReaderFullscreen] = useState(false);
   const [pomodoroPreset, setPomodoroPreset] = useState<{ minutes: number; nonce: number } | null>(null);
 
   const [adminData, setAdminData] = useState<{
@@ -307,6 +310,28 @@ export default function App() {
     };
   }, [activePlan, currentSubject, currentTopic, cycleData]);
 
+  const readerExpanded = readerMaximized && mode === 'student' && experienceMode === 'pro' && activeTab === 'reader';
+
+  useEffect(() => {
+    const onFullscreenChange = () => {
+      const active = document.fullscreenElement !== null;
+      setReaderFullscreen(active);
+      if (active) setReaderMaximized(true);
+    };
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, []);
+
+  // Esc restaura o tamanho normal (na tela cheia, o primeiro Esc é do navegador, para sair dela)
+  useEffect(() => {
+    if (!readerExpanded) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !document.fullscreenElement) setReaderMaximized(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [readerExpanded]);
+
   if (initError) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200 p-6">
@@ -419,10 +444,10 @@ export default function App() {
     return result;
   };
 
-  const handleOpenPdfFile = async (file: File) => {
+  const handleOpenPdfFile = (file: File) => {
     if (!currentSubject || !currentTopic) return;
     const sameFile = pdfSource?.file_path === file.name;
-    const estimatedPages = sameFile ? null : await estimatePdfPageCount(file);
+    // O total certo de páginas chega quando o leitor termina de abrir o arquivo
     const saved = savePdfSourceProgress({
       pdfSourceId: sameFile ? pdfSource?.id : null,
       subjectId: currentSubject.id,
@@ -430,7 +455,7 @@ export default function App() {
       title: file.name,
       filePath: file.name,
       currentPage: sameFile && pdfSource ? pdfSource.current_page : 1,
-      totalPages: sameFile && pdfSource ? pdfSource.total_pages : (estimatedPages ?? 1),
+      totalPages: sameFile && pdfSource ? pdfSource.total_pages : 1,
     });
     if (pdfUrlRef.current) URL.revokeObjectURL(pdfUrlRef.current);
     const url = URL.createObjectURL(file);
@@ -624,6 +649,16 @@ export default function App() {
     selectTab('reader');
   };
 
+  const toggleReaderMaximized = () => {
+    if (readerMaximized && document.fullscreenElement) void document.exitFullscreen();
+    setReaderMaximized((v) => !v);
+  };
+
+  const toggleReaderFullscreen = () => {
+    if (document.fullscreenElement) void document.exitFullscreen();
+    else void document.documentElement.requestFullscreen?.().catch(() => {});
+  };
+
   const dockToggleClass = (active: boolean) =>
     `px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
       active
@@ -640,7 +675,7 @@ export default function App() {
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-slate-950 text-slate-100">
       {/* Slot 1: Dock Esquerdo (Árvore de Tópicos e Edital) — Apenas no Modo Pro */}
-      {experienceMode === 'pro' && showSyllabusDock && (
+      {experienceMode === 'pro' && showSyllabusDock && !readerExpanded && (
         <>
           <SyllabusTreeDock
             width={syllabusWidth.width}
@@ -676,7 +711,12 @@ export default function App() {
       <main className="flex-1 flex flex-col overflow-hidden min-w-0">
         {mode === 'student' ? (
           <>
-            <header className="border-b border-slate-800 bg-slate-900/40 px-5 py-3 flex flex-wrap items-center justify-between gap-3 shrink-0">
+            {/* Escondido com CSS (não desmontado) para o Pomodoro continuar contando na leitura ampliada */}
+            <header
+              className={`border-b border-slate-800 bg-slate-900/40 px-5 py-3 flex-wrap items-center justify-between gap-3 shrink-0 ${
+                readerExpanded ? 'hidden' : 'flex'
+              }`}
+            >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="flex items-center p-1 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold">
                   <button
@@ -733,10 +773,10 @@ export default function App() {
                       type="button"
                       onClick={() => setShowNotebookDock((v) => !v)}
                       className={dockToggleClass(showNotebookDock)}
-                      title="Expandir ou recolher Caderno Lateral e PDF"
+                      title="Expandir ou recolher o Caderno Lateral"
                     >
                       <BookOpen size={13} />
-                      Caderno & PDF
+                      Caderno
                     </button>
                     <button
                       type="button"
@@ -791,7 +831,11 @@ export default function App() {
 
             {experienceMode === 'pro' && (
               <>
-                <div className="px-6 pt-2.5 border-b border-slate-800 flex items-center gap-2 bg-slate-900/20">
+                <div
+                  className={`px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 ${
+                    readerExpanded ? 'hidden' : 'flex'
+                  }`}
+                >
                   {(
                     [
                       { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
@@ -824,7 +868,7 @@ export default function App() {
                   <div
                     className={
                       activeTab === 'reader'
-                        ? 'flex-1 p-4 min-w-0 flex flex-col min-h-0'
+                        ? `flex-1 min-w-0 flex flex-col min-h-0 ${readerExpanded ? 'p-2' : 'p-4'}`
                         : 'flex-1 overflow-y-auto p-6 min-w-0'
                     }
                   >
@@ -870,8 +914,14 @@ export default function App() {
                         pdfSource={pdfSource}
                         pdfFileUrl={visiblePdfUrl}
                         pdfFileName={pdfFile?.name ?? null}
-                        onOpenFile={(file) => void handleOpenPdfFile(file)}
+                        onOpenFile={handleOpenPdfFile}
                         onSaveProgress={handleSavePdfProgress}
+                        maximized={readerExpanded}
+                        onToggleMaximized={toggleReaderMaximized}
+                        fullscreen={readerFullscreen}
+                        onToggleFullscreen={toggleReaderFullscreen}
+                        notebookVisible={showNotebookDock}
+                        onToggleNotebook={() => setShowNotebookDock((v) => !v)}
                       />
                     )}
 
@@ -895,11 +945,11 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Slot 3: Dock Lateral de Caderno, Busca e Leitor PDF */}
+                  {/* Slot 3: Dock Lateral de Caderno e Busca */}
                   {showNotebookDock && (
                     <>
                       <ResizeHandle
-                        label="Largura do caderno e PDF"
+                        label="Largura do caderno"
                         direction="grow-left"
                         width={notebookWidth.width}
                         min={notebookWidth.min}
@@ -920,9 +970,6 @@ export default function App() {
                         draftStatus={notebook.status}
                         allNotebooks={allNotebooks}
                         pdfSource={pdfSource}
-                        pdfFileUrl={visiblePdfUrl}
-                        onOpenPdfFile={(file) => void handleOpenPdfFile(file)}
-                        onSavePdfProgress={handleSavePdfProgress}
                         onOpenReader={activeTab === 'reader' ? undefined : openReader}
                         onJumpToTopic={(subjId, topId) => {
                           setSelectedSubjectId(subjId);
@@ -934,7 +981,7 @@ export default function App() {
                   )}
 
                   {/* Slot 4: Dock Lateral do Copiloto IA Contextual */}
-                  {showAiCopilotDock && studentContext && (
+                  {showAiCopilotDock && studentContext && !readerExpanded && (
                     <>
                       <ResizeHandle
                         label="Largura do copiloto"

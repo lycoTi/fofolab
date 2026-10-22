@@ -46,7 +46,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const result = prepareSchema(db, latestSchemaSql);
     expect(result.created).toBe(false);
     expect(result.previousVersion).toBe(1);
-    expect(result.appliedMigrations).toEqual([2]);
+    expect(result.appliedMigrations).toEqual([2, 3]);
     expect(getUserVersion(db)).toBe(LATEST_SCHEMA_VERSION);
     db.close();
   });

@@ -5,7 +5,7 @@ import { CycleDashboard } from '../components/CycleDashboard';
 import { QuestionWorkbench } from '../components/QuestionWorkbench';
 import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
 import { NotebookDockPanel } from '../features/notebook-dock/NotebookDockPanel';
-import { PdfReaderStage } from '../features/notebook-dock/PdfReader';
+import { PdfReaderStage } from '../features/pdf-reader/PdfReaderStage';
 import { QuestionImportModal } from '../features/question-import/QuestionImportModal';
 import {
   SEED_AI_DISSECTIONS,
@@ -277,8 +277,6 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           onSaveNotebook={vi.fn()}
           allNotebooks={SEED_NOTEBOOKS}
           pdfSource={SEED_PDF_SOURCES[0]}
-          onSavePdfProgress={vi.fn()}
-          onOpenPdfFile={vi.fn()}
           onOpenReader={vi.fn()}
           onJumpToTopic={vi.fn()}
         />

@@ -299,8 +299,8 @@ function seedInitialData(db: Database): void {
 
     for (const pdf of SEED_PDF_SOURCES) {
       db.run(
-        `INSERT OR IGNORE INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        `INSERT OR IGNORE INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at, read_pages_json)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           pdf.id,
           pdf.subject_id,
@@ -311,6 +311,7 @@ function seedInitialData(db: Database): void {
           pdf.total_pages,
           pdf.highlights_json,
           pdf.last_opened_at,
+          pdf.read_pages_json,
         ]
       );
     }
@@ -1456,6 +1457,8 @@ export function savePdfSourceProgress(params: {
   filePath: string;
   currentPage: number;
   totalPages: number;
+  /** Omitido: mantém as páginas lidas do mesmo arquivo e zera ao trocar de arquivo. */
+  readPages?: number[];
 }): PdfSource {
   const db = getDb();
   const now = new Date().toISOString();
@@ -1476,12 +1479,23 @@ export function savePdfSourceProgress(params: {
     [params.topicId]
   );
 
+  const readPagesJson = (previous: string) =>
+    params.readPages ? JSON.stringify(params.readPages.filter((p) => p >= 1 && p <= safeTotal)) : previous;
+
   if (target) {
     db.run(
       `UPDATE pdf_sources
-       SET title = ?, file_path = ?, current_page = ?, total_pages = ?, last_opened_at = ?
+       SET title = ?, file_path = ?, current_page = ?, total_pages = ?, last_opened_at = ?, read_pages_json = ?
        WHERE id = ?`,
-      [params.title, params.filePath, safeCurrent, safeTotal, now, target.id]
+      [
+        params.title,
+        params.filePath,
+        safeCurrent,
+        safeTotal,
+        now,
+        readPagesJson(target.file_path === params.filePath ? target.read_pages_json : '[]'),
+        target.id,
+      ]
     );
     persistDatabase();
     return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [target.id])!;
@@ -1489,9 +1503,9 @@ export function savePdfSourceProgress(params: {
 
   const id = newId('pdf');
   db.run(
-    `INSERT INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, '[]', ?)`,
-    [id, params.subjectId, params.topicId, params.title, params.filePath, safeCurrent, safeTotal, now]
+    `INSERT INTO pdf_sources (id, subject_id, topic_id, title, file_path, current_page, total_pages, highlights_json, last_opened_at, read_pages_json)
+     VALUES (?, ?, ?, ?, ?, ?, ?, '[]', ?, ?)`,
+    [id, params.subjectId, params.topicId, params.title, params.filePath, safeCurrent, safeTotal, now, readPagesJson('[]')]
   );
   persistDatabase();
   return queryOne<PdfSource>(db, 'SELECT * FROM pdf_sources WHERE id = ?', [id])!;

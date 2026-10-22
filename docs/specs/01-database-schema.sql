@@ -1,6 +1,6 @@
 -- ============================================================================
 -- FofoLab — Contrato Oficial do Banco de Dados Local (SQLite)
--- Versão do contrato: 2 (PRAGMA user_version). Sempre a versão MAIS RECENTE.
+-- Versão do contrato: 3 (PRAGMA user_version). Sempre a versão MAIS RECENTE.
 -- Bancos existentes são atualizados pelas migrações em src/lib/migrations.ts:
 -- toda mudança aqui exige uma migração equivalente (há teste comparando os dois caminhos).
 -- Arquivo: fofolab.db (Tauri: pasta de dados do app; navegador: armazenamento interno).
@@ -95,7 +95,8 @@ CREATE TABLE IF NOT EXISTS pdf_sources (
     current_page INTEGER DEFAULT 1,
     total_pages INTEGER DEFAULT 1,
     highlights_json TEXT DEFAULT '[]',     -- Coordenadas e notas ancoradas
-    last_opened_at DATETIME
+    last_opened_at DATETIME,
+    read_pages_json TEXT DEFAULT '[]'      -- Páginas que ficaram 15 s na tela (ou marcadas à mão)
 );
 
 -- 8. Banco Local de Questões de Provas Anteriores
