@@ -108,19 +108,6 @@
       "source_location": "L354"
     },
     {
-      "id": "src_lib_airouter_questioncomplexityprofile",
-      "label": "QuestionComplexityProfile",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "questioncomplexityprofile",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "src_lib_airouter_realprovider",
       "label": "RealProvider",
       "_callable": true,
@@ -277,43 +264,56 @@
       "source_location": "L35"
     },
     {
-      "id": "src_components_cycledashboard_cycledashboardprops",
-      "label": "CycleDashboardProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "DailyFocusView.tsx",
-      "file_type": "code",
-      "norm_label": "cycledashboardprops",
-      "source_file": "src/components/CycleDashboard.tsx",
-      "source_location": "L19"
-    },
-    {
       "id": "src_features_daily_focus_dailyfocusview_dailyfocusviewprops",
       "label": "DailyFocusViewProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusviewprops",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L9"
     },
     {
-      "id": "src_lib_cycleengine_cyclecalculationresult",
-      "label": "CycleCalculationResult",
+      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
+      "label": "QuestionImportModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "cyclecalculationresult",
+      "norm_label": "questionimportmodalprops",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
+      "label": "SyllabusTreeDockProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedockprops",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_lib_cycleengine_subjectcycleallocation",
+      "label": "SubjectCycleAllocation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subjectcycleallocation",
       "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L116"
+      "source_location": "L92"
     },
     {
       "id": "src_lib_dailyplanner_costbenefitbadge",
@@ -322,11 +322,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "costbenefitbadge",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L9"
+    },
+    {
+      "id": "src_lib_dailyplanner_dailyfocusblock",
+      "label": "DailyFocusBlock",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "dailyfocusblock",
+      "source_file": "src/lib/dailyPlanner.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_lib_dailyplanner_dailyplan",
@@ -335,7 +348,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyplan",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -348,11 +361,37 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "studyplan",
       "source_file": "src/types/database.ts",
       "source_location": "L30"
+    },
+    {
+      "id": "src_types_database_subject",
+      "label": "Subject",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subject",
+      "source_file": "src/types/database.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_types_database_topic",
+      "label": "Topic",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "topic",
+      "source_file": "src/types/database.ts",
+      "source_location": "L61"
     },
     {
       "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
@@ -511,19 +550,6 @@
       "source_location": "L7"
     },
     {
-      "id": "src_types_database_topiclink",
-      "label": "TopicLink",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "topiclink",
-      "source_file": "src/types/database.ts",
-      "source_location": "L73"
-    },
-    {
       "id": "src_types_database_topicrelationtype",
       "label": "TopicRelationType",
       "_callable": true,
@@ -628,6 +654,19 @@
       "source_location": "L148"
     },
     {
+      "id": "src_components_cycledashboard_cycledashboardprops",
+      "label": "CycleDashboardProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "cycledashboardprops",
+      "source_file": "src/components/CycleDashboard.tsx",
+      "source_location": "L19"
+    },
+    {
       "id": "src_components_metricexplainer_metricexplainerprops",
       "label": "MetricExplainerProps",
       "_callable": true,
@@ -639,6 +678,32 @@
       "norm_label": "metricexplainerprops",
       "source_file": "src/components/MetricExplainer.tsx",
       "source_location": "L5"
+    },
+    {
+      "id": "src_lib_airouter_questioncomplexityprofile",
+      "label": "QuestionComplexityProfile",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "questioncomplexityprofile",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_lib_cycleengine_cyclecalculationresult",
+      "label": "CycleCalculationResult",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "cyclecalculationresult",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L116"
     },
     {
       "id": "src_lib_cycleengine_cyclesuggestion",
@@ -654,6 +719,19 @@
       "source_location": "L108"
     },
     {
+      "id": "src_lib_cycleengine_topicheatitem",
+      "label": "TopicHeatItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "topicheatitem",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L63"
+    },
+    {
       "id": "src_lib_explainabilityengine_metricexplanation",
       "label": "MetricExplanation",
       "_callable": true,
@@ -667,238 +745,17 @@
       "source_location": "L17"
     },
     {
-      "id": "src_lib_migrations_migration",
-      "label": "Migration",
+      "id": "src_types_database_topiclink",
+      "label": "TopicLink",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "migration",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_lib_migrations_schemapreparationresult",
-      "label": "SchemaPreparationResult",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "schemapreparationresult",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L79"
-    },
-    {
-      "id": "src_lib_migrations_schematoonewerror",
-      "label": "SchemaTooNewError",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "schematoonewerror",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L70"
-    },
-    {
-      "id": "src_tests_database_test_databasemodule",
-      "label": "DatabaseModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "databasemodule",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_tests_database_test_savestatusmodule",
-      "label": "SaveStatusModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "savestatusmodule",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
-      "label": "NotebookDockPanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanelprops",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
-      "label": "DraftOwner",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "draftowner",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
-      "label": "NotebookDraftStatus",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdraftstatus",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
-      "label": "SyllabusTreeDockProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedockprops",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_lib_cycleengine_subjectcycleallocation",
-      "label": "SubjectCycleAllocation",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subjectcycleallocation",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_lib_cycleengine_topicheatitem",
-      "label": "TopicHeatItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "topicheatitem",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L63"
-    },
-    {
-      "id": "src_lib_dailyplanner_dailyfocusblock",
-      "label": "DailyFocusBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "dailyfocusblock",
-      "source_file": "src/lib/dailyPlanner.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_types_database_notebook",
-      "label": "Notebook",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebook",
+      "norm_label": "topiclink",
       "source_file": "src/types/database.ts",
-      "source_location": "L82"
-    },
-    {
-      "id": "src_types_database_pdfsource",
-      "label": "PdfSource",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "pdfsource",
-      "source_file": "src/types/database.ts",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_types_database_subject",
-      "label": "Subject",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subject",
-      "source_file": "src/types/database.ts",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_types_database_topic",
-      "label": "Topic",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "topic",
-      "source_file": "src/types/database.ts",
-      "source_location": "L61"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
-      "label": "QuestionImportModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodalprops",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_types_database_importquestionitem",
-      "label": "ImportQuestionItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "importquestionitem",
-      "source_file": "src/types/database.ts",
-      "source_location": "L219"
+      "source_location": "L73"
     },
     {
       "id": "src_components_pomodorowidget_pomodorosessionresult",
@@ -953,6 +810,32 @@
       "source_location": "L22"
     },
     {
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
+      "label": "NotebookDockPanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdockpanelprops",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
+      "label": "NotebookDraftStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdraftstatus",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L8"
+    },
+    {
       "id": "src_features_pdf_reader_pdfdocument_pagesize",
       "label": "PageSize",
       "_callable": true,
@@ -1003,6 +886,32 @@
       "norm_label": "pdfpagenavigation",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
       "source_location": "L77"
+    },
+    {
+      "id": "src_types_database_notebook",
+      "label": "Notebook",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "notebook",
+      "source_file": "src/types/database.ts",
+      "source_location": "L82"
+    },
+    {
+      "id": "src_types_database_pdfsource",
+      "label": "PdfSource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "pdfsource",
+      "source_file": "src/types/database.ts",
+      "source_location": "L93"
     },
     {
       "id": "src_features_onboarding_wizard_onboardingwizardmodal_onboardingprofile",
@@ -1174,6 +1083,32 @@
       "source_location": "L11"
     },
     {
+      "id": "src_tests_database_test_databasemodule",
+      "label": "DatabaseModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "databasemodule",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_tests_database_test_savestatusmodule",
+      "label": "SaveStatusModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatusmodule",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L13"
+    },
+    {
       "id": "src_app_appmode",
       "label": "AppMode",
       "_callable": true,
@@ -1239,6 +1174,32 @@
       "source_location": "L4"
     },
     {
+      "id": "src_components_resizehandle_resizehandleprops",
+      "label": "ResizeHandleProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "resizehandleprops",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
+      "label": "DraftOwner",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "draftowner",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L10"
+    },
+    {
       "id": "src_lib_database_inconsistentdiagnosiserror",
       "label": "InconsistentDiagnosisError",
       "_callable": true,
@@ -1265,17 +1226,43 @@
       "source_location": "L96"
     },
     {
-      "id": "src_components_resizehandle_resizehandleprops",
-      "label": "ResizeHandleProps",
+      "id": "src_lib_migrations_migration",
+      "label": "Migration",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
+      "community": 5,
+      "community_name": "lib/database.ts",
       "file_type": "code",
-      "norm_label": "resizehandleprops",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L33"
+      "norm_label": "migration",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_lib_migrations_schemapreparationresult",
+      "label": "SchemaPreparationResult",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "schemapreparationresult",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L79"
+    },
+    {
+      "id": "src_lib_migrations_schematoonewerror",
+      "label": "SchemaTooNewError",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "schematoonewerror",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L70"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryviewprops",
@@ -1380,6 +1367,19 @@
       "norm_label": "questionoption",
       "source_file": "src/lib/questionOptions.ts",
       "source_location": "L6"
+    },
+    {
+      "id": "src_types_database_importquestionitem",
+      "label": "ImportQuestionItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "importquestionitem",
+      "source_file": "src/types/database.ts",
+      "source_location": "L219"
     },
     {
       "id": "src_components_questionworkbench_describediagnosishint",
@@ -1488,6 +1488,18 @@
       "norm_label": "builddemocopilotreply()",
       "source_file": "src/lib/aiRouter.ts",
       "source_location": "L464"
+    },
+    {
+      "id": "src_lib_airouter_builddemotutorreply",
+      "label": "buildDemoTutorReply()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "builddemotutorreply()",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L397"
     },
     {
       "id": "src_lib_airouter_builddissectionprompt",
@@ -1778,6 +1790,30 @@
       "source_location": "L219"
     },
     {
+      "id": "src_lib_questionoptions_findcorrectoption",
+      "label": "findCorrectOption()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "findcorrectoption()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L64"
+    },
+    {
+      "id": "src_lib_questionoptions_parsequestionoptions",
+      "label": "parseQuestionOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "parsequestionoptions()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L51"
+    },
+    {
       "id": "src_tests_airouter_test_geminiresponse",
       "label": "geminiResponse()",
       "_callable": true,
@@ -1879,7 +1915,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusview()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -1891,11 +1927,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "formatdailybudget()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L25"
+    },
+    {
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
+      "label": "SyllabusTreeDock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedock()",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L21"
     },
     {
       "id": "src_lib_dailyplanner_describereason",
@@ -1903,7 +1951,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "describereason()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1915,7 +1963,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "pickbadge()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1927,7 +1975,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "plandailyblocks()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1939,7 +1987,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "roundto5()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1980,6 +2028,66 @@
       "norm_label": "getsamplesubtopicsforcalibration()",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L198"
+    },
+    {
+      "id": "src_lib_syllabusimport_cleantitle",
+      "label": "cleanTitle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "cleantitle()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_lib_syllabusimport_lookslikeheader",
+      "label": "looksLikeHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "lookslikeheader()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_lib_syllabusimport_parenttopiccode",
+      "label": "parentTopicCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "parenttopiccode()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L68"
+    },
+    {
+      "id": "src_lib_syllabusimport_parsesyllabustopics",
+      "label": "parseSyllabusTopics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "parsesyllabustopics()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_syllabusimport_splitnumberedsegments",
+      "label": "splitNumberedSegments()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "splitnumberedsegments()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L20"
     },
     {
       "id": "src_lib_cycleengine_calculatedynamicstudycycle",
@@ -2066,18 +2174,6 @@
       "source_location": "L281"
     },
     {
-      "id": "src_lib_cycleengine_samplesaturationk",
-      "label": "sampleSaturationK()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "cycleEngine.ts",
-      "file_type": "code",
-      "norm_label": "samplesaturationk()",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L154"
-    },
-    {
       "id": "src_lib_cycleengine_startofweek",
       "label": "startOfWeek()",
       "_callable": true,
@@ -2162,6 +2258,18 @@
       "source_location": "L13"
     },
     {
+      "id": "src_lib_cycleengine_samplesaturationk",
+      "label": "sampleSaturationK()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "samplesaturationk()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L154"
+    },
+    {
       "id": "src_lib_explainabilityengine_describestrategy",
       "label": "describeStrategy()",
       "_callable": true,
@@ -2220,174 +2328,6 @@
       "norm_label": "formatdecimal()",
       "source_file": "src/lib/explainabilityEngine.ts",
       "source_location": "L28"
-    },
-    {
-      "id": "src_lib_migrations_detectschemaversion",
-      "label": "detectSchemaVersion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "detectschemaversion()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L87"
-    },
-    {
-      "id": "src_lib_migrations_getuserversion",
-      "label": "getUserVersion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "getuserversion()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L54"
-    },
-    {
-      "id": "src_lib_migrations_prepareschema",
-      "label": "prepareSchema()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "prepareschema()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_lib_migrations_removeorphanrows",
-      "label": "removeOrphanRows()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "removeorphanrows()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L134"
-    },
-    {
-      "id": "src_lib_migrations_schematoonewerror_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L71"
-    },
-    {
-      "id": "src_lib_migrations_setuserversion",
-      "label": "setUserVersion()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "setuserversion()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L59"
-    },
-    {
-      "id": "src_lib_migrations_tableexists",
-      "label": "tableExists()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "tableexists()",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L63"
-    },
-    {
-      "id": "src_tests_database_test_bytesofv1database",
-      "label": "bytesOfV1Database()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "bytesofv1database()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_tests_database_test_scalar",
-      "label": "scalar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "scalar()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L28"
-    },
-    {
-      "id": "src_tests_migrations_test_describestructure",
-      "label": "describeStructure()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "describestructure()",
-      "source_file": "src/__tests__/migrations.test.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
-      "label": "DraftStatusBadge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "draftstatusbadge()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
-      "label": "NotebookDockPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
-      "label": "notebookTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebooktitle()",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
-      "label": "SyllabusTreeDock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock()",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L21"
     },
     {
       "id": "e2e_bancada_spec_opencurriculum",
@@ -2462,90 +2402,6 @@
       "source_location": "L28"
     },
     {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
-      "label": "QuestionImportModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodal()",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_lib_questionimport_toimportitems",
-      "label": "toImportItems()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "toimportitems()",
-      "source_file": "src/lib/questionImport.ts",
-      "source_location": "L378"
-    },
-    {
-      "id": "src_lib_syllabusimport_cleantitle",
-      "label": "cleanTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "cleantitle()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_lib_syllabusimport_lookslikeheader",
-      "label": "looksLikeHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "lookslikeheader()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_lib_syllabusimport_parenttopiccode",
-      "label": "parentTopicCode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "parenttopiccode()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L68"
-    },
-    {
-      "id": "src_lib_syllabusimport_parsesyllabustopics",
-      "label": "parseSyllabusTopics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "parsesyllabustopics()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_lib_syllabusimport_splitnumberedsegments",
-      "label": "splitNumberedSegments()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "splitnumberedsegments()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L20"
-    },
-    {
       "id": "src_components_pomodorowidget_pomodorowidget",
       "label": "PomodoroWidget()",
       "_callable": true,
@@ -2568,6 +2424,30 @@
       "norm_label": "renderpomodoro()",
       "source_file": "src/__tests__/pomodoro.test.tsx",
       "source_location": "L7"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
+      "label": "DraftStatusBadge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "draftstatusbadge()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
+      "label": "NotebookDockPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdockpanel()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L45"
     },
     {
       "id": "src_features_pdf_reader_pdfdocument_loadpdfdocument",
@@ -3122,6 +3002,18 @@
       "source_location": "L148"
     },
     {
+      "id": "src_tests_database_test_bytesofv1database",
+      "label": "bytesOfV1Database()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "bytesofv1database()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L32"
+    },
+    {
       "id": "src_tests_database_test_opendatabase",
       "label": "openDatabase()",
       "_callable": true,
@@ -3132,6 +3024,18 @@
       "norm_label": "opendatabase()",
       "source_file": "src/__tests__/database.test.ts",
       "source_location": "L17"
+    },
+    {
+      "id": "src_tests_database_test_scalar",
+      "label": "scalar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "scalar()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L28"
     },
     {
       "id": "src_tests_storage_test_uniquedbname",
@@ -3191,6 +3095,42 @@
       "file_type": "code",
       "norm_label": "useconfirmdialog()",
       "source_file": "src/components/ConfirmDialog.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_components_resizehandle_resizehandle",
+      "label": "ResizeHandle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "resizehandle()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_components_resizehandle_useresizablewidth",
+      "label": "useResizableWidth()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "useresizablewidth()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
+      "label": "notebookTitle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "notebooktitle()",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
       "source_location": "L16"
     },
     {
@@ -4070,6 +4010,90 @@
       "source_location": "L10"
     },
     {
+      "id": "src_lib_migrations_detectschemaversion",
+      "label": "detectSchemaVersion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "detectschemaversion()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L87"
+    },
+    {
+      "id": "src_lib_migrations_getuserversion",
+      "label": "getUserVersion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "getuserversion()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_lib_migrations_prepareschema",
+      "label": "prepareSchema()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "prepareschema()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L93"
+    },
+    {
+      "id": "src_lib_migrations_removeorphanrows",
+      "label": "removeOrphanRows()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "removeorphanrows()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L134"
+    },
+    {
+      "id": "src_lib_migrations_schematoonewerror_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L71"
+    },
+    {
+      "id": "src_lib_migrations_setuserversion",
+      "label": "setUserVersion()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "setuserversion()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L59"
+    },
+    {
+      "id": "src_lib_migrations_tableexists",
+      "label": "tableExists()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "tableexists()",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L63"
+    },
+    {
       "id": "src_lib_questionimport_normalizestatement",
       "label": "normalizeStatement()",
       "_callable": true,
@@ -4106,28 +4130,16 @@
       "source_location": "L82"
     },
     {
-      "id": "src_components_resizehandle_resizehandle",
-      "label": "ResizeHandle()",
+      "id": "src_tests_migrations_test_describestructure",
+      "label": "describeStructure()",
       "_callable": true,
       "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
+      "community": 5,
+      "community_name": "lib/database.ts",
       "file_type": "code",
-      "norm_label": "resizehandle()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_components_resizehandle_useresizablewidth",
-      "label": "useResizableWidth()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "useresizablewidth()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L7"
+      "norm_label": "describestructure()",
+      "source_file": "src/__tests__/migrations.test.ts",
+      "source_location": "L17"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryview",
@@ -4166,16 +4178,16 @@
       "source_location": "L18"
     },
     {
-      "id": "src_lib_airouter_builddemotutorreply",
-      "label": "buildDemoTutorReply()",
+      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
+      "label": "QuestionImportModal()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "builddemotutorreply()",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L397"
+      "norm_label": "questionimportmodal()",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L33"
     },
     {
       "id": "src_lib_questionimport_canonicalboardname",
@@ -4334,16 +4346,16 @@
       "source_location": "L68"
     },
     {
-      "id": "src_lib_questionoptions_findcorrectoption",
-      "label": "findCorrectOption()",
+      "id": "src_lib_questionimport_toimportitems",
+      "label": "toImportItems()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "findcorrectoption()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L64"
+      "norm_label": "toimportitems()",
+      "source_file": "src/lib/questionImport.ts",
+      "source_location": "L378"
     },
     {
       "id": "src_lib_questionoptions_normalizeoption",
@@ -4356,18 +4368,6 @@
       "norm_label": "normalizeoption()",
       "source_file": "src/lib/questionOptions.ts",
       "source_location": "L22"
-    },
-    {
-      "id": "src_lib_questionoptions_parsequestionoptions",
-      "label": "parseQuestionOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "questionImport.ts",
-      "file_type": "code",
-      "norm_label": "parsequestionoptions()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L51"
     },
     {
       "id": "src_lib_questionoptions_splitoptionprefix",
@@ -4468,6 +4468,28 @@
       "norm_label": "airouter.test.ts",
       "source_file": "src/__tests__/aiRouter.test.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_tests_questionworkbenchandrouter_test",
+      "label": "questionWorkbenchAndRouter.test.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "questionworkbenchandrouter.test.tsx",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
+      "label": "FORBIDDEN_JARGON",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "forbidden_jargon",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L29"
     },
     {
       "id": "tsconfig",
@@ -5210,7 +5232,7 @@
       "label": "DailyFocusView.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusview.tsx",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -5221,18 +5243,29 @@
       "label": "BADGE_STYLES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "badge_styles",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L19"
     },
     {
+      "id": "src_features_syllabus_dock_syllabustreedock",
+      "label": "SyllabusTreeDock.tsx",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedock.tsx",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_dailyplanner",
       "label": "dailyPlanner.ts",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyplanner.ts",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -5243,154 +5276,215 @@
       "label": "MIN_BLOCK_MINUTES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "min_block_minutes",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L29"
     },
     {
-      "id": "src_data_initialseed",
-      "label": "initialSeed.ts",
+      "id": "docs_specs_07_edital_ciclo_e_situacao",
+      "label": "07-edital-ciclo-e-situacao.md",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "initialseed.ts",
-      "source_file": "src/data/initialSeed.ts",
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "07-edital-ciclo-e-situacao.md",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
       "source_location": "L1"
     },
     {
-      "id": "src_data_initialseed_seed_admin_blueprints",
-      "label": "SEED_ADMIN_BLUEPRINTS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_10_depois_deste_projeto",
+      "label": "10. Depois deste projeto",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_admin_blueprints",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L558"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. depois deste projeto",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L109"
     },
     {
-      "id": "src_data_initialseed_seed_ai_dissections",
-      "label": "SEED_AI_DISSECTIONS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_1_por_que_agora",
+      "label": "1. Por que agora",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_ai_dissections",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L501"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. por que agora",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L6"
     },
     {
-      "id": "src_data_initialseed_seed_career_tracks",
-      "label": "SEED_CAREER_TRACKS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_2_objetivos_n\u00e3o_objetivos_e_anti_objetivos",
+      "label": "2. Objetivos, n\u00e3o objetivos e anti-objetivos",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_career_tracks",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L14"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. objetivos, nao objetivos e anti-objetivos",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L11"
     },
     {
-      "id": "src_data_initialseed_seed_notebooks",
-      "label": "SEED_NOTEBOOKS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_3_o_edital_real_fonte_de_verdade_para_testes",
+      "label": "3. O edital real (fonte de verdade para testes)",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_notebooks",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L327"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. o edital real (fonte de verdade para testes)",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L32"
     },
     {
-      "id": "src_data_initialseed_seed_pdf_sources",
-      "label": "SEED_PDF_SOURCES",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_4_ponto_de_partida_do_dono_para_semear_a_autoavalia\u00e7\u00e3o_e_validar_o_ciclo",
+      "label": "4. Ponto de partida do dono (para semear a autoavalia\u00e7\u00e3o e validar o ciclo)",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_pdf_sources",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L339"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. ponto de partida do dono (para semear a autoavaliacao e validar o ciclo)",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L45"
     },
     {
-      "id": "src_data_initialseed_seed_study_plans",
-      "label": "SEED_STUDY_PLANS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_1_importar_o_edital",
+      "label": "5.1 Importar o edital",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_study_plans",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L46"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.1 importar o edital",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L55"
     },
     {
-      "id": "src_data_initialseed_seed_subjects",
-      "label": "SEED_SUBJECTS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_2_autoavalia\u00e7\u00e3o_no_wizard",
+      "label": "5.2 Autoavalia\u00e7\u00e3o no Wizard",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_subjects",
-      "source_file": "src/data/initialSeed.ts",
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.2 autoavaliacao no wizard",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_3_ciclo_pela_nota_m\u00ednima",
+      "label": "5.3 Ciclo pela nota m\u00ednima",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.3 ciclo pela nota minima",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_4_registro_r\u00e1pido_do_que_foi_feito_no_tec",
+      "label": "5.4 Registro r\u00e1pido do que foi feito no TEC",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.4 registro rapido do que foi feito no tec",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
       "source_location": "L77"
     },
     {
-      "id": "src_data_initialseed_seed_topic_links",
-      "label": "SEED_TOPIC_LINKS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_5_tela_bom_dia_topo_do_meu_dia",
+      "label": "5.5 Tela \"Bom dia\" (topo do \"Meu Dia\")",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_topic_links",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L310"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5.5 tela \"bom dia\" (topo do \"meu dia\")",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L82"
     },
     {
-      "id": "src_data_initialseed_seed_topics",
-      "label": "SEED_TOPICS",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "label": "5. Como funciona",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_topics",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L174"
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. como funciona",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L53"
     },
     {
-      "id": "src_tests_cycleengine_test",
-      "label": "cycleEngine.test.ts",
+      "id": "docs_specs_07_edital_ciclo_e_situacao_6_dados_mudan\u00e7as_no_contrato_sql_com_migra\u00e7\u00e3o_como_manda_o_claude_md",
+      "label": "6. Dados (mudan\u00e7as no contrato SQL \u2014 com migra\u00e7\u00e3o, como manda o CLAUDE.md)",
       "_origin": "ast",
       "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "cycleengine.test.ts",
-      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. dados (mudancas no contrato sql \u2014 com migracao, como manda o claude.md)",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_7_decis\u00f5es_deixadas_ao_construtor",
+      "label": "7. Decis\u00f5es deixadas ao construtor",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. decisoes deixadas ao construtor",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L96"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_8_ordem_de_entrega_decis\u00e3o_do_claude_a_prova_\u00e9_em_53_dias",
+      "label": "8. Ordem de entrega (decis\u00e3o do Claude \u2014 a prova \u00e9 em 53 dias)",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. ordem de entrega (decisao do claude \u2014 a prova e em 53 dias)",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L99"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_9_pronto_quando_defini\u00e7\u00e3o_de_pronto_do_projeto",
+      "label": "9. Pronto quando (defini\u00e7\u00e3o de pronto do projeto)",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. pronto quando (definicao de pronto do projeto)",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "label": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "\ud83e\udded Spec 07 \u2014 Edital real, ciclo pela nota m\u00ednima e tela \"Bom dia\"",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83e\udded spec 07 \u2014 edital real, ciclo pela nota minima e tela \"bom dia\"",
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
       "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test",
-      "label": "questionWorkbenchAndRouter.test.tsx",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "questionworkbenchandrouter.test.tsx",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
-      "label": "FORBIDDEN_JARGON",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "forbidden_jargon",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
-      "source_location": "L29"
     },
     {
       "id": "src_components_curriculummanagermodal",
@@ -5401,6 +5495,17 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodal.tsx",
       "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_syllabusimport",
+      "label": "syllabusImport.ts",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "syllabusimport.ts",
+      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L1"
     },
     {
@@ -5435,28 +5540,6 @@
       "norm_label": "strategy_factors",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L43"
-    },
-    {
-      "id": "src_lib_cycleengine_subject_score_weights",
-      "label": "SUBJECT_SCORE_WEIGHTS",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "cycleEngine.ts",
-      "file_type": "code",
-      "norm_label": "subject_score_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_lib_cycleengine_topic_heat_weights",
-      "label": "TOPIC_HEAT_WEIGHTS",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "cycleEngine.ts",
-      "file_type": "code",
-      "norm_label": "topic_heat_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L28"
     },
     {
       "id": "src_tests_dailyplannerandexplainability_test",
@@ -5750,6 +5833,28 @@
       "source_location": "L49"
     },
     {
+      "id": "src_lib_cycleengine_subject_score_weights",
+      "label": "SUBJECT_SCORE_WEIGHTS",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "subject_score_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_cycleengine_topic_heat_weights",
+      "label": "TOPIC_HEAT_WEIGHTS",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "topic_heat_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L28"
+    },
+    {
       "id": "src_lib_explainabilityengine",
       "label": "explainabilityEngine.ts",
       "_origin": "ast",
@@ -5758,17 +5863,6 @@
       "file_type": "code",
       "norm_label": "explainabilityengine.ts",
       "source_file": "src/lib/explainabilityEngine.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_onboardingandexplainability_test",
-      "label": "onboardingAndExplainability.test.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "onboardingandexplainability.test.tsx",
-      "source_file": "src/__tests__/onboardingAndExplainability.test.tsx",
       "source_location": "L1"
     },
     {
@@ -5964,124 +6058,135 @@
       "source_location": "L29"
     },
     {
-      "id": "src_lib_migrations",
-      "label": "migrations.ts",
+      "id": "src_data_initialseed",
+      "label": "initialSeed.ts",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "migrations.ts",
-      "source_file": "src/lib/migrations.ts",
+      "norm_label": "initialseed.ts",
+      "source_file": "src/data/initialSeed.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_migrations_latest_schema_version",
-      "label": "LATEST_SCHEMA_VERSION",
+      "id": "src_data_initialseed_seed_admin_blueprints",
+      "label": "SEED_ADMIN_BLUEPRINTS",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "latest_schema_version",
-      "source_file": "src/lib/migrations.ts",
+      "norm_label": "seed_admin_blueprints",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L558"
+    },
+    {
+      "id": "src_data_initialseed_seed_ai_dissections",
+      "label": "SEED_AI_DISSECTIONS",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "initialSeed.ts",
+      "file_type": "code",
+      "norm_label": "seed_ai_dissections",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L501"
+    },
+    {
+      "id": "src_data_initialseed_seed_career_tracks",
+      "label": "SEED_CAREER_TRACKS",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "initialSeed.ts",
+      "file_type": "code",
+      "norm_label": "seed_career_tracks",
+      "source_file": "src/data/initialSeed.ts",
       "source_location": "L14"
     },
     {
-      "id": "src_lib_migrations_migrations",
-      "label": "MIGRATIONS",
+      "id": "src_data_initialseed_seed_notebooks",
+      "label": "SEED_NOTEBOOKS",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "migrations",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L24"
+      "norm_label": "seed_notebooks",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L327"
     },
     {
-      "id": "src_lib_migrations_seed_dissection_ids",
-      "label": "SEED_DISSECTION_IDS",
+      "id": "src_data_initialseed_seed_pdf_sources",
+      "label": "SEED_PDF_SOURCES",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "seed_dissection_ids",
-      "source_file": "src/lib/migrations.ts",
-      "source_location": "L22"
+      "norm_label": "seed_pdf_sources",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L339"
     },
     {
-      "id": "src_lib_storage_legacy_localstorage_key",
-      "label": "LEGACY_LOCALSTORAGE_KEY",
+      "id": "src_data_initialseed_seed_study_plans",
+      "label": "SEED_STUDY_PLANS",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "legacy_localstorage_key",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L34"
+      "norm_label": "seed_study_plans",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L46"
     },
     {
-      "id": "src_tests_database_test",
-      "label": "database.test.ts",
+      "id": "src_data_initialseed_seed_subjects",
+      "label": "SEED_SUBJECTS",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "database.test.ts",
-      "source_file": "src/__tests__/database.test.ts",
+      "norm_label": "seed_subjects",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L77"
+    },
+    {
+      "id": "src_data_initialseed_seed_topic_links",
+      "label": "SEED_TOPIC_LINKS",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "initialSeed.ts",
+      "file_type": "code",
+      "norm_label": "seed_topic_links",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L310"
+    },
+    {
+      "id": "src_data_initialseed_seed_topics",
+      "label": "SEED_TOPICS",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "initialSeed.ts",
+      "file_type": "code",
+      "norm_label": "seed_topics",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L174"
+    },
+    {
+      "id": "src_tests_cycleengine_test",
+      "label": "cycleEngine.test.ts",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "initialSeed.ts",
+      "file_type": "code",
+      "norm_label": "cycleengine.test.ts",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_tests_database_test_sqljsconfig",
-      "label": "sqlJsConfig",
+      "id": "src_tests_onboardingandexplainability_test",
+      "label": "onboardingAndExplainability.test.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "migrations.ts",
+      "community_name": "initialSeed.ts",
       "file_type": "code",
-      "norm_label": "sqljsconfig",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_tests_migrations_test",
-      "label": "migrations.test.ts",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "migrations.test.ts",
-      "source_file": "src/__tests__/migrations.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel",
-      "label": "NotebookDockPanel.tsx",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel.tsx",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft",
-      "label": "useNotebookDraft.ts",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "usenotebookdraft.ts",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock",
-      "label": "SyllabusTreeDock.tsx",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock.tsx",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "norm_label": "onboardingandexplainability.test.tsx",
+      "source_file": "src/__tests__/onboardingAndExplainability.test.tsx",
       "source_location": "L1"
     },
     {
@@ -6827,14 +6932,14 @@
       "source_location": "L1"
     },
     {
-      "id": "backlog_checklist_no_pc_de_casa_antes_do_merge_na_main",
-      "label": "\ud83c\udfe0 Checklist no PC de casa (antes do merge na `main`)",
+      "id": "backlog_checklist_do_app_desktop_pendente_juntado_na_main_antes_por_decis\u00e3o_do_dono",
+      "label": "\ud83c\udfe0 Checklist do app desktop (pendente \u2014 juntado na `main` antes, por decis\u00e3o do dono)",
       "_origin": "ast",
       "community": 29,
       "community_name": "\ud83d\udc39\ud83e\uddea FofoLab \u2014 Backlog & Estado do Projeto (\u00cdndice para IA)",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udfe0 checklist no pc de casa (antes do merge na `main`)",
+      "norm_label": "\ud83c\udfe0 checklist do app desktop (pendente \u2014 juntado na `main` antes, por decisao do dono)",
       "source_file": "BACKLOG.md",
       "source_location": "L49"
     },
@@ -6884,7 +6989,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udd1c proximas fatias",
       "source_file": "BACKLOG.md",
-      "source_location": "L57"
+      "source_location": "L58"
     },
     {
       "id": "backlog_status_global",
@@ -7477,50 +7582,6 @@
       "source_location": "L194"
     },
     {
-      "id": "src_features_question_import_questionimportmodal",
-      "label": "QuestionImportModal.tsx",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodal.tsx",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_import_text_example",
-      "label": "IMPORT_TEXT_EXAMPLE",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "import_text_example",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_lib_syllabusimport",
-      "label": "syllabusImport.ts",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "syllabusimport.ts",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_importers_test",
-      "label": "importers.test.ts",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "importers.test.ts",
-      "source_file": "src/__tests__/importers.test.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "docs_specs_06_importacao_e_persistencia_1_onde_os_estudos_ficam",
       "label": "1. Onde os estudos ficam",
       "_origin": "ast",
@@ -7639,15 +7700,15 @@
       "source_location": "L1"
     },
     {
-      "id": "pdf_worker_min_mjs_url",
-      "label": "pdfjs-dist/build/pdf.worker.min.mjs?url",
+      "id": "src_features_notebook_dock_notebookdockpanel",
+      "label": "NotebookDockPanel.tsx",
       "_origin": "ast",
       "community": 36,
       "community_name": "PdfReaderStage.tsx",
-      "confidence": "EXTRACTED",
       "file_type": "code",
-      "norm_label": "pdfjs-dist/build/pdf.worker.min.mjs?url",
-      "source_file": "pdfjs-dist/build/pdf.worker.min.mjs?url"
+      "norm_label": "notebookdockpanel.tsx",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L1"
     },
     {
       "id": "src_features_pdf_reader_pdfdocument",
@@ -7910,17 +7971,6 @@
       "source_location": "L9"
     },
     {
-      "id": "plugin_fs",
-      "label": "@tauri-apps/plugin-fs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "storage.ts",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "@tauri-apps/plugin-fs",
-      "source_file": "@tauri-apps/plugin-fs"
-    },
-    {
       "id": "src_components_backuppanel",
       "label": "BackupPanel.tsx",
       "_origin": "ast",
@@ -7998,6 +8048,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_lib_storage_legacy_localstorage_key",
+      "label": "LEGACY_LOCALSTORAGE_KEY",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "legacy_localstorage_key",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L34"
+    },
+    {
       "id": "src_lib_storage_max_backups",
       "label": "MAX_BACKUPS",
       "_origin": "ast",
@@ -8007,6 +8068,28 @@
       "norm_label": "max_backups",
       "source_file": "src/lib/storage.ts",
       "source_location": "L33"
+    },
+    {
+      "id": "src_tests_database_test",
+      "label": "database.test.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "database.test.ts",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_database_test_sqljsconfig",
+      "label": "sqlJsConfig",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "sqljsconfig",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L9"
     },
     {
       "id": "src_tests_storage_test",
@@ -8476,6 +8559,39 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_resizehandle",
+      "label": "ResizeHandle.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "resizehandle.tsx",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft",
+      "label": "useNotebookDraft.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "usenotebookdraft.ts",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
+      "label": "NOTEBOOK_AUTOSAVE_MS",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "notebook_autosave_ms",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L6"
+    },
+    {
       "id": "src_lib_database",
       "label": "lib/database.ts",
       "_origin": "ast",
@@ -8520,6 +8636,50 @@
       "source_location": "L1"
     },
     {
+      "id": "src_lib_migrations",
+      "label": "migrations.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "migrations.ts",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_migrations_latest_schema_version",
+      "label": "LATEST_SCHEMA_VERSION",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "latest_schema_version",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_lib_migrations_migrations",
+      "label": "MIGRATIONS",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "migrations",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L24"
+    },
+    {
+      "id": "src_lib_migrations_seed_dissection_ids",
+      "label": "SEED_DISSECTION_IDS",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "seed_dissection_ids",
+      "source_file": "src/lib/migrations.ts",
+      "source_location": "L22"
+    },
+    {
       "id": "src_main",
       "label": "main.tsx",
       "_origin": "ast",
@@ -8529,6 +8689,50 @@
       "norm_label": "main.tsx",
       "source_file": "src/main.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_tests_migrations_test",
+      "label": "migrations.test.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "migrations.test.ts",
+      "source_file": "src/__tests__/migrations.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test",
+      "label": "notebookDraftAndLayout.test.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "notebookdraftandlayout.test.tsx",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_savemock",
+      "label": "saveMock",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "savemock",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
+      "label": "[topicA, topicB]",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "[topica, topicb]",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L33"
     },
     {
       "id": "docref_rfc_4122",
@@ -8628,61 +8832,6 @@
       "version": "0.1.0"
     },
     {
-      "id": "src_components_resizehandle",
-      "label": "ResizeHandle.tsx",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "resizehandle.tsx",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
-      "label": "NOTEBOOK_AUTOSAVE_MS",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "notebook_autosave_ms",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test",
-      "label": "notebookDraftAndLayout.test.tsx",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdraftandlayout.test.tsx",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test_savemock",
-      "label": "saveMock",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "savemock",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
-      "label": "[topicA, topicB]",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "[topica, topicb]",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L33"
-    },
-    {
       "id": "src_features_admin_factory_adminfactoryview",
       "label": "AdminFactoryView.tsx",
       "_origin": "ast",
@@ -8692,28 +8841,6 @@
       "norm_label": "adminfactoryview.tsx",
       "source_file": "src/features/admin-factory/AdminFactoryView.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "pdfjs_dist_pdfjs_dist",
-      "label": "pdfjs-dist",
-      "_origin": "ast",
-      "community": 56,
-      "community_name": "pdfjs-dist",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "pdfjs-dist",
-      "source_file": "pdfjs-dist"
-    },
-    {
-      "id": "tailwindcss_tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "tailwindcss",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
     },
     {
       "id": "src_tauri_tauri_conf",
@@ -9013,6 +9140,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_features_question_import_questionimportmodal",
+      "label": "QuestionImportModal.tsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "questionimportmodal.tsx",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_question_import_questionimportmodal_import_text_example",
+      "label": "IMPORT_TEXT_EXAMPLE",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "import_text_example",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L20"
+    },
+    {
       "id": "src_lib_questionimport",
       "label": "questionImport.ts",
       "_origin": "ast",
@@ -9055,6 +9204,17 @@
       "norm_label": "index_letters",
       "source_file": "src/lib/questionOptions.ts",
       "source_location": "L12"
+    },
+    {
+      "id": "src_tests_importers_test",
+      "label": "importers.test.ts",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "importers.test.ts",
+      "source_file": "src/__tests__/importers.test.ts",
+      "source_location": "L1"
     }
   ],
   "links": [
@@ -21202,7 +21362,7 @@
     },
     {
       "source": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
-      "target": "backlog_checklist_no_pc_de_casa_antes_do_merge_na_main",
+      "target": "backlog_checklist_do_app_desktop_pendente_juntado_na_main_antes_por_decis\u00e3o_do_dono",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21230,7 +21390,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -21990,6 +22150,182 @@
       "confidence_score": 1.0,
       "source_file": "docs/specs/06-importacao-e-persistencia.md",
       "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_1_importar_o_edital",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_2_autoavalia\u00e7\u00e3o_no_wizard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_3_ciclo_pela_nota_m\u00ednima",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_4_registro_r\u00e1pido_do_que_foi_feito_no_tec",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_5_tela_bom_dia_topo_do_meu_dia",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_9_pronto_quando_defini\u00e7\u00e3o_de_pronto_do_projeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_10_depois_deste_projeto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_2_objetivos_n\u00e3o_objetivos_e_anti_objetivos",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_3_o_edital_real_fonte_de_verdade_para_testes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_4_ponto_de_partida_do_dono_para_semear_a_autoavalia\u00e7\u00e3o_e_validar_o_ciclo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_5_como_funciona",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_1_por_que_agora",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_6_dados_mudan\u00e7as_no_contrato_sql_com_migra\u00e7\u00e3o_como_manda_o_claude_md",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_7_decis\u00f5es_deixadas_ao_construtor",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_specs_07_edital_ciclo_e_situacao_spec_07_edital_real_ciclo_pela_nota_m\u00ednima_e_tela_bom_dia",
+      "target": "docs_specs_07_edital_ciclo_e_situacao_8_ordem_de_entrega_decis\u00e3o_do_claude_a_prova_\u00e9_em_53_dias",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/specs/07-edital-ciclo-e-situacao.md",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -27416,24 +27752,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_features_pdf_reader_pdfdocument",
-      "target": "pdf_worker_min_mjs_url",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/pdf-reader/pdfDocument.ts"
-    },
-    {
-      "source": "src_lib_storage",
-      "target": "plugin_fs",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/storage.ts"
-    },
-    {
       "source": "src_tests_database_test",
       "target": "src_lib_database",
       "relation": "dynamic_import",
@@ -28096,5 +28414,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c34b9d4dc9df57bde0af490125a707d00cf203f1"
+  "built_at_commit": "8f9fe2da4b4ca648824e4f90aa0f6c75431c36f3"
 }

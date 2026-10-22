@@ -4,7 +4,7 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 
 ## Antes de mexer
 1. Leia `BACKLOG.md` — estado real, definição de pronto e checklist do PC de casa.
-2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação).
+2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação, 07 edital real/ciclo pela nota mínima/tela Bom dia).
 3. Histórico de decisões: `docs/reviews/2026-10-21-estado-do-projeto.md`.
 4. `graphify-out/` ajuda a navegar (`graphify query "..."`), mas confira a data: rode `graphify update .` depois de mudar código (o grafo fica velho fácil).
 
@@ -45,4 +45,5 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 - `src/lib/aiRouter.ts` — Gateway → Groq → Gemini → DeepSeek, prompts com grounding, modo demonstração.
 - `src/features/pdf-reader/` — leitor de PDF (pdf.js): página atual, páginas lidas, zoom; maximizar/tela cheia ficam no `App.tsx`.
 - `src/lib/questionImport.ts` / `syllabusImport.ts` — importadores (texto/JSON e conteúdo programático).
+- `src/lib/editalParser.ts` + `src/features/edital-import/` — edital em PDF → prévia → plano (spec 07); teste com o PDF real em `e2e/fixtures/`.
 - `src/App.tsx` — orquestra estado e painéis; componentes em `src/components/` e `src/features/`.

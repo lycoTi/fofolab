@@ -5,7 +5,7 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
-- **Fase atual:** Fatias 5.5 (endurecimento), 5.6 (IA real via Groq) e 5.7 (leitor de PDF) **na `main`** (21/10/2026), verificadas no navegador. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** — falta o **checklist do app desktop** (abaixo). Próxima: Fatia 7.
+- **Fase atual:** Fatias 5.5 (endurecimento), 5.6 (IA real via Groq) e 5.7 (leitor de PDF) **na `main`** (21/10/2026), verificadas no navegador. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** — falta o **checklist do app desktop** (abaixo). Fatia 7a (edital real → ciclo pela nota mínima, spec `07`) no branch **`fatia-7-edital-ciclo`**; próxima: 7b.
 
 ## ✅ Definição de Pronto
 Um item só vira **[DONE]** quando: (1) funciona com dados reais, não só com o exemplo; (2) sobrevive a fechar e abrir o app; (3) tem teste automatizado da regra e, se o fluxo atravessa telas, teste E2E; (4) `npm test`, `npm run test:e2e` e `npm run build` passam.
@@ -14,7 +14,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 ## 🎯 Estado real por área
 
 **Dados & segurança** (spec `06-importacao-e-persistencia.md`)
-- [DONE] Contrato SQL v3 + migrações (`PRAGMA user_version`); teste garante banco novo = banco v1 migrado.
+- [DONE] Contrato SQL v4 + migrações (`PRAGMA user_version`); teste garante banco novo = banco v1 migrado.
 - [DONE] No navegador: gravação em IndexedDB logo após cada ação, aviso visível de falha + nova tentativa, cópia diária, quarentena de banco ilegível, backup/restauração (arquivo e cópias automáticas) — testado E2E.
 - [A VERIFICAR] No `.exe`: arquivo real `%APPDATA%\com.fofolab.desktop\fofolab.db` via `tauri-plugin-fs` (código pronto, **nunca compilado**).
 - [DONE] Excluir/restaurar pede confirmação, mostra o que vai junto e guarda cópia antes. IDs UUID.
@@ -22,7 +22,8 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 **Ciclo & métricas** (specs `02` e `05`)
 - [DONE] Motor do ciclo (soma zero, confiança da amostra, curva de esquecimento); o "ⓘ" mostra a conta que o motor faz.
 - [DONE] "Meu Dia" escolhe pelo que falta do ciclo na semana; o Wizard grava horas/estratégia/momento no plano e aplica ao ciclo.
-- [PARCIAL] Estratégias são multiplicadores v1; "o que mais cai" ainda não usa a frequência real das questões (depende da Fatia 7).
+- [PARCIAL] Estratégias são multiplicadores v1; "o que mais cai" ainda não usa a frequência real das questões (depende do banco de questões). O texto da estratégia "Base Comum" fala de Português, que não cai em todo edital.
+- [DONE] Planos do edital: peso de cada matéria pelos pontos da prova, **piso de tempo pela nota mínima** (30% do orçamento; nenhuma matéria de prova eliminatória fica sem tempo) e domínio inicial pela autoavaliação — testado com o edital real e a autoavaliação do dono.
 - [DONE] Pomodoro pelo relógio real; registra só o tempo focado, no tópico em que começou.
 
 **Questões & estudo reverso**
@@ -31,7 +32,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] IA sem chave = respostas marcadas "Exemplo simulado". Com chave: prompt com regras anti-alucinação e explicação guardada.
 - [DONE] IA real pelo **Groq** (grátis, `qwen/qwen3.8-27b`): tutor e explicação-base verificados no Edge contra a API real (~1-2 s). Ordem: gateway → Groq → Gemini → DeepSeek. Erros dos provedores aparecem no console.
 - [A VERIFICAR] Copiloto com IA real. Gemini exige crédito pré-pago; DeepSeek (`deepseek-flash`, sem modo de raciocínio) fica como reserva paga.
-- [ ] Importar prova em PDF + gabarito (extração automática) → Fatia 7.
+- [ ] Importar prova em PDF + gabarito (extração automática) → depois da 7b (o dono usa o TEC Concursos para questões).
 
 **Caderno, PDF & layout**
 - [DONE] Caderno por tópico com salvamento automático (não perde rascunho ao trocar de tópico).
@@ -42,7 +43,8 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 
 **Edital**
 - [PARCIAL] Colar o conteúdo programático → tópicos e subtópicos (heurístico, com prévia).
-- [ ] Importar o edital em PDF (matérias, áreas, tópicos, datas de inscrição e prova, taxa, banca) → Fatia 7.
+- [DONE] Importar edital em PDF (modelo Cebraspe, sem IA): cargos, provas com pontos e mínimos, matérias por prova, tópicos, datas, taxa → prévia editável → plano novo → Wizard com **autoavaliação por matéria e por tópico**. Testado com o PDF real da CGU 2026 (`e2e/fixtures/`), unitário e E2E.
+- [PARCIAL] Editais de outras bancas (FGV, FCC…) não foram testados; quando o leitor não reconhece, a tela avisa e sugere colar o conteúdo.
 
 **Ainda não começou:** grafo interativo (Fatia 6) • pacote `.fofopack` para amigos • Modo Admin real (a tela mostra dados de exemplo) • vídeo/Gran/YouTube.
 
@@ -58,6 +60,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 ## 🔜 Próximas fatias
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
-- **7 — Importação por PDF (visão original):** edital PDF → texto → IA → JSON → prévia → grava; prova + gabarito PDF → IA → JSON (formato da spec 06) → `importQuestions`. DoD: E2E com PDFs reais (FGV/CGU, Cebraspe/BACEN).
-- **Leitura (depois da 5.7):** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido). A Fatia 7 reaproveita o pdf.js para extrair o texto.
-- **Dívidas conhecidas:** painel do ciclo apertado com os dois painéis laterais abertos; bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
+- **7b — acompanhar (spec `07` §5.4–5.5):** registro rápido do que foi feito no TEC (total, certas, em branco) + tela "Bom dia" (relembrar com recordação ativa, blocos de hoje, situação por prova, linha de ânimo com fatos).
+- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); desempenho do TEC por arquivo salvo; provas anteriores em PDF → banco de questões (formato da spec 06).
+- **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
+- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` passam do teto de ~250 linhas; painel do ciclo apertado com os dois painéis laterais abertos; bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).

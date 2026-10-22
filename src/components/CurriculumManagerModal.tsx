@@ -5,6 +5,7 @@ import {
   DatabaseBackup,
   Download,
   Edit3,
+  FileUp,
   Layers,
   Plus,
   Target,
@@ -55,6 +56,8 @@ interface CurriculumManagerModalProps {
   onLoadBackups: () => Promise<BackupEntry[]>;
   onRestoreBackup: (backup: BackupEntry) => Promise<boolean>;
   onResetSeed: () => Promise<boolean>;
+  /** Abre a importação do edital em PDF (cria um plano novo). */
+  onImportEdital?: () => void;
 }
 
 export function CurriculumManagerModal({
@@ -82,6 +85,7 @@ export function CurriculumManagerModal({
   onLoadBackups,
   onRestoreBackup,
   onResetSeed,
+  onImportEdital,
 }: CurriculumManagerModalProps) {
   const [section, setSection] = useState<CurriculumSection>(initialSection);
 
@@ -178,6 +182,17 @@ export function CurriculumManagerModal({
           </div>
 
           <div className="flex items-center gap-2">
+            {onImportEdital && (
+              <button
+                type="button"
+                onClick={onImportEdital}
+                className="px-3 py-1.5 rounded-lg bg-orange-500/15 hover:bg-orange-500/25 border border-orange-500/40 text-xs text-orange-200 flex items-center gap-1.5"
+                title="Ler um edital em PDF e montar um plano novo com as matérias, os tópicos e os pesos"
+              >
+                <FileUp size={13} />
+                Importar edital (PDF)
+              </button>
+            )}
             <button
               type="button"
               onClick={onExportDatabase}

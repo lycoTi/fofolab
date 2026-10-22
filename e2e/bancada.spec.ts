@@ -64,6 +64,9 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   await page.getByText('2h por dia (14h/sem)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
+  // Autoavaliação: pular mantém o nível que já estava em cada matéria
+  await expect(page.getByText('Quanto você já sabe de cada matéria?')).toBeVisible();
+  await page.getByRole('button', { name: /Continuar/ }).click();
   await expect(page.getByText('⚡ Alta Rentabilidade (Pós-Edital / Tempo Escasso)')).toBeVisible();
   await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
 
@@ -293,4 +296,62 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveValue('Anotação feita lendo o PDF');
   // Fora da leitura, o painel lateral leva de volta ao PDF do tópico
   await expect(page.getByRole('button', { name: /Continuar leitura/ })).toBeVisible();
+});
+
+test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia pelo edital', async ({ page }) => {
+  await skipWizard(page);
+  await page.goto('/');
+  await openPro(page);
+
+  const curriculum = await openCurriculum(page);
+  await curriculum.getByRole('button', { name: 'Importar edital (PDF)' }).click();
+  const importDialog = page.getByRole('dialog', { name: 'Importar edital' });
+  await importDialog.getByLabel('Escolher PDF do edital').setInputFiles('e2e/fixtures/cgu-2026-affc-edital.pdf');
+
+  // Quatro cargos no edital: é preciso escolher antes da prévia
+  await importDialog.getByRole('combobox').selectOption({ label: 'Cargo 4: Tecnologia da Informação – Desenvolvimento de Sistemas' });
+  await expect(importDialog.getByText('Matérias (13)')).toBeVisible();
+  await expect(importDialog.getByLabel('Nome do plano')).toHaveValue('CGU 2026 — Tecnologia da Informação – Desenvolvimento de Sistemas');
+  await expect(importDialog.getByLabel('Data da prova')).toHaveValue('2026-12-13');
+  await expect(importDialog.getByLabel('Último dia de inscrição')).toHaveValue('2026-11-04');
+  await expect(importDialog.getByLabel('Nota mínima da P3')).toHaveValue('54');
+  await expect(importDialog.getByLabel('Peso de Arquitetura e Integração de Sistemas')).toHaveValue('2.25');
+  await page.screenshot({ path: `${SCREENS}/08-previa-do-edital.png` });
+  await importDialog.getByRole('button', { name: 'Criar meu plano' }).click();
+
+  // O assistente abre nas horas e segue para a autoavaliação do plano novo
+  await expect(page.getByText('Passo 2 de 5')).toBeVisible();
+  await page.getByText('3h por dia (21h/sem)').click();
+  await page.getByRole('button', { name: /Continuar/ }).click();
+  // O plano novo já vem escolhido no passo "Qual edital você quer focar agora?"
+  await expect(page.getByRole('button', { name: /\[CGU\] CGU 2026 — Tecnologia da Informação/ })).toBeVisible();
+  await page.getByRole('button', { name: /Continuar/ }).click();
+
+  await expect(page.getByText('Quanto você já sabe de cada matéria?')).toBeVisible();
+  const levelOf = (subject: string) => page.getByRole('radiogroup', { name: `Quanto você sabe de ${subject}` });
+  await levelOf('Arquitetura e Integração de Sistemas').getByRole('radio', { name: 'Nunca vi' }).click();
+  await levelOf('Fundamentos de Auditoria Governamental e Atuação Integrada da CGU').getByRole('radio', { name: 'Domino' }).click();
+  await levelOf('Engenharia de Software e Programação').getByRole('radio', { name: 'Sei bem' }).click();
+  // Ajuste fino por tópico dentro de Engenharia de Software
+  await page.getByRole('dialog').getByRole('button', { name: 'Engenharia de Software e Programação', exact: true }).click();
+  await levelOf('Concorrência e processamento').getByRole('radio', { name: 'Nunca vi' }).click();
+  await page.screenshot({ path: `${SCREENS}/09-autoavaliacao.png` });
+  await page.getByRole('button', { name: /Continuar/ }).click();
+  await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
+
+  // O Meu Dia passa a mandar estudar pelo edital: primeiro a matéria fraca que vale o dobro
+  await expect(page.getByText('Roteiro de Hoje • Modo Essencial')).toBeVisible();
+  const firstBlock = page.getByText('Arquitetura e Integração de Sistemas').first();
+  await expect(firstBlock).toBeVisible();
+  await page.screenshot({ path: `${SCREENS}/10-meu-dia-do-edital.png`, fullPage: true });
+
+  // Recarregar não perde o plano nem a autoavaliação
+  await waitSaved(page);
+  await page.reload();
+  await expect(page.getByText(/CGU 2026 — Tecnologia da Informação/).first()).toBeVisible();
+  await page.locator('header').getByRole('button', { name: /Recalibrar Perfil/ }).click();
+  for (let i = 0; i < 3; i++) await page.getByRole('button', { name: /Continuar/ }).click();
+  await expect(
+    levelOf('Arquitetura e Integração de Sistemas').getByRole('radio', { name: 'Nunca vi' })
+  ).toHaveAttribute('aria-checked', 'true');
 });

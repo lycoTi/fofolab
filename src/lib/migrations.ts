@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 3;
+export const LATEST_SCHEMA_VERSION = 4;
 
 export interface Migration {
   version: number;
@@ -47,6 +47,27 @@ export const MIGRATIONS: Migration[] = [
     description: 'Páginas lidas de cada PDF (marcadas pelo leitor)',
     up: (db) => {
       db.run("ALTER TABLE pdf_sources ADD COLUMN read_pages_json TEXT DEFAULT '[]'");
+    },
+  },
+  {
+    version: 4,
+    description: 'Edital real: provas com nota mínima, prazo de inscrição, cargo e autoavaliação por tópico',
+    up: (db) => {
+      db.run('ALTER TABLE study_plans ADD COLUMN registration_deadline DATE');
+      db.run('ALTER TABLE study_plans ADD COLUMN min_total_score REAL');
+      db.run('ALTER TABLE study_plans ADD COLUMN selected_role TEXT');
+      db.run(`CREATE TABLE IF NOT EXISTS exam_parts (
+        id TEXT PRIMARY KEY,
+        plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+        code TEXT NOT NULL,
+        name TEXT NOT NULL,
+        item_count INTEGER NOT NULL,
+        points_per_item REAL DEFAULT 1,
+        min_score REAL,
+        sort_order INTEGER DEFAULT 0
+      )`);
+      db.run('ALTER TABLE subjects ADD COLUMN exam_part_id TEXT REFERENCES exam_parts(id) ON DELETE SET NULL');
+      db.run('ALTER TABLE topics ADD COLUMN initial_knowledge_level INTEGER');
     },
   },
 ];

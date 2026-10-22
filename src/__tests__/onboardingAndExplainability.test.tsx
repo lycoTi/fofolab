@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { DailyFocusView } from '../features/daily-focus/DailyFocusView';
 import { OnboardingWizardModal } from '../features/onboarding-wizard/OnboardingWizardModal';
@@ -25,6 +25,8 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
   for (const s of cguSubjects) {
     topicsBySubject[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
   }
+  const getPlanContent = () =>
+    cguSubjects.map((subject) => ({ subject, topics: topicsBySubject[subject.id].filter((t) => !t.parent_id) }));
 
   const cycleData = calculateDynamicStudyCycle({
     plan: cguPlan,
@@ -100,7 +102,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(onStartBlock).toHaveBeenCalledTimes(1);
   });
 
-  it('permite avançar pelas 4 etapas do Onboarding Wizard e concluir', () => {
+  it('permite avançar pelas 5 etapas do Onboarding Wizard, com autoavaliação, e concluir', () => {
     const onComplete = vi.fn();
     const onClose = vi.fn();
 
@@ -111,6 +113,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
         activePlan={cguPlan}
         onClose={onClose}
         onComplete={onComplete}
+        getPlanContent={getPlanContent}
       />
     );
 
@@ -125,11 +128,20 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     // Passo 3 -> Passo 4
     fireEvent.click(screen.getByText(/Continuar/i));
 
-    // Passo 4 -> Concluir
+    // Passo 4: autoavaliação — "Nunca vi" na primeira matéria
+    expect(screen.getByText(/Quanto você já sabe de cada matéria/i)).toBeTruthy();
+    const firstSubject = cguSubjects[0];
+    const group = screen.getByRole('radiogroup', { name: `Quanto você sabe de ${firstSubject.name}` });
+    fireEvent.click(within(group).getByRole('radio', { name: 'Nunca vi' }));
+    fireEvent.click(screen.getByText(/Continuar/i));
+
+    // Passo 5 -> Concluir
     const finishBtn = screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i);
     fireEvent.click(finishBtn);
 
     expect(onComplete).toHaveBeenCalledTimes(1);
+    const selfAssessment = onComplete.mock.calls[0][2];
+    expect(selfAssessment.subjects).toContainEqual({ subjectId: firstSubject.id, level: 1 });
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
@@ -153,6 +165,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
         activePlan={cguPlan}
         onClose={vi.fn()}
         onComplete={vi.fn()}
+        getPlanContent={getPlanContent}
       />
     );
 

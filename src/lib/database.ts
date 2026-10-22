@@ -41,12 +41,15 @@ import type {
   CreateStudyPlanInput,
   CreateSubjectInput,
   CreateTopicInput,
+  EditalPlanInput,
+  ExamPart,
   ImportQuestionItem,
   ImportTopicItem,
   Notebook,
   PdfSource,
   Question,
   QuestionAttempt,
+  SelfAssessmentInput,
   SelfDiagnosisType,
   StudyPlan,
   StudySession,
@@ -782,6 +785,121 @@ export function deleteStudyPlan(planId: string): void {
   persistDatabase();
 }
 
+const EDITAL_SUBJECT_COLORS = [
+  '#f97316', '#3b82f6', '#10b981', '#a855f7', '#ef4444', '#eab308', '#06b6d4',
+  '#ec4899', '#84cc16', '#6366f1', '#14b8a6', '#f43f5e', '#8b5cf6', '#22c55e',
+];
+
+/** Primeira prova = básica, última = específica, as do meio = gerais (rótulos usados pela estratégia). */
+function categoryForPart(partIndex: number, partCount: number): Subject['category'] {
+  if (partIndex < 0) return 'GERAL';
+  if (partIndex === partCount - 1) return 'ESPECIFICO';
+  return partIndex === 0 ? 'BASICO' : 'GERAL';
+}
+
+/**
+ * Cria o plano inteiro lido do edital (provas, matérias com peso e tópicos) numa transação só e o
+ * deixa ativo. O plano de exemplo e os demais continuam existindo.
+ */
+export function createPlanFromEdital(input: EditalPlanInput): StudyPlan {
+  const db = getDb();
+  const planId = newId('plan');
+  const now = new Date().toISOString();
+
+  db.run('BEGIN TRANSACTION;');
+  try {
+    // 1. Plano (edital publicado = pós-edital)
+    db.run('UPDATE study_plans SET is_active = 0');
+    db.run(
+      `INSERT INTO study_plans (id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target,
+         is_active, created_at, study_moment, registration_deadline, min_total_score, selected_role)
+       VALUES (?, NULL, ?, ?, ?, ?, ?, ?, 1, ?, 'POS_EDITAL', ?, ?, ?)`,
+      [
+        planId,
+        input.title.trim(),
+        input.organ,
+        input.examBoard,
+        input.roleTitle,
+        input.examDate,
+        input.weeklyHoursTarget,
+        now,
+        input.registrationDeadline,
+        input.minTotalScore,
+        input.roleTitle,
+      ]
+    );
+
+    // 2. Provas
+    const partIdByCode = new Map<string, string>();
+    input.parts.forEach((part, index) => {
+      const partId = newId('part');
+      partIdByCode.set(part.code, partId);
+      db.run(
+        `INSERT INTO exam_parts (id, plan_id, code, name, item_count, points_per_item, min_score, sort_order)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [partId, planId, part.code, part.name, part.itemCount, part.pointsPerItem, part.minScore, index]
+      );
+    });
+
+    // 3. Matérias e tópicos (nível inicial neutro até a autoavaliação do Wizard)
+    input.subjects.forEach((subject, index) => {
+      const subjectId = newId('subj');
+      const partIndex = input.parts.findIndex((p) => p.code === subject.partCode);
+      db.run(
+        `INSERT INTO subjects (id, plan_id, category, name, color, initial_knowledge_level, initial_affinity_level,
+           exam_weight, measured_mastery_score, behavioral_friction_score, cycle_allocated_minutes, exam_part_id)
+         VALUES (?, ?, ?, ?, ?, 2, 2, ?, 0, 0, ?, ?)`,
+        [
+          subjectId,
+          planId,
+          categoryForPart(partIndex, input.parts.length),
+          subject.name.trim(),
+          EDITAL_SUBJECT_COLORS[index % EDITAL_SUBJECT_COLORS.length],
+          subject.examWeight,
+          Math.round(45 + subject.examWeight * 25 + 20),
+          subject.partCode ? (partIdByCode.get(subject.partCode) ?? null) : null,
+        ]
+      );
+      insertTopicItems(db, subjectId, subject.topics, []);
+    });
+
+    db.run('COMMIT;');
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+
+  persistDatabase();
+  return queryOne<StudyPlan>(db, 'SELECT * FROM study_plans WHERE id = ?', [planId])!;
+}
+
+export function getExamPartsByPlan(planId: string): ExamPart[] {
+  return queryAll<ExamPart>(getDb(), 'SELECT * FROM exam_parts WHERE plan_id = ? ORDER BY sort_order', [planId]);
+}
+
+/** Grava a autoavaliação do Wizard (nível 1..4 da matéria e, quando ajustado, do tópico). */
+export function saveSelfAssessment(input: SelfAssessmentInput): void {
+  const db = getDb();
+  const clampLevel = (level: number) => Math.min(4, Math.max(1, Math.round(level)));
+  db.run('BEGIN TRANSACTION;');
+  try {
+    for (const { subjectId, level } of input.subjects) {
+      db.run('UPDATE subjects SET initial_knowledge_level = ? WHERE id = ?', [clampLevel(level), subjectId]);
+    }
+    for (const { topicId, level } of input.topics) {
+      db.run('UPDATE topics SET initial_knowledge_level = ? WHERE id = ?', [
+        level === null ? null : clampLevel(level),
+        topicId,
+      ]);
+    }
+    db.run('COMMIT;');
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+  persistDatabase();
+}
+
 // ============================================================================
 // CRUD 2: Disciplinas do Edital (subjects)
 // ============================================================================
@@ -1005,34 +1123,10 @@ export function importSyllabusTopics(
   items: ImportTopicItem[]
 ): { inserted: number; skippedDuplicates: number } {
   const db = getDb();
-  const existing = getTopicsBySubject(subjectId);
-  const idByCode = new Map(existing.filter((t) => t.code).map((t) => [String(t.code), t.id]));
-  const existingKeys = new Set(
-    existing.map((t) => `${t.code ?? ''}|${normalizeStatement(t.title)}`)
-  );
-
-  let inserted = 0;
-  let skippedDuplicates = 0;
+  let result: { inserted: number; skippedDuplicates: number };
   db.run('BEGIN TRANSACTION;');
   try {
-    for (const item of items) {
-      const key = `${item.code ?? ''}|${normalizeStatement(item.title)}`;
-      if (existingKeys.has(key)) {
-        skippedDuplicates++;
-        continue;
-      }
-      existingKeys.add(key);
-
-      const id = newId('topic');
-      const parentCode = parentTopicCode(item.code);
-      db.run(
-        `INSERT INTO topics (id, subject_id, parent_id, code, title, mastery_score, status, last_studied_at)
-         VALUES (?, ?, ?, ?, ?, 0, 'PENDING', NULL)`,
-        [id, subjectId, parentCode ? (idByCode.get(parentCode) ?? null) : null, item.code, item.title]
-      );
-      if (item.code) idByCode.set(item.code, id);
-      inserted++;
-    }
+    result = insertTopicItems(db, subjectId, items, getTopicsBySubject(subjectId));
     db.run('COMMIT;');
   } catch (err) {
     db.run('ROLLBACK;');
@@ -1040,6 +1134,39 @@ export function importSyllabusTopics(
   }
 
   recalculateSubjectMastery(subjectId);
+  return result;
+}
+
+/** Insere tópicos ligando subtópicos ao pai pelo código ("2.1" → "2"); pula repetidos. Sem transação própria. */
+function insertTopicItems(
+  db: Database,
+  subjectId: string,
+  items: ImportTopicItem[],
+  existing: Topic[]
+): { inserted: number; skippedDuplicates: number } {
+  const idByCode = new Map(existing.filter((t) => t.code).map((t) => [String(t.code), t.id]));
+  const existingKeys = new Set(existing.map((t) => `${t.code ?? ''}|${normalizeStatement(t.title)}`));
+
+  let inserted = 0;
+  let skippedDuplicates = 0;
+  for (const item of items) {
+    const key = `${item.code ?? ''}|${normalizeStatement(item.title)}`;
+    if (existingKeys.has(key)) {
+      skippedDuplicates++;
+      continue;
+    }
+    existingKeys.add(key);
+
+    const id = newId('topic');
+    const parentCode = parentTopicCode(item.code);
+    db.run(
+      `INSERT INTO topics (id, subject_id, parent_id, code, title, mastery_score, status, last_studied_at)
+       VALUES (?, ?, ?, ?, ?, 0, 'PENDING', NULL)`,
+      [id, subjectId, parentCode ? (idByCode.get(parentCode) ?? null) : null, item.code, item.title]
+    );
+    if (item.code) idByCode.set(item.code, id);
+    inserted++;
+  }
   return { inserted, skippedDuplicates };
 }
 

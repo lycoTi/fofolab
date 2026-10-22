@@ -1,4 +1,5 @@
 import type { PDFDocumentProxy, PDFPageProxy, RenderTask } from 'pdfjs-dist';
+import { textItemsToLines } from '../../lib/pdfText';
 
 /**
  * Ponte com o pdf.js. A biblioteca e o worker são importados só quando um PDF é aberto,
@@ -16,6 +17,22 @@ async function loadPdfJs() {
 export async function loadPdfDocument(url: string): Promise<PDFDocumentProxy> {
   const pdfjs = await loadPdfJs();
   return pdfjs.getDocument({ url }).promise;
+}
+
+/** Texto do PDF inteiro, uma linha por elemento (as páginas em sequência). */
+export async function extractPdfLines(data: ArrayBuffer): Promise<string[]> {
+  const pdfjs = await loadPdfJs();
+  const doc = await pdfjs.getDocument({ data: new Uint8Array(data) }).promise;
+  try {
+    const lines: string[] = [];
+    for (let n = 1; n <= doc.numPages; n++) {
+      const content = await (await doc.getPage(n)).getTextContent();
+      lines.push(...textItemsToLines(content.items.filter((item) => 'str' in item)));
+    }
+    return lines;
+  } finally {
+    void doc.destroy();
+  }
 }
 
 export interface PageSize {

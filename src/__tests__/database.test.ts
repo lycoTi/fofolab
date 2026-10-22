@@ -359,3 +359,88 @@ describe('Importação de questões, tópicos e explicações', () => {
     expect(updated.chat_history_json).toBe('[{"id":"1"}]');
   });
 });
+
+describe('Plano montado a partir do edital (docs/specs/07)', () => {
+  const editalInput = {
+    title: 'CGU 2026 — Desenvolvimento de Sistemas',
+    organ: 'CGU',
+    examBoard: 'Cebraspe',
+    roleTitle: 'Tecnologia da Informação – Desenvolvimento de Sistemas',
+    examDate: '2026-12-13',
+    registrationDeadline: '2026-11-04',
+    minTotalScore: 78,
+    weeklyHoursTarget: 20,
+    parts: [
+      { code: 'P1', name: 'Conhecimentos básicos', itemCount: 40, pointsPerItem: 1, minScore: 8 },
+      { code: 'P3', name: 'Conhecimentos específicos', itemCount: 90, pointsPerItem: 2, minScore: 54 },
+    ],
+    subjects: [
+      { name: 'Ética Pública', partCode: 'P1', examWeight: 0.5, topics: [{ code: '1', title: 'Fundamentos' }] },
+      {
+        name: 'Arquitetura e Integração de Sistemas',
+        partCode: 'P3',
+        examWeight: 2.25,
+        topics: [
+          { code: '1', title: 'Arquiteturas de aplicações' },
+          { code: '1.1', title: 'Monolitos e microsserviços' },
+          { code: '2', title: 'APIs e identidade' },
+        ],
+      },
+    ],
+  };
+
+  it('cria plano ativo, provas, matérias na prova certa e tópicos ligados ao pai', async () => {
+    const { db } = await openDatabase();
+    const plan = db.createPlanFromEdital(editalInput);
+
+    expect(db.getActiveStudyPlan()?.id).toBe(plan.id);
+    expect(plan).toMatchObject({ organ: 'CGU', exam_date: '2026-12-13', registration_deadline: '2026-11-04', min_total_score: 78, study_moment: 'POS_EDITAL' });
+
+    const parts = db.getExamPartsByPlan(plan.id);
+    expect(parts.map((p) => [p.code, p.item_count, p.points_per_item, p.min_score])).toEqual([
+      ['P1', 40, 1, 8],
+      ['P3', 90, 2, 54],
+    ]);
+
+    const subjects = db.getSubjectsByPlan(plan.id);
+    const arquitetura = subjects.find((s) => s.name.startsWith('Arquitetura'))!;
+    expect(arquitetura).toMatchObject({ category: 'ESPECIFICO', exam_weight: 2.25, exam_part_id: parts[1].id });
+    expect(subjects.find((s) => s.name === 'Ética Pública')?.category).toBe('BASICO');
+
+    const topics = db.getTopicsBySubject(arquitetura.id);
+    const parent = topics.find((t) => t.code === '1')!;
+    expect(topics.find((t) => t.code === '1.1')?.parent_id).toBe(parent.id);
+
+    // O plano de exemplo continua lá
+    expect(db.getStudyPlans().length).toBeGreaterThan(1);
+  });
+
+  it('grava a autoavaliação da matéria e do tópico (null = herda da matéria)', async () => {
+    const { db } = await openDatabase();
+    const plan = db.createPlanFromEdital(editalInput);
+    const arquitetura = db.getSubjectsByPlan(plan.id).find((s) => s.name.startsWith('Arquitetura'))!;
+    const [first, , second] = db.getTopicsBySubject(arquitetura.id);
+
+    db.saveSelfAssessment({
+      subjects: [{ subjectId: arquitetura.id, level: 1 }],
+      topics: [
+        { topicId: first.id, level: 3 },
+        { topicId: second.id, level: 9 },
+      ],
+    });
+
+    expect(db.getSubjectsByPlan(plan.id).find((s) => s.id === arquitetura.id)?.initial_knowledge_level).toBe(1);
+    const levels = Object.fromEntries(db.getTopicsBySubject(arquitetura.id).map((t) => [t.code, t.initial_knowledge_level]));
+    expect(levels).toEqual({ '1': 3, '1.1': null, '2': 4 });
+
+    db.saveSelfAssessment({ subjects: [], topics: [{ topicId: first.id, level: null }] });
+    expect(db.getTopicsBySubject(arquitetura.id).find((t) => t.code === '1')?.initial_knowledge_level).toBeNull();
+  });
+
+  it('apagar o plano leva junto as provas', async () => {
+    const { db } = await openDatabase();
+    const plan = db.createPlanFromEdital(editalInput);
+    db.deleteStudyPlan(plan.id);
+    expect(db.getExamPartsByPlan(plan.id)).toEqual([]);
+  });
+});

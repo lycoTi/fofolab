@@ -1,6 +1,12 @@
-import { useEffect, useState } from 'react';
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Compass, Sparkles, Target, X } from 'lucide-react';
-import type { StudyMoment, StudyPlan, StudyStrategy } from '../../types/database';
+import { useEffect, useMemo, useState } from 'react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Compass, FileUp, Sparkles, Target, X } from 'lucide-react';
+import type { SelfAssessmentInput, StudyMoment, StudyPlan, StudyStrategy } from '../../types/database';
+import {
+  initialSelfAssessment,
+  SelfAssessmentStep,
+  type SelfAssessmentState,
+  type SelfAssessmentSubject,
+} from './SelfAssessmentStep';
 
 export interface OnboardingProfile {
   studyMoment: StudyMoment;
@@ -14,10 +20,19 @@ interface OnboardingWizardModalProps {
   plans: StudyPlan[];
   activePlan: StudyPlan;
   onClose: () => void;
-  onComplete: (profile: OnboardingProfile, targetPlanId: string) => void;
+  onComplete: (profile: OnboardingProfile, targetPlanId: string, selfAssessment: SelfAssessmentInput) => void;
+  /** Matérias do plano com os tópicos de primeiro nível, para a autoavaliação. */
+  getPlanContent: (planId: string) => SelfAssessmentSubject[];
+  /** Abre a importação do edital em PDF (o assistente fecha e volta depois, com o plano novo). */
+  onImportEdital?: () => void;
+  /** Passo em que abre (ex.: logo após importar o edital, pula o "momento"). */
+  initialStep?: number;
 }
 
 export const ONBOARDING_COMPLETED_KEY = 'fofolab_onboarding_completed_v1';
+
+const TOTAL_STEPS = 5;
+const SELF_ASSESSMENT_STEP = 4;
 
 /** Estratégia sugerida para cada momento (o estudante pode trocar no passo 4). */
 const STRATEGY_FOR_MOMENT: Record<StudyMoment, StudyStrategy> = {
@@ -42,17 +57,26 @@ export function OnboardingWizardModal({
   activePlan,
   onClose,
   onComplete,
+  getPlanContent,
+  onImportEdital,
+  initialStep = 1,
 }: OnboardingWizardModalProps) {
   const [step, setStep] = useState<number>(1);
   const [profile, setProfile] = useState<OnboardingProfile>(() => profileFromPlan(activePlan));
   const [strategyTouched, setStrategyTouched] = useState<boolean>(false);
   const [selectedPlanId, setSelectedPlanId] = useState<string>(activePlan.id);
+  const planContent = useMemo(
+    () => (isOpen ? getPlanContent(selectedPlanId) : []),
+    [isOpen, selectedPlanId]
+  );
+  const [selfAssessment, setSelfAssessment] = useState<SelfAssessmentState>(() => initialSelfAssessment([]));
+  useEffect(() => setSelfAssessment(initialSelfAssessment(planContent)), [planContent]);
 
   // Ao (re)abrir, parte do que já está gravado no plano ativo ("Recalibrar Perfil").
   // Só na abertura: recarregar os dados com o assistente aberto não pode voltar ao passo 1.
   useEffect(() => {
     if (!isOpen) return;
-    setStep(1);
+    setStep(initialStep);
     setProfile(profileFromPlan(activePlan));
     setStrategyTouched(Boolean(activePlan.strategy_mode));
     setSelectedPlanId(activePlan.id);
@@ -61,7 +85,7 @@ export function OnboardingWizardModal({
   if (!isOpen) return null;
 
   const handleNext = () => {
-    if (step < 4) {
+    if (step < TOTAL_STEPS) {
       setStep(step + 1);
       return;
     }
@@ -71,7 +95,12 @@ export function OnboardingWizardModal({
     } catch (e) {
       console.warn('Erro ao salvar a conclusão do assistente:', e);
     }
-    onComplete(profile, selectedPlanId);
+    onComplete(profile, selectedPlanId, {
+      subjects: Object.entries(selfAssessment.subjectLevels).map(([subjectId, level]) => ({ subjectId, level })),
+      topics: planContent.flatMap(({ topics }) =>
+        topics.map((t) => ({ topicId: t.id, level: selfAssessment.topicLevels[t.id] ?? null }))
+      ),
+    });
     onClose();
   };
 
@@ -103,7 +132,7 @@ export function OnboardingWizardModal({
               <h2 className="text-sm font-bold text-white flex items-center gap-2">
                 <span>Calibrar Meu Roteiro de Estudos</span>
                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">
-                  Passo {step} de 4
+                  Passo {step} de {TOTAL_STEPS}
                 </span>
               </h2>
               <p className="text-xs text-slate-400">Pegando você pela mão para estudar sem sobrecarga</p>
@@ -123,7 +152,7 @@ export function OnboardingWizardModal({
         <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-orange-500 to-amber-400 transition-all duration-300"
-            style={{ width: `${(step / 4) * 100}%` }}
+            style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
           />
         </div>
 
@@ -248,11 +277,26 @@ export function OnboardingWizardModal({
                 </button>
               ))}
             </div>
+            {onImportEdital && (
+              <button
+                type="button"
+                onClick={onImportEdital}
+                className="w-full p-3 rounded-xl border border-dashed border-slate-700 text-xs text-slate-300 hover:border-orange-500/50 hover:text-white flex items-center justify-center gap-2 transition"
+              >
+                <FileUp size={14} className="text-orange-400" />
+                Importar edital em PDF (monta matérias, tópicos e pesos sozinho)
+              </button>
+            )}
           </div>
         )}
 
-        {/* Passo 4: Estratégia de Custo-Benefício */}
-        {step === 4 && (
+        {/* Passo 4: Quanto já sabe de cada matéria */}
+        {step === SELF_ASSESSMENT_STEP && (
+          <SelfAssessmentStep items={planContent} state={selfAssessment} onChange={setSelfAssessment} />
+        )}
+
+        {/* Passo 5: Estratégia de Custo-Benefício */}
+        {step === TOTAL_STEPS && (
           <div className="space-y-4 animate-fade-in">
             <div className="space-y-1">
               <h3 className="text-sm font-bold text-white flex items-center gap-2">
@@ -320,7 +364,7 @@ export function OnboardingWizardModal({
             onClick={handleNext}
             className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-orange-500/20 transition"
           >
-            {step === 4 ? (
+            {step === TOTAL_STEPS ? (
               <>
                 <span>Gerar Meu Roteiro de Hoje 🚀</span>
               </>

@@ -1,4 +1,5 @@
 import type {
+  ExamPart,
   QuestionAttempt,
   StudyPlan,
   StudySession,
@@ -45,6 +46,19 @@ export const STRATEGY_FACTORS = {
   MAIS_COBRADOS_HEAT_FACTOR: 0.06, // 1 + 0,06 × calor médio (prioriza onde há mais dificuldade)
   ALTO_PESO_CURTO_EXPONENT: 0.75, // (peso ÷ peso médio)^0,75 (concentra nas matérias de maior peso)
 } as const;
+
+/**
+ * Planos lidos do edital (docs/specs/07): parte do orçamento semanal vira PISO das matérias de provas
+ * com nota mínima, para nenhuma prova eliminatória ficar sem estudo. O piso de cada matéria cresce com
+ * (5 − autoavaliação) × (nota mínima ÷ pontos da prova); o resto do tempo segue a prioridade.
+ */
+export const MIN_SCORE_FLOOR = {
+  totalShare: 0.3, // 30% do orçamento semanal reservado aos pisos
+  reasonShare: 0.4, // piso ≥ 40% do tempo da matéria → o motivo mostrado é a nota mínima
+} as const;
+
+/** Domínio presumido de um tópico ainda sem questões, pela autoavaliação 1..4 (só planos do edital). */
+export const SELF_ASSESSMENT_PRIOR_MASTERY: Record<number, number> = { 1: 0, 2: 25, 3: 50, 4: 75 };
 
 export const STRATEGY_LABELS: Record<StudyStrategy, string> = {
   BASE_COMUM: 'Garantir a Base Comum',
@@ -102,6 +116,7 @@ export interface SubjectCycleAllocation {
   blocksPerWeek: number;            // Quantidade de blocos de estudo sugeridos na semana
   studiedThisWeekMinutes: number;   // Minutos registrados no Pomodoro desde segunda-feira
   remainingThisWeekMinutes: number; // Quanto falta do ciclo atual nesta semana
+  floorMinutes: number;             // Parte do tempo garantida pela nota mínima da prova (0 fora do edital)
   dominantReason: string;           // Explicação transparente da prioridade
 }
 
@@ -307,9 +322,13 @@ export function calculateDynamicStudyCycle(params: {
   attempts: QuestionAttempt[];
   sessions: StudySession[];
   topicLinks: TopicLink[];
+  /** Provas do edital (planos importados do PDF); vazio = comportamento dos planos montados à mão. */
+  examParts?: ExamPart[];
   now?: Date;
 }): CycleCalculationResult {
   const { plan, subjects, topicsBySubject, attempts, sessions, topicLinks } = params;
+  const examParts = params.examParts ?? [];
+  const fromEdital = examParts.length > 0;
   const now = params.now ?? new Date();
   const nowMs = now.getTime();
   const strategy = plan.strategy_mode ?? null;
@@ -343,6 +362,12 @@ export function calculateDynamicStudyCycle(params: {
   }
   const studyableTopics = (subjectId: string) =>
     (topicsBySubject[subjectId] || []).filter((t) => !parentTopicIds.has(t.id));
+
+  // Autoavaliação vale para o tópico, senão para o tópico pai ("2.1" herda de "2"), senão para a matéria
+  const selfAssessedLevel = (topic: Topic, subject: Subject): number => {
+    const parent = topic.parent_id ? allTopicsMap.get(topic.parent_id) : undefined;
+    return topic.initial_knowledge_level ?? parent?.initial_knowledge_level ?? subject.initial_knowledge_level;
+  };
 
   // 4. Mapa de Calor de Tópicos
   const topicHeatmapRanking: TopicHeatItem[] = [];
@@ -389,8 +414,14 @@ export function calculateDynamicStudyCycle(params: {
         boardTrapCount * TOPIC_HEAT_WEIGHTS.boardTrap -
         masteredCount * TOPIC_HEAT_WEIGHTS.mastered;
 
+      // Sem nenhuma questão ainda, o domínio parte da autoavaliação (só em planos do edital)
+      const usePrior = fromEdital && attemptsCount === 0 && topic.mastery_score === 0;
+      const effectiveMastery = usePrior
+        ? (SELF_ASSESSMENT_PRIOR_MASTERY[selfAssessedLevel(topic, subj)] ?? 0)
+        : topic.mastery_score;
+
       const heatBreakdown: TopicHeatBreakdown = {
-        masteryDeficit: (100 - topic.mastery_score) / TOPIC_HEAT_WEIGHTS.masteryDeficitDivisor,
+        masteryDeficit: (100 - effectiveMastery) / TOPIC_HEAT_WEIGHTS.masteryDeficitDivisor,
         diagnosisSignal: Math.max(0, rawDiagnosisSignal),
         prerequisiteBoost: prerequisiteBoostByTopic.get(topic.id) || 0,
         forgettingBoost: decayHeatBoost,
@@ -487,9 +518,29 @@ export function calculateDynamicStudyCycle(params: {
   const totalElasticScore = rawSubjectScores.reduce((acc, item) => acc + item.elasticScore, 0) || 1;
   const totalCurrentCycleMinutes = subjects.reduce((acc, s) => acc + s.cycle_allocated_minutes, 0) || 1;
 
-  const allocations: SubjectCycleAllocation[] = rawSubjectScores.map((item) => {
-    const shareRatio = item.elasticScore / totalElasticScore;
-    const recommendedWeeklyMinutes = Math.max(30, Math.round((shareRatio * totalWeeklyMinutesBudget) / 15) * 15);
+  // 6b. Piso pela nota mínima de cada prova (planos do edital)
+  const partById = new Map(examParts.map((p) => [p.id, p]));
+  const partOf = (subject: Subject) => (subject.exam_part_id ? partById.get(subject.exam_part_id) : undefined);
+  const floorNeeds = rawSubjectScores.map(({ subject }) => {
+    const part = partOf(subject);
+    if (!part?.min_score || part.min_score <= 0) return 0;
+    const maxPoints = part.item_count * part.points_per_item;
+    return (5 - subject.initial_knowledge_level) * (part.min_score / maxPoints);
+  });
+  const totalFloorNeed = floorNeeds.reduce((acc, n) => acc + n, 0);
+  const floorBudget = totalFloorNeed > 0 ? totalWeeklyMinutesBudget * MIN_SCORE_FLOOR.totalShare : 0;
+  const elasticBudget = totalWeeklyMinutesBudget - floorBudget;
+
+  const allocations: SubjectCycleAllocation[] = rawSubjectScores.map((item, index) => {
+    const floorMinutes = totalFloorNeed > 0 ? (floorBudget * floorNeeds[index]) / totalFloorNeed : 0;
+    const rawMinutes = floorMinutes + (item.elasticScore / totalElasticScore) * elasticBudget;
+    const shareRatio = rawMinutes / totalWeeklyMinutesBudget;
+    const recommendedWeeklyMinutes = Math.max(30, Math.round(rawMinutes / 15) * 15);
+    const part = partOf(item.subject);
+    const dominantReason =
+      part && floorMinutes >= rawMinutes * MIN_SCORE_FLOOR.reasonShare
+        ? `Tempo garantido para a nota mínima da ${part.code} (${part.name})`
+        : item.dominantReason;
     const currentWeeklyMinutes = Math.round(
       (item.subject.cycle_allocated_minutes / totalCurrentCycleMinutes) * totalWeeklyMinutesBudget
     );
@@ -508,7 +559,8 @@ export function calculateDynamicStudyCycle(params: {
       blocksPerWeek: Math.max(1, Math.round(recommendedWeeklyMinutes / 60)),
       studiedThisWeekMinutes,
       remainingThisWeekMinutes: Math.max(0, currentWeeklyMinutes - studiedThisWeekMinutes),
-      dominantReason: item.dominantReason,
+      floorMinutes: Math.round(floorMinutes),
+      dominantReason,
     };
   });
 

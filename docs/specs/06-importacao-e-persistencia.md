@@ -69,7 +69,7 @@ Também aceita `{ "questoes": [...] }`, chaves em inglês (`statement`, `options
 ## 6. Importação do conteúdo programático (`src/lib/syllabusImport.ts`)
 Na aba "3. Tópicos", "Colar o conteúdo programático": aceita um tópico por linha (estilo FGV) ou tudo num parágrafo (estilo Cebraspe: `1 Conceitos. 2 Normas. 2.1 ISSAI 100.`). Corta só no início da linha ou depois de `. `, `; ` ou `: ` quando vem número + letra maiúscula (assim `Lei 14.133/2021` e `NBC TA 530 Amostragem` não quebram). Cabeçalhos em maiúsculas são ignorados. Subtópicos (`2.1`) são ligados ao pai (`2`); tópicos "pai" ficam fora do calor e da cobertura no ciclo.
 
-## 7. Próximo passo planejado: importação por PDF (Fatia 7)
-1. **Edital PDF** → texto (pdf.js) → IA com prompt de extração → JSON `{ matérias: [{ nome, área, peso?, tópicos: [{ código, título }] }], inscrição: { início, fim }, taxa, data_prova, banca, órgão, cargos }` → prévia editável → cria plano + disciplinas + `importSyllabusTopics`.
+## 7. Importação por PDF
+1. **Edital PDF** → feito na Fatia 7a, sem IA (modelo Cebraspe): ver `docs/specs/07-edital-ciclo-e-situacao.md`.
 2. **Prova PDF + gabarito PDF** → texto → IA → JSON da seção 5 (gabarito definitivo vence o preliminar; anuladas marcadas) → prévia → `importQuestions`.
 3. **Definição de pronto:** E2E com PDFs reais (FGV/CGU e Cebraspe/BACEN), conferindo contagem de questões, gabaritos e tópicos.

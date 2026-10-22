@@ -1,6 +1,6 @@
 # 🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia"
 
-> Status: **design para aprovação** (21/10/2026). Nada disto foi construído ainda.
+> Status: design **aprovado** em 21/10/2026. **7a construída** (§5.1–5.3: `src/lib/editalParser.ts`, `src/features/edital-import/`, passo de autoavaliação no Wizard, piso pela nota mínima em `cycleEngine.ts`). 7b (§5.4–5.5) ainda não.
 > Marcação: o que o dono decidiu está escrito como fato; escolhas do Claude estão marcadas **(decisão do Claude)** e podem ser revistas.
 
 ## 1. Por que agora

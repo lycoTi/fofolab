@@ -1,16 +1,16 @@
 # Graph Report - fofolab  (2026-10-21)
 
 ## Corpus Check
-- 89 files · ~74,526 words
+- 90 files · ~76,499 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 764 nodes · 1640 edges · 58 communities (41 shown, 8 thin omitted)
+- 777 nodes · 1654 edges · 53 communities (38 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c34b9d4d`
+- Built from commit: `8f9fe2da`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,14 +26,13 @@
 - Database
 - 🐹🧪 FofoLab — Bancada Inteligente de Estudos
 - devDependencies
-- DailyFocusView.tsx
-- questionWorkbenchAndRouter.test.tsx
+- Topic
+- 🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia"
 - types/database.ts
 - cycleEngine.ts
 - Design System Builder
 - 🔬 Parte 2: Reavaliação v2 (O que mudou no "Córtex" após instalar as 6 Skills!)
-- migrations.ts
-- Topic
+- initialSeed.ts
 - 01-database-schema.sql
 - schema-v1.sql
 - permissions
@@ -44,7 +43,6 @@
 - 🧭 Spec 05 — Onboarding Wizard, Visão "Meu Dia de Hoje" & Explicabilidade sob Demanda
 - FofoLab — guia para o Claude Code
 - bancada.spec.ts
-- QuestionImportModal.tsx
 - 💾 Spec 06 — Persistência, Cópias de Segurança e Importação de Conteúdo
 - PomodoroWidget.tsx
 - PdfReaderStage.tsx
@@ -62,15 +60,14 @@
 - grill-me/SKILL.md
 - workflows/graphify.md
 - app
-- notebookDraftAndLayout.test.tsx
 - AdminFactoryView.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `App()` - 46 edges
 2. `getDb()` - 39 edges
 3. `Topic` - 25 edges
-4. `queryOne()` - 22 edges
-5. `persistDatabase()` - 22 edges
+4. `persistDatabase()` - 22 edges
+5. `queryOne()` - 22 edges
 6. `Subject` - 19 edges
 7. `StudyPlan` - 18 edges
 8. `initDatabase()` - 16 edges
@@ -80,43 +77,43 @@
 ## Surprising Connections (you probably didn't know these)
 - `OnboardingWizardModalProps` --references--> `StudyPlan`  [EXTRACTED]
   src/features/onboarding-wizard/OnboardingWizardModal.tsx → src/types/database.ts
-- `App()` --calls--> `useResizableWidth()`  [EXTRACTED]
-  src/App.tsx → src/components/ResizeHandle.tsx
-- `App()` --calls--> `generateQuestionDissection()`  [EXTRACTED]
-  src/App.tsx → src/lib/aiRouter.ts
-- `App()` --calls--> `getAiStatus()`  [EXTRACTED]
-  src/App.tsx → src/lib/aiRouter.ts
-- `App()` --calls--> `calculateDynamicStudyCycle()`  [EXTRACTED]
-  src/App.tsx → src/lib/cycleEngine.ts
+- `CycleDashboardProps` --references--> `StudyPlan`  [EXTRACTED]
+  src/components/CycleDashboard.tsx → src/types/database.ts
+- `DailyFocusViewProps` --references--> `CycleCalculationResult`  [EXTRACTED]
+  src/features/daily-focus/DailyFocusView.tsx → src/lib/cycleEngine.ts
+- `QuestionImportModalProps` --references--> `ImportQuestionItem`  [EXTRACTED]
+  src/features/question-import/QuestionImportModal.tsx → src/types/database.ts
+- `CycleCalculationResult` --references--> `StudyStrategy`  [EXTRACTED]
+  src/lib/cycleEngine.ts → src/types/database.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (58 total, 8 thin omitted)
+## Communities (53 total, 8 thin omitted)
 
 ### Community 0 - "aiRouter.ts"
 Cohesion: 0.08
-Nodes (52): describeDiagnosisHint(), describeDisabledReason(), DIAGNOSIS_BUTTONS, DiagnosisSubmission, QuestionWorkbench(), QuestionWorkbenchProps, resolveAnswerState(), SEED_QUESTIONS (+44 more)
+Nodes (55): describeDiagnosisHint(), describeDisabledReason(), DIAGNOSIS_BUTTONS, DiagnosisSubmission, QuestionWorkbench(), QuestionWorkbenchProps, resolveAnswerState(), SEED_QUESTIONS (+47 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.09
 Nodes (21): DOM, DOM.Iterable, ES2022, src, compilerOptions, allowImportingTsExtensions, isolatedModules, jsx (+13 more)
 
 ### Community 2 - "explainabilityEngine.ts"
-Cohesion: 0.26
-Nodes (13): CycleDashboard(), getHeatBadgeClass(), getSuggestionCardClass(), MetricExplainer(), MetricExplainerProps, CycleSuggestion, STRATEGY_LABELS, describeStrategy() (+5 more)
+Cohesion: 0.15
+Nodes (20): CycleDashboard(), CycleDashboardProps, getHeatBadgeClass(), getSuggestionCardClass(), MetricExplainer(), MetricExplainerProps, QuestionComplexityProfile, CycleCalculationResult (+12 more)
 
 ### Community 3 - "dependencies"
 Cohesion: 0.06
 Nodes (31): clsx, lucide-react, dependencies, clsx, lucide-react, pdfjs-dist, react, react-dom (+23 more)
 
 ### Community 4 - "storage.ts"
-Cohesion: 0.07
-Nodes (34): BackupPanel(), BackupPanelProps, describeBackupLabel(), describeStorage(), formatDate(), LABELS, formatTime(), SaveStatusIndicator() (+26 more)
+Cohesion: 0.06
+Nodes (38): BackupPanel(), BackupPanelProps, describeBackupLabel(), describeStorage(), formatDate(), LABELS, formatTime(), SaveStatusIndicator() (+30 more)
 
 ### Community 5 - "lib/database.ts"
-Cohesion: 0.08
-Nodes (89): RFC-4122, App(), AppMode, DeletableKind, DELETE_LABELS, describeDependents(), ExperienceMode, localDateStamp() (+81 more)
+Cohesion: 0.05
+Nodes (108): RFC-4122, App(), AppMode, DeletableKind, DELETE_LABELS, describeDependents(), ExperienceMode, localDateStamp() (+100 more)
 
 ### Community 6 - "tauri.conf.json"
 Cohesion: 0.08
@@ -124,7 +121,7 @@ Nodes (24): icons/128x128@2x.png, icons/128x128.png, icons/32x32.png, icons/icon
 
 ### Community 9 - "questionImport.ts"
 Cohesion: 0.14
-Nodes (25): buildDemoTutorReply(), BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun(), normalizeJsonOptions() (+17 more)
+Nodes (26): IMPORT_TEXT_EXAMPLE, QuestionImportModal(), BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun() (+18 more)
 
 ### Community 11 - "Database"
 Cohesion: 0.15
@@ -138,21 +135,21 @@ Nodes (10): 1. Ferramentas Base, 2. Ferramentas de Contexto & Automação (Opcio
 Cohesion: 0.06
 Nodes (31): autoprefixer, fake-indexeddb, jsdom, devDependencies, autoprefixer, fake-indexeddb, jsdom, @playwright/test (+23 more)
 
-### Community 14 - "DailyFocusView.tsx"
-Cohesion: 0.22
-Nodes (14): CycleDashboardProps, BADGE_STYLES, DailyFocusView(), DailyFocusViewProps, formatDailyBudget(), CycleCalculationResult, CostBenefitBadge, DailyPlan (+6 more)
+### Community 14 - "Topic"
+Cohesion: 0.20
+Nodes (19): BADGE_STYLES, DailyFocusView(), DailyFocusViewProps, formatDailyBudget(), QuestionImportModalProps, SyllabusTreeDock(), SyllabusTreeDockProps, SubjectCycleAllocation (+11 more)
 
-### Community 15 - "questionWorkbenchAndRouter.test.tsx"
-Cohesion: 0.29
-Nodes (10): SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_STUDY_PLANS, SEED_SUBJECTS, SEED_TOPIC_LINKS (+2 more)
+### Community 15 - "🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia""
+Cohesion: 0.12
+Nodes (16): 10. Depois deste projeto, 1. Por que agora, 2. Objetivos, não objetivos e anti-objetivos, 3. O edital real (fonte de verdade para testes), 4. Ponto de partida do dono (para semear a autoavaliação e validar o ciclo), 5.1 Importar o edital, 5.2 Autoavaliação no Wizard, 5.3 Ciclo pela nota mínima (+8 more)
 
 ### Community 16 - "types/database.ts"
-Cohesion: 0.13
-Nodes (20): CurriculumManagerModal(), CurriculumManagerModalProps, CurriculumSection, getSampleSubtopicsForCalibration(), BlueprintHealthStatus, CareerSphere, CatalogStatus, CreateStudyPlanInput (+12 more)
+Cohesion: 0.12
+Nodes (24): CurriculumManagerModal(), CurriculumManagerModalProps, CurriculumSection, getSampleSubtopicsForCalibration(), cleanTitle(), looksLikeHeader(), parentTopicCode(), parseSyllabusTopics() (+16 more)
 
 ### Community 17 - "cycleEngine.ts"
-Cohesion: 0.16
-Nodes (19): calculateDynamicStudyCycle(), calculateMemoryDecayBoost(), calculateSampleConfidencePercent(), calculateStrategyMultiplier(), composeSubjectScore(), composeTopicHeat(), pickDominantReason(), sampleSaturationK() (+11 more)
+Cohesion: 0.19
+Nodes (16): calculateDynamicStudyCycle(), calculateMemoryDecayBoost(), calculateSampleConfidencePercent(), calculateStrategyMultiplier(), composeSubjectScore(), composeTopicHeat(), pickDominantReason(), startOfWeek() (+8 more)
 
 ### Community 19 - "Design System Builder"
 Cohesion: 0.12
@@ -162,13 +159,9 @@ Nodes (15): 1. Design Tokens JSON (`design-tokens.json`), 2. CSS Variables File 
 Cohesion: 0.12
 Nodes (15): 1.1. O que havia sido validado positivamente, 1.2. Os 5 Gargalos Identificados na Avaliação v1, Alerta de Segurança em `VITE_DEEPSEEK_API_KEY` + Limpeza de Ternários Aninhados, 🧠 Auditoria de Sócio — Comparativo v1 (Pré-Skills) vs. v2 (Pós-Skills), Da "Regra das 3 Questões" para Saturação Contínua BM25 + Regressão de Meia-Vida (Duolingo HLR), De "God Component" (`App.tsx` com 781 linhas) para Bancada Dupla (Split View) Componentizada, De Prompt Genérico para "Eliminação Contrastiva + Regra de Abstenção", 🚀 Mudança 1 (Lente: `education-learning-science` — Kapur, 2016 & Kornell, 2009) (+7 more)
 
-### Community 21 - "migrations.ts"
-Cohesion: 0.13
-Nodes (15): detectSchemaVersion(), getUserVersion(), LATEST_SCHEMA_VERSION, Migration, MIGRATIONS, prepareSchema(), SchemaPreparationResult, SchemaTooNewError (+7 more)
-
-### Community 22 - "Topic"
-Cohesion: 0.22
-Nodes (14): NotebookDockPanel(), NotebookDockPanelProps, DraftOwner, NotebookDraftStatus, notebookTitle(), SyllabusTreeDock(), SyllabusTreeDockProps, SubjectCycleAllocation (+6 more)
+### Community 21 - "initialSeed.ts"
+Cohesion: 0.26
+Nodes (10): SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_STUDY_PLANS, SEED_SUBJECTS, SEED_TOPIC_LINKS (+2 more)
 
 ### Community 23 - "01-database-schema.sql"
 Cohesion: 0.36
@@ -196,7 +189,7 @@ Nodes (9): Brainstorming, First: What Do You Actually Know?, Play It Back, Red F
 
 ### Community 29 - "🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA)"
 Cohesion: 0.29
-Nodes (6): 🏠 Checklist no PC de casa (antes do merge na `main`), ✅ Definição de Pronto, 🎯 Estado real por área, 🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA), 🔜 Próximas fatias, 📌 Status Global
+Nodes (6): 🏠 Checklist do app desktop (pendente — juntado na `main` antes, por decisão do dono), ✅ Definição de Pronto, 🎯 Estado real por área, 🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA), 🔜 Próximas fatias, 📌 Status Global
 
 ### Community 30 - "🧭 Spec 05 — Onboarding Wizard, Visão "Meu Dia de Hoje" & Explicabilidade sob Demanda"
 Cohesion: 0.20
@@ -205,10 +198,6 @@ Nodes (9): 🎯 1. O Problema & A Visão Humana, 🧙‍♂️ 2. O Onboarding W
 ### Community 31 - "FofoLab — guia para o Claude Code"
 Cohesion: 0.29
 Nodes (7): Antes de mexer, Comandos, FofoLab — guia para o Claude Code, Mapa rápido do código, Outras regras, Regras do projeto (carregadas sempre — fonte única em `.agents/rules/`, também usada pelo Antigravity), Skills do projeto (`.agents/skills/`) — leia o SKILL.md ANTES de começar o trabalho correspondente
-
-### Community 33 - "QuestionImportModal.tsx"
-Cohesion: 0.27
-Nodes (10): IMPORT_TEXT_EXAMPLE, QuestionImportModal(), QuestionImportModalProps, toImportItems(), cleanTitle(), looksLikeHeader(), parentTopicCode(), parseSyllabusTopics() (+2 more)
 
 ### Community 34 - "💾 Spec 06 — Persistência, Cópias de Segurança e Importação de Conteúdo"
 Cohesion: 0.25
@@ -219,8 +208,8 @@ Cohesion: 0.29
 Nodes (5): PomodoroSessionResult, PomodoroWidget(), PomodoroWidgetProps, SessionContext, TimerMode
 
 ### Community 36 - "PdfReaderStage.tsx"
-Cohesion: 0.14
-Nodes (21): loadPdfDocument(), loadPdfJs(), PageSize, readPageSizes(), renderPdfPage(), PageJumpRequest, PdfDocumentViewer(), PdfPage (+13 more)
+Cohesion: 0.12
+Nodes (26): NotebookDockPanel(), NotebookDockPanelProps, NotebookDraftStatus, loadPdfDocument(), loadPdfJs(), PageSize, readPageSizes(), renderPdfPage() (+18 more)
 
 ### Community 37 - "OnboardingWizardModal.tsx"
 Cohesion: 0.31
@@ -250,32 +239,28 @@ Nodes (3): 1. Defensive Security Audit (5-Phase Mindset for Desktop & Web Apps),
 Cohesion: 0.50
 Nodes (3): 1. Camadas de Teste, 2. Comandos de Verificação, Suíte de Testes & TDD (FofoLab)
 
-### Community 54 - "notebookDraftAndLayout.test.tsx"
-Cohesion: 0.32
-Nodes (6): ResizeHandle(), ResizeHandleProps, useResizableWidth(), NOTEBOOK_AUTOSAVE_MS, saveMock, [topicA, topicB]
-
 ### Community 55 - "AdminFactoryView.tsx"
 Cohesion: 0.48
 Nodes (6): AdminFactoryView(), AdminFactoryViewProps, getCatalogStatusClass(), getCatalogStatusLabel(), AdminBoardBlueprint, CareerTrack
 
 ## Knowledge Gaps
-- **238 isolated node(s):** `admin_board_blueprints`, `TEST_PDF`, `name`, `private`, `version` (+233 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 303 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **252 isolated node(s):** `1. Por que agora`, `2. Objetivos, não objetivos e anti-objetivos`, `3. O edital real (fonte de verdade para testes)`, `4. Ponto de partida do dono (para semear a autoavaliação e validar o ciclo)`, `5.1 Importar o edital` (+247 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 314 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topic` connect `Topic` to `QuestionImportModal.tsx`, `explainabilityEngine.ts`, `PdfReaderStage.tsx`, `lib/database.ts`, `questionImport.ts`, `DailyFocusView.tsx`, `questionWorkbenchAndRouter.test.tsx`, `types/database.ts`, `cycleEngine.ts`?**
+- **Why does `Topic` connect `Topic` to `aiRouter.ts`, `explainabilityEngine.ts`, `PdfReaderStage.tsx`, `lib/database.ts`, `questionImport.ts`, `types/database.ts`, `cycleEngine.ts`, `initialSeed.ts`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `DatabaseStorage` connect `storage.ts` to `lib/database.ts`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `StudyPlan` connect `DailyFocusView.tsx` to `QuestionImportModal.tsx`, `explainabilityEngine.ts`, `OnboardingWizardModal.tsx`, `lib/database.ts`, `questionWorkbenchAndRouter.test.tsx`, `types/database.ts`, `cycleEngine.ts`, `Topic`?**
+- **Why does `StudyPlan` connect `Topic` to `explainabilityEngine.ts`, `OnboardingWizardModal.tsx`, `lib/database.ts`, `questionImport.ts`, `types/database.ts`, `cycleEngine.ts`, `initialSeed.ts`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **What connects `admin_board_blueprints`, `TEST_PDF`, `name` to the rest of the system?**
-  _238 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `1. Por que agora`, `2. Objetivos, não objetivos e anti-objetivos`, `3. O edital real (fonte de verdade para testes)` to the rest of the system?**
+  _252 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `aiRouter.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07656341320864991 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07731694828469023 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Should `dependencies` be split into smaller, more focused modules?**

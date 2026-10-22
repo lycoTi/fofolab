@@ -1,6 +1,6 @@
 -- ============================================================================
 -- FofoLab — Contrato Oficial do Banco de Dados Local (SQLite)
--- Versão do contrato: 3 (PRAGMA user_version). Sempre a versão MAIS RECENTE.
+-- Versão do contrato: 4 (PRAGMA user_version). Sempre a versão MAIS RECENTE.
 -- Bancos existentes são atualizados pelas migrações em src/lib/migrations.ts:
 -- toda mudança aqui exige uma migração equivalente (há teste comparando os dois caminhos).
 -- Arquivo: fofolab.db (Tauri: pasta de dados do app; navegador: armazenamento interno).
@@ -33,7 +33,23 @@ CREATE TABLE IF NOT EXISTS study_plans (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     -- [v2] Escolhas do Wizard "Pegar pela Mão" (NULL = ainda não escolhido / estratégia neutra)
     strategy_mode TEXT,                    -- 'BASE_COMUM', 'MAIS_COBRADOS', 'ALTO_PESO_CURTO'
-    study_moment TEXT                      -- 'PRE_EDITAL', 'POS_EDITAL'
+    study_moment TEXT,                     -- 'PRE_EDITAL', 'POS_EDITAL'
+    -- [v4] Lidos do edital (docs/specs/07)
+    registration_deadline DATE,            -- Último dia de inscrição
+    min_total_score REAL,                  -- Nota mínima no conjunto das provas objetivas
+    selected_role TEXT                     -- Cargo/especialidade escolhido no edital
+);
+
+-- [v4] Provas objetivas do edital (P1, P2, P3…) com pontuação e nota mínima eliminatória
+CREATE TABLE IF NOT EXISTS exam_parts (
+    id TEXT PRIMARY KEY,
+    plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+    code TEXT NOT NULL,                    -- Ex: "P1"
+    name TEXT NOT NULL,                    -- Ex: "Conhecimentos básicos"
+    item_count INTEGER NOT NULL,
+    points_per_item REAL DEFAULT 1,        -- Cebraspe: o erro desconta o mesmo valor
+    min_score REAL,                        -- Nota líquida mínima (NULL = sem mínimo)
+    sort_order INTEGER DEFAULT 0
 );
 
 -- 3. Disciplinas / Matérias do Edital
@@ -50,7 +66,8 @@ CREATE TABLE IF NOT EXISTS subjects (
     -- Parâmetros Calculados Dinamicamente pelo FofoLab (Dia 2+)
     measured_mastery_score REAL DEFAULT 0.0,   -- 0 a 100%
     behavioral_friction_score REAL DEFAULT 0.0,-- Medido por pausas/pulos no Pomodoro
-    cycle_allocated_minutes INTEGER DEFAULT 60 -- Minutos alocados no ciclo atual
+    cycle_allocated_minutes INTEGER DEFAULT 60, -- Minutos alocados no ciclo atual
+    exam_part_id TEXT REFERENCES exam_parts(id) ON DELETE SET NULL -- [v4] Prova em que a matéria cai
 );
 
 -- 4. Tópicos e Subtópicos Verticalizados do Edital
@@ -62,7 +79,8 @@ CREATE TABLE IF NOT EXISTS topics (
     title TEXT NOT NULL,
     mastery_score REAL DEFAULT 0.0,        -- 0 a 100% calculado sem viés
     status TEXT DEFAULT 'PENDING',         -- 'PENDING', 'STUDYING', 'REVIEW', 'MASTERED'
-    last_studied_at DATETIME
+    last_studied_at DATETIME,
+    initial_knowledge_level INTEGER        -- [v4] Autoavaliação do tópico (1..4); NULL = herda da matéria
 );
 
 -- 5. Grafo de Conhecimento (Conexões entre Micro-tópicos e Pré-requisitos)

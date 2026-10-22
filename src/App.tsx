@@ -21,6 +21,7 @@ import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
 import { DailyFocusView } from './features/daily-focus/DailyFocusView';
+import { EditalImportModal } from './features/edital-import/EditalImportModal';
 import { NotebookDockPanel } from './features/notebook-dock/NotebookDockPanel';
 import { PdfReaderStage, type PdfProgressUpdate } from './features/pdf-reader/PdfReaderStage';
 import { useNotebookDraft } from './features/notebook-dock/useNotebookDraft';
@@ -38,6 +39,7 @@ import {
   countDependents,
   createSafetyBackup,
   createStudyPlan,
+  createPlanFromEdital,
   createSubject,
   createTopic,
   deleteStudyPlan,
@@ -45,6 +47,7 @@ import {
   deleteTopic,
   exportDatabaseBinary,
   getAdminCatalogAndBlueprints,
+  getExamPartsByPlan,
   getNotebooksByPlan,
   getPdfSourceForTopic,
   getQuestionsForTopicOrSubject,
@@ -66,6 +69,7 @@ import {
   saveAiDissection,
   savePdfSourceProgress,
   saveQuestionChatHistory,
+  saveSelfAssessment,
   setActiveStudyPlan,
   updateStudyPlan,
   updateSubject,
@@ -79,7 +83,10 @@ import type {
   CreateStudyPlanInput,
   CreateSubjectInput,
   CreateTopicInput,
+  EditalPlanInput,
+  ExamPart,
   ImportQuestionItem,
+  SelfAssessmentInput,
   ImportTopicItem,
   Notebook,
   PdfSource,
@@ -130,6 +137,9 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<WorkbenchTab>('questions');
 
   const [wizardOpen, setWizardOpen] = useState(false);
+  const [wizardInitialStep, setWizardInitialStep] = useState(1);
+  const [editalImportOpen, setEditalImportOpen] = useState(false);
+  const [examParts, setExamParts] = useState<ExamPart[]>([]);
   const [importOpen, setImportOpen] = useState(false);
 
   // Painéis laterais: abrir/fechar + largura ajustável (arrastando a divisória)
@@ -187,6 +197,7 @@ export default function App() {
 
       const planSubjects = getSubjectsByPlan(currentPlan.id);
       setSubjects(planSubjects);
+      setExamParts(getExamPartsByPlan(currentPlan.id));
 
       const topicsMap: Record<string, Topic[]> = {};
       for (const s of planSubjects) {
@@ -261,8 +272,9 @@ export default function App() {
       attempts,
       sessions,
       topicLinks,
+      examParts,
     });
-  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks]);
+  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts]);
 
   const currentSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
   const currentTopics = currentSubject ? topicsBySubject[currentSubject.id] || [] : [];
@@ -480,7 +492,12 @@ export default function App() {
    * grava horas/estratégia no plano e já aplica ao ciclo a distribuição recomendada por elas.
    * Fora do assistente, mudanças de prioridade continuam sendo só sugestão (botão "Aplicar").
    */
-  const handleOnboardingComplete = (profile: OnboardingProfile, targetPlanId: string) => {
+  const handleOnboardingComplete = (
+    profile: OnboardingProfile,
+    targetPlanId: string,
+    selfAssessment: SelfAssessmentInput
+  ) => {
+    saveSelfAssessment(selfAssessment);
     const updatedPlan = updateStudyPlan({
       id: targetPlanId,
       weekly_hours_target: profile.weeklyHours,
@@ -498,6 +515,7 @@ export default function App() {
         attempts: getRecentAttempts(500),
         sessions: getStudySessionsSince(startOfWeek(new Date()).toISOString()),
         topicLinks: getTopicLinks(),
+        examParts: getExamPartsByPlan(targetPlanId),
       });
       applyRecommendedCycleAllocations(
         recommended.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }))
@@ -509,6 +527,26 @@ export default function App() {
       handleSelectPlan(targetPlanId);
     }
     setExperienceMode('daily');
+  };
+
+  /** Matérias do plano com os tópicos de primeiro nível, para a autoavaliação do assistente. */
+  const getPlanContentForWizard = (planId: string) =>
+    getSubjectsByPlan(planId).map((subject) => ({
+      subject,
+      topics: getTopicsBySubject(subject.id).filter((t) => !t.parent_id),
+    }));
+
+  const openWizard = (initialStep = 1) => {
+    setWizardInitialStep(initialStep);
+    setWizardOpen(true);
+  };
+
+  /** Edital importado vira o plano ativo; o assistente abre direto nas horas, para seguir à autoavaliação. */
+  const handleCreatePlanFromEdital = (input: EditalPlanInput) => {
+    createPlanFromEdital(input);
+    setEditalImportOpen(false);
+    refreshData('', '');
+    openWizard(2);
   };
 
   const confirmAndDelete = async (kind: DeletableKind, id: string, name: string): Promise<boolean> => {
@@ -750,7 +788,7 @@ export default function App() {
 
                 <button
                   type="button"
-                  onClick={() => setWizardOpen(true)}
+                  onClick={() => openWizard()}
                   className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5 transition"
                   title="Recalibrar momento, horas ou estratégia"
                 >
@@ -825,7 +863,7 @@ export default function App() {
                   setPomodoroPreset({ minutes: durationMinutes, nonce: Date.now() });
                 }}
                 onSwitchToProWorkbench={() => setExperienceMode('pro')}
-                onOpenWizard={() => setWizardOpen(true)}
+                onOpenWizard={() => openWizard()}
               />
             )}
 
@@ -1018,6 +1056,19 @@ export default function App() {
         activePlan={activePlan}
         onClose={() => setWizardOpen(false)}
         onComplete={handleOnboardingComplete}
+        getPlanContent={getPlanContentForWizard}
+        initialStep={wizardInitialStep}
+        onImportEdital={() => {
+          setWizardOpen(false);
+          setEditalImportOpen(true);
+        }}
+      />
+
+      <EditalImportModal
+        isOpen={editalImportOpen}
+        weeklyHoursTarget={activePlan.weekly_hours_target}
+        onClose={() => setEditalImportOpen(false)}
+        onCreatePlan={handleCreatePlanFromEdital}
       />
 
       <QuestionImportModal
@@ -1033,6 +1084,10 @@ export default function App() {
 
       <CurriculumManagerModal
         isOpen={crudModalOpen}
+        onImportEdital={() => {
+          setCrudModalOpen(false);
+          setEditalImportOpen(true);
+        }}
         initialSection={crudInitialSection}
         plans={plans}
         activePlan={activePlan}

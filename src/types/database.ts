@@ -40,6 +40,22 @@ export interface StudyPlan {
   created_at: string;
   strategy_mode: StudyStrategy | null; // [v2] null = estratégia neutra (Wizard ainda não respondido)
   study_moment: StudyMoment | null;    // [v2]
+  // [v4] Lidos do edital; ausentes nos dados de exemplo
+  registration_deadline?: string | null;
+  min_total_score?: number | null;
+  selected_role?: string | null;
+}
+
+// 2b. exam_parts [v4] — provas objetivas do edital
+export interface ExamPart {
+  id: string;
+  plan_id: string;
+  code: string;
+  name: string;
+  item_count: number;
+  points_per_item: number;
+  min_score: number | null;
+  sort_order: number;
 }
 
 // 3. subjects
@@ -55,6 +71,7 @@ export interface Subject {
   measured_mastery_score: number;  // 0 a 100%
   behavioral_friction_score: number;
   cycle_allocated_minutes: number;
+  exam_part_id?: string | null; // [v4] prova em que a matéria cai
 }
 
 // 4. topics
@@ -67,6 +84,8 @@ export interface Topic {
   mastery_score: number; // 0 a 100%
   status: TopicStatus;
   last_studied_at: string | null;
+  /** [v4] Autoavaliação do tópico (1..4); null/ausente = herda da matéria. */
+  initial_knowledge_level?: number | null;
 }
 
 // 5. topic_links
@@ -230,5 +249,25 @@ export interface ImportQuestionItem {
 export interface ImportTopicItem {
   code: string | null;
   title: string;
+}
+
+/** Plano montado a partir do edital, já conferido pelo estudante na prévia (docs/specs/07). */
+export interface EditalPlanInput {
+  title: string;
+  organ: string | null;
+  examBoard: string | null;
+  roleTitle: string | null;
+  examDate: string | null;
+  registrationDeadline: string | null;
+  minTotalScore: number | null;
+  weeklyHoursTarget: number;
+  parts: { code: string; name: string; itemCount: number; pointsPerItem: number; minScore: number | null }[];
+  subjects: { name: string; partCode: string | null; examWeight: number; topics: ImportTopicItem[] }[];
+}
+
+/** Autoavaliação do Wizard: nível da matéria e, opcionalmente, de tópicos (null = herda da matéria). */
+export interface SelfAssessmentInput {
+  subjects: { subjectId: string; level: number }[];
+  topics: { topicId: string; level: number | null }[];
 }
 
