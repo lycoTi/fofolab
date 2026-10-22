@@ -12,8 +12,12 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 @.agents/rules/definition-of-done.md
 @.agents/rules/ui-clean-design-and-tdd.md
 @.agents/rules/graphify.md
+@.agents/rules/fofolab-especificos.md
 
-## Skills do projeto (`.agents/skills/`) — leia o SKILL.md ANTES de começar o trabalho correspondente
+## Skills — leia o SKILL.md ANTES de começar o trabalho correspondente
+Globais (stack `~/.agents`, valem para todos os projetos; o que é só do FofoLab está em `.agents/rules/fofolab-especificos.md`)
+e locais (`.agents/skills/`: só `education-learning-science`). Regra global × local: `~/.agents/AGENTS.md`.
+
 | Trabalho | Skill |
 |---|---|
 | Feature nova ou mudança de comportamento (não para correções pequenas) | `brainstorming` — perguntas antes de construir; `grill-me` quando o usuário pedir para ser questionado |
