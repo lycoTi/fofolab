@@ -44,7 +44,7 @@ function DraftStatusBadge({ status }: { status: NotebookDraftStatus }) {
 }
 
 export function NotebookDockPanel({
-  width = 384,
+  width,
   currentSubject,
   currentTopic,
   notebook,
@@ -76,8 +76,8 @@ export function NotebookDockPanel({
   return (
     <section
       aria-label="Painel Lateral do Caderno"
-      style={{ width }}
-      className="border-l border-slate-800 bg-slate-900/60 flex flex-col shrink-0 h-full min-w-0"
+      style={width ? { width } : undefined}
+      className={`bg-slate-900/60 flex flex-col h-full min-w-0 ${width ? 'border-l border-slate-800 shrink-0' : 'w-full'}`}
     >
       <div className="p-3.5 border-b border-slate-800 flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5">

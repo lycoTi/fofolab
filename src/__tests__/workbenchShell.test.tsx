@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { useCollapsiblePanel } from '../features/workbench-shell/useCollapsiblePanel';
 import { RAIL_WIDTH, RailButton, SidePanel } from '../features/workbench-shell/SidePanel';
+import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from '../features/workbench-shell/RightDock';
+import { useState } from 'react';
 
 beforeEach(() => {
   localStorage.clear();
@@ -77,5 +79,46 @@ describe('painel lateral que recolhe em trilho', () => {
     const css = readFileSync(resolve(__dirname, '../index.css'), 'utf8');
     expect(css).toMatch(/\.fofolab-resizing \.fofolab-panel[^{]*\{[^}]*transition:\s*none/);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce[\s\S]*\.fofolab-panel[\s\S]*transition:\s*none/);
+  });
+});
+
+describe('coluna da direita com Copiloto e Caderno', () => {
+  function DockHarness() {
+    const [tab, setTab] = useState<RightDockTab>('notebook');
+    const [note, setNote] = useState('');
+    return (
+      <RightDock
+        tab={tab}
+        onTabChange={setTab}
+        copilot={<input aria-label="pergunta" />}
+        notebook={<textarea aria-label="nota" value={note} onChange={(e) => setNote(e.target.value)} />}
+      />
+    );
+  }
+
+  it('Copiloto e Caderno alternam por abas sem perder o que foi digitado', () => {
+    render(<DockHarness />);
+    fireEvent.change(screen.getByLabelText('nota'), { target: { value: 'minha nota' } });
+    fireEvent.click(screen.getByRole('tab', { name: 'Copiloto' }));
+    expect(screen.getByRole('tab', { name: 'Copiloto' }).getAttribute('aria-selected')).toBe('true');
+    const notePanel = screen.getByLabelText('nota', { selector: 'textarea' }).closest('[role="tabpanel"]') as HTMLElement;
+    expect(notePanel.hidden).toBe(true);
+
+    fireEvent.click(screen.getByRole('tab', { name: 'Caderno' }));
+    expect((screen.getByLabelText('nota') as HTMLTextAreaElement).value).toBe('minha nota');
+  });
+
+  it('lembra a aba escolhida', () => {
+    const { result } = renderHook(() => useRightDockTab());
+    expect(result.current.tab).toBe('copilot');
+    act(() => result.current.setTab('notebook'));
+    expect(localStorage.getItem('fofolab_layout_right_tab_v1')).toBe('notebook');
+  });
+
+  it('ícone do trilho abre a coluna já na aba certa', () => {
+    const onOpenTab = vi.fn();
+    render(<div>{rightDockRail({ tab: 'copilot', onOpenTab })}</div>);
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir Caderno' }));
+    expect(onOpenTab).toHaveBeenCalledWith('notebook');
   });
 });
