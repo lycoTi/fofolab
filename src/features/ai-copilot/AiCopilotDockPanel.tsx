@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { RichText } from '../../components/RichText';
 import { BookPlus, CheckCircle2, Loader2, MessageSquare, Send, Sparkles, X } from 'lucide-react';
 import {
   askContextualStudyCopilot,
@@ -156,7 +157,7 @@ export function AiCopilotDockPanel({
         {turns.map((turn) => (
           <div
             key={turn.id}
-            className={`p-3 rounded-xl text-xs whitespace-pre-line leading-relaxed space-y-2 ${
+            className={`p-3 rounded-xl text-xs leading-relaxed space-y-2 ${
               turn.role === 'student'
                 ? 'bg-orange-500/15 border border-orange-500/30 text-orange-100 ml-6'
                 : 'bg-slate-950 border border-slate-800 text-slate-200'
@@ -167,7 +168,7 @@ export function AiCopilotDockPanel({
                 Exemplo simulado — a IA ainda não está configurada
               </div>
             )}
-            <div>{turn.content}</div>
+            <RichText text={turn.content} />
             {turn.role === 'tutor' && turn.id !== 'welcome-copilot' && !turn.simulated && (
               <div className="pt-1.5 border-t border-slate-900 flex items-center justify-end">
                 <button

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { formatDuration } from '../lib/timeFormat';
 import {
   BookOpen,
   ClipboardList,
@@ -388,8 +389,8 @@ export function CurriculumManagerModal({
                           )}
                         </div>
                         <p className="text-xs text-slate-400 mt-1">
-                          Banca: {p.exam_board || 'N/D'} • Meta: {p.weekly_hours_target}h/sem (
-                          {(p.weekly_hours_target / 7).toFixed(1)}h/dia) • Prova:{' '}
+                          Banca: {p.exam_board || 'N/D'} • Meta: {formatDuration(p.weekly_hours_target * 60)} por semana (
+                          {formatDuration((p.weekly_hours_target * 60) / 7)} por dia) • Prova:{' '}
                           {p.exam_date || 'Sem data'}
                         </p>
                       </div>
@@ -600,7 +601,7 @@ export function CurriculumManagerModal({
                         <span className="text-sm font-semibold text-white">{s.name}</span>
                       </div>
                       <p className="text-xs text-slate-400 mt-1">
-                        Peso: {s.exam_weight}x • Ciclo: {s.cycle_allocated_minutes} min • Base:{' '}
+                        Peso: {s.exam_weight}x • Ciclo: {formatDuration(s.cycle_allocated_minutes)} por semana • Base:{' '}
                         {s.initial_knowledge_level}/4 • Afinidade: {s.initial_affinity_level}/3 •
                         Domínio: <strong className="text-orange-300">{s.measured_mastery_score}%</strong>
                       </p>

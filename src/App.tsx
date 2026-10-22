@@ -5,6 +5,7 @@ import {
   Compass,
   FileText,
   HelpCircle,
+  Flame,
   Layers,
   Network,
   PanelLeft,
@@ -13,14 +14,18 @@ import {
 } from 'lucide-react';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
-import { CycleDashboard } from './components/CycleDashboard';
-import { PomodoroWidget, type PomodoroSessionResult } from './components/PomodoroWidget';
 import { QuestionWorkbench, type DiagnosisSubmission } from './components/QuestionWorkbench';
 import { ResizeHandle, useResizableWidth } from './components/ResizeHandle';
 import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
+import { CycleView } from './features/cycle/CycleView';
 import { DailyFocusView } from './features/daily-focus/DailyFocusView';
+import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
+import { StudyBlockCard } from './features/study-block/StudyBlockCard';
+import { StudyBlockMini } from './features/study-block/StudyBlockMini';
+import type { BlockTarget, RecordedSession } from './features/study-block/studyBlockMachine';
+import { useStudyBlock } from './features/study-block/useStudyBlock';
 import { EditalImportModal } from './features/edital-import/EditalImportModal';
 import { NotebookDockPanel } from './features/notebook-dock/NotebookDockPanel';
 import { PdfReaderStage, type PdfProgressUpdate } from './features/pdf-reader/PdfReaderStage';
@@ -99,7 +104,7 @@ import type {
   TopicLink,
 } from './types/database';
 
-type WorkbenchTab = 'questions' | 'cycle' | 'graph' | 'reader';
+type WorkbenchTab = 'questions' | 'cycle' | 'heatmap' | 'graph' | 'reader';
 type AppMode = 'student' | 'admin';
 type ExperienceMode = 'daily' | 'pro';
 type DeletableKind = 'plan' | 'subject' | 'topic';
@@ -173,7 +178,8 @@ export default function App() {
   // Leitura ampliada: esconde cabeçalho, abas e painéis (o caderno abre por um botão do leitor)
   const [readerMaximized, setReaderMaximized] = useState(false);
   const [readerFullscreen, setReaderFullscreen] = useState(false);
-  const [pomodoroPreset, setPomodoroPreset] = useState<{ minutes: number; nonce: number } | null>(null);
+  // Um só bloco de estudo para o app (cartão no Meu Dia/Ciclo e relógio no cabeçalho)
+  const studyBlock = useStudyBlock();
 
   const [adminData, setAdminData] = useState<{
     tracks: CareerTrack[];
@@ -652,7 +658,7 @@ export default function App() {
     URL.revokeObjectURL(url);
   };
 
-  const handlePomodoroComplete = (result: PomodoroSessionResult) => {
+  const handlePomodoroComplete = (result: RecordedSession) => {
     recordStudySession({
       subjectId: result.subjectId,
       topicId: result.topicId,
@@ -663,6 +669,20 @@ export default function App() {
     });
     refreshData(currentSubject?.id, currentTopic?.id);
   };
+  studyBlock.onRecordedRef.current = handlePomodoroComplete;
+
+  /** Tópico aberto agora, para começar um bloco sem meta pelo cabeçalho ou pelo cartão. */
+  const currentBlockTarget: BlockTarget | null = currentSubject
+    ? {
+        subjectId: currentSubject.id,
+        subjectName: currentSubject.name,
+        topicId: currentTopic?.id ?? null,
+        topicCode: currentTopic?.code ?? null,
+        topicTitle: currentTopic?.title ?? null,
+        targetMinutes: null,
+      }
+    : null;
+  const blockCard = <StudyBlockCard controller={studyBlock} startTarget={currentBlockTarget} />;
 
   /**
    * Leitura em tela grande: o PDF precisa de espaço, então a árvore de tópicos e o copiloto se
@@ -836,16 +856,7 @@ export default function App() {
                   </>
                 )}
 
-                {currentSubject && (
-                  <PomodoroWidget
-                    subjectId={currentSubject.id}
-                    subjectName={currentSubject.name}
-                    topicId={currentTopic?.id || null}
-                    topicCode={currentTopic?.code || null}
-                    presetRequest={pomodoroPreset}
-                    onSessionComplete={handlePomodoroComplete}
-                  />
-                )}
+                <StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} />
               </div>
             </header>
 
@@ -855,12 +866,22 @@ export default function App() {
                 cycleData={cycleData}
                 subjects={subjects}
                 topicsBySubject={topicsBySubject}
+                blockCard={blockCard}
                 onStartBlock={(subjId, topId, durationMinutes) => {
+                  const subject = subjects.find((sub) => sub.id === subjId);
+                  const topic = topId ? (topicsBySubject[subjId] ?? []).find((t) => t.id === topId) : undefined;
+                  if (subject) {
+                    studyBlock.start({
+                      subjectId: subject.id,
+                      subjectName: subject.name,
+                      topicId: topic?.id ?? null,
+                      topicCode: topic?.code ?? null,
+                      topicTitle: topic?.title ?? null,
+                      targetMinutes: durationMinutes,
+                    });
+                  }
                   setSelectedSubjectId(subjId);
                   if (topId) setSelectedTopicId(topId);
-                  setExperienceMode('pro');
-                  selectTab('questions');
-                  setPomodoroPreset({ minutes: durationMinutes, nonce: Date.now() });
                 }}
                 onSwitchToProWorkbench={() => setExperienceMode('pro')}
                 onOpenWizard={() => openWizard()}
@@ -877,7 +898,8 @@ export default function App() {
                   {(
                     [
                       { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
-                      { id: 'cycle', label: 'Ciclo & Mapa de Calor', icon: Layers },
+                      { id: 'cycle', label: 'Ciclo', icon: Layers },
+                      { id: 'heatmap', label: 'Mapa de Calor', icon: Flame },
                       { id: 'reader', label: 'Leitura de PDF', icon: FileText },
                       { id: 'graph', label: 'Mapa de Conceitos', icon: Network },
                     ] as const
@@ -927,9 +949,11 @@ export default function App() {
                     )}
 
                     {activeTab === 'cycle' && (
-                      <CycleDashboard
+                      <CycleView
                         plan={activePlan}
                         cycleData={cycleData}
+                        examParts={examParts}
+                        blockCard={blockCard}
                         onUpdateWeeklyHours={(newWeeklyHours) => {
                           updateStudyPlan({ id: activePlan.id, weekly_hours_target: newWeeklyHours });
                           refreshData(currentSubject?.id, currentTopic?.id);
@@ -938,6 +962,13 @@ export default function App() {
                           applyRecommendedCycleAllocations(newAllocations);
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
+                      />
+                    )}
+
+                    {activeTab === 'heatmap' && (
+                      <TopicHeatGrid
+                        cycleData={cycleData}
+                        examParts={examParts}
                         onJumpToTopic={(subjId, topId) => {
                           setSelectedSubjectId(subjId);
                           setSelectedTopicId(topId);

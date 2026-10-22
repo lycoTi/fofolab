@@ -9,6 +9,7 @@ import type {
   Topic,
   TopicLink,
 } from '../types/database';
+import { formatDuration } from './timeFormat';
 
 // ============================================================================
 // Pesos do motor — exportados para que a explicação "ⓘ" mostre EXATAMENTE a conta feita aqui
@@ -346,9 +347,10 @@ export function calculateDynamicStudyCycle(params: {
 
   // 2. Sobrecarga cognitiva (< 180 min/semana por disciplina com 5+ disciplinas)
   const avgMinutesPerSubject = subjects.length > 0 ? totalWeeklyMinutesBudget / subjects.length : 0;
-  const isOverloaded = subjects.length >= 5 && avgMinutesPerSubject < 180;
+  // Plano do edital: toda matéria tem prova com nota mínima, então "largar matérias" não é conselho válido
+  const isOverloaded = !fromEdital && subjects.length >= 5 && avgMinutesPerSubject < 180;
   const overloadMessage = isOverloaded
-    ? `Você está com ${subjects.length} disciplinas simultâneas para ${plan.weekly_hours_target}h/semana (~${Math.round((avgMinutesPerSubject / 60) * 10) / 10}h por matéria). Considere focar em 4 a 5 matérias principais neste ciclo para não pulverizar sua retenção.`
+    ? `Você está com ${subjects.length} disciplinas simultâneas para ${formatDuration(totalWeeklyMinutesBudget)} por semana (cerca de ${formatDuration(avgMinutesPerSubject)} por matéria). Considere focar em 4 a 5 matérias principais neste ciclo para não pulverizar sua retenção.`
     : null;
 
   // 3. Tópicos "pai" (que têm subtópicos) são agrupadores: ficam fora do calor e da cobertura
@@ -579,8 +581,8 @@ export function calculateDynamicStudyCycle(params: {
     suggestions.push({
       id: 'sug-rebalance',
       type: 'REBALANCE',
-      title: `Sugestão para o Próximo Ciclo: Rebalancear ${Math.abs(needMoreTime.deltaMinutes)} min/sem`,
-      description: `O Mapa de Calor aponta maior urgência em "${needMoreTime.subject.name}" (Prioridade ${needMoreTime.elasticScore}) enquanto "${canDonateTime.subject.name}" já está com ${canDonateTime.studiedTopicsMastery}% de domínio nos tópicos estudados. Você pode transferir ~${Math.abs(needMoreTime.deltaMinutes)} min/sem entre elas mantendo suas ${plan.weekly_hours_target}h/semana fixas!`,
+      title: `Sugestão para o próximo ciclo: mover ${formatDuration(Math.abs(needMoreTime.deltaMinutes))} por semana`,
+      description: `O Mapa de Calor aponta mais urgência em "${needMoreTime.subject.name}" do que em "${canDonateTime.subject.name}" (${canDonateTime.studiedTopicsMastery}% de domínio nos tópicos estudados). Dá para mover cerca de ${formatDuration(Math.abs(needMoreTime.deltaMinutes))} por semana entre elas, mantendo suas ${formatDuration(plan.weekly_hours_target * 60)} semanais.`,
       actionLabel: 'Aplicar Equilíbrio Sugerido ao Próximo Ciclo',
     });
   }

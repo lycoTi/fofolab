@@ -1,4 +1,5 @@
 import { GraduationCap, Plus, Settings2, Wrench } from 'lucide-react';
+import { formatDuration } from '../../lib/timeFormat';
 import type { SubjectCycleAllocation } from '../../lib/cycleEngine';
 import type { StudyPlan, Subject, Topic } from '../../types/database';
 
@@ -97,8 +98,7 @@ export function SyllabusTreeDock({
 
         <div className="flex items-center justify-between text-[11px] text-slate-300 pt-0.5">
           <span>
-            Meta: {activePlan.weekly_hours_target}h/sem (
-            {(activePlan.weekly_hours_target / 7).toFixed(1)}h/dia)
+            Meta: {formatDuration(activePlan.weekly_hours_target * 60)} por semana ({formatDuration((activePlan.weekly_hours_target * 60) / 7)} por dia)
           </span>
           <span className="px-2 py-0.5 rounded-full bg-orange-500/15 text-orange-300 border border-orange-500/30">
             Banca {activePlan.exam_board || 'FGV'}

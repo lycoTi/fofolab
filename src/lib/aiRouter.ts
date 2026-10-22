@@ -1,5 +1,6 @@
 import type { AiDissection, AiProviderUsed, Question } from '../types/database';
 import { findCorrectOption, parseQuestionOptions } from './questionOptions';
+import { formatDuration } from './timeFormat';
 
 /**
  * Roteador de IA (docs/specs/02): Gateway FofoLab → Gemini (free tier) → DeepSeek.
@@ -497,7 +498,7 @@ function buildDemoCopilotReply(params: {
       `🎯 **Diagnóstico Contextual para ${context.organ} (${context.examBoard}):**\n\n` +
       `1. **Foco Imediato (${context.currentSubjectName} — Peso ${context.currentSubjectWeight}x):** Seu domínio nos tópicos iniciados está em **${context.currentSubjectMastery}%** (Cobertura do edital: **${context.currentSubjectCoverage}%**).\n` +
       `2. **Prioridade do Mapa de Calor:** Recomendamos atacar **${weakAlert}** em blocos curtos de questões comentadas.\n` +
-      `3. **Meta da Semana:** Dentro das suas **${context.weeklyHoursTarget}h semanais**${examCountdown}, resolva mais 3 a 5 questões de **${context.currentTopicCode} ${context.currentTopicTitle}** para elevar sua confiança de amostra (hoje em **${context.currentTopicConfidence}%**).`
+      `3. **Meta da Semana:** Dentro das suas **${formatDuration(context.weeklyHoursTarget * 60)} semanais**${examCountdown}, resolva mais 3 a 5 questões de **${context.currentTopicCode} ${context.currentTopicTitle}** para elevar sua confiança de amostra (hoje em **${context.currentTopicConfidence}%**).`
     );
   }
 

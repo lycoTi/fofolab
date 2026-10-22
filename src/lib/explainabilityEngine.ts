@@ -1,4 +1,5 @@
 import {
+  MIN_SCORE_FLOOR,
   sampleSaturationK,
   STRATEGY_LABELS,
   SUBJECT_SCORE_WEIGHTS as W,
@@ -8,6 +9,7 @@ import {
 } from './cycleEngine';
 import type { QuestionComplexityProfile } from './aiRouter';
 import type { StudyStrategy } from '../types/database';
+import { formatDuration } from './timeFormat';
 
 /**
  * Explicabilidade sob demanda (docs/specs/05): Nível 1 em linguagem do dia a dia, Nível 2 com a
@@ -39,11 +41,11 @@ export function explainSubjectAllocation(
   daysUntilExam: number | null,
   strategy: StudyStrategy | null = null
 ): MetricExplanation {
-  const { subject, sharePercent, recommendedWeeklyMinutes, elasticScore, scoreBreakdown: b } = allocation;
-  const weeklyHours = (recommendedWeeklyMinutes / 60).toFixed(1);
+  const { subject, sharePercent, recommendedWeeklyMinutes, elasticScore, scoreBreakdown: b, floorMinutes } = allocation;
+  const weeklyTime = formatDuration(recommendedWeeklyMinutes);
 
   const humanSummary =
-    `Dedicamos ${sharePercent}% do seu ciclo semanal (${weeklyHours}h das suas ${weeklyTargetHours}h disponíveis) ` +
+    `Dedicamos ${sharePercent}% do seu ciclo semanal (${weeklyTime} das suas ${formatDuration(weeklyTargetHours * 60)} disponíveis) ` +
     `para ${subject.name}. Essa recomendação prioriza matérias que valem mais pontos na sua prova ` +
     `e equilibra o seu nível atual de domínio (${allocation.studiedTopicsMastery}% nos tópicos iniciados).`;
 
@@ -55,10 +57,15 @@ export function explainSubjectAllocation(
       ? `Horizonte de Prova: faltam ${daysUntilExam} dias (as revisões são espaçadas em função desse prazo).`
       : 'Horizonte de Prova: sem data definida, priorizando construção sólida de base.',
     `Estratégia: ${describeStrategy(strategy)}.`,
+    ...(floorMinutes > 0
+      ? [
+          `Nota mínima: ${formatDuration(floorMinutes)} desse tempo são garantidos para você não ser eliminado na prova desta matéria (${Math.round(MIN_SCORE_FLOOR.totalShare * 100)}% da semana é reservado a esses pisos).`,
+        ]
+      : []),
   ];
 
   return {
-    title: `Por que ${subject.name} recebeu ${weeklyHours}h no seu ciclo?`,
+    title: `Por que ${subject.name} recebeu ${weeklyTime} no seu ciclo?`,
     humanSummary,
     bulletPoints,
     formulaDetails: {
@@ -106,10 +113,22 @@ export function explainSubjectAllocation(
           value: formatDecimal(elasticScore),
           description: 'Resultado da conta acima',
         },
+        ...(floorMinutes > 0
+          ? [
+              {
+                label: 'Piso pela nota mínima',
+                value: formatDuration(floorMinutes),
+                description: 'Parte reservada da semana, maior quando a autoavaliação é baixa e a mínima da prova é exigente',
+              },
+            ]
+          : []),
         {
           label: 'Fatia da semana',
-          value: `${sharePercent}% (${recommendedWeeklyMinutes} min)`,
-          description: 'Esta prioridade ÷ soma das prioridades de todas as matérias',
+          value: `${sharePercent}% (${weeklyTime})`,
+          description:
+            floorMinutes > 0
+              ? 'Piso + esta prioridade ÷ soma das prioridades × o restante da semana'
+              : 'Esta prioridade ÷ soma das prioridades de todas as matérias',
         },
       ],
     },

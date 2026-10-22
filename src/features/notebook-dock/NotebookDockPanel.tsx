@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { RichText } from '../../components/RichText';
 import { BookOpen, CheckCircle2, ChevronRight, Eye, FileText, Loader2, PenLine, Save, Search, X } from 'lucide-react';
 import type { Notebook, PdfSource, Subject, Topic } from '../../types/database';
 import type { NotebookDraftStatus } from './useNotebookDraft';
@@ -185,8 +186,8 @@ export function NotebookDockPanel({
           )}
 
           {previewMode ? (
-            <div className="flex-1 overflow-y-auto p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 whitespace-pre-line leading-relaxed">
-              {notebookDraft || <span className="text-slate-500">Caderno vazio por enquanto.</span>}
+            <div className="flex-1 overflow-y-auto p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 leading-relaxed">
+              {notebookDraft ? <RichText text={notebookDraft} /> : <span className="text-slate-500">Caderno vazio por enquanto.</span>}
             </div>
           ) : (
             <textarea

@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1792635447.456366,
-    "seen": 1792635847.6929333,
-    "ast_hash": "d6fe667a0c05cfee1b46c1cb9176182f",
+    "mtime": 1792638203.675068,
+    "seen": 1792638850.880197,
+    "ast_hash": "ea29c0fe05d61b65330cac9247e24d75",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1792635829.4952002,
-    "seen": 1792635847.6930778,
-    "ast_hash": "e9e4388eb81d5b877ea3e0325d4632e8",
+    "mtime": 1792638837.7543886,
+    "seen": 1792638850.8803694,
+    "ast_hash": "58aea50e66e53b0450b662d0d54f3701",
     "semantic_hash": ""
   },
   "README.md": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "src/components/CurriculumManagerModal.tsx": {
-    "mtime": 1792635447.454388,
-    "seen": 1792635847.6929698,
-    "ast_hash": "c16c05b1d6261b74c0238806fe90f5ba",
+    "mtime": 1792638426.3619182,
+    "seen": 1792638850.8802419,
+    "ast_hash": "4bfbd49c728ca463dd8e8f5f546fc563",
     "semantic_hash": ""
   },
   "src/data/initialSeed.ts": {
@@ -245,22 +245,10 @@
     "ast_hash": "2b2e9dbb92480ff0a46fc12ab21f1957",
     "semantic_hash": ""
   },
-  "src/components/CycleDashboard.tsx": {
-    "mtime": 1792623159.9972465,
-    "seen": 1792623176.259244,
-    "ast_hash": "e29f47948d94eee96199414dc16f3c3c",
-    "semantic_hash": ""
-  },
-  "src/components/PomodoroWidget.tsx": {
-    "mtime": 1792623159.9987686,
-    "seen": 1792623176.2592475,
-    "ast_hash": "406df83a9f8d4c55892c8c273a0b0693",
-    "semantic_hash": ""
-  },
   "src/lib/cycleEngine.ts": {
-    "mtime": 1792635187.334641,
-    "seen": 1792635847.693018,
-    "ast_hash": "da97608d5ef5b37248d5f5c40de2e259",
+    "mtime": 1792638103.3110635,
+    "seen": 1792638850.8803036,
+    "ast_hash": "6f313634dd0b32a198afc269bbd4cf5c",
     "semantic_hash": ""
   },
   "src/__tests__/cycleEngine.test.ts": {
@@ -270,27 +258,27 @@
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbenchAndRouter.test.tsx": {
-    "mtime": 1792627199.8190348,
-    "seen": 1792627754.9753613,
-    "ast_hash": "4424ae3717c3203b41f177b98f858489",
+    "mtime": 1792638254.7829928,
+    "seen": 1792638850.8802276,
+    "ast_hash": "6fcd2d6dac8fb3949a2264b845e927b3",
     "semantic_hash": ""
   },
   "src/components/QuestionWorkbench.tsx": {
-    "mtime": 1792623160.0002887,
-    "seen": 1792623176.25925,
-    "ast_hash": "1b6f011cf46ee1347183b83a54f26894",
+    "mtime": 1792638351.7875512,
+    "seen": 1792638850.880246,
+    "ast_hash": "961287a95553f7e2c0209c6791373284",
     "semantic_hash": ""
   },
   "src/lib/aiRouter.ts": {
-    "mtime": 1792626541.8184292,
-    "seen": 1792626658.4225845,
-    "ast_hash": "e7d651da0081ff38629e7f777bec046c",
+    "mtime": 1792638426.3659189,
+    "seen": 1792638850.8803017,
+    "ast_hash": "e328487c58a6e7b5aefa243a38ba3646",
     "semantic_hash": ""
   },
   ".agents/rules/ui-clean-design-and-tdd.md": {
-    "mtime": 1792623159.8790414,
-    "seen": 1792623176.2593164,
-    "ast_hash": "60a58e5816672d16e18302579951e2c7",
+    "mtime": 1792638837.7533796,
+    "seen": 1792638850.8803477,
+    "ast_hash": "3dcb5c6c433edddb57bad85b76ba97ac",
     "semantic_hash": ""
   },
   ".agents/skills/tdd-suite/SKILL.md": {
@@ -306,9 +294,9 @@
     "semantic_hash": ""
   },
   "e2e/bancada.spec.ts": {
-    "mtime": 1792635760.5020745,
-    "seen": 1792635847.6929076,
-    "ast_hash": "ca5dee0541c1050dd1b96d8f972d253c",
+    "mtime": 1792638672.25079,
+    "seen": 1792638850.8801723,
+    "ast_hash": "f4b8022a7494c6101862394ed003aadd",
     "semantic_hash": ""
   },
   "playwright.config.ts": {
@@ -365,12 +353,6 @@
     "ast_hash": "c0e55ad54d8c4f4607fe16d3da8373d1",
     "semantic_hash": ""
   },
-  "src/__tests__/pomodoro.test.tsx": {
-    "mtime": 1792623159.9910777,
-    "seen": 1792623176.2592318,
-    "ast_hash": "a1160546d86cb1ab6324c72ab97bb07a",
-    "semantic_hash": ""
-  },
   "src/__tests__/storage.test.ts": {
     "mtime": 1792623159.9926019,
     "seen": 1792623176.2592356,
@@ -414,21 +396,21 @@
     "semantic_hash": ""
   },
   "src/features/ai-copilot/AiCopilotDockPanel.tsx": {
-    "mtime": 1792623160.007009,
-    "seen": 1792623176.25926,
-    "ast_hash": "a4e6e4680c2c2828373027f3d40292da",
+    "mtime": 1792638351.7860436,
+    "seen": 1792638850.8802578,
+    "ast_hash": "3b958ec33c22c767474286f630ccb600",
     "semantic_hash": ""
   },
   "src/features/daily-focus/DailyFocusView.tsx": {
-    "mtime": 1792623160.0085368,
-    "seen": 1792623176.2592623,
-    "ast_hash": "b763fdb8001470ccaf59ce068ea31e16",
+    "mtime": 1792638230.3582938,
+    "seen": 1792638850.8802643,
+    "ast_hash": "ce7a26954e0b2ce2ec328603e6da91b0",
     "semantic_hash": ""
   },
   "src/features/notebook-dock/NotebookDockPanel.tsx": {
-    "mtime": 1792627145.123997,
-    "seen": 1792627754.9753935,
-    "ast_hash": "3583a01d93ae837881cadbb0c02a7ef7",
+    "mtime": 1792638351.7885604,
+    "seen": 1792638850.8802738,
+    "ast_hash": "c68b80a9467c361715f22510c22b0fd5",
     "semantic_hash": ""
   },
   "src/features/notebook-dock/useNotebookDraft.ts": {
@@ -438,9 +420,9 @@
     "semantic_hash": ""
   },
   "src/features/onboarding-wizard/OnboardingWizardModal.tsx": {
-    "mtime": 1792635254.0321155,
-    "seen": 1792635847.6929996,
-    "ast_hash": "ebbd2e2d8e98f9d60ccf63986cc4aefb",
+    "mtime": 1792638426.3629184,
+    "seen": 1792638850.8802774,
+    "ast_hash": "40a44151327a7f2bee2b67dac41cadf7",
     "semantic_hash": ""
   },
   "src/features/question-import/QuestionImportModal.tsx": {
@@ -450,15 +432,15 @@
     "semantic_hash": ""
   },
   "src/features/syllabus-dock/SyllabusTreeDock.tsx": {
-    "mtime": 1792623160.015683,
-    "seen": 1792623176.2592742,
-    "ast_hash": "52144d7bc1f5655a3c29e90e6d057172",
+    "mtime": 1792638426.3589158,
+    "seen": 1792638850.8803003,
+    "ast_hash": "e2c9033461d20d2aeeb7aeeab4795405",
     "semantic_hash": ""
   },
   "src/lib/dailyPlanner.ts": {
-    "mtime": 1792623160.021265,
-    "seen": 1792623176.2592797,
-    "ast_hash": "4d905cd18eaf3547088e6acdf00adf85",
+    "mtime": 1792638221.0949662,
+    "seen": 1792638850.880305,
+    "ast_hash": "55eb5185bedb1b4419a03d9eadd785bd",
     "semantic_hash": ""
   },
   "src/lib/diagnosis.ts": {
@@ -468,9 +450,9 @@
     "semantic_hash": ""
   },
   "src/lib/explainabilityEngine.ts": {
-    "mtime": 1792623160.0237942,
-    "seen": 1792623176.2592852,
-    "ast_hash": "1a0d7981a86353c393fc4a882e308d61",
+    "mtime": 1792638073.8220932,
+    "seen": 1792638850.8803122,
+    "ast_hash": "5517b08b779fc594277c64828f37ed4b",
     "semantic_hash": ""
   },
   "src/lib/ids.ts": {
@@ -564,9 +546,9 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1792635829.4981966,
-    "seen": 1792635847.6930792,
-    "ast_hash": "b3b2375675cc9c8e74862d6027d89782",
+    "mtime": 1792638837.7563894,
+    "seen": 1792638850.8803709,
+    "ast_hash": "5fadd64413123fff9b1e43e0e672dc7d",
     "semantic_hash": ""
   },
   "docs/reviews/2026-10-21-estado-do-projeto.md": {
@@ -693,6 +675,96 @@
     "mtime": 1792634635.1511981,
     "seen": 1792635847.6930962,
     "ast_hash": "5c14190e75726b09fdb7f81374f9c62f",
+    "semantic_hash": ""
+  },
+  "docs/specs/08-mapa-de-incidencia-das-bancas.md": {
+    "mtime": 1792637547.146215,
+    "seen": 1792637562.3283827,
+    "ast_hash": "4659de3c9116cf5f31b8699a6632d38d",
+    "semantic_hash": ""
+  },
+  "src/__tests__/richText.test.tsx": {
+    "mtime": 1792638319.29463,
+    "seen": 1792638850.88023,
+    "ast_hash": "5616099bd0426fbbb88cc4d736cc1153",
+    "semantic_hash": ""
+  },
+  "src/__tests__/studyBlockMachine.test.ts": {
+    "mtime": 1792637920.1965437,
+    "seen": 1792638850.880234,
+    "ast_hash": "a61b8ab7f9b05c6bd27365364f9d8d86",
+    "semantic_hash": ""
+  },
+  "src/__tests__/timeFormat.test.ts": {
+    "mtime": 1792637829.0288074,
+    "seen": 1792638850.8802354,
+    "ast_hash": "43a3e43f426f2552028ed58fdcacf336",
+    "semantic_hash": ""
+  },
+  "src/components/RichText.tsx": {
+    "mtime": 1792638319.2355726,
+    "seen": 1792638850.8802495,
+    "ast_hash": "d959c9ca4bd04ec344c6cf93a4c77d3e",
+    "semantic_hash": ""
+  },
+  "src/features/cycle/CycleSubjectRow.tsx": {
+    "mtime": 1792638050.4308047,
+    "seen": 1792638850.8802593,
+    "ast_hash": "2defa0255945ad8ffb40aaf168eb1332",
+    "semantic_hash": ""
+  },
+  "src/features/cycle/CycleView.tsx": {
+    "mtime": 1792638136.0375571,
+    "seen": 1792638850.8802612,
+    "ast_hash": "a3033eb4cbb7e05e52509f322c864960",
+    "semantic_hash": ""
+  },
+  "src/features/cycle/cycleGroups.ts": {
+    "mtime": 1792638036.7527525,
+    "seen": 1792638850.8802624,
+    "ast_hash": "e59c4430683fa953d384771d1f6eca40",
+    "semantic_hash": ""
+  },
+  "src/features/heatmap/TopicHeatGrid.tsx": {
+    "mtime": 1792638703.030855,
+    "seen": 1792638850.880272,
+    "ast_hash": "ec0e3f99c7725e45cdeecbb72e6ba145",
+    "semantic_hash": ""
+  },
+  "src/features/study-block/StudyBlockCard.tsx": {
+    "mtime": 1792638008.386558,
+    "seen": 1792638850.8802924,
+    "ast_hash": "29cc49c30883e6cc1559f0c1fc6c55a9",
+    "semantic_hash": ""
+  },
+  "src/features/study-block/StudyBlockMini.tsx": {
+    "mtime": 1792638009.596889,
+    "seen": 1792638850.8802938,
+    "ast_hash": "f1371c3943e163280fa9f10e95a7d5ce",
+    "semantic_hash": ""
+  },
+  "src/features/study-block/StudyBlockParts.tsx": {
+    "mtime": 1792637977.3901901,
+    "seen": 1792638850.8802955,
+    "ast_hash": "4416633ee27b27c4f4a9580e0e7646ed",
+    "semantic_hash": ""
+  },
+  "src/features/study-block/studyBlockMachine.ts": {
+    "mtime": 1792637898.4435966,
+    "seen": 1792638850.8802972,
+    "ast_hash": "00f22fd45d680039170b60f7a590cbe0",
+    "semantic_hash": ""
+  },
+  "src/features/study-block/useStudyBlock.ts": {
+    "mtime": 1792637976.2357242,
+    "seen": 1792638850.8802989,
+    "ast_hash": "3e0e74302d5c9038370411867d0c49ad",
+    "semantic_hash": ""
+  },
+  "src/lib/timeFormat.ts": {
+    "mtime": 1792637828.939204,
+    "seen": 1792638850.88033,
+    "ast_hash": "2ae7c27dd5aab323765794d2129099b6",
     "semantic_hash": ""
   }
 }

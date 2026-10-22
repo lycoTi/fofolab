@@ -1,5 +1,6 @@
 import type { CycleCalculationResult, SubjectCycleAllocation } from './cycleEngine';
 import type { Subject, Topic } from '../types/database';
+import { formatDuration } from './timeFormat';
 
 /**
  * Roteiro do "Meu Dia de Hoje" (docs/specs/05): escolhe as matérias pelo que FALTA estudar
@@ -45,7 +46,7 @@ function describeReason(allocation: SubjectCycleAllocation, weekCompleted: boole
   if (weekCompleted) {
     return `Meta da semana cumprida — bloco extra na matéria de maior prioridade (peso ${allocation.subject.exam_weight}x).`;
   }
-  return `Faltam ${allocation.remainingThisWeekMinutes} min desta matéria na sua meta da semana • Peso ${allocation.subject.exam_weight}x • Domínio ${allocation.studiedTopicsMastery}%.`;
+  return `Faltam ${formatDuration(allocation.remainingThisWeekMinutes)} desta matéria na sua meta da semana • Peso ${allocation.subject.exam_weight}x • Domínio ${allocation.studiedTopicsMastery}%.`;
 }
 
 export function planDailyBlocks(params: {

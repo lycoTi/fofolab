@@ -24,7 +24,10 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] "Meu Dia" escolhe pelo que falta do ciclo na semana; o Wizard grava horas/estratégia/momento no plano e aplica ao ciclo.
 - [PARCIAL] Estratégias são multiplicadores v1; "o que mais cai" ainda não usa a frequência real das questões (depende do banco de questões). O texto da estratégia "Base Comum" fala de Português, que não cai em todo edital.
 - [DONE] Planos do edital: peso de cada matéria pelos pontos da prova, **piso de tempo pela nota mínima** (30% do orçamento; nenhuma matéria de prova eliminatória fica sem tempo) e domínio inicial pela autoavaliação — testado com o edital real e a autoavaliação do dono.
-- [DONE] Pomodoro pelo relógio real; registra só o tempo focado, no tópico em que começou.
+- [DONE] **Bloco de estudo** (um só para o app: cartão no Meu Dia/Ciclo + relógio no cabeçalho): pomodoros de 00:20/00:30/00:50 com pausas (00:05/00:10) e "pomodoro 2 de 4", ou modo livre até a meta; relógio real; grava cada trecho de foco no tópico em que o bloco começou — testado (máquina de estados + E2E).
+- [DONE] Aba **Ciclo** (matérias agrupadas por prova, feito × meta em HH:mm, motivo em uma linha) separada da aba **Mapa de Calor** (grade: um quadradinho por tópico, detalhe e "Estudar este tópico") — E2E.
+- [DONE] Tempo sempre em HH:mm (regra em `.agents/rules/ui-clean-design-and-tdd.md`); o alerta "foque em 4 ou 5 matérias" não aparece em planos do edital; o "ⓘ" explica o piso da nota mínima.
+- [A VERIFICAR] O bloco em andamento não sobrevive a recarregar a página (o tempo já gravado, sim).
 
 **Questões & estudo reverso**
 - [DONE] Importar questões coladas (texto ou JSON): prévia, Certo/Errado, tópico pelo código, sem duplicar.
@@ -64,4 +67,4 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); desempenho do TEC por arquivo salvo; provas anteriores em PDF → banco de questões (formato da spec 06).
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
-- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` passam do teto de ~250 linhas; painel do ciclo apertado com os dois painéis laterais abertos; bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
+- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` (~1180) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).

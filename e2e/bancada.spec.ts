@@ -61,7 +61,7 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
 
   await page.getByText('🔥 Modo Pós-Edital (Edital Publicado)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
-  await page.getByText('2h por dia (14h/sem)').click();
+  await page.getByText('02:00 por dia (14:00 por semana)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   // Autoavaliação: pular mantém o nível que já estava em cada matéria
@@ -71,19 +71,19 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
 
   await expect(page.getByText('Roteiro de Hoje • Modo Essencial')).toBeVisible();
-  await expect(page.getByText('2h de estudo planejado para hoje')).toBeVisible();
+  await expect(page.getByText('02:00 de estudo planejado para hoje')).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/01-meu-dia.png`, fullPage: true });
 
   // Recarregar logo após concluir o assistente não pode perder o plano (a gravação é imediata)
   await page.reload();
-  await expect(page.getByText('2h de estudo planejado para hoje')).toBeVisible();
+  await expect(page.getByText('02:00 de estudo planejado para hoje')).toBeVisible();
   await expect(page.getByText('Calibrar Meu Roteiro de Estudos')).toHaveCount(0);
 
   await openPro(page);
-  await page.getByRole('button', { name: /Ciclo & Mapa de Calor/ }).click();
-  await expect(page.getByText('Alta rentabilidade (maior peso na prova)').first()).toBeVisible();
+  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
+  await expect(page.getByText(/Alta rentabilidade \(maior peso na prova\)/).first()).toBeVisible();
   // O assistente já aplicou ao ciclo a distribuição da estratégia: nada a rebalancear
-  await expect(page.getByText(/Rebalancear/)).toHaveCount(0);
+  await expect(page.getByText(/Sugestão para o próximo ciclo/)).toHaveCount(0);
 });
 
 test('tópicos colados do conteúdo programático ficam salvos depois de recarregar', async ({ page }) => {
@@ -141,8 +141,9 @@ Gabarito: B`);
 
   await page.reload();
   await openPro(page);
-  await page.getByRole('button', { name: /Ciclo & Mapa de Calor/ }).click();
-  await expect(page.getByText(/Questões: 1(?!\d)/)).toHaveCount(1);
+  await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
+  await page.getByRole('button', { name: /^1\.3 Amostragem em Auditoria/ }).click();
+  await expect(page.getByText(/1 questão(?!\w)/)).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/04-ciclo.png`, fullPage: true });
 });
 
@@ -321,7 +322,7 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
 
   // O assistente abre nas horas e segue para a autoavaliação do plano novo
   await expect(page.getByText('Passo 2 de 5')).toBeVisible();
-  await page.getByText('3h por dia (21h/sem)').click();
+  await page.getByText('03:00 por dia (21:00 por semana)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   // O plano novo já vem escolhido no passo "Qual edital você quer focar agora?"
   await expect(page.getByRole('button', { name: /\[CGU\] CGU 2026 — Tecnologia da Informação/ })).toBeVisible();
@@ -354,4 +355,45 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   await expect(
     levelOf('Arquitetura e Integração de Sistemas').getByRole('radio', { name: 'Nunca vi' })
   ).toHaveAttribute('aria-checked', 'true');
+});
+
+test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor em grade', async ({ page }) => {
+  await page.clock.install();
+  await skipWizard(page);
+  await page.goto('/');
+
+  // Meu Dia: o cartão do bloco fica no topo; "Iniciar" começa um pomodoro de 30 min no tópico do bloco
+  const blockCard = page.getByRole('region', { name: 'Bloco de estudo' });
+  await expect(blockCard).toBeVisible();
+  await blockCard.getByRole('radio', { name: '00:30' }).click();
+  await page.getByRole('button', { name: /Iniciar Estudo Direto/ }).first().click();
+  await expect(blockCard.getByText('Foco', { exact: true })).toBeVisible();
+  await expect(blockCard.getByLabel(/0 de \d+ pomodoros feitos/)).toBeVisible();
+  // O relógio do cabeçalho mostra o mesmo bloco
+  await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
+  await page.screenshot({ path: `${SCREENS}/11-bloco-em-pomodoros.png` });
+
+  // Salto direto, como uma janela minimizada: o bloco se acerta pelo horário real
+  await page.clock.fastForward(30 * 60_000);
+  await page.clock.runFor(1_000);
+  await expect(blockCard.getByText('Pausa', { exact: true })).toBeVisible();
+  await expect(blockCard.getByLabel(/1 de \d+ pomodoros feitos/)).toBeVisible();
+  await waitSaved(page);
+
+  // Ciclo: a semana mostra os 30 min gravados, tudo em HH:mm
+  await openPro(page);
+  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Semana de estudo' })).toContainText('00:30');
+  await expect(page.locator('main')).not.toContainText(/\d+ ?min\b|\d+\.\d+h\b/);
+  await page.screenshot({ path: `${SCREENS}/12-ciclo-por-prova.png`, fullPage: true });
+
+  // Mapa de Calor: grade com um quadradinho por tópico; clicar fixa o detalhe e leva à bancada
+  await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
+  await expect(page.getByLabel('Legenda do calor')).toContainText('Muito quente');
+  const squares = page.getByRole('main').getByRole('button', { name: /: (Frio|Morno|Atenção|Quente|Muito quente)$/ });
+  expect(await squares.count()).toBeGreaterThan(5);
+  await squares.first().click();
+  await page.screenshot({ path: `${SCREENS}/13-mapa-de-calor.png`, fullPage: true });
+  await page.getByRole('button', { name: /Estudar este tópico/ }).click();
+  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
 });

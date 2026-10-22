@@ -215,11 +215,11 @@ export function OnboardingWizardModal({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {[
-                { daily: 1.0, weekly: 7.0, label: '1h por dia (7h/sem)', desc: 'Perfeito para quem tem rotina puxada' },
-                { daily: 1.5, weekly: 10.5, label: '1h30 por dia (10.5h/sem)', desc: 'Ritmo constante e sustentável' },
-                { daily: 2.0, weekly: 14.0, label: '2h por dia (14h/sem)', desc: 'Equilíbrio ideal entre teoria e questões' },
-                { daily: 3.0, weekly: 21.0, label: '3h por dia (21h/sem)', desc: 'Foco intenso e avanço rápido' },
-                { daily: 4.5, weekly: 31.5, label: '4h30 por dia (31.5h/sem)', desc: 'Dedicação exclusiva / Reta final' },
+                { daily: 1.0, weekly: 7.0, label: '01:00 por dia (07:00 por semana)', desc: 'Perfeito para quem tem rotina puxada' },
+                { daily: 1.5, weekly: 10.5, label: '01:30 por dia (10:30 por semana)', desc: 'Ritmo constante e sustentável' },
+                { daily: 2.0, weekly: 14.0, label: '02:00 por dia (14:00 por semana)', desc: 'Equilíbrio ideal entre teoria e questões' },
+                { daily: 3.0, weekly: 21.0, label: '03:00 por dia (21:00 por semana)', desc: 'Foco intenso e avanço rápido' },
+                { daily: 4.5, weekly: 31.5, label: '04:30 por dia (31:30 por semana)', desc: 'Dedicação exclusiva / Reta final' },
               ].map((item) => (
                 <button
                   key={item.daily}

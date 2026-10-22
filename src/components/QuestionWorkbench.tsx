@@ -15,6 +15,7 @@ import {
   Star,
 } from 'lucide-react';
 import { MetricExplainer } from './MetricExplainer';
+import { RichText } from './RichText';
 import { explainQuestionComplexity } from '../lib/explainabilityEngine';
 import {
   askReverseStudyTutor,
@@ -324,9 +325,10 @@ export function QuestionWorkbench({
     if (dissection?.dissection_markdown) {
       return (
         <div className="space-y-1.5">
-          <div className="text-xs text-slate-200 space-y-2 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 whitespace-pre-line">
-            {dissection.dissection_markdown}
-          </div>
+          <RichText
+            text={dissection.dissection_markdown}
+            className="text-xs text-slate-200 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800"
+          />
           <p className="text-[10px] text-slate-500">
             {dissection.provider_used === 'EXAMPLE'
               ? 'Explicação de exemplo, escrita à mão para demonstrar o app.'
@@ -681,7 +683,7 @@ export function QuestionWorkbench({
                 {chatTurns.map((turn) => (
                   <div
                     key={turn.id}
-                    className={`p-3 rounded-xl text-xs whitespace-pre-line leading-relaxed ${
+                    className={`p-3 rounded-xl text-xs leading-relaxed ${
                       turn.role === 'student'
                         ? 'bg-orange-500/15 border border-orange-500/30 text-orange-200 ml-6'
                         : 'bg-slate-950 border border-slate-800 text-slate-200'
@@ -692,7 +694,7 @@ export function QuestionWorkbench({
                         Exemplo simulado — a IA ainda não está configurada
                       </div>
                     )}
-                    {turn.content}
+                    <RichText text={turn.content} />
                   </div>
                 ))}
               </div>

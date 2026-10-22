@@ -1,9 +1,12 @@
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BackupPanel } from '../components/BackupPanel';
-import { CycleDashboard } from '../components/CycleDashboard';
 import { QuestionWorkbench } from '../components/QuestionWorkbench';
 import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
+import { CycleView } from '../features/cycle/CycleView';
+import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
+import { StudyBlockCard } from '../features/study-block/StudyBlockCard';
+import { useStudyBlock } from '../features/study-block/useStudyBlock';
 import { NotebookDockPanel } from '../features/notebook-dock/NotebookDockPanel';
 import { PdfReaderStage } from '../features/pdf-reader/PdfReaderStage';
 import { QuestionImportModal } from '../features/question-import/QuestionImportModal';
@@ -37,6 +40,16 @@ const FORBIDDEN_JARGON = [
   'localStorage',
   'Cache',
 ];
+
+function BlockCardHarness() {
+  const controller = useStudyBlock();
+  return (
+    <StudyBlockCard
+      controller={controller}
+      startTarget={{ subjectId: 's', subjectName: 'Matéria', topicId: null, topicCode: null, topicTitle: null, targetMinutes: 60 }}
+    />
+  );
+}
 
 describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI Limpa', () => {
   const sampleBundles = SEED_QUESTIONS.map((q) => ({
@@ -259,14 +272,16 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
         />
       ).container,
       render(
-        <CycleDashboard
+        <CycleView
           plan={cguPlan}
           cycleData={cycleData}
+          examParts={[]}
+          blockCard={<BlockCardHarness />}
           onUpdateWeeklyHours={vi.fn()}
           onApplyRecommendedCycle={vi.fn()}
-          onJumpToTopic={vi.fn()}
         />
       ).container,
+      render(<TopicHeatGrid cycleData={cycleData} examParts={[]} onJumpToTopic={vi.fn()} />).container,
       render(
         <NotebookDockPanel
           currentSubject={cguSubjects[0]}

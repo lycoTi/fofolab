@@ -46,4 +46,6 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 - `src/features/pdf-reader/` — leitor de PDF (pdf.js): página atual, páginas lidas, zoom; maximizar/tela cheia ficam no `App.tsx`.
 - `src/lib/questionImport.ts` / `syllabusImport.ts` — importadores (texto/JSON e conteúdo programático).
 - `src/lib/editalParser.ts` + `src/features/edital-import/` — edital em PDF → prévia → plano (spec 07); teste com o PDF real em `e2e/fixtures/`.
+- `src/features/study-block/` — bloco de estudo (máquina pura `studyBlockMachine.ts` + cartão e relógio do cabeçalho) • `features/cycle/` — aba Ciclo • `features/heatmap/` — grade do Mapa de Calor.
+- `src/lib/timeFormat.ts` — HH:mm • `src/components/RichText.tsx` — texto da IA/caderno formatado com segurança.
 - `src/App.tsx` — orquestra estado e painéis; componentes em `src/components/` e `src/features/`.

@@ -1,9 +1,10 @@
-import { useMemo } from 'react';
+import { useMemo, type ReactNode } from 'react';
 import { ArrowRight, Calendar, CheckCircle2, Clock, Coffee, Compass, Play, Zap } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import { explainSubjectAllocation } from '../../lib/explainabilityEngine';
 import { planDailyBlocks, type CostBenefitBadge } from '../../lib/dailyPlanner';
 import type { CycleCalculationResult } from '../../lib/cycleEngine';
+import { formatDuration } from '../../lib/timeFormat';
 import type { StudyPlan, Subject, Topic } from '../../types/database';
 
 interface DailyFocusViewProps {
@@ -14,6 +15,8 @@ interface DailyFocusViewProps {
   onStartBlock: (subjectId: string, topicId: string, durationMinutes: number) => void;
   onSwitchToProWorkbench: () => void;
   onOpenWizard: () => void;
+  /** Cartão do bloco de estudo em andamento (o mesmo da aba Ciclo). */
+  blockCard?: ReactNode;
 }
 
 const BADGE_STYLES: Record<CostBenefitBadge, { className: string; label: string }> = {
@@ -23,8 +26,7 @@ const BADGE_STYLES: Record<CostBenefitBadge, { className: string; label: string 
 };
 
 function formatDailyBudget(minutes: number): string {
-  if (minutes >= 60) return `${(minutes / 60).toFixed(1).replace('.0', '').replace('.', ',')}h de estudo planejado para hoje`;
-  return `${minutes} minutos de estudo para hoje`;
+  return `${formatDuration(minutes)} de estudo planejado para hoje`;
 }
 
 export function DailyFocusView({
@@ -35,6 +37,7 @@ export function DailyFocusView({
   onStartBlock,
   onSwitchToProWorkbench,
   onOpenWizard,
+  blockCard,
 }: DailyFocusViewProps) {
   const { topicHeatmapRanking, daysUntilExam, totalWeeklyMinutesBudget } = cycleData;
 
@@ -80,6 +83,8 @@ export function DailyFocusView({
           </button>
         </div>
       </div>
+
+      {blockCard}
 
       {weekCompleted && (
         <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-200">
@@ -130,7 +135,7 @@ export function DailyFocusView({
                   <div className="flex items-center gap-2 text-xs">
                     <span className="text-slate-400 flex items-center gap-1 font-mono">
                       <Clock size={12} className="text-slate-500" />
-                      {block.durationMinutes} min sugeridos
+                      {formatDuration(block.durationMinutes)} sugeridos
                     </span>
                     <MetricExplainer
                       explanation={explainSubjectAllocation(allocation, plan.weekly_hours_target, daysUntilExam, cycleData.strategy)}
@@ -160,7 +165,7 @@ export function DailyFocusView({
                       )}
                     </div>
                     <div className="text-[10px] text-slate-500">
-                      Nesta semana: {allocation.studiedThisWeekMinutes} de {allocation.currentWeeklyMinutes} min do ciclo
+                      Nesta semana: {formatDuration(allocation.studiedThisWeekMinutes)} de {formatDuration(allocation.currentWeeklyMinutes)} do ciclo
                     </div>
                   </div>
 
@@ -180,7 +185,7 @@ export function DailyFocusView({
                   <div className="h-px bg-slate-800 w-16" />
                   <span className="flex items-center gap-1.5">
                     <Coffee size={13} className="text-amber-500" />
-                    Intervalo sugerido de 10 minutos para fixação de memória
+                    Pausa sugerida de 00:10 para fixar a memória
                   </span>
                   <div className="h-px bg-slate-800 w-16" />
                 </div>
@@ -195,8 +200,8 @@ export function DailyFocusView({
           <div className="flex items-center gap-2">
             <CheckCircle2 size={16} className="text-emerald-400" />
             <span>
-              Meta da Semana: <strong className="text-white">{plan.weekly_hours_target}h</strong> — estudado até agora:{' '}
-              <strong className="text-white">{studiedThisWeekMinutes} de {totalWeeklyMinutesBudget} min</strong>
+              Meta da semana: <strong className="text-white">{formatDuration(totalWeeklyMinutesBudget)}</strong> — estudado até agora:{' '}
+              <strong className="text-white">{formatDuration(studiedThisWeekMinutes)}</strong>
             </span>
           </div>
           <button
