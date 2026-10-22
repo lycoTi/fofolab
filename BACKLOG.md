@@ -65,8 +65,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - **7b — acompanhar (spec `07` §5.4–5.5):** registro rápido do que foi feito no TEC (total, certas, em branco) + tela "Bom dia" (relembrar com recordação ativa, blocos de hoje, situação por prova, linha de ânimo com fatos).
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
-- **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** 9a casca (cabeçalho fixo, painéis que recolhem em trilho
-  com transição, Copiloto+Caderno juntos) → 9b roteiro do dia na coluna esquerda (Meu Dia + Bancada unidos, "olhada"
+- **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** [DONE] **9a casca** (22/10/2026, plano
+  `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`): cabeçalho fixo de ponta a ponta (concurso, dias, "P1 x% visto"),
+  painéis que recolhem em trilho com transição de 220 ms (sem animação com "reduzir movimento"), Copiloto+Caderno em abas
+  montadas, "Edital" no pé da coluna, estado recolhido lembrado após reabrir (E2E `e2e/casca.spec.ts`; `npm test`,
+  `test:e2e` e `build` verdes). O resumo por prova no cabeçalho só aparece em planos do edital (coberto por teste de unidade). → 9b roteiro do dia na coluna esquerda (Meu Dia + Bancada unidos, "olhada"
   com pausa automática, tópicos clicáveis no Ciclo/Mapa de Calor) → 9c Revisão do dia (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**

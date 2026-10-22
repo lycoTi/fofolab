@@ -18,7 +18,7 @@ async function openPro(page: Page) {
 }
 
 async function openCurriculum(page: Page) {
-  await page.getByRole('button', { name: /Edital Verticalizado/ }).click();
+  await page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' }).getByRole('button', { name: 'Edital', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: 'Organizar edital' });
   await expect(dialog.getByText('Organizar Edital, Disciplinas e Tópicos')).toBeVisible();
   return dialog;
@@ -256,15 +256,15 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await openPro(page);
   await openReaderTab(page);
   // Para sobrar espaço ao PDF, a árvore de tópicos e o copiloto se recolhem
-  await expect(page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' })).toHaveCount(0);
-  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toHaveCount(0);
+  await expect(page.getByRole('complementary', { name: 'Coluna de tópicos' })).toHaveCSS('width', '44px');
+  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeHidden();
 
   await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
   await expect(page.getByText('Pagina 1 do material')).toBeVisible();
   const scroll = page.getByTestId('pdf-scroll');
   const normalWidth = (await scroll.boundingBox())!.width;
 
-  const handle = page.getByRole('separator', { name: 'Largura do caderno' });
+  const handle = page.getByRole('separator', { name: 'Largura do painel direito' });
   await handle.focus();
   for (let i = 0; i < 5; i++) await handle.press('ArrowLeft');
   await expect(handle).toHaveAttribute('aria-valuenow', '464');
@@ -278,7 +278,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   // O caderno continua ao lado até ser escondido pelo botão do próprio leitor
   await expect(page.getByLabel('Conteúdo do caderno do tópico')).toBeVisible();
   await page.getByTitle('Mostrar ou esconder o caderno ao lado').click();
-  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveCount(0);
+  await expect(page.getByLabel('Conteúdo do caderno do tópico')).toBeHidden();
   expect((await scroll.boundingBox())!.width).toBeGreaterThan(normalWidth + 300);
   await page.screenshot({ path: `${SCREENS}/07-leitura-maximizada.png` });
 
@@ -292,8 +292,8 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
 
   await page.reload();
   await openPro(page);
-  await page.locator('header').getByRole('button', { name: 'Caderno', exact: true }).click();
-  await expect(page.getByRole('separator', { name: 'Largura do caderno' })).toHaveAttribute('aria-valuenow', '464');
+  await page.getByRole('tab', { name: 'Caderno' }).click();
+  await expect(page.getByRole('separator', { name: 'Largura do painel direito' })).toHaveAttribute('aria-valuenow', '464');
   await expect(page.getByLabel('Conteúdo do caderno do tópico')).toHaveValue('Anotação feita lendo o PDF');
   // Fora da leitura, o painel lateral leva de volta ao PDF do tópico
   await expect(page.getByRole('button', { name: /Continuar leitura/ })).toBeVisible();
@@ -350,7 +350,7 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   await waitSaved(page);
   await page.reload();
   await expect(page.getByText(/CGU 2026 — Tecnologia da Informação/).first()).toBeVisible();
-  await page.locator('header').getByRole('button', { name: /Recalibrar Perfil/ }).click();
+  await page.locator('header').getByRole('button', { name: 'Recalibrar perfil' }).click();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: /Continuar/ }).click();
   await expect(
     levelOf('Arquitetura e Integração de Sistemas').getByRole('radio', { name: 'Nunca vi' })
