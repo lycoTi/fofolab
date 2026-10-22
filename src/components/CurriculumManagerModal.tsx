@@ -6,6 +6,7 @@ import {
   DatabaseBackup,
   Download,
   Edit3,
+  ArrowUpRight,
   FileUp,
   Layers,
   Plus,
@@ -41,6 +42,8 @@ interface CurriculumManagerModalProps {
   topics: Topic[];
   onClose: () => void;
   onSelectPlan: (planId: string) => void;
+  /** Abre o tópico na bancada (como "olhada": o roteiro do dia não muda). */
+  onOpenTopic?: (subjectId: string, topicId: string) => void;
   onCreatePlan: (input: CreateStudyPlanInput) => void;
   onUpdatePlan: (id: string, input: Partial<CreateStudyPlanInput>) => void;
   onDeletePlan: (id: string) => void;
@@ -71,6 +74,7 @@ export function CurriculumManagerModal({
   topics,
   onClose,
   onSelectPlan,
+  onOpenTopic,
   onCreatePlan,
   onUpdatePlan,
   onDeletePlan,
@@ -802,6 +806,17 @@ export function CurriculumManagerModal({
                       </div>
 
                       <div className="flex items-center gap-1.5 shrink-0">
+                        {onOpenTopic && (
+                          <button
+                            type="button"
+                            onClick={() => onOpenTopic(t.subject_id, t.id)}
+                            className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300"
+                            title="Abrir na bancada"
+                            aria-label={`Abrir ${t.title} na bancada`}
+                          >
+                            <ArrowUpRight size={14} />
+                          </button>
+                        )}
                         <button
                           onClick={() => {
                             setEditingTopicId(t.id);

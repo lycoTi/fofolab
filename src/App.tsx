@@ -764,6 +764,19 @@ export default function App() {
     if (item.topic) setSelectedTopicId(item.topic.id);
   };
 
+  /** Tópico aberto de fora do roteiro (Mapa de Calor, Ciclo, Edital): vira "olhada", o roteiro não muda. */
+  const openTopicOnWorkbench = (subjId: string, topId: string | null) => {
+    setSelectedSubjectId(subjId);
+    if (topId) setSelectedTopicId(topId);
+    selectTab('questions');
+  };
+
+  /** Matéria aberta pelo Ciclo: vai para o tópico mais urgente dela. */
+  const openSubjectOnWorkbench = (subjId: string) => {
+    const hottest = cycleData.topicHeatmapRanking.find((h) => h.topic.subject_id === subjId);
+    openTopicOnWorkbench(subjId, hottest?.topic.id ?? topicsBySubject[subjId]?.[0]?.id ?? null);
+  };
+
   const startRoutineBlock = (item: RoutineItem) => {
     studyBlock.start({
       subjectId: item.subject.id,
@@ -981,6 +994,7 @@ export default function App() {
                           applyRecommendedCycleAllocations(newAllocations);
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
+                        onOpenSubject={openSubjectOnWorkbench}
                       />
                     )}
 
@@ -988,11 +1002,7 @@ export default function App() {
                       <TopicHeatGrid
                         cycleData={cycleData}
                         examParts={examParts}
-                        onJumpToTopic={(subjId, topId) => {
-                          setSelectedSubjectId(subjId);
-                          setSelectedTopicId(topId);
-                          selectTab('questions');
-                        }}
+                        onJumpToTopic={openTopicOnWorkbench}
                       />
                     )}
 
@@ -1156,6 +1166,10 @@ export default function App() {
         topics={currentTopics}
         onClose={() => setCrudModalOpen(false)}
         onSelectPlan={handleSelectPlan}
+        onOpenTopic={(subjId, topId) => {
+          setCrudModalOpen(false);
+          openTopicOnWorkbench(subjId, topId);
+        }}
         onCreatePlan={(input: CreateStudyPlanInput) => {
           const created = createStudyPlan(input);
           refreshData('', '');

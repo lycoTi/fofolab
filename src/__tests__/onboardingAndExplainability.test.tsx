@@ -15,6 +15,7 @@ import {
   SEED_TOPICS,
 } from '../data/initialSeed';
 import { calculateDynamicStudyCycle } from '../lib/cycleEngine';
+import { CycleSubjectRow } from '../features/cycle/CycleSubjectRow';
 import type { Topic } from '../types/database';
 
 describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje', () => {
@@ -116,6 +117,18 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     const selfAssessment = onComplete.mock.calls[0][2];
     expect(selfAssessment.subjects).toContainEqual({ subjectId: firstSubject.id, level: 1 });
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('clicar na matéria no Ciclo pede para abrir a matéria na bancada', () => {
+    const onOpenSubject = vi.fn();
+    const allocation = cycleData.allocations[0];
+    render(
+      <ul>
+        <CycleSubjectRow allocation={allocation} plan={cguPlan} cycleData={cycleData} onOpenSubject={onOpenSubject} />
+      </ul>
+    );
+    fireEvent.click(screen.getByRole('button', { name: `Abrir ${allocation.subject.name} na bancada` }));
+    expect(onOpenSubject).toHaveBeenCalledWith(allocation.subject.id);
   });
 
   it('AUDITORIA DE UX: garante que o Wizard não contém jargões técnicos proibidos', () => {

@@ -11,10 +11,13 @@ export function CycleSubjectRow({
   allocation,
   plan,
   cycleData,
+  onOpenSubject,
 }: {
   allocation: SubjectCycleAllocation;
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
+  /** Abre a matéria na bancada (como "olhada": o roteiro do dia não muda). */
+  onOpenSubject?: (subjectId: string) => void;
 }) {
   const { subject, currentWeeklyMinutes, studiedThisWeekMinutes, recommendedWeeklyMinutes } = allocation;
   const progress = currentWeeklyMinutes > 0 ? Math.min(100, (studiedThisWeekMinutes / currentWeeklyMinutes) * 100) : 0;
@@ -25,7 +28,18 @@ export function CycleSubjectRow({
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex items-start gap-2">
           <span className="mt-1 h-2.5 w-2.5 rounded-full shrink-0" style={{ backgroundColor: subject.color }} />
-          <span className="text-xs font-semibold text-white leading-snug">{subject.name}</span>
+          {onOpenSubject ? (
+            <button
+              type="button"
+              onClick={() => onOpenSubject(subject.id)}
+              aria-label={`Abrir ${subject.name} na bancada`}
+              className="text-left text-xs font-semibold leading-snug text-white hover:text-orange-300"
+            >
+              {subject.name}
+            </button>
+          ) : (
+            <span className="text-xs font-semibold text-white leading-snug">{subject.name}</span>
+          )}
           <MetricExplainer
             explanation={explainSubjectAllocation(allocation, plan.weekly_hours_target, cycleData.daysUntilExam, cycleData.strategy)}
           />

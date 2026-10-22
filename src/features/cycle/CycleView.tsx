@@ -20,6 +20,7 @@ export function CycleView({
   blockCard,
   onUpdateWeeklyHours,
   onApplyRecommendedCycle,
+  onOpenSubject,
 }: {
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
@@ -28,6 +29,7 @@ export function CycleView({
   blockCard: ReactNode;
   onUpdateWeeklyHours: (hours: number) => void;
   onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
+  onOpenSubject?: (subjectId: string) => void;
 }) {
   const [applied, setApplied] = useState(false);
   const { allocations, daysUntilExam, totalWeeklyMinutesBudget } = cycleData;
@@ -148,7 +150,13 @@ export function CycleView({
           </div>
           <ul className="divide-y divide-slate-800/70">
             {group.allocations.map((allocation) => (
-              <CycleSubjectRow key={allocation.subject.id} allocation={allocation} plan={plan} cycleData={cycleData} />
+              <CycleSubjectRow
+                key={allocation.subject.id}
+                allocation={allocation}
+                plan={plan}
+                cycleData={cycleData}
+                onOpenSubject={onOpenSubject}
+              />
             ))}
           </ul>
         </section>
