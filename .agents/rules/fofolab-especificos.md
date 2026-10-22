@@ -34,3 +34,18 @@ A skill `education-learning-science` é local (`.agents/skills/`).
 - Entradas não confiáveis: bancos `.fofopack` importados, HTML/PDF de bancas, Markdown gerado pela IA (render via `RichText`).
 - Chaves (`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`, Groq) nunca no bundle distribuído; proxy com teto de gasto se for distribuir.
 - Arquivos locais (Tauri): validar extensões `.pdf`/`.fofopack` e impedir caminho arbitrário.
+
+## Pedagogia — decisões do FofoLab (skills originais do GarethManning em `.agents/skills/`)
+Fundamentação nas skills instaladas (`learning-analytics-interpretation-guide`, `individual-spacing-algorithm-explainer`,
+`spaced-practice-scheduler`, `productive-failure-desirable-difficulty-designer` e afins). O que segue é como o FofoLab aplica:
+- **Amostra pequena não decide domínio** (Mandinach & Gummer; Wiliam): confiança contínua `C_n = n_pond / (n_pond + k)`,
+  `k` ≈ 10–15 questões ponderadas conforme o tamanho do tópico; questões difíceis (3–5 estrelas) pesam mais.
+  Nada de limiar mágico tipo `if (attempts < 3)`.
+- **Cobertura ≠ proficiência:** nunca misturar tópico não visto (0%) com estudado (85%) numa média só. Mostrar separado:
+  "Proficiência nos tópicos estudados" e "Cobertura do edital" (% de tópicos com confiança mínima).
+- **Analytics serve a uma decisão:** "qual tópico estudar agora, e em que formato (PDF de teoria, Estudo Reverso ou revisão rápida)?".
+- **Meia-vida de memória (HLR, Settles & Meeder):** cada tópico tem `h` (dias) que cresce com acerto (`MASTERED`) e encolhe em
+  `BASE_GAP`; recordação `R(Δt) = 2^(−Δt/h)` desde `last_studied_at`; quanto menor `R`, maior o `heatScore` no Mapa de Calor.
+- **Espaçamento de Cepeda:** revisão de tópico consolidado a ~10–20% de `daysUntilExam`, entre 3 e 21 dias.
+- **Falha produtiva no Estudo Reverso (Kapur; Kornell):** tentar a questão antes de dominar o PDF e errar prepara a codificação.
+  Não revelar a dissecação completa da IA antes de o aluno marcar uma alternativa ou clicar em "Explorar Conceito".

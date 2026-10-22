@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "skills": {
+    "cognitive-load-analyser": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/memory-learning-science/cognitive-load-analyser/SKILL.md",
+      "computedHash": "655b946a0689aeefad335dcb53a478222fe9b26c07ed990abaa3d767ec8f2921"
+    },
+    "confidence-calibration-check": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/student-learning/confidence-calibration-check/SKILL.md",
+      "computedHash": "bb8e57218906e6e08989463c2919722b3b3bf58635282d478e200cdb2bbe6e84"
+    },
+    "erroneous-example-designer": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-learning-science/erroneous-example-designer/SKILL.md",
+      "computedHash": "1de49ea204be7fc92089f1678aecd5a81b250ebbf2201db21c14d07d9a45ace3"
+    },
+    "individual-spacing-algorithm-explainer": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-learning-science/individual-spacing-algorithm-explainer/SKILL.md",
+      "computedHash": "4da08b02b4e898b33c3eca63c62896deb1ea2812d372a32d1e4e5719bafc7390"
+    },
+    "intelligent-tutoring-dialogue-designer": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+      "computedHash": "fed7f9644331ee242ef01faf8259125a98776cadb3bc29bc539c7083303f0f4b"
+    },
+    "interleaving-unit-planner": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/memory-learning-science/interleaving-unit-planner/SKILL.md",
+      "computedHash": "994a3b5a0aeeb08670a74c471f52ac672836141aac440ac2413c9db5e2ef6148"
+    },
+    "learning-analytics-interpretation-guide": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-learning-science/learning-analytics-interpretation-guide/SKILL.md",
+      "computedHash": "380a897f7c4e2e01409ef4d58429321ca2a416b41a994ea137fca5c8f1d5a7bf"
+    },
+    "productive-failure-desirable-difficulty-designer": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-learning-science/productive-failure-desirable-difficulty-designer/SKILL.md",
+      "computedHash": "b55bd3157611d76b4edecd4b47cf0517fdc77a4df12fbd2c38c05f624900117b"
+    },
+    "progressive-hint-ladder": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+      "computedHash": "282ab0826a437e44760a15a6e8818af3e22ea46cbfb3871c1c1880c07a6be343"
+    },
+    "retrieval-practice-generator": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md",
+      "computedHash": "b694ab40985bb1159066fdad67b5db1fb08bb8a7ec4cd207900b606419e4e517"
+    },
+    "spaced-practice-scheduler": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md",
+      "computedHash": "81339364f16c2cdbceda683ffd118b922c49bfc62a3192549fd5aadb102d21f8"
+    },
+    "study-strategy-selector": {
+      "source": "GarethManning/education-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/self-regulated-learning/study-strategy-selector/SKILL.md",
+      "computedHash": "4815bc4fc4acdfbc668a973a476f581828bfb96faf7e7c4cb48d6c9ad3fe7c1f"
+    }
+  }
+}

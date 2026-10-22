@@ -16,13 +16,13 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 
 ## Skills — leia o SKILL.md ANTES de começar o trabalho correspondente
 Globais (stack `~/.agents`, valem para todos os projetos; o que é só do FofoLab está em `.agents/rules/fofolab-especificos.md`)
-e locais (`.agents/skills/`: só `education-learning-science`). Regra global × local: `~/.agents/AGENTS.md`.
+e locais (`.agents/skills/`: as originais de ciência da aprendizagem do GarethManning, lock em `skills-lock.json`). Regra global × local: `~/.agents/AGENTS.md`.
 
 A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS.md` (seção 6). Aqui, só o que é do FofoLab:
 
 | Trabalho | Skill / regra |
 |---|---|
-| Ciclo, domínio, revisão espaçada, métricas, tutor de IA, qualquer regra "pedagógica" | `education-learning-science` (local) |
+| Ciclo, domínio, revisão espaçada, métricas, tutor de IA, qualquer regra "pedagógica" | `learning-analytics-interpretation-guide`, `individual-spacing-algorithm-explainer`, `spaced-practice-scheduler`, `productive-failure-desirable-difficulty-designer` e as demais de `.agents/skills/` + seção Pedagogia de `fofolab-especificos.md` |
 | Tela, modal, gráfico ou componente React | `impeccable` + `ux-ui-clean` + paleta/tom em `fofolab-especificos.md` |
 | Novo painel, componente grande, `App.tsx` | regra autoral de componentes (~250 linhas) + painéis em `fofolab-especificos.md` |
 | Prompts de IA, parser de provas/edital, extração JSON | regra autoral de prompts + camadas lei → jurisprudência → banca em `fofolab-especificos.md` |
