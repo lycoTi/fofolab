@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".superpowers/brainstorm/904-1792683300/content/layout.html"
+        ],
+        "createdAt": "2026-10-22T15:36:16.595Z",
+        "reason": "Claude: miniatura descartável de wireframe no brainstorming, não é UI do app"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          ".superpowers/brainstorm/904-1792683300/content/layout.html"
+        ],
+        "createdAt": "2026-10-22T15:36:17.610Z",
+        "reason": "Claude: miniatura descartável de wireframe no brainstorming, não é UI do app"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          ".superpowers/brainstorm/904-1792683300/content/layout.html"
+        ],
+        "createdAt": "2026-10-22T15:36:36.695Z",
+        "reason": "Claude: miniatura descartável de wireframe no brainstorming, não é UI do app"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".superpowers/brainstorm/904-1792683300/content/motion.html"
+        ],
+        "createdAt": "2026-10-22T16:06:26.385Z",
+        "reason": "Claude: protótipo descartável de brainstorming, não é UI do app"
+      }
+    ]
+  }
+}

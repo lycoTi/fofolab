@@ -65,6 +65,18 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - **7b — acompanhar (spec `07` §5.4–5.5):** registro rápido do que foi feito no TEC (total, certas, em branco) + tela "Bom dia" (relembrar com recordação ativa, blocos de hoje, situação por prova, linha de ânimo com fatos).
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
-- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); desempenho do TEC por arquivo salvo; provas anteriores em PDF → banco de questões (formato da spec 06).
+- **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** 9a casca (cabeçalho fixo, painéis que recolhem em trilho
+  com transição, Copiloto+Caderno juntos) → 9b roteiro do dia na coluna esquerda (Meu Dia + Bancada unidos, "olhada"
+  com pausa automática, tópicos clicáveis no Ciclo/Mapa de Calor) → 9c Revisão do dia (3–5 questões intercaladas dos
+  tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
+- **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
+  (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso
+  pessoal); extração, sem duplicadas (`normalizeStatement`), classificação por tópico. Catálogo de provas feito à mão ou
+  por descoberta nos sites das bancas — **brainstorm próprio antes de construir**.
+- **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
+  (reduz prioridade), nunca escondido.
+- **TEC só por registro manual:** trocar "desempenho do TEC por arquivo salvo" (spec 07 §9) pelo registro rápido da 7b —
+  ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
+- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias); tópicos relacionados entre matérias.
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
 - **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` (~1180) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
