@@ -17,10 +17,12 @@ interface SyllabusTreeDockProps {
   onSelectPlan: (planId: string) => void;
   onSelectSubjectAndTopic: (subjectId: string, topicId: string) => void;
   onOpenCrudModal: (section: 'plans' | 'subjects' | 'topics') => void;
+  /** Gestão do edital (antigo "Edital Verticalizado" do cabeçalho). */
+  onOpenEdital: () => void;
 }
 
 export function SyllabusTreeDock({
-  width = 320,
+  width,
   mode,
   onToggleMode,
   plans,
@@ -33,12 +35,13 @@ export function SyllabusTreeDock({
   onSelectPlan,
   onSelectSubjectAndTopic,
   onOpenCrudModal,
+  onOpenEdital,
 }: SyllabusTreeDockProps) {
   return (
     <aside
       aria-label="Painel de Tópicos e Edital"
-      style={{ width }}
-      className="border-r border-slate-800 bg-slate-900/70 flex flex-col shrink-0 h-full min-w-0"
+      style={width ? { width } : undefined}
+      className={`flex flex-col h-full min-w-0 ${width ? 'border-r border-slate-800 bg-slate-900/70 shrink-0' : 'w-full'}`}
     >
       <div className="p-4 border-b border-slate-800 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -194,6 +197,17 @@ export function SyllabusTreeDock({
             </div>
           );
         })}
+      </div>
+
+      <div className="shrink-0 border-t border-slate-800 px-4 py-2.5">
+        <button
+          type="button"
+          onClick={onOpenEdital}
+          className="flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300"
+        >
+          <Settings2 size={13} />
+          Edital
+        </button>
       </div>
     </aside>
   );

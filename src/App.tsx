@@ -1,21 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  BookOpen,
-  Calendar,
-  Compass,
-  FileText,
-  HelpCircle,
-  Flame,
-  Layers,
-  Network,
-  PanelLeft,
-  Settings2,
-  Sparkles,
-} from 'lucide-react';
+import { Calendar, FileText, HelpCircle, Flame, Layers, Network, PanelLeft } from 'lucide-react';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
 import { QuestionWorkbench, type DiagnosisSubmission } from './components/QuestionWorkbench';
-import { ResizeHandle, useResizableWidth } from './components/ResizeHandle';
+import { useResizableWidth } from './components/ResizeHandle';
 import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
@@ -37,6 +25,11 @@ import {
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
 import { SyllabusTreeDock } from './features/syllabus-dock/SyllabusTreeDock';
+import { AppHeader } from './features/workbench-shell/AppHeader';
+import { summarizeExamParts } from './features/workbench-shell/headerSummary';
+import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from './features/workbench-shell/RightDock';
+import { RailButton, SidePanel } from './features/workbench-shell/SidePanel';
+import { useCollapsiblePanel } from './features/workbench-shell/useCollapsiblePanel';
 import { generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
 import { calculateDynamicStudyCycle, startOfWeek } from './lib/cycleEngine';
 import {
@@ -148,12 +141,11 @@ export default function App() {
   const [importOpen, setImportOpen] = useState(false);
 
   // Painéis laterais: abrir/fechar + largura ajustável (arrastando a divisória)
-  const [showSyllabusDock, setShowSyllabusDock] = useState(true);
-  const [showNotebookDock, setShowNotebookDock] = useState(false);
-  const [showAiCopilotDock, setShowAiCopilotDock] = useState(true);
+  const leftPanel = useCollapsiblePanel('fofolab_layout_left_open_v1', true);
+  const rightPanel = useCollapsiblePanel('fofolab_layout_right_open_v1', true);
+  const rightTab = useRightDockTab();
   const syllabusWidth = useResizableWidth('fofolab_layout_syllabus_v1', 320, 240, 520);
-  const notebookWidth = useResizableWidth('fofolab_layout_notebook_v1', 384, 300, 960);
-  const copilotWidth = useResizableWidth('fofolab_layout_copilot_v1', 384, 300, 640);
+  const rightWidth = useResizableWidth('fofolab_layout_right_v1', 384, 300, 960);
 
   // Estado sincronizado do banco local
   const [plans, setPlans] = useState<StudyPlan[]>([]);
@@ -174,7 +166,7 @@ export default function App() {
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
   const pdfUrlRef = useRef<string | null>(null);
-  const docksBeforeReaderRef = useRef<{ syllabus: boolean; copilot: boolean } | null>(null);
+  const docksBeforeReaderRef = useRef<{ left: boolean; right: boolean; tab: RightDockTab } | null>(null);
   // Leitura ampliada: esconde cabeçalho, abas e painéis (o caderno abre por um botão do leitor)
   const [readerMaximized, setReaderMaximized] = useState(false);
   const [readerFullscreen, setReaderFullscreen] = useState(false);
@@ -689,17 +681,31 @@ export default function App() {
    * recolhem ao entrar (o caderno fica ao lado) e voltam como estavam ao sair da aba.
    */
   const selectTab = (tab: WorkbenchTab) => {
+    // Mudanças automáticas da leitura não viram preferência (persist: false): fechar o app lendo não deixa a coluna recolhida
+    const auto = { persist: false };
     if (tab === 'reader' && activeTab !== 'reader') {
-      docksBeforeReaderRef.current = { syllabus: showSyllabusDock, copilot: showAiCopilotDock };
-      setShowSyllabusDock(false);
-      setShowAiCopilotDock(false);
-      setShowNotebookDock(true);
+      docksBeforeReaderRef.current = { left: leftPanel.open, right: rightPanel.open, tab: rightTab.tab };
+      leftPanel.setOpen(false, auto);
+      rightPanel.setOpen(true, auto);
+      rightTab.setTab('notebook', auto);
     } else if (tab !== 'reader' && activeTab === 'reader' && docksBeforeReaderRef.current) {
-      setShowSyllabusDock(docksBeforeReaderRef.current.syllabus);
-      setShowAiCopilotDock(docksBeforeReaderRef.current.copilot);
+      const before = docksBeforeReaderRef.current;
+      leftPanel.setOpen(before.left, auto);
+      rightPanel.setOpen(before.right, auto);
+      rightTab.setTab(before.tab, auto);
       docksBeforeReaderRef.current = null;
     }
     setActiveTab(tab);
+  };
+
+  const readerNotebookVisible = rightPanel.open && rightTab.tab === 'notebook';
+  const toggleReaderNotebook = () => {
+    if (readerNotebookVisible) {
+      rightPanel.setOpen(false, { persist: false });
+      return;
+    }
+    rightTab.setTab('notebook', { persist: false });
+    rightPanel.setOpen(true, { persist: false });
   };
 
   const openReader = () => {
@@ -717,13 +723,6 @@ export default function App() {
     else void document.documentElement.requestFullscreen?.().catch(() => {});
   };
 
-  const dockToggleClass = (active: boolean) =>
-    `px-2.5 py-1.5 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition ${
-      active
-        ? 'bg-orange-500/15 border-orange-500/40 text-orange-300'
-        : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200'
-    }`;
-
   const findName = (kind: DeletableKind, id: string): string => {
     if (kind === 'plan') return plans.find((p) => p.id === id)?.title ?? 'plano';
     if (kind === 'subject') return subjects.find((s) => s.id === id)?.name ?? 'disciplina';
@@ -731,12 +730,64 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-slate-950 text-slate-100">
-      {/* Slot 1: Dock Esquerdo (Árvore de Tópicos e Edital) — Apenas no Modo Pro */}
-      {experienceMode === 'pro' && showSyllabusDock && !readerExpanded && (
-        <>
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
+      {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
+      {mode === 'student' && (
+        <AppHeader
+          hidden={readerExpanded}
+          planLabel={`[${activePlan.organ || 'Geral'}] ${activePlan.title}`}
+          daysUntilExam={cycleData.daysUntilExam}
+          examParts={summarizeExamParts(cycleData.allocations, examParts)}
+          modeSwitch={
+            <div className="flex shrink-0 items-center p-1 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold">
+              <button
+                type="button"
+                onClick={() => setExperienceMode('daily')}
+                className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
+                  experienceMode === 'daily' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <Calendar size={13} />
+                <span>Meu Dia de Hoje</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setExperienceMode('pro')}
+                className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
+                  experienceMode === 'pro' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <span>Bancada Pro</span>
+              </button>
+            </div>
+          }
+          saveStatus={<SaveStatusIndicator onOpenBackup={() => openCrudModal('backup')} />}
+          onRecalibrate={() => openWizard()}
+          blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} />}
+        />
+      )}
+
+      <div className="flex min-h-0 flex-1">
+      {/* Coluna esquerda (tópicos e edital) — só na Bancada Pro; recolhe para um trilho */}
+      {experienceMode === 'pro' && (
+        <SidePanel
+          side="left"
+          label="Coluna de tópicos"
+          open={leftPanel.open}
+          width={syllabusWidth.width}
+          onOpenChange={(open) => leftPanel.setOpen(open)}
+          collapseLabel="Recolher tópicos"
+          hidden={readerExpanded}
+          rail={<RailButton label="Abrir tópicos" icon={<PanelLeft size={15} />} onClick={() => leftPanel.setOpen(true)} />}
+          resize={{
+            label: 'Largura da lista de tópicos',
+            min: syllabusWidth.min,
+            max: syllabusWidth.max,
+            onResize: syllabusWidth.setWidth,
+            onReset: syllabusWidth.reset,
+          }}
+        >
           <SyllabusTreeDock
-            width={syllabusWidth.width}
             mode={mode}
             onToggleMode={() => setMode(mode === 'student' ? 'admin' : 'student')}
             plans={plans}
@@ -752,114 +803,15 @@ export default function App() {
               setSelectedTopicId(topId);
             }}
             onOpenCrudModal={openCrudModal}
+            onOpenEdital={() => openCrudModal('topics')}
           />
-          <ResizeHandle
-            label="Largura da lista de tópicos"
-            direction="grow-right"
-            width={syllabusWidth.width}
-            min={syllabusWidth.min}
-            max={syllabusWidth.max}
-            onResize={syllabusWidth.setWidth}
-            onReset={syllabusWidth.reset}
-          />
-        </>
+        </SidePanel>
       )}
 
       {/* Slot 2: Palco Central */}
       <main className="flex-1 flex flex-col overflow-hidden min-w-0">
         {mode === 'student' ? (
           <>
-            {/* Escondido com CSS (não desmontado) para o Pomodoro continuar contando na leitura ampliada */}
-            <header
-              className={`border-b border-slate-800 bg-slate-900/40 px-5 py-3 flex-wrap items-center justify-between gap-3 shrink-0 ${
-                readerExpanded ? 'hidden' : 'flex'
-              }`}
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <div className="flex items-center p-1 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold">
-                  <button
-                    type="button"
-                    onClick={() => setExperienceMode('daily')}
-                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
-                      experienceMode === 'daily' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                    }`}
-                  >
-                    <Calendar size={13} />
-                    <span>Meu Dia de Hoje</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setExperienceMode('pro')}
-                    className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
-                      experienceMode === 'pro' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                    }`}
-                  >
-                    <span>Bancada Pro</span>
-                  </button>
-                </div>
-
-                <div className="hidden sm:block text-xs text-slate-400 truncate">
-                  🎯 Concurso: <strong className="text-slate-200">[{activePlan.organ || 'Geral'}] {activePlan.title}</strong>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-2 shrink-0">
-                <SaveStatusIndicator onOpenBackup={() => openCrudModal('backup')} />
-
-                <button
-                  type="button"
-                  onClick={() => openWizard()}
-                  className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5 transition"
-                  title="Recalibrar momento, horas ou estratégia"
-                >
-                  <Compass size={13} className="text-orange-400" />
-                  <span className="hidden md:inline">Recalibrar Perfil</span>
-                </button>
-
-                {experienceMode === 'pro' && (
-                  <>
-                    <button
-                      type="button"
-                      onClick={() => setShowSyllabusDock((v) => !v)}
-                      className={dockToggleClass(showSyllabusDock)}
-                      title="Expandir ou recolher lista de tópicos"
-                    >
-                      <PanelLeft size={13} />
-                      Tópicos
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setShowNotebookDock((v) => !v)}
-                      className={dockToggleClass(showNotebookDock)}
-                      title="Expandir ou recolher o Caderno Lateral"
-                    >
-                      <BookOpen size={13} />
-                      Caderno
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setShowAiCopilotDock((v) => !v)}
-                      className={dockToggleClass(showAiCopilotDock)}
-                      title="Expandir ou recolher Copiloto IA Contextual"
-                    >
-                      <Sparkles size={13} />
-                      Copiloto IA
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => openCrudModal('topics')}
-                      className="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 flex items-center gap-1.5"
-                    >
-                      <Settings2 size={13} className="text-orange-400" />
-                      Edital Verticalizado
-                    </button>
-                  </>
-                )}
-
-                <StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} />
-              </div>
-            </header>
-
             {experienceMode === 'daily' && (
               <DailyFocusView
                 plan={activePlan}
@@ -989,8 +941,8 @@ export default function App() {
                         onToggleMaximized={toggleReaderMaximized}
                         fullscreen={readerFullscreen}
                         onToggleFullscreen={toggleReaderFullscreen}
-                        notebookVisible={showNotebookDock}
-                        onToggleNotebook={() => setShowNotebookDock((v) => !v)}
+                        notebookVisible={readerNotebookVisible}
+                        onToggleNotebook={toggleReaderNotebook}
                       />
                     )}
 
@@ -1014,64 +966,6 @@ export default function App() {
                     )}
                   </div>
 
-                  {/* Slot 3: Dock Lateral de Caderno e Busca */}
-                  {showNotebookDock && (
-                    <>
-                      <ResizeHandle
-                        label="Largura do caderno"
-                        direction="grow-left"
-                        width={notebookWidth.width}
-                        min={notebookWidth.min}
-                        max={notebookWidth.max}
-                        onResize={notebookWidth.setWidth}
-                        onReset={notebookWidth.reset}
-                      />
-                      <NotebookDockPanel
-                        width={notebookWidth.width}
-                        currentSubject={currentSubject}
-                        currentTopic={currentTopic}
-                        notebook={notebook.notebook}
-                        notebookDraft={notebook.draft}
-                        onChangeNotebookDraft={notebook.setDraft}
-                        onSaveNotebook={() => {
-                          notebook.saveNow();
-                        }}
-                        draftStatus={notebook.status}
-                        allNotebooks={allNotebooks}
-                        pdfSource={pdfSource}
-                        onOpenReader={activeTab === 'reader' ? undefined : openReader}
-                        onJumpToTopic={(subjId, topId) => {
-                          setSelectedSubjectId(subjId);
-                          setSelectedTopicId(topId);
-                        }}
-                        onCloseDock={() => setShowNotebookDock(false)}
-                      />
-                    </>
-                  )}
-
-                  {/* Slot 4: Dock Lateral do Copiloto IA Contextual */}
-                  {showAiCopilotDock && studentContext && !readerExpanded && (
-                    <>
-                      <ResizeHandle
-                        label="Largura do copiloto"
-                        direction="grow-left"
-                        width={copilotWidth.width}
-                        min={copilotWidth.min}
-                        max={copilotWidth.max}
-                        onResize={copilotWidth.setWidth}
-                        onReset={copilotWidth.reset}
-                      />
-                      <AiCopilotDockPanel
-                        width={copilotWidth.width}
-                        context={studentContext}
-                        activeQuestion={topicQuestions[0]?.question || null}
-                        notebookExcerpt={notebook.draft}
-                        onSaveToNotebook={handleAppendNotesToNotebook}
-                        onCloseDock={() => setShowAiCopilotDock(false)}
-                        aiConfigured={aiStatus.configured}
-                      />
-                    </>
-                  )}
                 </div>
               </>
             )}
@@ -1080,6 +974,74 @@ export default function App() {
           <AdminFactoryView adminData={adminData} />
         )}
       </main>
+
+      {/* Coluna direita: Copiloto e Caderno em abas, sempre montados; recolhe para um trilho */}
+      {experienceMode === 'pro' && mode === 'student' && (
+        <SidePanel
+          side="right"
+          label="Copiloto e Caderno"
+          open={rightPanel.open}
+          width={rightWidth.width}
+          onOpenChange={(open) => rightPanel.setOpen(open)}
+          collapseLabel="Recolher Copiloto e Caderno"
+          hidden={readerExpanded && !readerNotebookVisible}
+          rail={rightDockRail({
+            tab: rightTab.tab,
+            onOpenTab: (tab) => {
+              rightTab.setTab(tab);
+              rightPanel.setOpen(true);
+            },
+          })}
+          resize={{
+            label: 'Largura do painel direito',
+            min: rightWidth.min,
+            max: rightWidth.max,
+            onResize: rightWidth.setWidth,
+            onReset: rightWidth.reset,
+          }}
+        >
+          <RightDock
+            tab={rightTab.tab}
+            onTabChange={(tab) => rightTab.setTab(tab)}
+            copilot={
+              studentContext ? (
+                <AiCopilotDockPanel
+                  context={studentContext}
+                  activeQuestion={topicQuestions[0]?.question || null}
+                  notebookExcerpt={notebook.draft}
+                  onSaveToNotebook={handleAppendNotesToNotebook}
+                  onCloseDock={() => rightPanel.setOpen(false)}
+                  aiConfigured={aiStatus.configured}
+                />
+              ) : (
+                <p className="p-4 text-xs text-slate-400">Escolha um tópico para conversar com o Copiloto.</p>
+              )
+            }
+            notebook={
+              <NotebookDockPanel
+                currentSubject={currentSubject}
+                currentTopic={currentTopic}
+                notebook={notebook.notebook}
+                notebookDraft={notebook.draft}
+                onChangeNotebookDraft={notebook.setDraft}
+                onSaveNotebook={() => {
+                  notebook.saveNow();
+                }}
+                draftStatus={notebook.status}
+                allNotebooks={allNotebooks}
+                pdfSource={pdfSource}
+                onOpenReader={activeTab === 'reader' ? undefined : openReader}
+                onJumpToTopic={(subjId, topId) => {
+                  setSelectedSubjectId(subjId);
+                  setSelectedTopicId(topId);
+                }}
+                onCloseDock={() => rightPanel.setOpen(false)}
+              />
+            }
+          />
+        </SidePanel>
+      )}
+      </div>
 
       <OnboardingWizardModal
         isOpen={wizardOpen}
