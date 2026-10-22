@@ -43,6 +43,7 @@ import type {
   CreateTopicInput,
   EditalPlanInput,
   ExamPart,
+  FrozenBlock,
   ImportQuestionItem,
   ImportTopicItem,
   Notebook,
@@ -177,7 +178,8 @@ function createFreshDatabase(): Database {
   return db;
 }
 
-function localDateKey(date: Date): string {
+/** Data local 'YYYY-MM-DD' (não UTC): estudar às 23h conta para o dia de hoje. */
+export function localDateKey(date: Date): string {
   const pad = (n: number) => String(n).padStart(2, '0');
   return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
 }
@@ -1371,6 +1373,39 @@ export function getStudySessionsSince(sinceIso: string): StudySession[] {
     'SELECT * FROM study_sessions WHERE started_at >= ? ORDER BY started_at DESC',
     [sinceIso]
   );
+}
+
+// ============================================================================
+// Roteiro do dia congelado (spec 09): gravado na primeira abertura do dia, por plano
+// ============================================================================
+
+export function getDailyPlan(planId: string, dateKey: string): FrozenBlock[] | null {
+  const row = queryOne<{ blocks_json: string }>(
+    getDb(),
+    'SELECT blocks_json FROM daily_plans WHERE plan_id = ? AND date = ?',
+    [planId, dateKey]
+  );
+  if (!row) return null;
+  try {
+    return JSON.parse(row.blocks_json) as FrozenBlock[];
+  } catch {
+    // Roteiro gravado ilegível: tratado como ausente, e o app congela um novo
+    return null;
+  }
+}
+
+export function saveDailyPlan(planId: string, dateKey: string, blocks: FrozenBlock[]): void {
+  getDb().run(
+    `INSERT INTO daily_plans (plan_id, date, blocks_json) VALUES (?, ?, ?)
+     ON CONFLICT(plan_id, date) DO UPDATE SET blocks_json = excluded.blocks_json`,
+    [planId, dateKey, JSON.stringify(blocks)]
+  );
+  persistDatabase();
+}
+
+export function clearDailyPlan(planId: string, dateKey: string): void {
+  getDb().run('DELETE FROM daily_plans WHERE plan_id = ? AND date = ?', [planId, dateKey]);
+  persistDatabase();
 }
 
 // ============================================================================

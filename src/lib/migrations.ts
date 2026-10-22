@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 4;
+export const LATEST_SCHEMA_VERSION = 5;
 
 export interface Migration {
   version: number;
@@ -68,6 +68,19 @@ export const MIGRATIONS: Migration[] = [
       )`);
       db.run('ALTER TABLE subjects ADD COLUMN exam_part_id TEXT REFERENCES exam_parts(id) ON DELETE SET NULL');
       db.run('ALTER TABLE topics ADD COLUMN initial_knowledge_level INTEGER');
+    },
+  },
+  {
+    version: 5,
+    description: 'Roteiro do dia congelado (spec 09): a lista de blocos de hoje não muda conforme se estuda',
+    up: (db) => {
+      db.run(`CREATE TABLE IF NOT EXISTS daily_plans (
+        plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+        date TEXT NOT NULL,
+        blocks_json TEXT NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (plan_id, date)
+      )`);
     },
   },
 ];

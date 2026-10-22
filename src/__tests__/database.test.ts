@@ -444,3 +444,33 @@ describe('Plano montado a partir do edital (docs/specs/07)', () => {
     expect(db.getExamPartsByPlan(plan.id)).toEqual([]);
   });
 });
+
+describe('Roteiro do dia congelado (docs/specs/09)', () => {
+  it('guarda o roteiro do dia por plano e data', async () => {
+    const { db } = await openDatabase();
+    const planId = db.getActiveStudyPlan()!.id;
+    const block = { blockNumber: 1, subjectId: 's1', topicId: 't1', durationMinutes: 60, reasonText: 'Faltam 01:00' };
+
+    db.saveDailyPlan(planId, '2026-10-22', [block]);
+    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual([block]);
+    expect(db.getDailyPlan(planId, '2026-10-23')).toBeNull();
+    expect(db.getDailyPlan('outro-plano', '2026-10-22')).toBeNull();
+
+    const replaced = { ...block, durationMinutes: 30 };
+    db.saveDailyPlan(planId, '2026-10-22', [replaced]);
+    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual([replaced]);
+
+    db.clearDailyPlan(planId, '2026-10-22');
+    expect(db.getDailyPlan(planId, '2026-10-22')).toBeNull();
+  });
+
+  it('a chave do dia é a data local', async () => {
+    const { db } = await openDatabase();
+    expect(db.localDateKey(new Date(2026, 9, 22, 23, 59))).toBe('2026-10-22');
+    expect(db.localDateKey(new Date(2026, 9, 23, 0, 1))).toBe('2026-10-23');
+  });
+
+  it('o banco está na versão do roteiro congelado', () => {
+    expect(LATEST_SCHEMA_VERSION).toBe(5);
+  });
+});

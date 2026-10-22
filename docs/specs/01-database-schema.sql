@@ -174,6 +174,15 @@ CREATE TABLE IF NOT EXISTS study_sessions (
     started_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 11b. [v5] Roteiro do dia congelado (spec 09): os blocos de hoje não mudam conforme se estuda
+CREATE TABLE IF NOT EXISTS daily_plans (
+    plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+    date TEXT NOT NULL,                    -- Data local 'YYYY-MM-DD'
+    blocks_json TEXT NOT NULL,             -- FrozenBlock[] (matéria, tópico, duração, motivo)
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (plan_id, date)
+);
+
 -- 12. [MODO ADMIN] Blueprints de Layout das Bancas Examinadoras (DOM Drift Detection)
 CREATE TABLE IF NOT EXISTS admin_board_blueprints (
     id TEXT PRIMARY KEY,

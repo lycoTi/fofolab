@@ -175,6 +175,15 @@ export interface StudySession {
   started_at: string;
 }
 
+// 11b. daily_plans — um bloco do roteiro do dia congelado (spec 09). Nomes e cores vêm dos dados vivos.
+export interface FrozenBlock {
+  blockNumber: number;
+  subjectId: string;
+  topicId: string | null;
+  durationMinutes: number;
+  reasonText: string;
+}
+
 // 12. admin_board_blueprints
 export interface AdminBoardBlueprint {
   id: string;
