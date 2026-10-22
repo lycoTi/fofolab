@@ -1,11 +1,11 @@
 # Graph Report - fofolab  (2026-10-21)
 
 ## Corpus Check
-- 88 files · ~74,167 words
+- 89 files · ~74,526 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 755 nodes · 1624 edges · 57 communities (40 shown, 9 thin omitted)
+- 764 nodes · 1640 edges · 58 communities (41 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -26,32 +26,32 @@
 - Database
 - 🐹🧪 FofoLab — Bancada Inteligente de Estudos
 - devDependencies
-- Topic
-- initialSeed.ts
+- DailyFocusView.tsx
+- questionWorkbenchAndRouter.test.tsx
 - types/database.ts
 - cycleEngine.ts
 - Design System Builder
 - 🔬 Parte 2: Reavaliação v2 (O que mudou no "Córtex" após instalar as 6 Skills!)
 - migrations.ts
-- saveStatus.ts
+- Topic
 - 01-database-schema.sql
 - schema-v1.sql
 - permissions
-- README.md
+- 🛠️ Modo Administrador ("A Fábrica"): Trilhas, Complexidade de Questões e Crawler
 - Revisão do estado do projeto — 21/10/2026
 - Brainstorming
 - 🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA)
 - 🧭 Spec 05 — Onboarding Wizard, Visão "Meu Dia de Hoje" & Explicabilidade sob Demanda
 - FofoLab — guia para o Claude Code
 - bancada.spec.ts
-- BackupPanel.tsx
+- QuestionImportModal.tsx
 - 💾 Spec 06 — Persistência, Cópias de Segurança e Importação de Conteúdo
 - PomodoroWidget.tsx
 - PdfReaderStage.tsx
 - OnboardingWizardModal.tsx
 - Education & Learning Science (GarethManning/education-agent-skills)
 - Prompt Engineering Guide (DAIR.AI Synthesis for FofoLab)
-- 🤖 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucinação
+- README.md
 - Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)
 - Shannon — Defensive Security & TypeScript Engineering Craft
 - Suíte de Testes & TDD (FofoLab)
@@ -62,7 +62,7 @@
 - grill-me/SKILL.md
 - workflows/graphify.md
 - app
-- DatabaseStorage
+- notebookDraftAndLayout.test.tsx
 - AdminFactoryView.tsx
 
 ## God Nodes (most connected - your core abstractions)
@@ -92,39 +92,39 @@
 ## Import Cycles
 - None detected.
 
-## Communities (57 total, 9 thin omitted)
+## Communities (58 total, 8 thin omitted)
 
 ### Community 0 - "aiRouter.ts"
-Cohesion: 0.07
-Nodes (58): describeDiagnosisHint(), describeDisabledReason(), DIAGNOSIS_BUTTONS, DiagnosisSubmission, QuestionWorkbench(), QuestionWorkbenchProps, resolveAnswerState(), SEED_QUESTIONS (+50 more)
+Cohesion: 0.08
+Nodes (52): describeDiagnosisHint(), describeDisabledReason(), DIAGNOSIS_BUTTONS, DiagnosisSubmission, QuestionWorkbench(), QuestionWorkbenchProps, resolveAnswerState(), SEED_QUESTIONS (+44 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.09
 Nodes (21): DOM, DOM.Iterable, ES2022, src, compilerOptions, allowImportingTsExtensions, isolatedModules, jsx (+13 more)
 
 ### Community 2 - "explainabilityEngine.ts"
-Cohesion: 0.17
-Nodes (18): CycleDashboard(), getHeatBadgeClass(), getSuggestionCardClass(), MetricExplainer(), MetricExplainerProps, QuestionComplexityProfile, CycleSuggestion, sampleSaturationK() (+10 more)
+Cohesion: 0.26
+Nodes (13): CycleDashboard(), getHeatBadgeClass(), getSuggestionCardClass(), MetricExplainer(), MetricExplainerProps, CycleSuggestion, STRATEGY_LABELS, describeStrategy() (+5 more)
 
 ### Community 3 - "dependencies"
 Cohesion: 0.06
 Nodes (31): clsx, lucide-react, dependencies, clsx, lucide-react, pdfjs-dist, react, react-dom (+23 more)
 
 ### Community 4 - "storage.ts"
-Cohesion: 0.21
-Nodes (13): clearLegacyLocalStorageDatabase(), createDefaultStorage(), createIndexedDbStorage(), createTauriFileStorage(), getLocalStorageSafe(), isTauriRuntime(), makeBackupId(), MAX_BACKUPS (+5 more)
+Cohesion: 0.07
+Nodes (34): BackupPanel(), BackupPanelProps, describeBackupLabel(), describeStorage(), formatDate(), LABELS, formatTime(), SaveStatusIndicator() (+26 more)
 
 ### Community 5 - "lib/database.ts"
-Cohesion: 0.07
-Nodes (91): RFC-4122, App(), AppMode, DeletableKind, DELETE_LABELS, describeDependents(), ExperienceMode, localDateStamp() (+83 more)
+Cohesion: 0.08
+Nodes (89): RFC-4122, App(), AppMode, DeletableKind, DELETE_LABELS, describeDependents(), ExperienceMode, localDateStamp() (+81 more)
 
 ### Community 6 - "tauri.conf.json"
 Cohesion: 0.08
 Nodes (24): icons/128x128@2x.png, icons/128x128.png, icons/32x32.png, icons/icon.icns, icons/icon.ico, debugApplicationIdSuffix, app, security (+16 more)
 
 ### Community 9 - "questionImport.ts"
-Cohesion: 0.17
-Nodes (22): IMPORT_TEXT_EXAMPLE, QuestionImportModal(), BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun() (+14 more)
+Cohesion: 0.14
+Nodes (25): buildDemoTutorReply(), BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun(), normalizeJsonOptions() (+17 more)
 
 ### Community 11 - "Database"
 Cohesion: 0.15
@@ -138,21 +138,21 @@ Nodes (10): 1. Ferramentas Base, 2. Ferramentas de Contexto & Automação (Opcio
 Cohesion: 0.06
 Nodes (31): autoprefixer, fake-indexeddb, jsdom, devDependencies, autoprefixer, fake-indexeddb, jsdom, @playwright/test (+23 more)
 
-### Community 14 - "Topic"
-Cohesion: 0.18
-Nodes (21): CycleDashboardProps, BADGE_STYLES, DailyFocusView(), DailyFocusViewProps, formatDailyBudget(), QuestionImportModalProps, SyllabusTreeDock(), SyllabusTreeDockProps (+13 more)
+### Community 14 - "DailyFocusView.tsx"
+Cohesion: 0.22
+Nodes (14): CycleDashboardProps, BADGE_STYLES, DailyFocusView(), DailyFocusViewProps, formatDailyBudget(), CycleCalculationResult, CostBenefitBadge, DailyPlan (+6 more)
 
-### Community 15 - "initialSeed.ts"
-Cohesion: 0.16
-Nodes (15): ResizeHandle(), ResizeHandleProps, useResizableWidth(), SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES (+7 more)
+### Community 15 - "questionWorkbenchAndRouter.test.tsx"
+Cohesion: 0.29
+Nodes (10): SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_STUDY_PLANS, SEED_SUBJECTS, SEED_TOPIC_LINKS (+2 more)
 
 ### Community 16 - "types/database.ts"
-Cohesion: 0.12
-Nodes (24): CurriculumManagerModal(), CurriculumManagerModalProps, CurriculumSection, getSampleSubtopicsForCalibration(), cleanTitle(), looksLikeHeader(), parseSyllabusTopics(), splitNumberedSegments() (+16 more)
+Cohesion: 0.13
+Nodes (20): CurriculumManagerModal(), CurriculumManagerModalProps, CurriculumSection, getSampleSubtopicsForCalibration(), BlueprintHealthStatus, CareerSphere, CatalogStatus, CreateStudyPlanInput (+12 more)
 
 ### Community 17 - "cycleEngine.ts"
-Cohesion: 0.19
-Nodes (16): calculateDynamicStudyCycle(), calculateMemoryDecayBoost(), calculateSampleConfidencePercent(), calculateStrategyMultiplier(), composeSubjectScore(), composeTopicHeat(), pickDominantReason(), startOfWeek() (+8 more)
+Cohesion: 0.16
+Nodes (19): calculateDynamicStudyCycle(), calculateMemoryDecayBoost(), calculateSampleConfidencePercent(), calculateStrategyMultiplier(), composeSubjectScore(), composeTopicHeat(), pickDominantReason(), sampleSaturationK() (+11 more)
 
 ### Community 19 - "Design System Builder"
 Cohesion: 0.12
@@ -163,12 +163,12 @@ Cohesion: 0.12
 Nodes (15): 1.1. O que havia sido validado positivamente, 1.2. Os 5 Gargalos Identificados na Avaliação v1, Alerta de Segurança em `VITE_DEEPSEEK_API_KEY` + Limpeza de Ternários Aninhados, 🧠 Auditoria de Sócio — Comparativo v1 (Pré-Skills) vs. v2 (Pós-Skills), Da "Regra das 3 Questões" para Saturação Contínua BM25 + Regressão de Meia-Vida (Duolingo HLR), De "God Component" (`App.tsx` com 781 linhas) para Bancada Dupla (Split View) Componentizada, De Prompt Genérico para "Eliminação Contrastiva + Regra de Abstenção", 🚀 Mudança 1 (Lente: `education-learning-science` — Kapur, 2016 & Kornell, 2009) (+7 more)
 
 ### Community 21 - "migrations.ts"
-Cohesion: 0.21
-Nodes (11): detectSchemaVersion(), getUserVersion(), LATEST_SCHEMA_VERSION, Migration, MIGRATIONS, prepareSchema(), SchemaPreparationResult, SchemaTooNewError (+3 more)
+Cohesion: 0.13
+Nodes (15): detectSchemaVersion(), getUserVersion(), LATEST_SCHEMA_VERSION, Migration, MIGRATIONS, prepareSchema(), SchemaPreparationResult, SchemaTooNewError (+7 more)
 
-### Community 22 - "saveStatus.ts"
-Cohesion: 0.15
-Nodes (10): INITIAL_STATUS, listeners, SaveState, SaveStatus, LEGACY_LOCALSTORAGE_KEY, StorageKind, DatabaseModule, openDatabase() (+2 more)
+### Community 22 - "Topic"
+Cohesion: 0.22
+Nodes (14): NotebookDockPanel(), NotebookDockPanelProps, DraftOwner, NotebookDraftStatus, notebookTitle(), SyllabusTreeDock(), SyllabusTreeDockProps, SubjectCycleAllocation (+6 more)
 
 ### Community 23 - "01-database-schema.sql"
 Cohesion: 0.36
@@ -182,8 +182,8 @@ Nodes (12): admin_board_blueprints, ai_dissections, career_tracks, notebooks, pd
 Cohesion: 0.17
 Nodes (11): core:default, fs:allow-appdata-meta-recursive, fs:allow-appdata-read-recursive, fs:allow-appdata-write-recursive, fs:default, main, description, identifier (+3 more)
 
-### Community 26 - "README.md"
-Cohesion: 0.25
+### Community 26 - "🛠️ Modo Administrador ("A Fábrica"): Trilhas, Complexidade de Questões e Crawler"
+Cohesion: 0.40
 Nodes (4): 1. Catálogo de Trilhas de Estudos Prontas, 2. Matriz de Complexidade e Catalogação Cross-Trilhas das Questões, 3. Verificador de Blueprint das Bancas (DOM Drift Detection), 🛠️ Modo Administrador ("A Fábrica"): Trilhas, Complexidade de Questões e Crawler
 
 ### Community 27 - "Revisão do estado do projeto — 21/10/2026"
@@ -199,16 +199,16 @@ Cohesion: 0.29
 Nodes (6): 🏠 Checklist no PC de casa (antes do merge na `main`), ✅ Definição de Pronto, 🎯 Estado real por área, 🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA), 🔜 Próximas fatias, 📌 Status Global
 
 ### Community 30 - "🧭 Spec 05 — Onboarding Wizard, Visão "Meu Dia de Hoje" & Explicabilidade sob Demanda"
-Cohesion: 0.22
+Cohesion: 0.20
 Nodes (9): 🎯 1. O Problema & A Visão Humana, 🧙‍♂️ 2. O Onboarding Wizard ("Pegar pela Mão"), 📅 3. A Visão "Meu Dia de Hoje" (Modo Essencial), 💡 4. Explicabilidade Discreta sob Demanda (`?` / `ⓘ`), 📺 5. Módulo de Vídeo / Navegador Gran & YouTube (Backlog Futuro), Como o "Meu Dia" escolhe os blocos (`src/lib/dailyPlanner.ts`), Como o Wizard age de verdade (implementado na Fatia 5.5), Estratégias de Custo-Benefício (Passo 4): (+1 more)
 
 ### Community 31 - "FofoLab — guia para o Claude Code"
-Cohesion: 0.33
-Nodes (5): Antes de mexer, Comandos, FofoLab — guia para o Claude Code, Mapa rápido do código, Regras do projeto
+Cohesion: 0.29
+Nodes (7): Antes de mexer, Comandos, FofoLab — guia para o Claude Code, Mapa rápido do código, Outras regras, Regras do projeto (carregadas sempre — fonte única em `.agents/rules/`, também usada pelo Antigravity), Skills do projeto (`.agents/skills/`) — leia o SKILL.md ANTES de começar o trabalho correspondente
 
-### Community 33 - "BackupPanel.tsx"
-Cohesion: 0.25
-Nodes (12): BackupPanel(), BackupPanelProps, describeBackupLabel(), describeStorage(), formatDate(), LABELS, formatTime(), SaveStatusIndicator() (+4 more)
+### Community 33 - "QuestionImportModal.tsx"
+Cohesion: 0.27
+Nodes (10): IMPORT_TEXT_EXAMPLE, QuestionImportModal(), QuestionImportModalProps, toImportItems(), cleanTitle(), looksLikeHeader(), parentTopicCode(), parseSyllabusTopics() (+2 more)
 
 ### Community 34 - "💾 Spec 06 — Persistência, Cópias de Segurança e Importação de Conteúdo"
 Cohesion: 0.25
@@ -219,8 +219,8 @@ Cohesion: 0.29
 Nodes (5): PomodoroSessionResult, PomodoroWidget(), PomodoroWidgetProps, SessionContext, TimerMode
 
 ### Community 36 - "PdfReaderStage.tsx"
-Cohesion: 0.11
-Nodes (24): NotebookDockPanel(), NotebookDockPanelProps, DraftOwner, NOTEBOOK_AUTOSAVE_MS, NotebookDraftStatus, notebookTitle(), loadPdfDocument(), loadPdfJs() (+16 more)
+Cohesion: 0.14
+Nodes (21): loadPdfDocument(), loadPdfJs(), PageSize, readPageSizes(), renderPdfPage(), PageJumpRequest, PdfDocumentViewer(), PdfPage (+13 more)
 
 ### Community 37 - "OnboardingWizardModal.tsx"
 Cohesion: 0.31
@@ -234,8 +234,8 @@ Nodes (4): 1. Learning Analytics & The Small-Sample Trap (Mandinach & Gummer, 20
 Cohesion: 0.40
 Nodes (4): 1. Grounding & Anti-Hallucination (RAG / Context Anchoring), 2. Structured Decomposition (Chain-of-Thought + Elimination), 3. Token Economy & Caching Architecture, Prompt Engineering Guide (DAIR.AI Synthesis for FofoLab)
 
-### Community 40 - "🤖 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucinação"
-Cohesion: 0.40
+### Community 40 - "README.md"
+Cohesion: 0.25
 Nodes (4): 1. Roteador de IA Transparente (Zero Config + Grounding Anti-Alucinação), 2. Política de PDFs Locais (Estratégia / Gran Cursos — Direitos Autorais), 3. Estudo Reverso & Motor de Pontuação estilo Elasticsearch (`Relevance Score`), 🤖 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucinação
 
 ### Community 41 - "Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)"
@@ -250,28 +250,32 @@ Nodes (3): 1. Defensive Security Audit (5-Phase Mindset for Desktop & Web Apps),
 Cohesion: 0.50
 Nodes (3): 1. Camadas de Teste, 2. Comandos de Verificação, Suíte de Testes & TDD (FofoLab)
 
+### Community 54 - "notebookDraftAndLayout.test.tsx"
+Cohesion: 0.32
+Nodes (6): ResizeHandle(), ResizeHandleProps, useResizableWidth(), NOTEBOOK_AUTOSAVE_MS, saveMock, [topicA, topicB]
+
 ### Community 55 - "AdminFactoryView.tsx"
 Cohesion: 0.48
 Nodes (6): AdminFactoryView(), AdminFactoryViewProps, getCatalogStatusClass(), getCatalogStatusLabel(), AdminBoardBlueprint, CareerTrack
 
 ## Knowledge Gaps
-- **236 isolated node(s):** `📌 Status Global`, `✅ Definição de Pronto`, `🎯 Estado real por área`, `🏠 Checklist no PC de casa (antes do merge na `main`)`, `🔜 Próximas fatias` (+231 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 300 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **238 isolated node(s):** `admin_board_blueprints`, `TEST_PDF`, `name`, `private`, `version` (+233 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 303 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topic` connect `Topic` to `aiRouter.ts`, `explainabilityEngine.ts`, `PdfReaderStage.tsx`, `lib/database.ts`, `questionImport.ts`, `initialSeed.ts`, `types/database.ts`, `cycleEngine.ts`?**
+- **Why does `Topic` connect `Topic` to `QuestionImportModal.tsx`, `explainabilityEngine.ts`, `PdfReaderStage.tsx`, `lib/database.ts`, `questionImport.ts`, `DailyFocusView.tsx`, `questionWorkbenchAndRouter.test.tsx`, `types/database.ts`, `cycleEngine.ts`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `DatabaseStorage` connect `DatabaseStorage` to `storage.ts`, `lib/database.ts`?**
+- **Why does `DatabaseStorage` connect `storage.ts` to `lib/database.ts`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `StudyPlan` connect `Topic` to `explainabilityEngine.ts`, `OnboardingWizardModal.tsx`, `lib/database.ts`, `questionImport.ts`, `initialSeed.ts`, `types/database.ts`, `cycleEngine.ts`?**
+- **Why does `StudyPlan` connect `DailyFocusView.tsx` to `QuestionImportModal.tsx`, `explainabilityEngine.ts`, `OnboardingWizardModal.tsx`, `lib/database.ts`, `questionWorkbenchAndRouter.test.tsx`, `types/database.ts`, `cycleEngine.ts`, `Topic`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **What connects `📌 Status Global`, `✅ Definição de Pronto`, `🎯 Estado real por área` to the rest of the system?**
-  _236 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `admin_board_blueprints`, `TEST_PDF`, `name` to the rest of the system?**
+  _238 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `aiRouter.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07236544549977386 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07656341320864991 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
 - **Should `dependencies` be split into smaller, more focused modules?**

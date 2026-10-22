@@ -108,6 +108,19 @@
       "source_location": "L354"
     },
     {
+      "id": "src_lib_airouter_questioncomplexityprofile",
+      "label": "QuestionComplexityProfile",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "questioncomplexityprofile",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L30"
+    },
+    {
       "id": "src_lib_airouter_realprovider",
       "label": "RealProvider",
       "_callable": true,
@@ -147,19 +160,6 @@
       "source_location": "L10"
     },
     {
-      "id": "src_lib_questionoptions_questionoption",
-      "label": "QuestionOption",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "questionoption",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L6"
-    },
-    {
       "id": "src_types_database_aidissection",
       "label": "AiDissection",
       "_callable": true,
@@ -171,6 +171,19 @@
       "norm_label": "aidissection",
       "source_file": "src/types/database.ts",
       "source_location": "L124"
+    },
+    {
+      "id": "src_types_database_aiproviderused",
+      "label": "AiProviderUsed",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "aiproviderused",
+      "source_file": "src/types/database.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_types_database_question",
@@ -270,7 +283,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "cycledashboardprops",
       "source_file": "src/components/CycleDashboard.tsx",
@@ -283,37 +296,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "dailyfocusviewprops",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L9"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
-      "label": "QuestionImportModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "questionimportmodalprops",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
-      "label": "SyllabusTreeDockProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedockprops",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L5"
     },
     {
       "id": "src_lib_cycleengine_cyclecalculationresult",
@@ -322,24 +309,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "cyclecalculationresult",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L116"
-    },
-    {
-      "id": "src_lib_cycleengine_subjectcycleallocation",
-      "label": "SubjectCycleAllocation",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subjectcycleallocation",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L92"
     },
     {
       "id": "src_lib_dailyplanner_costbenefitbadge",
@@ -348,24 +322,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "costbenefitbadge",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L9"
-    },
-    {
-      "id": "src_lib_dailyplanner_dailyfocusblock",
-      "label": "DailyFocusBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "dailyfocusblock",
-      "source_file": "src/lib/dailyPlanner.ts",
-      "source_location": "L11"
     },
     {
       "id": "src_lib_dailyplanner_dailyplan",
@@ -374,7 +335,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "dailyplan",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -387,63 +348,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "studyplan",
       "source_file": "src/types/database.ts",
       "source_location": "L30"
-    },
-    {
-      "id": "src_types_database_subject",
-      "label": "Subject",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subject",
-      "source_file": "src/types/database.ts",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_types_database_topic",
-      "label": "Topic",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "topic",
-      "source_file": "src/types/database.ts",
-      "source_location": "L61"
-    },
-    {
-      "id": "src_components_resizehandle_resizehandleprops",
-      "label": "ResizeHandleProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "resizehandleprops",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_types_database_topiclink",
-      "label": "TopicLink",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "topiclink",
-      "source_file": "src/types/database.ts",
-      "source_location": "L73"
     },
     {
       "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
@@ -470,19 +379,6 @@
       "norm_label": "curriculumsection",
       "source_file": "src/components/CurriculumManagerModal.tsx",
       "source_location": "L30"
-    },
-    {
-      "id": "src_types_database_aiproviderused",
-      "label": "AiProviderUsed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "aiproviderused",
-      "source_file": "src/types/database.ts",
-      "source_location": "L11"
     },
     {
       "id": "src_types_database_blueprinthealthstatus",
@@ -615,6 +511,19 @@
       "source_location": "L7"
     },
     {
+      "id": "src_types_database_topiclink",
+      "label": "TopicLink",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "topiclink",
+      "source_file": "src/types/database.ts",
+      "source_location": "L73"
+    },
+    {
       "id": "src_types_database_topicrelationtype",
       "label": "TopicRelationType",
       "_callable": true,
@@ -732,19 +641,6 @@
       "source_location": "L5"
     },
     {
-      "id": "src_lib_airouter_questioncomplexityprofile",
-      "label": "QuestionComplexityProfile",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "questioncomplexityprofile",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "src_lib_cycleengine_cyclesuggestion",
       "label": "CycleSuggestion",
       "_callable": true,
@@ -756,19 +652,6 @@
       "norm_label": "cyclesuggestion",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L108"
-    },
-    {
-      "id": "src_lib_cycleengine_topicheatitem",
-      "label": "TopicHeatItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "topicheatitem",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L63"
     },
     {
       "id": "src_lib_explainabilityengine_metricexplanation",
@@ -823,52 +706,13 @@
       "source_location": "L70"
     },
     {
-      "id": "src_lib_savestatus_savestate",
-      "label": "SaveState",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "savestate",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_lib_savestatus_savestatus",
-      "label": "SaveStatus",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "savestatus",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_lib_storage_storagekind",
-      "label": "StorageKind",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "storagekind",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L11"
-    },
-    {
       "id": "src_tests_database_test_databasemodule",
       "label": "DatabaseModule",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
+      "community": 21,
+      "community_name": "migrations.ts",
       "file_type": "code",
       "norm_label": "databasemodule",
       "source_file": "src/__tests__/database.test.ts",
@@ -880,51 +724,181 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
+      "community": 21,
+      "community_name": "migrations.ts",
       "file_type": "code",
       "norm_label": "savestatusmodule",
       "source_file": "src/__tests__/database.test.ts",
       "source_location": "L13"
     },
     {
-      "id": "src_components_backuppanel_backuppanelprops",
-      "label": "BackupPanelProps",
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
+      "label": "NotebookDockPanelProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community": 22,
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "backuppanelprops",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L6"
+      "norm_label": "notebookdockpanelprops",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L7"
     },
     {
-      "id": "src_components_savestatusindicator_savestatusindicatorprops",
-      "label": "SaveStatusIndicatorProps",
+      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
+      "label": "DraftOwner",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community": 22,
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "savestatusindicatorprops",
-      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "norm_label": "draftowner",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
+      "label": "NotebookDraftStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "notebookdraftstatus",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
+      "label": "SyllabusTreeDockProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedockprops",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
       "source_location": "L5"
     },
     {
-      "id": "src_lib_storage_backupentry",
-      "label": "BackupEntry",
+      "id": "src_lib_cycleengine_subjectcycleallocation",
+      "label": "SubjectCycleAllocation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subjectcycleallocation",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L92"
+    },
+    {
+      "id": "src_lib_cycleengine_topicheatitem",
+      "label": "TopicHeatItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "topicheatitem",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L63"
+    },
+    {
+      "id": "src_lib_dailyplanner_dailyfocusblock",
+      "label": "DailyFocusBlock",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "dailyfocusblock",
+      "source_file": "src/lib/dailyPlanner.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_types_database_notebook",
+      "label": "Notebook",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "notebook",
+      "source_file": "src/types/database.ts",
+      "source_location": "L82"
+    },
+    {
+      "id": "src_types_database_pdfsource",
+      "label": "PdfSource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "pdfsource",
+      "source_file": "src/types/database.ts",
+      "source_location": "L93"
+    },
+    {
+      "id": "src_types_database_subject",
+      "label": "Subject",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subject",
+      "source_file": "src/types/database.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_types_database_topic",
+      "label": "Topic",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "topic",
+      "source_file": "src/types/database.ts",
+      "source_location": "L61"
+    },
+    {
+      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
+      "label": "QuestionImportModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "backupentry",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L13"
+      "norm_label": "questionimportmodalprops",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_types_database_importquestionitem",
+      "label": "ImportQuestionItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "QuestionImportModal.tsx",
+      "file_type": "code",
+      "norm_label": "importquestionitem",
+      "source_file": "src/types/database.ts",
+      "source_location": "L219"
     },
     {
       "id": "src_components_pomodorowidget_pomodorosessionresult",
@@ -979,45 +953,6 @@
       "source_location": "L22"
     },
     {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
-      "label": "NotebookDockPanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdockpanelprops",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
-      "label": "DraftOwner",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "draftowner",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
-      "label": "NotebookDraftStatus",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdraftstatus",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L8"
-    },
-    {
       "id": "src_features_pdf_reader_pdfdocument_pagesize",
       "label": "PageSize",
       "_callable": true,
@@ -1054,33 +989,20 @@
       "file_type": "code",
       "norm_label": "pdfprogressupdate",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L20"
+      "source_location": "L8"
     },
     {
-      "id": "src_types_database_notebook",
-      "label": "Notebook",
+      "id": "src_features_pdf_reader_pdfreadertoolbar_pdfpagenavigation",
+      "label": "PdfPageNavigation",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
       "community_name": "PdfReaderStage.tsx",
       "file_type": "code",
-      "norm_label": "notebook",
-      "source_file": "src/types/database.ts",
-      "source_location": "L82"
-    },
-    {
-      "id": "src_types_database_pdfsource",
-      "label": "PdfSource",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "pdfsource",
-      "source_file": "src/types/database.ts",
-      "source_location": "L93"
+      "norm_label": "pdfpagenavigation",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L77"
     },
     {
       "id": "src_features_onboarding_wizard_onboardingwizardmodal_onboardingprofile",
@@ -1133,6 +1055,123 @@
       "norm_label": "studystrategy",
       "source_file": "src/types/database.ts",
       "source_location": "L13"
+    },
+    {
+      "id": "src_components_backuppanel_backuppanelprops",
+      "label": "BackupPanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "backuppanelprops",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_components_savestatusindicator_savestatusindicatorprops",
+      "label": "SaveStatusIndicatorProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatusindicatorprops",
+      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_lib_database_initdatabaseoptions",
+      "label": "InitDatabaseOptions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "initdatabaseoptions",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L89"
+    },
+    {
+      "id": "src_lib_savestatus_savestate",
+      "label": "SaveState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestate",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_lib_savestatus_savestatus",
+      "label": "SaveStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatus",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_lib_storage_backupentry",
+      "label": "BackupEntry",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "backupentry",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_lib_storage_databasestorage",
+      "label": "DatabaseStorage",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "databasestorage",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_lib_storage_memorystorage",
+      "label": "MemoryStorage",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "memorystorage",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L75"
+    },
+    {
+      "id": "src_lib_storage_storagekind",
+      "label": "StorageKind",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "storagekind",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_app_appmode",
@@ -1213,19 +1252,6 @@
       "source_location": "L103"
     },
     {
-      "id": "src_lib_database_initdatabaseoptions",
-      "label": "InitDatabaseOptions",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "initdatabaseoptions",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L89"
-    },
-    {
       "id": "src_lib_database_invalidbackuperror",
       "label": "InvalidBackupError",
       "_callable": true,
@@ -1239,30 +1265,17 @@
       "source_location": "L96"
     },
     {
-      "id": "src_lib_storage_databasestorage",
-      "label": "DatabaseStorage",
+      "id": "src_components_resizehandle_resizehandleprops",
+      "label": "ResizeHandleProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 54,
-      "community_name": "DatabaseStorage",
+      "community_name": "notebookDraftAndLayout.test.tsx",
       "file_type": "code",
-      "norm_label": "databasestorage",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_lib_storage_memorystorage",
-      "label": "MemoryStorage",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "DatabaseStorage",
-      "file_type": "code",
-      "norm_label": "memorystorage",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L75"
+      "norm_label": "resizehandleprops",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L33"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryviewprops",
@@ -1356,17 +1369,17 @@
       "source_location": "L35"
     },
     {
-      "id": "src_types_database_importquestionitem",
-      "label": "ImportQuestionItem",
+      "id": "src_lib_questionoptions_questionoption",
+      "label": "QuestionOption",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "importquestionitem",
-      "source_file": "src/types/database.ts",
-      "source_location": "L219"
+      "norm_label": "questionoption",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L6"
     },
     {
       "id": "src_components_questionworkbench_describediagnosishint",
@@ -1475,18 +1488,6 @@
       "norm_label": "builddemocopilotreply()",
       "source_file": "src/lib/aiRouter.ts",
       "source_location": "L464"
-    },
-    {
-      "id": "src_lib_airouter_builddemotutorreply",
-      "label": "buildDemoTutorReply()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "builddemotutorreply()",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L397"
     },
     {
       "id": "src_lib_airouter_builddissectionprompt",
@@ -1777,54 +1778,6 @@
       "source_location": "L219"
     },
     {
-      "id": "src_lib_questionoptions_findcorrectoption",
-      "label": "findCorrectOption()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "findcorrectoption()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L64"
-    },
-    {
-      "id": "src_lib_questionoptions_normalizeoption",
-      "label": "normalizeOption()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "normalizeoption()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L22"
-    },
-    {
-      "id": "src_lib_questionoptions_parsequestionoptions",
-      "label": "parseQuestionOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "parsequestionoptions()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L51"
-    },
-    {
-      "id": "src_lib_questionoptions_splitoptionprefix",
-      "label": "splitOptionPrefix()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "splitoptionprefix()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L16"
-    },
-    {
       "id": "src_tests_airouter_test_geminiresponse",
       "label": "geminiResponse()",
       "_callable": true,
@@ -1926,7 +1879,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "dailyfocusview()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -1938,23 +1891,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "formatdailybudget()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L25"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
-      "label": "SyllabusTreeDock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock()",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L21"
     },
     {
       "id": "src_lib_dailyplanner_describereason",
@@ -1962,7 +1903,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "describereason()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1974,7 +1915,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "pickbadge()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1986,7 +1927,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "plandailyblocks()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1998,35 +1939,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "roundto5()",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L34"
-    },
-    {
-      "id": "src_components_resizehandle_resizehandle",
-      "label": "ResizeHandle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "resizehandle()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_components_resizehandle_useresizablewidth",
-      "label": "useResizableWidth()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "useresizablewidth()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L7"
     },
     {
       "id": "src_components_curriculummanagermodal_curriculummanagermodal",
@@ -2063,54 +1980,6 @@
       "norm_label": "getsamplesubtopicsforcalibration()",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L198"
-    },
-    {
-      "id": "src_lib_syllabusimport_cleantitle",
-      "label": "cleanTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "cleantitle()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_lib_syllabusimport_lookslikeheader",
-      "label": "looksLikeHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "lookslikeheader()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_lib_syllabusimport_parsesyllabustopics",
-      "label": "parseSyllabusTopics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "parsesyllabustopics()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_lib_syllabusimport_splitnumberedsegments",
-      "label": "splitNumberedSegments()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "splitnumberedsegments()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L20"
     },
     {
       "id": "src_lib_cycleengine_calculatedynamicstudycycle",
@@ -2197,6 +2066,18 @@
       "source_location": "L281"
     },
     {
+      "id": "src_lib_cycleengine_samplesaturationk",
+      "label": "sampleSaturationK()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "cycleEngine.ts",
+      "file_type": "code",
+      "norm_label": "samplesaturationk()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L154"
+    },
+    {
       "id": "src_lib_cycleengine_startofweek",
       "label": "startOfWeek()",
       "_callable": true,
@@ -2279,18 +2160,6 @@
       "norm_label": "metricexplainer()",
       "source_file": "src/components/MetricExplainer.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "src_lib_cycleengine_samplesaturationk",
-      "label": "sampleSaturationK()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "samplesaturationk()",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L154"
     },
     {
       "id": "src_lib_explainabilityengine_describestrategy",
@@ -2437,6 +2306,30 @@
       "source_location": "L63"
     },
     {
+      "id": "src_tests_database_test_bytesofv1database",
+      "label": "bytesOfV1Database()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "bytesofv1database()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L32"
+    },
+    {
+      "id": "src_tests_database_test_scalar",
+      "label": "scalar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "scalar()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L28"
+    },
+    {
       "id": "src_tests_migrations_test_describestructure",
       "label": "describeStructure()",
       "_callable": true,
@@ -2449,52 +2342,52 @@
       "source_location": "L17"
     },
     {
-      "id": "src_lib_savestatus_resetsavestatus",
-      "label": "resetSaveStatus()",
+      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
+      "label": "DraftStatusBadge()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "resetsavestatus()",
-      "source_file": "src/lib/saveStatus.ts",
+      "norm_label": "draftstatusbadge()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
+      "label": "NotebookDockPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "notebookdockpanel()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
       "source_location": "L45"
     },
     {
-      "id": "src_tests_database_test_bytesofv1database",
-      "label": "bytesOfV1Database()",
+      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
+      "label": "notebookTitle()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "bytesofv1database()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L32"
+      "norm_label": "notebooktitle()",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L16"
     },
     {
-      "id": "src_tests_database_test_opendatabase",
-      "label": "openDatabase()",
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
+      "label": "SyllabusTreeDock()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "opendatabase()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_tests_database_test_scalar",
-      "label": "scalar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "scalar()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L28"
+      "norm_label": "syllabustreedock()",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L21"
     },
     {
       "id": "e2e_bancada_spec_opencurriculum",
@@ -2569,100 +2462,88 @@
       "source_location": "L28"
     },
     {
-      "id": "src_components_backuppanel_backuppanel",
-      "label": "BackupPanel()",
+      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
+      "label": "QuestionImportModal()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "backuppanel()",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L44"
-    },
-    {
-      "id": "src_components_backuppanel_describebackuplabel",
-      "label": "describeBackupLabel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "BackupPanel.tsx",
-      "file_type": "code",
-      "norm_label": "describebackuplabel()",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_backuppanel_describestorage",
-      "label": "describeStorage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "BackupPanel.tsx",
-      "file_type": "code",
-      "norm_label": "describestorage()",
-      "source_file": "src/components/BackupPanel.tsx",
+      "norm_label": "questionimportmodal()",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
       "source_location": "L33"
     },
     {
-      "id": "src_components_backuppanel_formatdate",
-      "label": "formatDate()",
+      "id": "src_lib_questionimport_toimportitems",
+      "label": "toImportItems()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "formatdate()",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L40"
+      "norm_label": "toimportitems()",
+      "source_file": "src/lib/questionImport.ts",
+      "source_location": "L378"
     },
     {
-      "id": "src_components_savestatusindicator_formattime",
-      "label": "formatTime()",
+      "id": "src_lib_syllabusimport_cleantitle",
+      "label": "cleanTitle()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "formattime()",
-      "source_file": "src/components/SaveStatusIndicator.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_components_savestatusindicator_savestatusindicator",
-      "label": "SaveStatusIndicator()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "BackupPanel.tsx",
-      "file_type": "code",
-      "norm_label": "savestatusindicator()",
-      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "norm_label": "cleantitle()",
+      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L16"
     },
     {
-      "id": "src_lib_savestatus_getsavestatus",
-      "label": "getSaveStatus()",
+      "id": "src_lib_syllabusimport_lookslikeheader",
+      "label": "looksLikeHeader()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "getsavestatus()",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L29"
+      "norm_label": "lookslikeheader()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L36"
     },
     {
-      "id": "src_lib_savestatus_subscribesavestatus",
-      "label": "subscribeSaveStatus()",
+      "id": "src_lib_syllabusimport_parenttopiccode",
+      "label": "parentTopicCode()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "subscribesavestatus()",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L33"
+      "norm_label": "parenttopiccode()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L68"
+    },
+    {
+      "id": "src_lib_syllabusimport_parsesyllabustopics",
+      "label": "parseSyllabusTopics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "QuestionImportModal.tsx",
+      "file_type": "code",
+      "norm_label": "parsesyllabustopics()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_syllabusimport_splitnumberedsegments",
+      "label": "splitNumberedSegments()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "QuestionImportModal.tsx",
+      "file_type": "code",
+      "norm_label": "splitnumberedsegments()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L20"
     },
     {
       "id": "src_components_pomodorowidget_pomodorowidget",
@@ -2687,42 +2568,6 @@
       "norm_label": "renderpomodoro()",
       "source_file": "src/__tests__/pomodoro.test.tsx",
       "source_location": "L7"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
-      "label": "DraftStatusBadge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "draftstatusbadge()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
-      "label": "NotebookDockPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
-      "label": "notebookTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebooktitle()",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L16"
     },
     {
       "id": "src_features_pdf_reader_pdfdocument_loadpdfdocument",
@@ -2785,16 +2630,16 @@
       "source_location": "L76"
     },
     {
-      "id": "src_features_pdf_reader_pdfreaderstage_pdffilepicker",
-      "label": "PdfFilePicker()",
+      "id": "src_features_pdf_reader_pdfreaderstage_emptystatemessage",
+      "label": "emptyStateMessage()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
       "community_name": "PdfReaderStage.tsx",
       "file_type": "code",
-      "norm_label": "pdffilepicker()",
+      "norm_label": "emptystatemessage()",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L38"
+      "source_location": "L21"
     },
     {
       "id": "src_features_pdf_reader_pdfreaderstage_pdfreaderstage",
@@ -2806,10 +2651,34 @@
       "file_type": "code",
       "norm_label": "pdfreaderstage()",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L87"
+      "source_location": "L33"
     },
     {
-      "id": "src_features_pdf_reader_pdfreaderstage_readprogressbar",
+      "id": "src_features_pdf_reader_pdfreadertoolbar_pdffilepicker",
+      "label": "PdfFilePicker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "pdffilepicker()",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_features_pdf_reader_pdfreadertoolbar_pdfreadertoolbar",
+      "label": "PdfReaderToolbar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "pdfreadertoolbar()",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_features_pdf_reader_pdfreadertoolbar_readprogressbar",
       "label": "ReadProgressBar()",
       "_callable": true,
       "_origin": "ast",
@@ -2817,8 +2686,20 @@
       "community_name": "PdfReaderStage.tsx",
       "file_type": "code",
       "norm_label": "readprogressbar()",
-      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L62"
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_features_pdf_reader_pdfreadertoolbar_toggleclass",
+      "label": "toggleClass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "toggleclass()",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L72"
     },
     {
       "id": "src_features_pdf_reader_readprogress_parsereadpages",
@@ -2893,6 +2774,114 @@
       "source_location": "L28"
     },
     {
+      "id": "src_components_backuppanel_backuppanel",
+      "label": "BackupPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "backuppanel()",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L44"
+    },
+    {
+      "id": "src_components_backuppanel_describebackuplabel",
+      "label": "describeBackupLabel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "describebackuplabel()",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_components_backuppanel_describestorage",
+      "label": "describeStorage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "describestorage()",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_components_backuppanel_formatdate",
+      "label": "formatDate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "formatdate()",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L40"
+    },
+    {
+      "id": "src_components_savestatusindicator_formattime",
+      "label": "formatTime()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "formattime()",
+      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_components_savestatusindicator_savestatusindicator",
+      "label": "SaveStatusIndicator()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatusindicator()",
+      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_lib_savestatus_getsavestatus",
+      "label": "getSaveStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "getsavestatus()",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_lib_savestatus_resetsavestatus",
+      "label": "resetSaveStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "resetsavestatus()",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_lib_savestatus_subscribesavestatus",
+      "label": "subscribeSaveStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "subscribesavestatus()",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L33"
+    },
+    {
       "id": "src_lib_storage_clearlegacylocalstoragedatabase",
       "label": "clearLegacyLocalStorageDatabase()",
       "_callable": true,
@@ -2939,6 +2928,78 @@
       "norm_label": "createtaurifilestorage()",
       "source_file": "src/lib/storage.ts",
       "source_location": "L253"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_createbackup",
+      "label": ".createBackup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".createbackup()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_listbackups",
+      "label": ".listBackups()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".listbackups()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_load",
+      "label": ".load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".load()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_quarantine",
+      "label": ".quarantine()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".quarantine()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_readbackup",
+      "label": ".readBackup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".readbackup()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_lib_storage_databasestorage_save",
+      "label": ".save()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": ".save()",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L24"
     },
     {
       "id": "src_lib_storage_getlocalstoragesafe",
@@ -3059,6 +3120,18 @@
       "norm_label": "transactiondone()",
       "source_file": "src/lib/storage.ts",
       "source_location": "L148"
+    },
+    {
+      "id": "src_tests_database_test_opendatabase",
+      "label": "openDatabase()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "opendatabase()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L17"
     },
     {
       "id": "src_tests_storage_test_uniquedbname",
@@ -4033,88 +4106,28 @@
       "source_location": "L82"
     },
     {
-      "id": "src_lib_syllabusimport_parenttopiccode",
-      "label": "parentTopicCode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "parenttopiccode()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L68"
-    },
-    {
-      "id": "src_lib_storage_databasestorage_createbackup",
-      "label": ".createBackup()",
+      "id": "src_components_resizehandle_resizehandle",
+      "label": "ResizeHandle()",
       "_callable": true,
       "_origin": "ast",
       "community": 54,
-      "community_name": "DatabaseStorage",
+      "community_name": "notebookDraftAndLayout.test.tsx",
       "file_type": "code",
-      "norm_label": ".createbackup()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L25"
+      "norm_label": "resizehandle()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L48"
     },
     {
-      "id": "src_lib_storage_databasestorage_listbackups",
-      "label": ".listBackups()",
+      "id": "src_components_resizehandle_useresizablewidth",
+      "label": "useResizableWidth()",
       "_callable": true,
       "_origin": "ast",
       "community": 54,
-      "community_name": "DatabaseStorage",
+      "community_name": "notebookDraftAndLayout.test.tsx",
       "file_type": "code",
-      "norm_label": ".listbackups()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_lib_storage_databasestorage_load",
-      "label": ".load()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "DatabaseStorage",
-      "file_type": "code",
-      "norm_label": ".load()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_lib_storage_databasestorage_quarantine",
-      "label": ".quarantine()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "DatabaseStorage",
-      "file_type": "code",
-      "norm_label": ".quarantine()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_lib_storage_databasestorage_readbackup",
-      "label": ".readBackup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "DatabaseStorage",
-      "file_type": "code",
-      "norm_label": ".readbackup()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L28"
-    },
-    {
-      "id": "src_lib_storage_databasestorage_save",
-      "label": ".save()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "DatabaseStorage",
-      "file_type": "code",
-      "norm_label": ".save()",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L24"
+      "norm_label": "useresizablewidth()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryview",
@@ -4153,16 +4166,16 @@
       "source_location": "L18"
     },
     {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
-      "label": "QuestionImportModal()",
+      "id": "src_lib_airouter_builddemotutorreply",
+      "label": "buildDemoTutorReply()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "questionimportmodal()",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L33"
+      "norm_label": "builddemotutorreply()",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L397"
     },
     {
       "id": "src_lib_questionimport_canonicalboardname",
@@ -4321,16 +4334,52 @@
       "source_location": "L68"
     },
     {
-      "id": "src_lib_questionimport_toimportitems",
-      "label": "toImportItems()",
+      "id": "src_lib_questionoptions_findcorrectoption",
+      "label": "findCorrectOption()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "toimportitems()",
-      "source_file": "src/lib/questionImport.ts",
-      "source_location": "L378"
+      "norm_label": "findcorrectoption()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L64"
+    },
+    {
+      "id": "src_lib_questionoptions_normalizeoption",
+      "label": "normalizeOption()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "normalizeoption()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_lib_questionoptions_parsequestionoptions",
+      "label": "parseQuestionOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "parsequestionoptions()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L51"
+    },
+    {
+      "id": "src_lib_questionoptions_splitoptionprefix",
+      "label": "splitOptionPrefix()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "splitoptionprefix()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L16"
     },
     {
       "id": "src_components_questionworkbench",
@@ -4410,28 +4459,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_lib_questionoptions",
-      "label": "questionOptions.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "questionoptions.ts",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_questionoptions_index_letters",
-      "label": "INDEX_LETTERS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "index_letters",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L12"
-    },
-    {
       "id": "src_tests_airouter_test",
       "label": "aiRouter.test.ts",
       "_origin": "ast",
@@ -4441,28 +4468,6 @@
       "norm_label": "airouter.test.ts",
       "source_file": "src/__tests__/aiRouter.test.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test",
-      "label": "questionWorkbenchAndRouter.test.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "questionworkbenchandrouter.test.tsx",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
-      "label": "FORBIDDEN_JARGON",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "forbidden_jargon",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
-      "source_location": "L29"
     },
     {
       "id": "tsconfig",
@@ -5069,6 +5074,17 @@
       "source_location": "L37"
     },
     {
+      "id": "package_json_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "tailwindcss",
+      "source_file": "package.json",
+      "source_location": "L39"
+    },
+    {
       "id": "playwright_test",
       "label": "@playwright/test",
       "_origin": "ast",
@@ -5089,17 +5105,6 @@
       "norm_label": "postcss",
       "source_file": "package.json",
       "source_location": "L38"
-    },
-    {
-      "id": "tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "devDependencies",
-      "file_type": "concept",
-      "norm_label": "tailwindcss",
-      "source_file": "package.json",
-      "source_location": "L39"
     },
     {
       "id": "tauri_apps_cli",
@@ -5205,7 +5210,7 @@
       "label": "DailyFocusView.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "dailyfocusview.tsx",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -5216,29 +5221,18 @@
       "label": "BADGE_STYLES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "badge_styles",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L19"
     },
     {
-      "id": "src_features_syllabus_dock_syllabustreedock",
-      "label": "SyllabusTreeDock.tsx",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock.tsx",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_lib_dailyplanner",
       "label": "dailyPlanner.ts",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "dailyplanner.ts",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -5249,29 +5243,18 @@
       "label": "MIN_BLOCK_MINUTES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Topic",
+      "community_name": "DailyFocusView.tsx",
       "file_type": "code",
       "norm_label": "min_block_minutes",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L29"
     },
     {
-      "id": "src_components_resizehandle",
-      "label": "ResizeHandle.tsx",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "resizehandle.tsx",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_data_initialseed",
       "label": "initialSeed.ts",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "initialseed.ts",
       "source_file": "src/data/initialSeed.ts",
@@ -5282,7 +5265,7 @@
       "label": "SEED_ADMIN_BLUEPRINTS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_admin_blueprints",
       "source_file": "src/data/initialSeed.ts",
@@ -5293,7 +5276,7 @@
       "label": "SEED_AI_DISSECTIONS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_ai_dissections",
       "source_file": "src/data/initialSeed.ts",
@@ -5304,7 +5287,7 @@
       "label": "SEED_CAREER_TRACKS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_career_tracks",
       "source_file": "src/data/initialSeed.ts",
@@ -5315,7 +5298,7 @@
       "label": "SEED_NOTEBOOKS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_notebooks",
       "source_file": "src/data/initialSeed.ts",
@@ -5326,7 +5309,7 @@
       "label": "SEED_PDF_SOURCES",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_pdf_sources",
       "source_file": "src/data/initialSeed.ts",
@@ -5337,7 +5320,7 @@
       "label": "SEED_STUDY_PLANS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_study_plans",
       "source_file": "src/data/initialSeed.ts",
@@ -5348,7 +5331,7 @@
       "label": "SEED_SUBJECTS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_subjects",
       "source_file": "src/data/initialSeed.ts",
@@ -5359,7 +5342,7 @@
       "label": "SEED_TOPIC_LINKS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_topic_links",
       "source_file": "src/data/initialSeed.ts",
@@ -5370,7 +5353,7 @@
       "label": "SEED_TOPICS",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seed_topics",
       "source_file": "src/data/initialSeed.ts",
@@ -5381,55 +5364,33 @@
       "label": "cycleEngine.test.ts",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "cycleengine.test.ts",
       "source_file": "src/__tests__/cycleEngine.test.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_tests_notebookdraftandlayout_test",
-      "label": "notebookDraftAndLayout.test.tsx",
+      "id": "src_tests_questionworkbenchandrouter_test",
+      "label": "questionWorkbenchAndRouter.test.tsx",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
-      "norm_label": "notebookdraftandlayout.test.tsx",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "norm_label": "questionworkbenchandrouter.test.tsx",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_tests_notebookdraftandlayout_test_savemock",
-      "label": "saveMock",
+      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
+      "label": "FORBIDDEN_JARGON",
       "_origin": "ast",
       "community": 15,
-      "community_name": "initialSeed.ts",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
-      "norm_label": "savemock",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
-      "label": "[topicA, topicB]",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "[topica, topicb]",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_tests_onboardingandexplainability_test",
-      "label": "onboardingAndExplainability.test.tsx",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "initialSeed.ts",
-      "file_type": "code",
-      "norm_label": "onboardingandexplainability.test.tsx",
-      "source_file": "src/__tests__/onboardingAndExplainability.test.tsx",
-      "source_location": "L1"
+      "norm_label": "forbidden_jargon",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L29"
     },
     {
       "id": "src_components_curriculummanagermodal",
@@ -5440,17 +5401,6 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodal.tsx",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_syllabusimport",
-      "label": "syllabusImport.ts",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "syllabusimport.ts",
-      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L1"
     },
     {
@@ -5485,6 +5435,28 @@
       "norm_label": "strategy_factors",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L43"
+    },
+    {
+      "id": "src_lib_cycleengine_subject_score_weights",
+      "label": "SUBJECT_SCORE_WEIGHTS",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "cycleEngine.ts",
+      "file_type": "code",
+      "norm_label": "subject_score_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_cycleengine_topic_heat_weights",
+      "label": "TOPIC_HEAT_WEIGHTS",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "cycleEngine.ts",
+      "file_type": "code",
+      "norm_label": "topic_heat_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L28"
     },
     {
       "id": "src_tests_dailyplannerandexplainability_test",
@@ -5778,28 +5750,6 @@
       "source_location": "L49"
     },
     {
-      "id": "src_lib_cycleengine_subject_score_weights",
-      "label": "SUBJECT_SCORE_WEIGHTS",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "subject_score_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_lib_cycleengine_topic_heat_weights",
-      "label": "TOPIC_HEAT_WEIGHTS",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "explainabilityEngine.ts",
-      "file_type": "code",
-      "norm_label": "topic_heat_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L28"
-    },
-    {
       "id": "src_lib_explainabilityengine",
       "label": "explainabilityEngine.ts",
       "_origin": "ast",
@@ -5808,6 +5758,17 @@
       "file_type": "code",
       "norm_label": "explainabilityengine.ts",
       "source_file": "src/lib/explainabilityEngine.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_onboardingandexplainability_test",
+      "label": "onboardingAndExplainability.test.tsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "onboardingandexplainability.test.tsx",
+      "source_file": "src/__tests__/onboardingAndExplainability.test.tsx",
       "source_location": "L1"
     },
     {
@@ -6047,6 +6008,39 @@
       "source_location": "L22"
     },
     {
+      "id": "src_lib_storage_legacy_localstorage_key",
+      "label": "LEGACY_LOCALSTORAGE_KEY",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "legacy_localstorage_key",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_tests_database_test",
+      "label": "database.test.ts",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "database.test.ts",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_database_test_sqljsconfig",
+      "label": "sqlJsConfig",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "sqljsconfig",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L9"
+    },
+    {
       "id": "src_tests_migrations_test",
       "label": "migrations.test.ts",
       "_origin": "ast",
@@ -6058,70 +6052,37 @@
       "source_location": "L1"
     },
     {
-      "id": "src_lib_savestatus",
-      "label": "saveStatus.ts",
+      "id": "src_features_notebook_dock_notebookdockpanel",
+      "label": "NotebookDockPanel.tsx",
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "savestatus.ts",
-      "source_file": "src/lib/saveStatus.ts",
+      "norm_label": "notebookdockpanel.tsx",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_savestatus_initial_status",
-      "label": "INITIAL_STATUS",
+      "id": "src_features_notebook_dock_usenotebookdraft",
+      "label": "useNotebookDraft.ts",
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "initial_status",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_lib_savestatus_listeners",
-      "label": "listeners",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "listeners",
-      "source_file": "src/lib/saveStatus.ts",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_lib_storage_legacy_localstorage_key",
-      "label": "LEGACY_LOCALSTORAGE_KEY",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "legacy_localstorage_key",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_tests_database_test",
-      "label": "database.test.ts",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "saveStatus.ts",
-      "file_type": "code",
-      "norm_label": "database.test.ts",
-      "source_file": "src/__tests__/database.test.ts",
+      "norm_label": "usenotebookdraft.ts",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_tests_database_test_sqljsconfig",
-      "label": "sqlJsConfig",
+      "id": "src_features_syllabus_dock_syllabustreedock",
+      "label": "SyllabusTreeDock.tsx",
       "_origin": "ast",
       "community": 22,
-      "community_name": "saveStatus.ts",
+      "community_name": "Topic",
       "file_type": "code",
-      "norm_label": "sqljsconfig",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L9"
+      "norm_label": "syllabustreedock.tsx",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L1"
     },
     {
       "id": "docs_specs_01_database_schema",
@@ -6546,7 +6507,7 @@
       "label": "03-admin-tracks-and-crawler.md",
       "_origin": "ast",
       "community": 26,
-      "community_name": "README.md",
+      "community_name": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "03-admin-tracks-and-crawler.md",
@@ -6558,7 +6519,7 @@
       "label": "1. Cat\u00e1logo de Trilhas de Estudos Prontas",
       "_origin": "ast",
       "community": 26,
-      "community_name": "README.md",
+      "community_name": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. catalogo de trilhas de estudos prontas",
@@ -6570,7 +6531,7 @@
       "label": "2. Matriz de Complexidade e Cataloga\u00e7\u00e3o Cross-Trilhas das Quest\u00f5es",
       "_origin": "ast",
       "community": 26,
-      "community_name": "README.md",
+      "community_name": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. matriz de complexidade e catalogacao cross-trilhas das questoes",
@@ -6582,7 +6543,7 @@
       "label": "3. Verificador de Blueprint das Bancas (DOM Drift Detection)",
       "_origin": "ast",
       "community": 26,
-      "community_name": "README.md",
+      "community_name": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. verificador de blueprint das bancas (dom drift detection)",
@@ -6594,47 +6555,11 @@
       "label": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "_origin": "ast",
       "community": 26,
-      "community_name": "README.md",
+      "community_name": "\ud83d\udee0\ufe0f Modo Administrador (\"A F\u00e1brica\"): Trilhas, Complexidade de Quest\u00f5es e Crawler",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udee0\ufe0f modo administrador (\"a fabrica\"): trilhas, complexidade de questoes e crawler",
       "source_file": "docs/specs/03-admin-tracks-and-crawler.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_specs_05_onboarding_wizard_and_daily_focus",
-      "label": "05-onboarding-wizard-and-daily-focus.md",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "05-onboarding-wizard-and-daily-focus.md",
-      "source_file": "docs/specs/05-onboarding-wizard-and-daily-focus.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_specs_06_importacao_e_persistencia",
-      "label": "06-importacao-e-persistencia.md",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "06-importacao-e-persistencia.md",
-      "source_file": "docs/specs/06-importacao-e-persistencia.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme",
-      "label": "README.md",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "README.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "readme.md",
-      "source_file": "README.md",
       "source_location": "L1"
     },
     {
@@ -7326,6 +7251,18 @@
       "source_location": "L19"
     },
     {
+      "id": "docs_specs_05_onboarding_wizard_and_daily_focus",
+      "label": "05-onboarding-wizard-and-daily-focus.md",
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "\ud83e\udded Spec 05 \u2014 Onboarding Wizard, Vis\u00e3o \"Meu Dia de Hoje\" & Explicabilidade sob Demanda",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05-onboarding-wizard-and-daily-focus.md",
+      "source_file": "docs/specs/05-onboarding-wizard-and-daily-focus.md",
+      "source_location": "L1"
+    },
+    {
       "id": "docs_specs_05_onboarding_wizard_and_daily_focus_1_o_problema_a_vis\u00e3o_humana",
       "label": "\ud83c\udfaf 1. O Problema & A Vis\u00e3o Humana",
       "_origin": "ast",
@@ -7434,18 +7371,6 @@
       "source_location": "L1"
     },
     {
-      "id": "claude",
-      "label": "CLAUDE.md",
-      "_origin": "ast",
-      "community": 31,
-      "community_name": "FofoLab \u2014 guia para o Claude Code",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "claude.md",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1"
-    },
-    {
       "id": "claude_antes_de_mexer",
       "label": "Antes de mexer",
       "_origin": "ast",
@@ -7467,7 +7392,7 @@
       "node_kind": "heading",
       "norm_label": "comandos",
       "source_file": "CLAUDE.md",
-      "source_location": "L19"
+      "source_location": "L33"
     },
     {
       "id": "claude_fofolab_guia_para_o_claude_code",
@@ -7491,19 +7416,43 @@
       "node_kind": "heading",
       "norm_label": "mapa rapido do codigo",
       "source_file": "CLAUDE.md",
-      "source_location": "L26"
+      "source_location": "L40"
     },
     {
-      "id": "claude_regras_do_projeto",
-      "label": "Regras do projeto",
+      "id": "claude_outras_regras",
+      "label": "Outras regras",
       "_origin": "ast",
       "community": 31,
       "community_name": "FofoLab \u2014 guia para o Claude Code",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "regras do projeto",
+      "norm_label": "outras regras",
+      "source_file": "CLAUDE.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "claude_regras_do_projeto_carregadas_sempre_fonte_\u00fanica_em_agents_rules_tamb\u00e9m_usada_pelo_antigravity",
+      "label": "Regras do projeto (carregadas sempre \u2014 fonte \u00fanica em `.agents/rules/`, tamb\u00e9m usada pelo Antigravity)",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "FofoLab \u2014 guia para o Claude Code",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regras do projeto (carregadas sempre \u2014 fonte unica em `.agents/rules/`, tambem usada pelo antigravity)",
       "source_file": "CLAUDE.md",
       "source_location": "L11"
+    },
+    {
+      "id": "claude_skills_do_projeto_agents_skills_leia_o_skill_md_antes_de_come\u00e7ar_o_trabalho_correspondente",
+      "label": "Skills do projeto (`.agents/skills/`) \u2014 leia o SKILL.md ANTES de come\u00e7ar o trabalho correspondente",
+      "_origin": "ast",
+      "community": 31,
+      "community_name": "FofoLab \u2014 guia para o Claude Code",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "skills do projeto (`.agents/skills/`) \u2014 leia o skill.md antes de comecar o trabalho correspondente",
+      "source_file": "CLAUDE.md",
+      "source_location": "L16"
     },
     {
       "id": "e2e_bancada_spec",
@@ -7528,36 +7477,47 @@
       "source_location": "L194"
     },
     {
-      "id": "src_components_backuppanel",
-      "label": "BackupPanel.tsx",
+      "id": "src_features_question_import_questionimportmodal",
+      "label": "QuestionImportModal.tsx",
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "backuppanel.tsx",
-      "source_file": "src/components/BackupPanel.tsx",
+      "norm_label": "questionimportmodal.tsx",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_components_backuppanel_labels",
-      "label": "LABELS",
+      "id": "src_features_question_import_questionimportmodal_import_text_example",
+      "label": "IMPORT_TEXT_EXAMPLE",
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "labels",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L15"
+      "norm_label": "import_text_example",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L20"
     },
     {
-      "id": "src_components_savestatusindicator",
-      "label": "SaveStatusIndicator.tsx",
+      "id": "src_lib_syllabusimport",
+      "label": "syllabusImport.ts",
       "_origin": "ast",
       "community": 33,
-      "community_name": "BackupPanel.tsx",
+      "community_name": "QuestionImportModal.tsx",
       "file_type": "code",
-      "norm_label": "savestatusindicator.tsx",
-      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "norm_label": "syllabusimport.ts",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_importers_test",
+      "label": "importers.test.ts",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "QuestionImportModal.tsx",
+      "file_type": "code",
+      "norm_label": "importers.test.ts",
+      "source_file": "src/__tests__/importers.test.ts",
       "source_location": "L1"
     },
     {
@@ -7690,39 +7650,6 @@
       "source_file": "pdfjs-dist/build/pdf.worker.min.mjs?url"
     },
     {
-      "id": "src_features_notebook_dock_notebookdockpanel",
-      "label": "NotebookDockPanel.tsx",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel.tsx",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft",
-      "label": "useNotebookDraft.ts",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "usenotebookdraft.ts",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
-      "label": "NOTEBOOK_AUTOSAVE_MS",
-      "_origin": "ast",
-      "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "file_type": "code",
-      "norm_label": "notebook_autosave_ms",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L6"
-    },
-    {
       "id": "src_features_pdf_reader_pdfdocument",
       "label": "pdfDocument.ts",
       "_origin": "ast",
@@ -7775,7 +7702,18 @@
       "file_type": "code",
       "norm_label": "zoom_steps",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L30"
+      "source_location": "L18"
+    },
+    {
+      "id": "src_features_pdf_reader_pdfreadertoolbar",
+      "label": "PdfReaderToolbar.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "pdfreadertoolbar.tsx",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L1"
     },
     {
       "id": "src_features_pdf_reader_readprogress",
@@ -7972,6 +7910,83 @@
       "source_location": "L9"
     },
     {
+      "id": "plugin_fs",
+      "label": "@tauri-apps/plugin-fs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "confidence": "EXTRACTED",
+      "file_type": "code",
+      "norm_label": "@tauri-apps/plugin-fs",
+      "source_file": "@tauri-apps/plugin-fs"
+    },
+    {
+      "id": "src_components_backuppanel",
+      "label": "BackupPanel.tsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "backuppanel.tsx",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_backuppanel_labels",
+      "label": "LABELS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "labels",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_components_savestatusindicator",
+      "label": "SaveStatusIndicator.tsx",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatusindicator.tsx",
+      "source_file": "src/components/SaveStatusIndicator.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_savestatus",
+      "label": "saveStatus.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatus.ts",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_savestatus_initial_status",
+      "label": "INITIAL_STATUS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "initial_status",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_lib_savestatus_listeners",
+      "label": "listeners",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "listeners",
+      "source_file": "src/lib/saveStatus.ts",
+      "source_location": "L27"
+    },
+    {
       "id": "src_lib_storage",
       "label": "storage.ts",
       "_origin": "ast",
@@ -8005,11 +8020,23 @@
       "source_location": "L1"
     },
     {
+      "id": "claude",
+      "label": "CLAUDE.md",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "claude.md",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1"
+    },
+    {
       "id": "docs_specs_02_ai_router_and_metrics",
       "label": "02-ai-router-and-metrics.md",
       "_origin": "ast",
       "community": 40,
-      "community_name": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "02-ai-router-and-metrics.md",
@@ -8021,7 +8048,7 @@
       "label": "1. Roteador de IA Transparente (Zero Config + Grounding Anti-Alucina\u00e7\u00e3o)",
       "_origin": "ast",
       "community": 40,
-      "community_name": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. roteador de ia transparente (zero config + grounding anti-alucinacao)",
@@ -8033,7 +8060,7 @@
       "label": "2. Pol\u00edtica de PDFs Locais (Estrat\u00e9gia / Gran Cursos \u2014 Direitos Autorais)",
       "_origin": "ast",
       "community": 40,
-      "community_name": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. politica de pdfs locais (estrategia / gran cursos \u2014 direitos autorais)",
@@ -8045,7 +8072,7 @@
       "label": "3. Estudo Reverso & Motor de Pontua\u00e7\u00e3o estilo Elasticsearch (`Relevance Score`)",
       "_origin": "ast",
       "community": 40,
-      "community_name": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. estudo reverso & motor de pontuacao estilo elasticsearch (`relevance score`)",
@@ -8057,11 +8084,35 @@
       "label": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
       "_origin": "ast",
       "community": 40,
-      "community_name": "\ud83e\udd16 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucina\u00e7\u00e3o",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83e\udd16 roteador ia, estudo reverso, score estilo elasticsearch & anti-alucinacao",
       "source_file": "docs/specs/02-ai-router-and-metrics.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_specs_06_importacao_e_persistencia",
+      "label": "06-importacao-e-persistencia.md",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "06-importacao-e-persistencia.md",
+      "source_file": "docs/specs/06-importacao-e-persistencia.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
       "source_location": "L1"
     },
     {
@@ -8577,6 +8628,61 @@
       "version": "0.1.0"
     },
     {
+      "id": "src_components_resizehandle",
+      "label": "ResizeHandle.tsx",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "notebookDraftAndLayout.test.tsx",
+      "file_type": "code",
+      "norm_label": "resizehandle.tsx",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
+      "label": "NOTEBOOK_AUTOSAVE_MS",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "notebookDraftAndLayout.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebook_autosave_ms",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test",
+      "label": "notebookDraftAndLayout.test.tsx",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "notebookDraftAndLayout.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdraftandlayout.test.tsx",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_savemock",
+      "label": "saveMock",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "notebookDraftAndLayout.test.tsx",
+      "file_type": "code",
+      "norm_label": "savemock",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
+      "label": "[topicA, topicB]",
+      "_origin": "ast",
+      "community": 54,
+      "community_name": "notebookDraftAndLayout.test.tsx",
+      "file_type": "code",
+      "norm_label": "[topica, topicb]",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L33"
+    },
+    {
       "id": "src_features_admin_factory_adminfactoryview",
       "label": "AdminFactoryView.tsx",
       "_origin": "ast",
@@ -8597,6 +8703,17 @@
       "file_type": "code",
       "norm_label": "pdfjs-dist",
       "source_file": "pdfjs-dist"
+    },
+    {
+      "id": "tailwindcss_tailwindcss",
+      "label": "tailwindcss",
+      "_origin": "ast",
+      "community": 57,
+      "community_name": "tailwindcss",
+      "confidence": "EXTRACTED",
+      "file_type": "code",
+      "norm_label": "tailwindcss",
+      "source_file": "tailwindcss"
     },
     {
       "id": "src_tauri_tauri_conf",
@@ -8896,28 +9013,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_features_question_import_questionimportmodal",
-      "label": "QuestionImportModal.tsx",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "questionImport.ts",
-      "file_type": "code",
-      "norm_label": "questionimportmodal.tsx",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_import_text_example",
-      "label": "IMPORT_TEXT_EXAMPLE",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "questionImport.ts",
-      "file_type": "code",
-      "norm_label": "import_text_example",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L20"
-    },
-    {
       "id": "src_lib_questionimport",
       "label": "questionImport.ts",
       "_origin": "ast",
@@ -8940,15 +9035,26 @@
       "source_location": "L41"
     },
     {
-      "id": "src_tests_importers_test",
-      "label": "importers.test.ts",
+      "id": "src_lib_questionoptions",
+      "label": "questionOptions.ts",
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "importers.test.ts",
-      "source_file": "src/__tests__/importers.test.ts",
+      "norm_label": "questionoptions.ts",
+      "source_file": "src/lib/questionOptions.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_lib_questionoptions_index_letters",
+      "label": "INDEX_LETTERS",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "index_letters",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L12"
     }
   ],
   "links": [
@@ -9914,18 +10020,6 @@
     },
     {
       "source": "src_features_pdf_reader_pdfreaderstage_pdfreaderstage",
-      "target": "src_features_pdf_reader_readprogress_parsereadpages",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L116",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_pdf_reader_pdfreaderstage_pdfreaderstage",
       "target": "src_features_pdf_reader_readprogress_usepagereadtimer",
       "relation": "calls",
       "_origin": "ast",
@@ -9933,7 +10027,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L167",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -9945,7 +10039,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L171",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage_pdfreaderstage",
+      "target": "src_features_pdf_reader_pdfreaderstage_emptystatemessage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage_pdfreaderstage",
+      "target": "src_features_pdf_reader_readprogress_parsereadpages",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_toggleclass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -13610,6 +13740,18 @@
     },
     {
       "source": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
+      "target": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
       "target": "src_types_database_pdfsource",
       "relation": "references",
       "_origin": "ast",
@@ -13822,6 +13964,18 @@
       "context": "field",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_initdatabaseoptions",
+      "target": "src_lib_storage_databasestorage",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -14260,7 +14414,7 @@
     },
     {
       "source": "package_devdependencies_tailwindcss",
-      "target": "tailwindcss",
+      "target": "package_json_tailwindcss",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16355,7 +16509,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L16",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -16367,7 +16521,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L16",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -16379,7 +16533,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L17",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -16391,7 +16545,31 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L17",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_pdffilepicker",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_pdfreadertoolbar",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -16403,7 +16581,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L18",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -16415,7 +16593,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L18",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -16427,7 +16605,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L18",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -16439,7 +16617,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L18",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_readprogress_seconds_to_count_page_as_read",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -19480,7 +19670,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L16",
+      "source_location": "L3",
       "type_only": true,
       "weight": 1.0
     },
@@ -19493,7 +19683,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L17",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage",
+      "target": "src_features_pdf_reader_pdfreadertoolbar",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -19505,7 +19707,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L18",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_readprogress",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -21032,7 +21246,7 @@
     },
     {
       "source": "claude_fofolab_guia_para_o_claude_code",
-      "target": "claude_regras_do_projeto",
+      "target": "claude_regras_do_projeto_carregadas_sempre_fonte_\u00fanica_em_agents_rules_tamb\u00e9m_usada_pelo_antigravity",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21043,13 +21257,35 @@
     },
     {
       "source": "claude_fofolab_guia_para_o_claude_code",
+      "target": "claude_skills_do_projeto_agents_skills_leia_o_skill_md_antes_de_come\u00e7ar_o_trabalho_correspondente",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_fofolab_guia_para_o_claude_code",
+      "target": "claude_outras_regras",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_fofolab_guia_para_o_claude_code",
       "target": "claude_comandos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CLAUDE.md",
-      "source_location": "L19",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -21060,7 +21296,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CLAUDE.md",
-      "source_location": "L26",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -23331,46 +23567,24 @@
     },
     {
       "source": "src_features_pdf_reader_pdfreaderstage",
-      "target": "src_features_pdf_reader_pdfreaderstage_pdfprogressupdate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_pdf_reader_pdfreaderstage",
       "target": "src_features_pdf_reader_pdfreaderstage_zoom_steps",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L30",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
       "source": "src_features_pdf_reader_pdfreaderstage",
-      "target": "src_features_pdf_reader_pdfreaderstage_pdffilepicker",
+      "target": "src_features_pdf_reader_pdfreaderstage_emptystatemessage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L38",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_pdf_reader_pdfreaderstage",
-      "target": "src_features_pdf_reader_pdfreaderstage_readprogressbar",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L62",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -23381,7 +23595,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
-      "source_location": "L87",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreaderstage",
+      "target": "src_features_pdf_reader_pdfreaderstage_pdfprogressupdate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_pdffilepicker",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_readprogressbar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_toggleclass",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_pdfpagenavigation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_pdf_reader_pdfreadertoolbar",
+      "target": "src_features_pdf_reader_pdfreadertoolbar_pdfreadertoolbar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -27143,6 +27423,15 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/pdf-reader/pdfDocument.ts"
+    },
+    {
+      "source": "src_lib_storage",
+      "target": "plugin_fs",
+      "relation": "dynamic_import",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/storage.ts"
     },
     {
       "source": "src_tests_database_test",

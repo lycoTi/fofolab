@@ -108,19 +108,6 @@
       "source_location": "L354"
     },
     {
-      "id": "src_lib_airouter_questioncomplexityprofile",
-      "label": "QuestionComplexityProfile",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "questioncomplexityprofile",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L30"
-    },
-    {
       "id": "src_lib_airouter_realprovider",
       "label": "RealProvider",
       "_callable": true,
@@ -171,19 +158,6 @@
       "norm_label": "aidissection",
       "source_file": "src/types/database.ts",
       "source_location": "L124"
-    },
-    {
-      "id": "src_types_database_aiproviderused",
-      "label": "AiProviderUsed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "aiproviderused",
-      "source_file": "src/types/database.ts",
-      "source_location": "L11"
     },
     {
       "id": "src_types_database_question",
@@ -283,7 +257,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "cycledashboardprops",
       "source_file": "src/components/CycleDashboard.tsx",
@@ -296,11 +270,37 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusviewprops",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L9"
+    },
+    {
+      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
+      "label": "QuestionImportModalProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "questionimportmodalprops",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
+      "label": "SyllabusTreeDockProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedockprops",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_lib_cycleengine_cyclecalculationresult",
@@ -309,11 +309,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "cyclecalculationresult",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L116"
+    },
+    {
+      "id": "src_lib_cycleengine_subjectcycleallocation",
+      "label": "SubjectCycleAllocation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subjectcycleallocation",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L92"
     },
     {
       "id": "src_lib_dailyplanner_costbenefitbadge",
@@ -322,11 +335,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "costbenefitbadge",
       "source_file": "src/lib/dailyPlanner.ts",
       "source_location": "L9"
+    },
+    {
+      "id": "src_lib_dailyplanner_dailyfocusblock",
+      "label": "DailyFocusBlock",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "dailyfocusblock",
+      "source_file": "src/lib/dailyPlanner.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_lib_dailyplanner_dailyplan",
@@ -335,7 +361,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyplan",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -348,11 +374,50 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "studyplan",
       "source_file": "src/types/database.ts",
       "source_location": "L30"
+    },
+    {
+      "id": "src_types_database_subject",
+      "label": "Subject",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "subject",
+      "source_file": "src/types/database.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_types_database_topic",
+      "label": "Topic",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "topic",
+      "source_file": "src/types/database.ts",
+      "source_location": "L61"
+    },
+    {
+      "id": "src_components_backuppanel_backuppanelprops",
+      "label": "BackupPanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "backuppanelprops",
+      "source_file": "src/components/BackupPanel.tsx",
+      "source_location": "L6"
     },
     {
       "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
@@ -379,6 +444,32 @@
       "norm_label": "curriculumsection",
       "source_file": "src/components/CurriculumManagerModal.tsx",
       "source_location": "L30"
+    },
+    {
+      "id": "src_lib_storage_backupentry",
+      "label": "BackupEntry",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "backupentry",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_types_database_aiproviderused",
+      "label": "AiProviderUsed",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "aiproviderused",
+      "source_file": "src/types/database.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_types_database_blueprinthealthstatus",
@@ -472,19 +563,6 @@
       "source_location": "L230"
     },
     {
-      "id": "src_types_database_questionattempt",
-      "label": "QuestionAttempt",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "questionattempt",
-      "source_file": "src/types/database.ts",
-      "source_location": "L135"
-    },
-    {
       "id": "src_types_database_studysessiontype",
       "label": "StudySessionType",
       "_callable": true,
@@ -509,19 +587,6 @@
       "norm_label": "subjectcategory",
       "source_file": "src/types/database.ts",
       "source_location": "L7"
-    },
-    {
-      "id": "src_types_database_topiclink",
-      "label": "TopicLink",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "topiclink",
-      "source_file": "src/types/database.ts",
-      "source_location": "L73"
     },
     {
       "id": "src_types_database_topicrelationtype",
@@ -615,6 +680,19 @@
       "source_location": "L55"
     },
     {
+      "id": "src_types_database_questionattempt",
+      "label": "QuestionAttempt",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "cycleEngine.ts",
+      "file_type": "code",
+      "norm_label": "questionattempt",
+      "source_file": "src/types/database.ts",
+      "source_location": "L135"
+    },
+    {
       "id": "src_types_database_studysession",
       "label": "StudySession",
       "_callable": true,
@@ -641,6 +719,19 @@
       "source_location": "L5"
     },
     {
+      "id": "src_lib_airouter_questioncomplexityprofile",
+      "label": "QuestionComplexityProfile",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "questioncomplexityprofile",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L30"
+    },
+    {
       "id": "src_lib_cycleengine_cyclesuggestion",
       "label": "CycleSuggestion",
       "_callable": true,
@@ -652,6 +743,19 @@
       "norm_label": "cyclesuggestion",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L108"
+    },
+    {
+      "id": "src_lib_cycleengine_topicheatitem",
+      "label": "TopicHeatItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "topicheatitem",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L63"
     },
     {
       "id": "src_lib_explainabilityengine_metricexplanation",
@@ -706,201 +810,6 @@
       "source_location": "L70"
     },
     {
-      "id": "src_tests_database_test_databasemodule",
-      "label": "DatabaseModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "databasemodule",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_tests_database_test_savestatusmodule",
-      "label": "SaveStatusModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "savestatusmodule",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
-      "label": "NotebookDockPanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanelprops",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
-      "label": "DraftOwner",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "draftowner",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
-      "label": "NotebookDraftStatus",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdraftstatus",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedockprops",
-      "label": "SyllabusTreeDockProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedockprops",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_lib_cycleengine_subjectcycleallocation",
-      "label": "SubjectCycleAllocation",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subjectcycleallocation",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_lib_cycleengine_topicheatitem",
-      "label": "TopicHeatItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "topicheatitem",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L63"
-    },
-    {
-      "id": "src_lib_dailyplanner_dailyfocusblock",
-      "label": "DailyFocusBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "dailyfocusblock",
-      "source_file": "src/lib/dailyPlanner.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_types_database_notebook",
-      "label": "Notebook",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebook",
-      "source_file": "src/types/database.ts",
-      "source_location": "L82"
-    },
-    {
-      "id": "src_types_database_pdfsource",
-      "label": "PdfSource",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "pdfsource",
-      "source_file": "src/types/database.ts",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_types_database_subject",
-      "label": "Subject",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "subject",
-      "source_file": "src/types/database.ts",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_types_database_topic",
-      "label": "Topic",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "topic",
-      "source_file": "src/types/database.ts",
-      "source_location": "L61"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodalprops",
-      "label": "QuestionImportModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodalprops",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_types_database_importquestionitem",
-      "label": "ImportQuestionItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "importquestionitem",
-      "source_file": "src/types/database.ts",
-      "source_location": "L219"
-    },
-    {
       "id": "src_components_pomodorowidget_pomodorosessionresult",
       "label": "PomodoroSessionResult",
       "_callable": true,
@@ -953,13 +862,65 @@
       "source_location": "L22"
     },
     {
+      "id": "src_components_resizehandle_resizehandleprops",
+      "label": "ResizeHandleProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "resizehandleprops",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
+      "label": "NotebookDockPanelProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdockpanelprops",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_draftowner",
+      "label": "DraftOwner",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "draftowner",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebookdraftstatus",
+      "label": "NotebookDraftStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdraftstatus",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L8"
+    },
+    {
       "id": "src_features_pdf_reader_pdfdocument_pagesize",
       "label": "PageSize",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pagesize",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -972,7 +933,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pagejumprequest",
       "source_file": "src/features/pdf-reader/PdfDocumentViewer.tsx",
@@ -985,7 +946,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfprogressupdate",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
@@ -998,11 +959,50 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfpagenavigation",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
       "source_location": "L77"
+    },
+    {
+      "id": "src_types_database_notebook",
+      "label": "Notebook",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebook",
+      "source_file": "src/types/database.ts",
+      "source_location": "L82"
+    },
+    {
+      "id": "src_types_database_pdfsource",
+      "label": "PdfSource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "pdfsource",
+      "source_file": "src/types/database.ts",
+      "source_location": "L93"
+    },
+    {
+      "id": "src_types_database_topiclink",
+      "label": "TopicLink",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "topiclink",
+      "source_file": "src/types/database.ts",
+      "source_location": "L73"
     },
     {
       "id": "src_features_onboarding_wizard_onboardingwizardmodal_onboardingprofile",
@@ -1057,19 +1057,6 @@
       "source_location": "L13"
     },
     {
-      "id": "src_components_backuppanel_backuppanelprops",
-      "label": "BackupPanelProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "storage.ts",
-      "file_type": "code",
-      "norm_label": "backuppanelprops",
-      "source_file": "src/components/BackupPanel.tsx",
-      "source_location": "L6"
-    },
-    {
       "id": "src_components_savestatusindicator_savestatusindicatorprops",
       "label": "SaveStatusIndicatorProps",
       "_callable": true,
@@ -1122,19 +1109,6 @@
       "source_location": "L9"
     },
     {
-      "id": "src_lib_storage_backupentry",
-      "label": "BackupEntry",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "storage.ts",
-      "file_type": "code",
-      "norm_label": "backupentry",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L13"
-    },
-    {
       "id": "src_lib_storage_databasestorage",
       "label": "DatabaseStorage",
       "_callable": true,
@@ -1172,6 +1146,32 @@
       "norm_label": "storagekind",
       "source_file": "src/lib/storage.ts",
       "source_location": "L11"
+    },
+    {
+      "id": "src_tests_database_test_databasemodule",
+      "label": "DatabaseModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "databasemodule",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_tests_database_test_savestatusmodule",
+      "label": "SaveStatusModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "savestatusmodule",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L13"
     },
     {
       "id": "src_app_appmode",
@@ -1263,19 +1263,6 @@
       "norm_label": "invalidbackuperror",
       "source_file": "src/lib/database.ts",
       "source_location": "L96"
-    },
-    {
-      "id": "src_components_resizehandle_resizehandleprops",
-      "label": "ResizeHandleProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "resizehandleprops",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L33"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryviewprops",
@@ -1380,6 +1367,19 @@
       "norm_label": "questionoption",
       "source_file": "src/lib/questionOptions.ts",
       "source_location": "L6"
+    },
+    {
+      "id": "src_types_database_importquestionitem",
+      "label": "ImportQuestionItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "importquestionitem",
+      "source_file": "src/types/database.ts",
+      "source_location": "L219"
     },
     {
       "id": "src_components_questionworkbench_describediagnosishint",
@@ -1488,6 +1488,18 @@
       "norm_label": "builddemocopilotreply()",
       "source_file": "src/lib/aiRouter.ts",
       "source_location": "L464"
+    },
+    {
+      "id": "src_lib_airouter_builddemotutorreply",
+      "label": "buildDemoTutorReply()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "builddemotutorreply()",
+      "source_file": "src/lib/aiRouter.ts",
+      "source_location": "L397"
     },
     {
       "id": "src_lib_airouter_builddissectionprompt",
@@ -1778,6 +1790,18 @@
       "source_location": "L219"
     },
     {
+      "id": "src_lib_questionoptions_findcorrectoption",
+      "label": "findCorrectOption()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "aiRouter.ts",
+      "file_type": "code",
+      "norm_label": "findcorrectoption()",
+      "source_file": "src/lib/questionOptions.ts",
+      "source_location": "L64"
+    },
+    {
       "id": "src_tests_airouter_test_geminiresponse",
       "label": "geminiResponse()",
       "_callable": true,
@@ -1879,7 +1903,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusview()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -1891,11 +1915,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "formatdailybudget()",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L25"
+    },
+    {
+      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
+      "label": "SyllabusTreeDock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedock()",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L21"
     },
     {
       "id": "src_lib_dailyplanner_describereason",
@@ -1903,7 +1939,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "describereason()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1915,7 +1951,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "pickbadge()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1927,7 +1963,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "plandailyblocks()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1939,7 +1975,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "roundto5()",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -1970,16 +2006,52 @@
       "source_location": "L837"
     },
     {
-      "id": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
-      "label": "getSampleSubtopicsForCalibration()",
+      "id": "src_lib_syllabusimport_cleantitle",
+      "label": "cleanTitle()",
       "_callable": true,
       "_origin": "ast",
       "community": 16,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "getsamplesubtopicsforcalibration()",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L198"
+      "norm_label": "cleantitle()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_lib_syllabusimport_lookslikeheader",
+      "label": "looksLikeHeader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "lookslikeheader()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_lib_syllabusimport_parsesyllabustopics",
+      "label": "parseSyllabusTopics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "parsesyllabustopics()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_syllabusimport_splitnumberedsegments",
+      "label": "splitNumberedSegments()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "splitnumberedsegments()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L20"
     },
     {
       "id": "src_lib_cycleengine_calculatedynamicstudycycle",
@@ -2054,6 +2126,18 @@
       "source_location": "L274"
     },
     {
+      "id": "src_lib_cycleengine_getsamplesubtopicsforcalibration",
+      "label": "getSampleSubtopicsForCalibration()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "cycleEngine.ts",
+      "file_type": "code",
+      "norm_label": "getsamplesubtopicsforcalibration()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L198"
+    },
+    {
       "id": "src_lib_cycleengine_pickdominantreason",
       "label": "pickDominantReason()",
       "_callable": true,
@@ -2064,18 +2148,6 @@
       "norm_label": "pickdominantreason()",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L281"
-    },
-    {
-      "id": "src_lib_cycleengine_samplesaturationk",
-      "label": "sampleSaturationK()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "cycleEngine.ts",
-      "file_type": "code",
-      "norm_label": "samplesaturationk()",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L154"
     },
     {
       "id": "src_lib_cycleengine_startofweek",
@@ -2162,6 +2234,18 @@
       "source_location": "L13"
     },
     {
+      "id": "src_lib_cycleengine_samplesaturationk",
+      "label": "sampleSaturationK()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "samplesaturationk()",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L154"
+    },
+    {
       "id": "src_lib_explainabilityengine_describestrategy",
       "label": "describeStrategy()",
       "_callable": true,
@@ -2220,6 +2304,18 @@
       "norm_label": "formatdecimal()",
       "source_file": "src/lib/explainabilityEngine.ts",
       "source_location": "L28"
+    },
+    {
+      "id": "src_lib_database_openstoreddatabase",
+      "label": "openStoredDatabase()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "migrations.ts",
+      "file_type": "code",
+      "norm_label": "openstoreddatabase()",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L422"
     },
     {
       "id": "src_lib_migrations_detectschemaversion",
@@ -2306,30 +2402,6 @@
       "source_location": "L63"
     },
     {
-      "id": "src_tests_database_test_bytesofv1database",
-      "label": "bytesOfV1Database()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "bytesofv1database()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_tests_database_test_scalar",
-      "label": "scalar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "scalar()",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L28"
-    },
-    {
       "id": "src_tests_migrations_test_describestructure",
       "label": "describeStructure()",
       "_callable": true,
@@ -2340,54 +2412,6 @@
       "norm_label": "describestructure()",
       "source_file": "src/__tests__/migrations.test.ts",
       "source_location": "L17"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
-      "label": "DraftStatusBadge()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "draftstatusbadge()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
-      "label": "NotebookDockPanel()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel()",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
-      "label": "notebookTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebooktitle()",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock_syllabustreedock",
-      "label": "SyllabusTreeDock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock()",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
-      "source_location": "L21"
     },
     {
       "id": "e2e_bancada_spec_opencurriculum",
@@ -2462,90 +2486,6 @@
       "source_location": "L28"
     },
     {
-      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
-      "label": "QuestionImportModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodal()",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_lib_questionimport_toimportitems",
-      "label": "toImportItems()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "toimportitems()",
-      "source_file": "src/lib/questionImport.ts",
-      "source_location": "L378"
-    },
-    {
-      "id": "src_lib_syllabusimport_cleantitle",
-      "label": "cleanTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "cleantitle()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_lib_syllabusimport_lookslikeheader",
-      "label": "looksLikeHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "lookslikeheader()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_lib_syllabusimport_parenttopiccode",
-      "label": "parentTopicCode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "parenttopiccode()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L68"
-    },
-    {
-      "id": "src_lib_syllabusimport_parsesyllabustopics",
-      "label": "parseSyllabusTopics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "parsesyllabustopics()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_lib_syllabusimport_splitnumberedsegments",
-      "label": "splitNumberedSegments()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "splitnumberedsegments()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L20"
-    },
-    {
       "id": "src_components_pomodorowidget_pomodorowidget",
       "label": "PomodoroWidget()",
       "_callable": true,
@@ -2570,12 +2510,60 @@
       "source_location": "L7"
     },
     {
+      "id": "src_components_resizehandle_resizehandle",
+      "label": "ResizeHandle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "resizehandle()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
+      "label": "DraftStatusBadge()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "draftstatusbadge()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanel",
+      "label": "NotebookDockPanel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdockpanel()",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebooktitle",
+      "label": "notebookTitle()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebooktitle()",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L16"
+    },
+    {
       "id": "src_features_pdf_reader_pdfdocument_loadpdfdocument",
       "label": "loadPdfDocument()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "loadpdfdocument()",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -2587,7 +2575,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "loadpdfjs()",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -2599,7 +2587,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "readpagesizes()",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -2611,7 +2599,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "renderpdfpage()",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -2623,7 +2611,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfdocumentviewer()",
       "source_file": "src/features/pdf-reader/PdfDocumentViewer.tsx",
@@ -2635,7 +2623,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "emptystatemessage()",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
@@ -2647,7 +2635,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfreaderstage()",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
@@ -2659,7 +2647,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdffilepicker()",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
@@ -2671,7 +2659,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfreadertoolbar()",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
@@ -2683,7 +2671,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "readprogressbar()",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
@@ -2695,7 +2683,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "toggleclass()",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
@@ -2707,7 +2695,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "parsereadpages()",
       "source_file": "src/features/pdf-reader/readProgress.ts",
@@ -2719,7 +2707,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "usepagereadtimer()",
       "source_file": "src/features/pdf-reader/readProgress.ts",
@@ -2731,7 +2719,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "withpageread()",
       "source_file": "src/features/pdf-reader/readProgress.ts",
@@ -2743,7 +2731,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "src/__tests__/pdfReadProgress.test.ts",
@@ -3122,6 +3110,18 @@
       "source_location": "L148"
     },
     {
+      "id": "src_tests_database_test_bytesofv1database",
+      "label": "bytesOfV1Database()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "bytesofv1database()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L32"
+    },
+    {
       "id": "src_tests_database_test_opendatabase",
       "label": "openDatabase()",
       "_callable": true,
@@ -3132,6 +3132,18 @@
       "norm_label": "opendatabase()",
       "source_file": "src/__tests__/database.test.ts",
       "source_location": "L17"
+    },
+    {
+      "id": "src_tests_database_test_scalar",
+      "label": "scalar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "scalar()",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L28"
     },
     {
       "id": "src_tests_storage_test_uniquedbname",
@@ -3192,6 +3204,18 @@
       "norm_label": "useconfirmdialog()",
       "source_file": "src/components/ConfirmDialog.tsx",
       "source_location": "L16"
+    },
+    {
+      "id": "src_components_resizehandle_useresizablewidth",
+      "label": "useResizableWidth()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "lib/database.ts",
+      "file_type": "code",
+      "norm_label": "useresizablewidth()",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_features_notebook_dock_usenotebookdraft_usenotebookdraft",
@@ -3686,18 +3710,6 @@
       "source_location": "L157"
     },
     {
-      "id": "src_lib_database_openstoreddatabase",
-      "label": "openStoredDatabase()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "lib/database.ts",
-      "file_type": "code",
-      "norm_label": "openstoreddatabase()",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L422"
-    },
-    {
       "id": "src_lib_database_persistdatabase",
       "label": "persistDatabase()",
       "_callable": true,
@@ -4106,28 +4118,16 @@
       "source_location": "L82"
     },
     {
-      "id": "src_components_resizehandle_resizehandle",
-      "label": "ResizeHandle()",
+      "id": "src_lib_syllabusimport_parenttopiccode",
+      "label": "parentTopicCode()",
       "_callable": true,
       "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
+      "community": 5,
+      "community_name": "lib/database.ts",
       "file_type": "code",
-      "norm_label": "resizehandle()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_components_resizehandle_useresizablewidth",
-      "label": "useResizableWidth()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "useresizablewidth()",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L7"
+      "norm_label": "parenttopiccode()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L68"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryview",
@@ -4166,16 +4166,16 @@
       "source_location": "L18"
     },
     {
-      "id": "src_lib_airouter_builddemotutorreply",
-      "label": "buildDemoTutorReply()",
+      "id": "src_features_question_import_questionimportmodal_questionimportmodal",
+      "label": "QuestionImportModal()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "builddemotutorreply()",
-      "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L397"
+      "norm_label": "questionimportmodal()",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L33"
     },
     {
       "id": "src_lib_questionimport_canonicalboardname",
@@ -4334,16 +4334,16 @@
       "source_location": "L68"
     },
     {
-      "id": "src_lib_questionoptions_findcorrectoption",
-      "label": "findCorrectOption()",
+      "id": "src_lib_questionimport_toimportitems",
+      "label": "toImportItems()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "questionImport.ts",
       "file_type": "code",
-      "norm_label": "findcorrectoption()",
-      "source_file": "src/lib/questionOptions.ts",
-      "source_location": "L64"
+      "norm_label": "toimportitems()",
+      "source_file": "src/lib/questionImport.ts",
+      "source_location": "L378"
     },
     {
       "id": "src_lib_questionoptions_normalizeoption",
@@ -4402,17 +4402,6 @@
       "norm_label": "diagnosis_buttons",
       "source_file": "src/components/QuestionWorkbench.tsx",
       "source_location": "L55"
-    },
-    {
-      "id": "src_data_initialseed_seed_questions",
-      "label": "SEED_QUESTIONS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "aiRouter.ts",
-      "file_type": "code",
-      "norm_label": "seed_questions",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L378"
     },
     {
       "id": "src_features_ai_copilot_aicopilotdockpanel",
@@ -5210,7 +5199,7 @@
       "label": "DailyFocusView.tsx",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyfocusview.tsx",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
@@ -5221,18 +5210,29 @@
       "label": "BADGE_STYLES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "badge_styles",
       "source_file": "src/features/daily-focus/DailyFocusView.tsx",
       "source_location": "L19"
     },
     {
+      "id": "src_features_syllabus_dock_syllabustreedock",
+      "label": "SyllabusTreeDock.tsx",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Topic",
+      "file_type": "code",
+      "norm_label": "syllabustreedock.tsx",
+      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_dailyplanner",
       "label": "dailyPlanner.ts",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "dailyplanner.ts",
       "source_file": "src/lib/dailyPlanner.ts",
@@ -5243,153 +5243,10 @@
       "label": "MIN_BLOCK_MINUTES",
       "_origin": "ast",
       "community": 14,
-      "community_name": "DailyFocusView.tsx",
+      "community_name": "Topic",
       "file_type": "code",
       "norm_label": "min_block_minutes",
       "source_file": "src/lib/dailyPlanner.ts",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_data_initialseed",
-      "label": "initialSeed.ts",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "initialseed.ts",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_data_initialseed_seed_admin_blueprints",
-      "label": "SEED_ADMIN_BLUEPRINTS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_admin_blueprints",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L558"
-    },
-    {
-      "id": "src_data_initialseed_seed_ai_dissections",
-      "label": "SEED_AI_DISSECTIONS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_ai_dissections",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L501"
-    },
-    {
-      "id": "src_data_initialseed_seed_career_tracks",
-      "label": "SEED_CAREER_TRACKS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_career_tracks",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_data_initialseed_seed_notebooks",
-      "label": "SEED_NOTEBOOKS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_notebooks",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L327"
-    },
-    {
-      "id": "src_data_initialseed_seed_pdf_sources",
-      "label": "SEED_PDF_SOURCES",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_pdf_sources",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L339"
-    },
-    {
-      "id": "src_data_initialseed_seed_study_plans",
-      "label": "SEED_STUDY_PLANS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_study_plans",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_data_initialseed_seed_subjects",
-      "label": "SEED_SUBJECTS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_subjects",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L77"
-    },
-    {
-      "id": "src_data_initialseed_seed_topic_links",
-      "label": "SEED_TOPIC_LINKS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_topic_links",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L310"
-    },
-    {
-      "id": "src_data_initialseed_seed_topics",
-      "label": "SEED_TOPICS",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "seed_topics",
-      "source_file": "src/data/initialSeed.ts",
-      "source_location": "L174"
-    },
-    {
-      "id": "src_tests_cycleengine_test",
-      "label": "cycleEngine.test.ts",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "cycleengine.test.ts",
-      "source_file": "src/__tests__/cycleEngine.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test",
-      "label": "questionWorkbenchAndRouter.test.tsx",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "questionworkbenchandrouter.test.tsx",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
-      "label": "FORBIDDEN_JARGON",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "questionWorkbenchAndRouter.test.tsx",
-      "file_type": "code",
-      "norm_label": "forbidden_jargon",
-      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
       "source_location": "L29"
     },
     {
@@ -5401,6 +5258,17 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodal.tsx",
       "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_syllabusimport",
+      "label": "syllabusImport.ts",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "syllabusimport.ts",
+      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L1"
     },
     {
@@ -5437,26 +5305,15 @@
       "source_location": "L43"
     },
     {
-      "id": "src_lib_cycleengine_subject_score_weights",
-      "label": "SUBJECT_SCORE_WEIGHTS",
+      "id": "src_tests_cycleengine_test",
+      "label": "cycleEngine.test.ts",
       "_origin": "ast",
       "community": 17,
       "community_name": "cycleEngine.ts",
       "file_type": "code",
-      "norm_label": "subject_score_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_lib_cycleengine_topic_heat_weights",
-      "label": "TOPIC_HEAT_WEIGHTS",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "cycleEngine.ts",
-      "file_type": "code",
-      "norm_label": "topic_heat_weights",
-      "source_file": "src/lib/cycleEngine.ts",
-      "source_location": "L28"
+      "norm_label": "cycleengine.test.ts",
+      "source_file": "src/__tests__/cycleEngine.test.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_tests_dailyplannerandexplainability_test",
@@ -5739,6 +5596,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_data_initialseed_seed_topic_links",
+      "label": "SEED_TOPIC_LINKS",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "seed_topic_links",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L310"
+    },
+    {
       "id": "src_lib_cycleengine_strategy_labels",
       "label": "STRATEGY_LABELS",
       "_origin": "ast",
@@ -5748,6 +5616,28 @@
       "norm_label": "strategy_labels",
       "source_file": "src/lib/cycleEngine.ts",
       "source_location": "L49"
+    },
+    {
+      "id": "src_lib_cycleengine_subject_score_weights",
+      "label": "SUBJECT_SCORE_WEIGHTS",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "subject_score_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_cycleengine_topic_heat_weights",
+      "label": "TOPIC_HEAT_WEIGHTS",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "explainabilityEngine.ts",
+      "file_type": "code",
+      "norm_label": "topic_heat_weights",
+      "source_file": "src/lib/cycleEngine.ts",
+      "source_location": "L28"
     },
     {
       "id": "src_lib_explainabilityengine",
@@ -6008,39 +5898,6 @@
       "source_location": "L22"
     },
     {
-      "id": "src_lib_storage_legacy_localstorage_key",
-      "label": "LEGACY_LOCALSTORAGE_KEY",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "legacy_localstorage_key",
-      "source_file": "src/lib/storage.ts",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_tests_database_test",
-      "label": "database.test.ts",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "database.test.ts",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_database_test_sqljsconfig",
-      "label": "sqlJsConfig",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "migrations.ts",
-      "file_type": "code",
-      "norm_label": "sqljsconfig",
-      "source_file": "src/__tests__/database.test.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "src_tests_migrations_test",
       "label": "migrations.test.ts",
       "_origin": "ast",
@@ -6049,39 +5906,6 @@
       "file_type": "code",
       "norm_label": "migrations.test.ts",
       "source_file": "src/__tests__/migrations.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_notebookdockpanel",
-      "label": "NotebookDockPanel.tsx",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "notebookdockpanel.tsx",
-      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft",
-      "label": "useNotebookDraft.ts",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "usenotebookdraft.ts",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_syllabus_dock_syllabustreedock",
-      "label": "SyllabusTreeDock.tsx",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "Topic",
-      "file_type": "code",
-      "norm_label": "syllabustreedock.tsx",
-      "source_file": "src/features/syllabus-dock/SyllabusTreeDock.tsx",
       "source_location": "L1"
     },
     {
@@ -7477,50 +7301,6 @@
       "source_location": "L194"
     },
     {
-      "id": "src_features_question_import_questionimportmodal",
-      "label": "QuestionImportModal.tsx",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "questionimportmodal.tsx",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_question_import_questionimportmodal_import_text_example",
-      "label": "IMPORT_TEXT_EXAMPLE",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "import_text_example",
-      "source_file": "src/features/question-import/QuestionImportModal.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_lib_syllabusimport",
-      "label": "syllabusImport.ts",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "syllabusimport.ts",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_importers_test",
-      "label": "importers.test.ts",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "QuestionImportModal.tsx",
-      "file_type": "code",
-      "norm_label": "importers.test.ts",
-      "source_file": "src/__tests__/importers.test.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "docs_specs_06_importacao_e_persistencia_1_onde_os_estudos_ficam",
       "label": "1. Onde os estudos ficam",
       "_origin": "ast",
@@ -7639,22 +7419,165 @@
       "source_location": "L1"
     },
     {
-      "id": "pdf_worker_min_mjs_url",
-      "label": "pdfjs-dist/build/pdf.worker.min.mjs?url",
+      "id": "src_components_resizehandle",
+      "label": "ResizeHandle.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
-      "confidence": "EXTRACTED",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
-      "norm_label": "pdfjs-dist/build/pdf.worker.min.mjs?url",
-      "source_file": "pdfjs-dist/build/pdf.worker.min.mjs?url"
+      "norm_label": "resizehandle.tsx",
+      "source_file": "src/components/ResizeHandle.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_data_initialseed",
+      "label": "initialSeed.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "initialseed.ts",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_data_initialseed_seed_admin_blueprints",
+      "label": "SEED_ADMIN_BLUEPRINTS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_admin_blueprints",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L558"
+    },
+    {
+      "id": "src_data_initialseed_seed_ai_dissections",
+      "label": "SEED_AI_DISSECTIONS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_ai_dissections",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L501"
+    },
+    {
+      "id": "src_data_initialseed_seed_career_tracks",
+      "label": "SEED_CAREER_TRACKS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_career_tracks",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_data_initialseed_seed_notebooks",
+      "label": "SEED_NOTEBOOKS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_notebooks",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L327"
+    },
+    {
+      "id": "src_data_initialseed_seed_pdf_sources",
+      "label": "SEED_PDF_SOURCES",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_pdf_sources",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L339"
+    },
+    {
+      "id": "src_data_initialseed_seed_questions",
+      "label": "SEED_QUESTIONS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_questions",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L378"
+    },
+    {
+      "id": "src_data_initialseed_seed_study_plans",
+      "label": "SEED_STUDY_PLANS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_study_plans",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_data_initialseed_seed_subjects",
+      "label": "SEED_SUBJECTS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_subjects",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L77"
+    },
+    {
+      "id": "src_data_initialseed_seed_topics",
+      "label": "SEED_TOPICS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "seed_topics",
+      "source_file": "src/data/initialSeed.ts",
+      "source_location": "L174"
+    },
+    {
+      "id": "src_features_notebook_dock_notebookdockpanel",
+      "label": "NotebookDockPanel.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdockpanel.tsx",
+      "source_file": "src/features/notebook-dock/NotebookDockPanel.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft",
+      "label": "useNotebookDraft.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "usenotebookdraft.ts",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
+      "label": "NOTEBOOK_AUTOSAVE_MS",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebook_autosave_ms",
+      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
+      "source_location": "L6"
     },
     {
       "id": "src_features_pdf_reader_pdfdocument",
       "label": "pdfDocument.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfdocument.ts",
       "source_file": "src/features/pdf-reader/pdfDocument.ts",
@@ -7665,7 +7588,7 @@
       "label": "PdfDocumentViewer.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfdocumentviewer.tsx",
       "source_file": "src/features/pdf-reader/PdfDocumentViewer.tsx",
@@ -7676,7 +7599,7 @@
       "label": "PdfPage",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfpage",
       "source_file": "src/features/pdf-reader/PdfDocumentViewer.tsx",
@@ -7687,7 +7610,7 @@
       "label": "PdfReaderStage.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfreaderstage.tsx",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
@@ -7698,7 +7621,7 @@
       "label": "ZOOM_STEPS",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "zoom_steps",
       "source_file": "src/features/pdf-reader/PdfReaderStage.tsx",
@@ -7709,7 +7632,7 @@
       "label": "PdfReaderToolbar.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfreadertoolbar.tsx",
       "source_file": "src/features/pdf-reader/PdfReaderToolbar.tsx",
@@ -7720,7 +7643,7 @@
       "label": "readProgress.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "readprogress.ts",
       "source_file": "src/features/pdf-reader/readProgress.ts",
@@ -7731,22 +7654,77 @@
       "label": "SECONDS_TO_COUNT_PAGE_AS_READ",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "seconds_to_count_page_as_read",
       "source_file": "src/features/pdf-reader/readProgress.ts",
       "source_location": "L4"
     },
     {
+      "id": "src_tests_notebookdraftandlayout_test",
+      "label": "notebookDraftAndLayout.test.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "notebookdraftandlayout.test.tsx",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_savemock",
+      "label": "saveMock",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "savemock",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
+      "label": "[topicA, topicB]",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "[topica, topicb]",
+      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
+      "source_location": "L33"
+    },
+    {
       "id": "src_tests_pdfreadprogress_test",
       "label": "pdfReadProgress.test.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "PdfReaderStage.tsx",
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
       "file_type": "code",
       "norm_label": "pdfreadprogress.test.ts",
       "source_file": "src/__tests__/pdfReadProgress.test.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_tests_questionworkbenchandrouter_test",
+      "label": "questionWorkbenchAndRouter.test.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "questionworkbenchandrouter.test.tsx",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_questionworkbenchandrouter_test_forbidden_jargon",
+      "label": "FORBIDDEN_JARGON",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "questionWorkbenchAndRouter.test.tsx",
+      "file_type": "code",
+      "norm_label": "forbidden_jargon",
+      "source_file": "src/__tests__/questionWorkbenchAndRouter.test.tsx",
+      "source_location": "L29"
     },
     {
       "id": "src_features_onboarding_wizard_onboardingwizardmodal",
@@ -7910,17 +7888,6 @@
       "source_location": "L9"
     },
     {
-      "id": "plugin_fs",
-      "label": "@tauri-apps/plugin-fs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "storage.ts",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "@tauri-apps/plugin-fs",
-      "source_file": "@tauri-apps/plugin-fs"
-    },
-    {
       "id": "src_components_backuppanel",
       "label": "BackupPanel.tsx",
       "_origin": "ast",
@@ -7998,6 +7965,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_lib_storage_legacy_localstorage_key",
+      "label": "LEGACY_LOCALSTORAGE_KEY",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "legacy_localstorage_key",
+      "source_file": "src/lib/storage.ts",
+      "source_location": "L34"
+    },
+    {
       "id": "src_lib_storage_max_backups",
       "label": "MAX_BACKUPS",
       "_origin": "ast",
@@ -8007,6 +7985,28 @@
       "norm_label": "max_backups",
       "source_file": "src/lib/storage.ts",
       "source_location": "L33"
+    },
+    {
+      "id": "src_tests_database_test",
+      "label": "database.test.ts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "database.test.ts",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_database_test_sqljsconfig",
+      "label": "sqlJsConfig",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "storage.ts",
+      "file_type": "code",
+      "norm_label": "sqljsconfig",
+      "source_file": "src/__tests__/database.test.ts",
+      "source_location": "L9"
     },
     {
       "id": "src_tests_storage_test",
@@ -8628,61 +8628,6 @@
       "version": "0.1.0"
     },
     {
-      "id": "src_components_resizehandle",
-      "label": "ResizeHandle.tsx",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "resizehandle.tsx",
-      "source_file": "src/components/ResizeHandle.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_notebook_dock_usenotebookdraft_notebook_autosave_ms",
-      "label": "NOTEBOOK_AUTOSAVE_MS",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "notebook_autosave_ms",
-      "source_file": "src/features/notebook-dock/useNotebookDraft.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test",
-      "label": "notebookDraftAndLayout.test.tsx",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "notebookdraftandlayout.test.tsx",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test_savemock",
-      "label": "saveMock",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "savemock",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_tests_notebookdraftandlayout_test_topica_topicb",
-      "label": "[topicA, topicB]",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "notebookDraftAndLayout.test.tsx",
-      "file_type": "code",
-      "norm_label": "[topica, topicb]",
-      "source_file": "src/__tests__/notebookDraftAndLayout.test.tsx",
-      "source_location": "L33"
-    },
-    {
       "id": "src_features_admin_factory_adminfactoryview",
       "label": "AdminFactoryView.tsx",
       "_origin": "ast",
@@ -8692,28 +8637,6 @@
       "norm_label": "adminfactoryview.tsx",
       "source_file": "src/features/admin-factory/AdminFactoryView.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "pdfjs_dist_pdfjs_dist",
-      "label": "pdfjs-dist",
-      "_origin": "ast",
-      "community": 56,
-      "community_name": "pdfjs-dist",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "pdfjs-dist",
-      "source_file": "pdfjs-dist"
-    },
-    {
-      "id": "tailwindcss_tailwindcss",
-      "label": "tailwindcss",
-      "_origin": "ast",
-      "community": 57,
-      "community_name": "tailwindcss",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "tailwindcss",
-      "source_file": "tailwindcss"
     },
     {
       "id": "src_tauri_tauri_conf",
@@ -9013,6 +8936,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_features_question_import_questionimportmodal",
+      "label": "QuestionImportModal.tsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "questionimportmodal.tsx",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_question_import_questionimportmodal_import_text_example",
+      "label": "IMPORT_TEXT_EXAMPLE",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "import_text_example",
+      "source_file": "src/features/question-import/QuestionImportModal.tsx",
+      "source_location": "L20"
+    },
+    {
       "id": "src_lib_questionimport",
       "label": "questionImport.ts",
       "_origin": "ast",
@@ -9055,6 +9000,17 @@
       "norm_label": "index_letters",
       "source_file": "src/lib/questionOptions.ts",
       "source_location": "L12"
+    },
+    {
+      "id": "src_tests_importers_test",
+      "label": "importers.test.ts",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "importers.test.ts",
+      "source_file": "src/__tests__/importers.test.ts",
+      "source_location": "L1"
     }
   ],
   "links": [
@@ -27416,24 +27372,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_features_pdf_reader_pdfdocument",
-      "target": "pdf_worker_min_mjs_url",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/pdf-reader/pdfDocument.ts"
-    },
-    {
-      "source": "src_lib_storage",
-      "target": "plugin_fs",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/storage.ts"
-    },
-    {
       "source": "src_tests_database_test",
       "target": "src_lib_database",
       "relation": "dynamic_import",
@@ -28096,5 +28034,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c34b9d4dc9df57bde0af490125a707d00cf203f1"
+  "built_at_commit": "b80d57975a6f64bcc05213254c10f8d18fdbf699"
 }

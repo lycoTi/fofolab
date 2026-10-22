@@ -5,7 +5,7 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
-- **Fase atual:** Fatia 5.5 (endurecimento) + 5.6 (IA real via Groq) no branch **`fatia-5.5-endurecimento`**; Fatia 5.7 (leitor de PDF) no branch **`fatia-5.7-leitor-pdf`**, criado a partir dele. Antes de juntar na `main`, falta o **checklist do PC de casa** (abaixo), porque o lado Tauri não foi compilado no PC do trabalho (sem Rust).
+- **Fase atual:** Fatias 5.5 (endurecimento), 5.6 (IA real via Groq) e 5.7 (leitor de PDF) **na `main`** (21/10/2026), verificadas no navegador. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** — falta o **checklist do app desktop** (abaixo). Próxima: Fatia 7.
 
 ## ✅ Definição de Pronto
 Um item só vira **[DONE]** quando: (1) funciona com dados reais, não só com o exemplo; (2) sobrevive a fechar e abrir o app; (3) tem teste automatizado da regra e, se o fluxo atravessa telas, teste E2E; (4) `npm test`, `npm run test:e2e` e `npm run build` passam.
@@ -46,13 +46,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 
 **Ainda não começou:** grafo interativo (Fatia 6) • pacote `.fofopack` para amigos • Modo Admin real (a tela mostra dados de exemplo) • vídeo/Gran/YouTube.
 
-## 🏠 Checklist no PC de casa (antes do merge na `main`)
-1. `git fetch && git switch fatia-5.5-endurecimento && npm install` → `npm test`, `npm run test:e2e`, `npm run build`.
+## 🏠 Checklist do app desktop (pendente — juntado na `main` antes, por decisão do dono)
+0. Pré-requisito: **Build Tools do Visual Studio com "Desenvolvimento para desktop com C++"** (o PC de casa tem Rust 1.99, mas não tem o compilador C++; o PC do trabalho não tem Rust). Compile pelo PowerShell: no Git Bash, o `link` do Git esconde o `link.exe` do Visual Studio.
+1. `npm install` → `npm test`, `npm run test:e2e`, `npm run build`.
 2. `npm run tauri:dev` precisa compilar com `tauri-plugin-fs`. Se reclamar de permissão, conferir os identificadores em `src-tauri/capabilities/default.json`.
 3. No app desktop: criar um tópico, fechar, abrir → continua lá? Existem `fofolab.db` e `backups/` em `%APPDATA%\com.fofolab.desktop\`?
 4. Digitar no caderno e fechar a janela em seguida → perdeu? (não há gravação no fechamento da janela; se perder, implementar `onCloseRequested` + permissão `core:window:allow-destroy`).
 5. "Fazer Backup" no app desktop baixa o arquivo? (se não, usar `plugin-dialog` + `plugin-fs`). Abrir um PDF mostra o leitor? O botão "Tela cheia" do leitor funciona na janela do `.exe`?
-6. Tudo ok → merge na `main` e trocar os [A VERIFICAR] verificados por [DONE].
+6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).

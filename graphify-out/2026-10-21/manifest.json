@@ -564,9 +564,9 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1792623159.882137,
-    "seen": 1792623176.2593405,
-    "ast_hash": "35c3aecb423c583c617e8df3855f7856",
+    "mtime": 1792628408.3677173,
+    "seen": 1792628511.7197983,
+    "ast_hash": "3fed7c1ce00039643ef624a66b8c37a1",
     "semantic_hash": ""
   },
   "docs/reviews/2026-10-21-estado-do-projeto.md": {
@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   "src/features/pdf-reader/PdfReaderStage.tsx": {
-    "mtime": 1792627614.9363606,
-    "seen": 1792627754.9754012,
-    "ast_hash": "c9a5bed78aceee0ad4d12a6ced58a894",
+    "mtime": 1792628381.8827014,
+    "seen": 1792628511.719719,
+    "ast_hash": "246e1ae6ef53b6af03f717c1c493ab30",
     "semantic_hash": ""
   },
   "src/features/pdf-reader/pdfDocument.ts": {
@@ -621,6 +621,12 @@
     "mtime": 1792626899.4219322,
     "seen": 1792627754.9754047,
     "ast_hash": "f54bd2dc328bdc6b5d8fbeea32f5359d",
+    "semantic_hash": ""
+  },
+  "src/features/pdf-reader/PdfReaderToolbar.tsx": {
+    "mtime": 1792628354.3033483,
+    "seen": 1792628511.719722,
+    "ast_hash": "469cfe52c30986492a7e28db69bc43a0",
     "semantic_hash": ""
   }
 }
