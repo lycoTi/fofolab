@@ -24,6 +24,28 @@ body.fofolab-resizing {
 }
 
 /*
+ * Painéis laterais que recolhem em trilho: a largura anima para o estudante ver para onde o painel foi.
+ * Durante o arraste da divisória a transição sai (senão o painel fica atrasado atrás do ponteiro).
+ */
+.fofolab-panel {
+  transition: width 220ms ease;
+}
+.fofolab-panel-content,
+.fofolab-rail {
+  transition: opacity 220ms ease;
+}
+.fofolab-resizing .fofolab-panel {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fofolab-panel,
+  .fofolab-panel-content,
+  .fofolab-rail {
+    transition: none;
+  }
+}
+
+/*
  * Camada de texto do leitor de PDF (texto invisível sobre o desenho da página, para selecionar e
  * copiar). Trecho essencial de pdfjs-dist/web/pdf_viewer.css; a escala vem de --total-scale-factor.
  */
