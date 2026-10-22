@@ -181,3 +181,33 @@ describe('cabeçalho de ponta a ponta', () => {
     expect(container.textContent).not.toMatch(/null|NaN/);
   });
 });
+
+describe('foco do teclado ao recolher e reabrir', () => {
+  function PanelHarness() {
+    const [open, setOpen] = useState(true);
+    return (
+      <SidePanel
+        side="left"
+        label="Roteiro"
+        open={open}
+        width={320}
+        onOpenChange={setOpen}
+        collapseLabel="Recolher roteiro"
+        rail={<RailButton label="Abrir roteiro" icon="📋" onClick={() => setOpen(true)} />}
+      >
+        <p>conteúdo</p>
+      </SidePanel>
+    );
+  }
+
+  it('recolher leva o foco ao ícone do trilho, e reabrir leva à seta de recolher', () => {
+    render(<PanelHarness />);
+    const collapse = screen.getByRole('button', { name: 'Recolher roteiro' });
+    collapse.focus();
+    fireEvent.click(collapse);
+    expect(document.activeElement?.getAttribute('aria-label')).toBe('Abrir roteiro');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir roteiro' }));
+    expect(document.activeElement?.getAttribute('aria-label')).toBe('Recolher roteiro');
+  });
+});

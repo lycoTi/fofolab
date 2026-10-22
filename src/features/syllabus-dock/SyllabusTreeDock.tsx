@@ -43,7 +43,8 @@ export function SyllabusTreeDock({
       style={width ? { width } : undefined}
       className={`flex flex-col h-full min-w-0 ${width ? 'border-r border-slate-800 bg-slate-900/70 shrink-0' : 'w-full'}`}
     >
-      <div className="p-4 border-b border-slate-800 flex items-center justify-between">
+      {/* Dentro do painel que recolhe, a seta de recolher ocupa o canto superior direito: o botão de modo dá espaço a ela */}
+      <div className={`p-4 border-b border-slate-800 flex items-center justify-between ${width ? '' : 'pr-10'}`}>
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-xl shadow-lg shadow-orange-500/20">
             🐹

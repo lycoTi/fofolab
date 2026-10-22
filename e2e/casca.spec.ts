@@ -77,3 +77,36 @@ test('quem pediu menos movimento não vê animação', async ({ page }) => {
   const duration = await leftColumn(page).evaluate((el) => getComputedStyle(el).transitionDuration);
   expect(duration).toBe('0s');
 });
+
+test('a seta de recolher não cobre o botão de modo da coluna de tópicos', async ({ page }) => {
+  await openPro(page);
+  const arrow = (await page.getByRole('button', { name: 'Recolher tópicos' }).boundingBox())!;
+  const modeButton = (await page.getByTitle('Alternar entre Bancada de Estudos e Painel de Trilhas').boundingBox())!;
+  const overlaps =
+    arrow.x < modeButton.x + modeButton.width &&
+    modeButton.x < arrow.x + arrow.width &&
+    arrow.y < modeButton.y + modeButton.height &&
+    modeButton.y < arrow.y + arrow.height;
+  expect(overlaps).toBe(false);
+});
+
+test('na leitura ampliada, trocar para o Copiloto não some com a coluna', async ({ page }) => {
+  await openPro(page);
+  await page.getByRole('button', { name: /Leitura de PDF/ }).click();
+  await page.getByRole('button', { name: 'Maximizar leitura' }).click();
+  await page.getByRole('tab', { name: 'Copiloto' }).click();
+  await expect(rightColumn(page)).toBeVisible();
+  await expect(page.getByRole('tab', { name: 'Copiloto' })).toHaveAttribute('aria-selected', 'true');
+});
+
+test('mexer nos painéis durante a leitura não deixa a preferência diferente da tela', async ({ page }) => {
+  await openPro(page);
+  await page.getByRole('button', { name: /Leitura de PDF/ }).click();
+  await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
+  await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
+  await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
+  await page.reload();
+  await page.getByRole('button', { name: 'Bancada Pro' }).click();
+  await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
+  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
+});

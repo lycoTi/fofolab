@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ResizeHandle } from '../../components/ResizeHandle';
 
@@ -40,9 +40,30 @@ export function SidePanel({
 }: SidePanelProps) {
   const isLeft = side === 'left';
   const CollapseIcon = isLeft ? ChevronLeft : ChevronRight;
+  const asideRef = useRef<HTMLElement>(null);
+  const collapseRef = useRef<HTMLButtonElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
+  const previousOpen = useRef(open);
+
+  // Quem usa teclado não perde o lugar: o botão clicado some (seta) ou fica inerte (trilho),
+  // então o foco vai para o controle equivalente do novo estado. Mudanças automáticas (leitura do PDF)
+  // não roubam o foco, porque nelas o foco está fora do painel.
+  useEffect(() => {
+    if (previousOpen.current === open) return;
+    previousOpen.current = open;
+    const active = document.activeElement;
+    const focusWasHere = active === document.body || (active !== null && asideRef.current?.contains(active));
+    if (!focusWasHere) return;
+    if (open) {
+      collapseRef.current?.focus();
+      return;
+    }
+    railRef.current?.querySelector<HTMLElement>('button')?.focus();
+  }, [open]);
 
   const panel = (
     <aside
+      ref={asideRef}
       aria-label={label}
       style={{ width: open ? width : RAIL_WIDTH }}
       className={`fofolab-panel relative h-full shrink-0 overflow-hidden border-slate-800 bg-slate-900/70 ${
@@ -63,6 +84,7 @@ export function SidePanel({
 
       {open && (
         <button
+          ref={collapseRef}
           type="button"
           onClick={() => onOpenChange(false)}
           aria-label={collapseLabel}
@@ -76,6 +98,7 @@ export function SidePanel({
       )}
 
       <div
+        ref={railRef}
         inert={open}
         aria-hidden={open}
         style={{ width: RAIL_WIDTH }}

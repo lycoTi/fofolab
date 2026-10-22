@@ -689,10 +689,11 @@ export default function App() {
       rightPanel.setOpen(true, auto);
       rightTab.setTab('notebook', auto);
     } else if (tab !== 'reader' && activeTab === 'reader' && docksBeforeReaderRef.current) {
+      // A volta grava: se o estudante mexeu nos painéis durante a leitura, a preferência volta a bater com a tela
       const before = docksBeforeReaderRef.current;
-      leftPanel.setOpen(before.left, auto);
-      rightPanel.setOpen(before.right, auto);
-      rightTab.setTab(before.tab, auto);
+      leftPanel.setOpen(before.left);
+      rightPanel.setOpen(before.right);
+      rightTab.setTab(before.tab);
       docksBeforeReaderRef.current = null;
     }
     setActiveTab(tab);
@@ -984,7 +985,7 @@ export default function App() {
           width={rightWidth.width}
           onOpenChange={(open) => rightPanel.setOpen(open)}
           collapseLabel="Recolher Copiloto e Caderno"
-          hidden={readerExpanded && !readerNotebookVisible}
+          hidden={readerExpanded && !rightPanel.open}
           rail={rightDockRail({
             tab: rightTab.tab,
             onOpenTab: (tab) => {
