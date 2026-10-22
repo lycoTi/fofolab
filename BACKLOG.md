@@ -7,6 +7,8 @@
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
 - **Fase atual:** Fatias 5.5 (endurecimento), 5.6 (IA real via Groq) e 5.7 (leitor de PDF) **na `main`** (21/10/2026), verificadas no navegador. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** — falta o **checklist do app desktop** (abaixo). Fatia 7a (edital real → ciclo pela nota mínima, spec `07`) no branch **`fatia-7-edital-ciclo`**; próxima: 7b.
 
+- **Retomando em outro PC?** Siga `docs/handoff/2026-10-22-continuar-no-outro-pc.md` (instalar a stack `~/.agents`, onde paramos, mensagem pronta para a IA).
+
 ## ✅ Definição de Pronto
 Um item só vira **[DONE]** quando: (1) funciona com dados reais, não só com o exemplo; (2) sobrevive a fechar e abrir o app; (3) tem teste automatizado da regra e, se o fluxo atravessa telas, teste E2E; (4) `npm test`, `npm run test:e2e` e `npm run build` passam.
 Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações listadas • **[A VERIFICAR]** implementado, sem verificação ponta a ponta • **[ ]** não começou.
