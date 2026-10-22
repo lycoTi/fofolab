@@ -18,15 +18,16 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 Globais (stack `~/.agents`, valem para todos os projetos; o que é só do FofoLab está em `.agents/rules/fofolab-especificos.md`)
 e locais (`.agents/skills/`: só `education-learning-science`). Regra global × local: `~/.agents/AGENTS.md`.
 
-| Trabalho | Skill |
+A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS.md` (seção 6). Aqui, só o que é do FofoLab:
+
+| Trabalho | Skill / regra |
 |---|---|
-| Feature nova ou mudança de comportamento (não para correções pequenas) | `brainstorming` — perguntas antes de construir; `grill-me` quando o usuário pedir para ser questionado |
-| Ciclo, domínio, revisão espaçada, métricas, tutor de IA, qualquer regra "pedagógica" | `education-learning-science` |
-| Tela, modal, gráfico ou componente React | `ux-ui-clean` (+ `design-system-builder` se for criar/rever o sistema visual) |
-| Novo painel, componente grande, `App.tsx` | `microfrontend-dock-architecture` (teto de ~250 linhas por componente) |
-| Prompts de IA, parser de provas/edital, extração JSON | `prompt-engineering-guide` |
-| Chaves de API, PDFs/HTML de bancas (entrada não confiável), refatoração TS | `shannon-security-and-code-craft` |
-| Toda entrega | `tdd-suite` |
+| Ciclo, domínio, revisão espaçada, métricas, tutor de IA, qualquer regra "pedagógica" | `education-learning-science` (local) |
+| Tela, modal, gráfico ou componente React | `impeccable` + `ux-ui-clean` + paleta/tom em `fofolab-especificos.md` |
+| Novo painel, componente grande, `App.tsx` | regra autoral de componentes (~250 linhas) + painéis em `fofolab-especificos.md` |
+| Prompts de IA, parser de provas/edital, extração JSON | regra autoral de prompts + camadas lei → jurisprudência → banca em `fofolab-especificos.md` |
+| Chaves de API, PDFs/HTML de bancas, `.fofopack` | `security-and-hardening` + seção Segurança de `fofolab-especificos.md` |
+| Toda entrega | `test-driven-development` + `tdd-suite` + `verification-before-completion` |
 
 ## Outras regras
 - **Nunca** grave resposta simulada da IA como explicação real; sem chave o app fica em modo demonstração rotulado.
