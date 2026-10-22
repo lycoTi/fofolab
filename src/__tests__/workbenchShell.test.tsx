@@ -6,6 +6,10 @@ import { useCollapsiblePanel } from '../features/workbench-shell/useCollapsibleP
 import { RAIL_WIDTH, RailButton, SidePanel } from '../features/workbench-shell/SidePanel';
 import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from '../features/workbench-shell/RightDock';
 import { useState } from 'react';
+import { summarizeExamParts } from '../features/workbench-shell/headerSummary';
+import { AppHeader } from '../features/workbench-shell/AppHeader';
+import type { SubjectCycleAllocation } from '../lib/cycleEngine';
+import type { ExamPart } from '../types/database';
 
 beforeEach(() => {
   localStorage.clear();
@@ -120,5 +124,60 @@ describe('coluna da direita com Copiloto e Caderno', () => {
     render(<div>{rightDockRail({ tab: 'copilot', onOpenTab })}</div>);
     fireEvent.click(screen.getByRole('button', { name: 'Abrir Caderno' }));
     expect(onOpenTab).toHaveBeenCalledWith('notebook');
+  });
+});
+
+describe('cabeçalho de ponta a ponta', () => {
+  const part = (id: string, code: string, sortOrder: number): ExamPart => ({
+    id,
+    plan_id: 'plano',
+    code,
+    name: code,
+    item_count: 50,
+    points_per_item: 1,
+    min_score: null,
+    sort_order: sortOrder,
+  });
+  const alloc = (partId: string, coveragePercent: number) =>
+    ({ subject: { exam_part_id: partId }, coveragePercent }) as unknown as SubjectCycleAllocation;
+
+  it('resume quanto de cada prova já foi visto', () => {
+    const parts = [part('p2', 'P2', 2), part('p1', 'P1', 1)];
+    const allocations = [alloc('p1', 50), alloc('p1', 75), alloc('p2', 40)];
+    expect(summarizeExamParts(allocations, parts)).toEqual([
+      { code: 'P1', coveragePercent: 63 },
+      { code: 'P2', coveragePercent: 40 },
+    ]);
+  });
+
+  it('plano sem provas do edital não tem resumo de provas', () => {
+    expect(summarizeExamParts([alloc('p1', 50)], [])).toEqual([]);
+  });
+
+  const header = (daysUntilExam: number | null, examParts: { code: string; coveragePercent: number }[]) => (
+    <AppHeader
+      hidden={false}
+      planLabel="[CGU] Auditor Federal (TI)"
+      daysUntilExam={daysUntilExam}
+      examParts={examParts}
+      modeSwitch={<span>modo</span>}
+      saveStatus={<span>Salvo</span>}
+      onRecalibrate={() => {}}
+      blockClock={<span>relógio</span>}
+    />
+  );
+
+  it('cabeçalho mostra concurso, dias e provas, e nada dos antigos botões de painel', () => {
+    render(header(53, [{ code: 'P1', coveragePercent: 62 }]));
+    expect(screen.getByText('53 dias')).toBeTruthy();
+    expect(screen.getByText('P1 62% visto')).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /Tópicos|Caderno|Copiloto IA|Edital Verticalizado/ })).toBeNull();
+    expect(screen.getByRole('button', { name: 'Recalibrar perfil' })).toBeTruthy();
+  });
+
+  it('sem data de prova, o cabeçalho não mostra contagem', () => {
+    const { container } = render(header(null, []));
+    expect(screen.queryByText(/dias?$/)).toBeNull();
+    expect(container.textContent).not.toMatch(/null|NaN/);
   });
 });
