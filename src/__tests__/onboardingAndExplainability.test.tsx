@@ -1,6 +1,5 @@
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { DailyFocusView } from '../features/daily-focus/DailyFocusView';
 import { OnboardingWizardModal } from '../features/onboarding-wizard/OnboardingWizardModal';
 import { MetricExplainer } from '../components/MetricExplainer';
 import {
@@ -76,32 +75,6 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(screen.getByText(explanation.formulaDetails!.formulaLabel)).toBeTruthy();
   });
 
-  it('renderiza a Visão "Meu Dia de Hoje" com os blocos de estudo e aciona o estudo direto', () => {
-    const onStartBlock = vi.fn();
-    const onSwitchPro = vi.fn();
-    const onOpenWizard = vi.fn();
-
-    render(
-      <DailyFocusView
-        plan={cguPlan}
-        cycleData={cycleData}
-        subjects={cguSubjects}
-        topicsBySubject={topicsBySubject}
-        onStartBlock={onStartBlock}
-        onSwitchToProWorkbench={onSwitchPro}
-        onOpenWizard={onOpenWizard}
-      />
-    );
-
-    // Deve exibir o roteiro de hoje e pelo menos 1 bloco de estudo
-    expect(screen.getByText(/Roteiro de Hoje • Modo Essencial/i)).toBeTruthy();
-    expect(screen.getAllByText(/Iniciar Estudo Direto 🚀/i).length).toBeGreaterThanOrEqual(1);
-
-    // Clica para iniciar o primeiro bloco
-    fireEvent.click(screen.getAllByText(/Iniciar Estudo Direto 🚀/i)[0]);
-    expect(onStartBlock).toHaveBeenCalledTimes(1);
-  });
-
   it('permite avançar pelas 5 etapas do Onboarding Wizard, com autoavaliação, e concluir', () => {
     const onComplete = vi.fn();
     const onClose = vi.fn();
@@ -145,19 +118,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
-  it('AUDITORIA DE UX: garante que a Visão Meu Dia e o Wizard não contêm jargões técnicos proibidos', () => {
-    const { container: dailyContainer } = render(
-      <DailyFocusView
-        plan={cguPlan}
-        cycleData={cycleData}
-        subjects={cguSubjects}
-        topicsBySubject={topicsBySubject}
-        onStartBlock={vi.fn()}
-        onSwitchToProWorkbench={vi.fn()}
-        onOpenWizard={vi.fn()}
-      />
-    );
-
+  it('AUDITORIA DE UX: garante que o Wizard não contém jargões técnicos proibidos', () => {
     const { container: wizardContainer } = render(
       <OnboardingWizardModal
         isOpen={true}
@@ -169,7 +130,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
       />
     );
 
-    const combined = `${dailyContainer.textContent || ''} ${wizardContainer.textContent || ''}`;
+    const combined = wizardContainer.textContent || '';
     const forbidden = ['SQLite', '0 tokens', '_score', 'Elasticsearch', 'Anti-Alucinação', 'Restaurar Seed'];
 
     for (const term of forbidden) {

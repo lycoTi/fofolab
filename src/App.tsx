@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Calendar, FileText, HelpCircle, Flame, Layers, Network, PanelLeft } from 'lucide-react';
+import { FileText, GraduationCap, HelpCircle, Flame, Layers, Network, PanelLeft, Wrench } from 'lucide-react';
+import { formatDuration } from './lib/timeFormat';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
 import { QuestionWorkbench, type DiagnosisSubmission } from './components/QuestionWorkbench';
@@ -8,7 +9,6 @@ import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
 import { CycleView } from './features/cycle/CycleView';
-import { DailyFocusView } from './features/daily-focus/DailyFocusView';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { StudyBlockCard } from './features/study-block/StudyBlockCard';
 import { StudyBlockMini } from './features/study-block/StudyBlockMini';
@@ -24,12 +24,16 @@ import {
   type OnboardingProfile,
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
-import { SyllabusTreeDock } from './features/syllabus-dock/SyllabusTreeDock';
 import { AppHeader } from './features/workbench-shell/AppHeader';
 import { summarizeExamParts } from './features/workbench-shell/headerSummary';
 import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from './features/workbench-shell/RightDock';
 import { RailButton, SidePanel } from './features/workbench-shell/SidePanel';
 import { useCollapsiblePanel } from './features/workbench-shell/useCollapsiblePanel';
+import { RoutineColumn } from './features/routine/RoutineColumn';
+import { useDailyRoutine } from './features/routine/useDailyRoutine';
+import { usePeek } from './features/routine/usePeek';
+import { routineSiblings, type RoutineItem } from './lib/dailyRoutine';
+import { describeRecalibrationHint, recalibrationHint } from './lib/recalibrationHint';
 import { generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
 import { calculateDynamicStudyCycle, startOfWeek } from './lib/cycleEngine';
 import {
@@ -49,6 +53,8 @@ import {
   getNotebooksByPlan,
   getPdfSourceForTopic,
   getQuestionsForTopicOrSubject,
+  getTopicQuestionsWithFallback,
+  type QuestionFallback,
   getRecentAttempts,
   getStudyPlans,
   getStudySessionsSince,
@@ -99,7 +105,6 @@ import type {
 
 type WorkbenchTab = 'questions' | 'cycle' | 'heatmap' | 'graph' | 'reader';
 type AppMode = 'student' | 'admin';
-type ExperienceMode = 'daily' | 'pro';
 type DeletableKind = 'plan' | 'subject' | 'topic';
 
 const DELETE_LABELS: Record<DeletableKind, { noun: string; backupLabel: string }> = {
@@ -131,7 +136,6 @@ export default function App() {
   const [dataVersion, setDataVersion] = useState(0);
   const [questionsVersion, setQuestionsVersion] = useState(0);
   const [mode, setMode] = useState<AppMode>('student');
-  const [experienceMode, setExperienceMode] = useState<ExperienceMode>('daily');
   const [activeTab, setActiveTab] = useState<WorkbenchTab>('questions');
 
   const [wizardOpen, setWizardOpen] = useState(false);
@@ -163,6 +167,7 @@ export default function App() {
   const [questionScope, setQuestionScope] = useState<'topic' | 'subject' | 'all'>('topic');
   const [topicQuestions, setTopicQuestions] = useState<{ question: Question; dissection: AiDissection | null }[]>([]);
   const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
+  const [questionFallback, setQuestionFallback] = useState<QuestionFallback>(null);
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
   const pdfUrlRef = useRef<string | null>(null);
@@ -251,7 +256,15 @@ export default function App() {
   // Questões do tópico (recarrega ao trocar tópico, filtro ou após importar/gerar explicação)
   useEffect(() => {
     if (!dbReady || !selectedSubjectId) return;
-    setTopicQuestions(getQuestionsForTopicOrSubject(selectedTopicId, selectedSubjectId, questionScope));
+    if (questionScope === 'topic') {
+      // Tópico sem questões próprias: mostra as do grupo (ou da matéria) e diz de onde vieram
+      const { items, fallback } = getTopicQuestionsWithFallback(selectedTopicId, selectedSubjectId);
+      setTopicQuestions(items);
+      setQuestionFallback(fallback);
+    } else {
+      setTopicQuestions(getQuestionsForTopicOrSubject(selectedTopicId, selectedSubjectId, questionScope));
+      setQuestionFallback(null);
+    }
     setLastDiagnosisMsg(null);
   }, [dbReady, selectedSubjectId, selectedTopicId, questionScope, questionsVersion, dataVersion]);
 
@@ -320,7 +333,36 @@ export default function App() {
     };
   }, [activePlan, currentSubject, currentTopic, cycleData]);
 
-  const readerExpanded = readerMaximized && mode === 'student' && experienceMode === 'pro' && activeTab === 'reader';
+  const readerExpanded = readerMaximized && mode === 'student' && activeTab === 'reader';
+
+  // Roteiro de hoje na coluna esquerda (spec 09): congelado no dia, classificado pelas sessões de hoje
+  const routine = useDailyRoutine({
+    dbReady,
+    plan: activePlan,
+    cycleData,
+    subjects,
+    topicsBySubject,
+    weekSessions: sessions,
+    dataVersion,
+  });
+  const routineBlockTopic = routine.currentItem?.topic ?? null;
+  const peek = usePeek({ selectedTopic: currentTopic, blockTopic: routineBlockTopic, studyBlock });
+
+  // Quantas questões o bloco tem (com recuo para o grupo) — memorizado: o relógio redesenha a tela a cada 0,5 s
+  const routineQuestionCount = useMemo(() => {
+    if (!dbReady || !routineBlockTopic) return 0;
+    return getTopicQuestionsWithFallback(routineBlockTopic.id, routineBlockTopic.subject_id).items.length;
+  }, [dbReady, routineBlockTopic, questionsVersion, dataVersion]);
+
+  // O bloco atual mudou (abriu o app, terminou um bloco, recalibrou): a bancada vai para o tópico dele
+  const routineCurrentKey = routine.currentItem ? `${routine.currentItem.block.subjectId}:${routine.currentItem.block.topicId}` : '';
+  useEffect(() => {
+    const item = routine.currentItem;
+    if (!item) return;
+    setSelectedSubjectId(item.subject.id);
+    if (item.topic) setSelectedTopicId(item.topic.id);
+    // Só a troca de bloco dispara: escolher outro tópico à mão (olhada) não pode ser desfeito sozinho
+  }, [routineCurrentKey]);
 
   useEffect(() => {
     const onFullscreenChange = () => {
@@ -524,7 +566,8 @@ export default function App() {
     } else {
       handleSelectPlan(targetPlanId);
     }
-    setExperienceMode('daily');
+    // Perfil novo: o roteiro de hoje é refeito com ele
+    routine.refreeze();
   };
 
   /** Matérias do plano com os tópicos de primeiro nível, para a autoavaliação do assistente. */
@@ -710,9 +753,69 @@ export default function App() {
   };
 
   const openReader = () => {
-    setExperienceMode('pro');
     selectTab('reader');
   };
+
+  // Roteiro na coluna: voltar ao bloco, iniciar, atalhos de material, faixa da olhada e aviso de recalibrar
+  const returnToBlock = () => {
+    const item = routine.currentItem;
+    if (!item) return;
+    setSelectedSubjectId(item.subject.id);
+    if (item.topic) setSelectedTopicId(item.topic.id);
+  };
+
+  const startRoutineBlock = (item: RoutineItem) => {
+    studyBlock.start({
+      subjectId: item.subject.id,
+      subjectName: item.subject.name,
+      topicId: item.topic?.id ?? null,
+      topicCode: item.topic?.code ?? null,
+      topicTitle: item.topic?.title ?? null,
+      targetMinutes: item.remainingMinutes,
+    });
+    setSelectedSubjectId(item.subject.id);
+    if (item.topic) setSelectedTopicId(item.topic.id);
+  };
+
+  const openRoutineMaterial = (kind: 'pdf' | 'questions' | 'notes') => {
+    returnToBlock();
+    if (kind === 'pdf') {
+      selectTab('reader');
+      return;
+    }
+    if (kind === 'questions') {
+      selectTab('questions');
+      return;
+    }
+    rightTab.setTab('notebook');
+    rightPanel.setOpen(true);
+  };
+
+  const blockIsSelected = routineBlockTopic !== null && currentTopic?.id === routineBlockTopic.id;
+  const routinePdfLabel = blockIsSelected && pdfSource ? `PDF p. ${pdfSource.current_page}/${pdfSource.total_pages}` : null;
+  const routineMaterials = {
+    pdfLabel: routinePdfLabel,
+    questionCount: routineQuestionCount,
+    hasNotes: allNotebooks.some((n) => n.topic_id === routineBlockTopic?.id && n.content_markdown.trim().length > 0),
+  };
+
+  const peekInfo =
+    peek.kind !== 'none' && currentTopic && routine.currentItem
+      ? {
+          kind: peek.kind,
+          topicLabel: currentTopic.code ? `${currentTopic.code} ${currentTopic.title}` : currentTopic.title,
+          showNudge: peek.showNudge,
+          nudgeText: `Seu bloco de ${routine.currentItem.subject.name} está esperando: faltam ${formatDuration(routine.currentItem.remainingMinutes)}`,
+        }
+      : null;
+
+  const recalibration = recalibrationHint(cycleData.allocations, cycleData.topicHeatmapRanking);
+
+  const questionSourceLabel = (() => {
+    if (!questionFallback) return null;
+    if (questionFallback.kind === 'group') return `Questões do grupo ${questionFallback.code}`;
+    return 'Questões de toda a matéria';
+  })();
 
   const toggleReaderMaximized = () => {
     if (readerMaximized && document.fullscreenElement) void document.exitFullscreen();
@@ -739,29 +842,6 @@ export default function App() {
           planLabel={`[${activePlan.organ || 'Geral'}] ${activePlan.title}`}
           daysUntilExam={cycleData.daysUntilExam}
           examParts={summarizeExamParts(cycleData.allocations, examParts)}
-          modeSwitch={
-            <div className="flex shrink-0 items-center p-1 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold">
-              <button
-                type="button"
-                onClick={() => setExperienceMode('daily')}
-                className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
-                  experienceMode === 'daily' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                <Calendar size={13} />
-                <span>Meu Dia de Hoje</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setExperienceMode('pro')}
-                className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
-                  experienceMode === 'pro' ? 'bg-orange-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                <span>Bancada Pro</span>
-              </button>
-            </div>
-          }
           saveStatus={<SaveStatusIndicator onOpenBackup={() => openCrudModal('backup')} />}
           onRecalibrate={() => openWizard()}
           blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} />}
@@ -769,79 +849,64 @@ export default function App() {
       )}
 
       <div className="flex min-h-0 flex-1">
-      {/* Coluna esquerda (tópicos e edital) — só na Bancada Pro; recolhe para um trilho */}
-      {experienceMode === 'pro' && (
-        <SidePanel
-          side="left"
-          label="Coluna de tópicos"
-          open={leftPanel.open}
-          width={syllabusWidth.width}
-          onOpenChange={(open) => leftPanel.setOpen(open)}
-          collapseLabel="Recolher tópicos"
-          hidden={readerExpanded}
-          rail={<RailButton label="Abrir tópicos" icon={<PanelLeft size={15} />} onClick={() => leftPanel.setOpen(true)} />}
-          resize={{
-            label: 'Largura da lista de tópicos',
-            min: syllabusWidth.min,
-            max: syllabusWidth.max,
-            onResize: syllabusWidth.setWidth,
-            onReset: syllabusWidth.reset,
+      {/* Coluna esquerda: o roteiro de hoje (spec 09); recolhe para um trilho */}
+      <SidePanel
+        side="left"
+        label="Coluna do roteiro"
+        open={leftPanel.open}
+        width={syllabusWidth.width}
+        onOpenChange={(open) => leftPanel.setOpen(open)}
+        collapseLabel="Recolher roteiro"
+        hidden={readerExpanded}
+        rail={<RailButton label="Abrir roteiro" icon={<PanelLeft size={15} />} onClick={() => leftPanel.setOpen(true)} />}
+        resize={{
+          label: 'Largura do roteiro',
+          min: syllabusWidth.min,
+          max: syllabusWidth.max,
+          onResize: syllabusWidth.setWidth,
+          onReset: syllabusWidth.reset,
+        }}
+      >
+        <RoutineColumn
+          items={routine.items}
+          dayTotalMinutes={routine.dayTotalMinutes}
+          weekStudiedMinutes={routine.weekStudiedMinutes}
+          weekTargetMinutes={activePlan.weekly_hours_target * 60}
+          extraBlock={routine.extraItem}
+          blockRunning={studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE'}
+          siblings={routineSiblings(routineBlockTopic, topicsBySubject)}
+          materials={routineMaterials}
+          peek={peekInfo}
+          hint={recalibration ? describeRecalibrationHint(recalibration) : null}
+          onStartBlock={startRoutineBlock}
+          onSelectTopic={(subjId, topId) => {
+            setSelectedSubjectId(subjId);
+            setSelectedTopicId(topId);
           }}
-        >
-          <SyllabusTreeDock
-            mode={mode}
-            onToggleMode={() => setMode(mode === 'student' ? 'admin' : 'student')}
-            plans={plans}
-            activePlan={activePlan}
-            subjects={subjects}
-            currentSubject={currentSubject}
-            topicsBySubject={topicsBySubject}
-            currentTopic={currentTopic}
-            allocations={cycleData.allocations}
-            onSelectPlan={handleSelectPlan}
-            onSelectSubjectAndTopic={(subjId, topId) => {
-              setSelectedSubjectId(subjId);
-              setSelectedTopicId(topId);
-            }}
-            onOpenCrudModal={openCrudModal}
-            onOpenEdital={() => openCrudModal('topics')}
-          />
-        </SidePanel>
-      )}
+          onReturnToBlock={returnToBlock}
+          onOpenMaterial={openRoutineMaterial}
+          onOpenCycle={() => selectTab('cycle')}
+          onOpenEdital={() => openCrudModal('topics')}
+          onRecalibrate={() => openWizard()}
+          adminToggle={
+            <button
+              type="button"
+              onClick={() => setMode(mode === 'student' ? 'admin' : 'student')}
+              title="Alternar entre Bancada de Estudos e Painel de Trilhas"
+              className="ml-auto flex items-center gap-1 text-xs text-slate-400 hover:text-slate-200"
+            >
+              {mode === 'admin' ? <GraduationCap size={13} /> : <Wrench size={13} />}
+              {mode === 'admin' ? 'Voltar ao estudo' : 'Admin'}
+            </button>
+          }
+        />
+      </SidePanel>
 
       {/* Slot 2: Palco Central */}
       <main className="flex-1 flex flex-col overflow-hidden min-w-0">
         {mode === 'student' ? (
           <>
-            {experienceMode === 'daily' && (
-              <DailyFocusView
-                plan={activePlan}
-                cycleData={cycleData}
-                subjects={subjects}
-                topicsBySubject={topicsBySubject}
-                blockCard={blockCard}
-                onStartBlock={(subjId, topId, durationMinutes) => {
-                  const subject = subjects.find((sub) => sub.id === subjId);
-                  const topic = topId ? (topicsBySubject[subjId] ?? []).find((t) => t.id === topId) : undefined;
-                  if (subject) {
-                    studyBlock.start({
-                      subjectId: subject.id,
-                      subjectName: subject.name,
-                      topicId: topic?.id ?? null,
-                      topicCode: topic?.code ?? null,
-                      topicTitle: topic?.title ?? null,
-                      targetMinutes: durationMinutes,
-                    });
-                  }
-                  setSelectedSubjectId(subjId);
-                  if (topId) setSelectedTopicId(topId);
-                }}
-                onSwitchToProWorkbench={() => setExperienceMode('pro')}
-                onOpenWizard={() => openWizard()}
-              />
-            )}
-
-            {experienceMode === 'pro' && (
+            {(
               <>
                 <div
                   className={`px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 ${
@@ -898,6 +963,7 @@ export default function App() {
                         onGenerateDissection={handleGenerateDissection}
                         onOpenImport={() => setImportOpen(true)}
                         aiConfigured={aiStatus.configured}
+                        sourceLabel={questionSourceLabel}
                       />
                     )}
 
@@ -977,7 +1043,7 @@ export default function App() {
       </main>
 
       {/* Coluna direita: Copiloto e Caderno em abas, sempre montados; recolhe para um trilho */}
-      {experienceMode === 'pro' && mode === 'student' && (
+      {mode === 'student' && (
         <SidePanel
           side="right"
           label="Copiloto e Caderno"

@@ -8,7 +8,7 @@ interface AppHeaderProps {
   planLabel: string;
   daysUntilExam: number | null;
   examParts: ExamPartProgress[];
-  modeSwitch: ReactNode;
+  modeSwitch?: ReactNode;
   saveStatus: ReactNode;
   onRecalibrate: () => void;
   blockClock: ReactNode;

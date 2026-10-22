@@ -51,6 +51,8 @@ interface QuestionWorkbenchProps {
   onGenerateDissection?: (question: Question) => Promise<{ ok: boolean; message?: string }>;
   onOpenImport?: () => void;
   aiConfigured?: boolean;
+  /** Tópico sem questões próprias: diz de onde vieram as mostradas (grupo ou matéria). */
+  sourceLabel?: string | null;
 }
 
 const DIAGNOSIS_BUTTONS: { id: SelfDiagnosisType; label: string; desc: string }[] = [
@@ -98,6 +100,7 @@ export function QuestionWorkbench({
   onGenerateDissection,
   onOpenImport,
   aiConfigured = false,
+  sourceLabel = null,
 }: QuestionWorkbenchProps) {
   const [boardFilter, setBoardFilter] = useState<string>('ALL');
   const [complexityFilter, setComplexityFilter] = useState<string>('ALL');
@@ -436,6 +439,7 @@ export function QuestionWorkbench({
             Questão <strong className="text-white">{safeIndex + 1}</strong> de{' '}
             <strong className="text-white">{filteredQuestions.length}</strong>
           </span>
+          {sourceLabel && <span className="text-xs text-slate-400">· {sourceLabel}</span>}
           <button
             type="button"
             disabled={safeIndex === 0}

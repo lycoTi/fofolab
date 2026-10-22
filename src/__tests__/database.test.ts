@@ -474,3 +474,37 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     expect(LATEST_SCHEMA_VERSION).toBe(5);
   });
 });
+
+describe('Questões do bloco com recuo para o grupo (docs/specs/09)', () => {
+  const q = (statement: string, topicId: string | null) => ({
+    statement,
+    options: ['C) Certo', 'E) Errado'],
+    finalAnswer: 'C',
+    examBoard: 'Cebraspe',
+    examYear: 2024,
+    organ: 'CGU',
+    topicId,
+  });
+
+  it('tópico sem questões mostra as do grupo; sem grupo, as da matéria', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const group = db.createTopic({ subject_id: subjectId, code: '9.2', title: 'Segurança' });
+    const owasp = db.createTopic({ subject_id: subjectId, parent_id: group.id, code: '9.2.1', title: 'OWASP' });
+    const jwt = db.createTopic({ subject_id: subjectId, parent_id: group.id, code: '9.2.2', title: 'JWT' });
+    const lonely = db.createTopic({ subject_id: subjectId, code: '9.9', title: 'Sozinho' });
+    db.importQuestions(subjectId, [q('Item sobre JWT na prova.', jwt.id)]);
+
+    const own = db.getTopicQuestionsWithFallback(jwt.id, subjectId);
+    expect(own.items).toHaveLength(1);
+    expect(own.fallback).toBeNull();
+
+    const fromGroup = db.getTopicQuestionsWithFallback(owasp.id, subjectId);
+    expect(fromGroup.items.map((i) => i.question.topic_id)).toEqual([jwt.id]);
+    expect(fromGroup.fallback).toEqual({ kind: 'group', code: '9.2' });
+
+    const fromSubject = db.getTopicQuestionsWithFallback(lonely.id, subjectId);
+    expect(fromSubject.fallback).toEqual({ kind: 'subject' });
+    expect(fromSubject.items.length).toBeGreaterThan(0);
+  });
+});

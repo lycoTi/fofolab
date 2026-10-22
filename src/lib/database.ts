@@ -1453,6 +1453,43 @@ export function getQuestionsForTopicOrSubject(
   });
 }
 
+export type QuestionFallback = { kind: 'group'; code: string } | { kind: 'subject' } | null;
+
+/**
+ * Questões do tópico do bloco (spec 09). Sem questões no tópico, sobe para o grupo (tópicos com o mesmo
+ * pai) e, sem grupo, para a matéria — e diz de onde vieram, para a tela não fingir que são do tópico.
+ */
+export function getTopicQuestionsWithFallback(
+  topicId: string,
+  subjectId: string
+): { items: { question: Question; dissection: AiDissection | null }[]; fallback: QuestionFallback } {
+  const db = getDb();
+  const withDissection = (questions: Question[]) =>
+    questions.map((question) => ({
+      question,
+      dissection: queryOne<AiDissection>(db, 'SELECT * FROM ai_dissections WHERE question_id = ?', [question.id]),
+    }));
+
+  const own = queryAll<Question>(db, 'SELECT * FROM questions WHERE topic_id = ? ORDER BY exam_year DESC', [topicId]);
+  if (own.length > 0) return { items: withDissection(own), fallback: null };
+
+  const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [topicId]);
+  const parent = topic?.parent_id ? queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [topic.parent_id]) : null;
+  if (parent) {
+    const group = queryAll<Question>(
+      db,
+      `SELECT q.* FROM questions q JOIN topics t ON t.id = q.topic_id
+       WHERE t.parent_id = ? ORDER BY q.exam_year DESC`,
+      [parent.id]
+    );
+    if (group.length > 0) return { items: withDissection(group), fallback: { kind: 'group', code: parent.code ?? parent.title } };
+  }
+
+  const subjectQuestions = queryAll<Question>(db, 'SELECT * FROM questions WHERE subject_id = ? ORDER BY exam_year DESC', [subjectId]);
+  if (subjectQuestions.length === 0) return { items: [], fallback: null };
+  return { items: withDissection(subjectQuestions), fallback: { kind: 'subject' } };
+}
+
 /**
  * Grava em lote as questões importadas (texto/JSON). Ignora enunciados que já existem na
  * disciplina, para que importar o mesmo arquivo duas vezes não duplique nada.
