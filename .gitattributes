@@ -1,1 +1,4 @@
 graphify-out/graph.json merge=graphify
+
+# Skills de terceiros ficam byte a byte como vieram do autor.
+.agents/skills/** -text
