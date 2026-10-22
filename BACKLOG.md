@@ -61,6 +61,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - **7b — acompanhar (spec `07` §5.4–5.5):** registro rápido do que foi feito no TEC (total, certas, em branco) + tela "Bom dia" (relembrar com recordação ativa, blocos de hoje, situação por prova, linha de ânimo com fatos).
+- **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); desempenho do TEC por arquivo salvo; provas anteriores em PDF → banco de questões (formato da spec 06).
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
 - **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` passam do teto de ~250 linhas; painel do ciclo apertado com os dois painéis laterais abertos; bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
