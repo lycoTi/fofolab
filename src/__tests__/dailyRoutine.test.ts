@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineProfileKey, routineSiblings } from '../lib/dailyRoutine';
+import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineGroup, routineProfileKey } from '../lib/dailyRoutine';
 import type { DailyFocusBlock, DailyPlan } from '../lib/dailyPlanner';
 import { recalibrationHint } from '../lib/recalibrationHint';
 import type { SubjectCycleAllocation, TopicHeatItem } from '../lib/cycleEngine';
@@ -24,7 +24,8 @@ const owasp = topic('owasp', 'ti', '2.2.1', 'g22');
 const oauth = topic('oauth', 'ti', '2.2.2', 'g22');
 const jwt = topic('jwt', 'ti', '2.2.3', 'g22');
 const pcasp = topic('pcasp', 'casp', '3.1');
-const topicsBySubject = { ti: [owasp, jwt, oauth], casp: [pcasp] };
+const group22 = topic('g22', 'ti', '2.2');
+const topicsBySubject = { ti: [group22, owasp, jwt, oauth], casp: [pcasp] };
 const blocks = [frozen(1, 'ti', 'owasp', 60), frozen(2, 'casp', 'pcasp', 40)];
 
 describe('roteiro do dia classificado', () => {
@@ -62,10 +63,12 @@ describe('roteiro do dia classificado', () => {
     expect(items[0].topic).toBeNull();
   });
 
-  it('irmãos são os tópicos do mesmo grupo', () => {
-    expect(routineSiblings(owasp, topicsBySubject).map((t) => t.code)).toEqual(['2.2.2', '2.2.3']);
-    expect(routineSiblings(pcasp, topicsBySubject)).toEqual([]);
-    expect(routineSiblings(null, topicsBySubject)).toEqual([]);
+  it('o grupo do bloco tem o pai como raiz e todos os tópicos dele, inclusive o do bloco, em ordem', () => {
+    const group = routineGroup(owasp, topicsBySubject);
+    expect(group.parent?.code).toBe('2.2');
+    expect(group.members.map((t) => t.code)).toEqual(['2.2.1', '2.2.2', '2.2.3']);
+    expect(routineGroup(pcasp, topicsBySubject)).toEqual({ parent: null, members: [] });
+    expect(routineGroup(null, topicsBySubject)).toEqual({ parent: null, members: [] });
   });
 
   it('congela o plano do motor guardando só o necessário', () => {

@@ -32,7 +32,7 @@ function props(overrides: Partial<RoutineColumnProps> = {}): RoutineColumnProps 
     weekTargetMinutes: 840,
     extraBlock: null,
     blockRunning: false,
-    siblings: [topic('oauth', '2.2.2', 'OAuth 2.0'), topic('jwt', '2.2.3', 'JWT')],
+    group: { parent: topic('g', '2.2', 'Segurança de aplicações'), members: [owasp, topic('oauth', '2.2.2', 'OAuth 2.0'), topic('jwt', '2.2.3', 'JWT')] },
     selectedTopicId: 'owasp',
     liveFocusMs: 0,
     materials: { pdfLabel: 'PDF p. 12/40', questionCount: 8, hasNotes: true },
@@ -54,7 +54,7 @@ describe('coluna do roteiro de hoje', () => {
   it('mostra o bloco atual aberto, o feito esmaecido e o próximo recolhido com o motivo', () => {
     render(<RoutineColumn {...props()} />);
     expect(screen.getByText('Hoje · 02:50')).toBeTruthy();
-    expect(screen.getByText('OWASP Top 10')).toBeTruthy();
+    expect(screen.getAllByText('OWASP Top 10').length).toBeGreaterThan(0);
     expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ })).toBeTruthy();
     expect(screen.getByText(/Faltam 01:00 desta matéria na semana \(3\)/)).toBeTruthy();
     expect(screen.getByTestId('routine-item-1').className).toMatch(/opacity/);
@@ -117,21 +117,32 @@ describe('coluna do roteiro de hoje', () => {
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
   });
 
-  it('irmãos aparecem como "outros tópicos do grupo", até 3, e o selecionado é destacado sem mudar de tamanho', () => {
-    const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5', '2.2.6'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
-    render(<RoutineColumn {...props({ siblings: many, selectedTopicId: 't2.2.3' })} />);
-    expect(screen.getByText('Outros tópicos do mesmo grupo')).toBeTruthy();
-    expect(screen.queryByRole('button', { name: /2.2.5/ })).toBeNull();
-    const selected = screen.getByRole('button', { name: /2.2.3/ });
-    expect(selected.getAttribute('aria-current')).toBe('true');
-    fireEvent.click(screen.getByRole('button', { name: 'Ver mais (2)' }));
-    expect(screen.getByRole('button', { name: /2.2.6/ })).toBeTruthy();
+  it('árvore: o grupo é a raiz e os tópicos ficam recuados; o do bloco é marcado e clicar nele volta ao bloco', () => {
+    const p = props({ selectedTopicId: 'oauth' });
+    render(<RoutineColumn {...p} />);
+    expect(screen.getByText('2.2 Segurança de aplicações')).toBeTruthy();
+    expect(screen.queryByText('Outros tópicos do mesmo grupo')).toBeNull();
+    expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ }).getAttribute('aria-current')).toBe('true');
+    fireEvent.click(screen.getByRole('button', { name: /2\.2\.1 OWASP Top 10.*tópico do bloco/ }));
+    expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'owasp');
   });
 
-  it('o irmão selecionado fora dos 3 primeiros abre a lista inteira', () => {
-    const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
-    render(<RoutineColumn {...props({ siblings: many, selectedTopicId: 't2.2.5' })} />);
-    expect(screen.getByRole('button', { name: /2.2.5/ }).getAttribute('aria-current')).toBe('true');
+  it('clicar no título do bloco também volta ao tópico do bloco', () => {
+    const p = props({ selectedTopicId: 'jwt' });
+    render(<RoutineColumn {...p} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Voltar ao tópico do bloco: 2.2.1 OWASP Top 10' }));
+    expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'owasp');
+  });
+
+  it('grupo grande mostra 5 e "Ver mais", sem esconder o do bloco nem o selecionado', () => {
+    const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5', '2.2.6', '2.2.7', '2.2.8'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
+    const members = [...many.slice(0, 6), owasp, many[6]];
+    render(<RoutineColumn {...props({ group: { parent: null, members }, selectedTopicId: 't2.2.8' })} />);
+    expect(screen.getByRole('button', { name: /OWASP Top 10.*tópico do bloco/ })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /2\.2\.8/ }).getAttribute('aria-current')).toBe('true');
+    expect(screen.queryByRole('button', { name: /2\.2\.7/ })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Ver mais (1)' }));
+    expect(screen.getByRole('button', { name: /2\.2\.7/ })).toBeTruthy();
   });
 
   it('barrinha do bloco soma o tempo gravado e o trecho que está correndo', () => {

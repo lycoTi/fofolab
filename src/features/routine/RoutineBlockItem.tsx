@@ -1,8 +1,8 @@
 import { Check, Play } from 'lucide-react';
 import { formatDuration } from '../../lib/timeFormat';
-import type { RoutineItem } from '../../lib/dailyRoutine';
+import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
-import { SiblingTopics } from './SiblingTopics';
+import { TopicTree } from './TopicTree';
 
 export interface RoutineMaterials {
   pdfLabel: string | null;
@@ -11,7 +11,7 @@ export interface RoutineMaterials {
 }
 
 interface CurrentBlockExtras {
-  siblings: Topic[];
+  group: TopicGroup;
   selectedTopicId: string | null;
   /** Foco do trecho em andamento, ainda não gravado como sessão (para a barra andar ao vivo). */
   liveFocusMs: number;
@@ -58,7 +58,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
     );
   }
 
-  const { siblings, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
+  const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
   const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
   const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / block.durationMinutes) * 100));
   return (
@@ -79,12 +79,19 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
         <div className="h-full rounded-full bg-orange-500 transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progressPercent}%` }} />
       </div>
       {topic && (
-        <p className="text-sm font-medium leading-snug text-slate-100">
+        <button
+          type="button"
+          onClick={() => onSelectTopic(topic.subject_id, topic.id)}
+          aria-label={`Voltar ao tópico do bloco: ${topicLabel(topic)}`}
+          className="block w-full rounded-md text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
+        >
           {topic.code && <span className="mr-1 font-mono text-orange-300">{topic.code}</span>}
           <span>{topic.title}</span>
-        </p>
+        </button>
       )}
-      {siblings.length > 0 && <SiblingTopics siblings={siblings} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />}
+      {group.members.length > 1 && (
+        <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />
+      )}
       <div className="flex flex-wrap gap-1.5">
         <button type="button" className={materialButton} onClick={() => onOpenMaterial('pdf')}>
           {materials.pdfLabel ?? 'Abrir PDF'}

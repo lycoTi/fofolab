@@ -88,6 +88,10 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   atual da coluna (anda ao vivo); clicar no relógio do cabeçalho leva ao Ciclo.
   → 9c Revisão do dia (usará a migração **v7**; a v6 acrescentou a assinatura do perfil ao roteiro) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
+- **Questões: um só copiloto (pedido do dono, 22/10):** o painel "Explicação & Estudo Reverso" ao lado da questão repete o
+  papel do Copiloto da coluna direita. Avaliar fundir o Estudo Reverso no copiloto e dar a ele a voz do hamster
+  (nome amigável: **FofoIA** ou **FofoPiloto**), liberando espaço para a questão. Brainstorm antes de construir.
+- **Caderno:** já grava sozinho ("Salvo automaticamente", como o Google Docs) — avaliar tirar o botão "Salvar" redundante.
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso
   pessoal); extração, sem duplicadas (`normalizeStatement`), classificação por tópico. Catálogo de provas feito à mão ou

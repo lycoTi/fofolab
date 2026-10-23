@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Coffee, Compass, Layers, Settings2 } from 'lucide-react';
 import { formatDuration } from '../../lib/timeFormat';
-import type { RoutineItem } from '../../lib/dailyRoutine';
+import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
 import { PeekBanner, type PeekInfo } from './PeekBanner';
 import { RoutineBlockItem, type RoutineMaterials } from './RoutineBlockItem';
@@ -14,7 +14,8 @@ export interface RoutineColumnProps {
   /** Roteiro cumprido: bloco extra escolhido pelo motor (o estudante não monta o roteiro). */
   extraBlock: RoutineItem | null;
   blockRunning: boolean;
-  siblings: Topic[];
+  /** Grupo do tópico do bloco (árvore). */
+  group: TopicGroup;
   selectedTopicId: string | null;
   liveFocusMs: number;
   materials: RoutineMaterials;
@@ -41,7 +42,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
   const afterBreak = currentIndex > 0 && items[currentIndex - 1].status === 'done';
 
   const currentExtras = (startLabel: string, item: RoutineItem) => ({
-    siblings: props.siblings,
+    group: props.group,
     selectedTopicId: props.selectedTopicId,
     liveFocusMs: props.liveFocusMs,
     materials: props.materials,

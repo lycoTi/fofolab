@@ -65,12 +65,21 @@ export function buildRoutine(params: {
   return items;
 }
 
-/** Tópicos do mesmo grupo (mesmo pai) — aparecem na coluna só como contexto. */
-export function routineSiblings(topic: Topic | null, topicsBySubject: Record<string, Topic[]>): Topic[] {
-  if (!topic?.parent_id) return [];
-  return (topicsBySubject[topic.subject_id] ?? [])
-    .filter((t) => t.parent_id === topic.parent_id && t.id !== topic.id)
+export interface TopicGroup {
+  /** Tópico "pai" (agrupador): a raiz da árvore na coluna. */
+  parent: Topic | null;
+  /** Todos os tópicos do grupo, inclusive o do bloco, na ordem do edital. */
+  members: Topic[];
+}
+
+/** Grupo do tópico do bloco (mesmo pai), para a árvore da coluna. Tópico sem pai não tem árvore. */
+export function routineGroup(topic: Topic | null, topicsBySubject: Record<string, Topic[]>): TopicGroup {
+  if (!topic?.parent_id) return { parent: null, members: [] };
+  const all = topicsBySubject[topic.subject_id] ?? [];
+  const members = all
+    .filter((t) => t.parent_id === topic.parent_id)
     .sort((a, b) => (a.code ?? '').localeCompare(b.code ?? '', undefined, { numeric: true }));
+  return { parent: all.find((t) => t.id === topic.parent_id) ?? null, members };
 }
 
 /** Roteiro cumprido: um bloco extra escolhido pelo motor, de preferência num tópico que ainda não apareceu hoje. */

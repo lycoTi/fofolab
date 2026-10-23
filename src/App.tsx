@@ -32,7 +32,7 @@ import { useCollapsiblePanel } from './features/workbench-shell/useCollapsiblePa
 import { RoutineColumn } from './features/routine/RoutineColumn';
 import { useDailyRoutine } from './features/routine/useDailyRoutine';
 import { usePeek } from './features/routine/usePeek';
-import { routineSiblings, type RoutineItem } from './lib/dailyRoutine';
+import { routineGroup, type RoutineItem } from './lib/dailyRoutine';
 import { describeRecalibrationHint, recalibrationHint } from './lib/recalibrationHint';
 import { generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
 import { calculateDynamicStudyCycle, startOfWeek } from './lib/cycleEngine';
@@ -897,7 +897,7 @@ export default function App() {
           weekTargetMinutes={activePlan.weekly_hours_target * 60}
           extraBlock={routine.extraItem}
           blockRunning={studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE'}
-          siblings={routineSiblings(routineBlockTopic, topicsBySubject)}
+          group={routineGroup(routineBlockTopic, topicsBySubject)}
           selectedTopicId={currentTopic?.id ?? null}
           liveFocusMs={routineLiveFocusMs}
           materials={routineMaterials}
