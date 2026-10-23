@@ -355,7 +355,10 @@ export default function App() {
   }, [dbReady, routineBlockTopic, questionsVersion, dataVersion]);
 
   // O bloco atual mudou (abriu o app, terminou um bloco, recalibrou): a bancada vai para o tópico dele
-  const routineCurrentKey = routine.currentItem ? `${routine.currentItem.block.subjectId}:${routine.currentItem.block.topicId}` : '';
+  // dataVersion entra na chave: restaurar backup/exemplo leva a seleção ao primeiro tópico, e ela precisa voltar ao bloco
+  const routineCurrentKey = routine.currentItem
+    ? `${routine.currentItem.block.subjectId}:${routine.currentItem.block.topicId}:${dataVersion}`
+    : '';
   useEffect(() => {
     const item = routine.currentItem;
     if (!item) return;
@@ -567,7 +570,7 @@ export default function App() {
       handleSelectPlan(targetPlanId);
     }
     // Perfil novo: o roteiro de hoje é refeito com ele
-    routine.refreeze();
+    routine.refreeze(targetPlanId);
   };
 
   /** Matérias do plano com os tópicos de primeiro nível, para a autoavaliação do assistente. */

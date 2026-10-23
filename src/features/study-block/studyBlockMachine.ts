@@ -62,7 +62,8 @@ export interface RecordedSession {
 export type BlockAction =
   | { type: 'START'; block: BlockTarget; now: number }
   | { type: 'SET_MODE'; mode: BlockMode; focusMinutes: number }
-  | { type: 'PAUSE'; now: number }
+  /** silent: pausa automática (olhada fora do roteiro) — não conta como atrito do estudante. */
+  | { type: 'PAUSE'; now: number; silent?: boolean }
   | { type: 'RESUME'; now: number }
   | { type: 'TICK'; now: number }
   | { type: 'NEXT'; now: number }
@@ -176,7 +177,7 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
         running: false,
         segmentFocusedMs: focusedSegmentMs(state, action.now),
         segmentStartedAt: null,
-        segmentPauses: state.segmentPauses + (inFocus ? 1 : 0),
+        segmentPauses: state.segmentPauses + (inFocus && !action.silent ? 1 : 0),
         pausedRemainingMs: state.phaseEndsAt !== null ? Math.max(0, state.phaseEndsAt - action.now) : null,
         phaseEndsAt: null,
       });

@@ -1,13 +1,14 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { clearDailyPlan, getDailyPlan, localDateKey, saveDailyPlan } from '../../lib/database';
 import type { CycleCalculationResult } from '../../lib/cycleEngine';
 import { planDailyBlocks } from '../../lib/dailyPlanner';
-import { buildRoutine, freezeDailyPlan, pickExtraBlock, type RoutineItem } from '../../lib/dailyRoutine';
-import type { StudyPlan, StudySession, Subject, Topic } from '../../types/database';
+import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineProfileKey, type RoutineItem } from '../../lib/dailyRoutine';
+import type { FrozenBlock, StudyPlan, StudySession, Subject, Topic } from '../../types/database';
 
-function startOfTodayIso(): string {
-  const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+/** Meia-noite local do dia 'YYYY-MM-DD', em ISO (as sessões são gravadas em ISO). */
+function startOfDayIso(dateKey: string): string {
+  const [year, month, day] = dateKey.split('-').map(Number);
+  return new Date(year, month - 1, day).toISOString();
 }
 
 /**
@@ -34,49 +35,65 @@ export function useDailyRoutine(params: {
     return planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: plan.weekly_hours_target });
   }, [plan, cycleData, topicsBySubject]);
 
+  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject) : '';
+
+  // Roteiro gravado só vale se foi congelado com o perfil atual
   const frozen = useMemo(() => {
     if (!dbReady || !plan) return null;
     // dataVersion e savedVersion não aparecem no corpo: estão aqui para reler depois de gravar ou restaurar backup
     void dataVersion;
     void savedVersion;
-    return getDailyPlan(plan.id, dateKey);
-  }, [dbReady, plan, dateKey, dataVersion, savedVersion]);
+    const saved = getDailyPlan(plan.id, dateKey);
+    if (!saved || saved.profileKey !== profileKey) return null;
+    return saved.blocks;
+  }, [dbReady, plan, dateKey, profileKey, dataVersion, savedVersion]);
 
-  // 1. Primeira abertura do dia: congela o que o motor planejou
+  // 1. Primeira abertura do dia (ou perfil recalibrado): congela o que o motor planejou
   useEffect(() => {
     if (!dbReady || !plan || frozen || !livePlan || livePlan.blocks.length === 0) return;
-    saveDailyPlan(plan.id, dateKey, freezeDailyPlan(livePlan));
+    saveDailyPlan(plan.id, dateKey, freezeDailyPlan(livePlan), profileKey);
     setSavedVersion((v) => v + 1);
-  }, [dbReady, plan, frozen, livePlan, dateKey]);
+  }, [dbReady, plan, frozen, livePlan, dateKey, profileKey]);
 
   const blocks = useMemo(() => frozen ?? (livePlan ? freezeDailyPlan(livePlan) : []), [frozen, livePlan]);
 
+  // A data entra nas dependências: virar a meia-noite com o app aberto não pode levar o tempo de ontem
   const todaySessions = useMemo(() => {
-    const since = startOfTodayIso();
+    const since = startOfDayIso(dateKey);
     return weekSessions.filter((s) => s.started_at >= since);
-  }, [weekSessions]);
+  }, [weekSessions, dateKey]);
 
   const items = useMemo(
     () => buildRoutine({ blocks, subjects, topicsBySubject, todaySessions }),
     [blocks, subjects, topicsBySubject, todaySessions]
   );
 
-  // 2. Roteiro cumprido: um bloco extra escolhido pelo motor
-  const extraItem = useMemo<RoutineItem | null>(() => {
-    const allDone = items.length > 0 && items.every((i) => i.status === 'done');
-    if (!allDone || !livePlan) return null;
-    const extra = pickExtraBlock(livePlan, blocks);
-    if (!extra) return null;
-    const [item] = buildRoutine({ blocks: [extra], subjects, topicsBySubject, todaySessions: [] });
-    return item ?? null;
-  }, [items, livePlan, blocks, subjects, topicsBySubject]);
+  // 2. Roteiro cumprido: um bloco extra escolhido pelo motor UMA vez por plano e dia. O motor recalcula a cada
+  //    questão respondida; se o extra acompanhasse, a bancada trocaria de tópico sozinha no meio do estudo.
+  const extraRef = useRef<{ key: string; block: FrozenBlock | null } | null>(null);
+  const allDone = items.length > 0 && items.every((i) => i.status === 'done');
+  const extraKey = `${plan?.id ?? ''}|${dateKey}|${blocks.length}`;
+  if (allDone && livePlan && extraRef.current?.key !== extraKey) {
+    extraRef.current = { key: extraKey, block: pickExtraBlock(livePlan, blocks) };
+  }
+  const extraBlock = allDone && extraRef.current?.key === extraKey ? extraRef.current.block : null;
 
-  /** Recalibrar o perfil: o roteiro de hoje é refeito com o perfil novo. */
-  const refreeze = useCallback(() => {
-    if (!plan) return;
-    clearDailyPlan(plan.id, localDateKey(new Date()));
-    setSavedVersion((v) => v + 1);
-  }, [plan]);
+  const extraItem = useMemo<RoutineItem | null>(() => {
+    if (!extraBlock) return null;
+    const [item] = buildRoutine({ blocks: [extraBlock], subjects, topicsBySubject, todaySessions: [] });
+    return item ?? null;
+  }, [extraBlock, subjects, topicsBySubject]);
+
+  /** Recalibrar o perfil: o roteiro de hoje do plano calibrado (por padrão, o ativo) é refeito com o perfil novo. */
+  const refreeze = useCallback(
+    (planId?: string) => {
+      const target = planId ?? plan?.id;
+      if (!target) return;
+      clearDailyPlan(target, localDateKey(new Date()));
+      setSavedVersion((v) => v + 1);
+    },
+    [plan]
+  );
 
   const currentItem = items.find((i) => i.status === 'current') ?? extraItem;
   const dayTotalMinutes = blocks.reduce((acc, b) => acc + b.durationMinutes, 0);

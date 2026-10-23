@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineSiblings } from '../lib/dailyRoutine';
+import { buildRoutine, freezeDailyPlan, pickExtraBlock, routineProfileKey, routineSiblings } from '../lib/dailyRoutine';
 import type { DailyFocusBlock, DailyPlan } from '../lib/dailyPlanner';
 import { recalibrationHint } from '../lib/recalibrationHint';
 import type { SubjectCycleAllocation, TopicHeatItem } from '../lib/cycleEngine';
@@ -109,5 +109,25 @@ describe('aviso discreto de recalibrar', () => {
   it('com várias, fala primeiro da que pesa mais na prova', () => {
     const hint = recalibrationHint([alloc('a', 'A', 3, 30, 1), alloc('b', 'B', 4, 40, 2)], [heat('a', 60), heat('b', 60)]);
     expect(hint?.subjectName).toBe('B');
+  });
+});
+
+describe('assinatura do perfil do roteiro', () => {
+  const planOf = (hours: number, strategy: string | null) => ({ id: 'p', weekly_hours_target: hours, strategy_mode: strategy }) as unknown as import('../types/database').StudyPlan;
+  const subj = (level: number, minutes: number, mastery = 50) =>
+    ({ id: 'ti', initial_knowledge_level: level, cycle_allocated_minutes: minutes, measured_mastery_score: mastery }) as unknown as Subject;
+  const base = routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] });
+
+  it('muda quando horas, estratégia, autoavaliação ou distribuição do ciclo mudam', () => {
+    expect(routineProfileKey(planOf(21, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] })).not.toBe(base);
+    expect(routineProfileKey(planOf(14, 'BASE_COMUM'), [subj(2, 300)], { ti: [owasp] })).not.toBe(base);
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(3, 300)], { ti: [owasp] })).not.toBe(base);
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 400)], { ti: [owasp] })).not.toBe(base);
+    const leveled = { ...owasp, initial_knowledge_level: 3 } as Topic;
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [leveled] })).not.toBe(base);
+  });
+
+  it('não muda só porque o estudante estudou (domínio mudou)', () => {
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300, 90)], { ti: [owasp] })).toBe(base);
   });
 });

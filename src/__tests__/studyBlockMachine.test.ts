@@ -87,6 +87,16 @@ describe('Bloco de estudo em pomodoros', () => {
     expect(state.phase).toBe('BREAK');
   });
 
+  it('pausa da olhada (silenciosa) não conta como atrito do estudante', () => {
+    const { recorded } = run([
+      { type: 'START', block, now: 0 },
+      { type: 'PAUSE', now: 10 * MIN, silent: true },
+      { type: 'RESUME', now: 25 * MIN },
+      { type: 'TICK', now: 45 * MIN },
+    ]);
+    expect(recorded).toEqual([expect.objectContaining({ durationMinutes: 30, pausesCount: 0 })]);
+  });
+
   it('concluir no meio grava só o foco feito; pular registra o atrito', () => {
     const finished = run([
       { type: 'START', block, now: 0 },

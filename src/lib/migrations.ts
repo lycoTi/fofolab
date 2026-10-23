@@ -78,6 +78,7 @@ export const MIGRATIONS: Migration[] = [
         plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
         date TEXT NOT NULL,
         blocks_json TEXT NOT NULL,
+        profile_key TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (plan_id, date)
       )`);

@@ -18,7 +18,7 @@ function controller(running: boolean): StudyBlockController {
     running,
     block: { subjectId: 's', subjectName: 'TI', topicId: 'owasp', topicCode: '2.2.1', topicTitle: 'OWASP', targetMinutes: 60 },
   } as unknown as BlockState;
-  return { state, pause: vi.fn(), resume: vi.fn() } as unknown as StudyBlockController;
+  return { state, pause: vi.fn(), pauseSilently: vi.fn(), resume: vi.fn() } as unknown as StudyBlockController;
 }
 
 beforeEach(() => vi.useFakeTimers());
@@ -42,7 +42,7 @@ describe('olhada fora do roteiro', () => {
       initialProps: { selectedTopic: blockTopic, blockTopic, studyBlock: block },
     });
     rerender({ selectedTopic: outside, blockTopic, studyBlock: block });
-    expect(block.pause).toHaveBeenCalledTimes(1);
+    expect(block.pauseSilently).toHaveBeenCalledTimes(1);
     expect(result.current.kind).toBe('outside');
     expect(result.current.pausedByPeek).toBe(true);
 
@@ -60,7 +60,7 @@ describe('olhada fora do roteiro', () => {
     });
     rerender({ selectedTopic: outside, blockTopic, studyBlock: block });
     rerender({ selectedTopic: blockTopic, blockTopic, studyBlock: block });
-    expect(block.pause).not.toHaveBeenCalled();
+    expect(block.pauseSilently).not.toHaveBeenCalled();
     expect(block.resume).not.toHaveBeenCalled();
   });
 

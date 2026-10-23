@@ -451,14 +451,14 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     const planId = db.getActiveStudyPlan()!.id;
     const block = { blockNumber: 1, subjectId: 's1', topicId: 't1', durationMinutes: 60, reasonText: 'Faltam 01:00' };
 
-    db.saveDailyPlan(planId, '2026-10-22', [block]);
-    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual([block]);
+    db.saveDailyPlan(planId, '2026-10-22', [block], 'perfil-1');
+    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual({ blocks: [block], profileKey: 'perfil-1' });
     expect(db.getDailyPlan(planId, '2026-10-23')).toBeNull();
     expect(db.getDailyPlan('outro-plano', '2026-10-22')).toBeNull();
 
     const replaced = { ...block, durationMinutes: 30 };
-    db.saveDailyPlan(planId, '2026-10-22', [replaced]);
-    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual([replaced]);
+    db.saveDailyPlan(planId, '2026-10-22', [replaced], 'perfil-2');
+    expect(db.getDailyPlan(planId, '2026-10-22')).toEqual({ blocks: [replaced], profileKey: 'perfil-2' });
 
     db.clearDailyPlan(planId, '2026-10-22');
     expect(db.getDailyPlan(planId, '2026-10-22')).toBeNull();

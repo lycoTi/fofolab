@@ -18,6 +18,8 @@ export interface StudyBlockController {
   message: string | null;
   start: (block: BlockTarget) => void;
   pause: () => void;
+  /** Pausa automática (olhada fora do roteiro): não conta como atrito do estudante. */
+  pauseSilently: () => void;
   resume: () => void;
   next: () => void;
   finish: () => void;
@@ -67,6 +69,7 @@ export function useStudyBlock(): StudyBlockController {
     message,
     start: (block) => dispatch({ type: 'START', block, now: Date.now() }),
     pause: () => dispatch({ type: 'PAUSE', now: Date.now() }),
+    pauseSilently: () => dispatch({ type: 'PAUSE', now: Date.now(), silent: true }),
     resume: () => dispatch({ type: 'RESUME', now: Date.now() }),
     next: () => dispatch({ type: 'NEXT', now: Date.now() }),
     finish: () => dispatch({ type: 'FINISH', now: Date.now() }),

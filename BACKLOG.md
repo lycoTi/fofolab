@@ -80,6 +80,9 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   recalibrar; recalibrar refaz o roteiro do dia. Corrigido no caminho: o detalhe do Mapa de Calor fazia a grade tremer ao
   passar o mouse. E2E `e2e/roteiro.spec.ts`; `npm test`, `test:e2e` (2 rodadas) e `build` verdes. A importação de questões
   passa a sugerir a matéria aberta (a do bloco de hoje), não a primeira da lista.
+  Revisão independente: pausa da olhada não conta como atrito; virada do dia não herda o tempo de ontem; bloco extra
+  fica fixo no dia; o roteiro guarda a assinatura do perfil e é refeito sozinho se o perfil mudou (recalibrar e fechar o
+  app antes de gravar não deixa o roteiro antigo); restaurar backup volta a bancada ao bloco. E2E: 3 rodadas verdes.
   → 9c Revisão do dia (usará a migração **v6**) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**

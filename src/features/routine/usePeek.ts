@@ -35,7 +35,7 @@ export function usePeek(params: { selectedTopic: Topic | null; blockTopic: Topic
     if (peeking) {
       const isRoutineBlock = block?.topicId === blockTopic?.id;
       if (phase === 'FOCUS' && running && isRoutineBlock) {
-        studyBlock.pause();
+        studyBlock.pauseSilently();
         setPausedByPeek(true);
       }
       return;

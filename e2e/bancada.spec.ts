@@ -200,6 +200,8 @@ test('excluir e restaurar o exemplo pedem confirmação; a cópia automática pe
   await expect(dialog.getByText(/Cópia restaurada com sucesso/)).toBeVisible();
   await dialog.getByRole('button', { name: /1\. Planos/ }).click();
   await expect(dialog.getByText('Plano Pessoal E2E').first()).toBeVisible();
+  // Trocar o banco inteiro não pode deixar a bancada "olhando" outro tópico sem o estudante ter pedido
+  await expect(page.getByLabel('Roteiro de hoje')).not.toContainText('fora do roteiro');
 });
 
 const TEST_PDF = { name: 'material-teste.pdf', mimeType: 'application/pdf', buffer: textPdf(6) };

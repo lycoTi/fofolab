@@ -1,5 +1,5 @@
 import type { DailyPlan } from './dailyPlanner';
-import type { FrozenBlock, StudySession, Subject, Topic } from '../types/database';
+import type { FrozenBlock, StudyPlan, StudySession, Subject, Topic } from '../types/database';
 
 /**
  * Roteiro do dia (spec 09): os blocos são congelados na primeira abertura do dia e, a partir das
@@ -80,4 +80,23 @@ export function pickExtraBlock(live: DailyPlan, frozen: FrozenBlock[]): FrozenBl
   const usedTopics = new Set(frozen.map((b) => b.topicId));
   const fresh = freezeDailyPlan(live).find((b) => !usedTopics.has(b.topicId));
   return { ...(fresh ?? first), blockNumber: frozen.length + 1 };
+}
+
+/**
+ * Assinatura do perfil com que o roteiro foi congelado: horas, estratégia, autoavaliação e distribuição do
+ * ciclo. Se mudar (recalibrou), o roteiro gravado está desatualizado e é refeito — mesmo que o app tenha sido
+ * fechado antes de gravar o roteiro novo. Estudar (domínio, calor) não muda a assinatura.
+ */
+export function routineProfileKey(plan: StudyPlan, subjects: Subject[], topicsBySubject: Record<string, Topic[]>): string {
+  const subjectPart = [...subjects]
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .map((s) => `${s.id}:${s.initial_knowledge_level}:${s.cycle_allocated_minutes}`)
+    .join(',');
+  const topicPart = subjects
+    .flatMap((s) => topicsBySubject[s.id] ?? [])
+    .filter((t) => t.initial_knowledge_level != null)
+    .map((t) => `${t.id}:${t.initial_knowledge_level}`)
+    .sort()
+    .join(',');
+  return `${plan.weekly_hours_target}|${plan.strategy_mode ?? ''}|${subjectPart}|${topicPart}`;
 }

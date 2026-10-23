@@ -1379,26 +1379,27 @@ export function getStudySessionsSince(sinceIso: string): StudySession[] {
 // Roteiro do dia congelado (spec 09): gravado na primeira abertura do dia, por plano
 // ============================================================================
 
-export function getDailyPlan(planId: string, dateKey: string): FrozenBlock[] | null {
-  const row = queryOne<{ blocks_json: string }>(
+/** Roteiro gravado + assinatura do perfil com que foi congelado (perfil diferente = roteiro desatualizado). */
+export function getDailyPlan(planId: string, dateKey: string): { blocks: FrozenBlock[]; profileKey: string | null } | null {
+  const row = queryOne<{ blocks_json: string; profile_key: string | null }>(
     getDb(),
-    'SELECT blocks_json FROM daily_plans WHERE plan_id = ? AND date = ?',
+    'SELECT blocks_json, profile_key FROM daily_plans WHERE plan_id = ? AND date = ?',
     [planId, dateKey]
   );
   if (!row) return null;
   try {
-    return JSON.parse(row.blocks_json) as FrozenBlock[];
+    return { blocks: JSON.parse(row.blocks_json) as FrozenBlock[], profileKey: row.profile_key };
   } catch {
     // Roteiro gravado ilegível: tratado como ausente, e o app congela um novo
     return null;
   }
 }
 
-export function saveDailyPlan(planId: string, dateKey: string, blocks: FrozenBlock[]): void {
+export function saveDailyPlan(planId: string, dateKey: string, blocks: FrozenBlock[], profileKey: string): void {
   getDb().run(
-    `INSERT INTO daily_plans (plan_id, date, blocks_json) VALUES (?, ?, ?)
-     ON CONFLICT(plan_id, date) DO UPDATE SET blocks_json = excluded.blocks_json`,
-    [planId, dateKey, JSON.stringify(blocks)]
+    `INSERT INTO daily_plans (plan_id, date, blocks_json, profile_key) VALUES (?, ?, ?, ?)
+     ON CONFLICT(plan_id, date) DO UPDATE SET blocks_json = excluded.blocks_json, profile_key = excluded.profile_key`,
+    [planId, dateKey, JSON.stringify(blocks), profileKey]
   );
   persistDatabase();
 }
