@@ -58,7 +58,7 @@ test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Volt
   await expect(column(page)).not.toContainText('fora do roteiro');
 });
 
-test('a barrinha do bloco anda com o tempo e o relógio do cabeçalho leva ao Ciclo', async ({ page }) => {
+test('a barrinha do bloco anda com o tempo e o relógio do cabeçalho leva ao FofoDoro', async ({ page }) => {
   await page.clock.install();
   await openApp(page);
   await column(page).getByRole('button', { name: 'Iniciar bloco' }).click();
@@ -73,7 +73,9 @@ test('a barrinha do bloco anda com o tempo e o relógio do cabeçalho leva ao Ci
   await expect.poll(async () => Number(await blockBar.getAttribute('aria-valuenow'))).toBeGreaterThan(before);
   await expect.poll(async () => Number(await pomodoroBar.getAttribute('aria-valuenow'))).toBeGreaterThan(0);
 
-  await page.getByRole('button', { name: 'Ver o bloco no Ciclo' }).click();
-  await expect(page.getByRole('region', { name: 'Bloco de estudo' })).toBeVisible();
+  // Com a coluna recolhida, o relógio do cabeçalho reabre a coluna e leva o foco ao FofoDoro
+  await page.getByRole('button', { name: 'Recolher roteiro' }).click();
+  await page.getByRole('button', { name: 'Ver o bloco na coluna Hoje' }).click();
+  await expect(column(page).getByRole('group', { name: 'FofoDoro' })).toBeFocused();
   await page.screenshot({ path: `${SCREENS}/10-barras-de-progresso.png` });
 });

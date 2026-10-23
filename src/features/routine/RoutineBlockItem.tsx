@@ -1,4 +1,5 @@
-import { Check, Play } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
+import { Check, ChevronDown, Play } from 'lucide-react';
 import { formatDuration } from '../../lib/timeFormat';
 import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
@@ -21,6 +22,8 @@ interface CurrentBlockExtras {
   onStart: () => void;
   onSelectTopic: (subjectId: string, topicId: string) => void;
   onOpenMaterial: (kind: 'pdf' | 'questions' | 'notes') => void;
+  fofodoro: ReactNode | null;
+  preview: ReactNode | null;
 }
 
 function topicLabel(topic: Topic | null): string {
@@ -58,7 +61,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
     );
   }
 
-  const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
+  const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial, fofodoro, preview } = current;
   const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
   // Com grupo, o título é o tópico "pai" e o do bloco aparece só na árvore (senão pareceria pai de si mesmo)
   const hasTree = group.members.length > 1;
@@ -99,7 +102,9 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
         </button>
       )}
       {hasTree && (
-        <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />
+        <BlockTopics collapsible={Boolean(fofodoro)} label={topicLabel(topic)}>
+          <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />
+        </BlockTopics>
       )}
       <div className="flex flex-wrap gap-1.5">
         <button type="button" className={materialButton} onClick={() => onOpenMaterial('pdf')}>
@@ -112,6 +117,8 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
           Caderno
         </button>
       </div>
+      {fofodoro}
+      {!blockRunning && preview}
       {!blockRunning && (
         <button
           type="button"
@@ -123,5 +130,29 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
         </button>
       )}
     </li>
+  );
+}
+
+/**
+ * Com o FofoDoro rodando, a árvore de tópicos vira uma linha (o relógio ganha o espaço); clicar abre de novo.
+ * Sem FofoDoro, a árvore fica sempre aberta.
+ */
+function BlockTopics({ collapsible, label, children }: { collapsible: boolean; label: string; children: ReactNode }) {
+  const [open, setOpen] = useState(false);
+  if (!collapsible) return <>{children}</>;
+  return (
+    <div className="space-y-1.5">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-label={`Tópicos do bloco: ${label}`}
+        className="flex w-full items-center gap-1 rounded-md text-left text-slate-300 transition-colors duration-150 hover:text-white"
+      >
+        <span className="truncate">{label}</span>
+        <ChevronDown size={13} className={`shrink-0 transition-transform duration-200 motion-reduce:transition-none ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && children}
+    </div>
   );
 }

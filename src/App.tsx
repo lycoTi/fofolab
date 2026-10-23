@@ -10,7 +10,9 @@ import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
 import { CycleView } from './features/cycle/CycleView';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
-import { StudyBlockCard } from './features/study-block/StudyBlockCard';
+import { FofoDoro } from './features/fofodoro/FofoDoro';
+import { FofoDoroPreview } from './features/fofodoro/FofoDoroPreview';
+import { Toast } from './features/fofodoro/Toast';
 import { StudyBlockMini } from './features/study-block/StudyBlockMini';
 import { focusedSegmentMs, type BlockTarget, type RecordedSession } from './features/study-block/studyBlockMachine';
 import { useStudyBlock } from './features/study-block/useStudyBlock';
@@ -746,7 +748,6 @@ export default function App() {
         targetMinutes: null,
       }
     : null;
-  const blockCard = <StudyBlockCard controller={studyBlock} startTarget={currentBlockTarget} />;
 
   /**
    * Leitura em tela grande: o PDF precisa de espaço, então a árvore de tópicos e o copiloto se
@@ -857,6 +858,19 @@ export default function App() {
     studyBlock.state.block?.subjectId === routine.currentItem.subject.id &&
     studyBlock.state.block?.topicId === (routine.currentItem.topic?.id ?? null);
   const routineLiveFocusMs = runningOnRoutineBlock ? focusedSegmentMs(studyBlock.state, studyBlock.now) : 0;
+  // FofoDoro (spec 10): dentro do bloco atual quando é ele que roda; senão, num cartão de bloco livre no topo
+  const blockActive = studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE';
+  const fofodoroNode = <FofoDoro controller={studyBlock} />;
+
+  /** Relógio do cabeçalho: abre a coluna (se recolhida) e leva até o FofoDoro. */
+  const openFofoDoro = () => {
+    leftPanel.setOpen(true);
+    window.requestAnimationFrame(() => {
+      const target = document.querySelector<HTMLElement>('[data-fofodoro]');
+      target?.scrollIntoView({ block: 'nearest' });
+      target?.focus();
+    });
+  };
 
   const logTopicOptions = (() => {
     const group = routineGroup(routineBlockTopic, topicsBySubject).members;
@@ -926,7 +940,7 @@ export default function App() {
           examParts={summarizeExamParts(cycleData.allocations, examParts)}
           saveStatus={<SaveStatusIndicator onOpenBackup={() => openCrudModal('backup')} />}
           onRecalibrate={() => openWizard()}
-          blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} onOpen={() => selectTab('cycle')} />}
+          blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} onOpen={openFofoDoro} />}
         />
       )}
 
@@ -959,6 +973,9 @@ export default function App() {
           group={routineGroup(routineBlockTopic, topicsBySubject)}
           selectedTopicId={currentTopic?.id ?? null}
           liveFocusMs={routineLiveFocusMs}
+          fofodoro={blockActive && runningOnRoutineBlock ? fofodoroNode : null}
+          freeBlock={blockActive && !runningOnRoutineBlock ? fofodoroNode : null}
+          preview={<FofoDoroPreview controller={studyBlock} targetMinutes={routine.currentItem?.remainingMinutes ?? null} />}
           questionLog={{
             topics: logTopicOptions,
             defaultTopicId: logInvite?.topicId ?? routineBlockTopic?.id ?? currentTopic?.id ?? null,
@@ -1065,7 +1082,6 @@ export default function App() {
                         plan={activePlan}
                         cycleData={cycleData}
                         examParts={examParts}
-                        blockCard={blockCard}
                         onUpdateWeeklyHours={(newWeeklyHours) => {
                           updateStudyPlan({ id: activePlan.id, weekly_hours_target: newWeeklyHours });
                           refreshData(currentSubject?.id, currentTopic?.id);
@@ -1295,6 +1311,7 @@ export default function App() {
       />
 
       {confirmDialog}
+      <Toast message={studyBlock.message} messageId={studyBlock.messageId} onClose={studyBlock.dismissMessage} />
     </div>
   );
 }

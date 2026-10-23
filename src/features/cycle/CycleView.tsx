@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useState } from 'react';
 import { CalendarClock, CheckCircle2, RefreshCw, Sliders, Sparkles } from 'lucide-react';
 import { STRATEGY_LABELS, type CycleCalculationResult } from '../../lib/cycleEngine';
 import { formatDuration } from '../../lib/timeFormat';
@@ -17,7 +17,6 @@ export function CycleView({
   plan,
   cycleData,
   examParts,
-  blockCard,
   onUpdateWeeklyHours,
   onApplyRecommendedCycle,
   onOpenSubject,
@@ -25,8 +24,6 @@ export function CycleView({
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
   examParts: ExamPart[];
-  /** Cartão do bloco de estudo (o mesmo do "Meu Dia"). */
-  blockCard: ReactNode;
   onUpdateWeeklyHours: (hours: number) => void;
   onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
   onOpenSubject?: (subjectId: string) => void;
@@ -100,8 +97,6 @@ export function CycleView({
           </div>
         </details>
       </section>
-
-      {blockCard}
 
       {suggestions.length > 0 && (
         <section aria-label="Sugestões para o próximo ciclo" className="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2.5">

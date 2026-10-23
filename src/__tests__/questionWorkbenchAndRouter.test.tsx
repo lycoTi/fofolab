@@ -5,7 +5,8 @@ import { QuestionWorkbench } from '../components/QuestionWorkbench';
 import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
 import { CycleView } from '../features/cycle/CycleView';
 import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
-import { StudyBlockCard } from '../features/study-block/StudyBlockCard';
+import { FofoDoro } from '../features/fofodoro/FofoDoro';
+import { FofoDoroPreview } from '../features/fofodoro/FofoDoroPreview';
 import { StudyBlockMini } from '../features/study-block/StudyBlockMini';
 import { useStudyBlock } from '../features/study-block/useStudyBlock';
 import { NotebookDockPanel } from '../features/notebook-dock/NotebookDockPanel';
@@ -42,13 +43,14 @@ const FORBIDDEN_JARGON = [
   'Cache',
 ];
 
-function BlockCardHarness() {
+/** FofoDoro antes do play (prévia) e depois (relógio), para a auditoria de jargão. */
+function FofoDoroHarness() {
   const controller = useStudyBlock();
   return (
-    <StudyBlockCard
-      controller={controller}
-      startTarget={{ subjectId: 's', subjectName: 'Matéria', topicId: null, topicCode: null, topicTitle: null, targetMinutes: 60 }}
-    />
+    <>
+      <FofoDoroPreview controller={controller} targetMinutes={60} />
+      <FofoDoro controller={controller} />
+    </>
   );
 }
 
@@ -277,11 +279,11 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           plan={cguPlan}
           cycleData={cycleData}
           examParts={[]}
-          blockCard={<BlockCardHarness />}
           onUpdateWeeklyHours={vi.fn()}
           onApplyRecommendedCycle={vi.fn()}
         />
       ).container,
+      render(<FofoDoroHarness />).container,
       render(<TopicHeatGrid cycleData={cycleData} examParts={[]} onJumpToTopic={vi.fn()} />).container,
       render(
         <NotebookDockPanel
@@ -365,7 +367,7 @@ describe('relógio do cabeçalho', () => {
     render(<MiniHarness onOpen={onOpen} />);
     fireEvent.click(screen.getByRole('button', { name: 'Começar bloco de estudo' }));
     expect(screen.getByRole('progressbar', { name: 'Progresso do pomodoro' })).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Ver o bloco no Ciclo' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Ver o bloco na coluna Hoje' }));
     expect(onOpen).toHaveBeenCalled();
   });
 });

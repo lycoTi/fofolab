@@ -48,23 +48,6 @@ export function BlockModePicker({
   );
 }
 
-/** Bolinhas dos pomodoros: feitos (cheios), atual (contorno laranja) e que faltam. */
-export function PomodoroDots({ done, total, current }: { done: number; total: number; current: boolean }) {
-  if (total > 8) {
-    return <span className="text-[11px] text-slate-300 font-mono">{done}/{total}</span>;
-  }
-  return (
-    <span className="flex items-center gap-1" aria-label={`${done} de ${total} pomodoros feitos`}>
-      {Array.from({ length: total }, (_, i) => {
-        let style = 'bg-slate-700';
-        if (i < done) style = 'bg-orange-500';
-        else if (i === done && current) style = 'bg-transparent ring-2 ring-orange-400';
-        return <span key={i} className={`h-2.5 w-2.5 rounded-full ${style}`} />;
-      })}
-    </span>
-  );
-}
-
 export const PHASE_LABELS: Record<BlockState['phase'], string> = {
   IDLE: 'Nenhum bloco em andamento',
   FOCUS: 'Foco',

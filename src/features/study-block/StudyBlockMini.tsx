@@ -48,8 +48,8 @@ export function StudyBlockMini({
         type="button"
         onClick={onOpen}
         disabled={!onOpen}
-        aria-label="Ver o bloco no Ciclo"
-        title="Ver o bloco no Ciclo"
+        aria-label="Ver o bloco na coluna Hoje"
+        title="Ver o bloco na coluna Hoje"
         className="flex min-w-0 items-center gap-2 rounded-lg hover:text-white disabled:cursor-default"
       >
         <Timer size={13} className={state.running ? 'text-orange-400 animate-pulse' : 'text-slate-400'} />

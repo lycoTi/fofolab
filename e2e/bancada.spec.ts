@@ -379,14 +379,12 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
   await skipWizard(page);
   await page.goto('/');
 
-  // O cartão do bloco fica no Ciclo; "Iniciar bloco" na coluna começa um pomodoro de 30 min no tópico do bloco
-  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
-  const blockCard = page.getByRole('region', { name: 'Bloco de estudo' });
-  await expect(blockCard).toBeVisible();
-  await blockCard.getByRole('radio', { name: '00:30' }).click();
+  // FofoDoro (spec 10): fica no bloco atual da coluna; pomodoros de 30 min e play
+  await routineColumn(page).getByRole('radio', { name: '00:30' }).click();
   await routineColumn(page).getByRole('button', { name: 'Iniciar bloco' }).click();
-  await expect(blockCard.getByText('Foco', { exact: true })).toBeVisible();
-  await expect(blockCard.getByLabel(/0 de \d+ pomodoros feitos/)).toBeVisible();
+  const fofodoro = routineColumn(page).getByRole('group', { name: 'FofoDoro' });
+  await expect(fofodoro.getByRole('img', { name: /^Foco:/ })).toBeVisible();
+  await expect(fofodoro.getByText(/^Pomodoro 1 de \d+$/)).toBeVisible();
   // O relógio do cabeçalho mostra o mesmo bloco
   await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/11-bloco-em-pomodoros.png` });
@@ -394,12 +392,13 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
   // Salto direto, como uma janela minimizada: o bloco se acerta pelo horário real
   await page.clock.fastForward(30 * 60_000);
   await page.clock.runFor(1_000);
-  await expect(blockCard.getByText('Pausa', { exact: true })).toBeVisible();
-  await expect(blockCard.getByLabel(/1 de \d+ pomodoros feitos/)).toBeVisible();
+  await expect(fofodoro.getByRole('img', { name: /^Pausa:/ })).toBeVisible();
+  await expect(page.getByRole('status').filter({ hasText: 'Parabéns' })).toContainText('Parabéns: 30 minutos de foco!');
   await waitSaved(page);
 
   // Ciclo: a semana mostra os 30 min gravados, tudo em HH:mm; a coluna conta o tempo no bloco
   await expect(routineColumn(page)).toContainText('00:30 de');
+  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
   await expect(page.getByRole('region', { name: 'Semana de estudo' })).toContainText('00:30');
   await expect(page.locator('main')).not.toContainText(/\d+ ?min\b|\d+\.\d+h\b/);
   await page.screenshot({ path: `${SCREENS}/12-ciclo-por-prova.png`, fullPage: true });

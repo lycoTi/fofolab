@@ -164,3 +164,27 @@ describe('coluna do roteiro de hoje', () => {
     expect(screen.getByText('00:36 de 01:12')).toBeTruthy();
   });
 });
+
+describe('FofoDoro dentro do bloco atual', () => {
+  it('com o bloco rodando, o FofoDoro aparece no bloco atual e a árvore vira uma linha que abre', () => {
+    render(<RoutineColumn {...props({ blockRunning: true, fofodoro: <div>relógio em anel</div> })} />);
+    const current = screen.getByTestId('routine-item-2');
+    expect(current.textContent).toContain('relógio em anel');
+    expect(screen.queryByRole('list', { name: 'Tópicos do grupo' })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: /Tópicos do bloco: 2\.2\.1 OWASP Top 10/ }));
+    expect(screen.getByRole('list', { name: 'Tópicos do grupo' })).toBeTruthy();
+  });
+
+  it('sem bloco rodando, mostra a prévia do plano e o botão de iniciar', () => {
+    render(<RoutineColumn {...props({ preview: <p>4 pomodoros de 25 min</p> })} />);
+    expect(screen.getByTestId('routine-item-2').textContent).toContain('4 pomodoros de 25 min');
+    expect(screen.getByRole('button', { name: 'Iniciar bloco' })).toBeTruthy();
+  });
+
+  it('bloco começado fora do roteiro aparece num cartão próprio no topo', () => {
+    render(<RoutineColumn {...props({ blockRunning: true, freeBlock: <div>relógio do bloco livre</div> })} />);
+    const free = screen.getByRole('region', { name: 'Bloco livre' });
+    expect(free.textContent).toContain('relógio do bloco livre');
+    expect(screen.getByTestId('routine-item-2').textContent).not.toContain('relógio do bloco livre');
+  });
+});

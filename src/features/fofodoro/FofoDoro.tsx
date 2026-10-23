@@ -73,7 +73,7 @@ export function FofoDoro({ controller }: { controller: StudyBlockController }) {
   const inPhase = state.phase === 'FOCUS' || state.phase === 'BREAK';
 
   return (
-    <div className="space-y-2.5" aria-label="FofoDoro" role="group">
+    <div className="space-y-2.5 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-orange-400" aria-label="FofoDoro" role="group" data-fofodoro tabIndex={-1}>
       <div className="flex items-center gap-3">
         <FofoDoroRing
           progress={phaseProgress(state, now) ?? 0}

@@ -33,6 +33,12 @@ export interface RoutineColumnProps {
   onOpenEdital: () => void;
   onRecalibrate: () => void;
   adminToggle: ReactNode;
+  /** FofoDoro do bloco em andamento, mostrado dentro do bloco atual quando é ele que está rodando. */
+  fofodoro?: ReactNode | null;
+  /** Prévia do plano do bloco (pomodoros e pausas), antes do play. */
+  preview?: ReactNode | null;
+  /** Bloco começado fora do roteiro: cartão próprio no topo. */
+  freeBlock?: ReactNode | null;
 }
 
 const footerLink = 'flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300';
@@ -54,6 +60,8 @@ export function RoutineColumn(props: RoutineColumnProps) {
     onStart: () => props.onStartBlock(item),
     onSelectTopic: props.onSelectTopic,
     onOpenMaterial: props.onOpenMaterial,
+    fofodoro: props.fofodoro ?? null,
+    preview: props.preview ?? null,
   });
 
   return (
@@ -64,6 +72,12 @@ export function RoutineColumn(props: RoutineColumnProps) {
 
       {peek && <PeekBanner peek={peek} onReturnToBlock={props.onReturnToBlock} />}
       <QuestionLogPanel {...props.questionLog} />
+      {props.freeBlock && (
+        <section aria-label="Bloco livre" className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
+          <h3 className="text-xs font-semibold text-orange-300">Bloco livre · fora do roteiro de hoje</h3>
+          {props.freeBlock}
+        </section>
+      )}
 
       <ol className="flex-1 space-y-2 overflow-y-auto p-3">
         {items.length === 0 && <li className="text-xs text-slate-400">Calibre seu perfil para o roteiro de hoje aparecer aqui.</li>}
