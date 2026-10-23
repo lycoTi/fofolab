@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 5;
+export const LATEST_SCHEMA_VERSION = 6;
 
 export interface Migration {
   version: number;
@@ -78,10 +78,18 @@ export const MIGRATIONS: Migration[] = [
         plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
         date TEXT NOT NULL,
         blocks_json TEXT NOT NULL,
-        profile_key TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (plan_id, date)
       )`);
+    },
+  },
+  {
+    version: 6,
+    description: 'Roteiro do dia guarda a assinatura do perfil: recalibrar refaz o roteiro mesmo se o app fechar antes de gravar',
+    up: (db) => {
+      // Idempotente: um banco criado direto na v5 pelo contrato de então pode já ter a coluna
+      const columns = db.exec('PRAGMA table_info(daily_plans)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('profile_key')) db.run('ALTER TABLE daily_plans ADD COLUMN profile_key TEXT');
     },
   },
 ];

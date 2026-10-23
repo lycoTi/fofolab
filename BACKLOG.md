@@ -83,7 +83,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Revisão independente: pausa da olhada não conta como atrito; virada do dia não herda o tempo de ontem; bloco extra
   fica fixo no dia; o roteiro guarda a assinatura do perfil e é refeito sozinho se o perfil mudou (recalibrar e fechar o
   app antes de gravar não deixa o roteiro antigo); restaurar backup volta a bancada ao bloco. E2E: 3 rodadas verdes.
-  → 9c Revisão do dia (usará a migração **v6**) (3–5 questões intercaladas dos
+  → 9c Revisão do dia (usará a migração **v7**; a v6 acrescentou a assinatura do perfil ao roteiro) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso

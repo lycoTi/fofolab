@@ -21,7 +21,7 @@
 - **9b (roteiro na coluna) pronta**: Meu Dia e Bancada numa tela só, roteiro congelado no dia (migração v5), olhada com
   pausa automática. Plano em `docs/superpowers/plans/2026-10-22-9b-roteiro-na-coluna.md`.
 - **Próximo:** plano da **9c** (Revisão do dia: 3–5 questões intercaladas dos tópicos esfriando, confiança, pergunta
-  aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v6**.
+  aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v7** (a v6 já existe: assinatura do perfil no roteiro).
 - **Depois:** o brainstorm do **minerador de provas da Cebraspe** (épico no BACKLOG; nada do TEC:
   os Termos de Uso §18.8 proíbem processar o conteúdo deles com script ou IA).
 

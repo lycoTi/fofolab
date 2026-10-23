@@ -471,7 +471,7 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
   });
 
   it('o banco está na versão do roteiro congelado', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(5);
+    expect(LATEST_SCHEMA_VERSION).toBe(6);
   });
 });
 

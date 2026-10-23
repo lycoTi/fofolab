@@ -46,8 +46,41 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const result = prepareSchema(db, latestSchemaSql);
     expect(result.created).toBe(false);
     expect(result.previousVersion).toBe(1);
-    expect(result.appliedMigrations).toEqual([2, 3, 4, 5]);
+    expect(result.appliedMigrations).toEqual([2, 3, 4, 5, 6]);
     expect(getUserVersion(db)).toBe(LATEST_SCHEMA_VERSION);
+    db.close();
+  });
+
+  it('banco que ficou na v5 antiga (roteiro sem assinatura do perfil) ganha a coluna na v6 sem perder o roteiro', () => {
+    const db = new SQL.Database();
+    db.run(schemaV1Sql);
+    prepareSchema(db, latestSchemaSql);
+    // Volta à forma da v5 antiga: daily_plans sem profile_key, com um roteiro já gravado
+    db.run('DROP TABLE daily_plans');
+    db.run(`CREATE TABLE daily_plans (
+      plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+      date TEXT NOT NULL,
+      blocks_json TEXT NOT NULL,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (plan_id, date)
+    )`);
+    db.run('PRAGMA foreign_keys = OFF;'); // só para gravar um roteiro de exemplo sem montar o plano inteiro
+    db.run("INSERT INTO daily_plans (plan_id, date, blocks_json) VALUES ('plano-do-estudante', '2026-10-22', '[]')");
+    db.run('PRAGMA user_version = 5;');
+
+    const result = prepareSchema(db, latestSchemaSql);
+    expect(result.appliedMigrations).toEqual([6]);
+    const columns = db.exec('PRAGMA table_info(daily_plans)')[0].values.map((row) => row[1]);
+    expect(columns).toContain('profile_key');
+    expect(db.exec('SELECT COUNT(*) FROM daily_plans')[0].values[0][0]).toBe(1);
+    db.close();
+  });
+
+  it('a v6 não quebra um banco v5 que já tinha a coluna', () => {
+    const db = new SQL.Database();
+    prepareSchema(db, latestSchemaSql);
+    db.run('PRAGMA user_version = 5;');
+    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([6]);
     db.close();
   });
 
