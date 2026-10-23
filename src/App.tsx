@@ -54,6 +54,9 @@ import {
   getPdfSourceForTopic,
   getQuestionsForTopicOrSubject,
   getTopicQuestionsWithFallback,
+  getQuestionLogs,
+  recordQuestionLog,
+  undoLastQuestionLog,
   type QuestionFallback,
   getRecentAttempts,
   getStudyPlans,
@@ -96,6 +99,7 @@ import type {
   PdfSource,
   Question,
   QuestionAttempt,
+  QuestionLog,
   StudyPlan,
   StudySession,
   Subject,
@@ -160,6 +164,7 @@ export default function App() {
   const [selectedTopicId, setSelectedTopicId] = useState<string>('');
   const [attempts, setAttempts] = useState<QuestionAttempt[]>([]);
   const [sessions, setSessions] = useState<StudySession[]>([]);
+  const [questionLogs, setQuestionLogs] = useState<QuestionLog[]>([]);
   const [topicLinks, setTopicLinks] = useState<TopicLink[]>([]);
   const [allNotebooks, setAllNotebooks] = useState<Notebook[]>([]);
 
@@ -228,6 +233,7 @@ export default function App() {
       setAttempts(getRecentAttempts(500));
       setSessions(getStudySessionsSince(startOfWeek(new Date()).toISOString()));
       setTopicLinks(getTopicLinks());
+      setQuestionLogs(getQuestionLogs());
       setAllNotebooks(getNotebooksByPlan(currentPlan.id));
       setAdminData(getAdminCatalogAndBlueprints());
     },
@@ -284,8 +290,9 @@ export default function App() {
       sessions,
       topicLinks,
       examParts,
+      questionLogs,
     });
-  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts]);
+  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs]);
 
   const currentSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
   const currentTopics = currentSubject ? topicsBySubject[currentSubject.id] || [] : [];
@@ -559,6 +566,7 @@ export default function App() {
         sessions: getStudySessionsSince(startOfWeek(new Date()).toISOString()),
         topicLinks: getTopicLinks(),
         examParts: getExamPartsByPlan(targetPlanId),
+        questionLogs: getQuestionLogs(),
       });
       applyRecommendedCycleAllocations(
         recommended.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }))

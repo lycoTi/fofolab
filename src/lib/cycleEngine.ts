@@ -1,6 +1,7 @@
 import type {
   ExamPart,
   QuestionAttempt,
+  QuestionLog,
   StudyPlan,
   StudySession,
   StudyStrategy,
@@ -9,6 +10,7 @@ import type {
   Topic,
   TopicLink,
 } from '../types/database';
+import { logAccuracy } from './questionLogs';
 import { formatDuration } from './timeFormat';
 
 // ============================================================================
@@ -325,10 +327,23 @@ export function calculateDynamicStudyCycle(params: {
   topicLinks: TopicLink[];
   /** Provas do edital (planos importados do PDF); vazio = comportamento dos planos montados à mão. */
   examParts?: ExamPart[];
+  /** Questões resolvidas fora do app (números agregados por tópico). */
+  questionLogs?: QuestionLog[];
   now?: Date;
 }): CycleCalculationResult {
   const { plan, subjects, topicsBySubject, attempts, sessions, topicLinks } = params;
   const examParts = params.examParts ?? [];
+  const questionLogs = params.questionLogs ?? [];
+  // Registro de fora do app: as questões contam como amostra; com 70%+ de acerto conta como um "dominei" para a
+  // memória, abaixo de 50% como uma lacuna (um evento por registro, não por questão)
+  const logEvidence = (topicId: string) => {
+    const logs = questionLogs.filter((l) => l.topic_id === topicId);
+    return {
+      questions: logs.reduce((acc, l) => acc + l.total, 0),
+      mastered: logs.filter((l) => logAccuracy(l) >= 0.7).length,
+      gaps: logs.filter((l) => logAccuracy(l) < 0.5).length,
+    };
+  };
   const fromEdital = examParts.length > 0;
   const now = params.now ?? new Date();
   const nowMs = now.getTime();
@@ -377,9 +392,8 @@ export function calculateDynamicStudyCycle(params: {
 
   for (const subj of subjects) {
     for (const topic of studyableTopics(subj.id)) {
-      const baseGapCount = attempts.filter(
-        (a) => a.topic_id === topic.id && a.self_diagnosis === 'BASE_GAP'
-      ).length;
+      const baseGapCount =
+        attempts.filter((a) => a.topic_id === topic.id && a.self_diagnosis === 'BASE_GAP').length + logEvidence(topic.id).gaps;
       if (baseGapCount > 0 || topic.mastery_score < 50) {
         for (const link of topicLinks.filter((l) => l.target_topic_id === topic.id)) {
           const prev = prerequisiteBoostByTopic.get(link.source_topic_id) || 0;
@@ -393,11 +407,12 @@ export function calculateDynamicStudyCycle(params: {
     const subjTopics = studyableTopics(subj.id);
     for (const topic of subjTopics) {
       const topicAttempts = attempts.filter((a) => a.topic_id === topic.id);
-      const attemptsCount = topicAttempts.length;
-      const baseGapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BASE_GAP').length;
+      const external = logEvidence(topic.id);
+      const attemptsCount = topicAttempts.length + external.questions;
+      const baseGapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BASE_GAP').length + external.gaps;
       const doubtCount = topicAttempts.filter((a) => a.self_diagnosis === 'DOUBT').length;
       const boardTrapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BOARD_TRAP').length;
-      const masteredCount = topicAttempts.filter((a) => a.self_diagnosis === 'MASTERED').length;
+      const masteredCount = topicAttempts.filter((a) => a.self_diagnosis === 'MASTERED').length + external.mastered;
 
       const sampleConfidencePercent = calculateSampleConfidencePercent(attemptsCount, subjTopics.length);
       const isReverseStudyDiscovery = sampleConfidencePercent < 35 && topic.status !== 'MASTERED';

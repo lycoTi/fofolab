@@ -11,7 +11,7 @@ import {
   SEED_TOPIC_LINKS,
   SEED_TOPICS,
 } from '../data/initialSeed';
-import type { QuestionAttempt, Topic } from '../types/database';
+import type { QuestionAttempt, QuestionLog, Topic } from '../types/database';
 
 describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', () => {
   const cguPlan = SEED_STUDY_PLANS[0]; // 31.5h/sem = 1890 min
@@ -167,5 +167,31 @@ describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', 
     const samples = getSampleSubtopicsForCalibration('Contabilidade Pública (CASP)');
     expect(samples.length).toBeGreaterThanOrEqual(3);
     expect(samples.some((s) => s.includes('PCASP'))).toBe(true);
+  });
+});
+
+describe('questões feitas fora do app entram no motor (spec 07 §5.4)', () => {
+  const plan = SEED_STUDY_PLANS[0];
+  const subjects = SEED_SUBJECTS.filter((s) => s.plan_id === plan.id);
+  const bySubject: Record<string, Topic[]> = {};
+  for (const s of subjects) bySubject[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+  const target = SEED_TOPICS.find((t) => t.subject_id === subjects[0].id && !SEED_TOPICS.some((c) => c.parent_id === t.id))!;
+  const log = (correct: number, total = 20) =>
+    ({ id: `l${correct}`, subject_id: target.subject_id, topic_id: target.id, total, correct, blank: 0, source: 'EXTERNAL', mastery_before: 0, logged_at: new Date().toISOString() }) as QuestionLog;
+  const heatOf = (questionLogs: QuestionLog[]) =>
+    calculateDynamicStudyCycle({ plan, subjects, topicsBySubject: bySubject, attempts: [], sessions: [], topicLinks: [], questionLogs })
+      .topicHeatmapRanking.find((h) => h.topic.id === target.id)!;
+
+  it('as questões registradas contam como amostra do tópico', () => {
+    const base = heatOf([]);
+    const withLog = heatOf([log(14)]);
+    expect(withLog.attemptsCount).toBe(base.attemptsCount + 20);
+    expect(withLog.sampleConfidencePercent).toBeGreaterThan(base.sampleConfidencePercent);
+  });
+
+  it('registro com 70% ou mais alonga a meia-vida (dominei); abaixo de 50% encurta (lacuna)', () => {
+    const base = heatOf([]).memoryHalfLifeDays;
+    expect(heatOf([log(16)]).memoryHalfLifeDays).toBeGreaterThan(base);
+    expect(heatOf([log(6)]).memoryHalfLifeDays).toBeLessThan(base);
   });
 });
