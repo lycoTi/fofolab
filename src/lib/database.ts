@@ -3,6 +3,7 @@ import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 import schemaSql from '../../docs/specs/01-database-schema.sql?raw';
 import { calculateSampleConfidencePercent } from './cycleEngine';
 import { isDiagnosisAllowed } from './diagnosis';
+import { blendMastery, isValidLog } from './questionLogs';
 import { newId } from './ids';
 import {
   detectSchemaVersion,
@@ -50,6 +51,7 @@ import type {
   PdfSource,
   Question,
   QuestionAttempt,
+  QuestionLog,
   SelfAssessmentInput,
   SelfDiagnosisType,
   StudyPlan,
@@ -1284,6 +1286,61 @@ export function recordQuestionDiagnosis(params: {
     isColdStartDiscovery,
     sampleConfidencePercent,
   };
+}
+
+// ============================================================================
+// Questões resolvidas fora do app (spec 07 §5.4): números agregados viram evidência de domínio
+// ============================================================================
+
+export function recordQuestionLog(input: {
+  subjectId: string;
+  topicId: string;
+  total: number;
+  correct: number;
+  blank: number;
+}): { log: QuestionLog; topic: Topic } {
+  if (!isValidLog(input)) throw new Error('Confira os números: certas e em branco não podem passar do total.');
+  const db = getDb();
+  const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [input.topicId]);
+  if (!topic) throw new Error('Tópico não encontrado.');
+
+  // Evidência anterior = tentativas no app + questões já registradas do tópico
+  const attempts = queryOne<{ c: number }>(db, 'SELECT COUNT(*) as c FROM question_attempts WHERE topic_id = ?', [topic.id])?.c ?? 0;
+  const logged = queryOne<{ s: number | null }>(db, 'SELECT SUM(total) as s FROM question_logs WHERE topic_id = ?', [topic.id])?.s ?? 0;
+  const nextMastery = blendMastery(topic.mastery_score, attempts + logged, input.correct, input.total);
+
+  const id = newId('qlog');
+  db.run(
+    `INSERT INTO question_logs (id, subject_id, topic_id, total, correct, blank, source, mastery_before, logged_at)
+     VALUES (?, ?, ?, ?, ?, ?, 'EXTERNAL', ?, ?)`,
+    [id, input.subjectId, topic.id, input.total, input.correct, input.blank, topic.mastery_score, new Date().toISOString()]
+  );
+  const updated = updateTopic({ id: topic.id, mastery_score: nextMastery, last_studied_at: new Date().toISOString() })!;
+  // Gravação imediata: fechar o app logo depois de registrar não pode perder o registro
+  void flushDatabase();
+  return { log: queryOne<QuestionLog>(db, 'SELECT * FROM question_logs WHERE id = ?', [id])!, topic: updated };
+}
+
+export function getQuestionLogs(sinceIso?: string): QuestionLog[] {
+  if (sinceIso) {
+    return queryAll<QuestionLog>(getDb(), 'SELECT * FROM question_logs WHERE logged_at >= ? ORDER BY logged_at', [sinceIso]);
+  }
+  return queryAll<QuestionLog>(getDb(), 'SELECT * FROM question_logs ORDER BY logged_at');
+}
+
+/** Desfaz só o último registro do tópico, devolvendo o domínio de antes. */
+export function undoLastQuestionLog(topicId: string): boolean {
+  const db = getDb();
+  const last = queryOne<QuestionLog>(
+    db,
+    'SELECT * FROM question_logs WHERE topic_id = ? ORDER BY logged_at DESC, rowid DESC LIMIT 1',
+    [topicId]
+  );
+  if (!last) return false;
+  db.run('DELETE FROM question_logs WHERE id = ?', [last.id]);
+  if (last.mastery_before !== null) updateTopic({ id: topicId, mastery_score: last.mastery_before });
+  void flushDatabase();
+  return true;
 }
 
 export function applyRecommendedCycleAllocations(

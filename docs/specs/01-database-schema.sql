@@ -184,6 +184,19 @@ CREATE TABLE IF NOT EXISTS daily_plans (
     PRIMARY KEY (plan_id, date)
 );
 
+-- 11c. [v7] Questões resolvidas fora do app (outro site, caderno de provas): só números, nunca o conteúdo
+CREATE TABLE IF NOT EXISTS question_logs (
+    id TEXT PRIMARY KEY,
+    subject_id TEXT NOT NULL REFERENCES subjects(id) ON DELETE CASCADE,
+    topic_id TEXT REFERENCES topics(id) ON DELETE CASCADE,
+    total INTEGER NOT NULL,
+    correct INTEGER NOT NULL,
+    blank INTEGER NOT NULL DEFAULT 0,      -- Em branco (Cebraspe permite deixar sem responder)
+    source TEXT NOT NULL DEFAULT 'EXTERNAL',
+    mastery_before REAL,                   -- Domínio antes do registro (para "Desfazer")
+    logged_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- 12. [MODO ADMIN] Blueprints de Layout das Bancas Examinadoras (DOM Drift Detection)
 CREATE TABLE IF NOT EXISTS admin_board_blueprints (
     id TEXT PRIMARY KEY,

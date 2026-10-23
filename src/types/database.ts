@@ -184,6 +184,19 @@ export interface FrozenBlock {
   reasonText: string;
 }
 
+// 11c. question_logs — questões resolvidas fora do app (números agregados)
+export interface QuestionLog {
+  id: string;
+  subject_id: string;
+  topic_id: string | null;
+  total: number;
+  correct: number;
+  blank: number;
+  source: 'EXTERNAL';
+  mastery_before: number | null;
+  logged_at: string;
+}
+
 // 12. admin_board_blueprints
 export interface AdminBoardBlueprint {
   id: string;

@@ -471,7 +471,7 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
   });
 
   it('o banco está na versão do roteiro congelado', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(6);
+    expect(LATEST_SCHEMA_VERSION).toBe(7);
   });
 });
 
@@ -506,5 +506,35 @@ describe('Questões do bloco com recuo para o grupo (docs/specs/09)', () => {
     const fromSubject = db.getTopicQuestionsWithFallback(lonely.id, subjectId);
     expect(fromSubject.fallback).toEqual({ kind: 'subject' });
     expect(fromSubject.items.length).toBeGreaterThan(0);
+  });
+});
+
+describe('Registro rápido de questões feitas fora do app (docs/specs/07 §5.4)', () => {
+  it('gravar muda domínio, status, data de estudo e domínio da matéria; desfazer volta só o último', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '8.1', title: 'Tópico externo', mastery_score: 40 });
+
+    const first = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 20, correct: 14, blank: 2 });
+    expect(first.log.source).toBe('EXTERNAL');
+    expect(first.log.mastery_before).toBe(40);
+    expect(first.topic.mastery_score).toBe(70);
+    expect(first.topic.last_studied_at).not.toBeNull();
+    expect(db.getQuestionLogs().map((l) => l.id)).toContain(first.log.id);
+
+    const second = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 2, blank: 0 });
+    expect(second.topic.mastery_score).toBeLessThan(70);
+
+    expect(db.undoLastQuestionLog(topic.id)).toBe(true);
+    expect(db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)?.mastery_score).toBe(70);
+    expect(db.getQuestionLogs().map((l) => l.id)).toEqual([first.log.id]);
+  });
+
+  it('recusa números impossíveis', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '8.2', title: 'Outro' });
+    expect(() => db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 8, blank: 3 })).toThrow();
+    expect(() => db.recordQuestionLog({ subjectId, topicId: topic.id, total: 0, correct: 0, blank: 0 })).toThrow();
   });
 });

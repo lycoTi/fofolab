@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 6;
+export const LATEST_SCHEMA_VERSION = 7;
 
 export interface Migration {
   version: number;
@@ -90,6 +90,23 @@ export const MIGRATIONS: Migration[] = [
       // Idempotente: um banco criado direto na v5 pelo contrato de então pode já ter a coluna
       const columns = db.exec('PRAGMA table_info(daily_plans)')[0]?.values.map((row) => String(row[1])) ?? [];
       if (!columns.includes('profile_key')) db.run('ALTER TABLE daily_plans ADD COLUMN profile_key TEXT');
+    },
+  },
+  {
+    version: 7,
+    description: 'Registro rápido de questões feitas fora do app (spec 07 §5.4): números agregados por tópico',
+    up: (db) => {
+      db.run(`CREATE TABLE IF NOT EXISTS question_logs (
+        id TEXT PRIMARY KEY,
+        subject_id TEXT NOT NULL REFERENCES subjects(id) ON DELETE CASCADE,
+        topic_id TEXT REFERENCES topics(id) ON DELETE CASCADE,
+        total INTEGER NOT NULL,
+        correct INTEGER NOT NULL,
+        blank INTEGER NOT NULL DEFAULT 0,
+        source TEXT NOT NULL DEFAULT 'EXTERNAL',
+        mastery_before REAL,
+        logged_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      )`);
     },
   },
 ];

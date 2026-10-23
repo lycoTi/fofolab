@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Depois de um bloco, o estudante registra em segundos o que fez no TEC (total, certas, em branco) e isso vira evidência real: domínio do tópico, confiança da amostra, curva de esquecimento e Mapa de Calor.
+**Goal:** Depois de um bloco, o estudante registra em segundos as questões que resolveu fora do app — TEC, outro site, caderno de provas — (total, certas, em branco) e isso vira evidência real: domínio do tópico, confiança da amostra, curva de esquecimento e Mapa de Calor.
 
 **Architecture:** Tabela `question_logs` (migração **v7**) com registros agregados — nunca tentativas falsas. O domínio do tópico é uma média ponderada pela evidência; o motor do ciclo soma os registros às tentativas do app. A entrada fica no bloco atual da coluna (formulário inline), aberta sozinha uma vez ao concluir o bloco.
 
@@ -11,7 +11,7 @@
 **Spec:** `docs/specs/07-edital-ciclo-e-situacao.md` §5.4 e §6 (`question_logs`); integração com a coluna da spec 09.
 
 ## Global Constraints
-- Sem conteúdo do TEC: só números digitados pelo estudante (Termos de Uso do TEC §18.8).
+- Sem conteúdo de terceiros: só números digitados pelo estudante (Termos de Uso do TEC §18.8). **Textos da tela genéricos** — nunca citar o TEC (outros estudantes usam outros sites); origem gravada como `'EXTERNAL'`.
 - Mudança no contrato SQL → **nova** migração (v7), `LATEST_SCHEMA_VERSION` 6 → 7, contrato `docs/specs/01-database-schema.sql`. Nunca editar migração existente.
 - Textos pt-BR, sem jargão; números validados (certas + em branco ≤ total; total 1–500).
 - A Revisão do dia (9c) passa a usar a migração **v8**.
@@ -34,7 +34,7 @@
 ### Task 1: Tabela e gravação (v7)
 **Files:** `src/lib/migrations.ts`, `docs/specs/01-database-schema.sql`, `src/types/database.ts`, `src/lib/database.ts`; testes em `src/__tests__/migrations.test.ts`, `src/__tests__/database.test.ts`.
 **Interfaces (produces):**
-- `QuestionLog { id; subject_id; topic_id; total; correct; blank; source: 'TEC'; logged_at; mastery_before: number }`
+- `QuestionLog { id; subject_id; topic_id; total; correct; blank; source: 'EXTERNAL'; logged_at; mastery_before: number }`
 - `blendMastery(current: number, evidenceWeight: number, correct: number, total: number): number` (puro, em `src/lib/questionLogs.ts`)
 - `recordQuestionLog(input: { subjectId; topicId; total; correct; blank }): { log: QuestionLog; topic: Topic }`
 - `getQuestionLogs(sinceIso?: string): QuestionLog[]`
@@ -50,8 +50,8 @@
 ### Task 3: Formulário no bloco da coluna
 **Files:** `src/features/routine/QuestionLogForm.tsx` (≤ ~150 linhas), `RoutineBlockItem.tsx`, `RoutineColumn.tsx`, `App.tsx`; teste `src/__tests__/routineColumn.test.tsx`.
 **Interfaces:** `QuestionLogForm(props: { topics: Topic[]; defaultTopicId: string; onSubmit: (v: { topicId; total; correct; blank }) => void; onUndo?: () => void; lastLogLabel: string | null })`.
-- Botão "Registrar questões do TEC" no bloco atual abre o formulário inline (Total, Certas, Em branco, tópico — padrão o do bloco; opções: tópicos do grupo + o olhado). Gravar mostra "Registrado: 14 de 20 (70%)" com "Desfazer".
-- Ao concluir o bloco (fase `DONE` ou sessão gravada que completa o bloco), o formulário abre sozinho uma vez com o convite "Fez questões no TEC? Registre aqui".
+- Botão "Registrar questões feitas fora do app" no bloco atual abre o formulário inline (Total, Certas, Em branco, tópico — padrão o do bloco; opções: tópicos do grupo + o olhado). Gravar mostra "Registrado: 14 de 20 (70%)" com "Desfazer".
+- Ao concluir o bloco (fase `DONE` ou sessão gravada que completa o bloco), o formulário abre sozinho uma vez com o convite "Resolveu questões em outro lugar? Registre seu desempenho".
 - [ ] Testes que falham: validação (certas + em branco > total desabilita, com "Confira os números"); envia com o tópico do bloco por padrão; mostra o resumo e chama desfazer; auditoria de jargão.
 - [ ] Implementar; commit `feat(tec): formulário de registro rápido no bloco da coluna`.
 
