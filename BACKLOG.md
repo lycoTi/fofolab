@@ -65,7 +65,13 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 ## 🔜 Próximas fatias
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
-- **7b — acompanhar (spec `07` §5.4–5.5):** registro rápido do que foi feito no TEC (total, certas, em branco) + tela "Bom dia" (relembrar com recordação ativa, blocos de hoje, situação por prova, linha de ânimo com fatos).
+- [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):
+  painel no topo da coluna (recolhido; abre sozinho ao concluir um bloco), total/certas/em branco + tópico (o do bloco por
+  padrão), validação, "Registrado: 14 de 20 (70%)" com Desfazer (confirmação). Banco: tabela `question_logs` (migração
+  **v7**), só números. Domínio = média ponderada pela evidência (histórico pesa até 40 questões); no motor, as questões
+  contam como amostra e cada registro ≥ 70% conta como "dominei" (< 50% como lacuna) para a memória. Textos genéricos (não
+  citam o TEC: outros estudantes usam outros sites). E2E `e2e/registro-externo.spec.ts`; testes e build verdes.
+- **Tela "Bom dia"** (spec 07 §5.5: situação por prova e linha de ânimo com fatos) — junto com a 9c (Revisão do dia).
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
 - **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** [DONE] **9a casca** (22/10/2026, plano
   `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`): cabeçalho fixo de ponta a ponta (concurso, dias, "P1 x% visto"),
@@ -86,7 +92,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Ajustes pedidos pelo dono (22/10): irmãos do bloco como "Outros tópicos do mesmo grupo" (sem recuo de filho, até 3 +
   "Ver mais", selecionado com fundo e contorno); barrinha de progresso no relógio do cabeçalho (pomodoro/pausa) e no bloco
   atual da coluna (anda ao vivo); clicar no relógio do cabeçalho leva ao Ciclo.
-  → 9c Revisão do dia (usará a migração **v7**; a v6 acrescentou a assinatura do perfil ao roteiro) (3–5 questões intercaladas dos
+  → 9c Revisão do dia (usará a migração **v8**; v6 = assinatura do perfil no roteiro, v7 = registro externo) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
 - **Questões: um só copiloto (pedido do dono, 22/10):** o painel "Explicação & Estudo Reverso" ao lado da questão repete o
   papel do Copiloto da coluna direita. Avaliar fundir o Estudo Reverso no copiloto e dar a ele a voz do hamster
@@ -98,7 +104,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   por descoberta nos sites das bancas — **brainstorm próprio antes de construir**.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
   (reduz prioridade), nunca escondido.
-- **TEC só por registro manual:** trocar "desempenho do TEC por arquivo salvo" (spec 07 §9) pelo registro rápido da 7b —
+- **TEC só por registro manual (feito na 7b):** a importação do desempenho por arquivo salvo (spec 07 §9) fica descartada —
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias — formato preferido pela esposa do dono, segunda usuária); tópicos relacionados entre matérias.
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).

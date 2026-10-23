@@ -20,13 +20,14 @@
   `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`. Testes e build verdes.
 - **9b (roteiro na coluna) pronta**: Meu Dia e Bancada numa tela só, roteiro congelado no dia (migração v5), olhada com
   pausa automática. Plano em `docs/superpowers/plans/2026-10-22-9b-roteiro-na-coluna.md`.
+- **7b (registro rápido de questões feitas fora do app) pronta**: painel no topo da coluna, migração v7.
 - **Próximo:** plano da **9c** (Revisão do dia: 3–5 questões intercaladas dos tópicos esfriando, confiança, pergunta
-  aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v7** (a v6 já existe: assinatura do perfil no roteiro).
+  aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v8** (v6 = assinatura do perfil, v7 = registro externo).
 - **Depois:** o brainstorm do **minerador de provas da Cebraspe** (épico no BACKLOG; nada do TEC:
   os Termos de Uso §18.8 proíbem processar o conteúdo deles com script ou IA).
 
 ## 3. Mensagem para colar na IA (Claude Code ou Antigravity)
 > Leia `BACKLOG.md`, a spec `docs/specs/09-bancada-roteiro-e-revisao.md` e o plano da 9a em
-> `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`. As entregas 9a e 9b estão prontas (planos em `docs/superpowers/plans/`). Escreva o plano da **9c** com a skill
+> `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`. As entregas 9a, 9b e 7b (registro rápido) estão prontas (planos em `docs/superpowers/plans/`). Escreva o plano da **9c** com a skill
 > `writing-plans`, no mesmo formato dos planos anteriores, seguindo as decisões da spec (§5.3 e §5.3.1). Prefiro executar
 > direto na sessão (custo-benefício), com uma revisão independente no fim.
