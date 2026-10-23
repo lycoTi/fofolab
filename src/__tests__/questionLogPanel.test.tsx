@@ -59,4 +59,13 @@ describe('registro de questões feitas fora do app', () => {
       expect(container.textContent).not.toContain(term);
     }
   });
+
+  it('se o tópico sugerido não está entre as opções, registra no que aparece selecionado', () => {
+    const p = props({ defaultTopicId: 'sumiu' });
+    render(<QuestionLogPanel {...p} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Registrar questões feitas fora do app' }));
+    fill('10', '5', '0');
+    fireEvent.click(screen.getByRole('button', { name: 'Registrar' }));
+    expect(p.onSubmit).toHaveBeenCalledWith({ topicId: 'a', total: 10, correct: 5, blank: 0 });
+  });
 });

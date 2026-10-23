@@ -525,9 +525,47 @@ describe('Registro rápido de questões feitas fora do app (docs/specs/07 §5.4)
     const second = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 2, blank: 0 });
     expect(second.topic.mastery_score).toBeLessThan(70);
 
-    expect(db.undoLastQuestionLog(topic.id)).toBe(true);
+    expect(db.undoQuestionLog(second.log.id)).toBe(true);
     expect(db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)?.mastery_score).toBe(70);
     expect(db.getQuestionLogs().map((l) => l.id)).toEqual([first.log.id]);
+  });
+
+  it('desfazer um registro que já não é o último só apaga o registro, sem voltar o domínio a um valor velho', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '8.3', title: 'Com evidência depois', mastery_score: 40 });
+    const first = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 10, blank: 0 });
+    const second = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 10, blank: 0 });
+    expect(db.undoQuestionLog(first.log.id)).toBe(true);
+    expect(db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)?.mastery_score).toBe(second.topic.mastery_score);
+    expect(db.getQuestionLogs().map((l) => l.id)).toEqual([second.log.id]);
+  });
+
+  it('desfazer o único registro de um tópico nunca estudado volta a data de estudo a vazio', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '8.4', title: 'Nunca estudado' });
+    const { log } = db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 5, blank: 0 });
+    db.undoQuestionLog(log.id);
+    const after = db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)!;
+    expect(after.last_studied_at).toBeNull();
+    expect(after.mastery_score).toBe(0);
+  });
+
+  it('tópico "pai" (agrupador) não recebe registro', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const parent = db.createTopic({ subject_id: subjectId, code: '8', title: 'Grupo' });
+    db.createTopic({ subject_id: subjectId, parent_id: parent.id, code: '8.9', title: 'Filho' });
+    expect(() => db.recordQuestionLog({ subjectId, topicId: parent.id, total: 10, correct: 5, blank: 0 })).toThrow();
+  });
+
+  it('apagar um tópico avisa quantos registros de questões vão junto', async () => {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '8.5', title: 'Com registros' });
+    db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 5, blank: 0 });
+    expect(db.countDependents('topic', topic.id).questionLogs).toBe(1);
   });
 
   it('recusa números impossíveis', async () => {

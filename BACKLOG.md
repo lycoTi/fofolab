@@ -71,6 +71,9 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   **v7**), só números. Domínio = média ponderada pela evidência (histórico pesa até 40 questões); no motor, as questões
   contam como amostra e cada registro ≥ 70% conta como "dominei" (< 50% como lacuna) para a memória. Textos genéricos (não
   citam o TEC: outros estudantes usam outros sites). E2E `e2e/registro-externo.spec.ts`; testes e build verdes.
+  Revisão independente: desfazer age pelo id e só volta o domínio se nada mudou depois; recalcula a data de estudo;
+  tópico pai não recebe registro; registros com menos de 5 questões não contam como "dominei"/lacuna; trocar de plano ou
+  restaurar o banco limpa o convite; excluir avisa quantos registros vão junto.
 - **Tela "Bom dia"** (spec 07 §5.5: situação por prova e linha de ânimo com fatos) — junto com a 9c (Revisão do dia).
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
 - **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** [DONE] **9a casca** (22/10/2026, plano

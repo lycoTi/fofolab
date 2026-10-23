@@ -40,13 +40,15 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
     if (defaultTopicId) setTopicId(defaultTopicId);
   }, [defaultTopicId]);
 
+  // O tópico sugerido pode não estar entre as opções (ex.: convite de um bloco anterior): vale o que aparece selecionado
+  const effectiveTopicId = topics.some((t) => t.id === topicId) ? topicId : (topics[0]?.id ?? '');
   const numbers = { total: Number(total), correct: Number(correct), blank: Number(blank || '0') };
   const filled = total !== '' && correct !== '';
-  const valid = filled && isValidLog(numbers) && topicId !== '';
+  const valid = filled && isValidLog(numbers) && effectiveTopicId !== '';
 
   const submit = () => {
     if (!valid) return;
-    props.onSubmit({ topicId, ...numbers });
+    props.onSubmit({ topicId: effectiveTopicId, ...numbers });
     setTotal('');
     setCorrect('');
     setBlank('0');
@@ -77,7 +79,7 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
           {invite && <p className="text-slate-300">Resolveu questões em outro lugar? Registre seu desempenho.</p>}
           <label className="block space-y-1">
             <span className="text-slate-400">Tópico</span>
-            <select value={topicId} onChange={(e) => setTopicId(e.target.value)} className={field}>
+            <select value={effectiveTopicId} onChange={(e) => setTopicId(e.target.value)} className={field}>
               {topics.map((t) => (
                 <option key={t.id} value={t.id}>
                   {label(t)}

@@ -194,4 +194,10 @@ describe('questões feitas fora do app entram no motor (spec 07 §5.4)', () => {
     expect(heatOf([log(16)]).memoryHalfLifeDays).toBeGreaterThan(base);
     expect(heatOf([log(6)]).memoryHalfLifeDays).toBeLessThan(base);
   });
+
+  it('registro com poucas questões (menos de 5) conta como amostra, mas não como "dominei" nem lacuna', () => {
+    const base = heatOf([]).memoryHalfLifeDays;
+    expect(heatOf([log(4, 4)]).memoryHalfLifeDays).toBe(base);
+    expect(heatOf([log(0, 4)]).memoryHalfLifeDays).toBe(base);
+  });
 });

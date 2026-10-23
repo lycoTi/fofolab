@@ -23,6 +23,9 @@ export function isValidLog(input: { total: number; correct: number; blank: numbe
   return integers && total >= 1 && total <= LOG_MAX_TOTAL && correct + blank <= total;
 }
 
+/** Registro com menos questões que isso conta como amostra, mas não como "dominei"/lacuna para a memória. */
+export const LOG_MIN_FOR_MEMORY_SIGNAL = 5;
+
 /** Acerto do registro (0..1), para o motor decidir se ele conta como "dominei" ou como lacuna. */
 export function logAccuracy(log: { total: number; correct: number }): number {
   return log.total > 0 ? log.correct / log.total : 0;

@@ -10,7 +10,7 @@ import type {
   Topic,
   TopicLink,
 } from '../types/database';
-import { logAccuracy } from './questionLogs';
+import { LOG_MIN_FOR_MEMORY_SIGNAL, logAccuracy } from './questionLogs';
 import { formatDuration } from './timeFormat';
 
 // ============================================================================
@@ -338,10 +338,12 @@ export function calculateDynamicStudyCycle(params: {
   // memória, abaixo de 50% como uma lacuna (um evento por registro, não por questão)
   const logEvidence = (topicId: string) => {
     const logs = questionLogs.filter((l) => l.topic_id === topicId);
+    // Poucas questões (ex.: 1 de 1) não bastam para dizer que dominou ou que tem lacuna
+    const signals = logs.filter((l) => l.total >= LOG_MIN_FOR_MEMORY_SIGNAL);
     return {
       questions: logs.reduce((acc, l) => acc + l.total, 0),
-      mastered: logs.filter((l) => logAccuracy(l) >= 0.7).length,
-      gaps: logs.filter((l) => logAccuracy(l) < 0.5).length,
+      mastered: signals.filter((l) => logAccuracy(l) >= 0.7).length,
+      gaps: signals.filter((l) => logAccuracy(l) < 0.5).length,
     };
   };
   const fromEdital = examParts.length > 0;

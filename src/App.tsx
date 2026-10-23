@@ -56,7 +56,7 @@ import {
   getTopicQuestionsWithFallback,
   getQuestionLogs,
   recordQuestionLog,
-  undoLastQuestionLog,
+  undoQuestionLog,
   type QuestionFallback,
   getRecentAttempts,
   getStudyPlans,
@@ -123,6 +123,7 @@ function describeDependents(deps: ReturnType<typeof countDependents>): string {
     deps.topics > 0 ? `${deps.topics} tópico(s)` : null,
     deps.questions > 0 ? `${deps.questions} questão(ões)` : null,
     deps.notebooks > 0 ? `${deps.notebooks} caderno(s)` : null,
+    deps.questionLogs > 0 ? `${deps.questionLogs} registro(s) de questões feitas fora do app` : null,
   ].filter(Boolean);
   return parts.length > 0 ? parts.join(', ') : 'nada além do próprio item';
 }
@@ -167,7 +168,7 @@ export default function App() {
   const [questionLogs, setQuestionLogs] = useState<QuestionLog[]>([]);
   // Registro de questões feitas fora do app: convite ao terminar um bloco e o último registro (para desfazer)
   const [logInvite, setLogInvite] = useState<{ topicId: string | null } | null>(null);
-  const [lastLog, setLastLog] = useState<{ topicId: string; label: string } | null>(null);
+  const [lastLog, setLastLog] = useState<{ logId: string; label: string } | null>(null);
   const [topicLinks, setTopicLinks] = useState<TopicLink[]>([]);
   const [allNotebooks, setAllNotebooks] = useState<Notebook[]>([]);
 
@@ -363,6 +364,8 @@ export default function App() {
   const finishedTopicId = studyBlock.state.block?.topicId ?? null;
   useEffect(() => {
     if (blockPhase === 'DONE') setLogInvite({ topicId: finishedTopicId });
+    // Começou outro bloco: o convite do anterior não vale mais
+    if (blockPhase === 'FOCUS') setLogInvite(null);
   }, [blockPhase, finishedTopicId]);
 
   // Quantas questões o bloco tem (com recuo para o grupo) — memorizado: o relógio redesenha a tela a cada 0,5 s
@@ -443,12 +446,17 @@ export default function App() {
 
   const afterDatabaseReplaced = () => {
     closePdfFile();
+    // Banco trocado: o último registro (e o convite) eram do banco antigo
+    setLastLog(null);
+    setLogInvite(null);
     setDataVersion((v) => v + 1);
     refreshData('', '');
   };
 
   const handleSelectPlan = (planId: string) => {
     setActiveStudyPlan(planId);
+    setLastLog(null);
+    setLogInvite(null);
     const nextSubjects = getSubjectsByPlan(planId);
     const firstSubj = nextSubjects[0]?.id || '';
     const firstTopic = firstSubj ? getTopicsBySubject(firstSubj)[0]?.id || '' : '';
@@ -853,29 +861,32 @@ export default function App() {
   const logTopicOptions = (() => {
     const group = routineGroup(routineBlockTopic, topicsBySubject).members;
     const inviteTopic = logInvite?.topicId ? subjects.flatMap((s) => topicsBySubject[s.id] ?? []).find((t) => t.id === logInvite.topicId) : null;
-    const candidates = [inviteTopic, routineBlockTopic, ...group, currentTopic].filter((t): t is Topic => Boolean(t));
+    const allTopics = subjects.flatMap((subj) => topicsBySubject[subj.id] ?? []);
+    // Tópico "pai" é só agrupador: o registro vai sempre num tópico do último nível
+    const isLeaf = (t: Topic) => !allTopics.some((other) => other.parent_id === t.id);
+    const candidates = [inviteTopic, routineBlockTopic, ...group, currentTopic].filter((t): t is Topic => Boolean(t) && isLeaf(t as Topic));
     return candidates.filter((t, i) => candidates.findIndex((c) => c.id === t.id) === i);
   })();
 
   const submitQuestionLog = (value: { topicId: string; total: number; correct: number; blank: number }) => {
     const topic = logTopicOptions.find((t) => t.id === value.topicId);
     if (!topic) return;
-    recordQuestionLog({ subjectId: topic.subject_id, ...value });
+    const { log } = recordQuestionLog({ subjectId: topic.subject_id, ...value });
     const percent = Math.round((value.correct / value.total) * 100);
-    setLastLog({ topicId: topic.id, label: `Registrado: ${value.correct} de ${value.total} (${percent}%)` });
+    setLastLog({ logId: log.id, label: `Registrado: ${value.correct} de ${value.total} (${percent}%)` });
     setLogInvite(null);
     refreshData(currentSubject?.id, currentTopic?.id);
   };
 
-  const undoQuestionLog = async () => {
+  const confirmUndoQuestionLog = async () => {
     if (!lastLog) return;
     const ok = await confirm({
       title: 'Desfazer o registro?',
-      message: <p>O registro é apagado e o domínio do tópico volta ao valor de antes.</p>,
+      message: <p>O registro é apagado. Se nada mais mudou no tópico depois dele, o domínio volta ao valor de antes.</p>,
       confirmLabel: 'Desfazer',
     });
     if (!ok) return;
-    undoLastQuestionLog(lastLog.topicId);
+    undoQuestionLog(lastLog.logId);
     setLastLog(null);
     refreshData(currentSubject?.id, currentTopic?.id);
   };
@@ -954,7 +965,7 @@ export default function App() {
             invite: logInvite !== null,
             lastLogLabel: lastLog?.label ?? null,
             onSubmit: submitQuestionLog,
-            onUndo: () => void undoQuestionLog(),
+            onUndo: () => void confirmUndoQuestionLog(),
             onDismissInvite: () => setLogInvite(null),
           }}
           materials={routineMaterials}

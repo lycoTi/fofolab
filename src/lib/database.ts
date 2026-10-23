@@ -1081,7 +1081,7 @@ export function deleteTopic(topicId: string): void {
 export function countDependents(
   kind: 'plan' | 'subject' | 'topic',
   id: string
-): { subjects: number; topics: number; questions: number; notebooks: number } {
+): { subjects: number; topics: number; questions: number; notebooks: number; questionLogs: number } {
   const db = getDb();
   const count = (sql: string, params: string[]) => queryOne<{ c: number }>(db, sql, params)?.c ?? 0;
 
@@ -1100,6 +1100,10 @@ export function countDependents(
         'SELECT COUNT(*) as c FROM notebooks WHERE subject_id IN (SELECT id FROM subjects WHERE plan_id = ?)',
         [id]
       ),
+      questionLogs: count(
+        'SELECT COUNT(*) as c FROM question_logs WHERE subject_id IN (SELECT id FROM subjects WHERE plan_id = ?)',
+        [id]
+      ),
     };
   }
   if (kind === 'subject') {
@@ -1108,6 +1112,7 @@ export function countDependents(
       topics: count('SELECT COUNT(*) as c FROM topics WHERE subject_id = ?', [id]),
       questions: count('SELECT COUNT(*) as c FROM questions WHERE subject_id = ?', [id]),
       notebooks: count('SELECT COUNT(*) as c FROM notebooks WHERE subject_id = ?', [id]),
+      questionLogs: count('SELECT COUNT(*) as c FROM question_logs WHERE subject_id = ?', [id]),
     };
   }
   return {
@@ -1115,6 +1120,7 @@ export function countDependents(
     topics: count('SELECT COUNT(*) as c FROM topics WHERE parent_id = ?', [id]),
     questions: count('SELECT COUNT(*) as c FROM questions WHERE topic_id = ?', [id]),
     notebooks: count('SELECT COUNT(*) as c FROM notebooks WHERE topic_id = ?', [id]),
+    questionLogs: count('SELECT COUNT(*) as c FROM question_logs WHERE topic_id = ?', [id]),
   };
 }
 
@@ -1303,6 +1309,9 @@ export function recordQuestionLog(input: {
   const db = getDb();
   const topic = queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [input.topicId]);
   if (!topic) throw new Error('Tópico não encontrado.');
+  // Tópico "pai" é só agrupador (o motor não o estuda): o registro vai num tópico do último nível
+  const children = queryOne<{ c: number }>(db, 'SELECT COUNT(*) as c FROM topics WHERE parent_id = ?', [topic.id])?.c ?? 0;
+  if (children > 0) throw new Error('Escolha um tópico do último nível para registrar as questões.');
 
   // Evidência anterior = tentativas no app + questões já registradas do tópico
   const attempts = queryOne<{ c: number }>(db, 'SELECT COUNT(*) as c FROM question_attempts WHERE topic_id = ?', [topic.id])?.c ?? 0;
@@ -1328,17 +1337,47 @@ export function getQuestionLogs(sinceIso?: string): QuestionLog[] {
   return queryAll<QuestionLog>(getDb(), 'SELECT * FROM question_logs ORDER BY logged_at');
 }
 
-/** Desfaz só o último registro do tópico, devolvendo o domínio de antes. */
-export function undoLastQuestionLog(topicId: string): boolean {
+/**
+ * Desfaz um registro pelo id. O domínio volta ao de antes só se nada mais mexeu no tópico depois (outro registro
+ * ou questão respondida no app); senão voltar apagaria evidência real. A data de estudo é recalculada pelo que sobra.
+ */
+export function undoQuestionLog(logId: string): boolean {
   const db = getDb();
-  const last = queryOne<QuestionLog>(
+  const log = queryOne<QuestionLog & { rowid: number }>(db, 'SELECT rowid, * FROM question_logs WHERE id = ?', [logId]);
+  if (!log || !log.topic_id) return false;
+  const topicId = log.topic_id;
+
+  const laterLogs = queryOne<{ c: number }>(
     db,
-    'SELECT * FROM question_logs WHERE topic_id = ? ORDER BY logged_at DESC, rowid DESC LIMIT 1',
-    [topicId]
-  );
-  if (!last) return false;
-  db.run('DELETE FROM question_logs WHERE id = ?', [last.id]);
-  if (last.mastery_before !== null) updateTopic({ id: topicId, mastery_score: last.mastery_before });
+    `SELECT COUNT(*) as c FROM question_logs
+     WHERE topic_id = ? AND id <> ? AND (logged_at > ? OR (logged_at = ? AND rowid > ?))`,
+    [topicId, log.id, log.logged_at, log.logged_at, log.rowid]
+  )?.c ?? 0;
+  const laterAttempts = queryOne<{ c: number }>(
+    db,
+    'SELECT COUNT(*) as c FROM question_attempts WHERE topic_id = ? AND attempted_at > ?',
+    [topicId, log.logged_at]
+  )?.c ?? 0;
+
+  db.run('DELETE FROM question_logs WHERE id = ?', [log.id]);
+
+  // Última vez que o tópico foi estudado, sem este registro (nulo se nunca)
+  const lastStudied = queryOne<{ d: string | null }>(
+    db,
+    `SELECT MAX(d) as d FROM (
+       SELECT MAX(started_at) as d FROM study_sessions WHERE topic_id = ?
+       UNION ALL SELECT MAX(attempted_at) FROM question_attempts WHERE topic_id = ?
+       UNION ALL SELECT MAX(logged_at) FROM question_logs WHERE topic_id = ?
+     )`,
+    [topicId, topicId, topicId]
+  )?.d ?? null;
+
+  const restoreMastery = laterLogs === 0 && laterAttempts === 0 && log.mastery_before !== null;
+  updateTopic({
+    id: topicId,
+    ...(restoreMastery ? { mastery_score: log.mastery_before as number } : {}),
+    last_studied_at: lastStudied,
+  });
   void flushDatabase();
   return true;
 }
