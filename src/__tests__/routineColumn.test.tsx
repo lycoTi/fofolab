@@ -188,3 +188,13 @@ describe('FofoDoro dentro do bloco atual', () => {
     expect(screen.getByTestId('routine-item-2').textContent).not.toContain('relógio do bloco livre');
   });
 });
+
+describe('fim do dia', () => {
+  it('roteiro cumprido comemora o tempo de hoje e aponta o próximo tópico', () => {
+    const done = [item(1, 'done', 'TI', owasp, 60, 60)];
+    const extra = item(2, 'current', 'CASP', topic('pcasp', '3.1', 'PCASP'), 30);
+    render(<RoutineColumn {...props({ items: done, extraBlock: extra, todayStudiedMinutes: 250 })} />);
+    expect(screen.getByText('Parabéns: 04:10 de estudo hoje! Amanhã tem mais.')).toBeTruthy();
+    expect(screen.getByText('Próximo passo indicado: CASP · 3.1 PCASP')).toBeTruthy();
+  });
+});

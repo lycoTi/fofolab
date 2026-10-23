@@ -576,3 +576,22 @@ describe('Registro rápido de questões feitas fora do app (docs/specs/07 §5.4)
     expect(() => db.recordQuestionLog({ subjectId, topicId: topic.id, total: 0, correct: 0, blank: 0 })).toThrow();
   });
 });
+
+describe('Totais de estudo (docs/specs/10 §3.5)', () => {
+  it('soma o estudo de hoje, da semana, do ano e de tudo', async () => {
+    const { db } = await openDatabase();
+    const subjectId = String(scalar(db, 'SELECT id FROM subjects LIMIT 1'));
+    db.getDb().run('DELETE FROM study_sessions');
+    const insert = (iso: string, minutes: number) =>
+      db.getDb().run(
+        "INSERT INTO study_sessions (id, subject_id, topic_id, duration_minutes, session_type, pauses_count, was_skipped, started_at) VALUES (?, ?, NULL, ?, 'POMODORO', 0, 0, ?)",
+        [`s-${iso}-${minutes}`, subjectId, minutes, iso]
+      );
+    const now = new Date(2026, 9, 22, 15, 0); // quinta-feira, 22/10/2026
+    insert(new Date(2026, 9, 22, 9, 0).toISOString(), 50); // hoje
+    insert(new Date(2026, 9, 20, 9, 0).toISOString(), 30); // terça desta semana
+    insert(new Date(2026, 2, 10, 9, 0).toISOString(), 40); // este ano
+    insert(new Date(2025, 11, 31, 9, 0).toISOString(), 25); // ano passado
+    expect(db.getStudyTotals(now)).toEqual({ todayMinutes: 50, weekMinutes: 80, yearMinutes: 120, allMinutes: 145 });
+  });
+});

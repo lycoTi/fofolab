@@ -39,6 +39,8 @@ export interface RoutineColumnProps {
   preview?: ReactNode | null;
   /** Bloco começado fora do roteiro: cartão próprio no topo. */
   freeBlock?: ReactNode | null;
+  /** Estudo registrado hoje (todas as matérias), para o resumo do fim do dia. */
+  todayStudiedMinutes?: number;
 }
 
 const footerLink = 'flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300';
@@ -89,6 +91,10 @@ export function RoutineColumn(props: RoutineColumnProps) {
         {allDone && (
           <li className="space-y-2 pt-1">
             <p className="text-xs font-semibold text-emerald-300">Roteiro de hoje cumprido</p>
+            <p className="text-xs text-slate-200">{`Parabéns: ${formatDuration(props.todayStudiedMinutes ?? 0)} de estudo hoje! Amanhã tem mais.`}</p>
+            {extraBlock && (
+              <p className="text-xs text-slate-400">{`Próximo passo indicado: ${extraBlock.subject.name}${extraBlock.topic ? ` · ${[extraBlock.topic.code, extraBlock.topic.title].filter(Boolean).join(' ')}` : ''}`}</p>
+            )}
             {extraBlock && (
               <ol>
                 <RoutineBlockItem item={extraBlock} current={currentExtras('Iniciar bloco extra', extraBlock)} />

@@ -1,7 +1,7 @@
 import initSqlJs, { type Database, type SqlJsConfig, type SqlJsStatic } from 'sql.js';
 import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 import schemaSql from '../../docs/specs/01-database-schema.sql?raw';
-import { calculateSampleConfidencePercent } from './cycleEngine';
+import { calculateSampleConfidencePercent, startOfWeek } from './cycleEngine';
 import { isDiagnosisAllowed } from './diagnosis';
 import { blendMastery, isValidLog } from './questionLogs';
 import { newId } from './ids';
@@ -1503,6 +1503,27 @@ export function saveDailyPlan(planId: string, dateKey: string, blocks: FrozenBlo
 export function clearDailyPlan(planId: string, dateKey: string): void {
   getDb().run('DELETE FROM daily_plans WHERE plan_id = ? AND date = ?', [planId, dateKey]);
   persistDatabase();
+}
+
+/** Totais de estudo registrado (spec 10 §3.5): hoje, nesta semana (desde segunda), neste ano e desde o começo. */
+export function getStudyTotals(now: Date): { todayMinutes: number; weekMinutes: number; yearMinutes: number; allMinutes: number } {
+  const db = getDb();
+  const sumSince = (since: Date | null): number =>
+    Number(
+      queryOne<{ total: number | null }>(
+        db,
+        since
+          ? 'SELECT SUM(duration_minutes) AS total FROM study_sessions WHERE started_at >= ?'
+          : 'SELECT SUM(duration_minutes) AS total FROM study_sessions',
+        since ? [since.toISOString()] : []
+      )?.total ?? 0
+    );
+  return {
+    todayMinutes: sumSince(new Date(now.getFullYear(), now.getMonth(), now.getDate())),
+    weekMinutes: sumSince(startOfWeek(now)),
+    yearMinutes: sumSince(new Date(now.getFullYear(), 0, 1)),
+    allMinutes: sumSince(null),
+  };
 }
 
 // ============================================================================

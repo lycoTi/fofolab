@@ -63,6 +63,7 @@ import {
   getRecentAttempts,
   getStudyPlans,
   getStudySessionsSince,
+  getStudyTotals,
   getSubjectsByPlan,
   getTopicLinks,
   getTopicsBySubject,
@@ -347,6 +348,13 @@ export default function App() {
   }, [activePlan, currentSubject, currentTopic, cycleData]);
 
   const readerExpanded = readerMaximized && mode === 'student' && activeTab === 'reader';
+
+  // Totais de estudo (hoje/semana/ano/tudo): relidos só quando as sessões mudam (refreshData), não a cada tique
+  const studyTotals = useMemo(() => {
+    if (!dbReady) return null;
+    void sessions;
+    return getStudyTotals(new Date());
+  }, [dbReady, sessions]);
 
   // Roteiro de hoje na coluna esquerda (spec 09): congelado no dia, classificado pelas sessões de hoje
   const routine = useDailyRoutine({
@@ -973,6 +981,7 @@ export default function App() {
           group={routineGroup(routineBlockTopic, topicsBySubject)}
           selectedTopicId={currentTopic?.id ?? null}
           liveFocusMs={routineLiveFocusMs}
+          todayStudiedMinutes={studyTotals?.todayMinutes ?? 0}
           fofodoro={blockActive && runningOnRoutineBlock ? fofodoroNode : null}
           freeBlock={blockActive && !runningOnRoutineBlock ? fofodoroNode : null}
           preview={<FofoDoroPreview controller={studyBlock} targetMinutes={routine.currentItem?.remainingMinutes ?? null} />}
@@ -1091,6 +1100,7 @@ export default function App() {
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
                         onOpenSubject={openSubjectOnWorkbench}
+                        totals={studyTotals ?? undefined}
                       />
                     )}
 
