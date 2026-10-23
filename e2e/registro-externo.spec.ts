@@ -17,7 +17,7 @@ const column = (page: Page) => page.getByLabel('Roteiro de hoje');
 /** Conclui um bloco para o convite aparecer e devolve o rótulo do tópico sugerido. */
 async function finishBlockAndOpenInvite(page: Page): Promise<string> {
   await column(page).getByRole('button', { name: 'Iniciar bloco' }).click();
-  await page.getByRole('button', { name: 'Concluir bloco' }).click();
+  await page.locator('header').getByRole('button', { name: 'Concluir bloco' }).click();
   await expect(column(page)).toContainText('Resolveu questões em outro lugar? Registre seu desempenho.');
   const select = column(page).getByLabel('Tópico');
   return (await select.locator('option:checked').innerText()).trim();

@@ -37,7 +37,10 @@ export function StudyBlockMini({
   }
 
   const remaining = phaseRemainingMs(state, now);
-  const clock = state.mode === 'LIVRE' ? formatClock(state.blockFocusedMs + focusedSegmentMs(state, now)) : formatClock(remaining ?? 0);
+  // Igual ao anel do FofoDoro: no "pronto" mostra o tamanho do próximo pomodoro, não 00:00
+  let clock = formatClock(remaining ?? 0);
+  if (state.mode === 'LIVRE') clock = formatClock(state.blockFocusedMs + focusedSegmentMs(state, now));
+  else if (state.phase === 'READY') clock = formatClock(state.focusMinutes * 60_000);
   const total = totalPomodoros(state);
   const progress = phaseProgress(state, now);
   const barLabel = state.phase === 'BREAK' ? 'Progresso da pausa' : 'Progresso do pomodoro';

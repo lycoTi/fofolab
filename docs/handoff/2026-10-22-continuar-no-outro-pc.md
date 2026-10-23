@@ -21,6 +21,9 @@
 - **9b (roteiro na coluna) pronta**: Meu Dia e Bancada numa tela só, roteiro congelado no dia (migração v5), olhada com
   pausa automática. Plano em `docs/superpowers/plans/2026-10-22-9b-roteiro-na-coluna.md`.
 - **7b (registro rápido de questões feitas fora do app) pronta**: painel no topo da coluna, migração v7.
+- **FofoDoro + barras do Ciclo prontos** (spec 10, plano `docs/superpowers/plans/2026-10-23-10-fofodoro.md`).
+- **Atenção (nvm):** o FofoLab precisa de Node 20+; se o nvm estiver em outra versão por causa de outro projeto,
+  rode os comandos com `nvm use 22.21.1` (ou só nesse terminal).
 - **Próximo:** plano da **9c** (Revisão do dia: 3–5 questões intercaladas dos tópicos esfriando, confiança, pergunta
   aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v8** (v6 = assinatura do perfil, v7 = registro externo).
 - **Depois:** o brainstorm do **minerador de provas da Cebraspe** (épico no BACKLOG; nada do TEC:
