@@ -131,6 +131,36 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(onOpenSubject).toHaveBeenCalledWith(allocation.subject.id);
   });
 
+  it('a barra de cada matéria tem o comprimento do tempo reservado, proporcional à matéria com mais tempo', () => {
+    const base = cycleData.allocations[0];
+    const portugues = { ...base, subject: { ...base.subject, id: 'pt', name: 'Português' }, currentWeeklyMinutes: 30, studiedThisWeekMinutes: 15 };
+    const direito = { ...base, subject: { ...base.subject, id: 'dp', name: 'Direito Público' }, currentWeeklyMinutes: 210, studiedThisWeekMinutes: 0 };
+    render(
+      <ul>
+        <CycleSubjectRow allocation={portugues} plan={cguPlan} cycleData={cycleData} maxWeeklyMinutes={210} />
+        <CycleSubjectRow allocation={direito} plan={cguPlan} cycleData={cycleData} maxWeeklyMinutes={210} />
+      </ul>
+    );
+    const ptTrack = screen.getByRole('progressbar', { name: 'Feito da semana em Português' });
+    const dpTrack = screen.getByRole('progressbar', { name: 'Feito da semana em Direito Público' });
+    expect(ptTrack.style.width).toBe(`${(30 / 210) * 100}%`);
+    expect(dpTrack.style.width).toBe('100%');
+    expect(ptTrack.getAttribute('title')).toBe('Reservado na semana: 00:30 (maior matéria: 03:30)');
+    // Preenchimento: metade do reservado de Português já foi estudado
+    expect((ptTrack.firstElementChild as HTMLElement).style.width).toBe('50%');
+  });
+
+  it('matéria com quase nada reservado ainda tem uma barra visível', () => {
+    const base = cycleData.allocations[0];
+    const tiny = { ...base, subject: { ...base.subject, name: 'Inglês' }, currentWeeklyMinutes: 5, studiedThisWeekMinutes: 0 };
+    render(
+      <ul>
+        <CycleSubjectRow allocation={tiny} plan={cguPlan} cycleData={cycleData} maxWeeklyMinutes={600} />
+      </ul>
+    );
+    expect(screen.getByRole('progressbar', { name: 'Feito da semana em Inglês' }).style.width).toBe('4%');
+  });
+
   it('AUDITORIA DE UX: garante que o Wizard não contém jargões técnicos proibidos', () => {
     const { container: wizardContainer } = render(
       <OnboardingWizardModal

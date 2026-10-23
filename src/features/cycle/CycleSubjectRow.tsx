@@ -5,6 +5,8 @@ import { formatDuration } from '../../lib/timeFormat';
 import type { StudyPlan } from '../../types/database';
 
 const SUGGESTION_GAP_MINUTES = 15;
+/** Matéria com quase nada reservado continua com uma barra visível. */
+const MIN_TRACK_PERCENT = 4;
 
 /** Uma matéria do ciclo: nome inteiro, quanto já fez da meta da semana e por quê. */
 export function CycleSubjectRow({
@@ -12,15 +14,21 @@ export function CycleSubjectRow({
   plan,
   cycleData,
   onOpenSubject,
+  maxWeeklyMinutes,
 }: {
   allocation: SubjectCycleAllocation;
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
   /** Abre a matéria na bancada (como "olhada": o roteiro do dia não muda). */
   onOpenSubject?: (subjectId: string) => void;
+  /** Maior tempo reservado entre as matérias: a barra de cada uma tem comprimento proporcional a ele. */
+  maxWeeklyMinutes?: number;
 }) {
   const { subject, currentWeeklyMinutes, studiedThisWeekMinutes, recommendedWeeklyMinutes } = allocation;
   const progress = currentWeeklyMinutes > 0 ? Math.min(100, (studiedThisWeekMinutes / currentWeeklyMinutes) * 100) : 0;
+  // Comprimento = tempo reservado na semana (lê-se a distribuição de relance); preenchimento = já estudado
+  const scale = Math.max(maxWeeklyMinutes ?? currentWeeklyMinutes, 1);
+  const trackPercent = Math.min(100, Math.max(MIN_TRACK_PERCENT, (currentWeeklyMinutes / scale) * 100));
   const suggestionDiffers = Math.abs(recommendedWeeklyMinutes - currentWeeklyMinutes) >= SUGGESTION_GAP_MINUTES;
 
   return (
@@ -57,8 +65,11 @@ export function CycleSubjectRow({
           )}
         </div>
       </div>
+      <div className="ml-[18px]">
       <div
-        className="h-1.5 rounded-full bg-slate-800 overflow-hidden ml-[18px]"
+        className="h-1.5 rounded-full bg-slate-800 overflow-hidden transition-[width] duration-300 motion-reduce:transition-none"
+        style={{ width: `${trackPercent}%` }}
+        title={`Reservado na semana: ${formatDuration(currentWeeklyMinutes)} (maior matéria: ${formatDuration(scale)})`}
         role="progressbar"
         aria-label={`Feito da semana em ${subject.name}`}
         aria-valuemin={0}
@@ -66,6 +77,7 @@ export function CycleSubjectRow({
         aria-valuenow={studiedThisWeekMinutes}
       >
         <div className="h-full rounded-full" style={{ width: `${progress}%`, backgroundColor: subject.color }} />
+      </div>
       </div>
       <p className="ml-[18px] text-[11px] text-slate-400">{allocation.dominantReason}</p>
     </li>

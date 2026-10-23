@@ -32,6 +32,8 @@ export function CycleView({
   onOpenSubject?: (subjectId: string) => void;
 }) {
   const [applied, setApplied] = useState(false);
+  // A mesma escala para todas as provas: dá para comparar a matéria de uma prova com a de outra
+  const maxWeeklyMinutes = Math.max(1, ...cycleData.allocations.map((a) => a.currentWeeklyMinutes));
   const { allocations, daysUntilExam, totalWeeklyMinutesBudget } = cycleData;
   const studiedThisWeek = allocations.reduce((acc, a) => acc + a.studiedThisWeekMinutes, 0);
   const weekProgress = totalWeeklyMinutesBudget > 0 ? Math.min(100, (studiedThisWeek / totalWeeklyMinutesBudget) * 100) : 0;
@@ -156,6 +158,7 @@ export function CycleView({
                 plan={plan}
                 cycleData={cycleData}
                 onOpenSubject={onOpenSubject}
+                maxWeeklyMinutes={maxWeeklyMinutes}
               />
             ))}
           </ul>
