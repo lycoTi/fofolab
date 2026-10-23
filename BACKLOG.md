@@ -97,6 +97,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   atual da coluna (anda ao vivo); clicar no relógio do cabeçalho leva ao Ciclo.
   → 9c Revisão do dia (usará a migração **v8**; v6 = assinatura do perfil no roteiro, v7 = registro externo) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
+- **História — FofoDoro (pedido do dono, 23/10):** o pomodoro sai do cartão da aba Ciclo e vai para o bloco atual da
+  coluna Hoje (o que é "agora, em minutos" fica no Hoje; o que é semanal fica no Ciclo). Relógio analógico em anel (foco e
+  pausa no sentido horário), pausas calculadas pelo foco escolhido e pausa longa após 4 pomodoros, pomodoros sendo
+  preenchidos até o ciclo completo, avisos em toast nas transições ("20 min de foco: que tal 5 de pausa?"), parâmetros
+  configuráveis; o foco nunca recomeça sozinho depois da pausa. Brainstorm antes de construir.
+- **Tarefa — barras do tempo reservado no Ciclo:** cada matéria com uma barra proporcional à de maior tempo reservado na
+  semana (manutenção curta, matéria pesada longa), para ler a distribuição de relance.
+- **Nome da aba Ciclo:** quando o cronograma entrar, ciclo e cronograma ficam na mesma aba; renomear (ex.: "Plano de estudo").
 - **Questões: um só copiloto (pedido do dono, 22/10):** o painel "Explicação & Estudo Reverso" ao lado da questão repete o
   papel do Copiloto da coluna direita. Avaliar fundir o Estudo Reverso no copiloto e dar a ele a voz do hamster
   (nome amigável: **FofoIA** ou **FofoPiloto**), liberando espaço para a questão. Brainstorm antes de construir.
