@@ -60,6 +60,8 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
 
   const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
   const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
+  // Com grupo, o título é o tópico "pai" e o do bloco aparece só na árvore (senão pareceria pai de si mesmo)
+  const hasTree = group.members.length > 1;
   const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / block.durationMinutes) * 100));
   return (
     <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-2.5 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3 text-xs">
@@ -78,7 +80,14 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
       >
         <div className="h-full rounded-full bg-orange-500 transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progressPercent}%` }} />
       </div>
-      {topic && (
+      {hasTree && group.parent && (
+        <h3 className="text-sm font-medium leading-snug text-slate-100">
+          {group.parent.code && <span className="font-mono text-orange-300">{group.parent.code}</span>}
+          {group.parent.code && ' '}
+          <span>{group.parent.title}</span>
+        </h3>
+      )}
+      {!hasTree && topic && (
         <button
           type="button"
           onClick={() => onSelectTopic(topic.subject_id, topic.id)}
@@ -89,7 +98,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
           <span>{topic.title}</span>
         </button>
       )}
-      {group.members.length > 1 && (
+      {hasTree && (
         <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />
       )}
       <div className="flex flex-wrap gap-1.5">

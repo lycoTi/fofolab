@@ -54,7 +54,7 @@ describe('coluna do roteiro de hoje', () => {
   it('mostra o bloco atual aberto, o feito esmaecido e o próximo recolhido com o motivo', () => {
     render(<RoutineColumn {...props()} />);
     expect(screen.getByText('Hoje · 02:50')).toBeTruthy();
-    expect(screen.getAllByText('OWASP Top 10').length).toBeGreaterThan(0);
+    expect(screen.getByText('2.2.1 OWASP Top 10')).toBeTruthy();
     expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ })).toBeTruthy();
     expect(screen.getByText(/Faltam 01:00 desta matéria na semana \(3\)/)).toBeTruthy();
     expect(screen.getByTestId('routine-item-1').className).toMatch(/opacity/);
@@ -120,18 +120,29 @@ describe('coluna do roteiro de hoje', () => {
   it('árvore: o grupo é a raiz e os tópicos ficam recuados; o do bloco é marcado e clicar nele volta ao bloco', () => {
     const p = props({ selectedTopicId: 'oauth' });
     render(<RoutineColumn {...p} />);
-    expect(screen.getByText('2.2 Segurança de aplicações')).toBeTruthy();
+    expect(screen.getByRole('heading', { name: '2.2 Segurança de aplicações' })).toBeTruthy();
     expect(screen.queryByText('Outros tópicos do mesmo grupo')).toBeNull();
     expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ }).getAttribute('aria-current')).toBe('true');
     fireEvent.click(screen.getByRole('button', { name: /2\.2\.1 OWASP Top 10.*tópico do bloco/ }));
     expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'owasp');
   });
 
-  it('clicar no título do bloco também volta ao tópico do bloco', () => {
-    const p = props({ selectedTopicId: 'jwt' });
+  it('o título do bloco é o grupo, e o tópico do bloco aparece uma vez só, dentro da árvore', () => {
+    render(<RoutineColumn {...props()} />);
+    expect(screen.getByRole('heading', { name: '2.2 Segurança de aplicações' })).toBeTruthy();
+    expect(screen.getAllByText('2.2.1 OWASP Top 10')).toHaveLength(1);
+  });
+
+  it('tópico sem grupo: o título é o próprio tópico, e clicar nele volta ao bloco', () => {
+    const p = props({ group: { parent: null, members: [] }, selectedTopicId: 'outro' });
     render(<RoutineColumn {...p} />);
     fireEvent.click(screen.getByRole('button', { name: 'Voltar ao tópico do bloco: 2.2.1 OWASP Top 10' }));
     expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'owasp');
+  });
+
+  it('o contorno do tópico selecionado é desenhado por dentro (não é cortado pela animação)', () => {
+    render(<RoutineColumn {...props({ selectedTopicId: 'oauth' })} />);
+    expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ }).className).toContain('ring-inset');
   });
 
   it('grupo grande mostra 5 e "Ver mais", sem esconder o do bloco nem o selecionado', () => {

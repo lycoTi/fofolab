@@ -11,8 +11,9 @@ function label(topic: Topic): string {
 }
 
 /**
- * Árvore do grupo do bloco: o tópico "pai" é a raiz e os tópicos dele, inclusive o do bloco, ficam recuados no
- * mesmo nível. O do bloco tem um ponto laranja; o selecionado ganha fundo, contorno e o olhinho — nunca fonte
+ * Árvore do grupo do bloco: o tópico "pai" é o título do bloco (fora daqui) e os tópicos dele, inclusive o do
+ * bloco, ficam recuados no mesmo nível. O contorno do selecionado é por dentro (ring-inset): a animação de
+ * altura esconde o que passa da caixa, e um contorno por fora apareceria cortado. O do bloco tem um ponto laranja; o selecionado ganha fundo, contorno e o olhinho — nunca fonte
  * ou recuo maiores, que fariam o texto em volta pular. Os itens extras abrem com a altura animada.
  */
 export function TopicTree({
@@ -33,7 +34,6 @@ export function TopicTree({
 
   return (
     <div className="space-y-1">
-      {group.parent && <p className="text-[11px] font-medium text-slate-400">{label(group.parent)}</p>}
       <ul aria-label="Tópicos do grupo" className="space-y-0.5 border-l border-slate-700/80 pl-2">
         {group.members.map((topic, index) => {
           const visible = expanded || alwaysShown(topic, index);
@@ -53,7 +53,7 @@ export function TopicTree({
                   onClick={() => onSelect(topic.subject_id, topic.id)}
                   aria-current={selected ? 'true' : undefined}
                   aria-label={isBlock ? `${label(topic)} (tópico do bloco)` : label(topic)}
-                  className={`flex w-full items-start gap-1.5 rounded-md px-1.5 py-1 text-left ring-1 transition-colors duration-150 ${
+                  className={`flex w-full items-start gap-1.5 rounded-md px-1.5 py-1 text-left ring-1 ring-inset transition-colors duration-150 ${
                     selected ? 'bg-slate-800 text-slate-100 ring-orange-400/60' : 'text-slate-400 ring-transparent hover:bg-slate-800/50 hover:text-slate-200'
                   }`}
                 >
