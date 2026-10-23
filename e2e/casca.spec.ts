@@ -11,11 +11,10 @@ const TRANSITION_MS = 300;
 async function openPro(page: Page) {
   await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
   await page.goto('/');
-  await page.getByRole('button', { name: 'Bancada Pro' }).click();
   await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
 }
 
-const leftColumn = (page: Page) => page.getByRole('complementary', { name: 'Coluna de tópicos' });
+const leftColumn = (page: Page) => page.getByRole('complementary', { name: 'Coluna do roteiro' });
 const rightColumn = (page: Page) => page.getByRole('complementary', { name: 'Copiloto e Caderno' });
 
 async function boxes(controls: Locator[]) {
@@ -29,12 +28,11 @@ test('recolher e reabrir painéis não move nenhum controle do cabeçalho', asyn
   const controls = [
     header.getByRole('button', { name: 'Recalibrar perfil' }),
     header.getByRole('button', { name: 'Começar bloco de estudo' }),
-    header.getByRole('button', { name: 'Bancada Pro' }),
   ];
   const before = await boxes(controls);
   expect((await header.boundingBox())!.height).toBeLessThanOrEqual(64);
 
-  await page.getByRole('button', { name: 'Recolher tópicos' }).click();
+  await page.getByRole('button', { name: 'Recolher roteiro' }).click();
   await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
   await page.waitForTimeout(TRANSITION_MS);
   await expect(leftColumn(page)).toHaveCSS('width', '44px');
@@ -42,20 +40,19 @@ test('recolher e reabrir painéis não move nenhum controle do cabeçalho', asyn
   expect(await boxes(controls)).toEqual(before);
   await page.screenshot({ path: `${SCREENS}/08-casca-recolhida.png` });
 
-  await page.getByRole('button', { name: 'Abrir tópicos' }).click();
+  await page.getByRole('button', { name: 'Abrir roteiro' }).click();
   await page.getByRole('button', { name: 'Abrir Copiloto IA' }).click();
   await page.waitForTimeout(TRANSITION_MS);
-  await expect(page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' })).toBeVisible();
+  await expect(page.getByLabel('Roteiro de hoje')).toBeVisible();
   expect(await boxes(controls)).toEqual(before);
 });
 
 test('recolhido continua recolhido depois de fechar e abrir o app', async ({ page }) => {
   await openPro(page);
-  await page.getByRole('button', { name: 'Recolher tópicos' }).click();
+  await page.getByRole('button', { name: 'Recolher roteiro' }).click();
   await page.reload();
-  await page.getByRole('button', { name: 'Bancada Pro' }).click();
   await expect(leftColumn(page)).toHaveCSS('width', '44px');
-  await expect(page.getByRole('button', { name: 'Abrir tópicos' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Abrir roteiro' })).toBeVisible();
 });
 
 test('o rascunho do caderno sobrevive a trocar de aba e a recolher a coluna', async ({ page }) => {
@@ -78,10 +75,10 @@ test('quem pediu menos movimento não vê animação', async ({ page }) => {
   expect(duration).toBe('0s');
 });
 
-test('a seta de recolher não cobre o botão de modo da coluna de tópicos', async ({ page }) => {
+test('a seta de recolher não cobre o título do roteiro', async ({ page }) => {
   await openPro(page);
-  const arrow = (await page.getByRole('button', { name: 'Recolher tópicos' }).boundingBox())!;
-  const modeButton = (await page.getByTitle('Alternar entre Bancada de Estudos e Painel de Trilhas').boundingBox())!;
+  const arrow = (await page.getByRole('button', { name: 'Recolher roteiro' }).boundingBox())!;
+  const modeButton = (await page.getByLabel('Roteiro de hoje').getByRole('heading').boundingBox())!;
   const overlaps =
     arrow.x < modeButton.x + modeButton.width &&
     modeButton.x < arrow.x + arrow.width &&
@@ -106,7 +103,20 @@ test('mexer nos painéis durante a leitura não deixa a preferência diferente d
   await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
   await page.reload();
-  await page.getByRole('button', { name: 'Bancada Pro' }).click();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
   await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
+});
+
+test('passar o mouse no Mapa de Calor não faz a grade pular', async ({ page }) => {
+  await openPro(page);
+  await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
+  const squares = page.getByRole('main').getByRole('button', { name: /: (Frio|Morno|Atenção|Quente|Muito quente)$/ });
+  const lastSquare = squares.last();
+  const before = await lastSquare.boundingBox();
+  const count = await squares.count();
+  for (let i = 0; i < Math.min(count, 12); i++) await squares.nth(i).hover();
+  // O quadrado sob o mouse cresce (hover); medir só com o mouse fora e a animação terminada
+  await page.mouse.move(0, 0);
+  await page.waitForTimeout(TRANSITION_MS);
+  expect(await lastSquare.boundingBox()).toEqual(before);
 });

@@ -33,7 +33,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
 
   if (status === 'done') {
     return (
-      <li data-testid={`routine-item-${block.blockNumber}`} className="flex items-center gap-2 rounded-lg border border-slate-800 px-3 py-2 text-xs text-slate-400 opacity-60">
+      <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="flex items-center gap-2 rounded-lg border border-slate-800 px-3 py-2 text-xs text-slate-400 opacity-60">
         <Check size={13} className="shrink-0 text-emerald-400" />
         <span className="truncate">{`${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
         <span className="ml-auto shrink-0">{formatDuration(block.durationMinutes)}</span>
@@ -43,7 +43,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
 
   if (!current) {
     return (
-      <li data-testid={`routine-item-${block.blockNumber}`} className="space-y-1 rounded-lg border border-slate-800 px-3 py-2 text-xs">
+      <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-1 rounded-lg border border-slate-800 px-3 py-2 text-xs">
         <div className="flex items-center gap-2 text-slate-200">
           <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
           <span className="truncate font-medium">{subject.name}</span>
@@ -56,7 +56,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
 
   const { siblings, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
   return (
-    <li data-testid={`routine-item-${block.blockNumber}`} className="space-y-2.5 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3 text-xs">
+    <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-2.5 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3 text-xs">
       <div className="flex items-center gap-2">
         <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
         <span className="truncate font-semibold text-white">{subject.name}</span>

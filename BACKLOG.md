@@ -71,8 +71,16 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`): cabeçalho fixo de ponta a ponta (concurso, dias, "P1 x% visto"),
   painéis que recolhem em trilho com transição de 220 ms (sem animação com "reduzir movimento"), Copiloto+Caderno em abas
   montadas, "Edital" no pé da coluna, estado recolhido lembrado após reabrir (E2E `e2e/casca.spec.ts`; `npm test`,
-  `test:e2e` e `build` verdes). O resumo por prova no cabeçalho só aparece em planos do edital (coberto por teste de unidade). → 9b roteiro do dia na coluna esquerda (Meu Dia + Bancada unidos, "olhada"
-  com pausa automática, tópicos clicáveis no Ciclo/Mapa de Calor) → 9c Revisão do dia (3–5 questões intercaladas dos
+  `test:e2e` e `build` verdes). O resumo por prova no cabeçalho só aparece em planos do edital (coberto por teste de unidade).
+  [DONE] **9b roteiro na coluna** (22/10/2026, plano `docs/superpowers/plans/2026-10-22-9b-roteiro-na-coluna.md`): Meu Dia
+  e Bancada numa tela só; roteiro do dia congelado no banco (migração **v5**, tabela `daily_plans`) e classificado em
+  feito/atual/próximo pelas sessões de hoje; "olhada" (tópico fora do bloco, inclusive irmão) pausa o relógio e "Voltar ao
+  bloco" retoma, dica única após 3 min; atalhos de PDF/questões/caderno do bloco; tópico sem questões mostra as do grupo
+  (ou da matéria) com rótulo; Mapa de Calor, Ciclo (pela matéria) e Edital abrem o tópico como olhada; aviso discreto de
+  recalibrar; recalibrar refaz o roteiro do dia. Corrigido no caminho: o detalhe do Mapa de Calor fazia a grade tremer ao
+  passar o mouse. E2E `e2e/roteiro.spec.ts`; `npm test`, `test:e2e` (2 rodadas) e `build` verdes. A importação de questões
+  passa a sugerir a matéria aberta (a do bloco de hoje), não a primeira da lista.
+  → 9c Revisão do dia (usará a migração **v6**) (3–5 questões intercaladas dos
   tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso

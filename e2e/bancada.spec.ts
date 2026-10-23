@@ -12,13 +12,15 @@ async function skipWizard(page: Page) {
   await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
 }
 
+/** Meu Dia e Bancada viraram uma tela só (spec 09): a bancada já abre com o roteiro na coluna. */
 async function openPro(page: Page) {
-  await page.getByRole('button', { name: 'Bancada Pro' }).click();
   await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
 }
 
+const routineColumn = (page: Page) => page.getByLabel('Roteiro de hoje');
+
 async function openCurriculum(page: Page) {
-  await page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' }).getByRole('button', { name: 'Edital', exact: true }).click();
+  await routineColumn(page).getByRole('button', { name: 'Edital', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: 'Organizar edital' });
   await expect(dialog.getByText('Organizar Edital, Disciplinas e Tópicos')).toBeVisible();
   return dialog;
@@ -70,13 +72,13 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   await expect(page.getByText('⚡ Alta Rentabilidade (Pós-Edital / Tempo Escasso)')).toBeVisible();
   await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
 
-  await expect(page.getByText('Roteiro de Hoje • Modo Essencial')).toBeVisible();
-  await expect(page.getByText('02:00 de estudo planejado para hoje')).toBeVisible();
+  // O roteiro de hoje fica na coluna da bancada, refeito com o perfil recém-calibrado
+  await expect(routineColumn(page).getByText('Hoje · 02:00')).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/01-meu-dia.png`, fullPage: true });
 
   // Recarregar logo após concluir o assistente não pode perder o plano (a gravação é imediata)
   await page.reload();
-  await expect(page.getByText('02:00 de estudo planejado para hoje')).toBeVisible();
+  await expect(routineColumn(page).getByText('Hoje · 02:00')).toBeVisible();
   await expect(page.getByText('Calibrar Meu Roteiro de Estudos')).toHaveCount(0);
 
   await openPro(page);
@@ -116,6 +118,11 @@ test('importa questão colada da prova, responde e o diagnóstico coerente fica 
   await openPro(page);
   await page.screenshot({ path: `${SCREENS}/02-bancada-pro.png` });
 
+  // A lista de disciplinas saiu da coluna (spec 09): o tópico fora do roteiro abre pelo Mapa de Calor
+  await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
+  await page.getByRole('button', { name: /^1\.3 Amostragem em Auditoria/ }).click();
+  await page.getByRole('button', { name: /Estudar este tópico/ }).click();
+
   await page.getByRole('button', { name: 'Importar Questões' }).first().click();
   await page.getByLabel('Texto das questões').fill(`1. (FGV/CGU/2025) [tópico 1.3] Enunciado E2E sobre amostragem em auditoria: qual afirmação está correta?
 A) A amostragem elimina o risco de detecção.
@@ -127,8 +134,6 @@ Gabarito: B`);
   await page.getByRole('button', { name: /Importar 1 questão/ }).click();
   await expect(page.getByText(/1 importada/)).toBeVisible();
   await page.getByRole('button', { name: 'Fechar importação' }).click();
-
-  await page.getByRole('button', { name: /1\.3\s*Amostragem em Auditoria/ }).click();
   await expect(page.getByText(/Enunciado E2E sobre amostragem/)).toBeVisible();
 
   await page.getByRole('button', { name: /^A\) A amostragem elimina/ }).click();
@@ -139,11 +144,13 @@ Gabarito: B`);
   await expect(page.getByText('Esta questão ainda não tem explicação.')).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/03-questao-importada.png` });
 
+  // Recarregar só depois da gravação em disco: senão a tentativa recém-registrada pode não estar lá
+  await waitSaved(page);
   await page.reload();
   await openPro(page);
   await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
   await page.getByRole('button', { name: /^1\.3 Amostragem em Auditoria/ }).click();
-  await expect(page.getByText(/1 questão(?!\w)/)).toBeVisible();
+  await expect(page.getByRole('main').getByText(/1 questão(?!\w)/)).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/04-ciclo.png`, fullPage: true });
 });
 
@@ -256,7 +263,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await openPro(page);
   await openReaderTab(page);
   // Para sobrar espaço ao PDF, a árvore de tópicos e o copiloto se recolhem
-  await expect(page.getByRole('complementary', { name: 'Coluna de tópicos' })).toHaveCSS('width', '44px');
+  await expect(page.getByRole('complementary', { name: 'Coluna do roteiro' })).toHaveCSS('width', '44px');
   await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeHidden();
 
   await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
@@ -273,7 +280,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await waitSaved(page);
 
   await page.getByRole('button', { name: 'Maximizar leitura' }).click();
-  await expect(page.getByRole('button', { name: 'Bancada Pro' })).toBeHidden();
+  await expect(page.getByRole('button', { name: 'Recalibrar perfil' })).toBeHidden();
   await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeHidden();
   // O caderno continua ao lado até ser escondido pelo botão do próprio leitor
   await expect(page.getByLabel('Conteúdo do caderno do tópico')).toBeVisible();
@@ -283,11 +290,11 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await page.screenshot({ path: `${SCREENS}/07-leitura-maximizada.png` });
 
   await page.keyboard.press('Escape');
-  await expect(page.getByRole('button', { name: 'Bancada Pro' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Recalibrar perfil' })).toBeVisible();
 
   // Saindo da leitura, os painéis voltam como estavam
   await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
-  await expect(page.getByRole('complementary', { name: 'Painel de Tópicos e Edital' })).toBeVisible();
+  await expect(page.getByRole('complementary', { name: 'Coluna do roteiro' })).not.toHaveCSS('width', '44px');
   await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
 
   await page.reload();
@@ -341,8 +348,7 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
 
   // O Meu Dia passa a mandar estudar pelo edital: primeiro a matéria fraca que vale o dobro
-  await expect(page.getByText('Roteiro de Hoje • Modo Essencial')).toBeVisible();
-  const firstBlock = page.getByText('Arquitetura e Integração de Sistemas').first();
+  const firstBlock = routineColumn(page).getByText('Arquitetura e Integração de Sistemas').first();
   await expect(firstBlock).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/10-meu-dia-do-edital.png`, fullPage: true });
 
@@ -362,11 +368,12 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
   await skipWizard(page);
   await page.goto('/');
 
-  // Meu Dia: o cartão do bloco fica no topo; "Iniciar" começa um pomodoro de 30 min no tópico do bloco
+  // O cartão do bloco fica no Ciclo; "Iniciar bloco" na coluna começa um pomodoro de 30 min no tópico do bloco
+  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
   const blockCard = page.getByRole('region', { name: 'Bloco de estudo' });
   await expect(blockCard).toBeVisible();
   await blockCard.getByRole('radio', { name: '00:30' }).click();
-  await page.getByRole('button', { name: /Iniciar Estudo Direto/ }).first().click();
+  await routineColumn(page).getByRole('button', { name: 'Iniciar bloco' }).click();
   await expect(blockCard.getByText('Foco', { exact: true })).toBeVisible();
   await expect(blockCard.getByLabel(/0 de \d+ pomodoros feitos/)).toBeVisible();
   // O relógio do cabeçalho mostra o mesmo bloco
@@ -380,9 +387,8 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
   await expect(blockCard.getByLabel(/1 de \d+ pomodoros feitos/)).toBeVisible();
   await waitSaved(page);
 
-  // Ciclo: a semana mostra os 30 min gravados, tudo em HH:mm
-  await openPro(page);
-  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
+  // Ciclo: a semana mostra os 30 min gravados, tudo em HH:mm; a coluna conta o tempo no bloco
+  await expect(routineColumn(page)).toContainText('00:30 de');
   await expect(page.getByRole('region', { name: 'Semana de estudo' })).toContainText('00:30');
   await expect(page.locator('main')).not.toContainText(/\d+ ?min\b|\d+\.\d+h\b/);
   await page.screenshot({ path: `${SCREENS}/12-ciclo-por-prova.png`, fullPage: true });

@@ -36,18 +36,23 @@ function describeLastStudy(days: number | null): string {
   return days === 1 ? 'visto ontem' : `visto há ${days} dias`;
 }
 
+/**
+ * Altura fixa e uma linha por campo: o detalhe muda ao passar o mouse, e se a altura mudasse junto os
+ * quadradinhos abaixo pulariam, o mouse cairia em outro tópico e a tela ficaria tremendo.
+ */
 function TopicDetail({ item, onJump }: { item: TopicHeatItem; onJump: () => void }) {
   const level = heatLevel(item.heatScore);
+  const label = `${item.topic.code} ${item.topic.title}`;
   return (
-    <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-wrap items-center justify-between gap-3">
-      <div className="min-w-0 space-y-0.5">
-        <div className="text-[11px]" style={{ color: item.subjectColor }}>
+    <div className="h-[5.25rem] p-3 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-nowrap items-center justify-between gap-3">
+      <div className="min-w-0 flex-1 space-y-0.5">
+        <div className="truncate text-[11px]" style={{ color: item.subjectColor }}>
           {item.subjectName}
         </div>
-        <div className="text-sm font-semibold text-white">
-          {item.topic.code} {item.topic.title}
+        <div className="truncate text-sm font-semibold text-white" title={label}>
+          {label}
         </div>
-        <div className="text-[11px] text-slate-400">
+        <div className="truncate text-[11px] text-slate-400">
           <span className={`inline-block h-2 w-2 rounded-sm mr-1 ${level.className}`} />
           {level.label} ({item.heatScore}) • Domínio {item.topic.mastery_score}% • {item.attemptsCount}{' '}
           {item.attemptsCount === 1 ? 'questão' : 'questões'}
