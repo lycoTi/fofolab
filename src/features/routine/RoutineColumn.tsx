@@ -15,6 +15,8 @@ export interface RoutineColumnProps {
   extraBlock: RoutineItem | null;
   blockRunning: boolean;
   siblings: Topic[];
+  selectedTopicId: string | null;
+  liveFocusMs: number;
   materials: RoutineMaterials;
   peek: PeekInfo | null;
   /** Aviso discreto quando o desempenho contraria a autoavaliação. */
@@ -40,6 +42,8 @@ export function RoutineColumn(props: RoutineColumnProps) {
 
   const currentExtras = (startLabel: string, item: RoutineItem) => ({
     siblings: props.siblings,
+    selectedTopicId: props.selectedTopicId,
+    liveFocusMs: props.liveFocusMs,
     materials: props.materials,
     blockRunning,
     startLabel,

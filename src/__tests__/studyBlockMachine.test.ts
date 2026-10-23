@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  phaseProgress,
   initialBlockState,
   phaseRemainingMs,
   pomodoroCount,
@@ -138,5 +139,26 @@ describe('Bloco de estudo no modo livre', () => {
   it('não troca o modo no meio de um trecho de foco', () => {
     const started = run([{ type: 'START', block, now: 0 }]).state;
     expect(run([{ type: 'SET_MODE', mode: 'LIVRE', focusMinutes: 50 }], started).state.mode).toBe('POMODORO');
+  });
+});
+
+describe('barrinha de progresso do bloco', () => {
+  it('pomodoro: fração do foco já corrida; pausa: fração da pausa; pronto: sem barra', () => {
+    const started = run([{ type: 'SET_MODE', mode: 'POMODORO', focusMinutes: 30 }, { type: 'START', block, now: 0 }]).state;
+    expect(phaseProgress(started, 0)).toBe(0);
+    expect(phaseProgress(started, 15 * MIN)).toBeCloseTo(0.5);
+    const paused = run([{ type: 'PAUSE', now: 6 * MIN }], started).state;
+    expect(phaseProgress(paused, 20 * MIN)).toBeCloseTo(0.2);
+    const onBreak = run([{ type: 'TICK', now: 30 * MIN }], started).state;
+    expect(onBreak.phase).toBe('BREAK');
+    expect(phaseProgress(onBreak, 30 * MIN)).toBe(0);
+    expect(phaseProgress(run([], initialBlockState).state, 0)).toBeNull();
+  });
+
+  it('modo livre com meta: fração da meta; sem meta: sem barra', () => {
+    const free = run([{ type: 'SET_MODE', mode: 'LIVRE', focusMinutes: 30 }, { type: 'START', block, now: 0 }]).state;
+    expect(phaseProgress(free, 15 * MIN)).toBeCloseTo(15 / (block.targetMinutes ?? 1));
+    const noTarget = run([{ type: 'SET_MODE', mode: 'LIVRE', focusMinutes: 30 }, { type: 'START', block: { ...block, targetMinutes: null }, now: 0 }]).state;
+    expect(phaseProgress(noTarget, 15 * MIN)).toBeNull();
   });
 });

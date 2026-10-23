@@ -2,6 +2,7 @@ import { Check, Play } from 'lucide-react';
 import { formatDuration } from '../../lib/timeFormat';
 import type { RoutineItem } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
+import { SiblingTopics } from './SiblingTopics';
 
 export interface RoutineMaterials {
   pdfLabel: string | null;
@@ -11,6 +12,9 @@ export interface RoutineMaterials {
 
 interface CurrentBlockExtras {
   siblings: Topic[];
+  selectedTopicId: string | null;
+  /** Foco do trecho em andamento, ainda não gravado como sessão (para a barra andar ao vivo). */
+  liveFocusMs: number;
   materials: RoutineMaterials;
   blockRunning: boolean;
   startLabel: string;
@@ -54,13 +58,25 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
     );
   }
 
-  const { siblings, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
+  const { siblings, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial } = current;
+  const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
+  const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / block.durationMinutes) * 100));
   return (
     <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-2.5 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3 text-xs">
       <div className="flex items-center gap-2">
         <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
         <span className="truncate font-semibold text-white">{subject.name}</span>
-        <span className="ml-auto shrink-0 text-slate-300">{`${formatDuration(item.studiedMinutes)} de ${formatDuration(block.durationMinutes)}`}</span>
+        <span className="ml-auto shrink-0 text-slate-300">{`${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}`}</span>
+      </div>
+      <div
+        role="progressbar"
+        aria-label="Progresso do bloco"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progressPercent}
+        className="h-1 overflow-hidden rounded-full bg-slate-800"
+      >
+        <div className="h-full rounded-full bg-orange-500 transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progressPercent}%` }} />
       </div>
       {topic && (
         <p className="text-sm font-medium leading-snug text-slate-100">
@@ -68,17 +84,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
           <span>{topic.title}</span>
         </p>
       )}
-      {siblings.length > 0 && (
-        <ul className="space-y-0.5 border-l border-slate-700 pl-2">
-          {siblings.map((s) => (
-            <li key={s.id}>
-              <button type="button" onClick={() => onSelectTopic(s.subject_id, s.id)} className="text-left text-slate-400 hover:text-slate-200">
-                {topicLabel(s)}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+      {siblings.length > 0 && <SiblingTopics siblings={siblings} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />}
       <div className="flex flex-wrap gap-1.5">
         <button type="button" className={materialButton} onClick={() => onOpenMaterial('pdf')}>
           {materials.pdfLabel ?? 'Abrir PDF'}

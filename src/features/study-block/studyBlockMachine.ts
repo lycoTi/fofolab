@@ -102,6 +102,25 @@ export function totalPomodoros(state: BlockState): number {
   return Math.max(planned, state.completedPomodoros + (state.phase === 'FOCUS' ? 1 : 0));
 }
 
+/**
+ * Fração (0..1) da fase em andamento, para a barrinha do relógio: o pomodoro ou a pausa; no modo livre,
+ * o foco do bloco sobre a meta. null quando não há o que medir (parado, pronto, livre sem meta).
+ */
+export function phaseProgress(state: BlockState, now: number): number | null {
+  const remaining = phaseRemainingMs(state, now);
+  if (state.phase === 'FOCUS' && state.mode === 'POMODORO' && remaining !== null) {
+    return 1 - remaining / (state.focusMinutes * MINUTE_MS);
+  }
+  if (state.phase === 'BREAK' && remaining !== null) {
+    return 1 - remaining / (breakMinutesFor(state.focusMinutes) * MINUTE_MS);
+  }
+  const target = state.block?.targetMinutes ?? null;
+  if (state.phase === 'FOCUS' && state.mode === 'LIVRE' && target) {
+    return Math.min(1, (state.blockFocusedMs + focusedSegmentMs(state, now)) / (target * MINUTE_MS));
+  }
+  return null;
+}
+
 /** Tempo que falta da fase atual (pomodoro/pausa), ou null no modo livre. */
 export function phaseRemainingMs(state: BlockState, now: number): number | null {
   if (state.pausedRemainingMs !== null) return state.pausedRemainingMs;

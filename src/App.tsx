@@ -12,7 +12,7 @@ import { CycleView } from './features/cycle/CycleView';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { StudyBlockCard } from './features/study-block/StudyBlockCard';
 import { StudyBlockMini } from './features/study-block/StudyBlockMini';
-import type { BlockTarget, RecordedSession } from './features/study-block/studyBlockMachine';
+import { focusedSegmentMs, type BlockTarget, type RecordedSession } from './features/study-block/studyBlockMachine';
 import { useStudyBlock } from './features/study-block/useStudyBlock';
 import { EditalImportModal } from './features/edital-import/EditalImportModal';
 import { NotebookDockPanel } from './features/notebook-dock/NotebookDockPanel';
@@ -825,6 +825,13 @@ export default function App() {
         }
       : null;
 
+  // Trecho de foco em andamento no bloco do roteiro (ainda não gravado): a barra da coluna anda ao vivo
+  const runningOnRoutineBlock =
+    routine.currentItem !== null &&
+    studyBlock.state.block?.subjectId === routine.currentItem.subject.id &&
+    studyBlock.state.block?.topicId === (routine.currentItem.topic?.id ?? null);
+  const routineLiveFocusMs = runningOnRoutineBlock ? focusedSegmentMs(studyBlock.state, studyBlock.now) : 0;
+
   const recalibration = recalibrationHint(cycleData.allocations, cycleData.topicHeatmapRanking);
 
   const questionSourceLabel = (() => {
@@ -860,7 +867,7 @@ export default function App() {
           examParts={summarizeExamParts(cycleData.allocations, examParts)}
           saveStatus={<SaveStatusIndicator onOpenBackup={() => openCrudModal('backup')} />}
           onRecalibrate={() => openWizard()}
-          blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} />}
+          blockClock={<StudyBlockMini controller={studyBlock} startTarget={currentBlockTarget} onOpen={() => selectTab('cycle')} />}
         />
       )}
 
@@ -891,6 +898,8 @@ export default function App() {
           extraBlock={routine.extraItem}
           blockRunning={studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE'}
           siblings={routineSiblings(routineBlockTopic, topicsBySubject)}
+          selectedTopicId={currentTopic?.id ?? null}
+          liveFocusMs={routineLiveFocusMs}
           materials={routineMaterials}
           peek={peekInfo}
           hint={recalibration ? describeRecalibrationHint(recalibration) : null}

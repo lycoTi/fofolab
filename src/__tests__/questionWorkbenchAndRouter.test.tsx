@@ -6,6 +6,7 @@ import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
 import { CycleView } from '../features/cycle/CycleView';
 import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
 import { StudyBlockCard } from '../features/study-block/StudyBlockCard';
+import { StudyBlockMini } from '../features/study-block/StudyBlockMini';
 import { useStudyBlock } from '../features/study-block/useStudyBlock';
 import { NotebookDockPanel } from '../features/notebook-dock/NotebookDockPanel';
 import { PdfReaderStage } from '../features/pdf-reader/PdfReaderStage';
@@ -344,5 +345,27 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     const badge = await screen.findByText('Exemplo simulado — a IA ainda não está configurada');
     const bubble = badge.parentElement as HTMLElement;
     expect(within(bubble).queryByText('Enviar para o Caderno')).toBeNull();
+  });
+});
+
+describe('relógio do cabeçalho', () => {
+  function MiniHarness({ onOpen }: { onOpen: () => void }) {
+    const controller = useStudyBlock();
+    return (
+      <StudyBlockMini
+        controller={controller}
+        startTarget={{ subjectId: 's', subjectName: 'Matéria', topicId: null, topicCode: null, topicTitle: null, targetMinutes: 60 }}
+        onOpen={onOpen}
+      />
+    );
+  }
+
+  it('com bloco rodando, clicar no relógio leva ao Ciclo e há uma barrinha de progresso', () => {
+    const onOpen = vi.fn();
+    render(<MiniHarness onOpen={onOpen} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Começar bloco de estudo' }));
+    expect(screen.getByRole('progressbar', { name: 'Progresso do pomodoro' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Ver o bloco no Ciclo' }));
+    expect(onOpen).toHaveBeenCalled();
   });
 });

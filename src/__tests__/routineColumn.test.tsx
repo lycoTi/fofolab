@@ -33,6 +33,8 @@ function props(overrides: Partial<RoutineColumnProps> = {}): RoutineColumnProps 
     extraBlock: null,
     blockRunning: false,
     siblings: [topic('oauth', '2.2.2', 'OAuth 2.0'), topic('jwt', '2.2.3', 'JWT')],
+    selectedTopicId: 'owasp',
+    liveFocusMs: 0,
     materials: { pdfLabel: 'PDF p. 12/40', questionCount: 8, hasNotes: true },
     peek: null,
     hint: null,
@@ -113,5 +115,29 @@ describe('coluna do roteiro de hoje', () => {
       <RoutineColumn {...props({ peek: { kind: 'outside', topicLabel: '3.1 PCASP', showNudge: false, nudgeText: '' } })} />
     );
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
+  });
+
+  it('irmãos aparecem como "outros tópicos do grupo", até 3, e o selecionado é destacado sem mudar de tamanho', () => {
+    const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5', '2.2.6'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
+    render(<RoutineColumn {...props({ siblings: many, selectedTopicId: 't2.2.3' })} />);
+    expect(screen.getByText('Outros tópicos do mesmo grupo')).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /2.2.5/ })).toBeNull();
+    const selected = screen.getByRole('button', { name: /2.2.3/ });
+    expect(selected.getAttribute('aria-current')).toBe('true');
+    fireEvent.click(screen.getByRole('button', { name: 'Ver mais (2)' }));
+    expect(screen.getByRole('button', { name: /2.2.6/ })).toBeTruthy();
+  });
+
+  it('o irmão selecionado fora dos 3 primeiros abre a lista inteira', () => {
+    const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
+    render(<RoutineColumn {...props({ siblings: many, selectedTopicId: 't2.2.5' })} />);
+    expect(screen.getByRole('button', { name: /2.2.5/ }).getAttribute('aria-current')).toBe('true');
+  });
+
+  it('barrinha do bloco soma o tempo gravado e o trecho que está correndo', () => {
+    render(<RoutineColumn {...props({ liveFocusMs: 5 * 60_000 })} />);
+    const bar = screen.getByRole('progressbar', { name: 'Progresso do bloco' });
+    expect(bar.getAttribute('aria-valuenow')).toBe(String(Math.round(((31 + 5) / 72) * 100)));
+    expect(screen.getByText('00:36 de 01:12')).toBeTruthy();
   });
 });

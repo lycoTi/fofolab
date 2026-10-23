@@ -57,3 +57,23 @@ test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Volt
   await expect(page.getByRole('button', { name: 'Pausar bloco' })).toBeVisible();
   await expect(column(page)).not.toContainText('fora do roteiro');
 });
+
+test('a barrinha do bloco anda com o tempo e o relógio do cabeçalho leva ao Ciclo', async ({ page }) => {
+  await page.clock.install();
+  await openApp(page);
+  await column(page).getByRole('button', { name: 'Iniciar bloco' }).click();
+  const blockBar = column(page).getByRole('progressbar', { name: 'Progresso do bloco' });
+  const pomodoroBar = page.locator('header').getByRole('progressbar', { name: 'Progresso do pomodoro' });
+  await expect(blockBar).toBeVisible();
+  await expect(pomodoroBar).toBeVisible();
+  const before = Number(await blockBar.getAttribute('aria-valuenow'));
+
+  await page.clock.fastForward(15 * 60_000);
+  await page.clock.runFor(1_000);
+  await expect.poll(async () => Number(await blockBar.getAttribute('aria-valuenow'))).toBeGreaterThan(before);
+  await expect.poll(async () => Number(await pomodoroBar.getAttribute('aria-valuenow'))).toBeGreaterThan(0);
+
+  await page.getByRole('button', { name: 'Ver o bloco no Ciclo' }).click();
+  await expect(page.getByRole('region', { name: 'Bloco de estudo' })).toBeVisible();
+  await page.screenshot({ path: `${SCREENS}/10-barras-de-progresso.png` });
+});
