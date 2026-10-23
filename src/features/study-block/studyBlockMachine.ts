@@ -7,18 +7,52 @@
  * registro de estudo na matéria/tópico em que o bloco COMEÇOU.
  */
 
+import { formatDuration } from '../../lib/timeFormat';
+
 export type BlockMode = 'POMODORO' | 'LIVRE';
-export const FOCUS_OPTIONS = [20, 30, 50] as const;
+export const FOCUS_OPTIONS = [20, 25, 30, 50] as const;
 const MINUTE_MS = 60_000;
 
-export function breakMinutesFor(focusMinutes: number): number {
-  return focusMinutes >= 50 ? 10 : 5;
+/** Ajustes do FofoDoro (spec 10 §3.2). shortBreakMinutes null = automática pelo tamanho do foco. */
+export interface PomodoroSettings {
+  shortBreakMinutes: number | null;
+  longBreakMinutes: number;
+  /** A pausa longa vem a cada N pomodoros seguidos (contando entre blocos do mesmo dia). */
+  longEvery: number;
+}
+
+export const DEFAULT_POMODORO_SETTINGS: PomodoroSettings = { shortBreakMinutes: null, longBreakMinutes: 20, longEvery: 4 };
+
+/** Pausa curta: 1 minuto para cada 5 de foco, no mínimo 5 (20→5, 30→6, 50→10), ou o valor fixado à mão. */
+export function shortBreakMinutes(focusMinutes: number, settings: PomodoroSettings): number {
+  if (settings.shortBreakMinutes !== null) return settings.shortBreakMinutes;
+  return Math.max(5, Math.round(focusMinutes / 5));
 }
 
 /** Quantos pomodoros cobrem a meta (108 min em pomodoros de 30 → 4). */
 export function pomodoroCount(targetMinutes: number | null, focusMinutes: number): number {
   if (!targetMinutes) return 1;
   return Math.max(1, Math.round(targetMinutes / focusMinutes));
+}
+
+/** Prévia do bloco antes do play: quantos pomodoros, quantas pausas de cada tipo e o tempo total. */
+export function planPreview(targetMinutes: number | null, focusMinutes: number, settings: PomodoroSettings, cyclePomodoros: number) {
+  const pomodoros = pomodoroCount(targetMinutes, focusMinutes);
+  let shortBreaks = 0;
+  let longBreaks = 0;
+  // Pausa depois de cada pomodoro do bloco, menos o último (o bloco termina sem pausa)
+  for (let i = 1; i < pomodoros; i++) {
+    if ((cyclePomodoros + i) % settings.longEvery === 0) longBreaks += 1;
+    else shortBreaks += 1;
+  }
+  const totalMinutes =
+    pomodoros * focusMinutes + shortBreaks * shortBreakMinutes(focusMinutes, settings) + longBreaks * settings.longBreakMinutes;
+  return { pomodoros, shortBreaks, longBreaks, totalMinutes };
+}
+
+function dayKeyOf(now: number): string {
+  const d = new Date(now);
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
 export interface BlockTarget {
@@ -49,6 +83,12 @@ export interface BlockState {
   completedPomodoros: number;
   /** Foco já gravado neste bloco (trechos terminados). */
   blockFocusedMs: number;
+  settings: PomodoroSettings;
+  /** Pomodoros seguidos rumo à pausa longa — continua entre blocos do mesmo dia. */
+  cyclePomodoros: number;
+  /** Dia (local) da contagem do ciclo: outro dia zera. */
+  cycleDay: string | null;
+  breakKind: 'SHORT' | 'LONG' | null;
 }
 
 export interface RecordedSession {
@@ -62,6 +102,7 @@ export interface RecordedSession {
 export type BlockAction =
   | { type: 'START'; block: BlockTarget; now: number }
   | { type: 'SET_MODE'; mode: BlockMode; focusMinutes: number }
+  | { type: 'SET_SETTINGS'; settings: PomodoroSettings }
   /** silent: pausa automática (olhada fora do roteiro) — não conta como atrito do estudante. */
   | { type: 'PAUSE'; now: number; silent?: boolean }
   | { type: 'RESUME'; now: number }
@@ -90,6 +131,10 @@ export const initialBlockState: BlockState = {
   segmentPauses: 0,
   completedPomodoros: 0,
   blockFocusedMs: 0,
+  settings: DEFAULT_POMODORO_SETTINGS,
+  cyclePomodoros: 0,
+  cycleDay: null,
+  breakKind: null,
 };
 
 export function focusedSegmentMs(state: BlockState, now: number): number {
@@ -102,6 +147,12 @@ export function totalPomodoros(state: BlockState): number {
   return Math.max(planned, state.completedPomodoros + (state.phase === 'FOCUS' ? 1 : 0));
 }
 
+/** Duração da pausa em andamento (curta ou longa). */
+export function currentBreakMinutes(state: BlockState): number {
+  if (state.breakKind === 'LONG') return state.settings.longBreakMinutes;
+  return shortBreakMinutes(state.focusMinutes, state.settings);
+}
+
 /**
  * Fração (0..1) da fase em andamento, para a barrinha do relógio: o pomodoro ou a pausa; no modo livre,
  * o foco do bloco sobre a meta. null quando não há o que medir (parado, pronto, livre sem meta).
@@ -112,7 +163,7 @@ export function phaseProgress(state: BlockState, now: number): number | null {
     return 1 - remaining / (state.focusMinutes * MINUTE_MS);
   }
   if (state.phase === 'BREAK' && remaining !== null) {
-    return 1 - remaining / (breakMinutesFor(state.focusMinutes) * MINUTE_MS);
+    return 1 - remaining / (currentBreakMinutes(state) * MINUTE_MS);
   }
   const target = state.block?.targetMinutes ?? null;
   if (state.phase === 'FOCUS' && state.mode === 'LIVRE' && target) {
@@ -171,7 +222,23 @@ const idle = (state: BlockState): BlockState => ({
   ...initialBlockState,
   mode: state.mode,
   focusMinutes: state.focusMinutes,
+  settings: state.settings,
+  cyclePomodoros: state.cyclePomodoros,
+  cycleDay: state.cycleDay,
 });
+
+function doneMessage(state: BlockState): string {
+  if (state.blockFocusedMs <= 0) return 'Menos de 1 minuto de foco — nada foi registrado.';
+  return `Bloco concluído: ${formatDuration(state.blockFocusedMs / MINUTE_MS)} de foco em ${state.block?.subjectName ?? 'sua matéria'}.`;
+}
+
+/** Ciclo rumo à pausa longa ao começar um bloco: zera em outro dia ou se a pausa longa já era devida. */
+function cycleAtStart(state: BlockState, now: number): Pick<BlockState, 'cyclePomodoros' | 'cycleDay'> {
+  const today = dayKeyOf(now);
+  const sameDay = state.cycleDay === today;
+  const owedLongBreak = state.cyclePomodoros >= state.settings.longEvery;
+  return { cyclePomodoros: sameDay && !owedLongBreak ? state.cyclePomodoros : 0, cycleDay: today };
+}
 
 export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
   const result = (next: BlockState, recorded: RecordedSession | null = null, message: string | null = null): BlockStep => ({
@@ -182,11 +249,15 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
 
   switch (action.type) {
     case 'START':
-      return result(startFocus({ ...idle(state), block: action.block }, action.now));
+      return result(startFocus({ ...idle(state), ...cycleAtStart(state, action.now), block: action.block }, action.now));
 
     case 'SET_MODE':
       if (state.phase === 'FOCUS' || state.phase === 'BREAK') return result(state);
       return result({ ...state, mode: action.mode, focusMinutes: action.focusMinutes });
+
+    case 'SET_SETTINGS':
+      if (state.phase === 'FOCUS' || state.phase === 'BREAK') return result(state);
+      return result({ ...state, settings: action.settings });
 
     case 'PAUSE': {
       if (!state.running || (state.phase !== 'FOCUS' && state.phase !== 'BREAK')) return result(state);
@@ -215,25 +286,40 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
     case 'TICK': {
       if (!state.running || state.phaseEndsAt === null || action.now < state.phaseEndsAt) return result(state);
       if (state.phase === 'BREAK') {
-        return result({ ...state, phase: 'READY', running: false, phaseEndsAt: null }, null, 'Pausa terminada. Pronto para o próximo pomodoro?');
+        // Depois da pausa longa o ciclo recomeça; o foco nunca volta sozinho (READY espera o estudante)
+        const cyclePomodoros = state.breakKind === 'LONG' ? 0 : state.cyclePomodoros;
+        return result(
+          { ...state, phase: 'READY', running: false, phaseEndsAt: null, breakKind: null, cyclePomodoros },
+          null,
+          'Pausa concluída. Comece o próximo pomodoro quando estiver pronto.'
+        );
       }
-      // Fim de um pomodoro: grava o trecho e vai para a pausa (ou encerra o bloco)
+      // Fim de um pomodoro: grava o trecho e vai para a pausa (curta ou longa) ou encerra o bloco
       const closed = closeSegment({ ...state, phaseEndsAt: null }, state.phaseEndsAt, false);
       const completedPomodoros = state.completedPomodoros + 1;
+      const cyclePomodoros = state.cyclePomodoros + 1;
       const planned = pomodoroCount(state.block?.targetMinutes ?? null, state.focusMinutes);
       if (completedPomodoros >= planned) {
-        return result({ ...closed.state, completedPomodoros, phase: 'DONE', running: false }, closed.recorded, 'Bloco concluído!');
+        const done: BlockState = { ...closed.state, completedPomodoros, cyclePomodoros, phase: 'DONE', running: false };
+        return result(done, closed.recorded, doneMessage(done));
       }
+      const isLong = cyclePomodoros % state.settings.longEvery === 0;
+      const breakMinutes = isLong ? state.settings.longBreakMinutes : shortBreakMinutes(state.focusMinutes, state.settings);
+      const message = isLong
+        ? `${cyclePomodoros} pomodoros seguidos! Pausa longa de ${breakMinutes} minutos — você mereceu.`
+        : `Parabéns: ${state.focusMinutes} minutos de foco! Que tal ${breakMinutes} minutos de pausa?`;
       return result(
         {
           ...closed.state,
           completedPomodoros,
+          cyclePomodoros,
+          breakKind: isLong ? 'LONG' : 'SHORT',
           phase: 'BREAK',
           running: true,
-          phaseEndsAt: state.phaseEndsAt + breakMinutesFor(state.focusMinutes) * MINUTE_MS,
+          phaseEndsAt: state.phaseEndsAt + breakMinutes * MINUTE_MS,
         },
         closed.recorded,
-        `Pomodoro ${completedPomodoros} de ${planned} concluído. Hora da pausa.`
+        message
       );
     }
 
@@ -244,8 +330,8 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
     case 'FINISH': {
       if (state.phase === 'IDLE' || state.phase === 'DONE') return result(state);
       const closed = closeSegment(state, action.now, false);
-      const message = closed.recorded || closed.state.blockFocusedMs > 0 ? 'Bloco concluído!' : 'Menos de 1 minuto de foco — nada foi registrado.';
-      return result({ ...closed.state, phase: 'DONE', running: false, phaseEndsAt: null, pausedRemainingMs: null }, closed.recorded, message);
+      const done: BlockState = { ...closed.state, phase: 'DONE', running: false, phaseEndsAt: null, pausedRemainingMs: null, breakKind: null };
+      return result(done, closed.recorded, doneMessage(done));
     }
 
     case 'SKIP': {
