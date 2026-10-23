@@ -165,6 +165,9 @@ export default function App() {
   const [attempts, setAttempts] = useState<QuestionAttempt[]>([]);
   const [sessions, setSessions] = useState<StudySession[]>([]);
   const [questionLogs, setQuestionLogs] = useState<QuestionLog[]>([]);
+  // Registro de questões feitas fora do app: convite ao terminar um bloco e o último registro (para desfazer)
+  const [logInvite, setLogInvite] = useState<{ topicId: string | null } | null>(null);
+  const [lastLog, setLastLog] = useState<{ topicId: string; label: string } | null>(null);
   const [topicLinks, setTopicLinks] = useState<TopicLink[]>([]);
   const [allNotebooks, setAllNotebooks] = useState<Notebook[]>([]);
 
@@ -354,6 +357,13 @@ export default function App() {
   });
   const routineBlockTopic = routine.currentItem?.topic ?? null;
   const peek = usePeek({ selectedTopic: currentTopic, blockTopic: routineBlockTopic, studyBlock });
+
+  // Ao terminar um bloco, convida a registrar as questões feitas fora do app (uma vez por bloco)
+  const blockPhase = studyBlock.state.phase;
+  const finishedTopicId = studyBlock.state.block?.topicId ?? null;
+  useEffect(() => {
+    if (blockPhase === 'DONE') setLogInvite({ topicId: finishedTopicId });
+  }, [blockPhase, finishedTopicId]);
 
   // Quantas questões o bloco tem (com recuo para o grupo) — memorizado: o relógio redesenha a tela a cada 0,5 s
   const routineQuestionCount = useMemo(() => {
@@ -840,6 +850,36 @@ export default function App() {
     studyBlock.state.block?.topicId === (routine.currentItem.topic?.id ?? null);
   const routineLiveFocusMs = runningOnRoutineBlock ? focusedSegmentMs(studyBlock.state, studyBlock.now) : 0;
 
+  const logTopicOptions = (() => {
+    const group = routineGroup(routineBlockTopic, topicsBySubject).members;
+    const inviteTopic = logInvite?.topicId ? subjects.flatMap((s) => topicsBySubject[s.id] ?? []).find((t) => t.id === logInvite.topicId) : null;
+    const candidates = [inviteTopic, routineBlockTopic, ...group, currentTopic].filter((t): t is Topic => Boolean(t));
+    return candidates.filter((t, i) => candidates.findIndex((c) => c.id === t.id) === i);
+  })();
+
+  const submitQuestionLog = (value: { topicId: string; total: number; correct: number; blank: number }) => {
+    const topic = logTopicOptions.find((t) => t.id === value.topicId);
+    if (!topic) return;
+    recordQuestionLog({ subjectId: topic.subject_id, ...value });
+    const percent = Math.round((value.correct / value.total) * 100);
+    setLastLog({ topicId: topic.id, label: `Registrado: ${value.correct} de ${value.total} (${percent}%)` });
+    setLogInvite(null);
+    refreshData(currentSubject?.id, currentTopic?.id);
+  };
+
+  const undoQuestionLog = async () => {
+    if (!lastLog) return;
+    const ok = await confirm({
+      title: 'Desfazer o registro?',
+      message: <p>O registro é apagado e o domínio do tópico volta ao valor de antes.</p>,
+      confirmLabel: 'Desfazer',
+    });
+    if (!ok) return;
+    undoLastQuestionLog(lastLog.topicId);
+    setLastLog(null);
+    refreshData(currentSubject?.id, currentTopic?.id);
+  };
+
   const recalibration = recalibrationHint(cycleData.allocations, cycleData.topicHeatmapRanking);
 
   const questionSourceLabel = (() => {
@@ -908,6 +948,15 @@ export default function App() {
           group={routineGroup(routineBlockTopic, topicsBySubject)}
           selectedTopicId={currentTopic?.id ?? null}
           liveFocusMs={routineLiveFocusMs}
+          questionLog={{
+            topics: logTopicOptions,
+            defaultTopicId: logInvite?.topicId ?? routineBlockTopic?.id ?? currentTopic?.id ?? null,
+            invite: logInvite !== null,
+            lastLogLabel: lastLog?.label ?? null,
+            onSubmit: submitQuestionLog,
+            onUndo: () => void undoQuestionLog(),
+            onDismissInvite: () => setLogInvite(null),
+          }}
           materials={routineMaterials}
           peek={peekInfo}
           hint={recalibration ? describeRecalibrationHint(recalibration) : null}

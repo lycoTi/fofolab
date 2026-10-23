@@ -4,6 +4,7 @@ import { formatDuration } from '../../lib/timeFormat';
 import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
 import { PeekBanner, type PeekInfo } from './PeekBanner';
+import { QuestionLogPanel, type QuestionLogPanelProps } from './QuestionLogPanel';
 import { RoutineBlockItem, type RoutineMaterials } from './RoutineBlockItem';
 
 export interface RoutineColumnProps {
@@ -20,6 +21,8 @@ export interface RoutineColumnProps {
   liveFocusMs: number;
   materials: RoutineMaterials;
   peek: PeekInfo | null;
+  /** Registro rápido de questões feitas fora do app (topo da coluna). */
+  questionLog: QuestionLogPanelProps;
   /** Aviso discreto quando o desempenho contraria a autoavaliação. */
   hint: string | null;
   onStartBlock: (item: RoutineItem) => void;
@@ -60,6 +63,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
       </div>
 
       {peek && <PeekBanner peek={peek} onReturnToBlock={props.onReturnToBlock} />}
+      <QuestionLogPanel {...props.questionLog} />
 
       <ol className="flex-1 space-y-2 overflow-y-auto p-3">
         {items.length === 0 && <li className="text-xs text-slate-400">Calibre seu perfil para o roteiro de hoje aparecer aqui.</li>}

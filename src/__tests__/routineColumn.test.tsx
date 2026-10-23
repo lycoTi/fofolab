@@ -35,6 +35,7 @@ function props(overrides: Partial<RoutineColumnProps> = {}): RoutineColumnProps 
     group: { parent: topic('g', '2.2', 'Segurança de aplicações'), members: [owasp, topic('oauth', '2.2.2', 'OAuth 2.0'), topic('jwt', '2.2.3', 'JWT')] },
     selectedTopicId: 'owasp',
     liveFocusMs: 0,
+    questionLog: { topics: [owasp], defaultTopicId: 'owasp', invite: false, lastLogLabel: null, onSubmit: vi.fn(), onUndo: vi.fn(), onDismissInvite: vi.fn() },
     materials: { pdfLabel: 'PDF p. 12/40', questionCount: 8, hasNotes: true },
     peek: null,
     hint: null,
