@@ -198,3 +198,12 @@ describe('fim do dia', () => {
     expect(screen.getByText('Próximo passo indicado: CASP · 3.1 PCASP')).toBeTruthy();
   });
 });
+
+describe('bloco em andamento que já não é o atual do roteiro', () => {
+  it('o cartão diz que é o bloco em andamento, não "fora do roteiro"', () => {
+    render(<RoutineColumn {...props({ blockRunning: true, freeBlock: <div>anel</div>, freeBlockTitle: 'Bloco em andamento · TI' })} />);
+    const region = screen.getByRole('region', { name: 'Bloco em andamento · TI' });
+    expect(region.textContent).toContain('anel');
+    expect(region.textContent).not.toContain('fora do roteiro');
+  });
+});

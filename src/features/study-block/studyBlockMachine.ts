@@ -240,6 +240,11 @@ function cycleAtStart(state: BlockState, now: number): Pick<BlockState, 'cyclePo
   return { cyclePomodoros: sameDay && !owedLongBreak ? state.cyclePomodoros : 0, cycleDay: today };
 }
 
+/** Ciclo que vale para o próximo bloco (prévia antes do play): a mesma regra do START. */
+export function effectiveCyclePomodoros(state: BlockState, now: number): number {
+  return cycleAtStart(state, now).cyclePomodoros;
+}
+
 export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
   const result = (next: BlockState, recorded: RecordedSession | null = null, message: string | null = null): BlockStep => ({
     state: next,
@@ -297,10 +302,12 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
       // Fim de um pomodoro: grava o trecho e vai para a pausa (curta ou longa) ou encerra o bloco
       const closed = closeSegment({ ...state, phaseEndsAt: null }, state.phaseEndsAt, false);
       const completedPomodoros = state.completedPomodoros + 1;
-      const cyclePomodoros = state.cyclePomodoros + 1;
+      // Pomodoro que termina já em outro dia (madrugada) começa a contagem do ciclo do zero
+      const endDay = dayKeyOf(state.phaseEndsAt);
+      const cyclePomodoros = (state.cycleDay === endDay ? state.cyclePomodoros : 0) + 1;
       const planned = pomodoroCount(state.block?.targetMinutes ?? null, state.focusMinutes);
       if (completedPomodoros >= planned) {
-        const done: BlockState = { ...closed.state, completedPomodoros, cyclePomodoros, phase: 'DONE', running: false };
+        const done: BlockState = { ...closed.state, completedPomodoros, cyclePomodoros, cycleDay: endDay, phase: 'DONE', running: false };
         return result(done, closed.recorded, doneMessage(done));
       }
       const isLong = cyclePomodoros % state.settings.longEvery === 0;
@@ -313,6 +320,7 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
           ...closed.state,
           completedPomodoros,
           cyclePomodoros,
+          cycleDay: endDay,
           breakKind: isLong ? 'LONG' : 'SHORT',
           phase: 'BREAK',
           running: true,
@@ -325,7 +333,17 @@ export function stepBlock(state: BlockState, action: BlockAction): BlockStep {
 
     case 'NEXT':
       if (state.phase !== 'READY' && state.phase !== 'BREAK') return result(state);
-      return result(startFocus(state, action.now));
+      // Encerrar a pausa longa antes da hora também recomeça o ciclo (senão a próxima longa só viria no 8º)
+      return result(
+        startFocus(
+          {
+            ...state,
+            cyclePomodoros: state.phase === 'BREAK' && state.breakKind === 'LONG' ? 0 : state.cyclePomodoros,
+            breakKind: null,
+          },
+          action.now
+        )
+      );
 
     case 'FINISH': {
       if (state.phase === 'IDLE' || state.phase === 'DONE') return result(state);

@@ -117,3 +117,14 @@ describe('FofoDoro', () => {
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
   });
 });
+
+describe('aviso para leitor de tela', () => {
+  it('a região de aviso fica sempre montada, e o texto aparece dentro dela', () => {
+    const { rerender } = render(<Toast message={null} messageId={0} onClose={() => {}} />);
+    const region = screen.getByRole('status');
+    expect(region.textContent).toBe('');
+    rerender(<Toast message="Pausa concluída." messageId={1} onClose={() => {}} />);
+    expect(screen.getByRole('status')).toBe(region);
+    expect(region.textContent).toContain('Pausa concluída.');
+  });
+});

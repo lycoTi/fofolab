@@ -1,7 +1,7 @@
 import { Settings2 } from 'lucide-react';
 import { useState } from 'react';
 import { formatDuration } from '../../lib/timeFormat';
-import { planPreview, shortBreakMinutes, type BlockState } from '../study-block/studyBlockMachine';
+import { effectiveCyclePomodoros, planPreview, shortBreakMinutes, type BlockState } from '../study-block/studyBlockMachine';
 import { BlockModePicker } from '../study-block/StudyBlockParts';
 import type { StudyBlockController } from '../study-block/useStudyBlock';
 import { FofoDoroSettings } from './FofoDoroSettings';
@@ -13,7 +13,8 @@ function plural(count: number, singular: string, pluralWord: string): string {
 /** "4 pomodoros de 25 min + 3 pausas de 5 min → 01:55" — o plano do bloco antes do play. */
 export function describePlan(state: BlockState, targetMinutes: number | null): string {
   if (state.mode === 'LIVRE') return targetMinutes ? `Relógio livre até ${formatDuration(targetMinutes)}` : 'Relógio livre';
-  const plan = planPreview(targetMinutes, state.focusMinutes, state.settings, state.cyclePomodoros);
+  // Mesma regra do play: em outro dia, ou com a pausa longa já devida, o ciclo recomeça
+  const plan = planPreview(targetMinutes, state.focusMinutes, state.settings, effectiveCyclePomodoros(state, Date.now()));
   const parts = [`${plural(plan.pomodoros, 'pomodoro', 'pomodoros')} de ${state.focusMinutes} min`];
   if (plan.shortBreaks > 0) {
     parts.push(`${plural(plan.shortBreaks, 'pausa', 'pausas')} de ${shortBreakMinutes(state.focusMinutes, state.settings)} min`);

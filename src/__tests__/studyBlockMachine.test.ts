@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   phaseProgress,
+  effectiveCyclePomodoros,
   planPreview,
   shortBreakMinutes,
   DEFAULT_POMODORO_SETTINGS,
@@ -263,6 +264,47 @@ describe('preferências do FofoDoro neste computador', () => {
     expect(loadPomodoroPrefs().focusMinutes).toBe(25);
     localStorage.setItem(POMODORO_PREFS_KEY, 'isto não é json');
     expect(loadPomodoroPrefs().settings.longEvery).toBe(4);
+    localStorage.clear();
+  });
+});
+
+describe('FofoDoro: correções da revisão', () => {
+  const longBlock: BlockTarget = { ...block, targetMinutes: 600 };
+  const fourDone = (): BlockState => {
+    let state = run([{ type: 'SET_SETTINGS', settings: { shortBreakMinutes: null, longBreakMinutes: 20, longEvery: 2 } }]).state;
+    state = run([{ type: 'START', block: longBlock, now: 0 }], state).state;
+    state = run([{ type: 'TICK', now: 30 * MIN }, { type: 'TICK', now: 36 * MIN }, { type: 'NEXT', now: 36 * MIN }, { type: 'TICK', now: 66 * MIN }], state).state;
+    return state; // em pausa longa
+  };
+
+  it('encerrar a pausa longa antes da hora também recomeça o ciclo', () => {
+    const onLong = fourDone();
+    expect(onLong.breakKind).toBe('LONG');
+    const next = run([{ type: 'NEXT', now: 70 * MIN }], onLong).state;
+    expect(next.cyclePomodoros).toBe(0);
+    expect(next.breakKind).toBeNull();
+  });
+
+  it('o ciclo que vale para a prévia é o mesmo que o START vai usar (outro dia ou pausa longa devida zeram)', () => {
+    const yesterday = { ...initialBlockState, cyclePomodoros: 3, cycleDay: '1999-1-1' };
+    expect(effectiveCyclePomodoros(yesterday, Date.now())).toBe(0);
+    const owed = { ...initialBlockState, cyclePomodoros: 4, cycleDay: null };
+    expect(effectiveCyclePomodoros(owed, 0)).toBe(0);
+  });
+
+  it('pomodoro que termina já no dia seguinte começa a contagem do ciclo do zero', () => {
+    const DAY = 24 * 60 * MIN;
+    let state = run([{ type: 'START', block: longBlock, now: 0 }]).state;
+    state = { ...state, cyclePomodoros: 3 };
+    const step = stepBlock({ ...state, phaseEndsAt: DAY + 30 * MIN, segmentStartedAt: DAY }, { type: 'TICK', now: DAY + 30 * MIN });
+    expect(step.state.cyclePomodoros).toBe(1);
+    expect(step.state.breakKind).toBe('SHORT');
+  });
+
+  it('preferências sem o campo da pausa curta mantêm a pausa automática', async () => {
+    const { loadPomodoroPrefs, POMODORO_PREFS_KEY } = await import('../features/study-block/useStudyBlock');
+    localStorage.setItem(POMODORO_PREFS_KEY, JSON.stringify({ mode: 'POMODORO', focusMinutes: 25, settings: { longBreakMinutes: 20, longEvery: 4 } }));
+    expect(loadPomodoroPrefs().settings.shortBreakMinutes).toBeNull();
     localStorage.clear();
   });
 });

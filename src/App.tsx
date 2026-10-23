@@ -869,6 +869,14 @@ export default function App() {
   // FofoDoro (spec 10): dentro do bloco atual quando é ele que roda; senão, num cartão de bloco livre no topo
   const blockActive = studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE';
   const fofodoroNode = <FofoDoro controller={studyBlock} />;
+  // Bloco que roda mas já não é o atual (a meta foi cumprida no meio da pausa): continua sendo do roteiro, não "livre"
+  const runningBlock = studyBlock.state.block;
+  const runningRoutineItem = runningBlock
+    ? [...routine.items, ...(routine.extraItem ? [routine.extraItem] : [])].find(
+        (i) => i.subject.id === runningBlock.subjectId && (i.topic?.id ?? null) === runningBlock.topicId
+      ) ?? null
+    : null;
+  const freeBlockTitle = runningRoutineItem ? `Bloco em andamento · ${runningRoutineItem.subject.name}` : undefined;
 
   /** Relógio do cabeçalho: abre a coluna (se recolhida) e leva até o FofoDoro. */
   const openFofoDoro = () => {
@@ -984,6 +992,7 @@ export default function App() {
           todayStudiedMinutes={studyTotals?.todayMinutes ?? 0}
           fofodoro={blockActive && runningOnRoutineBlock ? fofodoroNode : null}
           freeBlock={blockActive && !runningOnRoutineBlock ? fofodoroNode : null}
+          freeBlockTitle={freeBlockTitle}
           preview={<FofoDoroPreview controller={studyBlock} targetMinutes={routine.currentItem?.remainingMinutes ?? null} />}
           questionLog={{
             topics: logTopicOptions,

@@ -39,6 +39,8 @@ export interface RoutineColumnProps {
   preview?: ReactNode | null;
   /** Bloco começado fora do roteiro: cartão próprio no topo. */
   freeBlock?: ReactNode | null;
+  /** Título do cartão do bloco fora do item atual (padrão: bloco livre, fora do roteiro). */
+  freeBlockTitle?: string;
   /** Estudo registrado hoje (todas as matérias), para o resumo do fim do dia. */
   todayStudiedMinutes?: number;
 }
@@ -75,8 +77,8 @@ export function RoutineColumn(props: RoutineColumnProps) {
       {peek && <PeekBanner peek={peek} onReturnToBlock={props.onReturnToBlock} />}
       <QuestionLogPanel {...props.questionLog} />
       {props.freeBlock && (
-        <section aria-label="Bloco livre" className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
-          <h3 className="text-xs font-semibold text-orange-300">Bloco livre · fora do roteiro de hoje</h3>
+        <section aria-label={props.freeBlockTitle ?? 'Bloco livre'} className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
+          <h3 className="text-xs font-semibold text-orange-300">{props.freeBlockTitle ?? 'Bloco livre · fora do roteiro de hoje'}</h3>
           {props.freeBlock}
         </section>
       )}
