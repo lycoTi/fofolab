@@ -22,6 +22,7 @@ import {
   type DatabaseStorage,
 } from './storage';
 import { parentTopicCode } from './syllabusImport';
+import { localDateKey } from './timeFormat';
 import {
   SEED_ADMIN_BLUEPRINTS,
   SEED_AI_DISSECTIONS,
@@ -184,11 +185,8 @@ function createFreshDatabase(): Database {
   return db;
 }
 
-/** Data local 'YYYY-MM-DD' (não UTC): estudar às 23h conta para o dia de hoje. */
-export function localDateKey(date: Date): string {
-  const pad = (n: number) => String(n).padStart(2, '0');
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-}
+// A data local mora em timeFormat.ts (módulos puros a usam sem carregar o banco); continua exportada daqui
+export { localDateKey };
 
 function describeStorageError(err: unknown): string {
   const name = err instanceof Error || err instanceof DOMException ? err.name : '';

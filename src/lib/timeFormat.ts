@@ -17,3 +17,9 @@ export function formatClock(milliseconds: number): string {
   const mmss = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   return hours > 0 ? `${hours}:${mmss}` : mmss;
 }
+
+/** Data local 'YYYY-MM-DD' (não UTC): estudar às 23h conta para o dia de hoje. */
+export function localDateKey(date: Date): string {
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
