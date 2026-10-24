@@ -1,5 +1,8 @@
 # Continuar no outro PC — 22/10/2026
 
+> **Estado atual e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.** Este arquivo continua valendo
+> só para preparar um PC (seção 1); as seções 2 e 3 abaixo são históricas.
+
 ## 1. Preparar o PC (uma vez)
 1. **Stack de skills e regras** (`~/.agents`, repositório privado `lycoTi/agents-stack`):
    - Se `~/.agents` já existe (instalações antigas do `npx skills`):

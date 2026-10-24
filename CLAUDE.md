@@ -3,8 +3,8 @@
 Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-first. O dono desenvolve com o **Antigravity** no PC do trabalho e com o **Claude Code** no PC de casa — o contexto entre os dois vive **neste repositório**, não na memória da IA.
 
 ## Antes de mexer
-1. Leia `BACKLOG.md` — estado real, definição de pronto e checklist do PC de casa.
-2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação, 07 edital real/ciclo pela nota mínima/tela Bom dia).
+1. Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md` (onde paramos, armadilhas, próximos passos) e `BACKLOG.md` (estado real, definição de pronto).
+2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação, 07 edital real/ciclo pela nota mínima, 08 mapa de incidência (rascunho), 09 bancada/roteiro/Revisão do dia, 10 FofoDoro, 11 FofoIA e diagnóstico pela confiança).
 3. Histórico de decisões: `docs/reviews/2026-10-21-estado-do-projeto.md`.
 4. `graphify-out/` ajuda a navegar (`graphify query "..."`), mas confira a data: rode `graphify update .` depois de mudar código (o grafo fica velho fácil).
 
@@ -47,7 +47,10 @@ A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS
 - `src/lib/storage.ts` — onde o banco é gravado (arquivo Tauri / IndexedDB / memória) + cópias de segurança.
 - `src/lib/migrations.ts` — versões do banco. `src/lib/saveStatus.ts` — status de gravação mostrado no cabeçalho.
 - `src/lib/cycleEngine.ts` — motor do ciclo (pesos exportados) • `dailyPlanner.ts` — "Meu Dia" • `explainabilityEngine.ts` — textos do "ⓘ".
-- `src/lib/aiRouter.ts` — Gateway → Groq → Gemini → DeepSeek, prompts com grounding, modo demonstração.
+- `src/lib/aiRouter.ts` — Gateway → Groq → Gemini → DeepSeek (`callAiProviders`, com modelo forte opcional), explicação-base das questões.
+- `src/lib/fofoia/` + `src/features/fofoia/` — FofoIA (spec 11): jeitos, contexto sem gabarito antes da resposta, prompts, resumo, "Cai no meu edital?", painel da coluna direita.
+- `src/features/questions/` — aba Questões (confiança antes, correção embaixo) • `src/features/answer-flow/` — confiança/diagnóstico compartilhados • `src/lib/diagnosis.ts` — regras do diagnóstico e falsa certeza.
+- `src/features/good-morning/` + `src/lib/{dailyReview,goodMorning,goodMorningStats}.ts` — aba Início e Revisão do dia (spec 09 §5.3).
 - `src/features/pdf-reader/` — leitor de PDF (pdf.js): página atual, páginas lidas, zoom; maximizar/tela cheia ficam no `App.tsx`.
 - `src/lib/questionImport.ts` / `syllabusImport.ts` — importadores (texto/JSON e conteúdo programático).
 - `src/lib/editalParser.ts` + `src/features/edital-import/` — edital em PDF → prévia → plano (spec 07); teste com o PDF real em `e2e/fixtures/`.

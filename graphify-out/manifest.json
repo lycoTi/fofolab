@@ -1,7 +1,7 @@
 {
   "docs/specs/01-database-schema.sql": {
-    "mtime": 1792802511.2559211,
-    "ast_hash": "93e557fc275ad4bd4ff153186e543714",
+    "mtime": 1792870028.363562,
+    "ast_hash": "62526476c62e2a5794639a2dac9d7083",
     "semantic_hash": ""
   },
   "package.json": {
@@ -15,8 +15,8 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1792807181.2694602,
-    "ast_hash": "1c45683282feffab05693427dfa1d12d",
+    "mtime": 1792870204.5538979,
+    "ast_hash": "092e16bc7071c061f91275400c952f30",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -81,8 +81,8 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1792813625.9128287,
-    "ast_hash": "98aabfd341e166bf2b5f0055c7c86975",
+    "mtime": 1792870658.5994732,
+    "ast_hash": "5ce99760f3498d8be2fd37ad172b1a22",
     "semantic_hash": ""
   },
   "README.md": {
@@ -191,43 +191,38 @@
     "semantic_hash": ""
   },
   "src/lib/database.ts": {
-    "mtime": 1792807024.6456654,
-    "ast_hash": "52995dea6f7c693877f8c1a868f85e2a",
+    "mtime": 1792870028.365563,
+    "ast_hash": "754f431d36c227a2a5ced758b21de79c",
     "semantic_hash": ""
   },
   "src/types/database.ts": {
-    "mtime": 1792802606.655746,
-    "ast_hash": "a071e07c394624d08000d9817d00142c",
+    "mtime": 1792870028.3645613,
+    "ast_hash": "a1fbe1cb7992ae21cec5aa0bfaed28df",
     "semantic_hash": ""
   },
   "src/vite-env.d.ts": {
-    "mtime": 1792671514.544895,
-    "ast_hash": "d47e479911017895ff2c5cd9ec98474b",
+    "mtime": 1792866355.2996025,
+    "ast_hash": "c7cf6bc3cbb0aeea5a823b1a389f1cc0",
     "semantic_hash": ""
   },
   "src/lib/cycleEngine.ts": {
-    "mtime": 1792802732.872369,
-    "ast_hash": "431e0574fa49d44b3c66ef6b6bd002f1",
+    "mtime": 1792865348.9349098,
+    "ast_hash": "6323ac1f0f6018b53b68fda220c291dc",
     "semantic_hash": ""
   },
   "src/__tests__/cycleEngine.test.ts": {
-    "mtime": 1792802702.1585383,
-    "ast_hash": "c5bfdf37bb66240b12217ac145cd4e5a",
+    "mtime": 1792865240.5676415,
+    "ast_hash": "7447ee5b8c09233db2e622829d72ad00",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbenchAndRouter.test.tsx": {
-    "mtime": 1792772376.4319565,
-    "ast_hash": "ac014a255b934bc56867a34b884af827",
-    "semantic_hash": ""
-  },
-  "src/components/QuestionWorkbench.tsx": {
-    "mtime": 1792709014.8901718,
-    "ast_hash": "f5dd2c455c84210a18c59ae1bf6618b1",
+    "mtime": 1792870028.3700733,
+    "ast_hash": "e67c8428c46ff53bd1025f7f36a65ff1",
     "semantic_hash": ""
   },
   "src/lib/aiRouter.ts": {
-    "mtime": 1792671566.5454314,
-    "ast_hash": "91b38151734b2f3be94e5b8d200c6c27",
+    "mtime": 1792866963.4810145,
+    "ast_hash": "7d20bac0f450a2a77fbe6e4a55a9ddf8",
     "semantic_hash": ""
   },
   ".agents/rules/ui-clean-design-and-tdd.md": {
@@ -236,8 +231,8 @@
     "semantic_hash": ""
   },
   "e2e/bancada.spec.ts": {
-    "mtime": 1792813455.5333414,
-    "ast_hash": "4a8cdba81aec117a696d96c369493ef0",
+    "mtime": 1792866838.63255,
+    "ast_hash": "8793995e9fd975eefc6064e184965894",
     "semantic_hash": ""
   },
   "playwright.config.ts": {
@@ -246,8 +241,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/aiRouter.test.ts": {
-    "mtime": 1792671514.542382,
-    "ast_hash": "1faf6e4a4028fd9eed2ae916948607dd",
+    "mtime": 1792866963.4840202,
+    "ast_hash": "adb94e19a6e92da2469605845b581544",
     "semantic_hash": ""
   },
   "src/__tests__/dailyPlannerAndExplainability.test.ts": {
@@ -256,8 +251,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/database.test.ts": {
-    "mtime": 1792807024.644665,
-    "ast_hash": "48c9cb483ea53c2b888f76068807a20e",
+    "mtime": 1792869940.8005018,
+    "ast_hash": "969b10fc7371ae982b1e2f29e49f8ae7",
     "semantic_hash": ""
   },
   "src/__tests__/fixtures/schema-v1.sql": {
@@ -271,8 +266,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/migrations.test.ts": {
-    "mtime": 1792802472.1536934,
-    "ast_hash": "ed6e60fa50cf653366abad73fb22781b",
+    "mtime": 1792869940.799502,
+    "ast_hash": "0bc0825f75abfb8a380514f868321e3e",
     "semantic_hash": ""
   },
   "src/__tests__/notebookDraftAndLayout.test.tsx": {
@@ -320,11 +315,6 @@
     "ast_hash": "9428239250e40873e4a3f988bdc2b0e9",
     "semantic_hash": ""
   },
-  "src/features/ai-copilot/AiCopilotDockPanel.tsx": {
-    "mtime": 1792696901.0692637,
-    "ast_hash": "a1d01ac2b038bf03e18f726fb7e25c37",
-    "semantic_hash": ""
-  },
   "src/features/notebook-dock/NotebookDockPanel.tsx": {
     "mtime": 1792696901.058679,
     "ast_hash": "bcfbf66fbcc56f4fad0520462a2b4aad",
@@ -336,8 +326,8 @@
     "semantic_hash": ""
   },
   "src/features/onboarding-wizard/OnboardingWizardModal.tsx": {
-    "mtime": 1792803471.6901212,
-    "ast_hash": "85223d77b902842c26636cf8b23ccbff",
+    "mtime": 1792868464.8907008,
+    "ast_hash": "a6156ea2bb1d1bef00491ebbbe101067",
     "semantic_hash": ""
   },
   "src/features/question-import/QuestionImportModal.tsx": {
@@ -351,8 +341,8 @@
     "semantic_hash": ""
   },
   "src/lib/diagnosis.ts": {
-    "mtime": 1792610401.5994835,
-    "ast_hash": "fe2f0036d5b03adbb7b5e3d8ad8fb681",
+    "mtime": 1792865348.9309094,
+    "ast_hash": "0a4c7db2031d13fdfa3110ef32502a2f",
     "semantic_hash": ""
   },
   "src/lib/explainabilityEngine.ts": {
@@ -366,8 +356,8 @@
     "semantic_hash": ""
   },
   "src/lib/migrations.ts": {
-    "mtime": 1792802606.655746,
-    "ast_hash": "abf1b3066df05269234fda3e054c0048",
+    "mtime": 1792870028.3625624,
+    "ast_hash": "9d9995b5a8a8973f30028df613eff71f",
     "semantic_hash": ""
   },
   "src/lib/questionImport.ts": {
@@ -401,8 +391,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1792680337.186999,
-    "ast_hash": "7e498cc2af195a16cb0b86a893bf1a7f",
+    "mtime": 1792869249.0025914,
+    "ast_hash": "3aeea030072f5a57e55f869bc19aef65",
     "semantic_hash": ""
   },
   "docs/reviews/2026-10-21-estado-do-projeto.md": {
@@ -581,13 +571,13 @@
     "semantic_hash": ""
   },
   ".remember/tmp/last-ndc.ts": {
-    "mtime": 1792806158.0361044,
-    "ast_hash": "bd68b0a4d271f54062163697243b7b4a",
+    "mtime": 1792870346.926537,
+    "ast_hash": "6962335f951803f5fdd3e610f4b256f3",
     "semantic_hash": ""
   },
   ".remember/tmp/last-save.json": {
-    "mtime": 1792807209.0670846,
-    "ast_hash": "6241029cc1d29f3f209ffe40f71c0d56",
+    "mtime": 1792870331.1523528,
+    "ast_hash": "cb39767a1d29f88fa3aae3076aa5409e",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -661,8 +651,8 @@
     "semantic_hash": ""
   },
   ".remember/now.md": {
-    "mtime": 1792807207.9963458,
-    "ast_hash": "0f086772881804a46dd9acfbb427c92c",
+    "mtime": 1792870422.330766,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   ".impeccable/config.json": {
@@ -671,8 +661,8 @@
     "semantic_hash": ""
   },
   ".impeccable/hook.cache.json": {
-    "mtime": 1792813669.3818436,
-    "ast_hash": "3051d841f0ea04932e20707778f00c80",
+    "mtime": 1792870276.983792,
+    "ast_hash": "4e2641e4c84d2122b486772e5aef2f71",
     "semantic_hash": ""
   },
   "docs/specs/09-bancada-roteiro-e-revisao.md": {
@@ -686,13 +676,13 @@
     "semantic_hash": ""
   },
   "e2e/casca.spec.ts": {
-    "mtime": 1792714821.0859315,
-    "ast_hash": "7f008c2118ade3f974e46ab823c10880",
+    "mtime": 1792866838.63255,
+    "ast_hash": "f8871ba7327cd64101f8c037e87f9ba2",
     "semantic_hash": ""
   },
   "src/__tests__/workbenchShell.test.tsx": {
-    "mtime": 1792697950.3384414,
-    "ast_hash": "3dcc6408380c5a0d10727738a1bad09f",
+    "mtime": 1792866838.6365507,
+    "ast_hash": "181d0962a6b41b587ae29551e87f2481",
     "semantic_hash": ""
   },
   "src/features/workbench-shell/AppHeader.tsx": {
@@ -701,8 +691,8 @@
     "semantic_hash": ""
   },
   "src/features/workbench-shell/RightDock.tsx": {
-    "mtime": 1792696869.94689,
-    "ast_hash": "58ff3b8f88a7c5e4b55cef159a5c442a",
+    "mtime": 1792866838.6280422,
+    "ast_hash": "7fd4417b028455f4bfec16c2acc67204",
     "semantic_hash": ""
   },
   "src/features/workbench-shell/SidePanel.tsx": {
@@ -721,8 +711,8 @@
     "semantic_hash": ""
   },
   "docs/handoff/2026-10-22-continuar-no-outro-pc.md": {
-    "mtime": 1792803964.263132,
-    "ast_hash": "4e2c4e910e44f58f562025486fa7a5d0",
+    "mtime": 1792869249.0025914,
+    "ast_hash": "c81397bf5ff56a2259194cabcf22efca",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-22-9b-roteiro-na-coluna.md": {
@@ -731,8 +721,8 @@
     "semantic_hash": ""
   },
   "e2e/roteiro.spec.ts": {
-    "mtime": 1792772645.2902906,
-    "ast_hash": "43fb22995229fbce1d205ef989836c4d",
+    "mtime": 1792866039.0231729,
+    "ast_hash": "b3aba89ace03d48d5404d4bd3a8af7ca",
     "semantic_hash": ""
   },
   "src/__tests__/dailyRoutine.test.ts": {
@@ -801,8 +791,8 @@
     "semantic_hash": ""
   },
   "e2e/registro-externo.spec.ts": {
-    "mtime": 1792773402.8361804,
-    "ast_hash": "f08fb21dad0dad03240eca65162fc499",
+    "mtime": 1792866039.0221722,
+    "ast_hash": "c1d2573035dc183efb597307784b9f99",
     "semantic_hash": ""
   },
   "src/__tests__/questionLogPanel.test.tsx": {
@@ -826,8 +816,8 @@
     "semantic_hash": ""
   },
   ".remember/today-2026-10-23.md": {
-    "mtime": 1792806203.6023583,
-    "ast_hash": "98970fd2526912fb1ac6ceaa70b3e7da",
+    "mtime": 1792849503.1389563,
+    "ast_hash": "a1464f7cfc9c2e09db8ee6770eca594f",
     "semantic_hash": ""
   },
   ".remember/archive.md": {
@@ -1221,8 +1211,8 @@
     "semantic_hash": ""
   },
   "e2e/fofodoro.spec.ts": {
-    "mtime": 1792806755.5826426,
-    "ast_hash": "b53bae15e6688655e2a43f6474ba56d4",
+    "mtime": 1792866039.0211725,
+    "ast_hash": "527538ae37897986cb2f9cf01fae7c65",
     "semantic_hash": ""
   },
   "src/__tests__/cycleView.test.tsx": {
@@ -1286,18 +1276,18 @@
     "semantic_hash": ""
   },
   "e2e/revisao.spec.ts": {
-    "mtime": 1792807216.3981433,
-    "ast_hash": "e303052baabd56b2aa36887d63c2a58e",
+    "mtime": 1792866039.0221722,
+    "ast_hash": "1fd4b42b7f22daaf242bdf3ea4569e66",
     "semantic_hash": ""
   },
   "src/__tests__/dailyReview.test.ts": {
-    "mtime": 1792804465.806154,
-    "ast_hash": "3d79dc29360ea91e489dfa70808e5977",
+    "mtime": 1792865240.5655835,
+    "ast_hash": "79d05ef6907a1028dd28f4820e071b8e",
     "semantic_hash": ""
   },
   "src/__tests__/dailyReviewCard.test.tsx": {
-    "mtime": 1792803182.5479481,
-    "ast_hash": "4797cce8d4e2028a12b0710c7565c9f1",
+    "mtime": 1792865593.4809957,
+    "ast_hash": "fa1ff8cc0633ffccc370bb6d19e174e8",
     "semantic_hash": ""
   },
   "src/__tests__/goodMorning.test.ts": {
@@ -1331,8 +1321,8 @@
     "semantic_hash": ""
   },
   "src/features/good-morning/ReviewQuestion.tsx": {
-    "mtime": 1792806010.6643126,
-    "ast_hash": "b6b96a0d8214d65a6b036391ceeee132",
+    "mtime": 1792865535.5152786,
+    "ast_hash": "0f6e63af65769d6453a5bb31dbfe14bf",
     "semantic_hash": ""
   },
   "src/features/good-morning/SituationCard.tsx": {
@@ -1346,8 +1336,8 @@
     "semantic_hash": ""
   },
   "src/lib/dailyReview.ts": {
-    "mtime": 1792804511.653211,
-    "ast_hash": "64a516fbf904a4cd3e11424389512023",
+    "mtime": 1792865348.9319093,
+    "ast_hash": "42ef3f7eb6d7492a5ee23dc2adbff37c",
     "semantic_hash": ""
   },
   "src/lib/goodMorning.ts": {
@@ -1361,8 +1351,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/goodMorningStats.test.ts": {
-    "mtime": 1792806980.7948413,
-    "ast_hash": "c0a1319c604629b0c4e568017c81cdd0",
+    "mtime": 1792865447.2666664,
+    "ast_hash": "a9922dc4006b99f14f715d39875afc7a",
     "semantic_hash": ""
   },
   "src/__tests__/studyBlockPersistence.test.tsx": {
@@ -1386,8 +1376,178 @@
     "semantic_hash": ""
   },
   "src/lib/goodMorningStats.ts": {
-    "mtime": 1792806983.1378791,
-    "ast_hash": "65c8d430f8a4553760d2290272bfce07",
+    "mtime": 1792865545.6480968,
+    "ast_hash": "5d0546bb4172c8c2e835e27f07c203c0",
+    "semantic_hash": ""
+  },
+  ".remember/today-2026-10-24.md": {
+    "mtime": 1792870416.9913857,
+    "ast_hash": "73af303908f41b05996ead3b867466c6",
+    "semantic_hash": ""
+  },
+  "docs/specs/11-fofoia.md": {
+    "mtime": 1792870683.74012,
+    "ast_hash": "97434f1a5dcecb5071582bc4d4585218",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-24-11-fofoia.md": {
+    "mtime": 1792858723.715705,
+    "ast_hash": "d45d53408b2a2515f61e346751bb216b",
+    "semantic_hash": ""
+  },
+  "e2e/fofoia.spec.ts": {
+    "mtime": 1792868758.1233468,
+    "ast_hash": "c77073ad840b27bc6313a2c70c0d49a5",
+    "semantic_hash": ""
+  },
+  "src/__tests__/answerFlow.test.tsx": {
+    "mtime": 1792865436.3062787,
+    "ast_hash": "b5b2fdca95e049a3fc9217a52ffa705d",
+    "semantic_hash": ""
+  },
+  "src/__tests__/diagnosis.test.ts": {
+    "mtime": 1792865223.2394676,
+    "ast_hash": "7365e8d692cddc6dc6e2aa75879dfb45",
+    "semantic_hash": ""
+  },
+  "src/__tests__/fofoia.test.ts": {
+    "mtime": 1792868828.3888748,
+    "ast_hash": "b0b91fc15768688cea98dfe901ff2011",
+    "semantic_hash": ""
+  },
+  "src/__tests__/fofoiaPanel.test.tsx": {
+    "mtime": 1792869940.8015,
+    "ast_hash": "8ffaecc643b9c3e5e4a06671acdc651a",
+    "semantic_hash": ""
+  },
+  "src/__tests__/questionWorkbench.test.tsx": {
+    "mtime": 1792869940.8015,
+    "ast_hash": "1afef649988ed5b9e138e013ac966e66",
+    "semantic_hash": ""
+  },
+  "src/features/answer-flow/AnswerCorrection.tsx": {
+    "mtime": 1792865867.0876558,
+    "ast_hash": "2e4d8af2cb7b596a1f6ced1679f7af57",
+    "semantic_hash": ""
+  },
+  "src/features/answer-flow/AnswerOptions.tsx": {
+    "mtime": 1792865526.1794891,
+    "ast_hash": "bd27f7967435f3879ba44b1426a1142e",
+    "semantic_hash": ""
+  },
+  "src/features/answer-flow/ConfidencePicker.tsx": {
+    "mtime": 1792865479.3638196,
+    "ast_hash": "73f29374bbffccca9c648d8463755890",
+    "semantic_hash": ""
+  },
+  "src/features/answer-flow/DiagnosisPicker.tsx": {
+    "mtime": 1792865483.561723,
+    "ast_hash": "ed9e335a1f1a141822b287e2ef3e01ff",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoIaPanel.tsx": {
+    "mtime": 1792870028.3670673,
+    "ast_hash": "0e38a38374f9af82cf3a36933c4f4565",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoMessage.tsx": {
+    "mtime": 1792866709.051975,
+    "ast_hash": "f83dc35ec22444693e616396eccfdb0e",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/WarmupInvite.tsx": {
+    "mtime": 1792868443.3501403,
+    "ast_hash": "89f667f3ddce1e160d3db50b48f2f182",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/useFofoConversation.ts": {
+    "mtime": 1792870028.3670673,
+    "ast_hash": "b55052b567f6491ecfc576b3507cb3fb",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/useFofoIaInputs.ts": {
+    "mtime": 1792870204.551902,
+    "ast_hash": "fd18e813b1b189ec639d148987b47a3b",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/warmup.ts": {
+    "mtime": 1792868436.178214,
+    "ast_hash": "275069ee411a71a5cb177b11d5be4599",
+    "semantic_hash": ""
+  },
+  "src/features/questions/QuestionCard.tsx": {
+    "mtime": 1792865883.2337017,
+    "ast_hash": "fa63eae5812cc6da9cf1f32bd6ef14b6",
+    "semantic_hash": ""
+  },
+  "src/features/questions/QuestionCorrection.tsx": {
+    "mtime": 1792865879.0258985,
+    "ast_hash": "40fabc5b30feeb4cc0d3b323f5fb256e",
+    "semantic_hash": ""
+  },
+  "src/features/questions/QuestionFilters.tsx": {
+    "mtime": 1792865874.4580145,
+    "ast_hash": "a8e3dd8153f89d2c3e9689117074cf48",
+    "semantic_hash": ""
+  },
+  "src/features/questions/QuestionWorkbench.tsx": {
+    "mtime": 1792870028.3615632,
+    "ast_hash": "5e8b569a944bf7e517e9553380b192d4",
+    "semantic_hash": ""
+  },
+  "src/lib/answerLabels.ts": {
+    "mtime": 1792865475.1849046,
+    "ast_hash": "e14f37e842974f17178e27cbb9a2ee8c",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/ask.ts": {
+    "mtime": 1792866490.7157598,
+    "ast_hash": "cb786a958753a58f9e7372525d692be0",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/context.ts": {
+    "mtime": 1792866415.7721436,
+    "ast_hash": "981e408f4eaa32fb1a1c620686843f7a",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/demo.ts": {
+    "mtime": 1792866485.7439933,
+    "ast_hash": "c28259f6da498d6e84fa765faec344ad",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/editalMatch.ts": {
+    "mtime": 1792866425.0887563,
+    "ast_hash": "bec3745d3a9b11e7b6319d678432ef94",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/prompts.ts": {
+    "mtime": 1792866475.8032196,
+    "ast_hash": "26f27317050d2c5eb4b9349f40a198ad",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/signals.ts": {
+    "mtime": 1792868828.3888748,
+    "ast_hash": "3df8aafb9d22d530ec3d34a5c21ddaaa",
+    "semantic_hash": ""
+  },
+  "src/lib/fofoia/summary.ts": {
+    "mtime": 1792866420.613872,
+    "ast_hash": "4c7970aa4721a22dcd0a0df6ca448dcc",
+    "semantic_hash": ""
+  },
+  "docs/handoff/2026-10-24-estado-e-proxima-ia.md": {
+    "mtime": 1792870658.6004746,
+    "ast_hash": "bf6b6d0672754a1a2efa6299778e067d",
+    "semantic_hash": ""
+  },
+  "src/__tests__/useFofoConversation.test.tsx": {
+    "mtime": 1792869917.9099092,
+    "ast_hash": "2066220d50ab9e3d25f8b878c2c70649",
+    "semantic_hash": ""
+  },
+  "src/__tests__/useFofoIaInputs.test.tsx": {
+    "mtime": 1792870274.5132732,
+    "ast_hash": "dd78cbc52a9c9e7e4e00865532cb759f",
     "semantic_hash": ""
   }
 }

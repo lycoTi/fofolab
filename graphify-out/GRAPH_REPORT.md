@@ -1,16 +1,16 @@
-# Graph Report - fofolab  (2026-10-23)
+# Graph Report - fofolab  (2026-10-24)
 
 ## Corpus Check
-- 260 files · ~229,943 words
+- 292 files · ~246,062 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1638 nodes · 3107 edges · 163 communities (90 shown, 73 thin omitted)
+- 1789 nodes · 3505 edges · 184 communities (112 shown, 72 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5bf50bc2`
+- Built from commit: `9375fe98`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -67,7 +67,6 @@
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
 - [[_COMMUNITY_Community 59|Community 59]]
-- [[_COMMUNITY_Community 60|Community 60]]
 - [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
@@ -161,61 +160,81 @@
 - [[_COMMUNITY_Community 153|Community 153]]
 - [[_COMMUNITY_Community 154|Community 154]]
 - [[_COMMUNITY_Community 155|Community 155]]
+- [[_COMMUNITY_Community 156|Community 156]]
+- [[_COMMUNITY_Community 157|Community 157]]
 - [[_COMMUNITY_Community 158|Community 158]]
 - [[_COMMUNITY_Community 159|Community 159]]
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
 - [[_COMMUNITY_Community 162|Community 162]]
+- [[_COMMUNITY_Community 164|Community 164]]
 - [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
+- [[_COMMUNITY_Community 167|Community 167]]
+- [[_COMMUNITY_Community 168|Community 168]]
+- [[_COMMUNITY_Community 169|Community 169]]
+- [[_COMMUNITY_Community 170|Community 170]]
+- [[_COMMUNITY_Community 171|Community 171]]
+- [[_COMMUNITY_Community 172|Community 172]]
+- [[_COMMUNITY_Community 173|Community 173]]
+- [[_COMMUNITY_Community 174|Community 174]]
+- [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 176|Community 176]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `getDb()` - 59 edges
-2. `Topic` - 52 edges
-3. `formatDuration()` - 31 edges
-4. `Subject` - 29 edges
-5. `queryOne()` - 28 edges
-6. `persistDatabase()` - 25 edges
-7. `StudyPlan` - 25 edges
-8. `queryAll()` - 19 edges
-9. `localDateKey()` - 18 edges
-10. `App()` - 17 edges
+2. `Topic` - 58 edges
+3. `Subject` - 31 edges
+4. `queryOne()` - 30 edges
+5. `formatDuration()` - 30 edges
+6. `StudyPlan` - 25 edges
+7. `Question` - 25 edges
+8. `persistDatabase()` - 24 edges
+9. `queryAll()` - 19 edges
+10. `App()` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `BackupPanelProps` --references--> `BackupEntry`  [EXTRACTED]
+  src/components/BackupPanel.tsx → src/lib/storage.ts
+- `CalibrationLine` --references--> `ReviewConfidence`  [EXTRACTED]
+  src/features/good-morning/CalibrationCard.tsx → src/types/database.ts
 - `dayLabel()` --calls--> `formatDuration()`  [EXTRACTED]
   src/features/good-morning/StudyCalendar.tsx → src/lib/timeFormat.ts
-- `App()` --calls--> `describeRecalibrationHint()`  [EXTRACTED]
-  src/App.tsx → src/lib/recalibrationHint.ts
-- `App()` --calls--> `formatDuration()`  [EXTRACTED]
-  src/App.tsx → src/lib/timeFormat.ts
-- `App()` --calls--> `useNotebookDraft()`  [EXTRACTED]
-  src/App.tsx → src/features/notebook-dock/useNotebookDraft.ts
-- `App()` --calls--> `useDailyRoutine()`  [EXTRACTED]
-  src/App.tsx → src/features/routine/useDailyRoutine.ts
+- `App()` --calls--> `useConfirmDialog()`  [EXTRACTED]
+  src/App.tsx → src/components/ConfirmDialog.tsx
+- `App()` --calls--> `useResizableWidth()`  [EXTRACTED]
+  src/App.tsx → src/components/ResizeHandle.tsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (163 total, 73 thin omitted)
+## Communities (184 total, 72 thin omitted)
 
 ### Community 0 - "aiRouter.ts"
-Cohesion: 0.11
-Nodes (17): CATEGORY_TITLES, CycleGroup, formatPoints(), groupAllocations(), ACTIONABLE_SUGGESTIONS, CycleView(), StudyTotals, TopicHeatGrid() (+9 more)
+Cohesion: 0.26
+Nodes (10): CurriculumManagerModal(), CurriculumManagerModalProps, CurriculumSection, getSampleSubtopicsForCalibration(), BackupEntry, CreateStudyPlanInput, CreateSubjectInput, CreateTopicInput (+2 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.11
 Nodes (17): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, lib, module, moduleDetection, moduleResolution (+9 more)
 
 ### Community 2 - "explainabilityEngine.ts"
-Cohesion: 0.05
-Nodes (69): AiCopilotDockPanel(), AiCopilotDockPanelProps, describeDiagnosisHint(), DIAGNOSIS_BUTTONS, DiagnosisSubmission, QuestionWorkbench(), QuestionWorkbenchProps, resolveAnswerState() (+61 more)
+Cohesion: 0.14
+Nodes (24): AiResponder, AiStatus, buildDissectionPrompt(), buildQuestionXml(), callAiProviders(), callDeepSeek(), callGateway(), callGemini() (+16 more)
 
 ### Community 3 - "dependencies"
 Cohesion: 0.07
-Nodes (46): createEditalDraft(), draftToPlanInput(), draftWeights(), EditalDraft, roleNeedsChoice(), EditalImportModal(), ImportState, EditalPreview() (+38 more)
+Nodes (45): createEditalDraft(), draftToPlanInput(), draftWeights(), EditalDraft, roleNeedsChoice(), EditalImportModal(), ImportState, EditalPreview() (+37 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.16
-Nodes (13): studiedDatesByTopic(), closeDatabase(), flushDatabase(), getDailyReview(), getQuestionWithDissection(), getStudySessionsSince(), recordRecallCheck(), recordStudySession() (+5 more)
+Cohesion: 0.12
+Nodes (27): askFofoIa(), isStrongMode(), demoFofoReply(), EditalCandidate, keywords(), matchEditalTopics(), STOPWORDS, FofoMessage() (+19 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.22
@@ -226,8 +245,8 @@ Cohesion: 0.10
 Nodes (19): debugApplicationIdSuffix, app, security, windows, build, beforeBuildCommand, beforeDevCommand, devUrl (+11 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.12
-Nodes (29): createFreshDatabase(), createSafetyBackup(), describeStorageError(), EDITAL_SUBJECT_COLORS, enableForeignKeys(), exportBytes(), exportDatabaseBinary(), InconsistentDiagnosisError (+21 more)
+Cohesion: 0.08
+Nodes (45): closeDatabase(), countDependents(), createFreshDatabase(), createSafetyBackup(), describeStorageError(), EDITAL_SUBJECT_COLORS, enableForeignKeys(), exportBytes() (+37 more)
 
 ### Community 11 - "Database"
 Cohesion: 0.33
@@ -242,12 +261,12 @@ Cohesion: 0.05
 Nodes (40): dependencies, clsx, lucide-react, pdfjs-dist, react, react-dom, sql.js, @tauri-apps/api (+32 more)
 
 ### Community 14 - "Topic"
-Cohesion: 0.10
-Nodes (30): BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun(), normalizeJsonOptions(), OptionStart (+22 more)
+Cohesion: 0.14
+Nodes (23): BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart(), ImportIssue, isAlphabeticRun(), normalizeJsonOptions(), OptionStart (+15 more)
 
 ### Community 15 - "🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia""
-Cohesion: 0.06
-Nodes (65): FofoDoro(), nextStepText(), phaseLabel(), progressText(), ringTime(), ringTone(), describePlan(), FofoDoroPreview() (+57 more)
+Cohesion: 0.08
+Nodes (58): FofoDoro(), nextStepText(), phaseLabel(), progressText(), ringTime(), ringTone(), describePlan(), FofoDoroPreview() (+50 more)
 
 ### Community 16 - "types/database.ts"
 Cohesion: 0.12
@@ -262,12 +281,12 @@ Cohesion: 0.12
 Nodes (15): 1.1. O que havia sido validado positivamente, 1.2. Os 5 Gargalos Identificados na Avaliação v1, Alerta de Segurança em `VITE_DEEPSEEK_API_KEY` + Limpeza de Ternários Aninhados, 🧠 Auditoria de Sócio — Comparativo v1 (Pré-Skills) vs. v2 (Pós-Skills), Da "Regra das 3 Questões" para Saturação Contínua BM25 + Regressão de Meia-Vida (Duolingo HLR), De "God Component" (`App.tsx` com 781 linhas) para Bancada Dupla (Split View) Componentizada, De Prompt Genérico para "Eliminação Contrastiva + Regra de Abstenção", 🚀 Mudança 1 (Lente: `education-learning-science` — Kapur, 2016 & Kornell, 2009) (+7 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.08
-Nodes (27): Collapse(), TopicGroup, blendMastery(), isValidLog(), logAccuracy(), PeekBanner(), PeekInfo, QuestionLogPanel() (+19 more)
+Cohesion: 0.07
+Nodes (36): Collapse(), RoutineItem, RoutineStatus, TopicGroup, blendMastery(), isValidLog(), logAccuracy(), PeekBanner() (+28 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.08
-Nodes (33): GoodMorningViewProps, CostBenefitBadge, DailyFocusBlock, DailyPlan, describeReason(), pickBadge(), planDailyBlocks(), roundTo5() (+25 more)
+Cohesion: 0.10
+Nodes (17): buildRoutine(), freezeDailyPlan(), pickExtraBlock(), routineProfileKey(), describeRecalibrationHint(), EXPECTED_MASTERY, recalibrationHint, useDailyRoutine() (+9 more)
 
 ### Community 22 - "editalParser.ts"
 Cohesion: 0.18
@@ -294,8 +313,8 @@ Cohesion: 0.33
 Nodes (5): description, identifier, permissions, $schema, windows
 
 ### Community 28 - "Brainstorming"
-Cohesion: 0.08
-Nodes (27): ConfirmOptions, useConfirmDialog(), ResizeHandle(), ResizeHandleProps, useResizableWidth(), routineGroup(), App(), describeDependents() (+19 more)
+Cohesion: 0.14
+Nodes (20): ORDER, DiagnosisPicker(), CONFIDENCE_LABEL, DIAGNOSIS_LABEL, AnswerState, getAllowedDiagnoses(), isDiagnosisAllowed(), isFalseCertainty() (+12 more)
 
 ### Community 29 - "🐹🧪 FofoLab — Backlog & Estado do Projeto (Índice para IA)"
 Cohesion: 0.29
@@ -303,7 +322,7 @@ Nodes (6): 🏠 Checklist do app desktop (pendente — juntado na `main` antes, 
 
 ### Community 30 - "Community 30"
 Cohesion: 0.17
-Nodes (13): CycleCalculationResult, OnboardingProfile, OnboardingWizardModalProps, STRATEGY_FOR_MOMENT, initialSelfAssessment(), KNOWLEDGE_LEVELS, SelfAssessmentState, SelfAssessmentStep() (+5 more)
+Nodes (10): OnboardingProfile, OnboardingWizardModal(), OnboardingWizardModalProps, STRATEGY_FOR_MOMENT, initialSelfAssessment(), KNOWLEDGE_LEVELS, SelfAssessmentState, SelfAssessmentStep() (+2 more)
 
 ### Community 31 - "FofoLab — guia para o Claude Code"
 Cohesion: 0.29
@@ -322,16 +341,16 @@ Cohesion: 0.50
 Nodes (3): 1. Proibição de Jargão Técnico na Interface (UX/UI Foco no Estudante), 2. Qualidade & Suíte de Testes Obrigatória, Diretrizes de UX/UI Limpa & Desenvolvimento Orientado a Testes (TDD)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.10
-Nodes (35): applyRecommendedCycleAllocations(), clearDailyPlan(), createPlanFromEdital(), createStudyPlan(), createSubject(), createTopic(), deleteSubject(), deleteTopic() (+27 more)
+Cohesion: 0.16
+Nodes (33): applyRecommendedCycleAllocations(), clearDailyPlan(), createPlanFromEdital(), createStudyPlan(), createSubject(), createTopic(), deleteSubject(), deleteTopic() (+25 more)
 
 ### Community 36 - "PdfReaderStage.tsx"
 Cohesion: 0.12
 Nodes (16): AGENT SKILLS STANDARD FIELDS (v2), Cognitive Load Analyser, Cognitive Load Analysis, Evidence Foundation, Example Output, EXISTING FIELDS, Expertise Reversal Check, Input Schema (+8 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.06
-Nodes (39): BackupPanel(), BackupPanelProps, describeStorage(), LABELS, CurriculumManagerModal(), CurriculumSection, formatTime(), SaveStatusIndicator() (+31 more)
+Cohesion: 0.14
+Nodes (14): BackupPanel(), BackupPanelProps, describeStorage(), LABELS, formatTime(), SaveStatusIndicator(), SaveStatusIndicatorProps, getSaveStatus() (+6 more)
 
 ### Community 38 - "Education & Learning Science (GarethManning/education-agent-skills)"
 Cohesion: 0.12
@@ -375,7 +394,7 @@ Nodes (13): AGENT SKILLS STANDARD FIELDS (v2), Answer Notes, Evidence Foundation
 
 ### Community 55 - "Community 55"
 Cohesion: 0.17
-Nodes (17): SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_QUESTIONS, SEED_STUDY_PLANS, SEED_SUBJECTS (+9 more)
+Nodes (11): 11 — FofoIA e diagnóstico pela confiança: Implementation Plan, Decisões do construtor (dentro do que a spec deixou), Global Constraints, Review Focus, Task 1: Diagnósticos novos no banco e no motor, Task 2: Fluxo de resposta compartilhado (Revisão do dia), Task 3: Aba Questões com confiança obrigatória e sem o painel de IA, Task 4: Núcleo da FofoIA (regras puras e prompts) (+3 more)
 
 ### Community 56 - "Community 56"
 Cohesion: 0.22
@@ -398,8 +417,8 @@ Cohesion: 0.13
 Nodes (14): 1. Intenção, 2. Objetivos, não-objetivos e anti-objetivos, 3. Restrições, 4. Abordagens consideradas (escolhida: 1), 5.1 Entrega 9a — Casca (layout e movimento; sem mudança de dados), 5.2 Entrega 9b — Roteiro na coluna esquerda, 5.3.1 Respostas à revisão do construtor (decisões do Claude, salvo onde indicado), 5.3.2 Decisões do dono em 23/10/2026 (antes do plano da 9c) (+6 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.15
-Nodes (15): calculateDynamicStudyCycle(), calculateMemoryDecayBoost(), calculateSampleConfidencePercent(), composeSubjectScore(), composeTopicHeat(), CycleSuggestion, sampleSaturationK(), SELF_ASSESSMENT_PRIOR_MASTERY (+7 more)
+Cohesion: 0.07
+Nodes (41): MetricExplainer(), MetricExplainerProps, formatPoints(), groupAllocations(), CycleView(), SEED_ADMIN_BLUEPRINTS, SEED_AI_DISSECTIONS, SEED_CAREER_TRACKS (+33 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.17
@@ -418,32 +437,32 @@ Cohesion: 0.13
 Nodes (14): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+6 more)
 
 ### Community 68 - "Community 68"
-Cohesion: 0.06
-Nodes (53): CalibrationCard(), CalibrationLine, GoodMorningView(), resumeTargets(), topicLabel(), ResumeCard(), ResumeCardProps, ResumeTarget (+45 more)
+Cohesion: 0.20
+Nodes (12): behindWarning(), dayMonth(), daysLine(), examSituation(), listStarted(), moodLine(), parseDateKey(), at() (+4 more)
 
 ### Community 69 - "Community 69"
 Cohesion: 0.38
 Nodes (3): doCurrentItem(), review(), totalItems()
 
 ### Community 70 - "Community 70"
-Cohesion: 0.12
-Nodes (19): AdminFactoryView(), AdminFactoryViewProps, CurriculumManagerModalProps, startOfWeek(), countDependents(), getStudyTotals(), initDatabase(), QuestionFallback (+11 more)
+Cohesion: 0.38
+Nodes (4): AdminFactoryView(), AdminFactoryViewProps, AdminBoardBlueprint, CareerTrack
 
 ### Community 71 - "Community 71"
-Cohesion: 0.15
-Nodes (16): NotebookDockPanel(), NotebookDockPanelProps, DraftOwner, NotebookDraftStatus, notebookTitle(), useNotebookDraft(), BlueprintHealthStatus, CareerSphere (+8 more)
+Cohesion: 0.22
+Nodes (13): AnswerCorrection(), AnswerOptions(), isCertoErradoOptions(), optionName(), ConfidencePicker(), RichText(), ReviewQuestion(), explainQuestionComplexity() (+5 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.23
-Nodes (11): emptyStateMessage(), PdfProgressUpdate, PdfReaderStage(), ZOOM_STEPS, PdfFilePicker(), PdfPageNavigation, PdfReaderToolbar(), toggleClass() (+3 more)
+Cohesion: 0.14
+Nodes (16): routineGroup(), App(), describeDependents(), localDateStamp(), RightDock(), RightDockProps, rightDockRail(), RightDockTab (+8 more)
 
 ### Community 73 - "Community 73"
 Cohesion: 0.47
 Nodes (3): column(), finishBlockAndOpenInvite(), register()
 
 ### Community 74 - "Community 74"
-Cohesion: 0.15
-Nodes (12): 07:25 | fatia-7-edital-ciclo, 07:40-11:00 | fatia-7-edital-ciclo, 11:22-12:08 | fatia-7-edital-ciclo, 12:15 | fatia-7-edital-ciclo, 12:26 | fatia-7-edital-ciclo, 12:36 | fatia-7-edital-ciclo, 13:17 | fatia-7-edital-ciclo, 14:04-19:31 | fatia-7-edital-ciclo (+4 more)
+Cohesion: 0.14
+Nodes (13): 07:25 | fatia-7-edital-ciclo, 07:40-11:00 | fatia-7-edital-ciclo, 09:43-21:59 | fatia-7-edital-ciclo, 11:22-12:08 | fatia-7-edital-ciclo, 12:15 | fatia-7-edital-ciclo, 12:26 | fatia-7-edital-ciclo, 12:36 | fatia-7-edital-ciclo, 13:17 | fatia-7-edital-ciclo (+5 more)
 
 ### Community 75 - "Community 75"
 Cohesion: 0.17
@@ -458,8 +477,8 @@ Cohesion: 0.20
 Nodes (9): 08:59 | fatia-7-edital-ciclo, 09:19 | fatia-7-edital-ciclo, 10:16 | fatia-7-edital-ciclo, 10:40-10:57 | fatia-7-edital-ciclo, 11:34 | fatia-7-edital-ciclo, 11:58-12:08 | fatia-7-edital-ciclo, 14:30 | fatia-7-edital-ciclo, 15:18-15:36 | fatia-7-edital-ciclo (+1 more)
 
 ### Community 78 - "Community 78"
-Cohesion: 0.19
-Nodes (20): deleteStudyPlan(), getAdminCatalogAndBlueprints(), getDb(), getExamPartsByPlan(), getNotebooksByPlan(), getQuestionLogs(), getQuestionsForTopicOrSubject(), getRecallChecks() (+12 more)
+Cohesion: 0.12
+Nodes (25): ConfirmOptions, useConfirmDialog(), startOfWeek(), deleteStudyPlan(), getAdminCatalogAndBlueprints(), getExamPartsByPlan(), getNotebooksByPlan(), getQuestionLogs() (+17 more)
 
 ### Community 81 - "Community 81"
 Cohesion: 0.20
@@ -489,9 +508,17 @@ Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App
 Cohesion: 0.50
 Nodes (3): File-System Paths, Import Paths, Prefer Statically Analyzable Paths
 
+### Community 156 - "Community 156"
+Cohesion: 0.18
+Nodes (14): NotebookDockPanel(), PageJumpRequest, PdfDocumentViewer(), emptyStateMessage(), PdfProgressUpdate, PdfReaderStage(), ZOOM_STEPS, PdfFilePicker() (+6 more)
+
+### Community 157 - "Community 157"
+Cohesion: 0.12
+Nodes (21): CalibrationCard(), CalibrationLine, GoodMorningView(), resumeTargets(), topicLabel(), ResumeCard(), ResumeCardProps, ResumeTarget (+13 more)
+
 ### Community 158 - "Community 158"
-Cohesion: 0.17
-Nodes (18): MetricExplainer(), MetricExplainerProps, CycleSubjectRow(), describeLastStudy(), HEAT_LEVELS, heatLevel(), TopicDetail(), QuestionComplexityProfile (+10 more)
+Cohesion: 0.11
+Nodes (25): CycleSubjectRow(), ACTIONABLE_SUGGESTIONS, StudyTotals, QuestionComplexityProfile, CycleCalculationResult, CycleSuggestion, MIN_SCORE_FLOOR, sampleSaturationK() (+17 more)
 
 ### Community 159 - "Community 159"
 Cohesion: 0.21
@@ -506,32 +533,104 @@ Cohesion: 0.22
 Nodes (8): 10 — FofoDoro e resumo do dia: Implementation Plan, Global Constraints, Review Focus, Task 1: Máquina — pausa longa, ciclo entre blocos e ajustes, Task 2: Peças visuais do FofoDoro, Task 3: FofoDoro na coluna (opção A) e saída do Ciclo, Task 4: Resumo do dia e totais (10b), Task 5: E2E e entrega
 
 ### Community 162 - "Community 162"
-Cohesion: 0.15
-Nodes (8): TopicHeatItem, describeRecalibrationHint(), EXPECTED_MASTERY, recalibrationHint, calls, cold, reviews, subject
+Cohesion: 0.25
+Nodes (4): calls, cold, reviews, subject
+
+### Community 164 - "Community 164"
+Cohesion: 0.11
+Nodes (17): 1. Intenção, 2. Objetivos, não-objetivos e anti-objetivos, 3. Restrições, 4. Abordagens consideradas (escolhida: A, pelo dono), 5.1 Lugar e voz, 5.2.1 Jeitos da FofoIA (personas do grupo de estudos, 24/10/2026), 5.2 Dois modos de resposta, 5.3 O que a FofoIA sabe e o que guarda (+9 more)
 
 ### Community 165 - "Community 165"
 Cohesion: 0.18
 Nodes (10): 9c — Revisão do dia e tela "Bom dia": Implementation Plan, Decisões do construtor (dentro do que a spec deixou), Global Constraints, Review Focus, Task 1: Banco v8, Task 2: Autoavaliações na meia-vida, Task 3: Seleção, progresso e diagnóstico (puros), Task 4: Linha de ânimo e situação (puros) (+2 more)
 
+### Community 166 - "Community 166"
+Cohesion: 0.19
+Nodes (10): clearLegacyLocalStorageDatabase(), createDefaultStorage(), createIndexedDbStorage(), createTauriFileStorage(), getLocalStorageSafe(), isTauriRuntime(), makeBackupId(), parseBackupId() (+2 more)
+
+### Community 167 - "Community 167"
+Cohesion: 0.15
+Nodes (11): CostBenefitBadge, DailyPlan, describeReason(), pickBadge(), planDailyBlocks(), roundTo5(), store, ti (+3 more)
+
+### Community 168 - "Community 168"
+Cohesion: 0.13
+Nodes (22): DailyReviewCard(), DailyReviewCardProps, REASON, RATINGS, ReviewOpenPrompt(), ReviewQuestionResult, CurrentReview, cardProps() (+14 more)
+
+### Community 169 - "Community 169"
+Cohesion: 0.20
+Nodes (14): GoodMorningViewProps, TopicHeatItem, chooseReviewQuestion(), deriveDiagnosis(), interleaveBySubject(), QuestionCandidate, reviewProgress(), selectDailyReview() (+6 more)
+
+### Community 170 - "Community 170"
+Cohesion: 0.16
+Nodes (19): buildFofoContext(), FofoContext, EditalTopicEntry, FofoActiveQuestion, FofoIaPanel(), FofoIaPanelProps, useFofoConversation(), topicLabel() (+11 more)
+
+### Community 171 - "Community 171"
+Cohesion: 0.25
+Nodes (11): studiedDatesByTopic(), dayStart(), editalProgress(), pace(), plural(), studyCalendar(), localDateKey(), iso() (+3 more)
+
+### Community 172 - "Community 172"
+Cohesion: 0.18
+Nodes (10): InitDatabaseOptions, DatabaseStorage, MemoryStorage, bytesOfV1Database(), DatabaseModule, openDatabase(), SaveStatusModule, sqlJsConfig (+2 more)
+
+### Community 173 - "Community 173"
+Cohesion: 0.33
+Nodes (7): NotebookDockPanelProps, DraftOwner, NotebookDraftStatus, notebookTitle(), useNotebookDraft(), Notebook, PdfSource
+
+### Community 174 - "Community 174"
+Cohesion: 0.25
+Nodes (7): 10:53 | fatia-7-edital-ciclo, 12:17 | fatia-7-edital-ciclo, 14:13 | fatia-7-edital-ciclo, 14:24 | fatia-7-edital-ciclo, 14:35 | fatia-7-edital-ciclo, 15:02 | fatia-7-edital-ciclo, 15:31 | fatia-7-edital-ciclo
+
+### Community 175 - "Community 175"
+Cohesion: 0.22
+Nodes (8): 1. Onde o projeto está, 2. O que a FofoIA é (spec `docs/specs/11-fofoia.md`), 3. Mapa do código novo, 4. Armadilhas conhecidas (economize tempo), 5. Próximos passos (em ordem sugerida, confirme com o dono), 6. Como o dono gosta de trabalhar, 7. Mensagem para colar na próxima IA, Estado do projeto e instruções para a próxima IA — 24/10/2026
+
+### Community 176 - "Community 176"
+Cohesion: 0.47
+Nodes (6): calculateSampleConfidencePercent(), describeAnswer(), diagnosisDelta(), recordQuestionDiagnosis(), sampleConfidenceAtAttempt(), updateAttemptDiagnosis()
+
+### Community 177 - "Community 177"
+Cohesion: 0.57
+Nodes (7): activeQuestionXml(), buildFofoPrompt(), conversationXml(), editalXml(), MODE_INSTRUCTIONS, buildStudentContextXml(), escapeXml()
+
+### Community 178 - "Community 178"
+Cohesion: 0.16
+Nodes (11): CATEGORY_TITLES, CycleGroup, SubjectCycleAllocation, DailyFocusBlock, micro, part, reviewState, subject (+3 more)
+
+### Community 180 - "Community 180"
+Cohesion: 0.25
+Nodes (6): context, questionB, saved, subject, topicA, topicB
+
+### Community 181 - "Community 181"
+Cohesion: 0.38
+Nodes (5): ResizeHandle(), ResizeHandleProps, useResizableWidth(), saveMock, [topicA, topicB]
+
+### Community 182 - "Community 182"
+Cohesion: 0.40
+Nodes (3): AiReply, base, ctx
+
+### Community 183 - "Community 183"
+Cohesion: 0.60
+Nodes (4): AppHeader(), AppHeaderProps, formatDays(), ExamPartProgress
+
 ## Knowledge Gaps
-- **692 isolated node(s):** `TEST_PDF`, `name`, `private`, `version`, `description` (+687 more)
+- **750 isolated node(s):** `TEST_PDF`, `name`, `private`, `version`, `description` (+745 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **73 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **72 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topic` connect `Community 21` to `aiRouter.ts`, `Community 162`, `dependencies`, `Community 4`, `Community 68`, `Community 37`, `Community 70`, `Community 71`, `Community 9`, `Community 72`, `Topic`, `🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia"`, `Community 20`, `Community 55`, `Community 158`, `Community 30`, `Community 63`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `formatDuration()` connect `🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia"` to `aiRouter.ts`, `explainabilityEngine.ts`, `Community 68`, `Community 37`, `Community 70`, `Community 20`, `Community 21`, `Brainstorming`, `Community 158`, `Community 63`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `Subject` connect `Community 21` to `aiRouter.ts`, `Community 162`, `dependencies`, `Community 4`, `Community 68`, `Community 37`, `Community 70`, `Community 71`, `Community 9`, `Topic`, `Community 20`, `Community 55`, `Community 30`, `Community 63`?**
+- **Why does `Topic` connect `Community 20` to `aiRouter.ts`, `Community 4`, `Community 9`, `Topic`, `Community 21`, `Community 156`, `Community 157`, `Community 30`, `Community 158`, `Community 162`, `Community 167`, `Community 168`, `Community 169`, `Community 170`, `Community 171`, `Community 173`, `Community 178`, `Community 180`, `Community 63`, `Community 68`, `Community 78`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `formatDuration()` connect `Community 158` to `aiRouter.ts`, `explainabilityEngine.ts`, `Community 68`, `Community 167`, `Community 72`, `Community 78`, `🧭 Spec 07 — Edital real, ciclo pela nota mínima e tela "Bom dia"`, `Community 20`, `Community 157`, `Community 63`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `Subject` connect `Community 178` to `aiRouter.ts`, `Community 162`, `Community 167`, `Community 168`, `Community 169`, `Community 170`, `Community 9`, `Community 173`, `Topic`, `Community 78`, `Community 20`, `Community 21`, `Community 180`, `Community 30`, `Community 157`, `Community 158`, `Community 63`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `TEST_PDF`, `name`, `private` to the rest of the system?**
-  _692 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `aiRouter.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.11067193675889328 - nodes in this community are weakly interconnected._
+  _750 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `explainabilityEngine.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.054061624649859946 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1402116402116402 - nodes in this community are weakly interconnected._
+- **Should `dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.07062146892655367 - nodes in this community are weakly interconnected._

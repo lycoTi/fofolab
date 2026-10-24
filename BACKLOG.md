@@ -5,9 +5,9 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
-- **Fase atual:** Fatias 5.5 (endurecimento), 5.6 (IA real via Groq) e 5.7 (leitor de PDF) **na `main`** (21/10/2026), verificadas no navegador. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** — falta o **checklist do app desktop** (abaixo). Fatia 7a (edital real → ciclo pela nota mínima, spec `07`) no branch **`fatia-7-edital-ciclo`**; próxima: 7b.
+- **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10) e **FofoIA (11)** — banco na migração **v10**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
-- **Retomando em outro PC?** Siga `docs/handoff/2026-10-22-continuar-no-outro-pc.md` (instalar a stack `~/.agents`, onde paramos, mensagem pronta para a IA).
+- **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
 
 ## ✅ Definição de Pronto
 Um item só vira **[DONE]** quando: (1) funciona com dados reais, não só com o exemplo; (2) sobrevive a fechar e abrir o app; (3) tem teste automatizado da regra e, se o fluxo atravessa telas, teste E2E; (4) `npm test`, `npm run test:e2e` e `npm run build` passam.
@@ -133,12 +133,23 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   semanas). Proposta para o brainstorm do cronograma: o topo vira **"Sua semana"** — feito × meta com **uma barrinha por
   dia** (seg–dom, com a meta de cada dia), que é onde o cronograma encaixa; as horas por semana e a estratégia continuam
   recolhidas em "Ajustar"; as sugestões do ciclo ficam logo abaixo. Até lá, nada muda.
-- **FofoIA (spec 11, design aprovado em 24/10/2026):** um só professor na coluna direita (sai o painel de IA da aba
-  Questões); explicação rápida + aula completa (sugerida por sinais, sem chamada extra); contexto com o caderno do tópico;
-  conversa começa do zero; "Salvar resumo de revisão" opcional (≤ 5 linhas); falha produtiva em três camadas (pistas sem
-  gabarito, confiança obrigatória antes de responder, aquecimento antes da aula); diagnóstico deduzido da confiança
-  (novos: acertei no chute, confundi com outra coisa; falsa certeza pesa mais). Próximo: plano (`writing-plans`).
-  Depois: **FofoIA com a letra da lei** (repositório `ctresb/leis`, brainstorm próprio).
+- [DONE] **FofoIA + diagnóstico pela confiança (spec 11, 24/10/2026; plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`):**
+  um só professor na coluna direita (aba **FofoIA**; o painel de IA saiu da aba, que virou **Questões**), com jeitos
+  escolhidos pelos sinais e selinho (Rápida · Do zero · Aula completa em partes, alargando a coluna · Resumo no formato da
+  Dora · Cai no meu edital? com filtro local · Pista) — inspirados nos professores do grupo de estudos do dono. Contexto com
+  o caderno do tópico (até 1.500 caracteres, com aviso); **gabarito nunca vai à IA antes da resposta**; conversa recomeça
+  ao trocar de tópico; resumo só vai ao caderno com IA real e confirmação; aquecimento antes da primeira aula num tópico
+  nunca tentado (desligável no Wizard: "Sugerir tentar antes da aula", migração **v9**); modelo forte opcional
+  (`VITE_*_MODEL_STRONG`). Aba Questões: confiança obrigatória antes das alternativas; tentativa gravada ao responder;
+  diagnóstico deduzido (novos: **acertei no chute**, **confundi com outra coisa**; **falsa certeza** pesa mais no calor);
+  "Por quê?" corrige a mesma tentativa (delta aplicado guardado, migração **v10**); explicação embaixo da questão. Revisão
+  do dia com os mesmos rótulos. Testes: unit (diagnóstico, motor, banco, fluxo de resposta, aba Questões, núcleo e painel
+  da FofoIA, entradas, conversa) + E2E `e2e/fofoia.spec.ts`; `npm test` (355), `test:e2e` (31, 2 rodadas) e `build` verdes.
+  Revisão independente: trocar diagnóstico perto de 0/100; questão ativa limpa ao sair da aba; resposta atrasada descartada
+  na troca de tópico; pedido da aba Questões não se perde nem repete; voltar a questão respondida não dá 2ª tentativa.
+  [A VERIFICAR] com a **IA real** (Groq): os testes rodam em modo demonstração — conferir aula em partes, resumo no
+  formato e pista que não entrega a resposta. Depois: **FofoIA com a letra da lei** (repositório `ctresb/leis`,
+  brainstorm próprio) e **professores personalizados** (ideia).
 - **Caderno:** já grava sozinho ("Salvo automaticamente", como o Google Docs) — avaliar tirar o botão "Salvar" redundante.
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso
@@ -150,4 +161,4 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias — formato preferido pela esposa do dono, segunda usuária); tópicos relacionados entre matérias.
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
-- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~400 linhas) e `App.tsx` (~1380) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
+- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~420 linhas) e `App.tsx` (~1440) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).

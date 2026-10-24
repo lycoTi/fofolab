@@ -1,6 +1,7 @@
 # 🐹 Spec 11 — FofoIA: um só professor, aula sob medida e diagnóstico pela confiança
 
-> Brainstorm de 2026-10-24 (Claude Code + dono). Status: **design aprovado pelo dono (24/10/2026), com a revisão do construtor incorporada.**
+> Brainstorm de 2026-10-24 (Claude Code + dono). Status: **implementada em 24/10/2026** (plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`;
+> migrações v9 e v10; revisão independente corrigida). Falta conferir com a IA real (BACKLOG).
 > Marcação: o que o dono decidiu está escrito como fato; escolhas do Claude estão marcadas **(decisão do Claude)**.
 > Skills: `brainstorming`, `impeccable`/`ux-ui-clean`, regra autoral de prompts (`~/.agents/AGENTS.md`),
 > `productive-failure-desirable-difficulty-designer`, `progressive-hint-ladder`, `confidence-calibration-check`,
