@@ -232,3 +232,35 @@ describe('autoavaliação da pergunta aberta (Revisão do dia) pesa metade de um
     expect(heatOf([check('GOOD', 1)]).masteredCount).toBe(heatOf([]).masteredCount);
   });
 });
+
+describe('diagnósticos novos no motor (spec 11 §5.5)', () => {
+  const plan = SEED_STUDY_PLANS[0];
+  const subjects = SEED_SUBJECTS.filter((s) => s.plan_id === plan.id);
+  const bySubject: Record<string, Topic[]> = {};
+  for (const s of subjects) bySubject[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+  const target = SEED_TOPICS.find((t) => t.subject_id === subjects[0].id && !SEED_TOPICS.some((c) => c.parent_id === t.id))!;
+  const attempt = (n: number, diagnosis: QuestionAttempt['self_diagnosis'], correct: boolean, confidence: QuestionAttempt['confidence'] = null) =>
+    ({ id: `a${n}`, question_id: `q${n}`, topic_id: target.id, selected_option: 'A', is_correct: correct ? 1 : 0, used_ai_review: 0, self_diagnosis: diagnosis, time_spent_seconds: 30, attempted_at: new Date().toISOString(), confidence }) as QuestionAttempt;
+  const heatOf = (attempts: QuestionAttempt[]) =>
+    calculateDynamicStudyCycle({ plan, subjects, topicsBySubject: bySubject, attempts, sessions: [], topicLinks: [] }).topicHeatmapRanking.find((h) => h.topic.id === target.id)!;
+
+  it('acertei no chute conta na amostra, mas não alonga a meia-vida como um dominei', () => {
+    const base = heatOf([]);
+    const lucky = heatOf([attempt(1, 'LUCKY_GUESS', true, 'GUESS')]);
+    expect(lucky.attemptsCount).toBe(base.attemptsCount + 1);
+    expect(lucky.memoryHalfLifeDays).toBe(base.memoryHalfLifeDays);
+    expect(heatOf([attempt(1, 'MASTERED', true, 'SURE')]).memoryHalfLifeDays).toBeGreaterThan(base.memoryHalfLifeDays);
+  });
+
+  it('confundi encurta a meia-vida como lacuna e esquenta mais que não sabia', () => {
+    const gap = heatOf([attempt(1, 'BASE_GAP', false)]);
+    const confused = heatOf([attempt(1, 'MISCONCEPTION', false)]);
+    expect(confused.memoryHalfLifeDays).toBe(gap.memoryHalfLifeDays);
+    expect(confused.heatScore).toBeGreaterThan(gap.heatScore);
+  });
+
+  it('falsa certeza esquenta mais que um chute errado; com pegadinha, não', () => {
+    expect(heatOf([attempt(1, 'BASE_GAP', false, 'SURE')]).heatScore).toBeGreaterThan(heatOf([attempt(1, 'BASE_GAP', false, 'GUESS')]).heatScore);
+    expect(heatOf([attempt(1, 'BOARD_TRAP', false, 'SURE')]).heatScore).toBe(heatOf([attempt(1, 'BOARD_TRAP', false, 'GUESS')]).heatScore);
+  });
+});

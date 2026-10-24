@@ -23,8 +23,10 @@ const CONFIDENCE: { id: ReviewConfidence; label: string }[] = [
 const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
   MASTERED: '🟢 Dominei',
   DOUBT: '🟡 Acertei na dúvida',
-  BOARD_TRAP: '🟠 Pegadinha da banca',
-  BASE_GAP: '🔴 Lacuna de base',
+  LUCKY_GUESS: '🎲 Acertei no chute',
+  BOARD_TRAP: '🟠 Pegadinha ou desatenção',
+  BASE_GAP: '🔴 Não sabia',
+  MISCONCEPTION: '🔀 Confundi com outra coisa',
 };
 
 const chip = 'rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors duration-150';

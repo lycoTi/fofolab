@@ -159,6 +159,8 @@ CREATE TABLE IF NOT EXISTS question_attempts (
     -- 'DOUBT' (🟡 Acertei na dúvida)
     -- 'BOARD_TRAP' (🟠 Pegadinha da banca / Desatenção -> não reduz base teórica)
     -- 'BASE_GAP' (🔴 Lacuna de base -> aumenta peso de teoria no Ciclo)
+    -- [spec 11] 'LUCKY_GUESS' (acertou no chute: conta na amostra, não como domínio)
+    -- [spec 11] 'MISCONCEPTION' (confundiu com outra coisa: lacuna que pesa mais no calor)
     self_diagnosis TEXT NOT NULL,
     time_spent_seconds INTEGER DEFAULT 0,
     attempted_at DATETIME DEFAULT CURRENT_TIMESTAMP,

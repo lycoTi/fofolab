@@ -141,5 +141,7 @@ export function reviewProgress(
 /** Diagnóstico já marcado depois da correção (spec 09 §5.3.1); o estudante troca num toque. */
 export function deriveDiagnosis(confidence: ReviewConfidence, isCorrect: boolean): SelfDiagnosisType {
   if (!isCorrect) return 'BASE_GAP';
-  return confidence === 'SURE' ? 'MASTERED' : 'DOUBT';
+  if (confidence === 'SURE') return 'MASTERED';
+  // Chute certo não é saber: quase não sobe o domínio e o tópico continua na fila (spec 11 §5.5)
+  return confidence === 'GUESS' ? 'LUCKY_GUESS' : 'DOUBT';
 }

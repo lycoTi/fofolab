@@ -9,7 +9,8 @@ export type TopicStatus = 'PENDING' | 'STUDYING' | 'REVIEW' | 'MASTERED';
 export type TopicRelationType = 'PREREQUISITE' | 'RELATED' | 'JURISPRUDENCE';
 /** Quem escreveu a explicação guardada. `EXAMPLE` = exemplo escrito à mão (seed), não gerado pela IA. */
 export type AiProviderUsed = 'GROQ_FREE' | 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK' | 'GATEWAY' | 'EXAMPLE';
-export type SelfDiagnosisType = 'MASTERED' | 'DOUBT' | 'BOARD_TRAP' | 'BASE_GAP';
+/** [spec 11] `LUCKY_GUESS` = acertou no chute; `MISCONCEPTION` = errou porque confundiu com outra coisa. */
+export type SelfDiagnosisType = 'MASTERED' | 'DOUBT' | 'LUCKY_GUESS' | 'BOARD_TRAP' | 'BASE_GAP' | 'MISCONCEPTION';
 export type StudyStrategy = 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
 export type StudyMoment = 'PRE_EDITAL' | 'POS_EDITAL';
 export type StudySessionType = 'PDF_READING' | 'QUESTIONS' | 'REVIEW' | 'POMODORO';

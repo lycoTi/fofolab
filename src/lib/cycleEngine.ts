@@ -11,6 +11,7 @@ import type {
   Topic,
   TopicLink,
 } from '../types/database';
+import { isFalseCertainty } from './diagnosis';
 import { LOG_MIN_FOR_MEMORY_SIGNAL, logAccuracy } from './questionLogs';
 import { formatDuration } from './timeFormat';
 
@@ -33,6 +34,8 @@ export const SUBJECT_SCORE_WEIGHTS = {
 export const TOPIC_HEAT_WEIGHTS = {
   masteryDeficitDivisor: 25, // (100 − domínio) ÷ 25 → 0..4
   baseGap: 1.35,
+  misconception: 2.0, // "confundi com outra coisa": conceito errado pede mais estudo que conceito ausente (~1,5× a lacuna)
+  falseCertainty: 0.7, // extra quando errou dizendo "Sei" (~0,5× a lacuna; hipercorreção)
   doubt: 0.55,
   boardTrap: 0.25,
   mastered: 0.4, // subtrai
@@ -412,7 +415,8 @@ export function calculateDynamicStudyCycle(params: {
   for (const subj of subjects) {
     for (const topic of studyableTopics(subj.id)) {
       const baseGapCount =
-        attempts.filter((a) => a.topic_id === topic.id && a.self_diagnosis === 'BASE_GAP').length + logEvidence(topic.id).gaps;
+        attempts.filter((a) => a.topic_id === topic.id && (a.self_diagnosis === 'BASE_GAP' || a.self_diagnosis === 'MISCONCEPTION')).length +
+        logEvidence(topic.id).gaps;
       if (baseGapCount > 0 || topic.mastery_score < 50) {
         for (const link of topicLinks.filter((l) => l.target_topic_id === topic.id)) {
           const prev = prerequisiteBoostByTopic.get(link.source_topic_id) || 0;
@@ -432,6 +436,9 @@ export function calculateDynamicStudyCycle(params: {
       const doubtCount = topicAttempts.filter((a) => a.self_diagnosis === 'DOUBT').length;
       const boardTrapCount = topicAttempts.filter((a) => a.self_diagnosis === 'BOARD_TRAP').length;
       const masteredCount = topicAttempts.filter((a) => a.self_diagnosis === 'MASTERED').length + external.mastered;
+      // Chute certo conta na amostra (attemptsCount), mas não como "dominei"; "confundi" é lacuna para a memória
+      const misconceptionCount = topicAttempts.filter((a) => a.self_diagnosis === 'MISCONCEPTION').length;
+      const falseCertaintyCount = topicAttempts.filter(isFalseCertainty).length;
 
       const sampleConfidencePercent = calculateSampleConfidencePercent(attemptsCount, subjTopics.length);
       const isReverseStudyDiscovery = sampleConfidencePercent < 35 && topic.status !== 'MASTERED';
@@ -440,13 +447,15 @@ export function calculateDynamicStudyCycle(params: {
       const { memoryHalfLifeDays, daysSinceLastStudy, decayHeatBoost } = calculateMemoryDecayBoost({
         lastStudiedAt: topic.last_studied_at,
         masteredCount: masteredCount + recall.mastered,
-        baseGapCount: baseGapCount + recall.gaps,
+        baseGapCount: baseGapCount + misconceptionCount + recall.gaps,
         daysUntilExam,
         nowMs,
       });
 
       const rawDiagnosisSignal =
         baseGapCount * TOPIC_HEAT_WEIGHTS.baseGap +
+        misconceptionCount * TOPIC_HEAT_WEIGHTS.misconception +
+        falseCertaintyCount * TOPIC_HEAT_WEIGHTS.falseCertainty +
         doubtCount * TOPIC_HEAT_WEIGHTS.doubt +
         boardTrapCount * TOPIC_HEAT_WEIGHTS.boardTrap -
         masteredCount * TOPIC_HEAT_WEIGHTS.mastered;

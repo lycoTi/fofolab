@@ -1192,6 +1192,63 @@ function describeAnswer(answered: boolean, isCorrect: boolean): string {
   return isCorrect ? 'um acerto' : 'um erro';
 }
 
+/**
+ * Quanto o domínio do tópico muda com cada diagnóstico. Enquanto a amostra está em calibração (< 55% de confiança),
+ * a lacuna aplica ajuste suave (−2 a −6) para mapear o calor sem derrubar a nota; "confundi" desce um ponto a mais
+ * (conceito errado pede mais estudo que conceito ausente) e o chute certo sobe só 1 (spec 11 §5.5).
+ */
+function diagnosisDelta(diagnosis: SelfDiagnosisType, sampleConfidencePercent: number): number {
+  const baseGapPenalty = Math.round(-2 - 4 * (sampleConfidencePercent / 100));
+  const deltaMap: Record<SelfDiagnosisType, number> = {
+    MASTERED: 8,
+    DOUBT: 2,
+    LUCKY_GUESS: 1,
+    BOARD_TRAP: 0,
+    BASE_GAP: baseGapPenalty,
+    MISCONCEPTION: baseGapPenalty - 1,
+  };
+  return deltaMap[diagnosis];
+}
+
+/** Confiança da amostra que valia quando a tentativa foi gravada (tentativas do tópico até ela, inclusive). */
+function sampleConfidenceAtAttempt(db: Database, attempt: QuestionAttempt, topic: Topic): number {
+  const upToHere =
+    queryOne<{ c: number }>(
+      db,
+      'SELECT COUNT(*) as c FROM question_attempts WHERE topic_id = ? AND (attempted_at < ? OR (attempted_at = ? AND rowid <= (SELECT rowid FROM question_attempts WHERE id = ?)))',
+      [topic.id, attempt.attempted_at, attempt.attempted_at, attempt.id]
+    )?.c ?? 1;
+  const subjectTopicCount = queryOne<{ c: number }>(db, 'SELECT COUNT(*) as c FROM topics WHERE subject_id = ?', [topic.subject_id])?.c ?? 4;
+  return calculateSampleConfidencePercent(upToHere, subjectTopicCount);
+}
+
+/**
+ * Troca o diagnóstico de uma tentativa já gravada (o "trocável" e o "Por quê?" do erro): desfaz o delta antigo e aplica o
+ * novo no domínio do tópico, na mesma tentativa — trocar várias vezes nunca acumula (spec 11 §5.5).
+ */
+export function updateAttemptDiagnosis(attemptId: string, diagnosis: SelfDiagnosisType): { updatedTopic: Topic | null } {
+  const db = getDb();
+  const attempt = queryOne<QuestionAttempt>(db, 'SELECT * FROM question_attempts WHERE id = ?', [attemptId]);
+  if (!attempt) throw new Error('Tentativa não encontrada.');
+  const answered = attempt.selected_option !== '';
+  if (!isDiagnosisAllowed({ answered, isCorrect: attempt.is_correct === 1 }, diagnosis)) {
+    throw new InconsistentDiagnosisError(`Diagnóstico ${diagnosis} não combina com ${describeAnswer(answered, attempt.is_correct === 1)}.`);
+  }
+  if (attempt.self_diagnosis === diagnosis) return { updatedTopic: null };
+  db.run('UPDATE question_attempts SET self_diagnosis = ? WHERE id = ?', [diagnosis, attemptId]);
+
+  const topic = attempt.topic_id ? queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [attempt.topic_id]) : null;
+  if (!topic) {
+    void flushDatabase();
+    return { updatedTopic: null };
+  }
+  const confidence = sampleConfidenceAtAttempt(db, attempt, topic);
+  const change = diagnosisDelta(diagnosis, confidence) - diagnosisDelta(attempt.self_diagnosis, confidence);
+  const updatedTopic = updateTopic({ id: topic.id, mastery_score: Math.max(0, Math.min(100, Math.round(topic.mastery_score + change))) });
+  void flushDatabase();
+  return { updatedTopic };
+}
+
 export function recordQuestionDiagnosis(params: {
   questionId: string;
   topicId: string;
@@ -1205,6 +1262,7 @@ export function recordQuestionDiagnosis(params: {
   confidence?: ReviewConfidence;
   source?: 'DAILY_REVIEW';
 }): {
+  attemptId: string;
   updatedTopic: Topic | null;
   deltaMastery: number;
   isColdStartDiscovery: boolean;
@@ -1243,18 +1301,9 @@ export function recordQuestionDiagnosis(params: {
   );
   const isColdStartDiscovery = sampleConfidencePercent < 55;
 
-  // Enquanto a amostra ainda está em fase de calibração (<55% confiança), o erro de 1º contato
-  // aplica ajuste suave (-2 a -3) para mapear o Mapa de Calor sem derrubar abruptamente a nota.
-  const baseGapPenalty = Math.round(-2 - 4 * (sampleConfidencePercent / 100));
-
-  const deltaMap: Record<SelfDiagnosisType, number> = {
-    MASTERED: 8,
-    DOUBT: 2,
-    BOARD_TRAP: 0,
-    BASE_GAP: baseGapPenalty,
-  };
-  const deltaMastery = deltaMap[params.selfDiagnosis];
+  const deltaMastery = diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent);
   const timeSpentSeconds = Math.max(0, Math.min(3600, Math.round(params.timeSpentSeconds ?? 0)));
+  const attemptId = newId('att');
 
   db.run(
     `INSERT INTO question_attempts (
@@ -1262,7 +1311,7 @@ export function recordQuestionDiagnosis(params: {
       confidence, source
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
-      newId('att'),
+      attemptId,
       params.questionId,
       params.topicId,
       params.selectedOption ?? '',
@@ -1279,6 +1328,7 @@ export function recordQuestionDiagnosis(params: {
   if (!topic) {
     persistDatabase();
     return {
+      attemptId,
       updatedTopic: null,
       deltaMastery,
       isColdStartDiscovery,
@@ -1296,6 +1346,7 @@ export function recordQuestionDiagnosis(params: {
   // IMPORTANTE: O ciclo atual NÃO soma minutos soltos por questão errada (respeita o teto de horas semanais).
   // O diagnóstico alimenta o Mapa de Calor (question_attempts) para sugerir rebalanceamento no próximo ciclo!
   return {
+    attemptId,
     updatedTopic,
     deltaMastery,
     isColdStartDiscovery,

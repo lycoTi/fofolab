@@ -699,6 +699,31 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     expect(db.getLastOpenedPdf('outro-plano')).toBeNull();
   });
 
+  it('acertei no chute sobe 1 ponto; confundi desce mais que não sabia', async () => {
+    const { db, topic, questionIds } = await topicWithQuestions(['Item do chute.', 'Item da lacuna.', 'Item da confusão.']);
+    const lucky = db.recordQuestionDiagnosis({ questionId: questionIds[0], topicId: topic.id, selectedOption: 'C', isCorrect: true, selfDiagnosis: 'LUCKY_GUESS', confidence: 'GUESS' });
+    expect(lucky.deltaMastery).toBe(1);
+    expect(lucky.attemptId).toBeTruthy();
+    const gap = db.recordQuestionDiagnosis({ questionId: questionIds[1], topicId: topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'BASE_GAP' });
+    const confused = db.recordQuestionDiagnosis({ questionId: questionIds[2], topicId: topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'MISCONCEPTION' });
+    expect(confused.deltaMastery).toBeLessThan(gap.deltaMastery);
+  });
+
+  it('trocar o diagnóstico corrige a mesma tentativa, sem somar delta duas vezes', async () => {
+    const direct = await topicWithQuestions(['Item direto.']);
+    direct.db.recordQuestionDiagnosis({ questionId: direct.questionIds[0], topicId: direct.topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'BOARD_TRAP' });
+    const expected = direct.db.getTopicsBySubject(direct.subjectId).find((t) => t.id === direct.topic.id)!.mastery_score;
+    await direct.db.closeDatabase();
+
+    const { db, subjectId, topic, questionIds } = await topicWithQuestions(['Item direto.']);
+    const { attemptId } = db.recordQuestionDiagnosis({ questionId: questionIds[0], topicId: topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'BASE_GAP' });
+    db.updateAttemptDiagnosis(attemptId, 'MISCONCEPTION');
+    db.updateAttemptDiagnosis(attemptId, 'BOARD_TRAP');
+    expect(db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)!.mastery_score).toBe(expected);
+    expect(db.getRecentAttempts(5).filter((a) => a.topic_id === topic.id).map((a) => a.self_diagnosis)).toEqual(['BOARD_TRAP']);
+    expect(() => db.updateAttemptDiagnosis(attemptId, 'MASTERED')).toThrow();
+  });
+
   it('plano nasce com a revisão do dia ligada e o Wizard pode desligar', async () => {
     const { db } = await openDatabase();
     const plan = db.getActiveStudyPlan()!;
