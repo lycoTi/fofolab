@@ -170,6 +170,7 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           warmupEnabled
           topicHasQuestions={false}
           onTryQuestions={vi.fn()}
+          onRequestHandled={vi.fn()}
         />
       ).container,
       render(

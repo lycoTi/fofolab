@@ -113,6 +113,25 @@ describe('Aba Questões: confiança antes de responder (spec 11 §5.5)', () => {
     expect(onGenerate).toHaveBeenCalledTimes(1);
   });
 
+  it('sair da aba Questões avisa que não há mais questão ativa (a FofoIA não fica presa nela)', () => {
+    const { props, unmount } = renderWorkbench();
+    unmount();
+    expect(props.onActiveQuestionChange).toHaveBeenLastCalledWith(null);
+  });
+
+  it('voltar a uma questão já respondida mostra a correção travada, sem segunda tentativa', () => {
+    const { props } = renderWorkbench({ questions: bundles.slice(0, 2) });
+    fireEvent.click(screen.getByRole('button', { name: 'Acho que sei' }));
+    fireEvent.click(optionA()!);
+    fireEvent.click(screen.getByRole('button', { name: 'Próxima questão' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Questão anterior' }));
+    expect(screen.getByText(/^Gabarito: C/)).toBeTruthy();
+    expect(screen.queryByRole('button', { name: 'Sei' })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: /Confundi com outra coisa/ }));
+    expect(props.onChangeDiagnosis).toHaveBeenCalledWith('att-1', 'MISCONCEPTION');
+    expect(props.onAnswer).toHaveBeenCalledTimes(1);
+  });
+
   it('filtro por banca e navegação continuam', () => {
     renderWorkbench({ questions: bundles });
     fireEvent.change(screen.getByLabelText('Filtrar por banca'), { target: { value: 'Cebraspe' } });

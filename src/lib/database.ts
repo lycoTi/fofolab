@@ -1236,16 +1236,20 @@ export function updateAttemptDiagnosis(attemptId: string, diagnosis: SelfDiagnos
     throw new InconsistentDiagnosisError(`Diagnóstico ${diagnosis} não combina com ${describeAnswer(answered, attempt.is_correct === 1)}.`);
   }
   if (attempt.self_diagnosis === diagnosis) return { updatedTopic: null };
-  db.run('UPDATE question_attempts SET self_diagnosis = ? WHERE id = ?', [diagnosis, attemptId]);
 
   const topic = attempt.topic_id ? queryOne<Topic>(db, 'SELECT * FROM topics WHERE id = ?', [attempt.topic_id]) : null;
   if (!topic) {
+    db.run('UPDATE question_attempts SET self_diagnosis = ? WHERE id = ?', [diagnosis, attemptId]);
     void flushDatabase();
     return { updatedTopic: null };
   }
+  // Desfaz o que foi aplicado de fato (perto de 0 ou 100 o delta foi cortado) e aplica o novo, cortado de novo
   const confidence = sampleConfidenceAtAttempt(db, attempt, topic);
-  const change = diagnosisDelta(diagnosis, confidence) - diagnosisDelta(attempt.self_diagnosis, confidence);
-  const updatedTopic = updateTopic({ id: topic.id, mastery_score: Math.max(0, Math.min(100, Math.round(topic.mastery_score + change))) });
+  const applied = attempt.mastery_delta ?? diagnosisDelta(attempt.self_diagnosis, confidence);
+  const base = topic.mastery_score - applied;
+  const next = Math.max(0, Math.min(100, Math.round(base + diagnosisDelta(diagnosis, confidence))));
+  db.run('UPDATE question_attempts SET self_diagnosis = ?, mastery_delta = ? WHERE id = ?', [diagnosis, next - base, attemptId]);
+  const updatedTopic = updateTopic({ id: topic.id, mastery_score: next });
   void flushDatabase();
   return { updatedTopic };
 }
@@ -1303,14 +1307,17 @@ export function recordQuestionDiagnosis(params: {
   const isColdStartDiscovery = sampleConfidencePercent < 55;
 
   const deltaMastery = diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent);
+  // O que de fato entra no domínio (cortado em 0..100): guardado para a troca de diagnóstico desfazer exatamente isso
+  const nextMastery = topic ? Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery))) : null;
+  const appliedDelta = topic && nextMastery !== null ? nextMastery - topic.mastery_score : null;
   const timeSpentSeconds = Math.max(0, Math.min(3600, Math.round(params.timeSpentSeconds ?? 0)));
   const attemptId = newId('att');
 
   db.run(
     `INSERT INTO question_attempts (
       id, question_id, topic_id, selected_option, is_correct, used_ai_review, self_diagnosis, time_spent_seconds, attempted_at,
-      confidence, source
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      confidence, source, mastery_delta
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       attemptId,
       params.questionId,
@@ -1323,6 +1330,7 @@ export function recordQuestionDiagnosis(params: {
       new Date().toISOString(),
       params.confidence ?? null,
       params.source ?? null,
+      appliedDelta,
     ]
   );
 
@@ -1337,10 +1345,9 @@ export function recordQuestionDiagnosis(params: {
     };
   }
 
-  const nextMastery = Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery)));
   const updatedTopic = updateTopic({
     id: topic.id,
-    mastery_score: nextMastery,
+    mastery_score: nextMastery ?? topic.mastery_score,
     last_studied_at: new Date().toISOString(),
   });
 

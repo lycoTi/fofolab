@@ -39,8 +39,6 @@ export interface QuestionWorkbenchProps {
 }
 
 interface AttemptState {
-  /** De qual questão é a tentativa: na troca de questão, a anterior nunca vale para a nova (nem por um render). */
-  questionId: string | null;
   confidence: ReviewConfidence | null;
   picked: string | null;
   firstContact: boolean;
@@ -48,7 +46,7 @@ interface AttemptState {
   diagnosis: SelfDiagnosisType | null;
 }
 
-const FRESH: AttemptState = { questionId: null, confidence: null, picked: null, firstContact: false, attemptId: null, diagnosis: null };
+const FRESH: AttemptState = { confidence: null, picked: null, firstContact: false, attemptId: null, diagnosis: null };
 
 /** Aba Questões (spec 11): uma questão por vez, confiança antes de responder e a correção logo embaixo. */
 export function QuestionWorkbench(props: QuestionWorkbenchProps) {
@@ -57,7 +55,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   const [complexity, setComplexity] = useState('ALL');
   const [search, setSearch] = useState('');
   const [index, setIndex] = useState(0);
-  const [attempt, setAttempt] = useState<AttemptState>(FRESH);
+  // Uma tentativa por questão enquanto a aba está aberta: voltar a uma respondida mostra a correção travada
+  const [attempts, setAttempts] = useState<Record<string, AttemptState>>({});
   const shownAt = useRef(Date.now());
   const usedAi = useRef(false);
 
@@ -78,12 +77,14 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   const safeIndex = filtered.length > 0 ? Math.min(index, filtered.length - 1) : 0;
   const active = filtered[safeIndex] ?? null;
   const activeId = active?.question.id;
-  const current = attempt.questionId === activeId ? attempt : { ...FRESH, questionId: activeId ?? null };
+  const current = (activeId && attempts[activeId]) || FRESH;
   const answered = current.picked !== null || current.firstContact;
+  const setCurrent = (next: AttemptState) => {
+    if (activeId) setAttempts((all) => ({ ...all, [activeId]: next }));
+  };
 
-  // Questão nova na tela: tentativa nova (zera resposta, diagnóstico e cronômetro)
+  // Questão nova na tela: o cronômetro e a ajuda da IA contam de novo
   useEffect(() => {
-    setAttempt({ ...FRESH, questionId: activeId ?? null });
     shownAt.current = Date.now();
     usedAi.current = false;
   }, [activeId]);
@@ -92,6 +93,9 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     onActiveQuestionChange?.(active ? { question: active.question, answered } : null);
     // O objeto da questão muda a cada recarga dos dados; o que importa é qual questão e se já foi respondida
   }, [activeId, answered]);
+
+  // Saiu da aba Questões: não há mais questão ativa (a FofoIA não fica presa nela nem dá pista fora daqui)
+  useEffect(() => () => onActiveQuestionChange?.(null), []);
 
   const record = (picked: string | null, confidence: ReviewConfidence | null) => {
     if (!active) return;
@@ -106,11 +110,11 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       timeSpentSeconds: Math.round((Date.now() - shownAt.current) / 1000),
       usedAiReview: usedAi.current || picked === null,
     });
-    setAttempt({ questionId: active.question.id, confidence, picked, firstContact: picked === null, attemptId: saved?.attemptId ?? null, diagnosis });
+    setCurrent({ confidence, picked, firstContact: picked === null, attemptId: saved?.attemptId ?? null, diagnosis });
   };
 
   const changeDiagnosis = (diagnosis: SelfDiagnosisType) => {
-    setAttempt((a) => ({ ...a, diagnosis }));
+    setCurrent({ ...current, diagnosis });
     if (current.attemptId) props.onChangeDiagnosis(current.attemptId, diagnosis);
   };
 
@@ -156,7 +160,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
-        onConfidence={(confidence) => setAttempt({ ...current, confidence })}
+        onConfidence={(confidence) => setCurrent({ ...current, confidence })}
         onPick={(key) => {
           if (!current.confidence || answered) return;
           record(key, current.confidence);

@@ -31,6 +31,7 @@ function props(over: Partial<FofoIaPanelProps> = {}): FofoIaPanelProps {
     warmupEnabled: true,
     topicHasQuestions: false,
     onTryQuestions: vi.fn(),
+    onRequestHandled: vi.fn(),
     ...over,
   };
 }
@@ -124,6 +125,7 @@ describe('Painel da FofoIA (spec 11)', () => {
       rerender(<FofoIaPanel {...props({ activeQuestion: q, request: { id: 1, kind: 'deepen' } })} />);
     });
     expect(screen.getAllByText(/Me explique esta questão/).length).toBeGreaterThan(0);
+    expect(props().onRequestHandled).toBeDefined();
   });
 });
 
@@ -169,5 +171,27 @@ describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {
     await clickLesson();
     expect(screen.queryByText(/Antes da aula/)).toBeNull();
     expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
+  });
+});
+
+describe('Pedidos e trocas de tópico', () => {
+  it('pedido atendido avisa o App para limpá-lo (não é reenviado quando o painel volta)', async () => {
+    const onRequestHandled = vi.fn();
+    const q = { question, answered: true, dissection: null, diagnosis: null, falseCertainty: false };
+    const { rerender } = render(<FofoIaPanel {...props({ activeQuestion: q, onRequestHandled })} />);
+    await act(async () => {
+      rerender(<FofoIaPanel {...props({ activeQuestion: q, onRequestHandled, request: { id: 7, kind: 'deepen' } })} />);
+    });
+    expect(onRequestHandled).toHaveBeenCalledTimes(1);
+  });
+
+  it('o convite de aquecimento fecha ao trocar de tópico', async () => {
+    const { rerender } = render(<FofoIaPanel {...props({ firstContact: true })} />);
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Aula completa' }));
+    });
+    expect(screen.getByText(/Antes da aula/)).toBeTruthy();
+    rerender(<FofoIaPanel {...props({ firstContact: true, topicKey: 't2', topicLabel: '3.2 SQL' })} />);
+    expect(screen.queryByText(/Antes da aula/)).toBeNull();
   });
 });

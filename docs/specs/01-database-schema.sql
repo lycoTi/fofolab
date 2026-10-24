@@ -167,7 +167,8 @@ CREATE TABLE IF NOT EXISTS question_attempts (
     time_spent_seconds INTEGER DEFAULT 0,
     attempted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     confidence TEXT,                       -- [v8] Confiança antes de responder: 'SURE', 'THINK', 'GUESS' (só na revisão)
-    source TEXT                            -- [v8] 'DAILY_REVIEW' quando veio da Revisão do dia
+    source TEXT,                           -- [v8] 'DAILY_REVIEW' quando veio da Revisão do dia
+    mastery_delta REAL                     -- [v10] Delta de domínio realmente aplicado (já cortado em 0..100)
 );
 
 -- 11. Sessões de Estudo (Ciclo & Pomodoro)

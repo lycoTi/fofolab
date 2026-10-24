@@ -45,10 +45,14 @@ export function useFofoConversation(input: {
   const [turns, setTurns] = useState<FofoTurn[]>([]);
   const [loading, setLoading] = useState(false);
   const previousKey = useRef(input.topicKey);
+  // Muda a cada troca de tópico: resposta que chega depois pertence à conversa anterior e é descartada
+  const generation = useRef(0);
 
   useEffect(() => {
     if (previousKey.current === input.topicKey) return;
     previousKey.current = input.topicKey;
+    generation.current += 1;
+    setLoading(false);
     setTurns((prev) => (prev.length > 0 ? [{ id: nextId('notice'), role: 'notice', content: `Nova conversa sobre ${input.topicLabel}.` }] : []));
   }, [input.topicKey, input.topicLabel]);
 
@@ -65,8 +69,10 @@ export function useFofoConversation(input: {
 
     setTurns((prev) => [...prev, { id: nextId('s'), role: 'student', content: text }]);
     setLoading(true);
+    const myGeneration = generation.current;
     try {
       const reply = await askFofoIa({ mode, ctx: input.ctx, conversation, message: text, extra: { editalCandidates, part } });
+      if (myGeneration !== generation.current) return;
       if (reply.failed) console.warn('FofoIA: nenhum provedor respondeu.');
       const tutor: FofoTurn = {
         id: nextId('t'),
@@ -82,7 +88,7 @@ export function useFofoConversation(input: {
       };
       setTurns((prev) => [...prev, tutor]);
     } finally {
-      setLoading(false);
+      if (myGeneration === generation.current) setLoading(false);
     }
   };
 

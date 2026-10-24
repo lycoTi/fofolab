@@ -170,6 +170,7 @@ export interface QuestionAttempt {
   attempted_at: string;
   confidence?: ReviewConfidence | null; // [v8]
   source?: 'DAILY_REVIEW' | null;       // [v8]
+  mastery_delta?: number | null;        // [v10] delta aplicado de fato (cortado em 0..100)
 }
 
 // 11. study_sessions

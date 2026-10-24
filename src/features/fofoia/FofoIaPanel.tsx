@@ -40,6 +40,8 @@ export interface FofoIaPanelProps {
   warmupEnabled: boolean;
   topicHasQuestions: boolean;
   onTryQuestions: () => void;
+  /** O pedido foi atendido: o App o limpa (senão voltaria a ser enviado quando o painel reaparecer). */
+  onRequestHandled: () => void;
 }
 
 const shortcut = 'rounded-lg border border-slate-700 px-2.5 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
@@ -94,12 +96,17 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
   useEffect(() => {
     const request = props.request;
-    if (!request || handledRequest.current === request.id) return;
+    // Com a FofoIA pensando, o pedido espera (senão seria marcado como atendido e sumiria)
+    if (!request || loading || handledRequest.current === request.id) return;
     handledRequest.current = request.id;
     if (request.kind === 'hint') hint();
     else void send('Me explique esta questão e por que as outras alternativas estão erradas.');
+    props.onRequestHandled();
     // Cada pedido (id) é atendido uma vez; send/hint mudam a cada render
-  }, [props.request]);
+  }, [props.request, loading]);
+
+  // Trocou de tópico: o convite de aquecimento era do tópico anterior
+  useEffect(() => setWarmup(false), [props.topicKey]);
 
   const submit = () => {
     const text = draft.trim();

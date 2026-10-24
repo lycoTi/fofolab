@@ -449,6 +449,10 @@ export default function App() {
     currentTopic,
     currentNotebookDraft: notebook.draft,
     appendToCurrentNotebook: (markdown) => notebook.appendAndSave(markdown),
+    notebooks: allNotebooks,
+    onNotebookSaved: () => {
+      if (activePlan) setAllNotebooks(getNotebooksByPlan(activePlan.id));
+    },
   });
 
   if (initError) {
@@ -1296,6 +1300,7 @@ export default function App() {
                   {...fofoInputs}
                   aiConfigured={aiStatus.configured}
                   request={fofoRequest}
+                  onRequestHandled={() => setFofoRequest(null)}
                   warmupEnabled={activePlan.productive_failure_hints !== 0}
                   topicHasQuestions={topicQuestions.some((q) => q.question.topic_id === fofoInputs.topicKey)}
                   onTryQuestions={() => {

@@ -468,8 +468,8 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     expect(db.localDateKey(new Date(2026, 9, 23, 0, 1))).toBe('2026-10-23');
   });
 
-  it('o banco está na versão da FofoIA (tenho meu método)', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(9);
+  it('o banco está na versão do delta aplicado por tentativa', () => {
+    expect(LATEST_SCHEMA_VERSION).toBe(10);
   });
 });
 
@@ -695,6 +695,22 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     db.getDb().run("UPDATE pdf_sources SET last_opened_at = '2099-01-01T00:00:00.000Z' WHERE topic_id = ?", [topic.id]);
     expect(db.getLastOpenedPdf(plan.id)).toMatchObject({ topic_id: topic.id, current_page: 12 });
     expect(db.getLastOpenedPdf('outro-plano')).toBeNull();
+  });
+
+  it('trocar o diagnóstico nos limites (domínio 0 ou perto de 100) dá o mesmo que gravar direto', async () => {
+    const zero = await topicWithQuestions(['Item no zero.']);
+    zero.db.updateTopic({ id: zero.topic.id, mastery_score: 0 });
+    const { attemptId } = zero.db.recordQuestionDiagnosis({ questionId: zero.questionIds[0], topicId: zero.topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'BASE_GAP' });
+    zero.db.updateAttemptDiagnosis(attemptId, 'BOARD_TRAP');
+    expect(zero.db.getTopicsBySubject(zero.subjectId).find((t) => t.id === zero.topic.id)!.mastery_score).toBe(0);
+    await zero.db.closeDatabase();
+
+    const top = await topicWithQuestions(['Item no topo.']);
+    top.db.updateTopic({ id: top.topic.id, mastery_score: 96 });
+    const mastered = top.db.recordQuestionDiagnosis({ questionId: top.questionIds[0], topicId: top.topic.id, selectedOption: 'C', isCorrect: true, selfDiagnosis: 'MASTERED', confidence: 'SURE' });
+    expect(mastered.updatedTopic!.mastery_score).toBe(100);
+    top.db.updateAttemptDiagnosis(mastered.attemptId, 'LUCKY_GUESS');
+    expect(top.db.getTopicsBySubject(top.subjectId).find((t) => t.id === top.topic.id)!.mastery_score).toBe(97);
   });
 
   it('acertei no chute sobe 1 ponto; confundi desce mais que não sabia', async () => {

@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 9;
+export const LATEST_SCHEMA_VERSION = 10;
 
 export interface Migration {
   version: number;
@@ -148,6 +148,15 @@ export const MIGRATIONS: Migration[] = [
       if (!columns.includes('productive_failure_hints')) {
         db.run('ALTER TABLE study_plans ADD COLUMN productive_failure_hints INTEGER NOT NULL DEFAULT 1');
       }
+    },
+  },
+  {
+    version: 10,
+    description: 'Delta de domínio realmente aplicado por tentativa: trocar o diagnóstico perto de 0 ou 100 desfaz o que foi aplicado, não o teórico',
+    up: (db) => {
+      // Idempotente; tentativas antigas ficam com NULL e a troca usa o delta teórico, como antes
+      const columns = db.exec('PRAGMA table_info(question_attempts)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('mastery_delta')) db.run('ALTER TABLE question_attempts ADD COLUMN mastery_delta REAL');
     },
   },
 ];

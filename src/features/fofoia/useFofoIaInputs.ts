@@ -4,7 +4,7 @@ import type { CycleCalculationResult } from '../../lib/cycleEngine';
 import { getNotebookForTopic, saveTopicNotebook } from '../../lib/database';
 import { isFalseCertainty } from '../../lib/diagnosis';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
-import type { AiDissection, ExamPart, Question, QuestionAttempt, QuestionLog, Subject, Topic } from '../../types/database';
+import type { AiDissection, ExamPart, Notebook, Question, QuestionAttempt, QuestionLog, Subject, Topic } from '../../types/database';
 import type { FofoActiveQuestion, FofoIaPanelProps } from './FofoIaPanel';
 
 function topicLabel(topic: Topic): string {
@@ -28,7 +28,11 @@ export function useFofoIaInputs(params: {
   currentTopic: Topic | null;
   currentNotebookDraft: string;
   appendToCurrentNotebook: (markdown: string) => void;
-}): Omit<FofoIaPanelProps, 'aiConfigured' | 'request' | 'onWiden' | 'warmupEnabled' | 'topicHasQuestions' | 'onTryQuestions'> | null {
+  /** Cadernos do plano (o de outro tópico vem daqui, sempre atual). */
+  notebooks: Notebook[];
+  /** Salvou no caderno de outro tópico: o App recarrega a lista de cadernos. */
+  onNotebookSaved: () => void;
+}): Omit<FofoIaPanelProps, 'aiConfigured' | 'request' | 'onWiden' | 'warmupEnabled' | 'topicHasQuestions' | 'onTryQuestions' | 'onRequestHandled'> | null {
   const { studentContext, cycleData, subjects, topicsBySubject, examParts, activeQuestion, attempts, questionLogs, currentTopic } = params;
   const allTopics = useMemo(() => Object.values(topicsBySubject).flat(), [topicsBySubject]);
   const topic = allTopics.find((t) => t.id === activeQuestion?.question.topic_id) ?? currentTopic;
@@ -44,10 +48,7 @@ export function useFofoIaInputs(params: {
       });
   }, [allTopics, subjects, examParts]);
 
-  const otherNotebook = useMemo(() => {
-    if (!topic || topic.id === currentTopic?.id) return null;
-    return getNotebookForTopic(topic.id)?.content_markdown ?? null;
-  }, [topic, currentTopic]);
+  const otherNotebook = topic && topic.id !== currentTopic?.id ? (params.notebooks.find((n) => n.topic_id === topic.id)?.content_markdown ?? null) : null;
 
   if (!studentContext || !topic) return null;
 
@@ -97,6 +98,7 @@ export function useFofoIaInputs(params: {
       }
       const existing = getNotebookForTopic(topic.id)?.content_markdown ?? '';
       saveTopicNotebook({ subjectId: topic.subject_id, topicId: topic.id, title: topicLabel(topic), contentMarkdown: existing ? `${existing}\n\n${markdown}` : markdown });
+      params.onNotebookSaved();
     },
   };
 }
