@@ -1,0 +1,73 @@
+import { buildStudentContextXml, escapeXml, type ChatTurn } from '../aiRouter';
+import { activeQuestionXml, type FofoContext } from './context';
+import type { EditalCandidate } from './editalMatch';
+import type { FofoMode } from './signals';
+
+/** Últimas falas da conversa que vão junto (a conversa é curta e começa do zero; isso segura o gasto). */
+export const CONVERSATION_TURNS_SENT = 6;
+
+/**
+ * Regras de todos os jeitos (regra autoral de prompts): fonte imutável declarada, abstenção, sem invenção sobre a banca,
+ * sem gabarito antes da tentativa, estilo para a coluna estreita.
+ */
+const FOFO_RULES = `<regras>
+1. Verdade imutável: o enunciado oficial e o gabarito definitivo da questão ativa (quando presentes) e a lista de tópicos do edital (quando presente). Nunca os contradiga.
+2. Separe o que é texto da fonte, o que é interpretação e o que é seu raciocínio.
+3. Abstenção: só cite número de lei, artigo, inciso, súmula ou norma se tiver certeza; senão escreva "não consigo confirmar o dispositivo exato" e explique o conceito. Nunca invente.
+4. Não atribua pegadinhas nem "pontos mais cobrados" a uma banca específica: você não tem dados das provas. Fale em "cuidados comuns em provas".
+5. Se a questão ativa ainda não foi respondida, nunca diga qual alternativa é a certa nem dê o gabarito.
+6. Fundamente na definição formal e na doutrina; se houver divergência ou mudança recente, diga.
+7. Estilo: português do Brasil, Markdown simples, listas em vez de tabelas (nunca use tabelas), emojis só em rótulos, siglas de TI escritas por extenso na primeira vez.
+8. Voz: a FofoIA, um hamster professor acolhedor e direto, que trata o estudante por "você", sem infantilizar.
+</regras>`;
+
+const MODE_INSTRUCTIONS: Record<FofoMode, string> = {
+  QUICK: `<jeito nome="Rápida">Resposta curta e direta (até ~120 palavras), com uma analogia ou exemplo prático. Termine com "Palavras-chave:" e no máximo 5 termos.</jeito>`,
+  FROM_ZERO: `<jeito nome="Do zero">O estudante está começando ou se perdeu. Comece com uma metáfora do cotidiano e com o porquê de aquilo importar. Linguagem simples. Se um dos &lt;pre_requisitos&gt; for necessário para entender, pergunte primeiro se ele quer vê-lo antes. Termine oferecendo um assunto relacionado ou perguntando se ficou claro.</jeito>`,
+  LESSON: `<jeito nome="Aula completa">Aula na ordem: 1) O essencial (2–3 linhas); 2) Explicação com exemplo concreto, ligado a um tópico que o estudante já domina quando possível; 3) Camadas — em Direito: letra da lei/normativo → jurisprudência dominante (STF/STJ/TCU) → como costuma ser cobrado; nas demais áreas: conceito → exemplo → como costuma ser cobrado; 4) Cuidados comuns em provas (se a questão ativa respondida tiver explicação guardada, use os padrões dela); 5) Uma ou duas perguntas para o estudante responder de cabeça. Comece pelo conceito básico. Se ficar longa, divida em partes: escreva "Parte N de M" no topo e pare no fim da parte.</jeito>`,
+  SUMMARY: `<jeito nome="Resumo">Responda SOMENTE com estas 6 linhas, nada antes ou depois:
+**‹emoji› ‹Título›**
+· **Palavras-chave:** até 5 termos separados por vírgula
+· **Conceito curto:** no máximo 2 frases
+· **Uso funcional:** para que serve / onde aparece
+· **Analogia:** uma comparação do cotidiano
+· **Cuidado em prova:** um cuidado comum (sem atribuir à banca)</jeito>`,
+  EDITAL: `<jeito nome="Cai no meu edital?">Diga se o assunto descrito está no edital do estudante usando SOMENTE a lista &lt;topicos_candidatos&gt;. Se estiver, diga qual tópico (código e título), a matéria, a prova e o peso, e se vale estudar agora. Se nenhum candidato servir, diga "não encontrei isso no seu edital" e, se for o caso, qual matéria chega mais perto. Nunca invente tópico.</jeito>`,
+  HINT: `<jeito nome="Pista">O estudante ainda não respondeu a questão ativa. Não revele a alternativa certa nem o gabarito, nem por eliminação. Se ainda não houve pista nesta conversa, dê uma pista conceitual (qual ideia a questão testa); se já houve, uma pista mais concreta (onde está o ponto de atenção no enunciado). Termine com uma linha incentivando-o a marcar a resposta e a confiança, mesmo chutando.</jeito>`,
+};
+
+function conversationXml(conversation: ChatTurn[]): string {
+  const recent = conversation.slice(-CONVERSATION_TURNS_SENT);
+  if (recent.length === 0) return '<conversa_ate_aqui>início da conversa</conversa_ate_aqui>';
+  const lines = recent.map((t) => `<${t.role === 'student' ? 'estudante' : 'fofoia'}>${escapeXml(t.content)}</${t.role === 'student' ? 'estudante' : 'fofoia'}>`);
+  return `<conversa_ate_aqui>\n${lines.join('\n')}\n</conversa_ate_aqui>`;
+}
+
+function editalXml(candidates: EditalCandidate[] | undefined): string {
+  if (!candidates) return '';
+  if (candidates.length === 0) return '<topicos_candidatos>nenhum tópico do edital tem palavras em comum com a pergunta</topicos_candidatos>';
+  const rows = candidates.map(
+    (c) => `<topico codigo="${escapeXml(c.topic.code)}" materia="${escapeXml(c.subjectName)}" prova="${escapeXml(c.examPartCode ?? '—')}" peso="${escapeXml(c.weight)}">${escapeXml(c.topic.title)}</topico>`
+  );
+  return `<topicos_candidatos>\n${rows.join('\n')}\n</topicos_candidatos>`;
+}
+
+export function buildFofoPrompt(
+  mode: FofoMode,
+  ctx: FofoContext,
+  conversation: ChatTurn[],
+  message: string,
+  extra: { editalCandidates?: EditalCandidate[]; part?: number } = {}
+): string {
+  const partLine = extra.part ? `<continuacao>Continue a aula a partir da Parte ${extra.part}.</continuacao>` : '';
+  return `${buildStudentContextXml(ctx.student)}
+<caderno_do_topico>${escapeXml(ctx.notebookExcerpt ?? 'sem anotações ainda')}</caderno_do_topico>
+<pre_requisitos>${escapeXml(ctx.prerequisites.join(' | ') || 'nenhum cadastrado')}</pre_requisitos>
+${activeQuestionXml(ctx)}
+${editalXml(extra.editalCandidates)}
+${conversationXml(conversation)}
+${FOFO_RULES}
+${MODE_INSTRUCTIONS[mode]}
+${partLine}
+<mensagem_do_estudante>${escapeXml(message)}</mensagem_do_estudante>`;
+}

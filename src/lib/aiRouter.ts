@@ -170,7 +170,7 @@ export function escapeXml(value: string | number | null | undefined): string {
     .replace(/"/g, '&quot;');
 }
 
-function buildStudentContextXml(context?: StudentContextSnapshot): string {
+export function buildStudentContextXml(context?: StudentContextSnapshot): string {
   if (!context) return '';
   const list = (items: string[], empty: string) => escapeXml(items.join(' | ') || empty);
   return `<contexto_estudante>
@@ -260,8 +260,8 @@ async function callGateway(url: string, prompt: string, json: boolean): Promise<
   return typeof data?.reply === 'string' && data.reply.trim() ? data.reply : null;
 }
 
-async function callGemini(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
-  const model = readEnv('VITE_GEMINI_MODEL') ?? DEFAULT_GEMINI_MODEL;
+async function callGemini(apiKey: string, prompt: string, json: boolean, strong = false): Promise<string | null> {
+  const model = (strong ? readEnv('VITE_GEMINI_MODEL_STRONG') : undefined) ?? readEnv('VITE_GEMINI_MODEL') ?? DEFAULT_GEMINI_MODEL;
   const data = (await fetchJson(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`,
     {
@@ -300,8 +300,8 @@ async function callOpenAiCompatible(
   return typeof text === 'string' && text.trim() ? text : null;
 }
 
-function callGroq(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
-  const model = readEnv('VITE_GROQ_MODEL') ?? DEFAULT_GROQ_MODEL;
+function callGroq(apiKey: string, prompt: string, json: boolean, strong = false): Promise<string | null> {
+  const model = (strong ? readEnv('VITE_GROQ_MODEL_STRONG') : undefined) ?? readEnv('VITE_GROQ_MODEL') ?? DEFAULT_GROQ_MODEL;
   return callOpenAiCompatible(GROQ_URL, apiKey, model, prompt, json);
 }
 
@@ -311,12 +311,16 @@ function callDeepSeek(apiKey: string, prompt: string, json: boolean): Promise<st
   return callOpenAiCompatible(DEEPSEEK_URL, apiKey, model, prompt, json, { thinking: { type: 'disabled' } });
 }
 
-/** Tenta os provedores configurados em ordem; `null` se nenhum respondeu. */
-async function callAiProviders(
+/**
+ * Tenta os provedores configurados em ordem; `null` se nenhum respondeu. `strong`: usa o modelo mais forte se houver
+ * (`VITE_*_MODEL_STRONG`) — a FofoIA pede isso só na aula completa e no "Cai no meu edital?".
+ */
+export async function callAiProviders(
   prompt: string,
-  options: { json?: boolean } = {}
+  options: { json?: boolean; strong?: boolean } = {}
 ): Promise<{ text: string; provider: AiProviderUsed } | null> {
   const json = options.json ?? false;
+  const strong = options.strong ?? false;
 
   const gatewayUrl = readEnv('VITE_FOFOLAB_AI_GATEWAY_URL');
   if (gatewayUrl) {
@@ -326,13 +330,13 @@ async function callAiProviders(
 
   const groqKey = readEnv('VITE_GROQ_API_KEY');
   if (groqKey) {
-    const text = await callGroq(groqKey, prompt, json);
+    const text = await callGroq(groqKey, prompt, json, strong);
     if (text) return { text, provider: 'GROQ_FREE' };
   }
 
   const geminiKey = readEnv('VITE_GEMINI_API_KEY');
   if (geminiKey) {
-    const text = await callGemini(geminiKey, prompt, json);
+    const text = await callGemini(geminiKey, prompt, json, strong);
     if (text) return { text, provider: 'GEMINI_FREE' };
   }
 
