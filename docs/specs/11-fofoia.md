@@ -92,6 +92,40 @@ de responder** (o método dele: marcar o que sabe, depois como foi o acerto), na
   - erro com "Sei" (falsa certeza) ou "Confundi com outra coisa" na questão ativa.
   A sugestão é um destaque discreto com o botão; quem decide é o estudante. **(decisão do Claude: limiares)**
 
+### 5.2.1 Jeitos da FofoIA (personas do grupo de estudos, 24/10/2026)
+Um amigo do dono estuda com quatro prompts-professores (Diana, Bill, Dora, Jorge) e um "chat só do edital". O que eles
+fazem de bom virou **jeitos de ensinar de um personagem só** — escolhidos pelos sinais que o app já tem, sem o estudante
+acionar nada, e visíveis num **selinho** discreto no topo da resposta (trocável num toque). Créditos: Diana, Bill, Dora e
+Jorge, do grupo de estudos do dono. **Decisão do dono:** um personagem (FofoIA), jeitos nomeados pelo que fazem — sem
+"FofoDora/FofoJorge" (piada interna que confunde quem chega de fora); o hamster muda de expressão em cada jeito.
+
+| Jeito (selinho) | Inspirado em | Entra quando | Como responde |
+|---|---|---|---|
+| 🐹💡 **Rápida** | Bill | padrão | curta e direta, com uma analogia; siglas de TI expandidas; fecha com até 5 palavras-chave |
+| 🐹🌱 **Do zero** | Jorge | pergunta de base ("não entendi nada", "o que é"), domínio < 30, 1º contato, falsa certeza ou "Confundi" | começa por uma metáfora e pelo porquê daquilo importar; linguagem simples; se falta um **pré-requisito** (ligações entre tópicos do app), pergunta se quer vê-lo antes; termina oferecendo um assunto relacionado |
+| 🐹📚 **Aula completa** | Diana | botão ou sugestão de aula | o formato de §5.2, fundamentado na definição formal; começa pelo conceito básico; **em partes** se for longa ("Parte 1 de 3" + "Continuar") |
+| 🐹📝 **Resumo** | Dora | "Salvar resumo de revisão" | formato fixo abaixo |
+| 🐹🧭 **Cai no meu edital?** | chat do edital | atalho | diz se o assunto descrito está no edital do plano e onde (tópico, prova, peso), ou que não aparece e pode esperar |
+
+- **Resumo no formato da Dora** (vai ao caderno do tópico depois de o estudante confirmar; ≤ 6 linhas):
+  `**‹Título com emoji›**` · **Palavras-chave:** … · **Conceito curto:** (máx. 2 frases) · **Uso funcional:** … ·
+  **Analogia:** … · **Cuidado em prova:** … (só cuidados gerais ou da questão ativa — §5.2 item 4).
+- **Regras de estilo de todos os jeitos:** listas em vez de tabelas (o app não desenha tabelas e a coluna é estreita);
+  emojis com parcimônia (só nos rótulos e no título); siglas de TI expandidas na primeira menção; fundamentar na definição
+  formal/doutrina e dizer quando há divergência ou mudança recente, nunca "ignorar a aplicabilidade atual".
+- **O que fica de fora (máscaras):** títulos grandiosos ("o melhor professor do mundo", "especialista FGV" — não dão
+  conhecimento, só confiança no tom); "pegadinhas/pontos mais cobrados da banca" sem dados; perguntar concurso e banca (o
+  plano já sabe).
+- **"Cai no meu edital?":** o estudante descreve o assunto com as próprias palavras. O app **filtra localmente** os tópicos
+  do plano por palavras em comum (até 20 candidatos, com matéria, prova e peso) e manda só esses e os nomes das matérias —
+  não o edital inteiro **(decisão do Claude, para economizar o limite)**. Fonte imutável: a lista de tópicos do plano;
+  abstenção ("não encontrei no seu edital; se for parte de ‹matéria›, confira o tópico X") em vez de inventar.
+- **Dois níveis de modelo (ideia do amigo: "rápido" no dia a dia, "pensar mais" no elaborado):** Rápida, Do zero e Resumo
+  usam o modelo atual (rápido); Aula completa e "Cai no meu edital?" podem usar um **modelo mais forte**, se configurado
+  (`VITE_*_MODEL_STRONG` no `.env`, documentado no `.env.example`); sem ele, usam o mesmo modelo **(decisão do Claude)**.
+- **Professores personalizados** (cada estudante escrever o próprio estilo, com as regras de segurança fixas por baixo):
+  ideia para depois, fora desta fatia.
+
 ### 5.3 O que a FofoIA sabe e o que guarda
 - **Contexto de cada pergunta:** plano (órgão/banca), tópico atual (código, título), domínio e confiança da amostra,
   pontos fortes (para analogias), **trecho do caderno do tópico atual** (até **1.500 caracteres**, do começo — **decisão
@@ -111,8 +145,8 @@ de responder** (o método dele: marcar o que sabe, depois como foi o acerto), na
   fluxo). Tópico atual = o tópico **da questão ativa**, se houver; senão o tópico selecionado. A conversa recomeça quando
   esse tópico muda.
 - **Caderno é escolha do estudante.** No fim de uma aula completa (e como ação em qualquer resposta), **"Salvar resumo de
-  revisão"**: a FofoIA gera um resumo de **no máximo 5 linhas** (ideia central, 2–3 pontos, 1 cuidado) e o estudante
-  confirma antes de ir para o caderno do tópico. Aula inteira nunca vai para o caderno.
+  revisão"**: a FofoIA gera o resumo no **formato da Dora** (§5.2.1) e o estudante confirma antes de ir para o caderno do
+  tópico. Aula inteira nunca vai para o caderno.
 
 ### 5.4 Falha produtiva sem ser invasiva (três camadas)
 1. **Pergunta sobre a questão ativa ainda não respondida:** o gabarito **não é enviado à IA** enquanto o estudante não
@@ -197,7 +231,9 @@ pessoa; acervo enorme → trazer só as leis do edital, com link da fonte. Nesta
 - **Unit:** dedução do diagnóstico (6 combinações + erro → 3 causas); `isDiagnosisAllowed` com os novos valores; pesos do
   motor (`LUCKY_GUESS` não alonga a meia-vida; `MISCONCEPTION` e falsa certeza esquentam mais); sinais da sugestão de aula;
   montagem do contexto (caderno cortado em 1.500, gabarito ausente antes de responder); pistas nunca contêm a letra certa
-  (teste do prompt e do modo demonstração); resumo ≤ 5 linhas; auditoria de jargão.
+  (teste do prompt e do modo demonstração); escolha do jeito pelos sinais (Do zero com domínio baixo/falsa certeza);
+  resumo no formato da Dora (≤ 6 linhas, campos fixos); filtro local do "Cai no meu edital?" (candidatos por palavras em
+  comum, máx. 20); prompts sem tabela e sem "pegadinha da banca" sem dados; auditoria de jargão.
 - **E2E:** questão do app — confiança → resposta → diagnóstico deduzido / um toque no erro; perguntar à FofoIA antes de
   responder dá pista, não gabarito; "Ver explicação mesmo assim"; aula completa alarga a coluna; salvar resumo vai ao
   caderno; Revisão do dia com os rótulos novos; modo demonstração rotulado.
