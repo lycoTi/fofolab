@@ -93,7 +93,7 @@ export function MetricExplainer({
                 </button>
 
                 {showFormulaDetails && (
-                  <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs space-y-2.5 animate-fadeIn">
+                  <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs space-y-2.5 animate-fade-in">
                     <div className="font-mono text-[11px] text-orange-300 bg-orange-500/10 p-2 rounded-lg border border-orange-500/20">
                       {explanation.formulaDetails.formulaLabel}
                     </div>

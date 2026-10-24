@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react';
 import { Check, ChevronDown, Play } from 'lucide-react';
+import { Collapse } from '../../components/Collapse';
 import { formatDuration } from '../../lib/timeFormat';
 import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
@@ -34,45 +35,73 @@ function topicLabel(topic: Topic | null): string {
 const materialButton =
   'rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
 
-/** Um bloco do roteiro: feito (esmaecido), atual (aberto, com material) ou próximo (recolhido, com o motivo). */
-export function RoutineBlockItem({ item, current }: { item: RoutineItem; current?: CurrentBlockExtras }) {
-  const { subject, topic, status, block } = item;
+/** Moldura de cada estado; a troca entre eles anima (cor, borda, opacidade, respiro). */
+const FRAME: Record<'done' | 'next' | 'open', string> = {
+  done: 'border-slate-800 px-3 py-2 text-slate-400 opacity-60',
+  next: 'border-slate-800 px-3 py-2',
+  open: 'border-orange-500/40 bg-orange-500/5 p-3',
+};
 
-  if (status === 'done') {
+/**
+ * Um bloco do roteiro: feito (esmaecido), atual (aberto, com material) ou próximo (recolhido, com o motivo).
+ * É o mesmo elemento nos três estados: quando o bloco termina ele recolhe com a altura animada e o próximo
+ * se abre, em vez de um trocar pelo outro de supetão.
+ */
+export function RoutineBlockItem({ item, current }: { item: RoutineItem; current?: CurrentBlockExtras }) {
+  const { topic, status, block } = item;
+  const done = status === 'done';
+  const open = !done && current !== undefined;
+  let frame = FRAME.next;
+  if (done) frame = FRAME.done;
+  else if (open) frame = FRAME.open;
+
+  return (
+    <li
+      data-testid={`routine-item-${block.blockNumber}`}
+      data-status={status}
+      className={`rounded-xl border text-xs transition-[background-color,border-color,opacity,padding] duration-200 ease-out motion-reduce:transition-none ${frame}`}
+    >
+      <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
+      <Collapse open={!done && !open}>
+        <p className="pt-1 text-slate-400">{block.reasonText}</p>
+      </Collapse>
+      <Collapse open={open}>{open && current && <CurrentBody item={item} topic={topic} current={current} />}</Collapse>
+    </li>
+  );
+}
+
+/** Linha de cima do bloco, com o que cada estado precisa mostrar. */
+function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; done: boolean; open: boolean; liveFocusMs: number }) {
+  const { subject, topic, block } = item;
+  if (done) {
     return (
-      <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="flex items-center gap-2 rounded-lg border border-slate-800 px-3 py-2 text-xs text-slate-400 opacity-60">
+      <div className="flex items-center gap-2">
         <Check size={13} className="shrink-0 text-emerald-400" />
         <span className="truncate">{`${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
         <span className="ml-auto shrink-0">{formatDuration(block.durationMinutes)}</span>
-      </li>
+      </div>
     );
   }
-
-  if (!current) {
-    return (
-      <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-1 rounded-lg border border-slate-800 px-3 py-2 text-xs">
-        <div className="flex items-center gap-2 text-slate-200">
-          <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
-          <span className="truncate font-medium">{subject.name}</span>
-          <span className="ml-auto shrink-0 text-slate-400">{formatDuration(block.durationMinutes)}</span>
-        </div>
-        <p className="text-slate-400">{block.reasonText}</p>
-      </li>
-    );
-  }
-
-  const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial, fofodoro, preview } = current;
   const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
+  return (
+    <div className="flex items-center gap-2">
+      <span className={`shrink-0 rounded-full ${open ? 'h-2.5 w-2.5' : 'h-2 w-2'}`} style={{ backgroundColor: subject.color }} />
+      <span className={`truncate ${open ? 'font-semibold text-white' : 'font-medium text-slate-200'}`}>{subject.name}</span>
+      <span className={`ml-auto shrink-0 ${open ? 'text-slate-300' : 'text-slate-400'}`}>
+        {open ? `${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}` : formatDuration(block.durationMinutes)}
+      </span>
+    </div>
+  );
+}
+
+/** Conteúdo do bloco atual: progresso, tópicos, material, FofoDoro e o botão de começar. */
+function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic | null; current: CurrentBlockExtras }) {
+  const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial, fofodoro, preview } = current;
   // Com grupo, o título é o tópico "pai" e o do bloco aparece só na árvore (senão pareceria pai de si mesmo)
   const hasTree = group.members.length > 1;
-  const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / block.durationMinutes) * 100));
+  const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / item.block.durationMinutes) * 100));
   return (
-    <li data-testid={`routine-item-${block.blockNumber}`} data-status={status} className="space-y-2.5 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3 text-xs">
-      <div className="flex items-center gap-2">
-        <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
-        <span className="truncate font-semibold text-white">{subject.name}</span>
-        <span className="ml-auto shrink-0 text-slate-300">{`${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}`}</span>
-      </div>
+    <div className="space-y-2.5 pt-2.5">
       <div
         role="progressbar"
         aria-label="Progresso do bloco"
@@ -117,42 +146,45 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
           Caderno
         </button>
       </div>
-      {fofodoro}
-      {!blockRunning && preview}
-      {!blockRunning && (
-        <button
-          type="button"
-          onClick={onStart}
-          className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-orange-500 px-3 py-2 text-xs font-semibold text-white hover:bg-orange-400"
-        >
-          <Play size={13} />
-          {startLabel}
-        </button>
-      )}
-    </li>
+      <Collapse open={Boolean(fofodoro)}>{fofodoro}</Collapse>
+      <Collapse open={!blockRunning}>
+        <div className="space-y-2.5">
+          {preview}
+          <button
+            type="button"
+            onClick={onStart}
+            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-orange-500 px-3 py-2 text-xs font-semibold text-white hover:bg-orange-400"
+          >
+            <Play size={13} />
+            {startLabel}
+          </button>
+        </div>
+      </Collapse>
+    </div>
   );
 }
 
 /**
- * Com o FofoDoro rodando, a árvore de tópicos vira uma linha (o relógio ganha o espaço); clicar abre de novo.
- * Sem FofoDoro, a árvore fica sempre aberta.
+ * Com o FofoDoro rodando, a árvore de tópicos se recolhe numa linha (o relógio ganha o espaço); clicar abre de novo.
+ * Sem FofoDoro, a árvore fica sempre aberta. A troca anima nos dois sentidos (dar play recolhe a árvore devagar).
  */
 function BlockTopics({ collapsible, label, children }: { collapsible: boolean; label: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
-  if (!collapsible) return <>{children}</>;
   return (
-    <div className="space-y-1.5">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        aria-label={`Tópicos do bloco: ${label}`}
-        className="flex w-full items-center gap-1 rounded-md text-left text-slate-300 transition-colors duration-150 hover:text-white"
-      >
-        <span className="truncate">{label}</span>
-        <ChevronDown size={13} className={`shrink-0 transition-transform duration-200 motion-reduce:transition-none ${open ? 'rotate-180' : ''}`} />
-      </button>
-      {open && children}
+    <div>
+      <Collapse open={collapsible}>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={`Tópicos do bloco: ${label}`}
+          className="mb-1.5 flex w-full items-center gap-1 rounded-md text-left text-slate-300 transition-colors duration-150 hover:text-white"
+        >
+          <span className="truncate">{label}</span>
+          <ChevronDown size={13} className={`shrink-0 transition-transform duration-200 motion-reduce:transition-none ${open ? 'rotate-180' : ''}`} />
+        </button>
+      </Collapse>
+      <Collapse open={!collapsible || open}>{children}</Collapse>
     </div>
   );
 }

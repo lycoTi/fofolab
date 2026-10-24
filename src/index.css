@@ -105,6 +105,24 @@ body.fofolab-resizing {
   top: 0;
 }
 
+/* Modais (Wizard, "ⓘ", importações) entram com um fade curto em vez de aparecer de supetão */
+@keyframes fofolab-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fofolab-fade-in 160ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+  }
+}
+
 /* Aviso do FofoDoro: entra subindo de leve; quem pediu menos movimento vê ele já parado */
 @keyframes fofolab-toast-in {
   from {

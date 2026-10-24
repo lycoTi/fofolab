@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Coffee, Compass, Layers, Settings2 } from 'lucide-react';
+import { Collapse } from '../../components/Collapse';
 import { formatDuration } from '../../lib/timeFormat';
 import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
@@ -74,14 +75,18 @@ export function RoutineColumn(props: RoutineColumnProps) {
         <h2 className="text-sm font-semibold text-white">{`Hoje · ${formatDuration(props.dayTotalMinutes)}`}</h2>
       </div>
 
-      {peek && <PeekBanner peek={peek} onReturnToBlock={props.onReturnToBlock} />}
+      <Collapse open={peek !== null} className="shrink-0">
+        {peek && <PeekBanner peek={peek} onReturnToBlock={props.onReturnToBlock} />}
+      </Collapse>
       <QuestionLogPanel {...props.questionLog} />
-      {props.freeBlock && (
-        <section aria-label={props.freeBlockTitle ?? 'Bloco livre'} className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
-          <h3 className="text-xs font-semibold text-orange-300">{props.freeBlockTitle ?? 'Bloco livre · fora do roteiro de hoje'}</h3>
-          {props.freeBlock}
-        </section>
-      )}
+      <Collapse open={Boolean(props.freeBlock)} className="shrink-0">
+        {props.freeBlock && (
+          <section aria-label={props.freeBlockTitle ?? 'Bloco livre'} className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
+            <h3 className="text-xs font-semibold text-orange-300">{props.freeBlockTitle ?? 'Bloco livre · fora do roteiro de hoje'}</h3>
+            {props.freeBlock}
+          </section>
+        )}
+      </Collapse>
 
       <ol className="flex-1 space-y-2 overflow-y-auto p-3">
         {items.length === 0 && <li className="text-xs text-slate-400">Calibre seu perfil para o roteiro de hoje aparecer aqui.</li>}

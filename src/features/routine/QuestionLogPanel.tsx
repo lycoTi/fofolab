@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ClipboardList, Undo2 } from 'lucide-react';
+import { Collapse } from '../../components/Collapse';
 import { isValidLog } from '../../lib/questionLogs';
 import type { Topic } from '../../types/database';
 
@@ -56,9 +57,9 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
   };
 
   return (
-    <div className="mx-3 mt-3 space-y-2 rounded-xl border border-slate-800 bg-slate-900/60 p-3 text-xs">
+    <div className="mx-3 mt-3 rounded-xl border border-slate-800 bg-slate-900/60 p-3 text-xs">
       {lastLogLabel && (
-        <div className="flex items-center justify-between gap-2 text-emerald-300">
+        <div className="mb-2 flex items-center justify-between gap-2 text-emerald-300">
           <span>{lastLogLabel}</span>
           <button type="button" onClick={props.onUndo} className="flex items-center gap-1 text-slate-300 hover:text-white">
             <Undo2 size={12} />
@@ -67,14 +68,14 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
         </div>
       )}
 
-      {!open && (
+      <Collapse open={!open}>
         <button type="button" onClick={() => setOpen(true)} className="flex items-center gap-1.5 font-medium text-orange-400 hover:text-orange-300">
           <ClipboardList size={13} />
           Registrar questões feitas fora do app
         </button>
-      )}
+      </Collapse>
 
-      {open && (
+      <Collapse open={open}>
         <div className="space-y-2">
           {invite && <p className="text-slate-300">Resolveu questões em outro lugar? Registre seu desempenho.</p>}
           <label className="block space-y-1">
@@ -125,7 +126,7 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
             </button>
           </div>
         </div>
-      )}
+      </Collapse>
     </div>
   );
 }
