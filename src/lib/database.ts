@@ -52,6 +52,10 @@ import type {
   Question,
   QuestionAttempt,
   QuestionLog,
+  RecallCheck,
+  RecallRating,
+  ReviewConfidence,
+  ReviewItem,
   SelfAssessmentInput,
   SelfDiagnosisType,
   StudyPlan,
@@ -759,7 +763,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
   db.run(
     `UPDATE study_plans
      SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?,
-         strategy_mode = ?, study_moment = ?
+         strategy_mode = ?, study_moment = ?, daily_review_enabled = ?
      WHERE id = ?`,
     [
       input.title ?? existing.title,
@@ -770,6 +774,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
       input.weekly_hours_target ?? existing.weekly_hours_target,
       input.strategy_mode !== undefined ? input.strategy_mode : existing.strategy_mode,
       input.study_moment !== undefined ? input.study_moment : existing.study_moment,
+      input.daily_review_enabled ?? existing.daily_review_enabled ?? 1,
       input.id,
     ]
   );
@@ -1198,6 +1203,9 @@ export function recordQuestionDiagnosis(params: {
   selfDiagnosis: SelfDiagnosisType;
   timeSpentSeconds?: number;
   usedAiReview?: boolean;
+  /** Revisão do dia: confiança marcada antes de responder. */
+  confidence?: ReviewConfidence;
+  source?: 'DAILY_REVIEW';
 }): {
   updatedTopic: Topic | null;
   deltaMastery: number;
@@ -1252,8 +1260,9 @@ export function recordQuestionDiagnosis(params: {
 
   db.run(
     `INSERT INTO question_attempts (
-      id, question_id, topic_id, selected_option, is_correct, used_ai_review, self_diagnosis, time_spent_seconds, attempted_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      id, question_id, topic_id, selected_option, is_correct, used_ai_review, self_diagnosis, time_spent_seconds, attempted_at,
+      confidence, source
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       newId('att'),
       params.questionId,
@@ -1264,6 +1273,8 @@ export function recordQuestionDiagnosis(params: {
       params.selfDiagnosis,
       timeSpentSeconds,
       new Date().toISOString(),
+      params.confidence ?? null,
+      params.source ?? null,
     ]
   );
 
@@ -1503,6 +1514,99 @@ export function saveDailyPlan(planId: string, dateKey: string, blocks: FrozenBlo
 export function clearDailyPlan(planId: string, dateKey: string): void {
   getDb().run('DELETE FROM daily_plans WHERE plan_id = ? AND date = ?', [planId, dateKey]);
   persistDatabase();
+}
+
+// ============================================================================
+// Revisão do dia (spec 09 §5.3): seleção congelada no dia + autoavaliação da pergunta aberta
+// ============================================================================
+
+export function getDailyReview(planId: string, dateKey: string): { items: ReviewItem[]; skipped: boolean; createdAt: string } | null {
+  const row = queryOne<{ items_json: string; skipped: number; created_at: string }>(
+    getDb(),
+    'SELECT items_json, skipped, created_at FROM daily_reviews WHERE plan_id = ? AND date = ?',
+    [planId, dateKey]
+  );
+  if (!row) return null;
+  try {
+    return { items: JSON.parse(row.items_json) as ReviewItem[], skipped: row.skipped === 1, createdAt: row.created_at };
+  } catch {
+    // Revisão gravada ilegível: tratada como ausente, e o app sorteia outra
+    return null;
+  }
+}
+
+export function saveDailyReview(planId: string, dateKey: string, items: ReviewItem[]): void {
+  getDb().run(
+    `INSERT INTO daily_reviews (plan_id, date, items_json, created_at) VALUES (?, ?, ?, ?)
+     ON CONFLICT(plan_id, date) DO UPDATE SET items_json = excluded.items_json`,
+    [planId, dateKey, JSON.stringify(items), new Date().toISOString()]
+  );
+  void flushDatabase();
+}
+
+export function skipDailyReview(planId: string, dateKey: string): void {
+  getDb().run('UPDATE daily_reviews SET skipped = 1 WHERE plan_id = ? AND date = ?', [planId, dateKey]);
+  void flushDatabase();
+}
+
+/** "O que você lembra de…?": conta como revisão (data de estudo), sem mexer no domínio — é autoavaliação. */
+export function recordRecallCheck(input: { subjectId: string; topicId: string; rating: RecallRating }): RecallCheck {
+  const db = getDb();
+  const id = newId('recall');
+  const now = new Date().toISOString();
+  db.run('INSERT INTO recall_checks (id, subject_id, topic_id, rating, checked_at) VALUES (?, ?, ?, ?, ?)', [
+    id,
+    input.subjectId,
+    input.topicId,
+    input.rating,
+    now,
+  ]);
+  db.run('UPDATE topics SET last_studied_at = ? WHERE id = ?', [now, input.topicId]);
+  void flushDatabase();
+  return queryOne<RecallCheck>(db, 'SELECT * FROM recall_checks WHERE id = ?', [id])!;
+}
+
+export function getRecallChecks(sinceIso?: string): RecallCheck[] {
+  if (sinceIso) {
+    return queryAll<RecallCheck>(getDb(), 'SELECT * FROM recall_checks WHERE checked_at >= ? ORDER BY checked_at', [sinceIso]);
+  }
+  return queryAll<RecallCheck>(getDb(), 'SELECT * FROM recall_checks ORDER BY checked_at');
+}
+
+/** Questões que podem entrar na revisão de cada tópico (sem anuladas), com a data da última tentativa. */
+export function getReviewQuestionCandidates(topicIds: string[]): Record<string, { questionId: string; lastAttemptAt: string | null }[]> {
+  const result: Record<string, { questionId: string; lastAttemptAt: string | null }[]> = {};
+  if (topicIds.length === 0) return result;
+  const rows = queryAll<{ id: string; topic_id: string; last_at: string | null }>(
+    getDb(),
+    `SELECT q.id, q.topic_id, (SELECT MAX(a.attempted_at) FROM question_attempts a WHERE a.question_id = q.id) AS last_at
+     FROM questions q WHERE q.is_annulled = 0 AND q.topic_id IN (${topicIds.map(() => '?').join(', ')})`,
+    topicIds
+  );
+  for (const row of rows) {
+    (result[row.topic_id] ??= []).push({ questionId: row.id, lastAttemptAt: row.last_at });
+  }
+  return result;
+}
+
+export function getQuestionWithDissection(questionId: string): { question: Question; dissection: AiDissection | null } | null {
+  const db = getDb();
+  const question = queryOne<Question>(db, 'SELECT * FROM questions WHERE id = ?', [questionId]);
+  if (!question) return null;
+  return { question, dissection: queryOne<AiDissection>(db, 'SELECT * FROM ai_dissections WHERE question_id = ?', [questionId]) };
+}
+
+/** Primeira vez que cada tópico foi estudado (sessão, questão no app ou registro de fora), para a linha de ânimo. */
+export function getTopicFirstStudyDates(): Record<string, string> {
+  const rows = queryAll<{ topic_id: string; first_at: string }>(
+    getDb(),
+    `SELECT topic_id, MIN(at) AS first_at FROM (
+       SELECT topic_id, started_at AS at FROM study_sessions WHERE topic_id IS NOT NULL
+       UNION ALL SELECT topic_id, attempted_at FROM question_attempts WHERE topic_id IS NOT NULL
+       UNION ALL SELECT topic_id, logged_at FROM question_logs WHERE topic_id IS NOT NULL
+     ) GROUP BY topic_id`
+  );
+  return Object.fromEntries(rows.map((r) => [r.topic_id, r.first_at]));
 }
 
 /** Totais de estudo registrado (spec 10 §3.5): hoje, nesta semana (desde segunda), neste ano e desde o começo. */

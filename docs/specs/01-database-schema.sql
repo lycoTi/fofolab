@@ -37,7 +37,9 @@ CREATE TABLE IF NOT EXISTS study_plans (
     -- [v4] Lidos do edital (docs/specs/07)
     registration_deadline DATE,            -- Último dia de inscrição
     min_total_score REAL,                  -- Nota mínima no conjunto das provas objetivas
-    selected_role TEXT                     -- Cargo/especialidade escolhido no edital
+    selected_role TEXT,                    -- Cargo/especialidade escolhido no edital
+    -- [v8] Revisão do dia ao abrir o app (1 = ligada; o estudante pode desligar na calibragem)
+    daily_review_enabled INTEGER NOT NULL DEFAULT 1
 );
 
 -- [v4] Provas objetivas do edital (P1, P2, P3…) com pontuação e nota mínima eliminatória
@@ -159,7 +161,9 @@ CREATE TABLE IF NOT EXISTS question_attempts (
     -- 'BASE_GAP' (🔴 Lacuna de base -> aumenta peso de teoria no Ciclo)
     self_diagnosis TEXT NOT NULL,
     time_spent_seconds INTEGER DEFAULT 0,
-    attempted_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    attempted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    confidence TEXT,                       -- [v8] Confiança antes de responder: 'SURE', 'THINK', 'GUESS' (só na revisão)
+    source TEXT                            -- [v8] 'DAILY_REVIEW' quando veio da Revisão do dia
 );
 
 -- 11. Sessões de Estudo (Ciclo & Pomodoro)
@@ -195,6 +199,25 @@ CREATE TABLE IF NOT EXISTS question_logs (
     source TEXT NOT NULL DEFAULT 'EXTERNAL',
     mastery_before REAL,                   -- Domínio antes do registro (para "Desfazer")
     logged_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 11d. [v8] Revisão do dia congelada (spec 09 §5.3): os tópicos sorteados não mudam ao longo do dia
+CREATE TABLE IF NOT EXISTS daily_reviews (
+    plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+    date TEXT NOT NULL,                    -- Data local 'YYYY-MM-DD'
+    items_json TEXT NOT NULL,              -- ReviewItem[] (tópico, questão ou pergunta aberta, motivo)
+    skipped INTEGER NOT NULL DEFAULT 0,    -- "Pular a revisão de hoje" (sem penalidade)
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (plan_id, date)
+);
+
+-- 11e. [v8] Autoavaliação da pergunta aberta ("O que você lembra de…?"): conta como revisão, com peso menor
+CREATE TABLE IF NOT EXISTS recall_checks (
+    id TEXT PRIMARY KEY,
+    subject_id TEXT NOT NULL REFERENCES subjects(id) ON DELETE CASCADE,
+    topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+    rating TEXT NOT NULL,                  -- 'GOOD' (lembrei bem), 'PARTIAL' (em parte), 'FORGOT' (não lembrei)
+    checked_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 -- 12. [MODO ADMIN] Blueprints de Layout das Bancas Examinadoras (DOM Drift Detection)

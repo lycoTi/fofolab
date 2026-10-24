@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 7;
+export const LATEST_SCHEMA_VERSION = 8;
 
 export interface Migration {
   version: number;
@@ -106,6 +106,36 @@ export const MIGRATIONS: Migration[] = [
         source TEXT NOT NULL DEFAULT 'EXTERNAL',
         mastery_before REAL,
         logged_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      )`);
+    },
+  },
+  {
+    version: 8,
+    description:
+      'Revisão do dia (spec 09 §5.3): confiança e origem nas tentativas, revisão congelada no dia, autoavaliação da pergunta aberta e a chave liga/desliga no plano',
+    up: (db) => {
+      // Idempotente (como a v6): reaplicar sobre um banco que já tem as colunas não pode falhar
+      const columnsOf = (table: string) => db.exec(`PRAGMA table_info(${table})`)[0]?.values.map((row) => String(row[1])) ?? [];
+      const attemptColumns = columnsOf('question_attempts');
+      if (!attemptColumns.includes('confidence')) db.run('ALTER TABLE question_attempts ADD COLUMN confidence TEXT');
+      if (!attemptColumns.includes('source')) db.run('ALTER TABLE question_attempts ADD COLUMN source TEXT');
+      if (!columnsOf('study_plans').includes('daily_review_enabled')) {
+        db.run('ALTER TABLE study_plans ADD COLUMN daily_review_enabled INTEGER NOT NULL DEFAULT 1');
+      }
+      db.run(`CREATE TABLE IF NOT EXISTS daily_reviews (
+        plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+        date TEXT NOT NULL,
+        items_json TEXT NOT NULL,
+        skipped INTEGER NOT NULL DEFAULT 0,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (plan_id, date)
+      )`);
+      db.run(`CREATE TABLE IF NOT EXISTS recall_checks (
+        id TEXT PRIMARY KEY,
+        subject_id TEXT NOT NULL REFERENCES subjects(id) ON DELETE CASCADE,
+        topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+        rating TEXT NOT NULL,
+        checked_at DATETIME DEFAULT CURRENT_TIMESTAMP
       )`);
     },
   },

@@ -13,6 +13,10 @@ export type SelfDiagnosisType = 'MASTERED' | 'DOUBT' | 'BOARD_TRAP' | 'BASE_GAP'
 export type StudyStrategy = 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
 export type StudyMoment = 'PRE_EDITAL' | 'POS_EDITAL';
 export type StudySessionType = 'PDF_READING' | 'QUESTIONS' | 'REVIEW' | 'POMODORO';
+/** [v8] Confiança marcada antes de responder na Revisão do dia. */
+export type ReviewConfidence = 'SURE' | 'THINK' | 'GUESS';
+/** [v8] Autoavaliação da pergunta aberta da Revisão do dia. */
+export type RecallRating = 'GOOD' | 'PARTIAL' | 'FORGOT';
 export type BlueprintHealthStatus = 'OK' | 'DRIFT_DETECTED';
 
 // 1. career_tracks
@@ -44,6 +48,7 @@ export interface StudyPlan {
   registration_deadline?: string | null;
   min_total_score?: number | null;
   selected_role?: string | null;
+  daily_review_enabled?: number; // [v8] 0 | 1 (ausente = ligada)
 }
 
 // 2b. exam_parts [v4] — provas objetivas do edital
@@ -161,6 +166,8 @@ export interface QuestionAttempt {
   self_diagnosis: SelfDiagnosisType;
   time_spent_seconds: number;
   attempted_at: string;
+  confidence?: ReviewConfidence | null; // [v8]
+  source?: 'DAILY_REVIEW' | null;       // [v8]
 }
 
 // 11. study_sessions
@@ -173,6 +180,25 @@ export interface StudySession {
   pauses_count: number;
   was_skipped: number;
   started_at: string;
+}
+
+// 11d. recall_checks [v8]
+export interface RecallCheck {
+  id: string;
+  subject_id: string;
+  topic_id: string;
+  rating: RecallRating;
+  checked_at: string;
+}
+
+/** 11e. daily_reviews [v8] — um item da Revisão do dia congelada. */
+export interface ReviewItem {
+  topicId: string;
+  subjectId: string;
+  kind: 'QUESTION' | 'OPEN';
+  questionId: string | null;
+  /** Estudado no último dia de estudo, ou esfriando (menor chance de lembrar). */
+  reason: 'LAST_DAY' | 'COOLING';
 }
 
 // 11b. daily_plans — um bloco do roteiro do dia congelado (spec 09). Nomes e cores vêm dos dados vivos.
@@ -224,6 +250,7 @@ export interface UpdateStudyPlanInput extends Partial<CreateStudyPlanInput> {
   is_active?: number;
   strategy_mode?: StudyStrategy | null;
   study_moment?: StudyMoment | null;
+  daily_review_enabled?: number;
 }
 
 export interface CreateSubjectInput {

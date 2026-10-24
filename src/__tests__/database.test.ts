@@ -470,8 +470,8 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     expect(db.localDateKey(new Date(2026, 9, 23, 0, 1))).toBe('2026-10-23');
   });
 
-  it('o banco está na versão do roteiro congelado', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(7);
+  it('o banco está na versão da revisão do dia', () => {
+    expect(LATEST_SCHEMA_VERSION).toBe(8);
   });
 });
 
@@ -593,5 +593,97 @@ describe('Totais de estudo (docs/specs/10 §3.5)', () => {
     insert(new Date(2026, 2, 10, 9, 0).toISOString(), 40); // este ano
     insert(new Date(2025, 11, 31, 9, 0).toISOString(), 25); // ano passado
     expect(db.getStudyTotals(now)).toEqual({ todayMinutes: 50, weekMinutes: 80, yearMinutes: 120, allMinutes: 145 });
+  });
+});
+
+describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
+  const certoErrado = (statement: string, topicId: string) => ({
+    statement,
+    options: ['C) Certo', 'E) Errado'],
+    finalAnswer: 'C',
+    examBoard: 'Cebraspe',
+    examYear: 2024,
+    organ: 'CGU',
+    topicId,
+  });
+
+  async function topicWithQuestions(statements: string[]) {
+    const { db } = await openDatabase();
+    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
+    const topic = db.createTopic({ subject_id: subjectId, code: '7.7', title: 'Revisão', mastery_score: 40 });
+    db.importQuestions(subjectId, statements.map((s) => certoErrado(s, topic.id)));
+    const questionIds = db.getQuestionsForTopicOrSubject(topic.id, subjectId).map((i) => i.question.id);
+    return { db, subjectId, topic, questionIds };
+  }
+
+  it('tentativa da revisão grava a confiança e a origem; fora da revisão ficam vazias', async () => {
+    const { db, topic, questionIds } = await topicWithQuestions(['Primeiro item da revisão.', 'Segundo item da revisão.']);
+    db.recordQuestionDiagnosis({
+      questionId: questionIds[0],
+      topicId: topic.id,
+      selectedOption: 'C',
+      isCorrect: true,
+      selfDiagnosis: 'MASTERED',
+      confidence: 'SURE',
+      source: 'DAILY_REVIEW',
+    });
+    db.recordQuestionDiagnosis({ questionId: questionIds[1], topicId: topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'BASE_GAP' });
+    const rows = db.getRecentAttempts(10).filter((a) => a.topic_id === topic.id);
+    const review = rows.find((a) => a.question_id === questionIds[0])!;
+    const plain = rows.find((a) => a.question_id === questionIds[1])!;
+    expect([review.confidence, review.source]).toEqual(['SURE', 'DAILY_REVIEW']);
+    expect([plain.confidence, plain.source]).toEqual([null, null]);
+  });
+
+  it('autoavaliação da pergunta aberta conta como estudo, mas não mexe no domínio', async () => {
+    const { db, subjectId, topic } = await topicWithQuestions([]);
+    const check = db.recordRecallCheck({ subjectId, topicId: topic.id, rating: 'GOOD' });
+    expect(check.rating).toBe('GOOD');
+    const after = db.getTopicsBySubject(subjectId).find((t) => t.id === topic.id)!;
+    expect(after.last_studied_at).not.toBeNull();
+    expect(after.mastery_score).toBe(40);
+    expect(db.getRecallChecks().map((c) => c.id)).toEqual([check.id]);
+  });
+
+  it('a revisão do dia fica guardada por plano e data, e pular fica registrado', async () => {
+    const { db } = await openDatabase();
+    const planId = db.getActiveStudyPlan()!.id;
+    const item = { topicId: 't1', subjectId: 's1', kind: 'OPEN' as const, questionId: null, reason: 'COOLING' as const };
+    expect(db.getDailyReview(planId, '2026-10-24')).toBeNull();
+    db.saveDailyReview(planId, '2026-10-24', [item]);
+    const saved = db.getDailyReview(planId, '2026-10-24')!;
+    expect(saved.items).toEqual([item]);
+    expect(saved.skipped).toBe(false);
+    expect(saved.createdAt).toBeTruthy();
+    db.skipDailyReview(planId, '2026-10-24');
+    expect(db.getDailyReview(planId, '2026-10-24')!.skipped).toBe(true);
+    expect(db.getDailyReview(planId, '2026-10-25')).toBeNull();
+  });
+
+  it('candidatas da revisão: sem anuladas, com a data da última tentativa', async () => {
+    const { db, topic, questionIds } = await topicWithQuestions(['Item respondido.', 'Item nunca visto.', 'Item anulado.']);
+    db.getDb().run('UPDATE questions SET is_annulled = 1 WHERE id = ?', [questionIds[2]]);
+    db.recordQuestionDiagnosis({ questionId: questionIds[0], topicId: topic.id, selectedOption: 'C', isCorrect: true, selfDiagnosis: 'DOUBT' });
+    const candidates = db.getReviewQuestionCandidates([topic.id])[topic.id];
+    expect(candidates.map((c) => c.questionId).sort()).toEqual([questionIds[0], questionIds[1]].sort());
+    expect(candidates.find((c) => c.questionId === questionIds[0])!.lastAttemptAt).not.toBeNull();
+    expect(candidates.find((c) => c.questionId === questionIds[1])!.lastAttemptAt).toBeNull();
+    expect(db.getQuestionWithDissection(questionIds[1])!.question.id).toBe(questionIds[1]);
+    expect(db.getQuestionWithDissection('nao-existe')).toBeNull();
+  });
+
+  it('primeira data de estudo de cada tópico vem da origem mais antiga', async () => {
+    const { db, subjectId, topic, questionIds } = await topicWithQuestions(['Item para a data.']);
+    db.recordQuestionLog({ subjectId, topicId: topic.id, total: 10, correct: 7, blank: 0 });
+    db.getDb().run("UPDATE question_logs SET logged_at = '2026-10-01T10:00:00.000Z' WHERE topic_id = ?", [topic.id]);
+    db.recordQuestionDiagnosis({ questionId: questionIds[0], topicId: topic.id, selectedOption: 'C', isCorrect: true, selfDiagnosis: 'DOUBT' });
+    expect(db.getTopicFirstStudyDates()[topic.id]).toBe('2026-10-01T10:00:00.000Z');
+  });
+
+  it('plano nasce com a revisão do dia ligada e o Wizard pode desligar', async () => {
+    const { db } = await openDatabase();
+    const plan = db.getActiveStudyPlan()!;
+    expect(plan.daily_review_enabled).toBe(1);
+    expect(db.updateStudyPlan({ id: plan.id, daily_review_enabled: 0 })!.daily_review_enabled).toBe(0);
   });
 });
