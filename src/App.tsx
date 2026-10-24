@@ -60,6 +60,7 @@ import {
   recordQuestionLog,
   undoQuestionLog,
   type QuestionFallback,
+  getRecallChecks,
   getRecentAttempts,
   getStudyPlans,
   getStudySessionsSince,
@@ -103,6 +104,7 @@ import type {
   Question,
   QuestionAttempt,
   QuestionLog,
+  RecallCheck,
   StudyPlan,
   StudySession,
   Subject,
@@ -169,6 +171,7 @@ export default function App() {
   const [attempts, setAttempts] = useState<QuestionAttempt[]>([]);
   const [sessions, setSessions] = useState<StudySession[]>([]);
   const [questionLogs, setQuestionLogs] = useState<QuestionLog[]>([]);
+  const [recallChecks, setRecallChecks] = useState<RecallCheck[]>([]);
   // Registro de questões feitas fora do app: convite ao terminar um bloco e o último registro (para desfazer)
   const [logInvite, setLogInvite] = useState<{ topicId: string | null } | null>(null);
   const [lastLog, setLastLog] = useState<{ logId: string; label: string } | null>(null);
@@ -241,6 +244,7 @@ export default function App() {
       setSessions(getStudySessionsSince(startOfWeek(new Date()).toISOString()));
       setTopicLinks(getTopicLinks());
       setQuestionLogs(getQuestionLogs());
+      setRecallChecks(getRecallChecks());
       setAllNotebooks(getNotebooksByPlan(currentPlan.id));
       setAdminData(getAdminCatalogAndBlueprints());
     },
@@ -298,8 +302,9 @@ export default function App() {
       topicLinks,
       examParts,
       questionLogs,
+      recallChecks,
     });
-  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs]);
+  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs, recallChecks]);
 
   const currentSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
   const currentTopics = currentSubject ? topicsBySubject[currentSubject.id] || [] : [];
@@ -595,6 +600,7 @@ export default function App() {
         topicLinks: getTopicLinks(),
         examParts: getExamPartsByPlan(targetPlanId),
         questionLogs: getQuestionLogs(),
+        recallChecks: getRecallChecks(),
       });
       applyRecommendedCycleAllocations(
         recommended.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }))

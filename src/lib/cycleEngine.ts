@@ -2,6 +2,7 @@ import type {
   ExamPart,
   QuestionAttempt,
   QuestionLog,
+  RecallCheck,
   StudyPlan,
   StudySession,
   StudyStrategy,
@@ -61,6 +62,12 @@ export const MIN_SCORE_FLOOR = {
 } as const;
 
 /** Domínio presumido de um tópico ainda sem questões, pela autoavaliação 1..4 (só planos do edital). */
+/**
+ * Peso da autoavaliação da pergunta aberta (Revisão do dia) na meia-vida: metade de uma questão, porque é o
+ * estudante dizendo que lembrou, não uma resposta corrigida (spec 09 §5.3).
+ */
+export const RECALL_CHECK_WEIGHT = 0.5;
+
 export const SELF_ASSESSMENT_PRIOR_MASTERY: Record<number, number> = { 1: 0, 2: 25, 3: 50, 4: 75 };
 
 export const STRATEGY_LABELS: Record<StudyStrategy, string> = {
@@ -329,6 +336,8 @@ export function calculateDynamicStudyCycle(params: {
   examParts?: ExamPart[];
   /** Questões resolvidas fora do app (números agregados por tópico). */
   questionLogs?: QuestionLog[];
+  /** Autoavaliações da pergunta aberta da Revisão do dia (só memória; não são amostra de questões). */
+  recallChecks?: RecallCheck[];
   now?: Date;
 }): CycleCalculationResult {
   const { plan, subjects, topicsBySubject, attempts, sessions, topicLinks } = params;
@@ -344,6 +353,14 @@ export function calculateDynamicStudyCycle(params: {
       questions: logs.reduce((acc, l) => acc + l.total, 0),
       mastered: signals.filter((l) => logAccuracy(l) >= 0.7).length,
       gaps: signals.filter((l) => logAccuracy(l) < 0.5).length,
+    };
+  };
+  const recallChecks = params.recallChecks ?? [];
+  const recallEvidence = (topicId: string) => {
+    const checks = recallChecks.filter((c) => c.topic_id === topicId);
+    return {
+      mastered: checks.filter((c) => c.rating === 'GOOD').length * RECALL_CHECK_WEIGHT,
+      gaps: checks.filter((c) => c.rating === 'FORGOT').length * RECALL_CHECK_WEIGHT,
     };
   };
   const fromEdital = examParts.length > 0;
@@ -419,10 +436,11 @@ export function calculateDynamicStudyCycle(params: {
       const sampleConfidencePercent = calculateSampleConfidencePercent(attemptsCount, subjTopics.length);
       const isReverseStudyDiscovery = sampleConfidencePercent < 35 && topic.status !== 'MASTERED';
 
+      const recall = recallEvidence(topic.id);
       const { memoryHalfLifeDays, daysSinceLastStudy, decayHeatBoost } = calculateMemoryDecayBoost({
         lastStudiedAt: topic.last_studied_at,
-        masteredCount,
-        baseGapCount,
+        masteredCount: masteredCount + recall.mastered,
+        baseGapCount: baseGapCount + recall.gaps,
         daysUntilExam,
         nowMs,
       });

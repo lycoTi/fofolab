@@ -4,6 +4,7 @@ import {
   calculateMemoryDecayBoost,
   calculateSampleConfidencePercent,
   getSampleSubtopicsForCalibration,
+  RECALL_CHECK_WEIGHT,
 } from '../lib/cycleEngine';
 import {
   SEED_STUDY_PLANS,
@@ -11,7 +12,7 @@ import {
   SEED_TOPIC_LINKS,
   SEED_TOPICS,
 } from '../data/initialSeed';
-import type { QuestionAttempt, QuestionLog, Topic } from '../types/database';
+import type { QuestionAttempt, QuestionLog, RecallCheck, Topic } from '../types/database';
 
 describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', () => {
   const cguPlan = SEED_STUDY_PLANS[0]; // 31.5h/sem = 1890 min
@@ -199,5 +200,35 @@ describe('questões feitas fora do app entram no motor (spec 07 §5.4)', () => {
     const base = heatOf([]).memoryHalfLifeDays;
     expect(heatOf([log(4, 4)]).memoryHalfLifeDays).toBe(base);
     expect(heatOf([log(0, 4)]).memoryHalfLifeDays).toBe(base);
+  });
+});
+
+describe('autoavaliação da pergunta aberta (Revisão do dia) pesa metade de uma questão na memória', () => {
+  const plan = SEED_STUDY_PLANS[0];
+  const subjects = SEED_SUBJECTS.filter((s) => s.plan_id === plan.id);
+  const bySubject: Record<string, Topic[]> = {};
+  for (const s of subjects) bySubject[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+  const target = SEED_TOPICS.find((t) => t.subject_id === subjects[0].id && !SEED_TOPICS.some((c) => c.parent_id === t.id))!;
+  const check = (rating: RecallCheck['rating'], n: number) =>
+    ({ id: `r${rating}${n}`, subject_id: target.subject_id, topic_id: target.id, rating, checked_at: new Date().toISOString() }) as RecallCheck;
+  const masteredLog = { id: 'l1', subject_id: target.subject_id, topic_id: target.id, total: 20, correct: 18, blank: 0, source: 'EXTERNAL', mastery_before: 0, logged_at: new Date().toISOString() } as QuestionLog;
+  const heatOf = (recallChecks: RecallCheck[], questionLogs: QuestionLog[] = []) =>
+    calculateDynamicStudyCycle({ plan, subjects, topicsBySubject: bySubject, attempts: [], sessions: [], topicLinks: [], questionLogs, recallChecks })
+      .topicHeatmapRanking.find((h) => h.topic.id === target.id)!;
+
+  it('dois "Lembrei bem" alongam a meia-vida como um "dominei"', () => {
+    expect(RECALL_CHECK_WEIGHT).toBe(0.5);
+    expect(heatOf([check('GOOD', 1), check('GOOD', 2)]).memoryHalfLifeDays).toBe(heatOf([], [masteredLog]).memoryHalfLifeDays);
+  });
+
+  it('"Não lembrei" encurta, "Lembrei em parte" não muda', () => {
+    const base = heatOf([]).memoryHalfLifeDays;
+    expect(heatOf([check('FORGOT', 1), check('FORGOT', 2)]).memoryHalfLifeDays).toBeLessThan(base);
+    expect(heatOf([check('PARTIAL', 1)]).memoryHalfLifeDays).toBe(base);
+  });
+
+  it('autoavaliação não é amostra de questões', () => {
+    expect(heatOf([check('GOOD', 1)]).attemptsCount).toBe(heatOf([]).attemptsCount);
+    expect(heatOf([check('GOOD', 1)]).masteredCount).toBe(heatOf([]).masteredCount);
   });
 });
