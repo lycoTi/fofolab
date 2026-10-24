@@ -61,7 +61,7 @@ describe('Calibração da confiança (a partir da Revisão do dia)', () => {
       attempt(null, true),
     ];
     expect(confidenceCalibration(attempts)).toEqual([
-      { confidence: 'SURE', label: 'Tenho certeza', answered: 5, accuracyPercent: 80 },
+      { confidence: 'SURE', label: 'Sei', answered: 5, accuracyPercent: 80 },
       { confidence: 'THINK', label: 'Acho que sei', answered: 3, accuracyPercent: 33 },
     ]);
   });

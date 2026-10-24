@@ -23,8 +23,8 @@ async function waitSaved(page: Page) {
 /** Faz o item da vez, seja questão (confiança → primeira alternativa → Próxima) ou pergunta aberta. */
 async function doCurrentItem(page: Page) {
   const card = review(page);
-  if (await card.getByRole('button', { name: 'Tenho certeza' }).isVisible()) {
-    await card.getByRole('button', { name: 'Tenho certeza' }).click();
+  if (await card.getByRole('button', { name: 'Sei', exact: true }).isVisible()) {
+    await card.getByRole('button', { name: 'Sei', exact: true }).click();
     await card.locator('button[class*="text-left"]').first().click();
     await expect(card.getByText(/^Gabarito:/)).toBeVisible();
     await card.getByRole('button', { name: 'Próxima' }).click();

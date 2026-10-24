@@ -1,0 +1,20 @@
+import type { ReviewConfidence, SelfDiagnosisType } from '../types/database';
+
+/**
+ * Rótulos do fluxo de resposta (spec 11 §5.5), iguais na aba Questões, na Revisão do dia e na calibração do Início.
+ * Os valores gravados no banco não mudam; só o que o estudante lê.
+ */
+export const CONFIDENCE_LABEL: Record<ReviewConfidence, string> = {
+  SURE: 'Sei',
+  THINK: 'Acho que sei',
+  GUESS: 'Vou chutar',
+};
+
+export const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
+  MASTERED: '🟢 Dominei',
+  DOUBT: '🟡 Acertei na dúvida',
+  LUCKY_GUESS: '🎲 Acertei no chute',
+  BASE_GAP: '🔴 Não sabia',
+  MISCONCEPTION: '🔀 Confundi com outra coisa',
+  BOARD_TRAP: '🟠 Pegadinha ou desatenção',
+};

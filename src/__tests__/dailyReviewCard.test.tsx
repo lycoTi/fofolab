@@ -35,7 +35,7 @@ describe('Questão da revisão: confiança antes, correção logo depois', () =>
   it('acerto com "Tenho certeza" chega como Dominei, e dá para trocar para dúvida', () => {
     const onSubmit = vi.fn();
     render(<ReviewQuestion question={certoErrado} dissection={null} onSubmit={onSubmit} />);
-    fireEvent.click(screen.getByRole('button', { name: 'Tenho certeza' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
     fireEvent.click(screen.getByRole('button', { name: 'Certo' }));
     expect(screen.getByText(/Você acertou/)).toBeTruthy();
     expect(screen.getByRole('button', { name: /Dominei/ }).getAttribute('aria-pressed')).toBe('true');
@@ -49,7 +49,7 @@ describe('Questão da revisão: confiança antes, correção logo depois', () =>
   it('erro chega como lacuna e mostra o gabarito oficial', () => {
     const onSubmit = vi.fn();
     render(<ReviewQuestion question={multipla} dissection={null} onSubmit={onSubmit} />);
-    fireEvent.click(screen.getByRole('button', { name: 'Chutei' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Vou chutar' }));
     fireEvent.click(screen.getByRole('button', { name: /^A\)/ }));
     expect(screen.getByText(/Gabarito: B/)).toBeTruthy();
     expect(screen.queryByRole('button', { name: /Dominei/ })).toBeNull();

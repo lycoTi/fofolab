@@ -1,3 +1,4 @@
+import { CONFIDENCE_LABEL } from './answerLabels';
 import { localDateKey } from './timeFormat';
 import type { QuestionAttempt, ReviewConfidence, StudySession, Topic } from '../types/database';
 
@@ -70,7 +71,6 @@ function pace(
   };
 }
 
-const CONFIDENCE_LABEL: Record<ReviewConfidence, string> = { SURE: 'Tenho certeza', THINK: 'Acho que sei', GUESS: 'Chutei' };
 /** Abaixo disso a porcentagem engana (amostra pequena não decide nada). */
 const CALIBRATION_MIN_TOTAL = 8;
 const CALIBRATION_MIN_PER_LEVEL = 3;
