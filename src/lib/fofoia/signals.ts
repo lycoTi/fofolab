@@ -56,12 +56,13 @@ function needsFromZero(s: ModeSignals): boolean {
 }
 
 /**
- * Precedência: questão ativa sem resposta → pista (o gabarito nunca sai antes da tentativa); pedido explícito; sinais
- * de "do zero"; senão a resposta rápida. Pista sem questão aberta não faz sentido e vira resposta rápida.
+ * Precedência: pergunta livre com a questão ativa sem resposta → pista (o gabarito nunca sai antes da tentativa); pedido
+ * explícito (a aula do tópico segue, sem gabarito no prompt e com a regra de não revelar a alternativa); sinais de "do
+ * zero"; senão a resposta rápida. Pista sem questão aberta não faz sentido e vira resposta rápida.
  */
 export function chooseMode(s: ModeSignals): FofoMode {
   const unansweredQuestion = s.activeQuestion !== null && !s.activeQuestion.answered;
-  if (unansweredQuestion && s.requested !== 'SUMMARY' && s.requested !== 'EDITAL') return 'HINT';
+  if (unansweredQuestion && (s.requested === null || s.requested === 'HINT')) return 'HINT';
   if (s.requested === 'HINT') return 'QUICK';
   if (s.requested) return s.requested;
   return needsFromZero(s) ? 'FROM_ZERO' : 'QUICK';

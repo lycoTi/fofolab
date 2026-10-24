@@ -42,10 +42,12 @@ describe('Sinais e jeito da FofoIA (spec 11 §5.2.1)', () => {
     expect(chooseMode(signals({ requested: 'EDITAL' }))).toBe('EDITAL');
   });
 
-  it('com a questão ativa sem resposta, perguntar vira pista; pedir pista sem questão aberta não vira', () => {
+  it('com a questão ativa sem resposta, perguntar vira pista; a aula pedida segue; pista sem questão aberta não vira', () => {
     expect(chooseMode(signals({ activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('HINT');
     expect(chooseMode(signals({ requested: 'HINT' }))).toBe('QUICK');
-    expect(chooseMode(signals({ requested: 'LESSON', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('HINT');
+    // Pedir a aula do tópico explicitamente segue valendo (o prompt não leva o gabarito e proíbe revelar a alternativa)
+    expect(chooseMode(signals({ requested: 'LESSON', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('LESSON');
+    expect(chooseMode(signals({ requested: 'HINT', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('HINT');
   });
 
   it('sugere a aula pelos sinais, sem chamada extra', () => {

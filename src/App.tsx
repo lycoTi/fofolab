@@ -1090,7 +1090,7 @@ export default function App() {
             {(
               <>
                 <div
-                  className={`px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 ${
+                  className={`px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 overflow-x-auto ${
                     readerExpanded ? 'hidden' : 'flex'
                   }`}
                 >
@@ -1111,7 +1111,7 @@ export default function App() {
                         type="button"
                         key={tab.id}
                         onClick={() => selectTab(tab.id)}
-                        className={`px-4 py-2 text-xs font-medium rounded-t-lg border-b-2 flex items-center gap-2 transition ${
+                        className={`px-4 py-2 text-xs font-medium rounded-t-lg border-b-2 flex shrink-0 items-center gap-2 whitespace-nowrap transition ${
                           active
                             ? 'border-orange-500 text-orange-300 bg-slate-900/70'
                             : 'border-transparent text-slate-400 hover:text-slate-200'
