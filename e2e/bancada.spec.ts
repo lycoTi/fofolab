@@ -268,7 +268,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await openReaderTab(page);
   // Para sobrar espaço ao PDF, a árvore de tópicos e o copiloto se recolhem
   await expect(page.getByRole('complementary', { name: 'Coluna do roteiro' })).toHaveCSS('width', '44px');
-  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeHidden();
+  await expect(page.getByRole('region', { name: 'FofoIA' })).toBeHidden();
 
   await page.getByLabel('Escolher arquivo PDF').first().setInputFiles(TEST_PDF);
   await expect(page.getByText('Pagina 1 do material')).toBeVisible();
@@ -299,7 +299,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   // Saindo da leitura, os painéis voltam como estavam
   await page.getByRole('button', { name: 'Questões', exact: true }).click();
   await expect(page.getByRole('complementary', { name: 'Coluna do roteiro' })).not.toHaveCSS('width', '44px');
-  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'FofoIA' })).toBeVisible();
 
   await page.reload();
   await openPro(page);

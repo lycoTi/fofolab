@@ -30,7 +30,7 @@ export function useRightDockTab() {
 }
 
 const TABS: { id: RightDockTab; label: string }[] = [
-  { id: 'copilot', label: 'Copiloto' },
+  { id: 'copilot', label: 'FofoIA' },
   { id: 'notebook', label: 'Caderno' },
 ];
 
@@ -50,7 +50,7 @@ export function RightDock({ tab, onTabChange, copilot, notebook }: RightDockProp
 
   return (
     <div className="flex h-full flex-col">
-      <div role="tablist" aria-label="Copiloto e Caderno" className="flex shrink-0 gap-1 border-b border-slate-800 px-10 pt-2">
+      <div role="tablist" aria-label="FofoIA e Caderno" className="flex shrink-0 gap-1 border-b border-slate-800 px-10 pt-2">
         {TABS.map((item) => {
           const active = item.id === tab;
           return (
@@ -91,7 +91,7 @@ export function RightDock({ tab, onTabChange, copilot, notebook }: RightDockProp
 export function rightDockRail({ tab, onOpenTab }: { tab: RightDockTab; onOpenTab: (tab: RightDockTab) => void }): ReactNode {
   return (
     <>
-      <RailButton label="Abrir Copiloto IA" icon={<Sparkles size={15} />} active={tab === 'copilot'} onClick={() => onOpenTab('copilot')} />
+      <RailButton label="Abrir FofoIA" icon={<Sparkles size={15} />} active={tab === 'copilot'} onClick={() => onOpenTab('copilot')} />
       <RailButton label="Abrir Caderno" icon={<BookOpen size={15} />} active={tab === 'notebook'} onClick={() => onOpenTab('notebook')} />
     </>
   );

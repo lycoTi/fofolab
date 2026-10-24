@@ -1853,19 +1853,6 @@ export function saveAiDissection(params: {
   ])!;
 }
 
-export function saveQuestionChatHistory(questionId: string, chatHistoryJson: string): void {
-  const db = getDb();
-  db.run('UPDATE ai_dissections SET chat_history_json = ? WHERE question_id = ?', [
-    chatHistoryJson,
-    questionId,
-  ]);
-  persistDatabase();
-}
-
-// ============================================================================
-// Cadernos e PDFs — sempre do PRÓPRIO tópico (nunca o de outro tópico da disciplina)
-// ============================================================================
-
 export function getNotebookForTopic(topicId: string): Notebook | null {
   return queryOne<Notebook>(
     getDb(),

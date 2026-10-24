@@ -351,12 +351,10 @@ describe('Importação de questões, tópicos e explicações', () => {
     const questionId = insertedIds[0];
 
     db.saveAiDissection({ questionId, provider: 'GEMINI_FREE', dissectionMarkdown: 'v1', prerequisites: ['A'] });
-    db.saveQuestionChatHistory(questionId, '[{"id":"1"}]');
     const updated = db.saveAiDissection({ questionId, provider: 'DEEPSEEK_FALLBACK', dissectionMarkdown: 'v2', prerequisites: [] });
 
     expect(updated.dissection_markdown).toBe('v2');
     expect(updated.provider_used).toBe('DEEPSEEK_FALLBACK');
-    expect(updated.chat_history_json).toBe('[{"id":"1"}]');
   });
 });
 

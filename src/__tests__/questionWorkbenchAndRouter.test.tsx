@@ -1,8 +1,8 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BackupPanel } from '../components/BackupPanel';
 import { QuestionWorkbench } from '../features/questions/QuestionWorkbench';
-import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
+import { FofoIaPanel } from '../features/fofoia/FofoIaPanel';
 import { CycleView } from '../features/cycle/CycleView';
 import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
 import { FofoDoro } from '../features/fofodoro/FofoDoro';
@@ -23,8 +23,6 @@ import {
   SEED_TOPICS,
 } from '../data/initialSeed';
 import {
-  askContextualStudyCopilot,
-  askReverseStudyTutor,
   getQuestionComplexityProfile,
   type StudentContextSnapshot,
 } from '../lib/aiRouter';
@@ -100,29 +98,6 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     expect(profile.statementLength).toBe(sampleBundles[0].question.statement.length);
   });
 
-  it('sem IA configurada, tutor e copiloto respondem com exemplos MARCADOS como simulação', async () => {
-    const tutor = await askReverseStudyTutor({
-      question: sampleBundles[0].question,
-      dissection: sampleBundles[0].dissection,
-      promptText: 'Por que as outras alternativas estão erradas?',
-      context: sampleContext,
-    });
-    expect(tutor.simulated).toBe(true);
-    expect(tutor.provider).toBe('OFFLINE_DEMO');
-    expect(tutor.reply).toContain('Análise das Alternativas');
-    expect(tutor.reply).toContain(sampleBundles[0].question.final_answer);
-    expect(tutor.reply).toContain('ISSAI 100');
-
-    const copilot = await askContextualStudyCopilot({
-      context: sampleContext,
-      promptText: 'Relacione este tópico com o que já domino',
-    });
-    expect(copilot.simulated).toBe(true);
-    expect(copilot.reply).toContain('CGU');
-    expect(copilot.reply).toContain('FGV');
-    expect(copilot.reply).toContain('ISSAI 100');
-  });
-
   it('AUDITORIA DE UX: interface, docks, backup, importação e leitor sem jargão técnico interno', () => {
     const cguPlan = SEED_STUDY_PLANS[0];
     const cguSubjects = SEED_SUBJECTS.filter((s) => s.plan_id === cguPlan.id);
@@ -178,7 +153,22 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           onJumpToTopic={vi.fn()}
         />
       ).container,
-      render(<AiCopilotDockPanel context={sampleContext} onSaveToNotebook={vi.fn()} />).container,
+      render(
+        <FofoIaPanel
+          context={sampleContext}
+          topicKey="t"
+          topicLabel="3.1 PCASP"
+          notebook={null}
+          activeQuestion={null}
+          prerequisites={[]}
+          editalTopics={[]}
+          firstContact={false}
+          aiConfigured={false}
+          request={null}
+          onWiden={vi.fn()}
+          onSaveSummary={vi.fn()}
+        />
+      ).container,
       render(
         <BackupPanel
           onExportDatabase={vi.fn()}
@@ -218,15 +208,6 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     }
   });
 
-  it('o copiloto sinaliza o modo demonstração e não oferece salvar exemplo no caderno', async () => {
-    render(<AiCopilotDockPanel context={sampleContext} onSaveToNotebook={vi.fn()} aiConfigured={false} />);
-    expect(screen.getByText(/Modo demonstração — respostas de exemplo/)).toBeTruthy();
-
-    fireEvent.click(screen.getByText('O que priorizar hoje para meu edital?'));
-    const badge = await screen.findByText('Exemplo simulado — a IA ainda não está configurada');
-    const bubble = badge.parentElement as HTMLElement;
-    expect(within(bubble).queryByText('Enviar para o Caderno')).toBeNull();
-  });
 });
 
 describe('relógio do cabeçalho', () => {

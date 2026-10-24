@@ -103,8 +103,8 @@ describe('coluna da direita com Copiloto e Caderno', () => {
   it('Copiloto e Caderno alternam por abas sem perder o que foi digitado', () => {
     render(<DockHarness />);
     fireEvent.change(screen.getByLabelText('nota'), { target: { value: 'minha nota' } });
-    fireEvent.click(screen.getByRole('tab', { name: 'Copiloto' }));
-    expect(screen.getByRole('tab', { name: 'Copiloto' }).getAttribute('aria-selected')).toBe('true');
+    fireEvent.click(screen.getByRole('tab', { name: 'FofoIA' }));
+    expect(screen.getByRole('tab', { name: 'FofoIA' }).getAttribute('aria-selected')).toBe('true');
     const notePanel = screen.getByLabelText('nota', { selector: 'textarea' }).closest('[role="tabpanel"]') as HTMLElement;
     expect(notePanel.hidden).toBe(true);
 

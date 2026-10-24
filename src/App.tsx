@@ -8,7 +8,8 @@ import { DIAGNOSIS_LABEL } from './lib/answerLabels';
 import { useResizableWidth } from './components/ResizeHandle';
 import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
-import { AiCopilotDockPanel } from './features/ai-copilot/AiCopilotDockPanel';
+import { FofoIaPanel } from './features/fofoia/FofoIaPanel';
+import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { CycleView } from './features/cycle/CycleView';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
@@ -188,6 +189,8 @@ export default function App() {
   const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
   // Questão na tela da aba Questões (a FofoIA só recebe o gabarito depois de respondida)
   const [activeQuestion, setActiveQuestion] = useState<{ question: Question; answered: boolean } | null>(null);
+  // Pedido da aba Questões para a FofoIA ("Aprofundar", "Pedir pista"); o id faz cada pedido ser atendido uma vez
+  const [fofoRequest, setFofoRequest] = useState<{ id: number; kind: 'deepen' | 'hint' } | null>(null);
   const [questionFallback, setQuestionFallback] = useState<QuestionFallback>(null);
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
@@ -433,6 +436,21 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [readerExpanded]);
 
+  const fofoInputs = useFofoIaInputs({
+    studentContext,
+    cycleData,
+    subjects,
+    topicsBySubject,
+    examParts,
+    activeQuestion,
+    topicQuestions,
+    attempts,
+    questionLogs,
+    currentTopic,
+    currentNotebookDraft: notebook.draft,
+    appendToCurrentNotebook: (markdown) => notebook.appendAndSave(markdown),
+  });
+
   if (initError) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200 p-6">
@@ -525,10 +543,6 @@ export default function App() {
     } catch (err) {
       setLastDiagnosisMsg(err instanceof Error ? err.message : 'Não foi possível trocar o diagnóstico.');
     }
-  };
-
-  const handleAppendNotesToNotebook = (markdownToAppend: string) => {
-    notebook.appendAndSave(markdownToAppend);
   };
 
   const handleGenerateDissection = async (question: Question) => {
@@ -1163,9 +1177,10 @@ export default function App() {
                         onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}
                         onActiveQuestionChange={setActiveQuestion}
-                        onAskFofoIa={() => {
+                        onAskFofoIa={(request) => {
                           rightTab.setTab('copilot');
                           rightPanel.setOpen(true);
+                          setFofoRequest({ id: Date.now(), kind: request.kind });
                         }}
                         onGenerateDissection={handleGenerateDissection}
                         onOpenImport={() => setImportOpen(true)}
@@ -1250,11 +1265,11 @@ export default function App() {
       {mode === 'student' && (
         <SidePanel
           side="right"
-          label="Copiloto e Caderno"
+          label="FofoIA e Caderno"
           open={rightPanel.open}
           width={rightWidth.width}
           onOpenChange={(open) => rightPanel.setOpen(open)}
-          collapseLabel="Recolher Copiloto e Caderno"
+          collapseLabel="Recolher FofoIA e Caderno"
           hidden={readerExpanded && !rightPanel.open}
           rail={rightDockRail({
             tab: rightTab.tab,
@@ -1275,17 +1290,17 @@ export default function App() {
             tab={rightTab.tab}
             onTabChange={(tab) => rightTab.setTab(tab)}
             copilot={
-              studentContext ? (
-                <AiCopilotDockPanel
-                  context={studentContext}
-                  activeQuestion={activeQuestion?.answered ? activeQuestion.question : null}
-                  notebookExcerpt={notebook.draft}
-                  onSaveToNotebook={handleAppendNotesToNotebook}
-                  onCloseDock={() => rightPanel.setOpen(false)}
+              fofoInputs ? (
+                <FofoIaPanel
+                  {...fofoInputs}
                   aiConfigured={aiStatus.configured}
+                  request={fofoRequest}
+                  onWiden={(minWidth) => {
+                    if (rightWidth.width < minWidth) rightWidth.setWidth(minWidth);
+                  }}
                 />
               ) : (
-                <p className="p-4 text-xs text-slate-400">Escolha um tópico para conversar com o Copiloto.</p>
+                <p className="p-4 text-xs text-slate-400">Escolha um tópico para conversar com a FofoIA.</p>
               )
             }
             notebook={

@@ -15,7 +15,7 @@ async function openPro(page: Page) {
 }
 
 const leftColumn = (page: Page) => page.getByRole('complementary', { name: 'Coluna do roteiro' });
-const rightColumn = (page: Page) => page.getByRole('complementary', { name: 'Copiloto e Caderno' });
+const rightColumn = (page: Page) => page.getByRole('complementary', { name: 'FofoIA e Caderno' });
 
 async function boxes(controls: Locator[]) {
   return Promise.all(controls.map(async (control) => control.boundingBox()));
@@ -33,7 +33,7 @@ test('recolher e reabrir painéis não move nenhum controle do cabeçalho', asyn
   expect((await header.boundingBox())!.height).toBeLessThanOrEqual(64);
 
   await page.getByRole('button', { name: 'Recolher roteiro' }).click();
-  await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
+  await page.getByRole('button', { name: 'Recolher FofoIA e Caderno' }).click();
   await page.waitForTimeout(TRANSITION_MS);
   await expect(leftColumn(page)).toHaveCSS('width', '44px');
   await expect(rightColumn(page)).toHaveCSS('width', '44px');
@@ -41,7 +41,7 @@ test('recolher e reabrir painéis não move nenhum controle do cabeçalho', asyn
   await page.screenshot({ path: `${SCREENS}/08-casca-recolhida.png` });
 
   await page.getByRole('button', { name: 'Abrir roteiro' }).click();
-  await page.getByRole('button', { name: 'Abrir Copiloto IA' }).click();
+  await page.getByRole('button', { name: 'Abrir FofoIA' }).click();
   await page.waitForTimeout(TRANSITION_MS);
   await expect(page.getByLabel('Roteiro de hoje')).toBeVisible();
   expect(await boxes(controls)).toEqual(before);
@@ -60,9 +60,9 @@ test('o rascunho do caderno sobrevive a trocar de aba e a recolher a coluna', as
   await page.getByRole('tab', { name: 'Caderno' }).click();
   const draft = page.getByLabel('Conteúdo do caderno do tópico');
   await draft.fill('Rascunho que não pode sumir');
-  await page.getByRole('tab', { name: 'Copiloto' }).click();
+  await page.getByRole('tab', { name: 'FofoIA' }).click();
   await expect(draft).toBeHidden();
-  await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
+  await page.getByRole('button', { name: 'Recolher FofoIA e Caderno' }).click();
   await page.getByRole('button', { name: 'Abrir Caderno' }).click();
   await expect(draft).toBeVisible();
   await expect(draft).toHaveValue('Rascunho que não pode sumir');
@@ -91,20 +91,20 @@ test('na leitura ampliada, trocar para o Copiloto não some com a coluna', async
   await openPro(page);
   await page.getByRole('button', { name: /Leitura de PDF/ }).click();
   await page.getByRole('button', { name: 'Maximizar leitura' }).click();
-  await page.getByRole('tab', { name: 'Copiloto' }).click();
+  await page.getByRole('tab', { name: 'FofoIA' }).click();
   await expect(rightColumn(page)).toBeVisible();
-  await expect(page.getByRole('tab', { name: 'Copiloto' })).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByRole('tab', { name: 'FofoIA' })).toHaveAttribute('aria-selected', 'true');
 });
 
 test('mexer nos painéis durante a leitura não deixa a preferência diferente da tela', async ({ page }) => {
   await openPro(page);
   await page.getByRole('button', { name: /Leitura de PDF/ }).click();
-  await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
+  await page.getByRole('button', { name: 'Recolher FofoIA e Caderno' }).click();
   await page.getByRole('button', { name: 'Questões', exact: true }).click();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
   await page.reload();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
-  await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'FofoIA' })).toBeVisible();
 });
 
 test('passar o mouse no Mapa de Calor não faz a grade pular', async ({ page }) => {

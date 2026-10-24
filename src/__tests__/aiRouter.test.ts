@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { SEED_QUESTIONS } from '../data/initialSeed';
+import { askFofoIa } from '../lib/fofoia/ask';
+import { buildFofoContext } from '../lib/fofoia/context';
 import {
-  askReverseStudyTutor,
-  buildReverseStudyPrompt,
   escapeXml,
   generateQuestionDissection,
   getAiStatus,
@@ -10,6 +10,18 @@ import {
 } from '../lib/aiRouter';
 
 const question = SEED_QUESTIONS[0];
+const ctx = buildFofoContext({
+  context: {
+    planTitle: 'CGU', organ: 'CGU', examBoard: 'FGV', roleTitle: 'Auditor', daysUntilExam: 90, weeklyHoursTarget: 21,
+    currentSubjectName: 'Auditoria', currentSubjectWeight: 2, currentSubjectMastery: 60, currentSubjectCoverage: 40,
+    currentTopicCode: '1.1', currentTopicTitle: 'Normas de auditoria', currentTopicMastery: 60, currentTopicConfidence: 40,
+    strongTopics: [], priorityWeakTopics: [], relatedPrerequisites: [],
+  },
+  notebook: null,
+  activeQuestion: { question, answered: true, dissection: null },
+  prerequisites: [],
+});
+const ask = (mode: 'QUICK' | 'LESSON' = 'QUICK') => askFofoIa({ mode, ctx, conversation: [], message: 'Explique' });
 
 function stubNoAi() {
   vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', '');
@@ -40,14 +52,6 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     expect(getAiStatus()).toEqual({ configured: true, providers: ['GEMINI_FREE'] });
   });
 
-  it('o prompt do tutor leva gabarito definitivo, eliminação contrastiva e regra de abstenção', () => {
-    const prompt = buildReverseStudyPrompt({ question, dissection: null, promptText: 'Qual a pegadinha?' });
-    expect(prompt).toContain(`<gabarito_definitivo>${question.final_answer}</gabarito_definitivo>`);
-    expect(prompt).toContain('Eliminação contrastiva');
-    expect(prompt).toContain('NUNCA invente');
-    expect(prompt).toContain('Inversão Conceitual');
-  });
-
   it('escapa o contexto enviado à IA (aspas e < > em títulos não quebram o prompt)', () => {
     expect(escapeXml('Lei "A" <B> & C')).toBe('Lei &quot;A&quot; &lt;B&gt; &amp; C');
   });
@@ -58,12 +62,13 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     const fetchMock = vi.fn(async () => geminiResponse('Resposta real da IA'));
     vi.stubGlobal('fetch', fetchMock);
 
-    const reply = await askReverseStudyTutor({ question, dissection: null, promptText: 'Explique' });
+    const reply = await ask();
 
     expect(reply).toEqual({ reply: 'Resposta real da IA', provider: 'GEMINI_FREE', simulated: false });
     const [, init] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
     const body = JSON.parse(String(init.body));
-    expect(body.contents[0].parts[0].text).toContain('NUNCA invente');
+    expect(body.contents[0].parts[0].text).toContain('não consigo confirmar o dispositivo exato');
+    expect(body.contents[0].parts[0].text).toContain(`<gabarito_definitivo>${question.final_answer}</gabarito_definitivo>`);
   });
 
   it('se a IA configurada falhar, avisa que não respondeu (sem inventar um exemplo)', async () => {
@@ -71,7 +76,7 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     vi.stubEnv('VITE_GEMINI_API_KEY', 'chave-teste');
     vi.stubGlobal('fetch', vi.fn(async () => new Response('erro', { status: 500 })));
 
-    const reply = await askReverseStudyTutor({ question, dissection: null, promptText: 'Explique' });
+    const reply = await ask();
     expect(reply.failed).toBe(true);
     expect(reply.simulated).toBe(false);
     expect(reply.reply).toMatch(/Não consegui falar com a IA/);
@@ -87,11 +92,23 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     );
     vi.stubGlobal('fetch', fetchMock);
 
-    const reply = await askReverseStudyTutor({ question, dissection: null, promptText: 'Explique' });
+    const reply = await ask();
     expect(reply).toEqual({ reply: 'Resposta do Gemini', provider: 'GEMINI_FREE', simulated: false });
     const [groqUrl, groqInit] = fetchMock.mock.calls[0] as unknown as [string, RequestInit];
     expect(groqUrl).toBe('https://api.groq.com/openai/v1/chat/completions');
     expect(JSON.parse(String(groqInit.body)).model).toBe('qwen/qwen3.8-27b');
+  });
+
+  it('aula completa usa o modelo forte do Groq quando configurado; a resposta rápida, o de sempre', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    vi.stubEnv('VITE_GROQ_MODEL_STRONG', 'modelo-forte');
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'ok' } }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    await ask('LESSON');
+    await ask('QUICK');
+    const models = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)).model);
+    expect(models).toEqual(['modelo-forte', 'qwen/qwen3.8-27b']);
   });
 
   it('gera a explicação-base em JSON (aceitando cercas de código) e recusa formato inválido', async () => {
