@@ -155,9 +155,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
     mostra o "Continuar" (antes só "Parte 1 de 3"). Prompts com tamanho por jeito, sem "corrigir" o caderno sem certeza,
     sem autor preferido da banca, só classificações consagradas.
   - Verificado: rápida, resumo no formato da Dora (`parseSummary` lê) e "Cai no meu edital?" funcionam; respostas em 1–3 s.
-  - **Falha aberta — pista em questão Certo/Errado entrega a resposta**, com o `qwen` e com o `gpt-oss-120b`, mesmo com a
-    regra explícita ("não é absoluta", "admite prova em contrário"). Prompt sozinho não resolve: decisão de desenho
-    pendente com o dono.
+  - [DONE] **Pista em questão Certo/Errado sai do próprio app, sem IA** (decisão do dono, 24/10): com o `qwen` e o
+    `gpt-oss-120b` a pista entregava a resposta mesmo com a regra explícita ("não é absoluta"). Agora são três níveis de
+    texto fixo, iguais para toda questão C/E (só o tópico muda): lembrar a regra do tópico → julgar por partes → "agora é
+    com você" (`src/lib/fofoia/trueFalseHint.ts`). Não gasta limite. Múltipla escolha segue com a pista da IA (não
+    conferida com a IA real). Unit + E2E.
   - **Falha aberta — Direito errado no `qwen`:** atributos do ato inventados ("PAT", "Imprescritibilidade"), chamou o
     COFIFOMOB (certo) de "inventado". O `openai/gpt-oss-120b` acertou os atributos (PATI) e respeitou o caderno; serve
     como `VITE_GROQ_MODEL_STRONG` (aula e edital), com a ressalva de 21/10 (inventou conceitos de auditoria) e de gastar

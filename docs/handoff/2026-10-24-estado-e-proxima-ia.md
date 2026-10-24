@@ -59,10 +59,9 @@
 
 ## 5. Próximos passos (em ordem sugerida, confirme com o dono)
 1. ~~Testar a FofoIA com a chave real do Groq~~ **feito em 24/10 (tarde)**: teto de resposta por chamada (o Groq grátis só
-   aceita 1.000 tokens de resposta por minuto e recusava quase tudo), aviso de pausa no 429, prompts mais firmes. **Em
-   aberto, decidir com o dono:** (a) a pista de questão Certo/Errado entrega a resposta em qualquer modelo — opções:
-   pista fixa sem IA para C/E, ou checagem da pista (custa outra chamada e o gabarito iria à IA antes da resposta, o que a
-   spec 11 proíbe); (b) usar `VITE_GROQ_MODEL_STRONG=openai/gpt-oss-120b` (acertou Direito onde o `qwen` errou). Como
+   aceita 1.000 tokens de resposta por minuto e recusava quase tudo), aviso de pausa no 429, prompts mais firmes. Pista de C/E agora é do
+   app, sem IA (a IA entregava a resposta em qualquer modelo). O dono pôs `VITE_GROQ_MODEL_STRONG=openai/gpt-oss-120b`
+   (aula e edital) e vai pôr crédito no DeepSeek (~R$ 20/mês) — testar o DeepSeek quando houver saldo. Como
    testar de novo: uma sonda Vitest temporária com `// @vitest-environment node` chamando `buildFofoPrompt` +
    `fetch` no Groq, 61 s entre chamadas (limite por minuto), e apagar o arquivo depois (o `npm test` o pegaria).
 2. **FofoIA com a letra da lei** (spec 11 §8): brainstorm próprio sobre o repositório público `ctresb/leis` — trazer só
