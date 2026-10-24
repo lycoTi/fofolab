@@ -67,7 +67,7 @@ export function ReviewQuestion({
   };
 
   return (
-    <div className="space-y-3">
+    <div className="fofolab-enter space-y-3">
       <p className="whitespace-pre-line text-sm leading-relaxed text-slate-100">{question.statement}</p>
 
       <div className="space-y-1.5">
@@ -138,7 +138,7 @@ function Correction(props: {
 }) {
   const allowed = getAllowedDiagnoses({ kind: 'answered', isCorrect: props.isCorrect });
   return (
-    <div className="space-y-3 rounded-xl border border-slate-800 bg-slate-950/60 p-3">
+    <div className="fofolab-enter space-y-3 rounded-xl border border-slate-800 bg-slate-950/60 p-3">
       <p className={`flex items-center gap-1.5 text-sm font-semibold ${props.isCorrect ? 'text-emerald-300' : 'text-amber-300'}`}>
         {props.isCorrect ? <CheckCircle2 size={15} /> : <CircleHelp size={15} />}
         {props.isCorrect ? 'Você acertou.' : 'Não foi desta vez. Errar na revisão ajuda a fixar a resposta certa.'}

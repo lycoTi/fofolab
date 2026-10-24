@@ -59,7 +59,7 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
     <li
       data-testid={`routine-item-${block.blockNumber}`}
       data-status={status}
-      className={`rounded-xl border text-xs transition-[background-color,border-color,opacity,padding] duration-200 ease-out motion-reduce:transition-none ${frame}`}
+      className={`rounded-xl border text-xs transition-[background-color,border-color,opacity,padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${frame}`}
     >
       <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
       <Collapse open={!done && !open}>
@@ -146,8 +146,11 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           Caderno
         </button>
       </div>
-      <Collapse open={Boolean(fofodoro)}>{fofodoro}</Collapse>
-      <Collapse open={!blockRunning}>
+      {/* Relógio e prévia trocam de lugar: quem entra espera quem sai, para não se sobreporem */}
+      <Collapse open={Boolean(fofodoro)} afterExit>
+        {fofodoro}
+      </Collapse>
+      <Collapse open={!blockRunning} afterExit>
         <div className="space-y-2.5">
           {preview}
           <button

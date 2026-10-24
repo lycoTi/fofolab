@@ -42,7 +42,7 @@ export function TopicTree({
           return (
             <li
               key={topic.id}
-              className="grid transition-[grid-template-rows,opacity] duration-200 ease-out motion-reduce:transition-none"
+              className="grid transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
               style={{ gridTemplateRows: visible ? '1fr' : '0fr', opacity: visible ? 1 : 0 }}
               aria-hidden={!visible}
               inert={!visible}

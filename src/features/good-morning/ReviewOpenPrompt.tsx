@@ -27,7 +27,7 @@ export function ReviewOpenPrompt({
   const [revealed, setRevealed] = useState(false);
 
   return (
-    <div className="space-y-3">
+    <div className="fofolab-enter space-y-3">
       <p className="text-sm font-medium text-slate-100">{`O que você lembra de ${topicLabel}?`}</p>
       <textarea
         value={draft}
@@ -48,7 +48,7 @@ export function ReviewOpenPrompt({
         </button>
       )}
       {revealed && (
-        <div className="space-y-3">
+        <div className="fofolab-enter space-y-3">
           <div className="max-h-56 overflow-y-auto rounded-xl border border-slate-800 bg-slate-950/60 p-3">
             {notebookExcerpt ? (
               <RichText text={notebookExcerpt} className="text-xs leading-relaxed text-slate-200" />

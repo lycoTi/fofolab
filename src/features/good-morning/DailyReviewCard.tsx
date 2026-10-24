@@ -40,7 +40,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
   if (!current) {
     return (
       <section aria-label="Revisão do dia" className={frame}>
-        <p className="flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
+        <p className="fofolab-enter flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
           <CheckCircle2 size={15} />
           {`Revisão de hoje feita: ${doneCount} ${doneCount === 1 ? 'tópico revisado' : 'tópicos revisados'}.`}
         </p>
