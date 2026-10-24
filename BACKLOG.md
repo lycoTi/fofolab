@@ -113,6 +113,13 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   tópico apagado sai da revisão (antes ela dava "feita" antes da hora); sessão de revisão não mexe no atrito da matéria;
   um dia só de revisão não vira o "último dia de estudo" da revisão seguinte; a linha de ânimo acompanha a virada do dia.
   `npm test` (286), `test:e2e` (26, 2 rodadas) e `build` verdes.
+- [DONE] **Início mais completo (23/10, ideias aprovadas pelo dono):** Situação com **cobertura do edital** e
+  **proficiência nos tópicos estudados** separadas + **ritmo** ("Faltam N tópicos… cerca de X por semana. Seu ritmo nas
+  últimas 2 semanas: Y"); **Continuar de onde parou** (último PDF na página e última anotação, a um clique); **Últimas 4
+  semanas** (um quadradinho por dia, sem contar sequência); **Sua calibração** (acerto por "Tenho certeza / Acho que sei /
+  Chutei", a partir de 8 respostas marcadas na revisão). Regras em `src/lib/goodMorningStats.ts`; unit + E2E. `npm test`
+  (306), `test:e2e` (28, 2 rodadas) e `build` verdes. Movimentos da coluna mais suaves (fechar some antes de encolher;
+  prévia e relógio trocam sem se sobrepor). No RDP o Windows desliga as animações (o app obedece a "menos movimento").
 - [DONE] **Animações do roteiro (23/10):** blocos feito/atual/próximo, árvore de tópicos ao dar play, FofoDoro, prévia,
   registro rápido e faixas do topo abrem e fecham com altura animada (`src/components/Collapse.tsx`, só CSS, respeita
   "reduzir movimento"); os modais ganharam o fade que a classe `animate-fade-in` nunca teve.

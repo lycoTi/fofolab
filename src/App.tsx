@@ -1121,6 +1121,19 @@ export default function App() {
                         }}
                         onRecorded={() => refreshData(currentSubject?.id, currentTopic?.id)}
                         onLogOutside={openQuestionLogFor}
+                        notebooks={allNotebooks}
+                        onOpenPdf={(subjectId, topicId) => {
+                          setSelectedSubjectId(subjectId);
+                          setSelectedTopicId(topicId);
+                          selectTab('reader');
+                        }}
+                        onOpenNotes={(subjectId, topicId) => {
+                          setSelectedSubjectId(subjectId);
+                          setSelectedTopicId(topicId);
+                          rightTab.setTab('notebook');
+                          rightPanel.setOpen(true);
+                          selectTab('questions');
+                        }}
                       />
                     )}
 

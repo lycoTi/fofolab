@@ -1,14 +1,18 @@
 import { useMemo } from 'react';
 import { Play, Sun } from 'lucide-react';
-import { getStudySessionsSince, getTopicFirstStudyDates } from '../../lib/database';
+import { getLastOpenedPdf, getStudySessionsSince, getTopicFirstStudyDates } from '../../lib/database';
 import type { SubjectCycleAllocation, TopicHeatItem } from '../../lib/cycleEngine';
 import { REVIEW_LOOKBACK_DAYS } from '../../lib/dailyReview';
 import { examSituation, greeting, moodLine } from '../../lib/goodMorning';
+import { confidenceCalibration, editalProgress, studyCalendar } from '../../lib/goodMorningStats';
 import { localDateKey } from '../../lib/timeFormat';
 import { summarizeExamParts } from '../workbench-shell/headerSummary';
-import type { ExamPart, QuestionAttempt, QuestionLog, RecallCheck, StudyPlan, StudySession, Subject, Topic } from '../../types/database';
+import type { ExamPart, Notebook, QuestionAttempt, QuestionLog, RecallCheck, StudyPlan, StudySession, Subject, Topic } from '../../types/database';
+import { CalibrationCard } from './CalibrationCard';
 import { DailyReviewCard } from './DailyReviewCard';
+import { ResumeCard, type ResumeTarget } from './ResumeCard';
 import { SituationCard } from './SituationCard';
+import { StudyCalendar } from './StudyCalendar';
 import { useDailyReview } from './useDailyReview';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -33,6 +37,10 @@ export interface GoodMorningViewProps {
   onRecorded: () => void;
   /** "Fiz questões fora do app" na revisão: abre o registro rápido da coluna com o tópico. */
   onLogOutside: (topicId: string) => void;
+  /** Cadernos do plano (a última anotação vira atalho em "Continuar de onde parou"). */
+  notebooks: Notebook[];
+  onOpenPdf: (subjectId: string, topicId: string) => void;
+  onOpenNotes: (subjectId: string, topicId: string) => void;
   now?: () => Date;
 }
 
@@ -59,15 +67,27 @@ export function GoodMorningView(props: GoodMorningViewProps) {
 
   // O dia entra nas dependências: com o Início aberto na virada da meia-noite, "Ontem" passa a ser o dia certo
   const today = localDateKey(now());
-  const mood = useMemo(() => {
+  // Fatos do banco que o Início usa (último mês de sessões, primeira vez de cada tópico, último PDF)
+  const facts = useMemo(() => {
     if (!dbReady) return null;
     void weekSessions;
     void dataVersion;
-    const topicsById = Object.fromEntries(Object.values(topicsBySubject).flat().map((t) => [t.id, t]));
+    void today;
     const sinceIso = new Date(now().getTime() - REVIEW_LOOKBACK_DAYS * DAY_MS).toISOString();
-    return moodLine({ sessions: getStudySessionsSince(sinceIso), firstStudyDates: getTopicFirstStudyDates(), topicsById, now: now() });
-    // now() fica fora das dependências: a linha muda com os dados e com o dia, não a cada segundo
-  }, [dbReady, weekSessions, dataVersion, topicsBySubject, today]);
+    return { sessions: getStudySessionsSince(sinceIso), firstStudyDates: getTopicFirstStudyDates(), lastPdf: getLastOpenedPdf(plan.id) };
+    // now() fica fora das dependências: os fatos mudam com os dados e com o dia, não a cada segundo
+  }, [dbReady, weekSessions, dataVersion, plan.id, today]);
+
+  const allTopics = useMemo(() => Object.values(topicsBySubject).flat(), [topicsBySubject]);
+  const topicsById = useMemo(() => Object.fromEntries(allTopics.map((t) => [t.id, t])), [allTopics]);
+  const mood = facts ? moodLine({ sessions: facts.sessions, firstStudyDates: facts.firstStudyDates, topicsById, now: now() }) : null;
+  const progress = useMemo(() => {
+    const parents = new Set(allTopics.map((t) => t.parent_id).filter(Boolean));
+    const leafTopics = allTopics.filter((t) => !parents.has(t.id));
+    return editalProgress({ leafTopics, firstStudyDates: facts?.firstStudyDates ?? {}, examDate: plan.exam_date, now: now() });
+    // now() fica fora: o ritmo muda com os dados e com o dia
+  }, [allTopics, facts, plan.exam_date]);
+  const resume = resumeTargets(facts?.lastPdf ?? null, props.notebooks, topicsById);
 
   const situation = examSituation({
     plan,
@@ -98,7 +118,14 @@ export function GoodMorningView(props: GoodMorningViewProps) {
         onOutside={props.onLogOutside}
       />
 
-      <SituationCard daysLine={situation.daysLine} parts={situation.parts} warning={situation.warning} />
+      <ResumeCard pdf={resume.pdf} note={resume.note} onOpenPdf={props.onOpenPdf} onOpenNotes={props.onOpenNotes} />
+
+      <SituationCard daysLine={situation.daysLine} parts={situation.parts} warning={situation.warning} progress={progress} />
+
+      <div className="grid gap-5 sm:grid-cols-2">
+        <StudyCalendar days={studyCalendar(facts?.sessions ?? [], now())} />
+        <CalibrationCard lines={confidenceCalibration(props.attempts)} />
+      </div>
 
       {props.nextBlock && (
         <button
@@ -112,4 +139,28 @@ export function GoodMorningView(props: GoodMorningViewProps) {
       )}
     </div>
   );
+}
+
+function topicLabel(topic: Topic): string {
+  return topic.code ? `${topic.code} ${topic.title}` : topic.title;
+}
+
+/** O último PDF aberto e a última anotação com texto, se o tópico ainda existe. */
+function resumeTargets(
+  lastPdf: { subject_id: string; topic_id: string | null; title: string; current_page: number; total_pages: number } | null,
+  notebooks: Notebook[],
+  topicsById: Record<string, Topic>
+): { pdf: (ResumeTarget & { title: string; page: number; totalPages: number }) | null; note: ResumeTarget | null } {
+  const pdfTopic = lastPdf?.topic_id ? topicsById[lastPdf.topic_id] : undefined;
+  const pdf =
+    lastPdf && pdfTopic
+      ? { title: lastPdf.title, page: Math.max(1, lastPdf.current_page), totalPages: lastPdf.total_pages, topicLabel: topicLabel(pdfTopic), subjectId: lastPdf.subject_id, topicId: pdfTopic.id }
+      : null;
+  const lastNote = [...notebooks]
+    .filter((n) => n.topic_id && topicsById[n.topic_id] && n.content_markdown.trim() !== '')
+    .sort((a, b) => b.updated_at.localeCompare(a.updated_at))[0];
+  const note = lastNote?.topic_id
+    ? { topicLabel: topicLabel(topicsById[lastNote.topic_id]), subjectId: lastNote.subject_id, topicId: lastNote.topic_id }
+    : null;
+  return { pdf, note };
 }

@@ -1,14 +1,29 @@
-import { AlertTriangle, CalendarDays } from 'lucide-react';
+import { AlertTriangle, CalendarDays, TrendingUp } from 'lucide-react';
+
+export interface EditalProgressSummary {
+  coveragePercent: number;
+  seenTopics: number;
+  totalTopics: number;
+  proficiencyPercent: number | null;
+  paceLine: string | null;
+  onPace: boolean | null;
+}
 
 interface SituationCardProps {
   daysLine: string | null;
   parts: { code: string; name: string; coveragePercent: number }[];
   warning: string | null;
+  progress?: EditalProgressSummary | null;
 }
 
-/** Situação (spec 07 §5.5): quanto falta e quanto de cada prova já foi visto — um aviso só, discreto. */
-export function SituationCard({ daysLine, parts, warning }: SituationCardProps) {
-  if (!daysLine && parts.length === 0) return null;
+const tile = 'space-y-0.5 rounded-xl border border-slate-800 bg-slate-950/50 p-3';
+
+/**
+ * Situação (spec 07 §5.5): quanto falta, cobertura × proficiência (separadas, nunca numa média só), o ritmo para ver
+ * o edital inteiro e quanto de cada prova já foi visto — um aviso só, discreto.
+ */
+export function SituationCard({ daysLine, parts, warning, progress = null }: SituationCardProps) {
+  if (!daysLine && parts.length === 0 && !progress) return null;
   return (
     <section aria-label="Situação" className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
       <h2 className="text-sm font-semibold text-white">Situação</h2>
@@ -16,6 +31,29 @@ export function SituationCard({ daysLine, parts, warning }: SituationCardProps) 
         <p className="flex items-center gap-2 text-xs text-slate-300">
           <CalendarDays size={14} className="text-orange-400" />
           {daysLine}
+        </p>
+      )}
+      {progress && progress.totalTopics > 0 && (
+        <div className="grid grid-cols-2 gap-2.5">
+          <div className={tile}>
+            <p className="text-[11px] text-slate-400">Cobertura do edital</p>
+            <p className="text-lg font-semibold text-white">{`${progress.coveragePercent}%`}</p>
+            <p className="text-[11px] text-slate-400">{`${progress.seenTopics} de ${progress.totalTopics} tópicos vistos`}</p>
+          </div>
+          <div className={tile}>
+            <p className="text-[11px] text-slate-400">Proficiência nos tópicos estudados</p>
+            {progress.proficiencyPercent === null ? (
+              <p className="pt-1 text-xs text-slate-400">Aparece depois dos primeiros estudos</p>
+            ) : (
+              <p className="text-lg font-semibold text-white">{`${progress.proficiencyPercent}%`}</p>
+            )}
+          </div>
+        </div>
+      )}
+      {progress?.paceLine && (
+        <p className={`flex items-start gap-2 text-xs ${progress.onPace === false ? 'text-amber-200' : 'text-slate-300'}`}>
+          <TrendingUp size={14} className={`mt-0.5 shrink-0 ${progress.onPace === false ? 'text-amber-400' : 'text-emerald-400'}`} />
+          {progress.paceLine}
         </p>
       )}
       {parts.length > 0 && (

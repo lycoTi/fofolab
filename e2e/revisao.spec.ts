@@ -122,3 +122,18 @@ test('começar o bloco pelo Início leva à bancada e não reinicia um bloco em 
   await expect(page.getByRole('heading', { name: 'Bom dia' })).toBeVisible();
   await expect(page.getByRole('button', { name: /^Começar o bloco de / })).toHaveCount(0);
 });
+
+test('Início: cobertura × proficiência, ritmo, últimas 4 semanas, calibração e continuar de onde parou', async ({ page }) => {
+  await openApp(page);
+  const situation = page.getByRole('region', { name: 'Situação' });
+  await expect(situation.getByText('Cobertura do edital')).toBeVisible();
+  await expect(situation.getByText('Proficiência nos tópicos estudados')).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Últimas 4 semanas' }).getByRole('listitem')).toHaveCount(28);
+  await expect(page.getByRole('region', { name: 'Sua calibração' })).toBeVisible();
+  await page.screenshot({ path: `${SCREENS}/32-inicio-completo.png`, fullPage: true });
+
+  const resume = page.getByRole('region', { name: 'Continuar de onde parou' });
+  await resume.getByRole('button', { name: /Última anotação/ }).click();
+  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
+  await expect(page.getByRole('tab', { name: 'Caderno' })).toHaveAttribute('aria-selected', 'true');
+});

@@ -1853,6 +1853,17 @@ export function saveTopicNotebook(params: {
 }
 
 /** PDF do próprio tópico ou, na falta dele, o PDF geral da disciplina (sem tópico). */
+/** O PDF aberto por último num tópico do plano ("Continuar de onde parou" do Início). */
+export function getLastOpenedPdf(planId: string): PdfSource | null {
+  return queryOne<PdfSource>(
+    getDb(),
+    `SELECT p.* FROM pdf_sources p JOIN subjects s ON s.id = p.subject_id
+     WHERE s.plan_id = ? AND p.last_opened_at IS NOT NULL
+     ORDER BY p.last_opened_at DESC LIMIT 1`,
+    [planId]
+  );
+}
+
 export function getPdfSourceForTopic(subjectId: string, topicId: string): PdfSource | null {
   return queryOne<PdfSource>(
     getDb(),

@@ -688,6 +688,17 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     expect(scalar(db, 'SELECT behavioral_friction_score FROM subjects WHERE id = ?', [subject.id])).toBe(0.6);
   });
 
+  it('último PDF aberto do plano (para "Continuar de onde parou"), nunca de outro plano', async () => {
+    const { db } = await openDatabase();
+    const plan = db.getActiveStudyPlan()!;
+    const subject = db.getSubjectsByPlan(plan.id)[0];
+    const topic = db.createTopic({ subject_id: subject.id, code: '6.6', title: 'Leitura' });
+    db.savePdfSourceProgress({ subjectId: subject.id, topicId: topic.id, title: 'Apostila.pdf', filePath: 'Apostila.pdf', currentPage: 12, totalPages: 40 });
+    db.getDb().run("UPDATE pdf_sources SET last_opened_at = '2099-01-01T00:00:00.000Z' WHERE topic_id = ?", [topic.id]);
+    expect(db.getLastOpenedPdf(plan.id)).toMatchObject({ topic_id: topic.id, current_page: 12 });
+    expect(db.getLastOpenedPdf('outro-plano')).toBeNull();
+  });
+
   it('plano nasce com a revisão do dia ligada e o Wizard pode desligar', async () => {
     const { db } = await openDatabase();
     const plan = db.getActiveStudyPlan()!;

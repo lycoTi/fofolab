@@ -18,6 +18,7 @@ vi.mock('../lib/database', () => ({
   skipDailyReview: vi.fn(),
   getStudySessionsSince: () => [yesterdaySession],
   getTopicFirstStudyDates: () => ({}),
+  getLastOpenedPdf: () => null,
   getReviewQuestionCandidates: () => ({}),
   getQuestionWithDissection: () => null,
   getNotebookForTopic: () => null,
@@ -67,6 +68,9 @@ function view(plan: Partial<StudyPlan> = {}, onStart = vi.fn()) {
       onStartNextBlock={onStart}
       onRecorded={vi.fn()}
       onLogOutside={vi.fn()}
+      notebooks={[]}
+      onOpenPdf={vi.fn()}
+      onOpenNotes={vi.fn()}
       now={() => new Date(2026, 9, 24, 8)}
     />
   );
