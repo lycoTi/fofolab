@@ -16,6 +16,13 @@ const TICK_MS = 500;
 export const MESSAGE_MS = 7000;
 /** Preferências do FofoDoro neste computador (conforto, como a largura das colunas — não é dado de estudo). */
 export const POMODORO_PREFS_KEY = 'fofolab_pomodoro_v1';
+/**
+ * Bloco em andamento neste computador: recarregar a página (ou o app) volta ao mesmo bloco. O tempo estudado já vai
+ * para o banco a cada trecho; aqui fica só o relógio do trecho atual, com horários absolutos.
+ */
+export const STUDY_BLOCK_KEY = 'fofolab_study_block_v1';
+/** Guardado há mais que isso não volta: ninguém estudou com o app fechado esse tempo todo (maior foco + pausa longa). */
+const MAX_RESTORE_GAP_MS = 3 * 60 * 60 * 1000;
 
 interface PomodoroPrefs {
   mode: BlockMode;
@@ -48,6 +55,19 @@ export function loadPomodoroPrefs(): PomodoroPrefs {
   }
 }
 
+/** Bloco guardado por `STUDY_BLOCK_KEY`, se ainda vale (em andamento e guardado há menos de 3 horas). */
+function loadSavedBlock(now: number): BlockState | null {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STUDY_BLOCK_KEY) ?? 'null') as { state?: BlockState; savedAt?: number } | null;
+    if (!raw?.state?.block || typeof raw.savedAt !== 'number') return null;
+    if (now - raw.savedAt > MAX_RESTORE_GAP_MS) return null;
+    if (raw.state.phase === 'IDLE' || raw.state.phase === 'DONE') return null;
+    return raw.state;
+  } catch {
+    return null;
+  }
+}
+
 export interface StudyBlockController {
   state: BlockState;
   now: number;
@@ -71,8 +91,10 @@ export interface StudyBlockController {
 }
 
 /** Um único bloco de estudo para o app inteiro: o FofoDoro e o relógio do cabeçalho mostram o mesmo. */
-export function useStudyBlock(): StudyBlockController {
-  const [state, setState] = useState<BlockState>(() => ({ ...initialBlockState, ...loadPomodoroPrefs() }));
+export function useStudyBlock(options: { ticking?: boolean } = {}): StudyBlockController {
+  // ticking = false até o banco abrir: um pomodoro que terminou com a página fechada só é gravado com o banco pronto
+  const ticking = options.ticking ?? true;
+  const [state, setState] = useState<BlockState>(() => loadSavedBlock(Date.now()) ?? { ...initialBlockState, ...loadPomodoroPrefs() });
   const [now, setNow] = useState(() => Date.now());
   const [message, setMessage] = useState<{ text: string; id: number } | null>(null);
   const stateRef = useRef(state);
@@ -92,14 +114,27 @@ export function useStudyBlock(): StudyBlockController {
   }, []);
 
   useEffect(() => {
-    if (!state.running) return;
+    if (!state.running || !ticking) return;
     const timer = window.setInterval(() => {
       const current = Date.now();
       setNow(current);
       dispatch({ type: 'TICK', now: current });
     }, TICK_MS);
     return () => window.clearInterval(timer);
-  }, [state.running, dispatch]);
+  }, [state.running, ticking, dispatch]);
+
+  // Guarda o bloco em andamento a cada mudança; concluído ou zerado, apaga
+  useEffect(() => {
+    try {
+      if (state.block && state.phase !== 'IDLE' && state.phase !== 'DONE') {
+        localStorage.setItem(STUDY_BLOCK_KEY, JSON.stringify({ state, savedAt: Date.now() }));
+      } else {
+        localStorage.removeItem(STUDY_BLOCK_KEY);
+      }
+    } catch {
+      // Sem localStorage (janela privada): o bloco só não volta depois de recarregar
+    }
+  }, [state]);
 
   useEffect(() => {
     if (!message) return;

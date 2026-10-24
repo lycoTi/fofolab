@@ -193,7 +193,12 @@ export default function App() {
   const [readerMaximized, setReaderMaximized] = useState(false);
   const [readerFullscreen, setReaderFullscreen] = useState(false);
   // Um só bloco de estudo para o app (cartão no Meu Dia/Ciclo e relógio no cabeçalho)
-  const studyBlock = useStudyBlock();
+  const studyBlock = useStudyBlock({ ticking: dbReady });
+  // Abriu com um bloco retomado (recarregou no meio do estudo): volta direto à bancada, não ao "Início"
+  useEffect(() => {
+    if (studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE') setActiveTab('questions');
+    // Só na abertura: depois, quem troca de aba é o estudante
+  }, []);
 
   const [adminData, setAdminData] = useState<{
     tracks: CareerTrack[];

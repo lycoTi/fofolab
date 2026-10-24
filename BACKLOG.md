@@ -29,7 +29,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] **Bloco de estudo** (um só para o app: cartão no Meu Dia/Ciclo + relógio no cabeçalho): pomodoros de 00:20/00:30/00:50 com pausas (00:05/00:10) e "pomodoro 2 de 4", ou modo livre até a meta; relógio real; grava cada trecho de foco no tópico em que o bloco começou — testado (máquina de estados + E2E).
 - [DONE] Aba **Ciclo** (matérias agrupadas por prova, feito × meta em HH:mm, motivo em uma linha) separada da aba **Mapa de Calor** (grade: um quadradinho por tópico, detalhe e "Estudar este tópico") — E2E.
 - [DONE] Tempo sempre em HH:mm (regra em `.agents/rules/ui-clean-design-and-tdd.md`); o alerta "foque em 4 ou 5 matérias" não aparece em planos do edital; o "ⓘ" explica o piso da nota mínima.
-- [A VERIFICAR] O bloco em andamento não sobrevive a recarregar a página (o tempo já gravado, sim).
+- [DONE] O bloco em andamento sobrevive a recarregar (23/10): guardado neste computador a cada mudança, volta no ponto certo pelo relógio real (pomodoro que acabou com a página fechada é gravado quando o banco abre); guardado há mais de 3 h não volta; abre na bancada. Unit + E2E.
 
 **Questões & estudo reverso**
 - [DONE] Importar questões coladas (texto ou JSON): prévia, Certo/Errado, tópico pelo código, sem duplicar.

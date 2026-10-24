@@ -60,8 +60,23 @@ test('FofoDoro: prévia, pausa curta com aviso, espera o estudante e pausa longa
   await toast(page).getByRole('button', { name: 'Fechar aviso' }).click();
   await expect(toast(page)).toHaveCount(0);
 
-  // Os ajustes ficam lembrados neste computador
+  // Os ajustes ficam lembrados neste computador (sem o bloco guardado, que voltaria e esconderia a prévia)
+  await page.evaluate(() => window.localStorage.removeItem('fofolab_study_block_v1'));
   await page.reload();
   await column(page).getByRole('button', { name: 'Ajustes do FofoDoro' }).click();
   await expect(column(page).getByLabel('Pausa longa a cada')).toHaveValue('2');
+});
+
+test('recarregar a página no meio do bloco não perde o FofoDoro', async ({ page }) => {
+  await openApp(page);
+  await column(page).getByRole('button', { name: 'Iniciar bloco' }).click();
+  const fofodoro = column(page).getByRole('group', { name: 'FofoDoro' });
+  await expect(fofodoro.getByRole('img', { name: /^Foco:/ })).toBeVisible();
+  await expect(fofodoro.getByText(/^Pomodoro 1 de \d+$/)).toBeVisible();
+
+  await page.reload();
+  await expect(column(page).getByRole('group', { name: 'FofoDoro' }).getByRole('img', { name: /^Foco:/ })).toBeVisible();
+  await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
+  // Abre na bancada (o bloco segue), não no Início
+  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
 });
