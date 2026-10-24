@@ -84,6 +84,19 @@ describe('Revisão do dia: quais tópicos entram (spec 09 §5.3)', () => {
     expect(items.filter((i) => i.reason === 'COOLING').map((i) => i.topicId).sort()).toEqual(['frio', 'morno']);
   });
 
+  it('tópico só revisado ontem não faz de ontem o "último dia de estudo"', () => {
+    // Ontem só houve revisão (de A); o último dia de estudo de verdade foi há 5 dias (B)
+    const items = selectDailyReview({
+      heat: [heat('A', 's1', 1), heat('B', 's2', 5, 21), heat('C', 's3', 30)],
+      leafTopicIds: new Set(['A', 'B', 'C']),
+      studiedDates: { A: [dayKey(1), dayKey(20)], B: [dayKey(5)], C: [dayKey(30)] },
+      learningDates: { A: [dayKey(20)], B: [dayKey(5)], C: [dayKey(30)] },
+      questionCandidates: {},
+      now: NOW,
+    });
+    expect(items.filter((i) => i.reason === 'LAST_DAY').map((i) => i.topicId)).toEqual(['B']);
+  });
+
   it('o último dia de estudo pode ser antes de ontem', () => {
     const items = select([heat('sexta', 's1', 3, 21), heat('frio', 's2', 30)]);
     expect(items.find((i) => i.topicId === 'sexta')!.reason).toBe('LAST_DAY');
@@ -162,6 +175,13 @@ describe('Revisão do dia: questão, ordem e progresso', () => {
     const outside = { question_id: 'q1', topic_id: 'q', source: null, attempted_at: '2026-10-24T10:05:00.000Z' } as QuestionAttempt;
     const before = { question_id: 'q1', topic_id: 'q', source: 'DAILY_REVIEW', attempted_at: '2026-10-24T09:00:00.000Z' } as QuestionAttempt;
     expect(reviewProgress(items, { attempts: [outside, before], recallChecks: [], questionLogs: [] }, since).nextIndex).toBe(0);
+  });
+
+  it('questão que sumiu depois do sorteio: a autoavaliação conclui o item (não fica em laço)', () => {
+    const since = '2026-10-24T10:00:00.000Z';
+    const items: ReviewItem[] = [{ topicId: 'q', subjectId: 's1', kind: 'QUESTION', questionId: 'apagada', reason: 'COOLING' }];
+    const check = { topic_id: 'q', rating: 'GOOD', checked_at: '2026-10-24T10:05:00.000Z' } as RecallCheck;
+    expect(reviewProgress(items, { attempts: [], recallChecks: [check], questionLogs: [] }, since).nextIndex).toBeNull();
   });
 
   it('diagnóstico já marcado pela confiança e pelo acerto', () => {

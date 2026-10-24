@@ -89,10 +89,12 @@ export function useDailyReview(params: {
     const allTopics = Object.values(topicsBySubject).flat();
     const parents = new Set(allTopics.map((t) => t.parent_id).filter((id): id is string => id !== null));
     const leafTopicIds = new Set(allTopics.filter((t) => !parents.has(t.id)).map((t) => t.id));
+    const dates = studiedDatesByTopic({ topics: allTopics, attempts, questionLogs, recallChecks, now: now() });
     const items = selectDailyReview({
       heat,
       leafTopicIds,
-      studiedDates: studiedDatesByTopic({ topics: allTopics, attempts, questionLogs, recallChecks, now: now() }),
+      studiedDates: dates.all,
+      learningDates: dates.learning,
       questionCandidates: getReviewQuestionCandidates([...leafTopicIds]),
       now: now(),
     });
@@ -101,7 +103,9 @@ export function useDailyReview(params: {
     // now() fica fora das dependências (muda a cada chamada): o que importa é o dia, `dateKey`
   }, [dbReady, plan, enabled, saved, heat, topicsBySubject, attempts, questionLogs, recallChecks, dateKey]);
 
-  const items = useMemo(() => saved?.items ?? [], [saved]);
+  // Tópico apagado depois do sorteio sai da revisão (senão o cartão daria a revisão por feita antes da hora)
+  const topicsById = useMemo(() => new Map(Object.values(topicsBySubject).flat().map((t) => [t.id, t])), [topicsBySubject]);
+  const items = useMemo(() => (saved?.items ?? []).filter((i) => topicsById.has(i.topicId)), [saved, topicsById]);
   const progress = useMemo(
     () => reviewProgress(items, { attempts, recallChecks, questionLogs }, saved?.createdAt ?? ''),
     [items, attempts, recallChecks, questionLogs, saved]
@@ -112,18 +116,18 @@ export function useDailyReview(params: {
   const current = useMemo<CurrentReview | null>(() => {
     if (!currentItem) return null;
     void dataVersion;
-    const topic = (topicsBySubject[currentItem.subjectId] ?? []).find((t) => t.id === currentItem.topicId);
+    const topic = topicsById.get(currentItem.topicId);
     if (!topic) return null;
     const question = currentItem.kind === 'QUESTION' && currentItem.questionId ? getQuestionWithDissection(currentItem.questionId) : null;
     const notes = getNotebookForTopic(currentItem.topicId)?.content_markdown.trim() ?? '';
     return {
       item: currentItem,
       topicLabel: topicLabel(topic),
-      subjectName: subjects.find((s) => s.id === currentItem.subjectId)?.name ?? '',
+      subjectName: subjects.find((s) => s.id === topic.subject_id)?.name ?? '',
       question,
       notebookExcerpt: notes ? notes.slice(0, NOTEBOOK_EXCERPT_CHARS) : null,
     };
-  }, [currentItem, topicsBySubject, subjects, dataVersion]);
+  }, [currentItem, topicsById, subjects, dataVersion]);
 
   const afterRecord = (item: ReviewItem, seconds: number) => {
     recordStudySession({ subjectId: item.subjectId, topicId: item.topicId, durationMinutes: reviewMinutes(seconds), sessionType: 'REVIEW', pausesCount: 0, wasSkipped: false });
@@ -172,26 +176,33 @@ export function useDailyReview(params: {
   };
 }
 
-/** Datas locais em que cada tópico foi estudado nos últimos 30 dias (sessões, questões, registros, autoavaliações). */
+/**
+ * Datas locais em que cada tópico foi estudado nos últimos 30 dias: `all` com tudo (sessões, questões, registros,
+ * autoavaliações); `learning` sem o que veio só da própria revisão (sessão de revisão, questão respondida na revisão,
+ * autoavaliação e a data de estudo do tópico, que a revisão também atualiza).
+ */
 function studiedDatesByTopic(input: {
   topics: Topic[];
   attempts: QuestionAttempt[];
   questionLogs: QuestionLog[];
   recallChecks: RecallCheck[];
   now: Date;
-}): Record<string, string[]> {
+}): { all: Record<string, string[]>; learning: Record<string, string[]> } {
   const sinceIso = new Date(input.now.getTime() - REVIEW_LOOKBACK_DAYS * DAY_MS).toISOString();
-  const marks: { topicId: string | null; at: string | null }[] = [
-    ...getStudySessionsSince(sinceIso).map((s) => ({ topicId: s.topic_id, at: s.started_at })),
-    ...input.attempts.map((a) => ({ topicId: a.topic_id, at: a.attempted_at })),
-    ...input.questionLogs.map((l) => ({ topicId: l.topic_id, at: l.logged_at })),
-    ...input.recallChecks.map((c) => ({ topicId: c.topic_id, at: c.checked_at })),
-    ...input.topics.map((t) => ({ topicId: t.id, at: t.last_studied_at })),
+  const marks: { topicId: string | null; at: string | null; fromReview: boolean }[] = [
+    ...getStudySessionsSince(sinceIso).map((s) => ({ topicId: s.topic_id, at: s.started_at, fromReview: s.session_type === 'REVIEW' })),
+    ...input.attempts.map((a) => ({ topicId: a.topic_id, at: a.attempted_at, fromReview: a.source === 'DAILY_REVIEW' })),
+    ...input.questionLogs.map((l) => ({ topicId: l.topic_id, at: l.logged_at, fromReview: false })),
+    ...input.recallChecks.map((c) => ({ topicId: c.topic_id, at: c.checked_at, fromReview: true })),
+    ...input.topics.map((t) => ({ topicId: t.id, at: t.last_studied_at, fromReview: true })),
   ];
-  const dates: Record<string, Set<string>> = {};
-  for (const mark of marks) {
-    if (!mark.topicId || !mark.at || mark.at < sinceIso) continue;
-    (dates[mark.topicId] ??= new Set()).add(localDateKey(new Date(mark.at)));
-  }
-  return Object.fromEntries(Object.entries(dates).map(([id, set]) => [id, [...set]]));
+  const collect = (onlyLearning: boolean) => {
+    const dates: Record<string, Set<string>> = {};
+    for (const mark of marks) {
+      if (!mark.topicId || !mark.at || mark.at < sinceIso || (onlyLearning && mark.fromReview)) continue;
+      (dates[mark.topicId] ??= new Set()).add(localDateKey(new Date(mark.at)));
+    }
+    return Object.fromEntries(Object.entries(dates).map(([id, set]) => [id, [...set]]));
+  };
+  return { all: collect(false), learning: collect(true) };
 }

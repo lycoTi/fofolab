@@ -55,6 +55,11 @@ export function selectDailyReview(input: {
   leafTopicIds: Set<string>;
   /** Datas locais (YYYY-MM-DD) em que cada tópico foi estudado nos últimos 30 dias, por qualquer origem. */
   studiedDates: Record<string, string[]>;
+  /**
+   * As mesmas datas sem o que veio só da própria revisão: elas decidem o "último dia de estudo" (senão um dia só de
+   * revisão faria a revisão de amanhã repetir os tópicos revisados hoje). Ausente = `studiedDates`.
+   */
+  learningDates?: Record<string, string[]>;
   questionCandidates: Record<string, QuestionCandidate[]>;
   now: Date;
 }): ReviewItem[] {
@@ -79,10 +84,11 @@ export function selectDailyReview(input: {
     recall(a) - recall(b) || (b.daysSinceLastStudy ?? 0) - (a.daysSinceLastStudy ?? 0);
 
   // 3. Até 2 do último dia de estudo antes de hoje; o resto, dos que mais esfriaram
-  const previousDays = eligible.flatMap((h) => datesOf(h.topic.id)).filter((d) => d < today);
+  const learningOf = (topicId: string) => (input.learningDates ?? input.studiedDates)[topicId] ?? [];
+  const previousDays = eligible.flatMap((h) => learningOf(h.topic.id)).filter((d) => d < today);
   const lastDay = previousDays.length > 0 ? previousDays.reduce((a, b) => (a > b ? a : b)) : null;
   const lastDayPicks = eligible
-    .filter((h) => lastDay !== null && datesOf(h.topic.id).includes(lastDay))
+    .filter((h) => lastDay !== null && learningOf(h.topic.id).includes(lastDay))
     .sort(byColdest)
     .slice(0, REVIEW_LAST_DAY_MAX);
   const picked = new Set(lastDayPicks.map((h) => h.topic.id));
@@ -124,7 +130,8 @@ export function reviewProgress(
     const byAnswer =
       item.kind === 'QUESTION' &&
       today.attempts.some((a) => a.source === 'DAILY_REVIEW' && a.question_id === item.questionId && a.attempted_at >= sinceIso);
-    const byRecall = item.kind === 'OPEN' && today.recallChecks.some((c) => c.topic_id === item.topicId && c.checked_at >= sinceIso);
+    // Vale também para item de questão: se a questão sumiu depois do sorteio, a tela cai na pergunta aberta
+    const byRecall = today.recallChecks.some((c) => c.topic_id === item.topicId && c.checked_at >= sinceIso);
     if (byLog || byAnswer || byRecall) doneTopicIds.add(item.topicId);
   }
   const next = items.findIndex((i) => !doneTopicIds.has(i.topicId));

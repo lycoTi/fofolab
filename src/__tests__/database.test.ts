@@ -680,6 +680,14 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     expect(db.getTopicFirstStudyDates()[topic.id]).toBe('2026-10-01T10:00:00.000Z');
   });
 
+  it('sessão da revisão conta o tempo, mas não mexe no atrito da matéria', async () => {
+    const { db } = await openDatabase();
+    const subject = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0];
+    db.getDb().run('UPDATE subjects SET behavioral_friction_score = 0.6 WHERE id = ?', [subject.id]);
+    db.recordStudySession({ subjectId: subject.id, topicId: null, durationMinutes: 1, sessionType: 'REVIEW', pausesCount: 0, wasSkipped: false });
+    expect(scalar(db, 'SELECT behavioral_friction_score FROM subjects WHERE id = ?', [subject.id])).toBe(0.6);
+  });
+
   it('plano nasce com a revisão do dia ligada e o Wizard pode desligar', async () => {
     const { db } = await openDatabase();
     const plan = db.getActiveStudyPlan()!;

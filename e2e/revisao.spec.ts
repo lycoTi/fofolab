@@ -110,3 +110,15 @@ test('revisão desligada no Wizard não aparece no Início', async ({ page }) =>
   await expect(page.getByRole('region', { name: 'Situação' })).toBeVisible();
   await expect(review(page)).toHaveCount(0);
 });
+
+test('começar o bloco pelo Início leva à bancada e não reinicia um bloco em andamento', async ({ page }) => {
+  await openApp(page);
+  await page.getByRole('button', { name: /^Começar o bloco de / }).click();
+  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
+  await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
+
+  // De volta ao Início com o bloco rodando: sem o botão que recomeçaria o bloco do zero
+  await page.getByRole('button', { name: 'Início' }).click();
+  await expect(page.getByRole('heading', { name: 'Bom dia' })).toBeVisible();
+  await expect(page.getByRole('button', { name: /^Começar o bloco de / })).toHaveCount(0);
+});

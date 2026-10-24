@@ -809,8 +809,6 @@ export default function App() {
     if (!item) return;
     setSelectedSubjectId(item.subject.id);
     if (item.topic) setSelectedTopicId(item.topic.id);
-    // Começou o estudo: o "Início" dá lugar à bancada
-    if (activeTab === 'today') selectTab('questions');
   };
 
   const openQuestionLogFor = (topicId: string) => {
@@ -842,6 +840,8 @@ export default function App() {
     });
     setSelectedSubjectId(item.subject.id);
     if (item.topic) setSelectedTopicId(item.topic.id);
+    // Começou o estudo: o "Início" dá lugar à bancada
+    if (activeTab === 'today') selectTab('questions');
   };
 
   const openRoutineMaterial = (kind: 'pdf' | 'questions' | 'notes') => {
@@ -1109,7 +1109,8 @@ export default function App() {
                         recallChecks={recallChecks}
                         weekSessions={sessions}
                         dataVersion={dataVersion}
-                        nextBlock={routine.currentItem ? { subjectName: routine.currentItem.subject.name } : null}
+                        // Com um bloco rodando não há "começar": recomeçaria do zero e o tempo focado se perderia
+                        nextBlock={routine.currentItem && !blockActive ? { subjectName: routine.currentItem.subject.name } : null}
                         onStartNextBlock={() => {
                           if (routine.currentItem) startRoutineBlock(routine.currentItem);
                         }}

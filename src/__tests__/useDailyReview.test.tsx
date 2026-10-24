@@ -90,6 +90,20 @@ describe('useDailyReview', () => {
     expect(onRecorded).toHaveBeenCalled();
   });
 
+  it('tópico apagado depois do sorteio é pulado; o seguinte aparece e a revisão não termina antes da hora', () => {
+    reviews.set('p1|2026-10-24', {
+      items: [
+        { topicId: 'sumiu', subjectId: 's1', kind: 'OPEN', questionId: null, reason: 'COOLING' },
+        { topicId: 'frio', subjectId: 's1', kind: 'OPEN', questionId: null, reason: 'COOLING' },
+      ],
+      skipped: false,
+      createdAt: '2026-10-24T09:00:00.000Z',
+    });
+    const { result } = setup({}, new Date(2026, 9, 24, 8));
+    expect(result.current.items.map((i) => i.topicId)).toEqual(['frio']);
+    expect(result.current.current?.item.topicId).toBe('frio');
+  });
+
   it('pular marca o dia como pulado', () => {
     const { result } = setup({}, new Date(2026, 9, 24, 8));
     act(() => result.current.skip());

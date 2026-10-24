@@ -107,8 +107,12 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   rápido com o tópico; o registro conclui o item). Cada item feito grava uma sessão `REVIEW` (conta na semana, não no
   roteiro). "Pular a revisão de hoje" sem penalidade; desligar na caixa do último passo do Wizard. Testes: unit (seleção,
   progresso, textos, cartões, hook, migração v8 nos dois caminhos) + E2E `e2e/revisao.spec.ts` (responder, recarregar no
-  meio, concluir e continuar feita; registro de fora conclui o item; desligada no Wizard). `npm test` (282), `test:e2e`
-  (25, 2 rodadas) e `build` verdes.
+  meio, concluir e continuar feita; registro de fora conclui o item; desligada no Wizard; começar o bloco pelo Início).
+  Revisão independente: começar o bloco pelo Início agora leva à aba Questões e o botão some com um bloco rodando (antes
+  recomeçava do zero e perdia o foco); questão apagada depois do sorteio conclui pela autoavaliação (antes, laço);
+  tópico apagado sai da revisão (antes ela dava "feita" antes da hora); sessão de revisão não mexe no atrito da matéria;
+  um dia só de revisão não vira o "último dia de estudo" da revisão seguinte; a linha de ânimo acompanha a virada do dia.
+  `npm test` (286), `test:e2e` (26, 2 rodadas) e `build` verdes.
 - [DONE] **Animações do roteiro (23/10):** blocos feito/atual/próximo, árvore de tópicos ao dar play, FofoDoro, prévia,
   registro rápido e faixas do topo abrem e fecham com altura animada (`src/components/Collapse.tsx`, só CSS, respeita
   "reduzir movimento"); os modais ganharam o fade que a classe `animate-fade-in` nunca teve.

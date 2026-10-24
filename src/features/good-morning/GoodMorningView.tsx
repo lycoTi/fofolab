@@ -4,6 +4,7 @@ import { getStudySessionsSince, getTopicFirstStudyDates } from '../../lib/databa
 import type { SubjectCycleAllocation, TopicHeatItem } from '../../lib/cycleEngine';
 import { REVIEW_LOOKBACK_DAYS } from '../../lib/dailyReview';
 import { examSituation, greeting, moodLine } from '../../lib/goodMorning';
+import { localDateKey } from '../../lib/timeFormat';
 import { summarizeExamParts } from '../workbench-shell/headerSummary';
 import type { ExamPart, QuestionAttempt, QuestionLog, RecallCheck, StudyPlan, StudySession, Subject, Topic } from '../../types/database';
 import { DailyReviewCard } from './DailyReviewCard';
@@ -56,6 +57,8 @@ export function GoodMorningView(props: GoodMorningViewProps) {
     now: props.now,
   });
 
+  // O dia entra nas dependências: com o Início aberto na virada da meia-noite, "Ontem" passa a ser o dia certo
+  const today = localDateKey(now());
   const mood = useMemo(() => {
     if (!dbReady) return null;
     void weekSessions;
@@ -63,8 +66,8 @@ export function GoodMorningView(props: GoodMorningViewProps) {
     const topicsById = Object.fromEntries(Object.values(topicsBySubject).flat().map((t) => [t.id, t]));
     const sinceIso = new Date(now().getTime() - REVIEW_LOOKBACK_DAYS * DAY_MS).toISOString();
     return moodLine({ sessions: getStudySessionsSince(sinceIso), firstStudyDates: getTopicFirstStudyDates(), topicsById, now: now() });
-    // now() fica fora das dependências: a linha muda com os dados, não com o relógio
-  }, [dbReady, weekSessions, dataVersion, topicsBySubject]);
+    // now() fica fora das dependências: a linha muda com os dados e com o dia, não a cada segundo
+  }, [dbReady, weekSessions, dataVersion, topicsBySubject, today]);
 
   const situation = examSituation({
     plan,

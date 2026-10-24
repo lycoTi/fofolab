@@ -1439,9 +1439,10 @@ export function recordStudySession(params: {
     ]
   );
 
-  // Atualiza fricção comportamental da disciplina suavemente (média móvel 0.0 a 1.0)
+  // Atualiza fricção comportamental da disciplina suavemente (média móvel 0.0 a 1.0). A revisão do dia fica de fora:
+  // um minuto de revisão sem pausas apagaria o histórico de pausas e pulos dos blocos de verdade
   const subj = queryOne<Subject>(db, 'SELECT * FROM subjects WHERE id = ?', [params.subjectId]);
-  if (subj) {
+  if (subj && params.sessionType !== 'REVIEW') {
     const sessionFriction = Math.min(
       1.0,
       params.pausesCount * 0.15 + (params.wasSkipped ? 0.35 : 0)
