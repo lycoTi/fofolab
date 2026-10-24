@@ -133,9 +133,12 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   semanas). Proposta para o brainstorm do cronograma: o topo vira **"Sua semana"** — feito × meta com **uma barrinha por
   dia** (seg–dom, com a meta de cada dia), que é onde o cronograma encaixa; as horas por semana e a estratégia continuam
   recolhidas em "Ajustar"; as sugestões do ciclo ficam logo abaixo. Até lá, nada muda.
-- **Questões: um só copiloto (pedido do dono, 22/10):** o painel "Explicação & Estudo Reverso" ao lado da questão repete o
-  papel do Copiloto da coluna direita. Avaliar fundir o Estudo Reverso no copiloto e dar a ele a voz do hamster
-  (nome amigável: **FofoIA** ou **FofoPiloto**), liberando espaço para a questão. Brainstorm antes de construir.
+- **FofoIA (spec 11, design aprovado em 24/10/2026):** um só professor na coluna direita (sai o painel de IA da aba
+  Questões); explicação rápida + aula completa (sugerida por sinais, sem chamada extra); contexto com o caderno do tópico;
+  conversa começa do zero; "Salvar resumo de revisão" opcional (≤ 5 linhas); falha produtiva em três camadas (pistas sem
+  gabarito, confiança obrigatória antes de responder, aquecimento antes da aula); diagnóstico deduzido da confiança
+  (novos: acertei no chute, confundi com outra coisa; falsa certeza pesa mais). Próximo: plano (`writing-plans`).
+  Depois: **FofoIA com a letra da lei** (repositório `ctresb/leis`, brainstorm próprio).
 - **Caderno:** já grava sozinho ("Salvo automaticamente", como o Google Docs) — avaliar tirar o botão "Salvar" redundante.
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso
