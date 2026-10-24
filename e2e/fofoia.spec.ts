@@ -44,6 +44,27 @@ test('questão: confiança antes, pista da FofoIA sem gabarito, depois diagnóst
   await expect(fofo(page).getByText(/Me explique esta questão/).first()).toBeVisible();
 });
 
+test('pista de questão Certo/Errado vem do próprio app (sem IA), em níveis, e nunca julga a afirmação', async ({ page }) => {
+  await openQuestions(page);
+  await page.getByRole('button', { name: 'Importar Questões' }).first().click();
+  await page.getByLabel('Texto das questões').fill(`1. (Cebraspe/CGU/2024) [tópico 1.3] Item E2E Certo/Errado: a amostragem estatística elimina o risco de detecção.
+Gabarito: Errado`);
+  await page.getByRole('button', { name: 'Analisar' }).click();
+  await page.getByRole('button', { name: /Importar 1 questão/ }).click();
+  await expect(page.getByText(/1 importada/)).toBeVisible();
+  await page.getByRole('button', { name: 'Fechar importação' }).click();
+  await page.getByPlaceholder('Buscar termo no enunciado...').fill('Item E2E Certo/Errado');
+  await expect(page.getByText(/Item E2E Certo\/Errado/)).toBeVisible();
+
+  await page.getByRole('button', { name: /Pedir pista à FofoIA/ }).click();
+  await expect(fofo(page).getByText(/Esta questão testa/)).toBeVisible();
+  await expect(fofo(page).getByText('Exemplo simulado — a IA ainda não está configurada')).toHaveCount(0);
+  await fofo(page).getByRole('button', { name: 'Outra pista' }).last().click();
+  await expect(fofo(page).getByText(/Julgue por partes/)).toBeVisible();
+  await expect(fofo(page)).not.toContainText(/Gabarito|é falsa|é verdadeira/);
+  await page.screenshot({ path: `${SCREENS}/41-pista-certo-errado.png` });
+});
+
 test('ver a explicação antes de responder é primeiro contato, sem cobrança', async ({ page }) => {
   await openQuestions(page);
   await page.getByRole('button', { name: /Ver explicação antes de responder/ }).click();

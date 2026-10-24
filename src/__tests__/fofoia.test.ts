@@ -4,6 +4,7 @@ import { buildFofoContext, NOTEBOOK_CONTEXT_CHARS } from '../lib/fofoia/context'
 import { demoFofoReply } from '../lib/fofoia/demo';
 import { matchEditalTopics, EDITAL_MAX_CANDIDATES, type EditalTopicEntry } from '../lib/fofoia/editalMatch';
 import { readLessonPart } from '../lib/fofoia/lessonPart';
+import { isTrueFalseQuestion, trueFalseHint } from '../lib/fofoia/trueFalseHint';
 import { buildFofoPrompt } from '../lib/fofoia/prompts';
 import { chooseMode, isBasicQuestion, shouldSuggestLesson, type ModeSignals } from '../lib/fofoia/signals';
 import { formatSummaryForNotebook, parseSummary } from '../lib/fofoia/summary';
@@ -167,6 +168,52 @@ describe('"Cai no meu edital?": filtro local antes da IA', () => {
   });
 });
 
+describe('Pista de questão Certo/Errado: do próprio app, sem IA', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+  });
+  const unansweredCE = buildFofoContext({ context: student, notebook: null, activeQuestion: { question, answered: false, dissection: null }, prerequisites: [] });
+  const multiple = { ...question, options_json: JSON.stringify(['A) Um', 'B) Dois', 'C) Três', 'D) Quatro', 'E) Cinco']), final_answer: 'B' } as Question;
+
+  it('reconhece Certo/Errado com ou sem letra; múltipla escolha não', () => {
+    expect(isTrueFalseQuestion(question)).toBe(true);
+    expect(isTrueFalseQuestion({ ...question, options_json: JSON.stringify(['Certo', 'Errado']) } as Question)).toBe(true);
+    expect(isTrueFalseQuestion(multiple)).toBe(false);
+  });
+
+  it('não chama a IA (mesmo com chave) e não é rotulada como exemplo simulado', async () => {
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+    const reply = await askFofoIa({ mode: 'HINT', ctx: unansweredCE, conversation: [], message: 'é certa ou errada?' });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(reply.simulated).toBe(false);
+    expect(reply.failed).toBeUndefined();
+    expect(reply.provider).toBe('LOCAL');
+    expect(reply.reply).toContain('1.1 Monolitos e microsserviços');
+  });
+
+  it('o texto é o mesmo para qualquer questão (não tem como carregar o gabarito) e muda a cada pista pedida', () => {
+    const first = trueFalseHint('3.2 Ato administrativo', 0);
+    const second = trueFalseHint('3.2 Ato administrativo', 1);
+    const third = trueFalseHint('3.2 Ato administrativo', 2);
+    expect(new Set([first, second, third]).size).toBe(3);
+    expect(trueFalseHint('3.2 Ato administrativo', 5)).toBe(third);
+    for (const hint of [first, second, third]) expect(hint).not.toMatch(/\b(certo|errado|verdadeir|fals)/i);
+  });
+
+  it('em múltipla escolha a pista continua com a IA', async () => {
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'pista da IA' } }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: { question: multiple, answered: false, dissection: null }, prerequisites: [] });
+    const reply = await askFofoIa({ mode: 'HINT', ctx, conversation: [], message: 'me ajuda' });
+    expect(fetchMock).toHaveBeenCalledOnce();
+    expect(reply.reply).toBe('pista da IA');
+  });
+});
+
 describe('Modo demonstração (sem chave)', () => {
   beforeEach(() => {
     vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', '');
@@ -176,11 +223,11 @@ describe('Modo demonstração (sem chave)', () => {
   });
   afterEach(() => vi.unstubAllEnvs());
 
-  it('todos os jeitos respondem marcados como simulação; a pista de exemplo não entrega o gabarito', async () => {
+  it('todos os jeitos respondem marcados como simulação (menos a pista de Certo/Errado, que é do app); a pista de exemplo não entrega o gabarito', async () => {
     const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: { question, answered: false, dissection: null }, prerequisites: [] });
     for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'SUMMARY', 'EDITAL', 'HINT'] as const) {
       const reply = await askFofoIa({ mode, ctx, conversation: [], message: 'microsserviços' });
-      expect(reply.simulated).toBe(true);
+      expect(reply.simulated).toBe(mode !== 'HINT');
       expect(reply.reply.length).toBeGreaterThan(20);
     }
     const hint = demoFofoReply('HINT', ctx, 'qual a resposta?');

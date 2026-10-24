@@ -4,6 +4,7 @@ import { demoFofoReply } from './demo';
 import type { EditalCandidate } from './editalMatch';
 import { buildFofoPrompt } from './prompts';
 import type { FofoMode } from './signals';
+import { isTrueFalseQuestion, trueFalseHint } from './trueFalseHint';
 
 /** Linha acolhedora quando o provedor falha; o detalhe técnico fica só no console. */
 export const FOFO_UNAVAILABLE_REPLY = 'Não consegui falar com a IA agora. Tente de novo em instantes.';
@@ -31,9 +32,14 @@ export async function askFofoIa(input: {
   ctx: FofoContext;
   conversation: ChatTurn[];
   message: string;
-  extra?: { editalCandidates?: EditalCandidate[]; part?: number };
+  extra?: { editalCandidates?: EditalCandidate[]; part?: number; hintsGiven?: number };
 }): Promise<AiReply> {
   const { mode, ctx, conversation, message, extra } = input;
+  const active = ctx.activeQuestion;
+  if (mode === 'HINT' && active && !active.answered && isTrueFalseQuestion(active.question)) {
+    const topicLabel = `${ctx.student.currentTopicCode} ${ctx.student.currentTopicTitle}`.trim();
+    return { reply: trueFalseHint(topicLabel, extra?.hintsGiven ?? 0), provider: 'LOCAL', simulated: false };
+  }
   if (!getAiStatus().configured) {
     return { reply: demoFofoReply(mode, ctx, message, extra), provider: 'OFFLINE_DEMO', simulated: true };
   }

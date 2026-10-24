@@ -9,7 +9,8 @@ import { formatDuration } from './timeFormat';
  * exemplos montados localmente, sempre com `simulated: true` (a tela mostra o aviso) e
  * NUNCA gravadas como explicação da questão.
  */
-export type AiResponder = AiProviderUsed | 'OFFLINE_DEMO';
+/** `LOCAL`: resposta do próprio app, sem IA (pista de questão Certo/Errado). */
+export type AiResponder = AiProviderUsed | 'OFFLINE_DEMO' | 'LOCAL';
 
 export interface AiReply {
   reply: string;

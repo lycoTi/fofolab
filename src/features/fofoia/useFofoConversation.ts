@@ -67,7 +67,8 @@ export function useFofoConversation(input: {
     setLoading(true);
     const myGeneration = generation.current;
     try {
-      const reply = await askFofoIa({ mode, ctx: input.ctx, conversation, message: text, extra: { editalCandidates, part } });
+      const hintsGiven = turns.filter((t) => t.mode === 'HINT' && !t.failed).length;
+      const reply = await askFofoIa({ mode, ctx: input.ctx, conversation, message: text, extra: { editalCandidates, part, hintsGiven } });
       if (myGeneration !== generation.current) return;
       if (reply.failed) console.warn('FofoIA: nenhum provedor respondeu.');
       const tutor: FofoTurn = {
