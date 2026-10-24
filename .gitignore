@@ -63,3 +63,6 @@ e2e/.screens/
 
 # Esboços do brainstorming (companheiro visual)
 .superpowers/
+
+# graphify: o grafo e o relatório vão para o repositório (servem aos dois PCs); o cache cada máquina refaz
+graphify-out/cache/
