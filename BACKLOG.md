@@ -36,7 +36,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] Diagnóstico coerente: 1 por tentativa, resposta travada após ver o gabarito, tempo real.
 - [DONE] IA sem chave = respostas marcadas "Exemplo simulado". Com chave: prompt com regras anti-alucinação e explicação guardada.
 - [DONE] IA real pelo **Groq** (grátis, `qwen/qwen3.8-27b`): tutor e explicação-base verificados no Edge contra a API real (~1-2 s). Ordem: gateway → Groq → Gemini → DeepSeek. Erros dos provedores aparecem no console.
-- [A VERIFICAR] Copiloto com IA real. Gemini exige crédito pré-pago; DeepSeek (`deepseek-flash`, sem modo de raciocínio) fica como reserva paga.
+- [PARCIAL] FofoIA com IA real (ver a fatia 11 abaixo: teto de resposta corrigido; pista de Certo/Errado e Direito do `qwen` em aberto). Gemini exige crédito pré-pago; DeepSeek (`deepseek-flash`, sem modo de raciocínio) fica como reserva paga.
 - [ ] Importar prova em PDF + gabarito (extração automática) → depois da 7b (o dono usa o TEC Concursos para questões).
 
 **Caderno, PDF & layout**
@@ -147,9 +147,22 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   da FofoIA, entradas, conversa) + E2E `e2e/fofoia.spec.ts`; `npm test` (355), `test:e2e` (31, 2 rodadas) e `build` verdes.
   Revisão independente: trocar diagnóstico perto de 0/100; questão ativa limpa ao sair da aba; resposta atrasada descartada
   na troca de tópico; pedido da aba Questões não se perde nem repete; voltar a questão respondida não dá 2ª tentativa.
-  [A VERIFICAR] com a **IA real** (Groq): os testes rodam em modo demonstração — conferir aula em partes, resumo no
-  formato e pista que não entrega a resposta. Depois: **FofoIA com a letra da lei** (repositório `ctresb/leis`,
-  brainstorm próprio) e **professores personalizados** (ideia).
+  [PARCIAL] **com a IA real (Groq, conferido em 24/10 por sonda com os prompts reais, conteúdo de Direito Administrativo da CGU):**
+  - Corrigido (unit): o plano grátis do Groq aceita só **1.000 tokens de resposta por minuto** no `qwen/qwen3.8-27b`;
+    sem `max_tokens` ele reservava 2.048 e recusava quase toda chamada (429 "Request too large"). Agora cada pedido leva
+    um teto (`MODE_MAX_TOKENS` por jeito; 800 na explicação-base). No 429, a tela diz "pausa curta… tente em N segundos"
+    (cabeçalho `retry-after`). Letras chinesas que o Qwen solta no meio do português são retiradas. "Parte 1/3" também
+    mostra o "Continuar" (antes só "Parte 1 de 3"). Prompts com tamanho por jeito, sem "corrigir" o caderno sem certeza,
+    sem autor preferido da banca, só classificações consagradas.
+  - Verificado: rápida, resumo no formato da Dora (`parseSummary` lê) e "Cai no meu edital?" funcionam; respostas em 1–3 s.
+  - **Falha aberta — pista em questão Certo/Errado entrega a resposta**, com o `qwen` e com o `gpt-oss-120b`, mesmo com a
+    regra explícita ("não é absoluta", "admite prova em contrário"). Prompt sozinho não resolve: decisão de desenho
+    pendente com o dono.
+  - **Falha aberta — Direito errado no `qwen`:** atributos do ato inventados ("PAT", "Imprescritibilidade"), chamou o
+    COFIFOMOB (certo) de "inventado". O `openai/gpt-oss-120b` acertou os atributos (PATI) e respeitou o caderno; serve
+    como `VITE_GROQ_MODEL_STRONG` (aula e edital), com a ressalva de 21/10 (inventou conceitos de auditoria) e de gastar
+    tokens "pensando" (a aula bateu no teto). Correção de fundo: **FofoIA com a letra da lei** (`ctresb/leis`, brainstorm
+    próprio). Depois: **professores personalizados** (ideia).
 - **Caderno:** já grava sozinho ("Salvo automaticamente", como o Google Docs) — avaliar tirar o botão "Salvar" redundante.
 - **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
   (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso

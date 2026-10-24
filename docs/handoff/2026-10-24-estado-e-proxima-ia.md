@@ -51,11 +51,20 @@
   Sondas descartáveis em `e2e/_probe/` (apague depois).
 - **graphify:** `graphify-out/` vai para o git sem `cache/` (ignorado); rode `graphify update .` depois de mudar código.
 - **TEC:** Termos de Uso §18.8 proíbem processar o conteúdo deles com script ou IA — nada de colar questão do TEC na IA.
+- **Groq grátis:** 8.000 tokens/min no total e **1.000 tokens de resposta/min** no `qwen/qwen3.8-27b`; todo pedido precisa
+  de teto (`maxTokens` em `callAiProviders`). Sem isso o 429 vem em ~100 ms e parece "a IA caiu".
+- **Stack `~/.agents`:** no PC de casa sem Modo de Desenvolvedor o `~/.gemini/GEMINI.md` é **cópia** do `AGENTS.md` —
+  depois de `git -C ~/.agents pull`, rode `~/.agents/install.ps1` de novo.
 - **Dívida:** `App.tsx` (~1.440 linhas) e o Wizard (~420) passam do teto de ~250; extrair fatias quando mexer neles.
 
 ## 5. Próximos passos (em ordem sugerida, confirme com o dono)
-1. **Testar a FofoIA com a chave real do Groq** (`.env.local`) e ajustar prompts pelo que aparecer (aula longa, resumo no
-   formato, pista sem entregar a resposta). O que só a IA real mostra não aparece nos testes (eles rodam em demonstração).
+1. ~~Testar a FofoIA com a chave real do Groq~~ **feito em 24/10 (tarde)**: teto de resposta por chamada (o Groq grátis só
+   aceita 1.000 tokens de resposta por minuto e recusava quase tudo), aviso de pausa no 429, prompts mais firmes. **Em
+   aberto, decidir com o dono:** (a) a pista de questão Certo/Errado entrega a resposta em qualquer modelo — opções:
+   pista fixa sem IA para C/E, ou checagem da pista (custa outra chamada e o gabarito iria à IA antes da resposta, o que a
+   spec 11 proíbe); (b) usar `VITE_GROQ_MODEL_STRONG=openai/gpt-oss-120b` (acertou Direito onde o `qwen` errou). Como
+   testar de novo: uma sonda Vitest temporária com `// @vitest-environment node` chamando `buildFofoPrompt` +
+   `fetch` no Groq, 61 s entre chamadas (limite por minuto), e apagar o arquivo depois (o `npm test` o pegaria).
 2. **FofoIA com a letra da lei** (spec 11 §8): brainstorm próprio sobre o repositório público `ctresb/leis` — trazer só
    as leis do edital, com link da fonte oficial, e mandar o artigo exato no prompt.
 3. **Topo da aba Ciclo junto com o cronograma** (BACKLOG): "Sua semana" com uma barrinha por dia.
