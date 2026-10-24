@@ -19,9 +19,11 @@ export function peekKind(selected: Topic | null, blockTopic: Topic | null): Peek
 
 export function usePeek(params: { selectedTopic: Topic | null; blockTopic: Topic | null; studyBlock: StudyBlockController }) {
   const { selectedTopic, blockTopic, studyBlock } = params;
-  const kind = peekKind(selectedTopic, blockTopic);
-  const peeking = kind !== 'none';
   const { running, phase, block } = studyBlock.state;
+  // Sem bloco em andamento não há o que "olhar por fora": navegar pelos tópicos é livre, sem faixa nem pausa
+  const blockActive = phase !== 'IDLE' && phase !== 'DONE';
+  const kind = blockActive ? peekKind(selectedTopic, blockTopic) : 'none';
+  const peeking = kind !== 'none';
 
   const [pausedByPeek, setPausedByPeek] = useState(false);
   const [showNudge, setShowNudge] = useState(false);

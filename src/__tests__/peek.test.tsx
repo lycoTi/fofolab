@@ -12,9 +12,9 @@ const blockTopic = topic('owasp', 'g22');
 const sibling = topic('jwt', 'g22');
 const outside = topic('pcasp');
 
-function controller(running: boolean): StudyBlockController {
+function controller(running: boolean, phase: BlockState['phase'] = 'FOCUS'): StudyBlockController {
   const state = {
-    phase: 'FOCUS',
+    phase,
     running,
     block: { subjectId: 's', subjectName: 'TI', topicId: 'owasp', topicCode: '2.2.1', topicTitle: 'OWASP', targetMinutes: 60 },
   } as unknown as BlockState;
@@ -34,6 +34,13 @@ describe('olhada fora do roteiro', () => {
 
   it('bloco sem tópico nunca vira olhada', () => {
     expect(peekKind(outside, null)).toBe('none');
+  });
+
+  it('sem bloco em andamento não há olhada: navegar pelos tópicos é livre, sem faixa', () => {
+    for (const phase of ['IDLE', 'DONE'] as const) {
+      const { result } = renderHook(() => usePeek({ selectedTopic: outside, blockTopic, studyBlock: controller(false, phase) }));
+      expect(result.current.kind).toBe('none');
+    }
   });
 
   it('entrar na olhada pausa o bloco em foco e voltar retoma', () => {

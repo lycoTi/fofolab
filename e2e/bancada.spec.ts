@@ -353,12 +353,14 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   const firstBlock = routineColumn(page).getByText('Arquitetura e Integração de Sistemas').first();
   await expect(firstBlock).toBeVisible();
 
-  // Árvore do grupo: olhar um tópico irmão e voltar clicando no tópico do bloco
+  // Árvore do grupo: sem bloco rodando, abrir um tópico irmão é navegar à vontade (sem faixa de olhada)
   const blockTopic = routineColumn(page).getByRole('button', { name: /\(tópico do bloco\)$/ });
   await expect(blockTopic).toBeVisible();
   const tree = routineColumn(page).getByRole('list', { name: 'Tópicos do grupo' });
-  await tree.locator('button:not([aria-label$="(tópico do bloco)"])').first().click();
-  await expect(routineColumn(page)).toContainText('não conta para o bloco de hoje');
+  const siblingButton = tree.locator('button:not([aria-label$="(tópico do bloco)"])').first();
+  await siblingButton.click();
+  await expect(siblingButton).toHaveAttribute('aria-current', 'true');
+  await expect(routineColumn(page)).not.toContainText('não conta para o bloco de hoje');
   await blockTopic.click();
   await expect(routineColumn(page)).not.toContainText('não conta para o bloco de hoje');
   await page.screenshot({ path: `${SCREENS}/10-meu-dia-do-edital.png`, fullPage: true });
