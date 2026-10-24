@@ -139,9 +139,19 @@ estudado antes — mesmo que o estudante não saiba que precisa.
   ânimo seguem na fatia 7b. O registro rápido do TEC (`question_logs`, 7b) ainda não existe; quando existir, conta
   como "já estudado".
 
+### 5.3.2 Decisões do dono em 23/10/2026 (antes do plano da 9c)
+- **Três caminhos na revisão.** O dono resolve as questões no TEC, então o banco do app quase não tem questões do plano
+  real. Para cada tópico esfriando: questão do app quando houver; senão a pergunta aberta; e, nos dois casos, o atalho
+  **"Fiz questões fora do app"**, que abre o registro rápido (7b) com o tópico — um registro de hoje conclui o item e já
+  conta para o domínio e a memória.
+- **"Bom dia" completo na 9c:** Revisão + **Situação** (dias, % visto por prova, aviso discreto de prova com nota mínima
+  ficando para trás) + **linha de ânimo** com fatos (spec 07 §5.5). O "Hoje" continua na coluna.
+- Migração: a 9c usa a **v8** (a v5 foi o roteiro congelado, v6 a assinatura do perfil, v7 o registro de fora do app).
+  Plano: `docs/superpowers/plans/2026-10-23-9c-revisao-do-dia.md`.
+
 ### 5.4 Dados
 - `question_attempts`: nova coluna `confidence TEXT NULL` (`'SURE' | 'THINK' | 'GUESS'`) + `source TEXT NULL`
-  (`'DAILY_REVIEW'` quando vier da revisão) — migração v5.
+  (`'DAILY_REVIEW'` quando vier da revisão) — migração **v8** (ver §5.3.2).
 - `daily_plans` (nova, v5): `plan_id, date (YYYY-MM-DD), blocks_json, created_at` — roteiro congelado do dia.
 - Resposta livre da pergunta aberta: **não** é gravada como tentativa (não há correção); fica só na tela.
   *(decisão do Claude: guardar texto livre sem uso definido só aumenta o banco.)*
