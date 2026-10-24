@@ -13,6 +13,8 @@ export interface OnboardingProfile {
   dailyHours: number;
   weeklyHours: number;
   strategyMode: StudyStrategy;
+  /** Revisão do dia ao abrir o app; desligada para quem já tem o próprio método de revisão. */
+  dailyReviewEnabled: boolean;
 }
 
 interface OnboardingWizardModalProps {
@@ -48,6 +50,7 @@ function profileFromPlan(plan: StudyPlan): OnboardingProfile {
     dailyHours: Math.round((weeklyHours / 7) * 10) / 10,
     weeklyHours,
     strategyMode: plan.strategy_mode ?? STRATEGY_FOR_MOMENT[studyMoment],
+    dailyReviewEnabled: plan.daily_review_enabled !== 0,
   };
 }
 
@@ -344,6 +347,11 @@ export function OnboardingWizardModal({
                 </button>
               ))}
             </div>
+
+            <DailyReviewToggle
+              checked={profile.dailyReviewEnabled}
+              onChange={(dailyReviewEnabled) => setProfile((p) => ({ ...p, dailyReviewEnabled }))}
+            />
           </div>
         )}
 
@@ -381,3 +389,15 @@ export function OnboardingWizardModal({
   );
 }
 
+/** Revisão do dia (spec 09 §5.3): ligada por padrão; quem tem o próprio método de revisão pode desligar. */
+function DailyReviewToggle({ checked, onChange }: { checked: boolean; onChange: (checked: boolean) => void }) {
+  return (
+    <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-slate-800 bg-slate-950/70 p-3.5">
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="mt-0.5 accent-orange-500" />
+      <span className="space-y-0.5">
+        <span className="block text-xs font-semibold text-slate-200">Revisão do dia ao abrir o app</span>
+        <span className="block text-[11px] text-slate-400">Desligue se você já tem seu método de revisão.</span>
+      </span>
+    </label>
+  );
+}

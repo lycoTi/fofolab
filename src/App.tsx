@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FileText, GraduationCap, HelpCircle, Flame, Layers, Network, PanelLeft, Wrench } from 'lucide-react';
+import { FileText, GraduationCap, HelpCircle, Flame, Layers, Network, PanelLeft, Sun, Wrench } from 'lucide-react';
 import { formatDuration } from './lib/timeFormat';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
@@ -31,6 +31,7 @@ import { summarizeExamParts } from './features/workbench-shell/headerSummary';
 import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from './features/workbench-shell/RightDock';
 import { RailButton, SidePanel } from './features/workbench-shell/SidePanel';
 import { useCollapsiblePanel } from './features/workbench-shell/useCollapsiblePanel';
+import { GoodMorningView } from './features/good-morning/GoodMorningView';
 import { RoutineColumn } from './features/routine/RoutineColumn';
 import { useDailyRoutine } from './features/routine/useDailyRoutine';
 import { usePeek } from './features/routine/usePeek';
@@ -112,7 +113,7 @@ import type {
   TopicLink,
 } from './types/database';
 
-type WorkbenchTab = 'questions' | 'cycle' | 'heatmap' | 'graph' | 'reader';
+type WorkbenchTab = 'today' | 'questions' | 'cycle' | 'heatmap' | 'graph' | 'reader';
 type AppMode = 'student' | 'admin';
 type DeletableKind = 'plan' | 'subject' | 'topic';
 
@@ -146,7 +147,8 @@ export default function App() {
   const [dataVersion, setDataVersion] = useState(0);
   const [questionsVersion, setQuestionsVersion] = useState(0);
   const [mode, setMode] = useState<AppMode>('student');
-  const [activeTab, setActiveTab] = useState<WorkbenchTab>('questions');
+  // O app abre no "Início" (Revisão do dia e Situação): o bloco em andamento não sobrevive a recarregar
+  const [activeTab, setActiveTab] = useState<WorkbenchTab>('today');
 
   const [wizardOpen, setWizardOpen] = useState(false);
   const [wizardInitialStep, setWizardInitialStep] = useState(1);
@@ -586,6 +588,7 @@ export default function App() {
       weekly_hours_target: profile.weeklyHours,
       strategy_mode: profile.strategyMode,
       study_moment: profile.studyMoment,
+      daily_review_enabled: profile.dailyReviewEnabled ? 1 : 0,
     });
     if (updatedPlan) {
       const planSubjects = getSubjectsByPlan(targetPlanId);
@@ -806,6 +809,13 @@ export default function App() {
     if (!item) return;
     setSelectedSubjectId(item.subject.id);
     if (item.topic) setSelectedTopicId(item.topic.id);
+    // Começou o estudo: o "Início" dá lugar à bancada
+    if (activeTab === 'today') selectTab('questions');
+  };
+
+  const openQuestionLogFor = (topicId: string) => {
+    setLogInvite({ topicId });
+    leftPanel.setOpen(true);
   };
 
   /** Tópico aberto de fora do roteiro (Mapa de Calor, Ciclo, Edital): vira "olhada", o roteiro não muda. */
@@ -1049,6 +1059,7 @@ export default function App() {
                 >
                   {(
                     [
+                      { id: 'today', label: 'Início', icon: Sun },
                       { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
                       { id: 'cycle', label: 'Ciclo', icon: Layers },
                       { id: 'heatmap', label: 'Mapa de Calor', icon: Flame },
@@ -1084,6 +1095,29 @@ export default function App() {
                         : 'flex-1 overflow-y-auto p-6 min-w-0'
                     }
                   >
+                    {activeTab === 'today' && (
+                      <GoodMorningView
+                        dbReady={dbReady}
+                        plan={activePlan}
+                        subjects={subjects}
+                        topicsBySubject={topicsBySubject}
+                        heat={cycleData?.topicHeatmapRanking ?? []}
+                        allocations={cycleData?.allocations ?? []}
+                        examParts={examParts}
+                        attempts={attempts}
+                        questionLogs={questionLogs}
+                        recallChecks={recallChecks}
+                        weekSessions={sessions}
+                        dataVersion={dataVersion}
+                        nextBlock={routine.currentItem ? { subjectName: routine.currentItem.subject.name } : null}
+                        onStartNextBlock={() => {
+                          if (routine.currentItem) startRoutineBlock(routine.currentItem);
+                        }}
+                        onRecorded={() => refreshData(currentSubject?.id, currentTopic?.id)}
+                        onLogOutside={openQuestionLogFor}
+                      />
+                    )}
+
                     {activeTab === 'questions' && (
                       <QuestionWorkbench
                         questions={topicQuestions}

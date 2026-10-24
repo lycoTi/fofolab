@@ -24,8 +24,10 @@
 - **FofoDoro + barras do Ciclo prontos** (spec 10, plano `docs/superpowers/plans/2026-10-23-10-fofodoro.md`).
 - **Atenção (nvm):** o FofoLab precisa de Node 20+; se o nvm estiver em outra versão por causa de outro projeto,
   rode os comandos com `nvm use 22.21.1` (ou só nesse terminal).
-- **Próximo:** plano da **9c** (Revisão do dia: 3–5 questões intercaladas dos tópicos esfriando, confiança, pergunta
-  aberta como transição, pode desligar). Decisões na spec 09 §5.3 e §5.3.1; usa a migração **v8** (v6 = assinatura do perfil, v7 = registro externo).
+- **9c (Revisão do dia + aba Início) pronta** (23/10): plano `docs/superpowers/plans/2026-10-23-9c-revisao-do-dia.md`,
+  migração **v8**. Também: animações do roteiro (`src/components/Collapse.tsx`).
+- **Próximo:** escolher com o dono entre o brainstorm do minerador de provas (abaixo), "um só copiloto" (FofoIA) e o
+  checklist do app desktop (BACKLOG).
 - **Depois:** o brainstorm do **minerador de provas da Cebraspe** (épico no BACKLOG; nada do TEC:
   os Termos de Uso §18.8 proíbem processar o conteúdo deles com script ou IA).
 

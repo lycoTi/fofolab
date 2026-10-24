@@ -51,7 +51,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
   const position = Math.min(items.length, doneCount + 1);
   return (
     <section aria-label="Revisão do dia" className={frame}>
-      <header className="flex items-start justify-between gap-3">
+      <div className="flex items-start justify-between gap-3">
         <div className="space-y-1">
           <h2 className="flex items-center gap-2 text-sm font-semibold text-white">
             <RotateCcw size={15} className="text-orange-400" />
@@ -62,7 +62,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
         <button type="button" onClick={props.onSkip} className="shrink-0 text-xs text-slate-400 hover:text-slate-200">
           Pular a revisão de hoje
         </button>
-      </header>
+      </div>
 
       <p className="text-xs font-medium text-orange-200">{`${current.subjectName} · ${current.topicLabel}`}</p>
 
@@ -72,7 +72,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
         <ReviewOpenPrompt key={current.item.topicId} topicLabel={current.topicLabel} notebookExcerpt={current.notebookExcerpt} onRate={props.onRate} />
       )}
 
-      <footer className="border-t border-slate-800 pt-3">
+      <div className="border-t border-slate-800 pt-3">
         <button
           type="button"
           onClick={() => props.onOutside(current.item.topicId)}
@@ -81,7 +81,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
           <ClipboardList size={13} />
           Fiz questões fora do app
         </button>
-      </footer>
+      </div>
     </section>
   );
 }

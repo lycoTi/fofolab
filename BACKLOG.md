@@ -74,7 +74,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Revisão independente: desfazer age pelo id e só volta o domínio se nada mudou depois; recalcula a data de estudo;
   tópico pai não recebe registro; registros com menos de 5 questões não contam como "dominei"/lacuna; trocar de plano ou
   restaurar o banco limpa o convite; excluir avisa quantos registros vão junto.
-- **Tela "Bom dia"** (spec 07 §5.5: situação por prova e linha de ânimo com fatos) — junto com a 9c (Revisão do dia).
+- [DONE] **Tela "Bom dia"** (spec 07 §5.5) — entregue com a 9c como aba **Início** (ver 9c abaixo).
 - **Mapa de incidência das bancas** (spec `08`, **rascunho — rodar o brainstorming antes de construir**): o que cada banca/órgão/área realmente cobra, a partir das provas catalogadas, cruzado com o mapa pessoal. Junto com o módulo de questões.
 - **9 — Bancada única (spec `09`, aprovada em 22/10/2026):** [DONE] **9a casca** (22/10/2026, plano
   `docs/superpowers/plans/2026-10-22-9a-casca-da-bancada.md`): cabeçalho fixo de ponta a ponta (concurso, dias, "P1 x% visto"),
@@ -95,8 +95,23 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Ajustes pedidos pelo dono (22/10): irmãos do bloco como "Outros tópicos do mesmo grupo" (sem recuo de filho, até 3 +
   "Ver mais", selecionado com fundo e contorno); barrinha de progresso no relógio do cabeçalho (pomodoro/pausa) e no bloco
   atual da coluna (anda ao vivo); clicar no relógio do cabeçalho leva ao Ciclo.
-  → 9c Revisão do dia (usará a migração **v8**; v6 = assinatura do perfil no roteiro, v7 = registro externo) (3–5 questões intercaladas dos
-  tópicos esfriando, confiança, pergunta aberta como transição, pode desligar).
+  [DONE] **9c Revisão do dia + Início** (23/10/2026, plano `docs/superpowers/plans/2026-10-23-9c-revisao-do-dia.md`, decisões
+  do dono na spec 09 §5.3.2): aba **Início** (primeira; abre sozinha; título Bom dia/Boa tarde/Boa noite) com linha de ânimo
+  factual do último dia de estudo, **Revisão do dia** e **Situação** (dias, % visto por prova, um aviso `amber` para prova
+  com nota mínima ≥ 20 pontos atrás das outras) e o atalho "Começar o bloco de ‹matéria›" (leva à aba Questões).
+  Revisão: até 5 tópicos já estudados e não estudados hoje — até 2 do último dia de estudo, o resto dos que mais esfriaram
+  (`R < 0,9`), intercalados por matéria; congelada no dia (migração **v8**: `daily_reviews`, `recall_checks`, confiança e
+  origem em `question_attempts`, `daily_review_enabled` no plano). Três caminhos: questão do app (confiança antes,
+  correção logo depois, diagnóstico já marcado e trocável; grava no "Próxima"), pergunta aberta (lembrar → ver anotações →
+  Lembrei bem/em parte/não lembrei = ±0,5 na meia-vida, domínio intacto) e "Fiz questões fora do app" (abre o registro
+  rápido com o tópico; o registro conclui o item). Cada item feito grava uma sessão `REVIEW` (conta na semana, não no
+  roteiro). "Pular a revisão de hoje" sem penalidade; desligar na caixa do último passo do Wizard. Testes: unit (seleção,
+  progresso, textos, cartões, hook, migração v8 nos dois caminhos) + E2E `e2e/revisao.spec.ts` (responder, recarregar no
+  meio, concluir e continuar feita; registro de fora conclui o item; desligada no Wizard). `npm test` (282), `test:e2e`
+  (25, 2 rodadas) e `build` verdes.
+- [DONE] **Animações do roteiro (23/10):** blocos feito/atual/próximo, árvore de tópicos ao dar play, FofoDoro, prévia,
+  registro rápido e faixas do topo abrem e fecham com altura animada (`src/components/Collapse.tsx`, só CSS, respeita
+  "reduzir movimento"); os modais ganharam o fade que a classe `animate-fade-in` nunca teve.
 - [DONE] **FofoDoro (spec 10, 23/10):** pomodoro no bloco atual da coluna Hoje (opção A), relógio em anel, pausa curta
   proporcional ao foco e pausa longa a cada N (contando entre blocos do dia), ajustes lembrados, prévia do bloco, avisos
   em toast, foco nunca recomeça sozinho; resumo do fim do dia e totais (hoje/semana/ano/tudo) no Ciclo. 219 unit + 22 E2E.
@@ -116,4 +131,4 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias — formato preferido pela esposa do dono, segunda usuária); tópicos relacionados entre matérias.
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
-- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (383 linhas) e `App.tsx` (~1180) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
+- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~400 linhas) e `App.tsx` (~1380) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
