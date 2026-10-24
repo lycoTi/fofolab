@@ -128,6 +128,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   em toast, foco nunca recomeça sozinho; resumo do fim do dia e totais (hoje/semana/ano/tudo) no Ciclo. 219 unit + 22 E2E.
 - [DONE] **Barras do tempo reservado no Ciclo** (comprimento proporcional à matéria com mais tempo; preenchimento = estudado).
 - **Nome da aba Ciclo:** quando o cronograma entrar, ciclo e cronograma ficam na mesma aba; renomear (ex.: "Plano de estudo").
+- **Topo da aba Ciclo → redesenhar junto com o cronograma (decisão do dono, 23/10):** a lista por prova está boa; o topo
+  não. Os totais "Hoje / Esta semana / Este ano / Desde o começo" não ajudam a decidir nada (o Início já mostra as últimas 4
+  semanas). Proposta para o brainstorm do cronograma: o topo vira **"Sua semana"** — feito × meta com **uma barrinha por
+  dia** (seg–dom, com a meta de cada dia), que é onde o cronograma encaixa; as horas por semana e a estratégia continuam
+  recolhidas em "Ajustar"; as sugestões do ciclo ficam logo abaixo. Até lá, nada muda.
 - **Questões: um só copiloto (pedido do dono, 22/10):** o painel "Explicação & Estudo Reverso" ao lado da questão repete o
   papel do Copiloto da coluna direita. Avaliar fundir o Estudo Reverso no copiloto e dar a ele a voz do hamster
   (nome amigável: **FofoIA** ou **FofoPiloto**), liberando espaço para a questão. Brainstorm antes de construir.
