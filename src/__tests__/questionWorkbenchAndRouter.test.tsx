@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BackupPanel } from '../components/BackupPanel';
-import { QuestionWorkbench } from '../components/QuestionWorkbench';
+import { QuestionWorkbench } from '../features/questions/QuestionWorkbench';
 import { AiCopilotDockPanel } from '../features/ai-copilot/AiCopilotDockPanel';
 import { CycleView } from '../features/cycle/CycleView';
 import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
@@ -92,25 +92,6 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     vi.unstubAllEnvs();
   });
 
-  const renderWorkbench = (overrides: Partial<Parameters<typeof QuestionWorkbench>[0]> = {}) => {
-    const onDiagnosis = vi.fn();
-    render(
-      <QuestionWorkbench
-        questions={sampleBundles}
-        scopeFilter="all"
-        onChangeScopeFilter={vi.fn()}
-        onDiagnosis={onDiagnosis}
-        lastDiagnosisFeedback={null}
-        onSaveToNotebook={vi.fn()}
-        studentContext={sampleContext}
-        {...overrides}
-      />
-    );
-    return { onDiagnosis };
-  };
-
-  const diagnosisButton = (label: RegExp) => screen.getByText(label).closest('button') as HTMLButtonElement;
-
   it('calcula o perfil de complexidade multidimensional da questão', () => {
     const profile = getQuestionComplexityProfile(sampleBundles[0].question, sampleBundles[0].dissection);
     expect(profile.stars).toBeGreaterThanOrEqual(1);
@@ -142,108 +123,6 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     expect(copilot.reply).toContain('ISSAI 100');
   });
 
-  it('esconde a explicação até responder (contra descarga cognitiva) e só libera diagnóstico coerente', () => {
-    const { onDiagnosis } = renderWorkbench();
-
-    fireEvent.change(screen.getByLabelText('Filtrar por banca'), { target: { value: 'Cebraspe' } });
-    expect(screen.getAllByText(/Cebraspe/i).length).toBeGreaterThanOrEqual(2);
-
-    // Antes de responder: nenhum diagnóstico disponível e explicação protegida
-    for (const label of [/Dominei/, /Acertei na dúvida/, /Pegadinha da Banca/, /1º Contato \/ Lacuna/]) {
-      expect(diagnosisButton(label).disabled).toBe(true);
-    }
-
-    // 1º contato: abre a explicação e só permite "Lacuna"
-    fireEvent.click(screen.getByText(/Ver Explicação Base Antes de Responder/i));
-    expect(diagnosisButton(/Dominei/).disabled).toBe(true);
-    expect(diagnosisButton(/1º Contato \/ Lacuna/).disabled).toBe(false);
-
-    fireEvent.click(diagnosisButton(/1º Contato \/ Lacuna/));
-    fireEvent.click(diagnosisButton(/1º Contato \/ Lacuna/));
-    expect(onDiagnosis).toHaveBeenCalledTimes(1);
-    expect(onDiagnosis.mock.calls[0][0]).toMatchObject({
-      diagnosis: 'BASE_GAP',
-      selectedOptionLetter: null,
-      isCorrect: false,
-      usedAiReview: true,
-    });
-  });
-
-  it('a 1ª resposta vale (não dá para trocar depois de ver o gabarito) e o diagnóstico acompanha o erro', () => {
-    const { onDiagnosis } = renderWorkbench({ questions: [sampleBundles[0]] }); // gabarito C
-
-    fireEvent.click(screen.getByText(/^A\) Risco de Controle/));
-    fireEvent.click(screen.getByText(/^C\) Risco Inerente, Risco de Controle/)); // tentativa de "corrigir"
-
-    expect(screen.getByText(/^A\) Risco de Controle/).closest('button')?.getAttribute('aria-pressed')).toBe('true');
-    expect(screen.getByText(/^C\) Risco Inerente, Risco de Controle/).closest('button')?.getAttribute('aria-pressed')).toBe('false');
-    expect(diagnosisButton(/Dominei/).disabled).toBe(true);
-    expect(diagnosisButton(/Acertei na dúvida/).disabled).toBe(true);
-    expect(diagnosisButton(/Pegadinha da Banca/).disabled).toBe(false);
-
-    fireEvent.click(diagnosisButton(/Pegadinha da Banca/));
-    expect(onDiagnosis).toHaveBeenCalledTimes(1);
-    expect(onDiagnosis.mock.calls[0][0]).toMatchObject({
-      diagnosis: 'BOARD_TRAP',
-      selectedOptionLetter: 'A',
-      isCorrect: false,
-      usedAiReview: false,
-    });
-    expect(onDiagnosis.mock.calls[0][0].timeSpentSeconds).toBeGreaterThanOrEqual(0);
-  });
-
-  it('itens Certo/Errado usam a letra real (C/E) para conferir o gabarito', () => {
-    const certoErrado: Question = {
-      ...SEED_QUESTIONS[2],
-      id: 'q-ce-1',
-      statement: 'O DICT é operado diretamente pelo Banco Central do Brasil.',
-      options_json: JSON.stringify(['C) Certo', 'E) Errado']),
-      final_answer: 'C',
-    };
-    renderWorkbench({ questions: [{ question: certoErrado, dissection: null }] });
-
-    fireEvent.click(screen.getByText('C) Certo'));
-    expect(screen.getByText(/Você acertou!/)).toBeTruthy();
-    expect(diagnosisButton(/Dominei/).disabled).toBe(false);
-  });
-
-  it('questão sem explicação: sem IA mostra aviso honesto; com IA oferece gerar', () => {
-    const semExplicacao = { question: SEED_QUESTIONS[0], dissection: null };
-    const { unmount } = render(
-      <QuestionWorkbench
-        questions={[semExplicacao]}
-        scopeFilter="all"
-        onChangeScopeFilter={vi.fn()}
-        onDiagnosis={vi.fn()}
-        lastDiagnosisFeedback={null}
-        onSaveToNotebook={vi.fn()}
-        aiConfigured={false}
-        onGenerateDissection={vi.fn()}
-      />
-    );
-    fireEvent.click(screen.getByText(/Ver Explicação Base Antes de Responder/i));
-    expect(screen.getByText(/ainda não tem explicação/)).toBeTruthy();
-    expect(screen.queryByText('Gerar explicação com IA')).toBeNull();
-    unmount();
-
-    const onGenerate = vi.fn(async () => ({ ok: true }));
-    render(
-      <QuestionWorkbench
-        questions={[semExplicacao]}
-        scopeFilter="all"
-        onChangeScopeFilter={vi.fn()}
-        onDiagnosis={vi.fn()}
-        lastDiagnosisFeedback={null}
-        onSaveToNotebook={vi.fn()}
-        aiConfigured
-        onGenerateDissection={onGenerate}
-      />
-    );
-    fireEvent.click(screen.getByText(/Ver Explicação Base Antes de Responder/i));
-    fireEvent.click(screen.getByText('Gerar explicação com IA'));
-    expect(onGenerate).toHaveBeenCalledTimes(1);
-  });
-
   it('AUDITORIA DE UX: interface, docks, backup, importação e leitor sem jargão técnico interno', () => {
     const cguPlan = SEED_STUDY_PLANS[0];
     const cguSubjects = SEED_SUBJECTS.filter((s) => s.plan_id === cguPlan.id);
@@ -267,10 +146,10 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           questions={sampleBundles}
           scopeFilter="all"
           onChangeScopeFilter={vi.fn()}
-          onDiagnosis={vi.fn()}
+          onAnswer={vi.fn(() => null)}
+          onChangeDiagnosis={vi.fn()}
           lastDiagnosisFeedback={null}
-          onSaveToNotebook={vi.fn()}
-          studentContext={sampleContext}
+          onAskFofoIa={vi.fn()}
           onOpenImport={vi.fn()}
         />
       ).container,

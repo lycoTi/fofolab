@@ -13,11 +13,14 @@ export function AnswerCorrection({
   question,
   isCorrect,
   dissection,
+  firstContact = false,
   children,
 }: {
   question: Question;
   isCorrect: boolean;
   dissection: AiDissection | null;
+  /** Abriu a explicação antes de responder: acolhe como primeiro contato, sem "acertou/errou". */
+  firstContact?: boolean;
   children?: ReactNode;
 }) {
   const options = parseQuestionOptions(question.options_json);
@@ -26,10 +29,7 @@ export function AnswerCorrection({
   const name = correct ? optionName(correct, isCertoErradoOptions(options)) : key;
   return (
     <div className="fofolab-enter space-y-3 rounded-xl border border-slate-800 bg-slate-950/60 p-3">
-      <p className={`flex items-center gap-1.5 text-sm font-semibold ${isCorrect ? 'text-emerald-300' : 'text-amber-300'}`}>
-        {isCorrect ? <CheckCircle2 size={15} /> : <CircleHelp size={15} />}
-        {isCorrect ? 'Você acertou.' : 'Não foi desta vez. Errar agora ajuda a fixar a resposta certa.'}
-      </p>
+      <Verdict isCorrect={isCorrect} firstContact={firstContact} />
       <p className="text-xs text-slate-300">{`Gabarito: ${key}${name !== key ? ` · ${name}` : ''}`}</p>
       {dissection && (
         <div className="space-y-1">
@@ -41,5 +41,17 @@ export function AnswerCorrection({
       )}
       {children}
     </div>
+  );
+}
+
+function Verdict({ isCorrect, firstContact }: { isCorrect: boolean; firstContact: boolean }) {
+  if (firstContact) {
+    return <p className="text-sm font-semibold text-blue-200">Em mapeamento inicial: primeiro contato com esta questão.</p>;
+  }
+  return (
+    <p className={`flex items-center gap-1.5 text-sm font-semibold ${isCorrect ? 'text-emerald-300' : 'text-amber-300'}`}>
+      {isCorrect ? <CheckCircle2 size={15} /> : <CircleHelp size={15} />}
+      {isCorrect ? 'Você acertou.' : 'Não foi desta vez. Errar agora ajuda a fixar a resposta certa.'}
+    </p>
   );
 }

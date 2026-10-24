@@ -11,7 +11,7 @@ const TRANSITION_MS = 300;
 async function openPro(page: Page) {
   await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
   await page.goto('/');
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
 }
 
 const leftColumn = (page: Page) => page.getByRole('complementary', { name: 'Coluna do roteiro' });
@@ -100,7 +100,7 @@ test('mexer nos painéis durante a leitura não deixa a preferência diferente d
   await openPro(page);
   await page.getByRole('button', { name: /Leitura de PDF/ }).click();
   await page.getByRole('button', { name: 'Recolher Copiloto e Caderno' }).click();
-  await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
+  await page.getByRole('button', { name: 'Questões', exact: true }).click();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');
   await page.reload();
   await expect(rightColumn(page)).not.toHaveCSS('width', '44px');

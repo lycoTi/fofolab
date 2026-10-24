@@ -9,7 +9,7 @@ const SCREENS = 'e2e/.screens';
 async function openApp(page: Page) {
   await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
   await page.goto('/');
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
 }
 
 const column = (page: Page) => page.getByLabel('Roteiro de hoje');
@@ -44,7 +44,7 @@ test('registrar questões feitas fora do app vira evidência e sobrevive a fecha
   await page.screenshot({ path: `${SCREENS}/11-registro-externo.png` });
 
   await page.reload();
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
   expect(await questionsShownInHeatmap(page, topicLabel)).toContain('20 questões');
 });
 

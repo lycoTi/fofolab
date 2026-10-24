@@ -11,7 +11,7 @@ const MIN = 60_000;
 async function openApp(page: Page) {
   await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
   await page.goto('/');
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
 }
 
 const column = (page: Page) => page.getByLabel('Roteiro de hoje');
@@ -78,5 +78,5 @@ test('recarregar a página no meio do bloco não perde o FofoDoro', async ({ pag
   await expect(column(page).getByRole('group', { name: 'FofoDoro' }).getByRole('img', { name: /^Foco:/ })).toBeVisible();
   await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
   // Abre na bancada (o bloco segue), não no Início
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toHaveClass(/border-orange-500/);
 });

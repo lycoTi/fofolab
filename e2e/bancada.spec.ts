@@ -14,7 +14,7 @@ async function skipWizard(page: Page) {
 
 /** Meu Dia e Bancada viraram uma tela só (spec 09): a bancada já abre com o roteiro na coluna. */
 async function openPro(page: Page) {
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
 }
 
 const routineColumn = (page: Page) => page.getByLabel('Roteiro de hoje');
@@ -136,11 +136,13 @@ Gabarito: B`);
   await page.getByRole('button', { name: 'Fechar importação' }).click();
   await expect(page.getByText(/Enunciado E2E sobre amostragem/)).toBeVisible();
 
+  // Confiança antes das alternativas (spec 11); errar grava na hora como "Não sabia" e o "Por quê?" corrige
+  await page.getByRole('button', { name: 'Acho que sei', exact: true }).click();
   await page.getByRole('button', { name: /^A\) A amostragem elimina/ }).click();
-  await expect(page.getByText(/Gabarito oficial: Letra B/)).toBeVisible();
-  await expect(page.getByRole('button', { name: /Dominei/ })).toBeDisabled();
-  await page.getByRole('button', { name: /1º Contato \/ Lacuna/ }).click();
-  await expect(page.getByText(/registrado! Domínio/)).toBeVisible();
+  await expect(page.getByText(/^Gabarito: B/)).toBeVisible();
+  await expect(page.getByText(/Não sabia registrado\. Domínio do tópico/)).toBeVisible();
+  await page.getByRole('button', { name: /Confundi com outra coisa/ }).click();
+  await expect(page.getByText(/Confundi com outra coisa registrado/)).toBeVisible();
   await expect(page.getByText('Esta questão ainda não tem explicação.')).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/03-questao-importada.png` });
 
@@ -283,7 +285,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
 
   await page.getByRole('button', { name: 'Maximizar leitura' }).click();
   await expect(page.getByRole('button', { name: 'Recalibrar perfil' })).toBeHidden();
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeHidden();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeHidden();
   // O caderno continua ao lado até ser escondido pelo botão do próprio leitor
   await expect(page.getByLabel('Conteúdo do caderno do tópico')).toBeVisible();
   await page.getByTitle('Mostrar ou esconder o caderno ao lado').click();
@@ -295,7 +297,7 @@ test('leitura maximizada esconde menus e painéis, Esc restaura, e a largura do 
   await expect(page.getByRole('button', { name: 'Recalibrar perfil' })).toBeVisible();
 
   // Saindo da leitura, os painéis voltam como estavam
-  await page.getByRole('button', { name: /Questões & Estudo Reverso/ }).click();
+  await page.getByRole('button', { name: 'Questões', exact: true }).click();
   await expect(page.getByRole('complementary', { name: 'Coluna do roteiro' })).not.toHaveCSS('width', '44px');
   await expect(page.getByRole('region', { name: 'Painel Copiloto IA Contextual' })).toBeVisible();
 
@@ -413,5 +415,5 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
   await squares.first().click();
   await page.screenshot({ path: `${SCREENS}/13-mapa-de-calor.png`, fullPage: true });
   await page.getByRole('button', { name: /Estudar este tópico/ }).click();
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toBeVisible();
 });

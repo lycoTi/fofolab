@@ -114,7 +114,7 @@ test('revisão desligada no Wizard não aparece no Início', async ({ page }) =>
 test('começar o bloco pelo Início leva à bancada e não reinicia um bloco em andamento', async ({ page }) => {
   await openApp(page);
   await page.getByRole('button', { name: /^Começar o bloco de / }).click();
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toHaveClass(/border-orange-500/);
   await expect(page.getByLabel('Relógio do bloco')).toBeVisible();
 
   // De volta ao Início com o bloco rodando: sem o botão que recomeçaria o bloco do zero
@@ -134,6 +134,6 @@ test('Início: cobertura × proficiência, ritmo, últimas 4 semanas, calibraç�
 
   const resume = page.getByRole('region', { name: 'Continuar de onde parou' });
   await resume.getByRole('button', { name: /Última anotação/ }).click();
-  await expect(page.getByRole('button', { name: /Questões & Estudo Reverso/ })).toHaveClass(/border-orange-500/);
+  await expect(page.getByRole('button', { name: 'Questões', exact: true })).toHaveClass(/border-orange-500/);
   await expect(page.getByRole('tab', { name: 'Caderno' })).toHaveAttribute('aria-selected', 'true');
 });

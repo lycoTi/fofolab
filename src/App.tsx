@@ -3,7 +3,8 @@ import { FileText, GraduationCap, HelpCircle, Flame, Layers, Network, PanelLeft,
 import { formatDuration } from './lib/timeFormat';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
-import { QuestionWorkbench, type DiagnosisSubmission } from './components/QuestionWorkbench';
+import { QuestionWorkbench, type AnswerSubmission } from './features/questions/QuestionWorkbench';
+import { DIAGNOSIS_LABEL } from './lib/answerLabels';
 import { useResizableWidth } from './components/ResizeHandle';
 import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
@@ -74,13 +75,13 @@ import {
   initDatabase,
   listDatabaseBackups,
   recordQuestionDiagnosis,
+  updateAttemptDiagnosis,
   recordStudySession,
   resetDatabaseToSeed,
   restoreDatabaseBackup,
   restoreDatabaseFromBytes,
   saveAiDissection,
   savePdfSourceProgress,
-  saveQuestionChatHistory,
   saveSelfAssessment,
   setActiveStudyPlan,
   updateStudyPlan,
@@ -106,6 +107,7 @@ import type {
   QuestionAttempt,
   QuestionLog,
   RecallCheck,
+  SelfDiagnosisType,
   StudyPlan,
   StudySession,
   Subject,
@@ -184,6 +186,8 @@ export default function App() {
   const [questionScope, setQuestionScope] = useState<'topic' | 'subject' | 'all'>('topic');
   const [topicQuestions, setTopicQuestions] = useState<{ question: Question; dissection: AiDissection | null }[]>([]);
   const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
+  // Questão na tela da aba Questões (a FofoIA só recebe o gabarito depois de respondida)
+  const [activeQuestion, setActiveQuestion] = useState<{ question: Question; answered: boolean } | null>(null);
   const [questionFallback, setQuestionFallback] = useState<QuestionFallback>(null);
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
@@ -485,13 +489,13 @@ export default function App() {
     refreshData(firstSubj, firstTopic);
   };
 
-  const handleDiagnosis = (submission: DiagnosisSubmission) => {
+  // Aba Questões (spec 11): a tentativa é gravada ao responder; trocar o diagnóstico corrige a mesma tentativa
+  const handleAnswer = (submission: AnswerSubmission): { attemptId: string } | null => {
     const { question } = submission;
     const targetTopicId = question.topic_id || currentTopic?.id;
-    if (!targetTopicId) return;
-
+    if (!targetTopicId) return null;
     try {
-      const { updatedTopic, deltaMastery, sampleConfidencePercent } = recordQuestionDiagnosis({
+      const { attemptId, updatedTopic, sampleConfidencePercent } = recordQuestionDiagnosis({
         questionId: question.id,
         topicId: targetTopicId,
         selectedOption: submission.selectedOptionLetter,
@@ -499,14 +503,27 @@ export default function App() {
         selfDiagnosis: submission.diagnosis,
         timeSpentSeconds: submission.timeSpentSeconds,
         usedAiReview: submission.usedAiReview,
+        confidence: submission.confidence ?? undefined,
       });
-      const sign = deltaMastery > 0 ? `+${deltaMastery}%` : `${deltaMastery}%`;
       setLastDiagnosisMsg(
-        `${submission.label} registrado! Domínio: ${updatedTopic?.mastery_score ?? 0}% (${sign}) • Confiança da Amostra: ${sampleConfidencePercent}%`
+        `${DIAGNOSIS_LABEL[submission.diagnosis]} registrado. Domínio do tópico: ${updatedTopic?.mastery_score ?? 0}% • Confiança da amostra: ${sampleConfidencePercent}%`
       );
       refreshData(currentSubject?.id, currentTopic?.id);
+      return { attemptId };
     } catch (err) {
-      setLastDiagnosisMsg(err instanceof Error ? err.message : 'Não foi possível registrar o diagnóstico.');
+      setLastDiagnosisMsg(err instanceof Error ? err.message : 'Não foi possível registrar a resposta.');
+      return null;
+    }
+  };
+
+  const handleChangeDiagnosis = (attemptId: string, diagnosis: SelfDiagnosisType) => {
+    try {
+      const { updatedTopic } = updateAttemptDiagnosis(attemptId, diagnosis);
+      const mastery = updatedTopic ? ` Domínio do tópico: ${updatedTopic.mastery_score}%` : '';
+      setLastDiagnosisMsg(`${DIAGNOSIS_LABEL[diagnosis]} registrado.${mastery}`);
+      refreshData(currentSubject?.id, currentTopic?.id);
+    } catch (err) {
+      setLastDiagnosisMsg(err instanceof Error ? err.message : 'Não foi possível trocar o diagnóstico.');
     }
   };
 
@@ -1065,7 +1082,7 @@ export default function App() {
                   {(
                     [
                       { id: 'today', label: 'Início', icon: Sun },
-                      { id: 'questions', label: 'Questões & Estudo Reverso', icon: HelpCircle },
+                      { id: 'questions', label: 'Questões', icon: HelpCircle },
                       { id: 'cycle', label: 'Ciclo', icon: Layers },
                       { id: 'heatmap', label: 'Mapa de Calor', icon: Flame },
                       { id: 'reader', label: 'Leitura de PDF', icon: FileText },
@@ -1142,11 +1159,14 @@ export default function App() {
                         questions={topicQuestions}
                         scopeFilter={questionScope}
                         onChangeScopeFilter={setQuestionScope}
-                        onDiagnosis={handleDiagnosis}
+                        onAnswer={handleAnswer}
+                        onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}
-                        onSaveToNotebook={handleAppendNotesToNotebook}
-                        onSaveChatHistory={(qId, chatJson) => saveQuestionChatHistory(qId, chatJson)}
-                        studentContext={studentContext}
+                        onActiveQuestionChange={setActiveQuestion}
+                        onAskFofoIa={() => {
+                          rightTab.setTab('copilot');
+                          rightPanel.setOpen(true);
+                        }}
                         onGenerateDissection={handleGenerateDissection}
                         onOpenImport={() => setImportOpen(true)}
                         aiConfigured={aiStatus.configured}
@@ -1258,7 +1278,7 @@ export default function App() {
               studentContext ? (
                 <AiCopilotDockPanel
                   context={studentContext}
-                  activeQuestion={topicQuestions[0]?.question || null}
+                  activeQuestion={activeQuestion?.answered ? activeQuestion.question : null}
                   notebookExcerpt={notebook.draft}
                   onSaveToNotebook={handleAppendNotesToNotebook}
                   onCloseDock={() => rightPanel.setOpen(false)}
