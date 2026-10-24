@@ -39,7 +39,9 @@ CREATE TABLE IF NOT EXISTS study_plans (
     min_total_score REAL,                  -- Nota mínima no conjunto das provas objetivas
     selected_role TEXT,                    -- Cargo/especialidade escolhido no edital
     -- [v8] Revisão do dia ao abrir o app (1 = ligada; o estudante pode desligar na calibragem)
-    daily_review_enabled INTEGER NOT NULL DEFAULT 1
+    daily_review_enabled INTEGER NOT NULL DEFAULT 1,
+    -- [v9] FofoIA: aquecimento/convite antes da aula num tópico nunca tentado (0 = "Tenho meu método")
+    productive_failure_hints INTEGER NOT NULL DEFAULT 1
 );
 
 -- [v4] Provas objetivas do edital (P1, P2, P3…) com pontuação e nota mínima eliminatória

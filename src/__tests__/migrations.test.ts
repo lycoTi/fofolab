@@ -46,7 +46,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const result = prepareSchema(db, latestSchemaSql);
     expect(result.created).toBe(false);
     expect(result.previousVersion).toBe(1);
-    expect(result.appliedMigrations).toEqual([2, 3, 4, 5, 6, 7, 8]);
+    expect(result.appliedMigrations).toEqual([2, 3, 4, 5, 6, 7, 8, 9]);
     expect(getUserVersion(db)).toBe(LATEST_SCHEMA_VERSION);
     db.close();
   });
@@ -69,7 +69,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     db.run('PRAGMA user_version = 5;');
 
     const result = prepareSchema(db, latestSchemaSql);
-    expect(result.appliedMigrations).toEqual([6, 7, 8]);
+    expect(result.appliedMigrations).toEqual([6, 7, 8, 9]);
     const columns = db.exec('PRAGMA table_info(daily_plans)')[0].values.map((row) => row[1]);
     expect(columns).toContain('profile_key');
     expect(db.exec('SELECT COUNT(*) FROM daily_plans')[0].values[0][0]).toBe(1);
@@ -80,7 +80,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const db = new SQL.Database();
     prepareSchema(db, latestSchemaSql);
     db.run('PRAGMA user_version = 5;');
-    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([6, 7, 8]);
+    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([6, 7, 8, 9]);
     db.close();
   });
 

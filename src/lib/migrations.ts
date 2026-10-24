@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 8;
+export const LATEST_SCHEMA_VERSION = 9;
 
 export interface Migration {
   version: number;
@@ -137,6 +137,17 @@ export const MIGRATIONS: Migration[] = [
         rating TEXT NOT NULL,
         checked_at DATETIME DEFAULT CURRENT_TIMESTAMP
       )`);
+    },
+  },
+  {
+    version: 9,
+    description: 'FofoIA (spec 11 §5.4): opção "Tenho meu método" para as dicas de tentar antes da aula',
+    up: (db) => {
+      // Idempotente (como a v6 e a v8)
+      const columns = db.exec('PRAGMA table_info(study_plans)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('productive_failure_hints')) {
+        db.run('ALTER TABLE study_plans ADD COLUMN productive_failure_hints INTEGER NOT NULL DEFAULT 1');
+      }
     },
   },
 ];

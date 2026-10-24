@@ -468,8 +468,8 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     expect(db.localDateKey(new Date(2026, 9, 23, 0, 1))).toBe('2026-10-23');
   });
 
-  it('o banco está na versão da revisão do dia', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(8);
+  it('o banco está na versão da FofoIA (tenho meu método)', () => {
+    expect(LATEST_SCHEMA_VERSION).toBe(9);
   });
 });
 
@@ -727,5 +727,13 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     const plan = db.getActiveStudyPlan()!;
     expect(plan.daily_review_enabled).toBe(1);
     expect(db.updateStudyPlan({ id: plan.id, daily_review_enabled: 0 })!.daily_review_enabled).toBe(0);
+  });
+
+  it('plano nasce com as dicas de tentar antes da aula ligadas; "Tenho meu método" desliga (v9)', async () => {
+    const { db } = await openDatabase();
+    const plan = db.getActiveStudyPlan()!;
+    expect(plan.productive_failure_hints).toBe(1);
+    expect(db.updateStudyPlan({ id: plan.id, productive_failure_hints: 0 })!.productive_failure_hints).toBe(0);
+    expect(db.getActiveStudyPlan()!.daily_review_enabled).toBe(1);
   });
 });

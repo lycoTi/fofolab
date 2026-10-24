@@ -761,7 +761,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
   db.run(
     `UPDATE study_plans
      SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?,
-         strategy_mode = ?, study_moment = ?, daily_review_enabled = ?
+         strategy_mode = ?, study_moment = ?, daily_review_enabled = ?, productive_failure_hints = ?
      WHERE id = ?`,
     [
       input.title ?? existing.title,
@@ -773,6 +773,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
       input.strategy_mode !== undefined ? input.strategy_mode : existing.strategy_mode,
       input.study_moment !== undefined ? input.study_moment : existing.study_moment,
       input.daily_review_enabled ?? existing.daily_review_enabled ?? 1,
+      input.productive_failure_hints ?? existing.productive_failure_hints ?? 1,
       input.id,
     ]
   );

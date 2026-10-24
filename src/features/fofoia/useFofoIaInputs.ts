@@ -28,7 +28,7 @@ export function useFofoIaInputs(params: {
   currentTopic: Topic | null;
   currentNotebookDraft: string;
   appendToCurrentNotebook: (markdown: string) => void;
-}): Omit<FofoIaPanelProps, 'aiConfigured' | 'request' | 'onWiden'> | null {
+}): Omit<FofoIaPanelProps, 'aiConfigured' | 'request' | 'onWiden' | 'warmupEnabled' | 'topicHasQuestions' | 'onTryQuestions'> | null {
   const { studentContext, cycleData, subjects, topicsBySubject, examParts, activeQuestion, attempts, questionLogs, currentTopic } = params;
   const allTopics = useMemo(() => Object.values(topicsBySubject).flat(), [topicsBySubject]);
   const topic = allTopics.find((t) => t.id === activeQuestion?.question.topic_id) ?? currentTopic;

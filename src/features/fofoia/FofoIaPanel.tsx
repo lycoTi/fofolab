@@ -7,6 +7,8 @@ import type { FofoMode } from '../../lib/fofoia/signals';
 import type { AiDissection, Question, SelfDiagnosisType } from '../../types/database';
 import { FofoMessage } from './FofoMessage';
 import { useFofoConversation } from './useFofoConversation';
+import { WarmupInvite } from './WarmupInvite';
+import { markWarmupSeen, warmupSeen } from './warmup';
 
 /** Largura mínima da coluna enquanto se lê uma aula completa (spec 11 §5.1). */
 export const LESSON_MIN_WIDTH = 560;
@@ -34,6 +36,10 @@ export interface FofoIaPanelProps {
   request: { id: number; kind: 'deepen' | 'hint' } | null;
   onWiden: (minWidth: number) => void;
   onSaveSummary: (markdown: string) => void;
+  /** Aquecimento antes da aula num tópico nunca tentado (desligado por "Tenho meu método"). */
+  warmupEnabled: boolean;
+  topicHasQuestions: boolean;
+  onTryQuestions: () => void;
 }
 
 const shortcut = 'rounded-lg border border-slate-700 px-2.5 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
@@ -60,6 +66,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   });
   const [draft, setDraft] = useState('');
   const [pending, setPending] = useState<FofoMode | null>(null);
+  const [warmup, setWarmup] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const handledRequest = useRef<number | null>(null);
   const unanswered = activeQuestion !== null && !activeQuestion.answered;
@@ -70,9 +77,18 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     if (list) list.scrollTop = list.scrollHeight;
   }, [turns.length, loading]);
 
-  const lesson = (part?: number) => {
+  const startLesson = (part?: number, guess = '') => {
     props.onWiden(LESSON_MIN_WIDTH);
-    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${topicLabel}`, 'LESSON', part);
+    const palpite = guess.trim() ? ` Meu palpite antes da aula: ${guess.trim()}` : '';
+    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${topicLabel}.${palpite}`, 'LESSON', part);
+  };
+  // Tópico nunca tentado: antes da primeira aula, o aquecimento (uma vez por tópico)
+  const lesson = (part?: number) => {
+    if (!part && props.warmupEnabled && props.firstContact && !warmupSeen(props.topicKey)) {
+      setWarmup(true);
+      return;
+    }
+    startLesson(part);
   };
   const hint = () => void send('Me dá uma pista?', 'HINT');
 
@@ -120,6 +136,22 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             onRetry={() => turn.retry && void send(turn.retry.message, turn.retry.requested, turn.retry.part)}
           />
         ))}
+        {warmup && (
+          <WarmupInvite
+            topicLabel={topicLabel}
+            hasQuestions={props.topicHasQuestions}
+            onTryQuestions={() => {
+              markWarmupSeen(props.topicKey);
+              setWarmup(false);
+              props.onTryQuestions();
+            }}
+            onLesson={(guess) => {
+              markWarmupSeen(props.topicKey);
+              setWarmup(false);
+              startLesson(undefined, guess);
+            }}
+          />
+        )}
         {loading && (
           <p className="flex items-center gap-1.5 text-[11px] text-slate-400">
             <Loader2 size={12} className="animate-spin" />

@@ -625,6 +625,7 @@ export default function App() {
       strategy_mode: profile.strategyMode,
       study_moment: profile.studyMoment,
       daily_review_enabled: profile.dailyReviewEnabled ? 1 : 0,
+      productive_failure_hints: profile.productiveFailureHints ? 1 : 0,
     });
     if (updatedPlan) {
       const planSubjects = getSubjectsByPlan(targetPlanId);
@@ -1295,6 +1296,12 @@ export default function App() {
                   {...fofoInputs}
                   aiConfigured={aiStatus.configured}
                   request={fofoRequest}
+                  warmupEnabled={activePlan.productive_failure_hints !== 0}
+                  topicHasQuestions={topicQuestions.some((q) => q.question.topic_id === fofoInputs.topicKey)}
+                  onTryQuestions={() => {
+                    setQuestionScope('topic');
+                    selectTab('questions');
+                  }}
                   onWiden={(minWidth) => {
                     if (rightWidth.width < minWidth) rightWidth.setWidth(minWidth);
                   }}

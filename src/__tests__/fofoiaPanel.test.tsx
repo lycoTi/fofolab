@@ -28,6 +28,9 @@ function props(over: Partial<FofoIaPanelProps> = {}): FofoIaPanelProps {
     request: null,
     onWiden: vi.fn(),
     onSaveSummary: vi.fn(),
+    warmupEnabled: true,
+    topicHasQuestions: false,
+    onTryQuestions: vi.fn(),
     ...over,
   };
 }
@@ -40,6 +43,7 @@ async function ask(text: string) {
 }
 
 beforeEach(() => {
+  localStorage.clear();
   vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', '');
   vi.stubEnv('VITE_GROQ_API_KEY', '');
   vi.stubEnv('VITE_GEMINI_API_KEY', '');
@@ -120,5 +124,50 @@ describe('Painel da FofoIA (spec 11)', () => {
       rerender(<FofoIaPanel {...props({ activeQuestion: q, request: { id: 1, kind: 'deepen' } })} />);
     });
     expect(screen.getAllByText(/Me explique esta questão/).length).toBeGreaterThan(0);
+  });
+});
+
+describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {
+  const clickLesson = async () => {
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Aula completa' }));
+    });
+  };
+
+  it('tópico nunca tentado: uma pergunta de aquecimento antes da aula, só uma vez por tópico', async () => {
+    const { unmount } = render(<FofoIaPanel {...props({ firstContact: true })} />);
+    await clickLesson();
+    expect(screen.getByText(/Antes da aula/)).toBeTruthy();
+    expect(screen.queryByRole('button', { name: 'Tentar 3 questões antes da aula' })).toBeNull();
+    fireEvent.change(screen.getByLabelText('Seu palpite (fica só na conversa)'), { target: { value: 'divide o sistema' } });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Ver a aula agora' }));
+    });
+    expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
+    expect(screen.getAllByText(/Meu palpite antes da aula: divide o sistema/).length).toBeGreaterThan(0);
+    unmount();
+
+    render(<FofoIaPanel {...props({ firstContact: true })} />);
+    await clickLesson();
+    expect(screen.queryByText(/Antes da aula/)).toBeNull();
+  });
+
+  it('com questões no tópico, convida a tentar 3 antes', async () => {
+    const p = props({ firstContact: true, topicHasQuestions: true });
+    render(<FofoIaPanel {...p} />);
+    await clickLesson();
+    fireEvent.click(screen.getByRole('button', { name: 'Tentar 3 questões antes da aula' }));
+    expect(p.onTryQuestions).toHaveBeenCalled();
+  });
+
+  it('"Tenho meu método" desligado ou tópico já tentado: a aula vem direto', async () => {
+    const { unmount } = render(<FofoIaPanel {...props({ firstContact: true, warmupEnabled: false })} />);
+    await clickLesson();
+    expect(screen.queryByText(/Antes da aula/)).toBeNull();
+    unmount();
+    render(<FofoIaPanel {...props({ firstContact: false })} />);
+    await clickLesson();
+    expect(screen.queryByText(/Antes da aula/)).toBeNull();
+    expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
   });
 });

@@ -15,6 +15,8 @@ export interface OnboardingProfile {
   strategyMode: StudyStrategy;
   /** Revisão do dia ao abrir o app; desligada para quem já tem o próprio método de revisão. */
   dailyReviewEnabled: boolean;
+  /** Aquecimento antes da aula num tópico nunca tentado; desligado = "Tenho meu método". */
+  productiveFailureHints: boolean;
 }
 
 interface OnboardingWizardModalProps {
@@ -51,6 +53,7 @@ function profileFromPlan(plan: StudyPlan): OnboardingProfile {
     weeklyHours,
     strategyMode: plan.strategy_mode ?? STRATEGY_FOR_MOMENT[studyMoment],
     dailyReviewEnabled: plan.daily_review_enabled !== 0,
+    productiveFailureHints: plan.productive_failure_hints !== 0,
   };
 }
 
@@ -352,6 +355,12 @@ export function OnboardingWizardModal({
               checked={profile.dailyReviewEnabled}
               onChange={(dailyReviewEnabled) => setProfile((p) => ({ ...p, dailyReviewEnabled }))}
             />
+            <PreferenceToggle
+              title="Sugerir tentar antes da aula"
+              hint="Num tópico novo, a FofoIA pede um palpite (e oferece questões) antes da aula. Desligue se você tem seu método."
+              checked={profile.productiveFailureHints}
+              onChange={(productiveFailureHints) => setProfile((p) => ({ ...p, productiveFailureHints }))}
+            />
           </div>
         )}
 
@@ -392,11 +401,17 @@ export function OnboardingWizardModal({
 /** Revisão do dia (spec 09 §5.3): ligada por padrão; quem tem o próprio método de revisão pode desligar. */
 function DailyReviewToggle({ checked, onChange }: { checked: boolean; onChange: (checked: boolean) => void }) {
   return (
+    <PreferenceToggle title="Revisão do dia ao abrir o app" hint="Desligue se você já tem seu método de revisão." checked={checked} onChange={onChange} />
+  );
+}
+
+function PreferenceToggle({ title, hint, checked, onChange }: { title: string; hint: string; checked: boolean; onChange: (checked: boolean) => void }) {
+  return (
     <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-slate-800 bg-slate-950/70 p-3.5">
       <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="mt-0.5 accent-orange-500" />
       <span className="space-y-0.5">
-        <span className="block text-xs font-semibold text-slate-200">Revisão do dia ao abrir o app</span>
-        <span className="block text-[11px] text-slate-400">Desligue se você já tem seu método de revisão.</span>
+        <span className="block text-xs font-semibold text-slate-200">{title}</span>
+        <span className="block text-[11px] text-slate-400">{hint}</span>
       </span>
     </label>
   );

@@ -50,6 +50,7 @@ export interface StudyPlan {
   min_total_score?: number | null;
   selected_role?: string | null;
   daily_review_enabled?: number; // [v8] 0 | 1 (ausente = ligada)
+  productive_failure_hints?: number; // [v9] 0 | 1 (ausente = ligada)
 }
 
 // 2b. exam_parts [v4] — provas objetivas do edital
@@ -252,6 +253,7 @@ export interface UpdateStudyPlanInput extends Partial<CreateStudyPlanInput> {
   strategy_mode?: StudyStrategy | null;
   study_moment?: StudyMoment | null;
   daily_review_enabled?: number;
+  productive_failure_hints?: number;
 }
 
 export interface CreateSubjectInput {
