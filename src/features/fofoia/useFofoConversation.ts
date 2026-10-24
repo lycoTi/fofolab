@@ -3,6 +3,7 @@ import type { ChatTurn } from '../../lib/aiRouter';
 import { askFofoIa } from '../../lib/fofoia/ask';
 import type { FofoContext } from '../../lib/fofoia/context';
 import { matchEditalTopics, type EditalTopicEntry } from '../../lib/fofoia/editalMatch';
+import { readLessonPart } from '../../lib/fofoia/lessonPart';
 import { chooseMode, shouldSuggestLesson, type FofoMode, type ModeSignals } from '../../lib/fofoia/signals';
 import { parseSummary, type ReviewSummary } from '../../lib/fofoia/summary';
 
@@ -25,11 +26,6 @@ export type BaseSignals = Omit<ModeSignals, 'requested' | 'text' | 'followUps'>;
 
 let seq = 0;
 const nextId = (prefix: string) => `${prefix}-${Date.now()}-${(seq += 1)}`;
-
-function readPart(text: string): { n: number; total: number } | null {
-  const match = /Parte\s+(\d+)\s+de\s+(\d+)/i.exec(text);
-  return match ? { n: Number(match[1]), total: Number(match[2]) } : null;
-}
 
 /**
  * Conversa da FofoIA (spec 11 §5.3): fica só na memória e recomeça quando o tópico muda (o histórico gastaria o limite
@@ -82,7 +78,7 @@ export function useFofoConversation(input: {
         simulated: reply.simulated,
         failed: reply.failed,
         suggestLesson: !reply.failed && mode !== 'HINT' && shouldSuggestLesson(signals),
-        part: mode === 'LESSON' ? readPart(reply.reply) : null,
+        part: mode === 'LESSON' ? readLessonPart(reply.reply) : null,
         summary: mode === 'SUMMARY' ? parseSummary(reply.reply) : null,
         retry: reply.failed ? { message: text, requested, part } : undefined,
       };

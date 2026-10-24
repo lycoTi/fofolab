@@ -1,4 +1,4 @@
-import { callAiProviders, getAiStatus, type AiReply, type ChatTurn } from '../aiRouter';
+import { aiPauseReply, callAiProviders, getAiStatus, type AiReply, type ChatTurn } from '../aiRouter';
 import type { FofoContext } from './context';
 import { demoFofoReply } from './demo';
 import type { EditalCandidate } from './editalMatch';
@@ -7,6 +7,19 @@ import type { FofoMode } from './signals';
 
 /** Linha acolhedora quando o provedor falha; o detalhe técnico fica só no console. */
 export const FOFO_UNAVAILABLE_REPLY = 'Não consegui falar com a IA agora. Tente de novo em instantes.';
+
+/**
+ * Teto de resposta por jeito (tokens). Cabe no limite grátis do Groq (1.000 por minuto) e segura o tamanho que o prompt
+ * pede: a aula vem em partes justamente para cada parte caber no teto.
+ */
+export const MODE_MAX_TOKENS: Record<FofoMode, number> = {
+  QUICK: 350,
+  FROM_ZERO: 600,
+  LESSON: 900,
+  SUMMARY: 300,
+  EDITAL: 400,
+  HINT: 350,
+};
 
 /** Aula completa e "Cai no meu edital?" podem usar o modelo mais forte, se configurado ("pensar mais"). */
 export function isStrongMode(mode: FofoMode): boolean {
@@ -24,7 +37,13 @@ export async function askFofoIa(input: {
   if (!getAiStatus().configured) {
     return { reply: demoFofoReply(mode, ctx, message, extra), provider: 'OFFLINE_DEMO', simulated: true };
   }
-  const result = await callAiProviders(buildFofoPrompt(mode, ctx, conversation, message, extra), { strong: isStrongMode(mode) });
-  if (!result) return { reply: FOFO_UNAVAILABLE_REPLY, provider: 'OFFLINE_DEMO', simulated: false, failed: true };
+  const result = await callAiProviders(buildFofoPrompt(mode, ctx, conversation, message, extra), {
+    strong: isStrongMode(mode),
+    maxTokens: MODE_MAX_TOKENS[mode],
+  });
+  if (!result.ok) {
+    const reply = result.retryAfterSec === null ? FOFO_UNAVAILABLE_REPLY : aiPauseReply(result.retryAfterSec);
+    return { reply, provider: 'OFFLINE_DEMO', simulated: false, failed: true };
+  }
   return { reply: result.text, provider: result.provider, simulated: false };
 }

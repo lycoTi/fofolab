@@ -218,7 +218,32 @@ Responda SOMENTE com um JSON válido, sem nenhum texto antes ou depois, neste fo
 // Chamadas aos provedores (com tempo limite)
 // ============================================================================
 
-async function fetchJson(url: string, init: RequestInit): Promise<unknown | null> {
+/**
+ * Limite do plano grátis do Groq para o modelo padrão: 1.000 tokens de resposta por minuto. Sem teto explícito o Groq
+ * reserva 2.048 por chamada e recusa o pedido inteiro (429 "Request too large"), então todo pedido leva `maxTokens`.
+ */
+export const GROQ_FREE_OUTPUT_TOKENS_PER_MINUTE = 1000;
+/** Teto quando quem chama não diz outro (a explicação-base em JSON cabe com folga). */
+export const DEFAULT_MAX_OUTPUT_TOKENS = 800;
+/** Limite por minuto sem o cabeçalho `retry-after`: as janelas dos planos grátis são de um minuto. */
+const RATE_LIMIT_FALLBACK_SECONDS = 60;
+/** Chinês, japonês e coreano: o Qwen às vezes solta uma palavra assim no meio do português. */
+const FOREIGN_SCRIPT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]+/gu;
+
+/** Falha de um provedor; `retryAfterSec` só quando ele pediu uma pausa (limite por minuto). */
+type ProviderOutcome = { ok: true; text: string } | { ok: false; retryAfterSec: number | null };
+type FetchOutcome = { ok: true; data: unknown } | { ok: false; retryAfterSec: number | null };
+
+export type AiCallResult =
+  | { ok: true; text: string; provider: AiProviderUsed }
+  | { ok: false; retryAfterSec: number | null };
+
+function readRetryAfter(response: Response): number {
+  const seconds = Number(response.headers.get('retry-after'));
+  return Number.isFinite(seconds) && seconds > 0 ? Math.ceil(seconds) : RATE_LIMIT_FALLBACK_SECONDS;
+}
+
+async function fetchJson(url: string, init: RequestInit): Promise<FetchOutcome> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
@@ -226,28 +251,36 @@ async function fetchJson(url: string, init: RequestInit): Promise<unknown | null
     if (!response.ok) {
       const body = await response.text().catch(() => '');
       console.warn(`IA respondeu ${response.status}; usando o próximo provedor ou o exemplo simulado.`, body.slice(0, 500));
-      return null;
+      return { ok: false, retryAfterSec: response.status === 429 ? readRetryAfter(response) : null };
     }
-    return await response.json();
+    return { ok: true, data: await response.json() };
   } catch {
-    return null;
+    return { ok: false, retryAfterSec: null };
   } finally {
     clearTimeout(timer);
   }
 }
 
-async function callGateway(url: string, prompt: string, json: boolean): Promise<string | null> {
-  const data = (await fetchJson(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt, json }),
-  })) as { reply?: unknown } | null;
-  return typeof data?.reply === 'string' && data.reply.trim() ? data.reply : null;
+function textOutcome(outcome: FetchOutcome, pick: (data: unknown) => unknown): ProviderOutcome {
+  if (!outcome.ok) return outcome;
+  const text = pick(outcome.data);
+  return typeof text === 'string' && text.trim() ? { ok: true, text } : { ok: false, retryAfterSec: null };
 }
 
-async function callGemini(apiKey: string, prompt: string, json: boolean, strong = false): Promise<string | null> {
+async function callGateway(url: string, prompt: string, json: boolean, maxTokens: number): Promise<ProviderOutcome> {
+  const outcome = await fetchJson(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt, json, maxTokens }),
+  });
+  return textOutcome(outcome, (data) => (data as { reply?: unknown } | null)?.reply);
+}
+
+// Sem teto no Gemini: os modelos Flash gastam o `maxOutputTokens` também "pensando" e voltariam vazios; o tamanho fica
+// a cargo do prompt (o Gemini não tem o limite de resposta por minuto do Groq).
+async function callGemini(apiKey: string, prompt: string, json: boolean, strong: boolean): Promise<ProviderOutcome> {
   const model = (strong ? readEnv('VITE_GEMINI_MODEL_STRONG') : undefined) ?? readEnv('VITE_GEMINI_MODEL') ?? DEFAULT_GEMINI_MODEL;
-  const data = (await fetchJson(
+  const outcome = await fetchJson(
     `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`,
     {
       method: 'POST',
@@ -257,9 +290,11 @@ async function callGemini(apiKey: string, prompt: string, json: boolean, strong 
         ...(json ? { generationConfig: { responseMimeType: 'application/json' } } : {}),
       }),
     }
-  )) as { candidates?: { content?: { parts?: { text?: unknown }[] } }[] } | null;
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-  return typeof text === 'string' && text.trim() ? text : null;
+  );
+  return textOutcome(
+    outcome,
+    (data) => (data as { candidates?: { content?: { parts?: { text?: unknown }[] } }[] } | null)?.candidates?.[0]?.content?.parts?.[0]?.text
+  );
 }
 
 /** Groq e DeepSeek falam o formato de chat da OpenAI; `extra` leva os campos próprios de cada um. */
@@ -269,9 +304,9 @@ async function callOpenAiCompatible(
   model: string,
   prompt: string,
   json: boolean,
-  extra: Record<string, unknown> = {}
-): Promise<string | null> {
-  const data = (await fetchJson(url, {
+  extra: Record<string, unknown>
+): Promise<ProviderOutcome> {
+  const outcome = await fetchJson(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
@@ -280,62 +315,60 @@ async function callOpenAiCompatible(
       messages: [{ role: 'user', content: prompt }],
       ...(json ? { response_format: { type: 'json_object' } } : {}),
     }),
-  })) as { choices?: { message?: { content?: unknown } }[] } | null;
-  const text = data?.choices?.[0]?.message?.content;
-  return typeof text === 'string' && text.trim() ? text : null;
+  });
+  return textOutcome(outcome, (data) => (data as { choices?: { message?: { content?: unknown } }[] } | null)?.choices?.[0]?.message?.content);
 }
 
-function callGroq(apiKey: string, prompt: string, json: boolean, strong = false): Promise<string | null> {
+function callGroq(apiKey: string, prompt: string, json: boolean, strong: boolean, maxTokens: number): Promise<ProviderOutcome> {
   const model = (strong ? readEnv('VITE_GROQ_MODEL_STRONG') : undefined) ?? readEnv('VITE_GROQ_MODEL') ?? DEFAULT_GROQ_MODEL;
-  return callOpenAiCompatible(GROQ_URL, apiKey, model, prompt, json);
+  return callOpenAiCompatible(GROQ_URL, apiKey, model, prompt, json, { max_completion_tokens: maxTokens });
 }
 
-function callDeepSeek(apiKey: string, prompt: string, json: boolean): Promise<string | null> {
+function callDeepSeek(apiKey: string, prompt: string, json: boolean, maxTokens: number): Promise<ProviderOutcome> {
   const model = readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL;
   // O modo de raciocínio vem ligado por padrão e cobra os tokens de pensamento como saída.
-  return callOpenAiCompatible(DEEPSEEK_URL, apiKey, model, prompt, json, { thinking: { type: 'disabled' } });
+  return callOpenAiCompatible(DEEPSEEK_URL, apiKey, model, prompt, json, { max_tokens: maxTokens, thinking: { type: 'disabled' } });
 }
 
 /**
- * Tenta os provedores configurados em ordem; `null` se nenhum respondeu. `strong`: usa o modelo mais forte se houver
- * (`VITE_*_MODEL_STRONG`) — a FofoIA pede isso só na aula completa e no "Cai no meu edital?".
+ * Tenta os provedores configurados em ordem. `strong`: usa o modelo mais forte se houver (`VITE_*_MODEL_STRONG`) — a
+ * FofoIA pede isso só na aula completa e no "Cai no meu edital?". `maxTokens`: teto da resposta (ver o limite do Groq).
+ * Se nenhum respondeu e algum pediu pausa, devolve a menor pausa pedida (a próxima tentativa cai nesse provedor).
  */
 export async function callAiProviders(
   prompt: string,
-  options: { json?: boolean; strong?: boolean } = {}
-): Promise<{ text: string; provider: AiProviderUsed } | null> {
+  options: { json?: boolean; strong?: boolean; maxTokens?: number } = {}
+): Promise<AiCallResult> {
   const json = options.json ?? false;
   const strong = options.strong ?? false;
+  const maxTokens = options.maxTokens ?? DEFAULT_MAX_OUTPUT_TOKENS;
 
+  const attempts: { provider: AiProviderUsed; call: () => Promise<ProviderOutcome> }[] = [];
   const gatewayUrl = readEnv('VITE_FOFOLAB_AI_GATEWAY_URL');
-  if (gatewayUrl) {
-    const text = await callGateway(gatewayUrl, prompt, json);
-    if (text) return { text, provider: 'GATEWAY' };
-  }
-
+  if (gatewayUrl) attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
   const groqKey = readEnv('VITE_GROQ_API_KEY');
-  if (groqKey) {
-    const text = await callGroq(groqKey, prompt, json, strong);
-    if (text) return { text, provider: 'GROQ_FREE' };
-  }
-
+  if (groqKey) attempts.push({ provider: 'GROQ_FREE', call: () => callGroq(groqKey, prompt, json, strong, maxTokens) });
   const geminiKey = readEnv('VITE_GEMINI_API_KEY');
-  if (geminiKey) {
-    const text = await callGemini(geminiKey, prompt, json, strong);
-    if (text) return { text, provider: 'GEMINI_FREE' };
-  }
-
+  if (geminiKey) attempts.push({ provider: 'GEMINI_FREE', call: () => callGemini(geminiKey, prompt, json, strong) });
   const deepseekKey = readEnv('VITE_DEEPSEEK_API_KEY');
-  if (deepseekKey) {
-    const text = await callDeepSeek(deepseekKey, prompt, json);
-    if (text) return { text, provider: 'DEEPSEEK_FALLBACK' };
-  }
+  if (deepseekKey) attempts.push({ provider: 'DEEPSEEK_FALLBACK', call: () => callDeepSeek(deepseekKey, prompt, json, maxTokens) });
 
-  return null;
+  let retryAfterSec: number | null = null;
+  for (const attempt of attempts) {
+    const outcome = await attempt.call();
+    if (outcome.ok) return { ok: true, text: outcome.text.replace(FOREIGN_SCRIPT, ''), provider: attempt.provider };
+    if (outcome.retryAfterSec !== null) retryAfterSec = Math.min(retryAfterSec ?? outcome.retryAfterSec, outcome.retryAfterSec);
+  }
+  return { ok: false, retryAfterSec };
 }
 
 const AI_UNAVAILABLE_REPLY =
   '⚠️ Não consegui falar com a IA agora (sem internet, chave inválida ou limite do plano gratuito atingido). Tente de novo em instantes.';
+
+/** Texto para quando o plano grátis pediu uma pausa (limite por minuto). */
+export function aiPauseReply(seconds: number): string {
+  return `A IA gratuita pediu uma pausa curta (limite por minuto). Tente de novo em ${seconds} segundos.`;
+}
 
 // ============================================================================
 // Explicação-base da questão (gerada uma vez e guardada pelo banco)
@@ -371,7 +404,10 @@ export async function generateQuestionDissection(question: Question): Promise<Di
   if (!getAiStatus().configured) return { status: 'not-configured' };
 
   const result = await callAiProviders(buildDissectionPrompt(question), { json: true });
-  if (!result) return { status: 'error', message: AI_UNAVAILABLE_REPLY };
+  if (!result.ok) {
+    const message = result.retryAfterSec === null ? AI_UNAVAILABLE_REPLY : aiPauseReply(result.retryAfterSec);
+    return { status: 'error', message };
+  }
 
   const parsed = parseDissectionResponse(result.text);
   if (!parsed) {

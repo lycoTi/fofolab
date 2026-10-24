@@ -3,6 +3,7 @@ import { askFofoIa, isStrongMode } from '../lib/fofoia/ask';
 import { buildFofoContext, NOTEBOOK_CONTEXT_CHARS } from '../lib/fofoia/context';
 import { demoFofoReply } from '../lib/fofoia/demo';
 import { matchEditalTopics, EDITAL_MAX_CANDIDATES, type EditalTopicEntry } from '../lib/fofoia/editalMatch';
+import { readLessonPart } from '../lib/fofoia/lessonPart';
 import { buildFofoPrompt } from '../lib/fofoia/prompts';
 import { chooseMode, isBasicQuestion, shouldSuggestLesson, type ModeSignals } from '../lib/fofoia/signals';
 import { formatSummaryForNotebook, parseSummary } from '../lib/fofoia/summary';
@@ -88,6 +89,36 @@ describe('Contexto e prompts', () => {
     expect(lesson.indexOf('O essencial')).toBeLessThan(lesson.indexOf('Cuidados comuns em provas'));
     expect(lesson).toMatch(/Parte 2/);
     expect(buildFofoPrompt('FROM_ZERO', ctx, [], 'o que é?')).toContain('1.0 Camadas');
+  });
+
+  it('cada jeito diz o tamanho da resposta, para caber no teto e não chegar cortada', () => {
+    const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: null, prerequisites: [] });
+    for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'EDITAL', 'HINT'] as const) {
+      expect(buildFofoPrompt(mode, ctx, [], 'pergunta')).toMatch(/até ~\d+ palavras/i);
+    }
+    expect(buildFofoPrompt('LESSON', ctx, [], 'aula')).toMatch(/cada parte com até ~\d+ palavras/i);
+  });
+
+  it('pista nunca julga a afirmação (Certo/Errado) nem diz o que o conceito testado é de verdade', () => {
+    const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: { question, answered: false, dissection: null }, prerequisites: [] });
+    const hint = buildFofoPrompt('HINT', ctx, [], 'é certa ou errada?');
+    expect(hint).toMatch(/nunca diga se a afirmação.*verdadeira ou falsa/i);
+    expect(hint).toMatch(/pergunta para ele pensar/i);
+  });
+
+  it('anotações do estudante não são "corrigidas" sem certeza; banca não tem autor preferido', () => {
+    const ctx = buildFofoContext({ context: student, notebook: 'PATI', activeQuestion: null, prerequisites: [] });
+    const quick = buildFofoPrompt('QUICK', ctx, [], 'pergunta');
+    expect(quick).toMatch(/não contradiga as anotações do estudante/i);
+    expect(quick).toMatch(/nem que ela prefere um autor/i);
+  });
+
+  it('lê a parte da aula nos formatos que o modelo usa ("de" ou barra, com Markdown em volta)', () => {
+    expect(readLessonPart('**Parte 1 de 3**\n\nO essencial')).toEqual({ n: 1, total: 3 });
+    expect(readLessonPart('# Parte 1/3: O Essencial')).toEqual({ n: 1, total: 3 });
+    expect(readLessonPart('## parte 2 de 2')).toEqual({ n: 2, total: 2 });
+    expect(readLessonPart('Sem partes aqui')).toBeNull();
+    expect(readLessonPart('Parte 4 de 2')).toBeNull();
   });
 
   it('modelo forte só na aula completa e no "Cai no meu edital?"', () => {

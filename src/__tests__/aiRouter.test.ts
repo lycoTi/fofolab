@@ -6,6 +6,7 @@ import {
   escapeXml,
   generateQuestionDissection,
   getAiStatus,
+  GROQ_FREE_OUTPUT_TOKENS_PER_MINUTE,
   parseDissectionResponse,
 } from '../lib/aiRouter';
 
@@ -109,6 +110,40 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     await ask('QUICK');
     const models = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)).model);
     expect(models).toEqual(['modelo-forte', 'qwen/qwen3.8-27b']);
+  });
+
+  it('cada chamada pede um teto de resposta abaixo do limite grátis do Groq (1.000 por minuto); a aula pode mais que a rápida', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'ok' } }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    await ask('QUICK');
+    await ask('LESSON');
+    const caps = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)).max_completion_tokens);
+    expect(caps[0]).toBeGreaterThan(0);
+    expect(caps[0]).toBeLessThan(caps[1]);
+    expect(caps[1]).toBeLessThanOrEqual(GROQ_FREE_OUTPUT_TOKENS_PER_MINUTE);
+  });
+
+  it('limite por minuto do plano grátis: avisa a pausa com os segundos que o provedor pediu', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('limite', { status: 429, headers: { 'retry-after': '12' } })));
+
+    const reply = await ask();
+    expect(reply.failed).toBe(true);
+    expect(reply.simulated).toBe(false);
+    expect(reply.reply).toMatch(/pausa/i);
+    expect(reply.reply).toContain('12 segundos');
+  });
+
+  it('tira caracteres de outros alfabetos que o modelo às vezes deixa escapar no meio do português', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    const content = 'Recomendo se você感觉 "vago" na diferença.';
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content } }] }), { status: 200 })));
+    expect((await ask()).reply).toBe('Recomendo se você "vago" na diferença.');
   });
 
   it('gera a explicação-base em JSON (aceitando cercas de código) e recusa formato inválido', async () => {
