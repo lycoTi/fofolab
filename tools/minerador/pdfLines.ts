@@ -135,7 +135,8 @@ export function continuationChecker(lines: PdfLine[], ignore: (line: PdfLine) =>
   };
 }
 
-export async function readPdfLines(data: Uint8Array): Promise<PdfLine[]> {
+/** `singleColumn`: não divide a página (o gabarito é uma tabela de largura total). */
+export async function readPdfLines(data: Uint8Array, opts: { singleColumn?: boolean } = {}): Promise<PdfLine[]> {
   // O pdf.js toma posse do buffer; a cópia preserva o arquivo de quem chamou
   const doc = await getDocument({ data: data.slice(), verbosity: 0 }).promise;
   const lines: PdfLine[] = [];
@@ -150,7 +151,8 @@ export async function readPdfLines(data: Uint8Array): Promise<PdfLine[]> {
       raw.push({ x: item.transform[4], y: Math.round(item.transform[5]), width: item.width, str: item.str });
     }
     const height = pdfPage.getViewport({ scale: 1 }).height;
-    for (const line of pageLines(assignColumns(raw, half), page)) {
+    const pieces = opts.singleColumn ? raw.map((p) => ({ ...p, column: 'L' as const })) : assignColumns(raw, half);
+    for (const line of pageLines(pieces, page)) {
       if (line.y >= height - HEADER_BAND || line.y <= HEADER_BAND) band.add(line);
       lines.push(line);
     }
