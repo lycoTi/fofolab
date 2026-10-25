@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname } from 'node:path';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { parseEdital, type EditalSubject } from '../../src/lib/editalParser';
 import { textItemsToLines, type PdfTextItem } from '../../src/lib/pdfText';
@@ -139,6 +140,24 @@ export function mergeCandidates(vocab: Vocabulario): [string, string][] {
     }
   }
   return pares;
+}
+
+export function readVocabulario(path: string): Vocabulario | null {
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, 'utf8')) as Vocabulario;
+}
+
+/** Determinístico: assuntos em ordem de id e chaves em ordem fixa — o diff do git mostra só mudança real. */
+export function writeVocabulario(path: string, vocab: Vocabulario): void {
+  mkdirSync(dirname(path), { recursive: true });
+  const file = {
+    versao: vocab.versao,
+    assuntos: [...vocab.assuntos]
+      .sort((a, b) => a.id.localeCompare(b.id))
+      .map((a) => ({ id: a.id, caminho: a.caminho, sinonimos: a.sinonimos, origem: a.origem })),
+    historico: vocab.historico,
+  };
+  writeFileSync(path, `${JSON.stringify(file, null, 2)}\n`);
 }
 
 export function seedFromEdital(lines: string[]): Vocabulario {
