@@ -1,0 +1,125 @@
+{
+  "identificador": "BCB_24",
+  "itens": {
+    "BCB_24:959_BCB_CB1_01:14": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.92
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "BCB_24:959_BCB_CB1_01:15": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.92
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "BCB_24:959_BCB_CB1_01:16": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "BCB_24:959_BCB_CB1_01:17": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

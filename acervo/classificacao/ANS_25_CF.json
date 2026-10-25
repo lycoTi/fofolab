@@ -1,0 +1,35 @@
+{
+  "identificador": "ANS_25_CF",
+  "itens": {
+    "ANS_25_CF:062_ANS_CF_001_01:93": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

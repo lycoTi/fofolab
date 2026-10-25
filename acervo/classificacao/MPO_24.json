@@ -1,0 +1,65 @@
+{
+  "identificador": "MPO_24",
+  "itens": {
+    "MPO_24:958_MPO_ANALISTA_001_01:41": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_001_01:42": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "identificador": "SEPLAD_DF_22_AUDITOR",
+  "itens": {
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:43": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 13
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:8": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
+              "confianca": 0.92
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
+          "confianca": 0.86
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

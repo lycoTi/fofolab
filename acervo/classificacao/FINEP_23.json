@@ -1,0 +1,65 @@
+{
+  "identificador": "FINEP_23",
+  "itens": {
+    "FINEP_23:931_FINEP_001_01:48": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "FINEP_23:931_FINEP_004_01:48": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+          "confianca": 0.63
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    }
+  }
+}

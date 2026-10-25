@@ -1,0 +1,35 @@
+{
+  "identificador": "MME_23",
+  "itens": {
+    "MME_23:908_MME_CB1_01:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

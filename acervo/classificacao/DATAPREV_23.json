@@ -1,0 +1,35 @@
+{
+  "identificador": "DATAPREV_23",
+  "itens": {
+    "DATAPREV_23:893_DATAPREV_017_01:70": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

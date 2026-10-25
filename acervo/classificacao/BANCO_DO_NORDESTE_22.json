@@ -1,0 +1,239 @@
+{
+  "identificador": "BANCO_DO_NORDESTE_22",
+  "itens": {
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.75
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:2": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.75
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.63
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:3": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.75
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:4": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.75
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.63
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:5": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.43
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.33
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:6": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>generos-e-tipologia-textual",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>generos-e-tipologia-textual",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>generos-e-tipologia-textual",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:7": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.43
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.35
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    }
+  }
+}

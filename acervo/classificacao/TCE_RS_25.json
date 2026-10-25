@@ -1,0 +1,291 @@
+{
+  "identificador": "TCE_RS_25",
+  "itens": {
+    "TCE_RS_25:055D4A4B243CE5153990547DCA7C8366A58E7F84F2375349810A43265AF8A939:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.3
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_RS_25:055D4A4B243CE5153990547DCA7C8366A58E7F84F2375349810A43265AF8A939:2": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_RS_25:055D4A4B243CE5153990547DCA7C8366A58E7F84F2375349810A43265AF8A939:3": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.25
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_RS_25:055D4A4B243CE5153990547DCA7C8366A58E7F84F2375349810A43265AF8A939:4": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.25
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_RS_25:055D4A4B243CE5153990547DCA7C8366A58E7F84F2375349810A43265AF8A939:5": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.25
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_RS_25:FD83AE51F34342C493C9F56457B6F5D8389E342467CBCBB8EC3F06C8169F8922:45": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_RS_25:FD83AE51F34342C493C9F56457B6F5D8389E342467CBCBB8EC3F06C8169F8922:46": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_RS_25:FD83AE51F34342C493C9F56457B6F5D8389E342467CBCBB8EC3F06C8169F8922:47": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_RS_25:FD83AE51F34342C493C9F56457B6F5D8389E342467CBCBB8EC3F06C8169F8922:54": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "identificador": "ITAIPU_23",
+  "itens": {
+    "ITAIPU_23:924_ITAIPU_002_01:25": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.6
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>abuso-do-poder-confiado-e-apropriacao-de-decisoes-publicas-em-beneficio-particular-dimensoes-politica-administrativa-e-publico-privada",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.73
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "ITAIPU_23:924_ITAIPU_017_01:46": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "ITAIPU_23:924_ITAIPU_017_01:48": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

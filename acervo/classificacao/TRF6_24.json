@@ -1,0 +1,265 @@
+{
+  "identificador": "TRF6_24",
+  "itens": {
+    "TRF6_24:034_TRF6_001_01:118": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_006_01:75": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_012_01:92": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_012_01:95": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_012_01:96": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_012_01:97": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_021_01:74": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+          "confianca": 0.83
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TRF6_24:034_TRF6_026_01:96": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>reconhecimento-de-efeitos-e-incertezas-de-depreciacao-reducao-ao-valor-recuperavel-provisoes-contingencias-e-transacoes-com-partes-relacionadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "identificador": "TELEBRAS_25",
+  "itens": {
+    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:105": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.75
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:53": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+          "confianca": 0.88
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.73
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

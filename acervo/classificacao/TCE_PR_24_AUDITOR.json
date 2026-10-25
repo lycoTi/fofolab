@@ -1,0 +1,1222 @@
+{
+  "identificador": "TCE_PR_24_AUDITOR",
+  "itens": {
+    "TCE_PR_24_AUDITOR:990_TCEPR_001_01:85": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.5
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>identificacao-de-riscos-e-praticas-de-retaliacao-medidas-preventivas-protetivas-e-reparadoras-e-competencias-para-sua-adocao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.75
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>salvaguardas-da-identidade-do-denunciante-desde-o-recebimento-do-relato-pseudonimizacao-acesso-por-necessidade-de-conhecer-rastreabilidade-e-condicoes-legais-de-compartilhamento-ou-revelacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.63
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:66": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:73": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:75": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:77": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>programacao-orcamentaria-e-financeira-limites-de-empenho-e-pagamento-contingenciamento-e-bloqueio-no-escopo-do-programa",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>programacao-orcamentaria-e-financeira-limites-de-empenho-e-pagamento-contingenciamento-e-bloqueio-no-escopo-do-programa",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>programacao-orcamentaria-e-financeira-limites-de-empenho-e-pagamento-contingenciamento-e-bloqueio-no-escopo-do-programa",
+          "confianca": 0.94
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:78": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:83": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_005_01:76": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 13
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.94
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:10": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-niveis-de-formalidade",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-e-correspondencia-de-frases",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-e-correspondencia-de-frases",
+          "confianca": 0.48
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-niveis-de-formalidade",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:11": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:12": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>reparticao-de-competencias-legislativas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.4
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>reparticao-de-competencias-legislativas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:15": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:17": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:21": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>licitacoes-e-contratos-administrativos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+          "confianca": 0.4
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>licitacoes-e-contratos-administrativos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:23": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>normas-internacionais-de-auditoria-e-entidades-fiscalizadoras-superiores-issai",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>normas-internacionais-de-auditoria-e-entidades-fiscalizadoras-superiores-issai",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>normas-internacionais-de-auditoria-e-entidades-fiscalizadoras-superiores-issai",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:24": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>controle-externo-e-tribunais-de-contas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>controle-externo-e-tribunais-de-contas",
+          "confianca": 0.45
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.3
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:25": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:26": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>tribunais-de-contas-organizacao-competencias-e-medidas-cautelares",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-de-controle-externo-e-medidas-cautelares",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-de-controle-externo-e-medidas-cautelares",
+          "confianca": 0.43
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>tribunais-de-contas-organizacao-competencias-e-medidas-cautelares",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:28": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>principios-e-codigo-de-etica-profissional",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>principios-e-codigo-de-etica-profissional",
+          "confianca": 0.48
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:29": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>normas-de-auditoria-do-setor-publico-nbasp-tipos-de-auditoria",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>normas-de-auditoria-do-setor-publico-nbasp-tipos-de-auditoria",
+          "confianca": 0.4
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.35
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:30": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:31": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.88
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.87
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:32": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:33": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:34": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.77
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:35": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:37": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:38": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.63
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:39": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.4
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>classificacao-das-receitas-e-despesas-publicas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:40": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:43": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:44": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:45": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:46": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:47": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>raciocinio-logico-e-teoria-dos-conjuntos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>raciocinio-logico-e-teoria-dos-conjuntos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>raciocinio-logico-e-teoria-dos-conjuntos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:5": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>colocacao-pronominal",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>colocacao-pronominal",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>colocacao-pronominal",
+          "confianca": 0.94
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_CG1_01:50": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>razao-proporcao-e-divisao-proporcional",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>razao-proporcao-e-divisao-proporcional",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>razao-proporcao-e-divisao-proporcional",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

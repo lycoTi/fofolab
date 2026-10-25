@@ -1,0 +1,205 @@
+{
+  "identificador": "SEFAZ_RN_25_AUDITOR",
+  "itens": {
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:32": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 10
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:59": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:24": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:33": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:62": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
+              "confianca": 0.8
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
+          "confianca": 0.83
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    }
+  }
+}

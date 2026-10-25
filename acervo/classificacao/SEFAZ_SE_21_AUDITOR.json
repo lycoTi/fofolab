@@ -1,0 +1,39 @@
+{
+  "identificador": "SEFAZ_SE_21_AUDITOR",
+  "itens": {
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_CG1_01:3": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>emprego-dos-sinais-de-pontuacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 11
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>pontuacao",
+              "confianca": 0.99
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>pontuacao",
+          "confianca": 0.5
+        },
+        {
+          "id": "lingua-portuguesa>emprego-dos-sinais-de-pontuacao",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    }
+  }
+}

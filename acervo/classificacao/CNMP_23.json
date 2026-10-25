@@ -1,0 +1,239 @@
+{
+  "identificador": "CNMP_23",
+  "itens": {
+    "CNMP_23:814_CNMP_004_01:58": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>reconhecimento-de-efeitos-e-incertezas-de-depreciacao-reducao-ao-valor-recuperavel-provisoes-contingencias-e-transacoes-com-partes-relacionadas",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 13
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>reconhecimento-de-efeitos-e-incertezas-de-depreciacao-reducao-ao-valor-recuperavel-provisoes-contingencias-e-transacoes-com-partes-relacionadas",
+              "confianca": 0.92
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>reconhecimento-de-efeitos-e-incertezas-de-depreciacao-reducao-ao-valor-recuperavel-provisoes-contingencias-e-transacoes-com-partes-relacionadas",
+          "confianca": 0.76
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "CNMP_23:814_CNMP_010_01:60": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>mecanismos-de-reproducao-e-captura>assimetrias-de-poder-e-informacao-incentivos-e-oportunidades-relacoes-principal-agente-e-problemas-de-acao-coletiva-normas-sociais-tolerancia-organizacional-e-redes-de-favorecimento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 9
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>mecanismos-de-reproducao-e-captura>assimetrias-de-poder-e-informacao-incentivos-e-oportunidades-relacoes-principal-agente-e-problemas-de-acao-coletiva-normas-sociais-tolerancia-organizacional-e-redes-de-favorecimento",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 5
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>mecanismos-de-reproducao-e-captura>assimetrias-de-poder-e-informacao-incentivos-e-oportunidades-relacoes-principal-agente-e-problemas-de-acao-coletiva-normas-sociais-tolerancia-organizacional-e-redes-de-favorecimento",
+          "confianca": 0.68
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "CNMP_23:814_CNMP_CB1_01:1": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "CNMP_23:814_CNMP_CB1_01:2": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "CNMP_23:814_CNMP_CB1_01:3": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "CNMP_23:814_CNMP_CB1_01:4": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "CNMP_23:814_CNMP_CB1_01:5": {
+      "opinioes": {
+        "agy:claude-sonnet-5-5-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        },
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>interpretacao-de-texto",
+          "confianca": 0.48
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.43
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    }
+  }
+}
