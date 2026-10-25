@@ -197,6 +197,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:36": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:58": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+              "confianca": 0.98
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+          "confianca": 0.98
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:70": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -221,6 +279,64 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:359AC4F44E1A3E183222198EE2C93F7EC574FE9EB577DB1126988D26F1BA8FC4:35": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+              "confianca": 0.92
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+          "confianca": 0.92
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:722978F212C4C1FC816EFAB03D8D8DC0128A84530A6F0B4E3E27DF476DB322A7:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.95
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.95
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.9
         }
       ],
       "incerto": false,

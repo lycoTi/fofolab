@@ -1,0 +1,55 @@
+{
+  "identificador": "ANVISA_24",
+  "itens": {
+    "ANVISA_24:956_ANVISA_CC1_01:58": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANVISA_24:956_ANVISA_CC1_01:60": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

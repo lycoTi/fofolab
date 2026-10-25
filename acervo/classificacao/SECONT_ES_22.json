@@ -136,6 +136,64 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "SECONT_ES_22:690_SECONT_ES_006_01:103": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SECONT_ES_22:690_SECONT_ES_006_01:84": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+              "confianca": 0.55
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+              "confianca": 0.25
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>niveis-de-servico-e-criterios-de-aceitacao",
+              "confianca": 0.15
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
     }
   }
 }

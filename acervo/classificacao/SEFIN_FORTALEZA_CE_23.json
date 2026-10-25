@@ -22,6 +22,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_001_01:133": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_CG1_01:20": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -45,6 +74,109 @@
         },
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_001_01:123": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.95
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:80": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_004_01:93": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>notas-explicativas-as-demonstracoes-contabeis",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>notas-explicativas-as-demonstracoes-contabeis",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
           "confianca": 0.85
         }
       ],
@@ -183,6 +315,64 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:36": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.5
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.5
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:37": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.5
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.5
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:4": {

@@ -35,6 +35,98 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "ITAIPU_23:924_ITAIPU_005_01:48": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-urbanismo>informatica-aplicada-a-arquitetura>tecnologia-bim-building-information-modeling",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-urbanismo>informatica-aplicada-a-arquitetura>tecnologia-bim-building-information-modeling",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_006_01:26": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_006_01:29": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_006_01:44": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>servico-social-e-trabalho-coletivo",
+              "confianca": 0.88
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>servico-social-e-trabalho-coletivo",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ITAIPU_23:924_ITAIPU_008_01:42": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -62,6 +154,114 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_008_01:46": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>etica-profissional-e-legislacao-do-contador",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>etica-profissional-e-legislacao-do-contador",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_009_01:28": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_010_01:50": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_011_01:50": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "ITAIPU_23:924_ITAIPU_017_01:46": {

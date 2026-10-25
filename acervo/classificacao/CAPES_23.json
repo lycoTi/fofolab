@@ -38,6 +38,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CAPES_23:947_CAPES_002_01:73": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.55
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.55
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "CAPES_23:947_CAPES_003_01:81": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -107,6 +136,43 @@
         },
         {
           "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_004_01:79": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
           "confianca": 0.8
         }
       ],

@@ -1,6 +1,93 @@
 {
   "identificador": "TCE_SC_21_AUDITOR",
   "itens": {
+    "TCE_SC_21_AUDITOR:660_TCESC_001_01:43": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>plano-de-reforma-do-aparelho-do-estado",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>plano-de-reforma-do-aparelho-do-estado",
+          "confianca": 0.95
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_SC_21_AUDITOR:660_TCESC_002_01:78": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_SC_21_AUDITOR:660_TCESC_002_01:79": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>atributos-da-informacao-contabil",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>atributos-da-informacao-contabil",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_SC_21_AUDITOR:660_TCESC_002_01:81": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -127,6 +214,35 @@
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
           "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_SC_21_AUDITOR:660_TCESC_CB1_01:7": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.8
         }
       ],
       "incerto": false,

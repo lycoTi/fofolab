@@ -35,6 +35,114 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:24": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>entidades-paraestatais-e-terceiro-setor>servicos-sociais-autonomos-entidades-de-apoio-organizacoes-sociais-organizacoes-da-sociedade-civil-de-interesse-publico",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:11": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.55
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+              "confianca": 0.35
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.1
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:18": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:43": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-publico-conceitos-e-elementos-basicos-do-orcamento-publico-orcamento-tradicional-orcamento-de-base-zero-orcamentacao-por-desempenho-orcamento-programa-orcamento-participativo-orcamento-cidadao",
+              "confianca": 0.25
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:8": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

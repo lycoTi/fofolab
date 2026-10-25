@@ -43,6 +43,31 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "ANTT_23:951_ANTT_001_01:29": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-527-2011-lei-de-acesso-a-informacao-capitulos-i-ii-iii-iv-e-v",
+              "confianca": 0.55
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>analise-de-pedidos-e-recursos-de-acesso-a-informacao-aplicacao-articulada-da-lai-e-da-lgpd",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-527-2011-lei-de-acesso-a-informacao-capitulos-i-ii-iii-iv-e-v",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "ANTT_23:951_ANTT_002_01:90": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

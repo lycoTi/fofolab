@@ -1,6 +1,43 @@
 {
   "identificador": "SUSEP_25",
   "itens": {
+    "SUSEP_25:065_SUSEP_004_01:71": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.95
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.95
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SUSEP_25:065_SUSEP_004_01:76": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

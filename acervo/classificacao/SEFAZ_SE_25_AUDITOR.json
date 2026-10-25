@@ -1,6 +1,64 @@
 {
   "identificador": "SEFAZ_SE_25_AUDITOR",
   "itens": {
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:100": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+              "confianca": 0.95
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+          "confianca": 0.95
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:117": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:118": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -17,6 +75,27 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:120": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -96,6 +175,35 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:20": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.45
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.35
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.15
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
     },
     "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:58": {
       "opinioes": {
@@ -253,6 +361,43 @@
       ],
       "incerto": true,
       "concordancia": "discordam"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:89": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-circulante>superavaliacao-na-formacao-dos-custos-de-estoque",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-circulante>superavaliacao-na-formacao-dos-custos-de-estoque",
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

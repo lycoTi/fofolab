@@ -66,6 +66,72 @@
       ],
       "incerto": false,
       "concordancia": "uma-opiniao"
+    },
+    "ANEEL_25_CF:DD55431C96F97B092C2CB48C9CCE81FFED894130C0886BFA7F2C1BDA2F068C49:93": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>receitas-de-vendas-de-produtos-e-servicos>conceitos-e-mensuracao-da-receita-e-o-momento-de-seu-reconhecimento",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>receitas-de-vendas-de-produtos-e-servicos>conceitos-e-mensuracao-da-receita-e-o-momento-de-seu-reconhecimento",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANEEL_25_CF:DD55431C96F97B092C2CB48C9CCE81FFED894130C0886BFA7F2C1BDA2F068C49:94": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "identificador": "BDMG_24",
+  "itens": {
+    "BDMG_24:031_BDMG_001_01:61": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>conta-unica-do-tesouro-nacional",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>a-conta-unica-do-tesouro",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>conta-unica-do-tesouro-nacional",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

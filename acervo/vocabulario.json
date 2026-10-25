@@ -1,5 +1,5 @@
 {
-  "versao": 14,
+  "versao": 16,
   "assuntos": [
     {
       "id": "administracao-geral",
@@ -7301,6 +7301,15 @@
       "origem": "edital"
     },
     {
+      "id": "ciencias-humanas>microbiologia-e-citologia",
+      "caminho": [
+        "Ciências Humanas",
+        "Microbiologia e Citologia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "ciencias-humanas>o-brasil-e-a-questao-cultural",
       "caminho": [
         "Ciências Humanas",
@@ -8956,6 +8965,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "contabilidade-geral>etica-profissional-e-legislacao-do-contador",
+      "caminho": [
+        "Contabilidade Geral",
+        "Ética Profissional e Legislação do Contador"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "contabilidade-geral>fornecedores-obrigacoes-fiscais-e-outras-obrigacoes",
@@ -11091,6 +11109,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-administrativo>marco-legal-de-ciencia-tecnologia-e-inovacao",
+      "caminho": [
+        "Direito Administrativo",
+        "Marco Legal de Ciência, Tecnologia e Inovação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-administrativo>organizacao-administrativa",
@@ -26704,6 +26731,15 @@
       "origem": "edital"
     },
     {
+      "id": "legislacao-especial>resolucoes-do-conselho-nacional-do-ministerio-publico-cnmp",
+      "caminho": [
+        "Legislação Especial",
+        "Resoluções do Conselho Nacional do Ministério Público (CNMP)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "legislacao-tributaria-estadual",
       "caminho": [
         "Legislação Tributária Estadual"
@@ -33119,6 +33155,15 @@
       "origem": "edital"
     },
     {
+      "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>servico-social-e-trabalho-coletivo",
+      "caminho": [
+        "Políticas Públicas e Métodos de Investigação e Avaliação",
+        "Serviço Social e Trabalho Coletivo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>tecnicas-de-inferencia-causal",
       "caminho": [
         "Políticas Públicas e Métodos de Investigação e Avaliação",
@@ -38705,6 +38750,21 @@
       "versao": 14,
       "mudancas": [
         "junção: Raciocínio Lógico › Razão, proporção e divisão proporcional → Raciocínio Lógico › Razões e proporções"
+      ]
+    },
+    {
+      "versao": 15,
+      "mudancas": [
+        "novo assunto: Ciências Humanas › Microbiologia e Citologia"
+      ]
+    },
+    {
+      "versao": 16,
+      "mudancas": [
+        "novo assunto: Contabilidade Geral › Ética Profissional e Legislação do Contador",
+        "novo assunto: Direito Administrativo › Marco Legal de Ciência, Tecnologia e Inovação",
+        "novo assunto: Políticas Públicas e Métodos de Investigação e Avaliação › Serviço Social e Trabalho Coletivo",
+        "novo assunto: Legislação Especial › Resoluções do Conselho Nacional do Ministério Público (CNMP)"
       ]
     }
   ]

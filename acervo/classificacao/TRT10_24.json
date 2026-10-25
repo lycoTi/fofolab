@@ -1,6 +1,27 @@
 {
   "identificador": "TRT10_24",
   "itens": {
+    "TRT10_24:050_TRT10_001_01:53": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRT10_24:050_TRT10_001_01:69": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -435,6 +456,43 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "TRT10_24:050_TRT10_CB1_01:33": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>nocoes-de-organizacao-administrativa>administracao-direta-e-indireta",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>nocoes-de-organizacao-administrativa>administracao-direta-e-indireta",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

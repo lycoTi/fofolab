@@ -1,6 +1,27 @@
 {
   "identificador": "APEX_BRASIL_21_ANALISTA",
   "itens": {
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:25": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

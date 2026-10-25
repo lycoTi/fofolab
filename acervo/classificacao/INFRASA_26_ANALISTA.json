@@ -38,6 +38,56 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "INFRASA_26_ANALISTA:775C84B4D15ECE2C147A27142729CAF4759EB1190EC3C80AEE1E857B51A3C6E6:67": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>microbiologia-e-citologia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencias-humanas>microbiologia-e-citologia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "INFRASA_26_ANALISTA:A82C46CEB166C9652BD880B38CD545A5AC25C47AF0D355078F8590AB75425545:51": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>custos-e-analise-da-execucao>interpretacao-de-informacoes-de-custos-e-de-indicadores-de-execucao-e-eficiencia-observadas-comparabilidade-bases-de-calculo-e-limitacoes",
+              "confianca": 0.55
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>custos-e-analise-da-execucao>mcasp-11-edicao-e-manual-de-informacoes-do-sistema-de-custos-mic",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>custos-e-analise-da-execucao>interpretacao-de-informacoes-de-custos-e-de-indicadores-de-execucao-e-eficiencia-observadas-comparabilidade-bases-de-calculo-e-limitacoes",
+          "confianca": 0.55
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>custos-e-analise-da-execucao>mcasp-11-edicao-e-manual-de-informacoes-do-sistema-de-custos-mic",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "INFRASA_26_ANALISTA:A82C46CEB166C9652BD880B38CD545A5AC25C47AF0D355078F8590AB75425545:56": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

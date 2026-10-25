@@ -1,0 +1,34 @@
+{
+  "identificador": "PETROBRAS_21_NS",
+  "itens": {
+    "PETROBRAS_21_NS:658_PETROBRAS_004_01:72": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+              "confianca": 0.95
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+          "confianca": 0.95
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

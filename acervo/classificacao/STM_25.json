@@ -75,6 +75,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "STM_25:072_STM_001_01:71": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-e-linhas-de-defesa",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-e-linhas-de-defesa",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "STM_25:072_STM_002_01:116": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -232,6 +253,72 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "STM_25:072_STM_005_01:77": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.45
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+              "confianca": 0.45
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.1
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+          "confianca": 0.45
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "STM_25:072_STM_005_01:78": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.45
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+              "confianca": 0.45
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.1
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>naturezas-da-informacao-contabil",
+          "confianca": 0.45
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "STM_25:072_STM_005_01:80": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -341,6 +428,31 @@
       ],
       "incerto": true,
       "concordancia": "discordam"
+    },
+    "STM_25:072_STM_008_01:100": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.15
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

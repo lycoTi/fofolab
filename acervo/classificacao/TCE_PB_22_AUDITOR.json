@@ -1,6 +1,56 @@
 {
   "identificador": "TCE_PB_22_AUDITOR",
   "itens": {
+    "TCE_PB_22_AUDITOR:723_TCEPB_AUDITOR_001_01:121": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PB_22_AUDITOR:723_TCEPB_AUDITOR_001_01:18": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>acordo-de-leniencia-requisitos-colaboracao-efeitos-obrigacoes-de-integridade-e-limites",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>acordo-de-leniencia-requisitos-colaboracao-efeitos-obrigacoes-de-integridade-e-limites",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_PB_22_AUDITOR:723_TCEPB_AUDITOR_001_01:51": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

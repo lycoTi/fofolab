@@ -85,6 +85,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FINEP_23:931_FINEP_CG1_01_OUTRA:26": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>marco-legal-de-ciencia-tecnologia-e-inovacao",
+              "confianca": 0.92
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>marco-legal-de-ciencia-tecnologia-e-inovacao",
+          "confianca": 0.92
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FINEP_23:931_FINEP_CG1_01_OUTRA:28": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -104,6 +125,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FINEP_23:931_FINEP_CG1_01_OUTRA:30": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.5
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.3
+            },
+            {
+              "id": "realidade-brasileira>genero-raca-etnia-e-classe-social>desigualdades-economicas-e-sociais-causas-e-consequencias",
+              "confianca": 0.2
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

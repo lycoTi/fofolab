@@ -122,6 +122,56 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CNJ_24:979_CNJ_007_01:111": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>servicos-publicos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>servicos-publicos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNJ_24:979_CNJ_008_01:56": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CNJ_24:979_CNJ_CB3_01:1": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

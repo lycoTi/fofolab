@@ -1,0 +1,26 @@
+{
+  "identificador": "TELEBRAS_21",
+  "itens": {
+    "TELEBRAS_21:657_TELEBRAS_002_01:89": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

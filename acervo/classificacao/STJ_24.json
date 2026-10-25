@@ -1,6 +1,43 @@
 {
   "identificador": "STJ_24",
   "itens": {
+    "STJ_24:018_STJ_001_01:95": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.95
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "STJ_24:018_STJ_003_01:113": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -33,6 +70,27 @@
         {
           "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>modelos-de-linguagem-e-llms",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_004_01:57": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-urbanismo>representacao-metodos-e-tecnicas-de-desenho>tipos-de-representacao-do-projeto-de-arquitetura-abnt-nbr-16636-1-2017-e-nbr-16636-2-2017",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-urbanismo>representacao-metodos-e-tecnicas-de-desenho>tipos-de-representacao-do-projeto-de-arquitetura-abnt-nbr-16636-1-2017-e-nbr-16636-2-2017",
+          "confianca": 0.98
         }
       ],
       "incerto": false,
@@ -141,6 +199,43 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_007_01:98": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.95
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.85
         }
       ],
       "incerto": false,

@@ -75,6 +75,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPO_24:958_MPO_ANALISTA_001_01:55": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>tecnicas-de-inferencia-causal>experimentos-aleatorios-e-quasi-experimentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>contrafactual-selecao-e-confundimento-experimentos-e-quase-experimentos-grupos-de-comparacao-e-medidas-anteriores-a-intervencao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>tecnicas-de-inferencia-causal>experimentos-aleatorios-e-quasi-experimentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>contrafactual-selecao-e-confundimento-experimentos-e-quase-experimentos-grupos-de-comparacao-e-medidas-anteriores-a-intervencao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPO_24:958_MPO_ANALISTA_007_01:100": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -108,6 +137,31 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:58": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-e-linhas-de-defesa",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>avaliacao-da-acao-governamental-e-apoio-ao-aprimoramento-da-gestao-da-governanca-dos-controles-e-dos-resultados-das-politicas-publicas-prevencao-deteccao-e-correcao-de-irregularidades",
+              "confianca": 0.1
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-e-linhas-de-defesa",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "MPO_24:958_MPO_ANALISTA_007_01:61": {
       "opinioes": {
@@ -255,6 +309,35 @@
       "incerto": true,
       "concordancia": "discordam"
     },
+    "MPO_24:958_MPO_ANALISTA_007_01:67": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>fiscalizacao-pagamento-e-verificacao-de-entregas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>fiscalizacao-pagamento-e-verificacao-de-entregas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPO_24:958_MPO_ANALISTA_007_01:69": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -328,6 +411,27 @@
       "consenso": [
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-outsourcing-de-impressao-portaria-sgd-mgi-n-370-de-8-de-marco-de-2023",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:72": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-desenvolvimento-manutencao-e-sustentacao-de-software-portaria-sgd-mgi-n-750-de-20-de-marco-de-2023",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-desenvolvimento-manutencao-e-sustentacao-de-software-portaria-sgd-mgi-n-750-de-20-de-marco-de-2023",
           "confianca": 0.98
         }
       ],
@@ -490,6 +594,27 @@
         {
           "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:98": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+          "confianca": 0.98
         }
       ],
       "incerto": false,

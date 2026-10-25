@@ -109,6 +109,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TELEBRAS_25:A6B9F82B9941174FD606106FBEF89D5B4FCEB698687057117320C717A8B496F6:116": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.5
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 14
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.5
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:79": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

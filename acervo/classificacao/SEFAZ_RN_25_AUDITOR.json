@@ -263,6 +263,35 @@
       ],
       "incerto": false,
       "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>escolhas-de-arquitetura-conforme-requisitos-das-cargas-de-trabalho",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>dados-estruturados-e-nao-estruturados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 15
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>escolhas-de-arquitetura-conforme-requisitos-das-cargas-de-trabalho",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>dados-estruturados-e-nao-estruturados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }
