@@ -26,6 +26,14 @@ describe('Prompt do lote e validação da resposta', () => {
     expect(estimateTokens(prompt)).toBeGreaterThan(50);
   });
 
+  it('lista as matérias que já existem e pede proposta geral, como num edital', () => {
+    const prompt = buildBatchPrompt(batch, ['Língua Portuguesa', 'Engenharia de Software e Programação']);
+    expect(prompt).toContain('Matérias que já existem');
+    expect(prompt).toContain('- Língua Portuguesa');
+    expect(prompt).toMatch(/assunto geral, como os tópicos de um edital/i);
+    expect(prompt).toMatch(/nunca específico de um órgão/i);
+  });
+
   it('aceita cercas de código, descarta assunto fora da lista do item e id fora do lote; corta a confiança em 0–1', () => {
     const text = '```json\n' + JSON.stringify({
       resultados: [

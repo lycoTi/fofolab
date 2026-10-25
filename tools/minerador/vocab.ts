@@ -63,8 +63,17 @@ export interface PropostaAssunto {
   confianca: number;
 }
 
-/** Palavras de 3+ letras, sem acento, cortadas no 6º caractere: "estruturas" e "estrutura" contam igual. */
-const nameWords = (text: string) => new Set(slug(text).split('-').filter((w) => w.length >= 3).map((w) => w.slice(0, 6)));
+/**
+ * Palavras de 3+ letras, sem acento, sem o "s" do plural, cortadas no 6º caractere: "estruturas" e "estrutura",
+ * "textos" e "texto" contam igual.
+ */
+const nameWords = (text: string) =>
+  new Set(
+    slug(text)
+      .split('-')
+      .filter((w) => w.length >= 3)
+      .map((w) => (w.length > 4 && w.endsWith('s') ? w.slice(0, -1) : w).slice(0, 6))
+  );
 
 function jaccard(a: Set<string>, b: Set<string>): number {
   if (a.size === 0 && b.size === 0) return 1;
@@ -76,18 +85,47 @@ function jaccard(a: Set<string>, b: Set<string>): number {
 const NEAR = 0.8;
 const sameParent = (a: string[], b: string[]) => assuntoId(a.slice(0, -1)) === assuntoId(b.slice(0, -1));
 
-function findExisting(assuntos: Assunto[], caminho: string[]): Assunto | undefined {
-  const id = assuntoId(caminho);
-  const exact = assuntos.find((a) => a.id === id);
-  if (exact) return exact;
-  const leaf = nameWords(caminho.at(-1) ?? '');
-  return assuntos.find((a) => a.caminho.length === caminho.length && sameParent(a.caminho, caminho) && jaccard(nameWords(a.caminho.at(-1) ?? ''), leaf) >= NEAR);
+/**
+ * Dois nomes do mesmo assunto: quase iguais (Jaccard ≥ 0.8) ou um contido no outro com 2+ palavras ("Auditoria
+ * Governamental" ⊂ "Fundamentos de Auditoria Governamental e Atuação Integrada da CGU"; "Interpretação de texto" ⊂
+ * "Compreensão e interpretação de textos").
+ */
+function sameName(a: string, b: string): boolean {
+  const [wa, wb] = [nameWords(a), nameWords(b)];
+  if (jaccard(wa, wb) >= NEAR) return true;
+  const [small, large] = wa.size <= wb.size ? [wa, wb] : [wb, wa];
+  return small.size >= 2 && [...small].every((w) => large.has(w));
+}
+
+/** Nomes já usados num nível, abaixo de um pai (os pais existem implícitos nos caminhos dos assuntos). */
+function namesAt(assuntos: Assunto[], parent: string[]): string[] {
+  const parentId = assuntoId(parent);
+  const names = new Set<string>();
+  for (const a of assuntos) {
+    if (a.caminho.length <= parent.length) continue;
+    if (assuntoId(a.caminho.slice(0, parent.length)) === parentId) names.add(a.caminho[parent.length]);
+  }
+  return [...names].sort();
 }
 
 /**
- * Propostas da IA (spec 12 §6.4): igual ou quase igual a um assunto existente vira esse assunto (`mapeadas`, chave =
- * id proposto); nova com confiança ≥ `minConfianca` entra numa versão nova (uma por chamada, com a lista do que mudou);
- * abaixo fica pendente — os itens dela ficam incertos até uma rodada com modelo melhor.
+ * Caminho canônico da proposta: cada nível casa com um nome que já existe abaixo do mesmo pai (a IA escreve "Raciocínio
+ * Lógico e Matemática" num lote e "Raciocínio Lógico-Matemático" no outro).
+ */
+function canonicalPath(assuntos: Assunto[], caminho: string[]): string[] {
+  const out: string[] = [];
+  for (const name of caminho) {
+    const existing = namesAt(assuntos, out).find((n) => sameName(n, name));
+    out.push(existing ?? name);
+  }
+  return out;
+}
+
+/**
+ * Propostas da IA (spec 12 §6.4): o caminho é canonizado contra o vocabulário; se o assunto já existe, a proposta vira
+ * ele; senão, com confiança ≥ `minConfianca`, entra (com a matéria e os níveis de cima que faltarem) numa versão nova —
+ * uma por chamada, com a lista do que mudou; abaixo fica pendente. `mapeadas` dá o destino de toda proposta resolvida
+ * (chave = id do caminho como a IA escreveu).
  */
 export function applyProposals(
   vocab: Vocabulario,
@@ -99,20 +137,27 @@ export function applyProposals(
   const pendentes: PropostaAssunto[] = [];
   const mapeadas: Record<string, string> = {};
   for (const proposta of propostas) {
-    const caminho = proposta.caminho.map((p) => p.trim()).filter(Boolean);
-    if (caminho.length === 0) continue;
-    const existing = findExisting(assuntos, caminho);
-    if (existing) {
-      mapeadas[assuntoId(caminho)] = existing.id;
+    const original = proposta.caminho.map((p) => p.trim()).filter(Boolean);
+    if (original.length === 0) continue;
+    const caminho = canonicalPath(assuntos, original);
+    const id = assuntoId(caminho);
+    if (assuntos.some((a) => a.id === id)) {
+      mapeadas[assuntoId(original)] = id;
       continue;
     }
     if (proposta.confianca < minConfianca) {
       pendentes.push(proposta);
       continue;
     }
-    const novo: Assunto = { id: assuntoId(caminho), caminho, sinonimos: [], origem: 'proposta' };
-    assuntos.push(novo);
-    aceitas.push(novo.id);
+    // A matéria (e os níveis de cima) também viram assunto: a próxima proposta casa com eles
+    for (let level = 1; level <= caminho.length; level += 1) {
+      const path = caminho.slice(0, level);
+      const pathId = assuntoId(path);
+      if (assuntos.some((a) => a.id === pathId)) continue;
+      assuntos.push({ id: pathId, caminho: path, sinonimos: [], origem: 'proposta' });
+      aceitas.push(pathId);
+    }
+    mapeadas[assuntoId(original)] = id;
   }
   if (aceitas.length === 0) return { vocab, aceitas, pendentes, mapeadas };
   const versao = vocab.versao + 1;

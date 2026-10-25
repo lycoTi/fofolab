@@ -140,7 +140,7 @@ describe('Rodada de classificação retomável', () => {
       })),
     };
     const r = await runClassificacao({ provider: proposer, acervoDir: dir, limite: 1, alvo: 'sem-opiniao', k: 5 });
-    expect(r.propostasAceitas).toEqual([assuntoId(['Informática', 'Navegadores'])]);
+    expect(r.propostasAceitas).toEqual([assuntoId(['Informática']), assuntoId(['Informática', 'Navegadores'])]);
     expect(r.versaoVocabulario).toBe(2);
     const all = { ...readClassificacao(join(dir, 'classificacao'), 'A_23').itens, ...readClassificacao(join(dir, 'classificacao'), 'B_23').itens };
     expect(Object.values(all)[0].consenso[0].id).toBe(assuntoId(['Informática', 'Navegadores']));

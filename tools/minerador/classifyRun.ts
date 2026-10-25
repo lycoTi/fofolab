@@ -36,6 +36,9 @@ const MIN_CONFIANCA_PROPOSTA = 0.8;
 const MAX_PROMPT_TOKENS = { groq: 6000, default: 40000 };
 const TOKENS_POR_ITEM = 60;
 
+/** Matérias (primeiro nível) do vocabulário atual: vão no prompt para a proposta não inventar variação de nome. */
+const materiasOf = (vocab: Vocabulario) => vocab.assuntos.filter((a) => a.caminho.length === 1).map((a) => a.caminho[0]).sort();
+
 interface Queued {
   item: AcervoItem;
   concurso: string;
@@ -72,7 +75,7 @@ function batches(queue: Queued[], vocab: Vocabulario, provider: AiProvider, k: n
   for (const q of queue) {
     const candidatos = candidatesFor(q.item, vocab, k).map((c) => byId.get(c.id)).filter((a): a is Assunto => !!a);
     const entry = { item: q.item, candidatos };
-    const tooBig = current.entries.length > 0 && estimateTokens(buildBatchPrompt([...current.entries, entry])) > maxTokens;
+    const tooBig = current.entries.length > 0 && estimateTokens(buildBatchPrompt([...current.entries, entry], materiasOf(vocab))) > maxTokens;
     if (current.entries.length >= provider.tamanhoLote || tooBig) {
       out.push(current);
       current = { entries: [], owners: [] };
@@ -103,7 +106,7 @@ export async function runClassificacao(opts: { provider: AiProvider; acervoDir: 
   for (const batch of batches(selected, vocab, opts.provider, opts.k)) {
     let text: string;
     try {
-      text = await opts.provider.complete(buildBatchPrompt(batch.entries), TOKENS_POR_ITEM * batch.entries.length + 100);
+      text = await opts.provider.complete(buildBatchPrompt(batch.entries, materiasOf(vocab)), TOKENS_POR_ITEM * batch.entries.length + 100);
     } catch (err) {
       if (err instanceof LimiteDiario) {
         report.parouNoLimite = true;
@@ -130,7 +133,8 @@ export async function runClassificacao(opts: { provider: AiProvider; acervoDir: 
       const assuntos: AssuntoDoItem[] = [...result.assuntos];
       if (result.proposta) {
         const proposed = assuntoId(result.proposta.caminho);
-        const target = applied.mapeadas[proposed] ?? (applied.aceitas.includes(proposed) ? proposed : null);
+        // Aceita ou casada com uma existente, a proposta tem destino canônico em `mapeadas`; pendente, não tem
+        const target = applied.mapeadas[proposed] ?? null;
         if (target && !assuntos.some((a) => a.id === target)) assuntos.push({ id: target, confianca: result.proposta.confianca });
       }
       const c = classif.get(concurso)!;

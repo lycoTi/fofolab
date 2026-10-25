@@ -36,10 +36,38 @@ describe('Propostas de assunto novo e versões', () => {
       0.8
     );
     expect(r.vocab.versao).toBe(2);
-    expect(r.aceitas).toHaveLength(2);
+    // Os dois assuntos e as duas matérias novas (Informática, Economia)
+    expect(r.aceitas).toHaveLength(4);
+    expect(r.aceitas).toEqual(expect.arrayContaining([assuntoId(['Informática', 'Navegadores']), assuntoId(['Informática'])]));
     expect(r.vocab.historico.at(-1)).toEqual({ versao: 2, mudancas: expect.arrayContaining([expect.stringContaining('Navegadores')]) });
     expect(r.pendentes).toEqual([{ caminho: ['Economia', 'Algo duvidoso'], confianca: 0.5 }]);
     expect(r.vocab.assuntos.find((a) => a.caminho.at(-1) === 'Navegadores')!.origem).toBe('proposta');
+  });
+
+  it('matéria da proposta casa com a existente (nome contido, singular/plural) e a nova matéria vira assunto', () => {
+    const v = base();
+    v.assuntos.push({ id: assuntoId(['Fundamentos de Auditoria Governamental e Atuação Integrada da CGU']), caminho: ['Fundamentos de Auditoria Governamental e Atuação Integrada da CGU'], sinonimos: [], origem: 'edital' });
+    const r = applyProposals(
+      v,
+      [
+        { caminho: ['Auditoria Governamental', 'Normas ISSAI'], confianca: 0.9 },
+        { caminho: ['Raciocínio Lógico-Matemático', 'Regra de três'], confianca: 0.9 },
+        { caminho: ['Raciocínio Lógico e Matemática', 'Conjuntos'], confianca: 0.9 },
+        { caminho: ['Língua Portuguesa', 'Interpretação de texto'], confianca: 0.9 },
+        { caminho: ['Língua Portuguesa', 'Compreensão e interpretação de textos'], confianca: 0.9 },
+      ],
+      0.8
+    );
+    const caminhos = r.vocab.assuntos.map((a) => a.caminho.join(' › '));
+    expect(caminhos).toContain('Fundamentos de Auditoria Governamental e Atuação Integrada da CGU › Normas ISSAI');
+    expect(caminhos).toContain('Raciocínio Lógico-Matemático › Conjuntos');
+    expect(caminhos).not.toContain('Raciocínio Lógico e Matemática › Conjuntos');
+    expect(caminhos).toContain('Raciocínio Lógico-Matemático');
+    expect(caminhos).toContain('Língua Portuguesa');
+    expect(caminhos.filter((c) => c.startsWith('Língua Portuguesa ›'))).toEqual(['Língua Portuguesa › Interpretação de texto']);
+    // Toda proposta (aceita ou casada) tem destino em `mapeadas`
+    expect(r.mapeadas[assuntoId(['Língua Portuguesa', 'Compreensão e interpretação de textos'])]).toBe(assuntoId(['Língua Portuguesa', 'Interpretação de texto']));
+    expect(r.mapeadas[assuntoId(['Raciocínio Lógico e Matemática', 'Conjuntos'])]).toBe(assuntoId(['Raciocínio Lógico-Matemático', 'Conjuntos']));
   });
 
   it('junções sugeridas: irmãos com nomes quase iguais (só para o relatório)', () => {

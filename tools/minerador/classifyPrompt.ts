@@ -55,7 +55,7 @@ const RULES = `Você classifica itens de provas de concurso (banca Cebraspe) por
 1. A fonte é o texto do item (texto-base, enunciado e alternativas). Classifique pelo que o item PERGUNTA.
 2. A matéria de origem é só uma pista e pode estar errada ou ser genérica ("CONHECIMENTOS ESPECÍFICOS").
 3. Para cada item, escolha de 1 a 3 assuntos SOMENTE da lista de candidatos daquele item, pelo id, com confiança de 0 a 1.
-4. Se nenhum candidato serve, deixe "assuntos" vazio e proponha um assunto novo em "proposta": {"caminho": ["Matéria", "Assunto"], "confianca": 0 a 1}. Nunca invente id.
+4. Se nenhum candidato serve, deixe "assuntos" vazio e proponha um assunto novo em "proposta": {"caminho": ["Matéria", "Assunto"], "confianca": 0 a 1}. Nunca invente id. A proposta é um assunto geral, como os tópicos de um edital ("Interpretação de texto", "Regra de três"), nunca específico de um órgão, de uma lei local ou de uma questão. Use como matéria uma das "Matérias que já existem" sempre que couber.
 5. Responda SOMENTE com o JSON {"resultados":[{"id":"…","assuntos":[{"id":"…","confianca":0.0}],"proposta":null}]}, um resultado por item, sem texto antes ou depois.`;
 
 function itemBlock({ item, candidatos }: BatchEntry): string {
@@ -70,8 +70,10 @@ Candidatos:
 ${lista || '  (nenhum — proponha um assunto novo)'}`;
 }
 
-export function buildBatchPrompt(batch: BatchEntry[]): string {
-  return `${RULES}\n\n${batch.map(itemBlock).join('\n\n')}`;
+/** `materias`: os nomes de primeiro nível do vocabulário — a proposta reaproveita um deles em vez de inventar variação. */
+export function buildBatchPrompt(batch: BatchEntry[], materias: string[] = []): string {
+  const lista = materias.length > 0 ? `\n\nMatérias que já existem:\n${materias.map((m) => `- ${m}`).join('\n')}` : '';
+  return `${RULES}${lista}\n\n${batch.map(itemBlock).join('\n\n')}`;
 }
 
 /** Estimativa grosseira (≈ 3,5 caracteres por token em português) para não estourar o limite por minuto. */
