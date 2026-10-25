@@ -1,3 +1,4 @@
+import { continuationChecker } from './pdfLines';
 import type { ExtractedItem, PdfLine } from './types';
 
 /**
@@ -10,30 +11,8 @@ const SECTION_HEADER = /^-+\s*(.+?)\s*-+$/;
 /** Número de 1 a 3 dígitos colado ou não ao texto: "51 A integridade", "51A integridade". */
 const ITEM_START = /^(\d{1,3})(?=\s|[A-ZÀ-Ý“"(])\s*(.*)$/;
 
-/** Diferença máxima para uma linha estar "no recuo de continuação" do item. */
-const INDENT_TOLERANCE = 3;
-
-/**
- * Recuo da continuação de item em cada página/coluna: o `x` mais comum entre as linhas fora da margem. O parágrafo do
- * texto-base às vezes começa com recuo de primeira linha MAIOR (ex.: margem 303, continuação 321, parágrafo 332) — essa
- * linha não continua o item anterior.
- */
-function continuationIndents(lines: PdfLine[]): Map<string, number> {
-  const counts = new Map<string, Map<number, number>>();
-  for (const line of lines) {
-    if (line.atMargin) continue;
-    const key = `${line.page}${line.column}`;
-    if (!counts.has(key)) counts.set(key, new Map());
-    const x = Math.round(line.x);
-    counts.get(key)!.set(x, (counts.get(key)!.get(x) ?? 0) + 1);
-  }
-  const indents = new Map<string, number>();
-  for (const [key, byX] of counts) indents.set(key, [...byX.entries()].sort((a, b) => b[1] - a[1])[0][0]);
-  return indents;
-}
-
 export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
-  const indents = continuationIndents(lines);
+  const continuesItem = continuationChecker(lines);
   const items: ExtractedItem[] = [];
   let current: ExtractedItem | null = null;
   let expected: number | null = null;
@@ -53,9 +32,7 @@ export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
     }
 
     if (!line.atMargin) {
-      const indent = indents.get(`${line.page}${line.column}`);
-      const continuesItem = indent !== undefined && Math.abs(Math.round(line.x) - indent) <= INDENT_TOLERANCE;
-      if (current && continuesItem) {
+      if (current && continuesItem(line)) {
         current.enunciado += `\n${line.text}`;
         continue;
       }
