@@ -13,7 +13,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:26",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Em computação em nuvem, quando uma organização monta e fornece serviços para outras empresas, ela está utilizando o modelo de nuvem do tipo",
       "alternativas": [
         "A) proprietária.",
@@ -24,9 +24,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -51,7 +52,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:27",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Quanto ao gerenciamento de memória, o processo em que cada software em execução tem seu próprio espaço de endereçamento é o de",
       "alternativas": [
         "A) paginação.",
@@ -62,9 +63,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -80,7 +82,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:28",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na autenticação por LDAP, é necessário que o servidor esteja executando o LDAP na rede. Esse item de configuração é denominado",
       "alternativas": [
         "A) agente de sistema do diretório (DSA).",
@@ -91,9 +93,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -109,7 +112,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:29",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na computação em nuvem, quando o gerenciamento do espaço em disco e do sistema operacional é de responsabilidade do provedor, o serviço utilizado é do tipo",
       "alternativas": [
         "A) contêiner como serviço (CaaS).",
@@ -120,9 +123,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -138,7 +142,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:30",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A estratégia para contingência e continuidade de serviços inclui um conjunto de cenários de indisponibilidade e de reações conhecido como",
       "alternativas": [
         "A) plano de contingência operacional (PCO).",
@@ -149,9 +153,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -167,7 +172,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:31",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na virtualização de servidores, a funcionalidade que garante a administração e monitoração centralizada das entidades é a de",
       "alternativas": [
         "A) interposição.",
@@ -178,9 +183,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -205,7 +211,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:32",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A métrica das ferramentas de alta disponibilidade que mede por quanto tempo um sistema fica inoperante antes de ser recuperado ou substituído é o",
       "alternativas": [
         "A) tempo médio entre falhas (MTBF).",
@@ -216,9 +222,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -234,7 +241,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:33",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na virtualização por contêineres, o mecanismo que engloba recursos do sistema em uma abstração é conhecido como",
       "alternativas": [
         "A) control groups.",
@@ -245,9 +252,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -263,7 +271,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:34",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Com relação ao modelo entidade-relacionamento (MER) ilustrado na figura precedente, assinale a opção correta.",
       "alternativas": [
         "A) Um treinamento pode ser solicitado por no máximo um cliente.",
@@ -274,9 +282,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -292,7 +301,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:35",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Considerando que, em um banco de dados PostgreSQL 9.2, tenha sido identificado um lock causado por uma sessão com pid 13652, assinale a opção que apresenta o comando que deve ser executado para eliminar a sessão.",
       "alternativas": [
         "A) select pg_terminate_backend(13652) from information_schema;",
@@ -303,9 +312,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -321,7 +331,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_001_01:36",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Com relação aos bancos de dados distribuídos, assinale a opção correta.",
       "alternativas": [
         "A) Fragmentação e replicação são técnicas de armazenamento de dados distribuídos que não podem ser combinadas, ou seja, deve-se escolher uma das duas técnicas para ser implementada.",
@@ -332,9 +342,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -361,9 +372,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -390,9 +402,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -419,9 +432,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -448,9 +462,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -477,9 +492,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -506,9 +522,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -535,9 +552,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -564,9 +582,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -593,9 +612,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -622,9 +642,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -660,9 +681,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -689,9 +711,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -718,9 +741,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -747,9 +771,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -765,7 +790,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:26",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Em computação em nuvem, quando uma organização monta e fornece serviços para outras empresas, ela está utilizando o modelo de nuvem do tipo",
       "alternativas": [
         "A) híbrida.",
@@ -776,9 +801,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -794,7 +820,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:27",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Quanto ao gerenciamento de memória, o processo em que cada software em execução tem seu próprio espaço de endereçamento é o de",
       "alternativas": [
         "A) paginação.",
@@ -805,9 +831,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -823,7 +850,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:28",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na autenticação por LDAP, é necessário que o servidor esteja executando o LDAP na rede. Esse item de configuração é denominado",
       "alternativas": [
         "A) interface de programação de aplicações (API).",
@@ -834,9 +861,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -852,7 +880,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:29",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na computação em nuvem, quando o gerenciamento do espaço em disco e do sistema operacional é de responsabilidade do provedor, o serviço utilizado é do tipo",
       "alternativas": [
         "A) contêiner como serviço (CaaS).",
@@ -863,9 +891,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -881,7 +910,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:30",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A estratégia para contingência e continuidade de serviços inclui um conjunto de cenários de indisponibilidade e de reações conhecido como",
       "alternativas": [
         "A) plano de contingência operacional (PCO).",
@@ -892,9 +921,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -910,7 +940,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:32",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A métrica das ferramentas de alta disponibilidade que mede por quanto tempo um sistema fica inoperante antes de ser recuperado ou substituído é o",
       "alternativas": [
         "A) tempo médio entre falhas (MTBF).",
@@ -921,9 +951,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -939,7 +970,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:33",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na virtualização por contêineres, o mecanismo que engloba recursos do sistema em uma abstração é conhecido como",
       "alternativas": [
         "A) control groups.",
@@ -950,9 +981,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -968,7 +1000,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:34",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A abertura e o fechamento da comunicação entre dois dispositivos no modelo OSI é de responsabilidade da camada de",
       "alternativas": [
         "A) apresentação.",
@@ -979,9 +1011,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -997,7 +1030,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:35",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na arquitetura TCP/IP, é responsável por permitir que os hosts enviem pacotes para qualquer rede e garantir que esses dados cheguem ao seu destino final",
       "alternativas": [
         "A) o protocolo TCP.",
@@ -1008,9 +1041,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1026,7 +1060,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:36",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A mensagem que um dispositivo envia com o objetivo de receber um endereço IP distribuído por meio de um servidor DHCP é do tipo",
       "alternativas": [
         "A) DHCP request.",
@@ -1037,9 +1071,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1055,7 +1090,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:37",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "O registro DNS que aponta um nome de domínio (um alias) para outro domínio é do tipo",
       "alternativas": [
         "A) AAAA.",
@@ -1066,9 +1101,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1084,7 +1120,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:38",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "O SSH suporta métodos de autenticação que fornecem um esquema extensível para executar autenticação usando-se mecanismos externos, como Kerberos 5 ou NTLM. Entre esses métodos, inclui-se o",
       "alternativas": [
         "A) SFTP.",
@@ -1095,9 +1131,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1113,7 +1150,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_002_01:39",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Para dividir uma rede típica classe C em outras duas sub-redes, é correto utilizar uma máscara de redes que, em quantidade de bits, seja equivalente a",
       "alternativas": [
         "A) \\23.",
@@ -1124,9 +1161,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1153,9 +1191,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1182,9 +1221,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1211,9 +1251,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1240,9 +1281,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1269,9 +1311,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1298,9 +1341,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1327,9 +1371,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1356,9 +1401,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1385,9 +1431,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1414,9 +1461,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1432,7 +1480,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:26",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "De acordo com a norma ISO/IEC 27002, o objetivo da classificação da informação é",
       "alternativas": [
         "A) verificar a informação do ponto de vista legal, atribuindo-lhe um valor de acordo com uma escala numérica adequada.",
@@ -1443,9 +1491,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1461,7 +1510,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:27",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Uma função de hashing",
       "alternativas": [
         "A) apresenta valores de hash de saída de tamanho fixo, independentemente dos dados de entrada.",
@@ -1472,9 +1521,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1490,7 +1540,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:28",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "No contexto da infraestrutura de chaves públicas ICP-Brasil, homologar, auditar e fiscalizar o sistema ICP-Brasil, inclusive os seus prestadores de serviço, compete",
       "alternativas": [
         "A) à autoridade certificadora raiz (AC Raiz).",
@@ -1501,9 +1551,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1519,7 +1570,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:29",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Com base na norma ISO/IEC 27002, assinale a opção correta a respeito de controles de acesso.",
       "alternativas": [
         "A) É fundamental que o controle de acesso a ativos de uma organização seja estabelecido com base em requisitos políticos e de usabilidade dos recursos.",
@@ -1530,9 +1581,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1548,7 +1600,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:30",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Assinale a opção que apresenta o código malicioso que é projetado para permitir o retorno e o acesso de um invasor a um equipamento comprometido anteriormente, por meio da inclusão de serviços criados ou modificados.",
       "alternativas": [
         "A) backdoor",
@@ -1559,9 +1611,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1577,7 +1630,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:31",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "O protocolo de acesso a redes sem fio que especifica implementações fracas de criptografia RC4 e que, por sua fragilidade característica, não impede que um atacante obtenha a chave usada para cifrar os pacotes a partir do próprio tráfego cifrado é o",
       "alternativas": [
         "A) WPA.",
@@ -1588,9 +1641,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1606,7 +1660,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:32",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Assinale a opção que indica um ataque em que um golpista visa obter dados pessoais e financeiros de um usuário pela utilização combinada de meios técnicos e engenharia social.",
       "alternativas": [
         "A) DDoS (distributed denial of service)",
@@ -1617,9 +1671,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1635,7 +1690,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:34",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Quanto ao gerenciamento de memória, o processo em que cada software em execução tem seu próprio espaço de endereçamento é o de",
       "alternativas": [
         "A) paginação.",
@@ -1646,9 +1701,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1664,7 +1720,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_003_01:35",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na autenticação por LDAP, é necessário que o servidor esteja executando o LDAP na rede. Esse item de configuração é denominado",
       "alternativas": [
         "A) agente de sistema do diretório (DSA).",
@@ -1675,9 +1731,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1704,9 +1761,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1733,9 +1791,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1762,9 +1821,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1791,9 +1851,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1820,9 +1881,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1849,9 +1911,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1878,9 +1941,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1907,9 +1971,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1936,9 +2001,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1965,9 +2031,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1994,9 +2061,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2023,9 +2091,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2052,9 +2121,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2081,9 +2151,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2110,9 +2181,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2128,7 +2200,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:26",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "```\nx = [1, 2, 3, 2, 1]\nm1 = 0\npara (i = 1; i < 5; i = i + 1)\nm2 = i\nse (x[m1] < x[m2])\nm1 = m2\n```\nfim se fim para imprime(m1) No pseudocódigo precedente, a função imprime(m1) mostrará, em tela, o valor",
       "alternativas": [
         "A) 0.",
@@ -2139,9 +2211,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2157,20 +2230,21 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:27",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "```\ni = 0\nenquanto (i < 3)\ni = i + 1\nimprime(i)\n```\nfim enquanto Assinale a opção que apresenta o resultado do pseudocódigo precedente, após a sua execução.",
       "alternativas": [
         "A) 3",
         "B) 5",
-        "```\nC) 0\n1\n2\n```",
-        "```\nD) 1\n2\n3\n```",
-        "```\nE) 0\n1\n2\n3\n```"
+        "C) 0 1 2",
+        "D) 1 2 3",
+        "E) 0 1 2 3"
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2186,7 +2260,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:28",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "```\nvalores = [3, 22, 7, 99]\nimprime(valores[1])\n```\nEm relação ao pseudocódigo precedente, é correto afirmar que",
       "alternativas": [
         "A) o código é exemplo de uma estrutura de decisão.",
@@ -2197,9 +2271,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2215,7 +2290,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:29",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "função calc(n) se (n == 0 ou n == 1) returne 1 senão returne n * calc(n - 1) fim se fim função\n```\nn = 3\nresposta = calc(n)\n```\nTendo como referência o pseudocódigo precedente, assinale a opção correta.",
       "alternativas": [
         "A) No código, não há passagem de parâmetro.",
@@ -2226,9 +2301,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2244,7 +2320,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:30",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "```\ncalc = 5 % 2\nimprime(calc)\n```\nAssinale a opção que apresenta o resultado da execução do pseudocódigo precedente.",
       "alternativas": [
         "A) 1",
@@ -2255,9 +2331,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2273,7 +2350,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:31",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "No Single Sign-On, a funcionalidade em que as informações de login e senha permitem um melhor controle da equipe de TI é",
       "alternativas": [
         "A) a autenticação multifator.",
@@ -2284,9 +2361,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2302,7 +2380,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:32",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "De acordo com o Catálogo GoF, o padrão que apresenta uma interface comum para uma coleção de objetos é o",
       "alternativas": [
         "A) Facade.",
@@ -2313,9 +2391,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2331,7 +2410,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:33",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "JSON é considerado",
       "alternativas": [
         "A) uma linguagem de marcação.",
@@ -2342,9 +2421,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2360,7 +2440,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:34",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na arquitetura de aplicações, a estrutura que define que os componentes podem ser pacotes, classes, objetos, funções etc. é a",
       "alternativas": [
         "A) funcional.",
@@ -2371,9 +2451,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2389,7 +2470,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:35",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "<Cliente Nome=\"JOAO DA SILVA\" Identificacao=\"123456\"> <Endereco Logradouro=\"Rua Ativa, 123\" Municipio=\"Recife\" UF=\"PE\"/> </Cliente> O trecho de código precedente está escrito em",
       "alternativas": [
         "A) XSLT.",
@@ -2400,9 +2481,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2418,7 +2500,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:36",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Assinale a opção em que é apresentada corretamente a expectativa de benefício ao se adotar uma entrega incremental como abordagem para o desenvolvimento de software.",
       "alternativas": [
         "A) A experiência adquirida com os incrementos iniciais direciona para a inexistência de reaprendizado na conclusão da versão correspondente do sistema.",
@@ -2429,9 +2511,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2447,7 +2530,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:37",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Ao adotar uma prática ágil para a criação de um software, seu desenvolvedor optou pela implementação com qualidade de uma funcionalidade do sistema; para isso, escreveu um caso de teste automatizado, com base nos requisitos especificados, e realizou testes de unidade em uma linguagem similar à usada no desenvolvimento da funcionalidade. Da situação hipotética precedente infere-se que a prática adotada pelo desenvolvedor está associada ao",
       "alternativas": [
         "A) desenvolvimento orientado por comportamento (BDD).",
@@ -2458,9 +2541,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2476,7 +2560,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:38",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Na elicitação e no gerenciamento de requisitos de um software, a abordagem que tem o potencial de oferecer explicações prováveis para contextualizar ou explicar uma necessidade que se apresenta como uma afirmação desconfortável e que se contrapõe às crenças e aos entendimentos iniciais da equipe de desenvolvimento é a",
       "alternativas": [
         "A) da análise heurística de interface.",
@@ -2487,9 +2571,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2505,7 +2590,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:39",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Uma equipe de desenvolvimento de software está criando um aplicativo para conceder financiamento de imóveis para residentes no Brasil que não conseguem comprovar renda mensal regular. Nessa situação hipotética, para empregar conceitos de MVP (minimum viable product), essa equipe deve entregar uma versão do produto que",
       "alternativas": [
         "A) permita que um número limitado de moradores de uma comunidade consiga simular e, eventualmente, contratar o valor de um financiamento imobiliário, receber o valor correspondente (de acordo com algumas opções de garantia de pagamento já aceitas) e iniciar o recebimento do pagamento do financiamento.",
@@ -2516,9 +2601,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2534,7 +2620,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:40",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A escolha de casos de teste de unidade é fundamental para a redução dos custos dos testes e uma estratégia que pode ser adotada para a seleção de casos é a de teste de partição de equivalência. Nesse contexto, considere-se um programa que precisa aceitar as seguintes opções de tamanho de folha para impressão. • 10,5 cm × 14,8 cm • 14,8 cm × 21,0 cm • 21,0 cm × 29,7 cm • 29,7 cm × 42,0 cm Nessa hipótese, para a aplicação correta da técnica de equivalência de partição com o número mínimo de casos de teste, é necessário realizar",
       "alternativas": [
         "A) apenas um caso de teste, para verificar se o programa pode imprimir folhas em todos os tamanhos exigidos.",
@@ -2545,9 +2631,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2563,7 +2650,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:41",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A arquitetura de banco de dados relacional, como o Oracle, é um modelo de organização de dados que se baseia em tabelas estruturadas. Nesse contexto, assinale a opção que apresenta a denominação correta de uma coluna ou um conjunto de colunas que identifica exclusivamente cada linha em uma tabela e garante a unicidade e a integridade dos dados.",
       "alternativas": [
         "A) relacionamentos",
@@ -2574,9 +2661,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2592,7 +2680,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:42",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Assinale a opção que apresenta os quatro principais conceitos em que a programação orientada a objetos é baseada.",
       "alternativas": [
         "A) blocos de dados; datafiles; estruturas físicas; tablespaces",
@@ -2603,9 +2691,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2621,7 +2710,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:43",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "A linguagem Java pode ser usada em computadores com sistemas operacionais diferentes, desde que estejam disponíveis as condições técnicas necessárias para essa finalidade. Para controlar as funções da linguagem Java em um computador, por meio de determinado sistema operacional, é correto o uso",
       "alternativas": [
         "A) do C#.",
@@ -2632,9 +2721,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2650,7 +2740,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:44",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Em relação a conceitos de programação orientada a objetos, assinale a opção correta.",
       "alternativas": [
         "A) Padrões de frontend são protocolos que garantem a segurança do código.",
@@ -2661,9 +2751,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2679,7 +2770,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:45",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Determinado protocolo, utilizado na comunicação segura entre um navegador web e um servidor, emprega criptografia para proteger os dados transmitidos, garantindo a confidencialidade, integridade e autenticidade das informações. Esse protocolo é",
       "alternativas": [
         "A) MVC.",
@@ -2690,9 +2781,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2708,7 +2800,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:46",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "O emprego de controles apropriados para o acesso físico de pessoas a ambientes seguros de processamento de informações tem como principal finalidade",
       "alternativas": [
         "A) organizar a emissão de identidades funcionais permanentes e credenciais temporárias para o público externo.",
@@ -2719,9 +2811,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2737,7 +2830,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:47",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Se uma mensagem de texto encriptada for enviada de um usuário",
       "alternativas": [
         "A) para um usuário B pela Internet, utilizando um sistema criptográfico assimétrico, então, para que B visualize corretamente o conteúdo da mensagem recebida de A, ele precisará usar a sua chave A de sessão.",
@@ -2748,9 +2841,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2766,7 +2860,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:48",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Usualmente, a garantia de integridade dos dados trafegados em uma VPN é fornecida por meio do uso de algoritmos de",
       "alternativas": [
         "A) controle de banda.",
@@ -2777,9 +2871,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2795,7 +2890,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:49",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "Como o tratamento de dados pessoais gera riscos para os titulares, o mecanismo recomendado para a avaliação desses riscos consiste em",
       "alternativas": [
         "A) avaliação de impactos potenciais.",
@@ -2806,9 +2901,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2824,7 +2920,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_004_01:50",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- CONHECIMENTOS ESPECÍFICOS --",
+      "textoBase": null,
       "enunciado": "João recebeu uma ligação telefônica de um suposto funcionário de um banco onde ele tem conta-corrente. Esse funcionário informou que o motivo da referida ligação era a confirmação de uma transferência bancária de alto valor que o cliente em questão teria realizado. Após João negar a autoria da transferência, a qual não havia feito, o suposto funcionário pediu que ele digitasse, no teclado do telefone, os seus dados pessoais, como CPF, agência, conta e senha, para que o sistema do banco processasse o cancelamento da transferência. Preocupado, João atendeu ao pedido do suposto funcionário do banco. A referida transferência bancária nunca ocorreu. Nessa situação hipotética, João foi vítima de um ataque baseado em",
       "alternativas": [
         "A) engenharia social.",
@@ -2835,9 +2931,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2853,7 +2950,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG1_01:1",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
+      "textoBase": "Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
       "enunciado": "Infere-se do texto CG1A5-I que o crescente número de indivíduos que não encontram colocação no mercado de trabalho deve-se à falta de",
       "alternativas": [
         "A) vagas de emprego.",
@@ -2864,9 +2961,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2882,7 +2980,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG1_01:2",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
+      "textoBase": "Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
       "enunciado": "Julgue os itens a seguir, a respeito das relações de concordância verbal estabelecidas no texto CG1A5-I. I No terceiro período do primeiro parágrafo, a forma verbal “encolherão” está flexionada no plural porque concorda com o numeral “15,4%”. II No quarto período do primeiro parágrafo, a forma verbal “dobrará” está flexionada no singular porque estabelece concordância com o termo “participação”. III A forma verbal “acreditam” (primeiro período do segundo parágrafo) poderia, sem prejuízo da correção gramatical e do sentido do texto, ser flexionada no singular — acredita. Assinale a opção correta.",
       "alternativas": [
         "A) Nenhum item está certo.",
@@ -2893,9 +2991,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2911,7 +3010,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG1_01:3",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
+      "textoBase": "Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
       "enunciado": "Assinale a opção em que a inversão da posição dos termos do segmento destacado preservaria os sentidos e a correção gramatical do texto CG1A5-I.",
       "alternativas": [
         "A) “mesmo período” (quarto período do primeiro parágrafo) — período mesmo",
@@ -2922,9 +3021,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2940,7 +3040,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG1_01:4",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
+      "textoBase": "Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
       "enunciado": "Assinale a opção em que a proposta de reescrita do primeiro período do terceiro parágrafo do texto CG1A5-I é gramaticalmente correta e coerente com as ideias do texto.",
       "alternativas": [
         "A) Um momento, portanto, de grandes ameaças e grandes oportunidades, que exigem investimentos imediatos, na formação digital da força de trabalho das gerações atual e futuras.",
@@ -2951,9 +3051,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2969,7 +3070,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG1_01:5",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
+      "textoBase": "Texto CG1A5-I Vivemos uma transformação acelerada no mercado de trabalho. Com o avanço da inteligência artificial e da automação, muitas funções tradicionais estão sendo eliminadas ou substituídas em todo o mundo. Funções que representavam 15,4% da força de trabalho global em 2020 encolherão para 9% até 2025. Por outro lado, a participação das novas profissões (como especialistas em dados e inteligência artificial) quase dobrará, crescendo de 7,8% para 13,5% da base total de empregados no mesmo período. Milhões de vagas em todo o mundo estão deixando de ser preenchidas, ao mesmo tempo em que um contingente cada vez maior de indivíduos não encontra mais colocação no mercado de trabalho. Cinco em cada dez brasileiros acreditam que a automação vai tornar seus empregos obsoletos nos próximos dez anos, enquanto nove estão preocupados com sua requalificação. Praticamente todos, porém, veem a chegada de novas tecnologias como oportunidade para usá-las ou entendê-las melhor. Trata-se de um momento de grandes ameaças e grandes oportunidades, que exige investimentos urgentes na formação digital da atual força de trabalho e das gerações futuras. É preciso dar a todos a oportunidade de adquirir novas competências tanto para assegurar sua empregabilidade quanto para aproveitar as oportunidades que se abrem no mercado e impulsionar o crescimento do nosso país. PWC e Instituto Locomotiva. O abismo digital. Internet: <www.pwc.com.br> (com adaptações).",
       "enunciado": "No texto CG1A5-I, a palavra “empregabilidade” (último parágrafo) significa",
       "alternativas": [
         "A) probabilidade de empregar alguém.",
@@ -2980,9 +3081,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3009,9 +3111,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3038,9 +3141,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3067,9 +3171,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3096,9 +3201,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3125,9 +3231,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3154,9 +3261,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3183,9 +3291,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3212,9 +3321,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3241,9 +3351,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3270,9 +3381,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3299,9 +3411,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3328,9 +3441,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3357,9 +3471,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3386,9 +3501,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3415,9 +3531,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3444,9 +3561,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3473,9 +3591,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3502,9 +3621,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3531,9 +3651,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3560,9 +3681,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3578,7 +3700,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG2_01:1",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
+      "textoBase": "Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
       "enunciado": "No primeiro parágrafo do texto CG2A1-I, o fato de as pessoas confiarem acriticamente em sistemas que usam IA e o fato de elas atribuírem a responsabilidade aos artefatos tecnológicos em vez de a seus construtores são apresentados como",
       "alternativas": [
         "A) causas da ilusão de haver um ser senciente por trás das mídias sintéticas.",
@@ -3589,9 +3711,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3607,7 +3730,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG2_01:2",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
+      "textoBase": "Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
       "enunciado": "Assinale a opção correta no que se refere à estrutura argumentativa do texto CG2A1-I.",
       "alternativas": [
         "A) No primeiro parágrafo, identifica-se o problema de se atribuir ingenuamente capacidade de agir à IA; no segundo, inicia-se a defesa da atual ausência de responsabilização dos construtores dessa tecnologia; no terceiro, articulam-se as ideias dos parágrafos anteriores para apontar o real problema no desenvolvimento dos experimentos de IA.",
@@ -3618,9 +3741,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3636,7 +3760,7 @@
     {
       "id": "EMPREL_23:863_EMPREL_CG2_01:3",
       "formato": "MULTIPLA_ESCOLHA",
-      "textoBase": "-- PROVAS OBJETIVAS -- -- CONHECIMENTOS GERAIS -- Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
+      "textoBase": "Texto CG2A1-I É perigoso nos distrairmos com uma fantasia utópica ou apocalíptica possibilitada pela inteligência artificial (IA), que promete ou um futuro “florescente” ou um futuro “potencialmente catastrófico”. Essa ilusão, que infla as capacidades dos sistemas automatizados e os antropomorfiza, induz as pessoas a pensar que existe um ser senciente por trás das mídias sintéticas. Isso seduz as pessoas a não apenas confiarem acriticamente em sistemas como o ChatGPT, mas também a lhes atribuírem erroneamente a capacidade de agir. A responsabilização propriamente dita não cabe aos artefatos tecnológicos, mas a seus construtores. O que precisamos é de regulamentação que imponha transparência a essa tecnologia digital. Isso deve ficar sempre claro quando nos deparamos com mídias sintéticas, e as organizações que constroem esses sistemas também deveriam ser obrigadas a documentar e a divulgar os dados de treinamento e as arquiteturas de modelo. Além disso, o ônus de criar instrumentos seguros de uso dessas tecnologias deveria recair sobre as empresas que constroem e implantam sistemas generativos, o que significa que os construtores desses sistemas deveriam ser responsabilizados pelos resultados produzidos por seus produtos. A corrida atual rumo a “experimentos de IA” cada vez maiores não é um caminho predeterminado no qual a nossa única escolha é o quão rápido devemos correr, mas uma série de decisões impulsionadas pelo lucro. As ações e as escolhas das corporações devem ser moldadas por regulamentação que proteja os direitos e os interesses das pessoas. O foco da nossa preocupação não deveriam ser as “poderosas mentes digitais” imaginárias. Em vez disso, deveríamos focar nas práticas de exploração muito reais e muito presentes das empresas que afirmam construí-las. Timnit Gebru et al. Papagaios estocásticos: o pedido de moratória para a IA e os riscos em jogo. Internet: <ihu.unisinos.br> (com adaptações).",
       "enunciado": "Com base nos sentidos do texto CG2A1-I, julgue os itens a seguir. I Entende-se do texto que a ilusão que antropomorfiza a IA e transforma a corrida rumo a seu desenvolvimento em um destino inescapável beneficia as corporações que lucram com a IA. II No segundo parágrafo, a afirmação de que a garantia de segurança no uso da tecnologia digital deveria recair sobre as empresas é uma proposta que responde à demanda por transparência. III No terceiro parágrafo, identifica-se uma contraposição entre os interesses das corporações e os das pessoas comuns. Assinale a opção correta.",
       "alternativas": [
         "A) Nenhum item está certo.",
@@ -3647,9 +3771,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3676,9 +3801,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3705,9 +3831,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3734,9 +3861,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3763,9 +3891,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3792,9 +3921,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3821,9 +3951,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3850,9 +3981,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3879,9 +4011,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3908,9 +4041,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3937,9 +4071,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3966,9 +4101,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3995,9 +4131,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4024,9 +4161,10 @@
       ],
       "gabarito": null,
       "anulado": true,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": true,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4053,9 +4191,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4082,9 +4221,10 @@
       ],
       "gabarito": "A",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4111,9 +4251,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4140,9 +4281,10 @@
       ],
       "gabarito": "B",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4169,9 +4311,10 @@
       ],
       "gabarito": "C",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4198,9 +4341,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4227,9 +4371,10 @@
       ],
       "gabarito": "E",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4256,9 +4401,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4285,9 +4431,10 @@
       ],
       "gabarito": "D",
       "anulado": false,
-      "materiaOrigem": null,
+      "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",

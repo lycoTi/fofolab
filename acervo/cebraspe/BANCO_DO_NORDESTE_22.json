@@ -19,6 +19,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -42,6 +43,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -65,6 +67,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -88,6 +91,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -111,6 +115,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -134,6 +139,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -157,6 +163,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -180,6 +187,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -203,6 +211,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -226,6 +235,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -249,6 +259,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -264,14 +275,15 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_001_01:62",
       "formato": "CERTO_ERRADO",
-      "textoBase": "se maior > c então\n```\nmaior = c\nmenor = c\n```\nse menor < a então menor = a senão se menor < b então\n```\nmenor = b\noutro = a + b + c - maior - menor\nescreva(maior)\nescreva(menor)\nescreva(outro)\n```\nO resultado correto da execução do algoritmo precedente será o seguinte.\n```\n555\n5\n55.\n```",
-      "enunciado": "Assuma-se o seguinte algoritmo. dim a[3]\n```\na[0]=1\na[1]=10\na[2]=101\n```\npara i = 0 até 2 escreva(a[i]&3) Considerando-se & como o operador binário E, é correto afirmar que o resultado apresentado será o seguinte.\n```\n1\n2\n```",
+      "textoBase": "se maior > c então\n```\nmaior = c\nmenor = c\n```\nse menor < a então menor = a senão se menor < b então\n```\nmenor = b\noutro = a + b + c - maior - menor\nescreva(maior)\nescreva(menor)\nescreva(outro)\n```\nO resultado correto da execução do algoritmo precedente será o seguinte. 555 5 55.",
+      "enunciado": "Assuma-se o seguinte algoritmo. dim a[3]\n```\na[0]=1\na[1]=10\na[2]=101\n```\npara i = 0 até 2 escreva(a[i]&3) Considerando-se & como o operador binário E, é correto afirmar que o resultado apresentado será o seguinte. 1 2",
       "alternativas": null,
       "gabarito": "C",
       "anulado": false,
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -295,6 +307,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -318,6 +331,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -341,6 +355,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -364,6 +379,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -387,6 +403,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -410,6 +427,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -433,6 +451,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -456,6 +475,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -479,6 +499,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -502,6 +523,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -525,6 +547,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -548,6 +571,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -571,6 +595,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -594,6 +619,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -617,6 +643,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -640,6 +667,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -663,6 +691,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -686,6 +715,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -709,6 +739,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -732,6 +763,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -755,6 +787,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -778,6 +811,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -801,6 +835,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -824,6 +859,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -840,13 +876,14 @@
       "id": "BANCO_DO_NORDESTE_22:772_BNB_001_01:87",
       "formato": "CERTO_ERRADO",
       "textoBase": "Julgue os itens seguintes acerca de orientação a objetos e linguagens de programação.",
-      "enunciado": "Considere-se o seguinte código Python.\n```\nclass Animal():\ndef mamifero(self):\nprint (\"possui mama\")\nclass pombo(Animal):\ndef idade(self):\nprint (\"define a idade pombo\")\ndef cor(self):\nprint (\"define a cor pombo\")\ndef mamifero(self):\nprint (\"pombo não é mamifero\")\nclass coelho(Animal):\ndef idade(self):\nprint (\"define a idade do coelho\")\ndef cor(self):\nprint (\"define a cor do coelho\")\nclass cavalo(Animal):\ndef idade(self):\nprint (\"define a idade do cavalo\")\ndef cor(self):\nprint (\"define a cor do cavalo\")\nobj1 = coelho()\nobj2 = pombo()\nobj3 = cavalo()\n```\nfor type in (obj1, obj2, obj3): type.idade() type.cor() type.mamifero() O resultado da execução do código precedente será o seguinte.\n```\ndefine a idade do coelho\ndefine a cor do coelho\n```\npossui mama\n```\ndefine a idade pombo\ndefine a cor pombo\n```\npombo não é mamífero\n```\ndefine a idade do cavalo\ndefine a cor do cavalo\n```\npossui mama",
+      "enunciado": "Considere-se o seguinte código Python.\n```\nclass Animal():\ndef mamifero(self):\nprint (\"possui mama\")\nclass pombo(Animal):\ndef idade(self):\nprint (\"define a idade pombo\")\ndef cor(self):\nprint (\"define a cor pombo\")\ndef mamifero(self):\nprint (\"pombo não é mamifero\")\nclass coelho(Animal):\ndef idade(self):\nprint (\"define a idade do coelho\")\ndef cor(self):\nprint (\"define a cor do coelho\")\nclass cavalo(Animal):\ndef idade(self):\nprint (\"define a idade do cavalo\")\ndef cor(self):\nprint (\"define a cor do cavalo\")\nobj1 = coelho()\nobj2 = pombo()\nobj3 = cavalo()\n```\nfor type in (obj1, obj2, obj3): type.idade() type.cor() type.mamifero() O resultado da execução do código precedente será o seguinte. define a idade do coelho define a cor do coelho possui mama define a idade pombo define a cor pombo pombo não é mamífero define a idade do cavalo define a cor do cavalo possui mama",
       "alternativas": null,
       "gabarito": null,
       "anulado": true,
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -870,6 +907,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -893,6 +931,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -916,6 +955,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -939,6 +979,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -962,6 +1003,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -985,6 +1027,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1008,6 +1051,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1031,6 +1075,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1054,6 +1099,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1070,13 +1116,14 @@
       "id": "BANCO_DO_NORDESTE_22:772_BNB_001_01:97",
       "formato": "CERTO_ERRADO",
       "textoBase": "Julgue o item seguinte a respeito de conceitos em Java.",
-      "enunciado": "Considere-se o seguinte código.\n```\npublic class Fruta {\nprivate double fvalor;\nprivate String fnome;\nFruta(double fPreco, String fNome)\n```",
+      "enunciado": "Considere-se o seguinte código.\n```\npublic class Fruta {\nprivate double fvalor;\nprivate String fnome;\nFruta(double fPreco, String fNome)\n{\nfvalor = fPreco;\nfnome = fNome;\n}\nFruta(Fruta fruta)\n{\nfvalor = fruta.fvalor;\nfnome = fruta.fnome;\n}\ndouble showPreco()\n{\nreturn fvalor;\n}\n```",
       "alternativas": null,
       "gabarito": "E",
       "anulado": false,
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1092,7 +1139,7 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_001_01:98",
       "formato": "CERTO_ERRADO",
-      "textoBase": "```\n{\nfvalor = fPreco;\nfnome = fNome;\n}\nFruta(Fruta fruta)\n{\nfvalor = fruta.fvalor;\nfnome = fruta.fnome;\n}\ndouble showPreco()\n{\nreturn fvalor;\n}\nString showNome()\n{\nreturn fnome;\n}\npublic static void main(String args[])\n{\n```\nFruta f1 = new Fruta(399, “Laranja\n```\nLima\");\nSystem.out.println(\"Nome da fruta 1: \"+\nf1.showNome());\nSystem.out.println(\"Preco da fruta 1: \"+\nf1.showPreco());\nFruta f2 = new Fruta(f1);\nSystem.out.println(\"Nome da fruta 2: \"+\nf2.showNome());\nSystem.out.println(\"Preço da fruta 2: \"+\nf2.showPreco());\n}\n}\n```\nO código apresentado não será compilado, pois há dois métodos construtores. Julgue o item a seguir a respeito de conceitos de algoritmos de escalonamento.",
+      "textoBase": "String showNome()\n```\n{\nreturn fnome;\n}\npublic static void main(String args[])\n{\n```\nFruta f1 = new Fruta(399, “Laranja\n```\nLima\");\nSystem.out.println(\"Nome da fruta 1: \"+\nf1.showNome());\nSystem.out.println(\"Preco da fruta 1: \"+\nf1.showPreco());\nFruta f2 = new Fruta(f1);\nSystem.out.println(\"Nome da fruta 2: \"+\nf2.showNome());\nSystem.out.println(\"Preço da fruta 2: \"+\nf2.showPreco());\n}\n}\n```\nO código apresentado não será compilado, pois há dois métodos construtores. Julgue o item a seguir a respeito de conceitos de algoritmos de escalonamento.",
       "enunciado": "O algoritmo de escalonamento que proporciona os menores tempos médios de execução e de espera é conhecido como menor tarefa primeiro, ou SJF (shortest job first).",
       "alternativas": null,
       "gabarito": "C",
@@ -1100,6 +1147,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1123,6 +1171,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1146,6 +1195,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1169,6 +1219,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1192,6 +1243,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1215,6 +1267,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1238,6 +1291,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1261,6 +1315,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1284,6 +1339,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1307,6 +1363,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1330,6 +1387,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1353,6 +1411,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1376,6 +1435,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1399,6 +1459,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1422,6 +1483,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1445,6 +1507,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1468,6 +1531,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1491,6 +1555,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1514,6 +1579,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1537,6 +1603,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1560,6 +1627,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1583,6 +1651,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1606,6 +1675,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1629,6 +1699,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1652,6 +1723,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1675,6 +1747,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1698,6 +1771,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1721,6 +1795,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1744,6 +1819,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1767,6 +1843,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1790,6 +1867,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1813,6 +1891,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1836,6 +1915,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1859,6 +1939,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1882,6 +1963,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1905,6 +1987,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1928,6 +2011,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1951,6 +2035,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1974,6 +2059,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -1997,6 +2083,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2020,6 +2107,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2043,6 +2131,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2066,6 +2155,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2089,6 +2179,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2112,6 +2203,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2135,6 +2227,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2158,6 +2251,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2181,6 +2275,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2204,6 +2299,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2227,6 +2323,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2250,6 +2347,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2273,6 +2371,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2296,6 +2395,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2319,6 +2419,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2342,6 +2443,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2365,6 +2467,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2388,6 +2491,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2411,6 +2515,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2434,6 +2539,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2457,6 +2563,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2480,6 +2587,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2503,6 +2611,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2526,6 +2635,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2549,6 +2659,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2572,6 +2683,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2595,6 +2707,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2618,6 +2731,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2641,6 +2755,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": true,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2664,6 +2779,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2687,6 +2803,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2710,6 +2827,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2733,6 +2851,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2756,6 +2875,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2779,6 +2899,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2802,6 +2923,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2825,6 +2947,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2848,6 +2971,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2871,6 +2995,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2894,6 +3019,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2917,6 +3043,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2940,6 +3067,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2963,6 +3091,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -2986,6 +3115,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3009,6 +3139,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3032,6 +3163,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3055,6 +3187,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3078,6 +3211,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3101,6 +3235,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3124,6 +3259,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3147,6 +3283,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3170,6 +3307,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3193,6 +3331,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3216,6 +3355,7 @@
       "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3239,6 +3379,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3262,6 +3403,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3285,6 +3427,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3308,6 +3451,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3331,6 +3475,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3354,6 +3499,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3377,6 +3523,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3400,6 +3547,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3423,6 +3571,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3446,6 +3595,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3469,6 +3619,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3492,6 +3643,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3515,6 +3667,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3538,6 +3691,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3561,6 +3715,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3584,6 +3739,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3607,6 +3763,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3630,6 +3787,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3653,6 +3811,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3676,6 +3835,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3699,6 +3859,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3722,6 +3883,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3745,6 +3907,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3768,6 +3931,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3791,6 +3955,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3814,6 +3979,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3837,6 +4003,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3860,6 +4027,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3883,6 +4051,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3906,6 +4075,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3921,14 +4091,15 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:31",
       "formato": "CERTO_ERRADO",
-      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b:\n```\n2 m\nn = a0 + a1·b + a2·b + ... + am·b ,\n```\nem que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
+      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b: 2 m n = a0 + a1·b + a2·b + ... + am·b , em que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
       "enunciado": "Sempre que n < b, tem-se a0 = n e ak = 0, para todo k > 0.",
       "alternativas": null,
       "gabarito": "C",
       "anulado": false,
       "materiaOrigem": "CONHECIMENTOS GERAIS",
-      "temCodigo": true,
+      "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3944,14 +4115,15 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:32",
       "formato": "CERTO_ERRADO",
-      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b:\n```\n2 m\nn = a0 + a1·b + a2·b + ... + am·b ,\n```\nem que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
+      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b: 2 m n = a0 + a1·b + a2·b + ... + am·b , em que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
       "enunciado": "A representação de n apresentada é única se, e somente se, b for um número primo.",
       "alternativas": null,
       "gabarito": "E",
       "anulado": false,
       "materiaOrigem": "CONHECIMENTOS GERAIS",
-      "temCodigo": true,
+      "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3967,14 +4139,15 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:33",
       "formato": "CERTO_ERRADO",
-      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b:\n```\n2 m\nn = a0 + a1·b + a2·b + ... + am·b ,\n```\nem que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
-      "enunciado": "Os coeficientes ak podem ser obtidos tomando-se, sucessivamente, os restos das divisões euclidianas de n pelas correspondentes potências de b.",
+      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b: 2 m n = a0 + a1·b + a2·b + ... + am·b , em que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
+      "enunciado": "Os coeficientes ak podem ser obtidos tomando-se, sucessivamente, os restos das divisões euclidianas de n pelas correspondentes potências de b. m 2 m – 1",
       "alternativas": null,
       "gabarito": "E",
       "anulado": false,
       "materiaOrigem": "CONHECIMENTOS GERAIS",
-      "temCodigo": true,
+      "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -3990,7 +4163,7 @@
     {
       "id": "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:34",
       "formato": "CERTO_ERRADO",
-      "textoBase": "m 2 m – 1",
+      "textoBase": "Sendo b e n dois números inteiros positivos, sabe-se que n pode ser escrito como combinação linear de potências de b: 2 m n = a0 + a1·b + a2·b + ... + am·b , em que 0 ≤ ak < b, para todo k. Considerando as informações apresentadas, julgue os seguintes itens, acerca dessa representação de n.",
       "enunciado": "Se n = 2 – 1, com m > 1, então n = 1 + 2 + 2 + ... + 2 .",
       "alternativas": null,
       "gabarito": "C",
@@ -3998,6 +4171,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4021,6 +4195,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4044,6 +4219,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4067,6 +4243,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4090,6 +4267,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4113,6 +4291,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4136,6 +4315,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4159,6 +4339,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4182,6 +4363,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4205,6 +4387,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4228,6 +4411,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4251,6 +4435,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4274,6 +4459,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4297,6 +4483,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4320,6 +4507,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4343,6 +4531,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
@@ -4366,6 +4555,7 @@
       "materiaOrigem": "CONHECIMENTOS GERAIS",
       "temCodigo": false,
       "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
       "procedencias": [
         {
           "banca": "Cebraspe",
