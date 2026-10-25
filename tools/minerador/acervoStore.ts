@@ -32,12 +32,17 @@ const byOrigin = (a: Procedencia, b: Procedencia) =>
 
 const firstOrigin = (item: AcervoItem) => item.procedencias[0];
 
-/** Mesmo texto-base + enunciado + alternativas (sem acento, caixa ou espaço extra) = mesmo item; procedências se somam. */
+/**
+ * Mesmo texto-base + enunciado + alternativas (sem acento, caixa ou espaço extra) E mesmo gabarito = mesmo item;
+ * procedências se somam. O gabarito entra na chave: o mesmo item pode estar anulado num caderno e valer noutro (TRT10
+ * 2024, itens 114 e 116) — juntar os dois contaria um anulado como certo.
+ */
 export function mergeDuplicates(itens: AcervoItem[]): AcervoItem[] {
   const byKey = new Map<string, AcervoItem>();
   const sorted = [...itens].sort((a, b) => byOrigin(firstOrigin(a), firstOrigin(b)));
   for (const item of sorted) {
-    const key = normalizeStatement(`${item.textoBase ?? ''} ${item.enunciado} ${(item.alternativas ?? []).join(' ')}`);
+    const text = normalizeStatement(`${item.textoBase ?? ''} ${item.enunciado} ${(item.alternativas ?? []).join(' ')}`);
+    const key = `${item.anulado ? 'X' : (item.gabarito ?? '')}|${text}`;
     const existing = byKey.get(key);
     if (!existing) {
       byKey.set(key, { ...item, procedencias: [...item.procedencias] });

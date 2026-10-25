@@ -32,20 +32,42 @@ const descriptionTail = (descricao: string) =>
     .trim()
     .toUpperCase();
 
+/** Depois do código do caderno, só marcador de versão em letras ("_AT"); "_02" seria OUTRO caderno. */
+const VERSION_SUFFIX = /^_[A-Z]+$/;
+
 function keysFor(prova: CebraspeFile, keys: CebraspeFile[]): CebraspeFile[] {
   const code = baseName(prova.nomeArquivo).toUpperCase();
-  const byName = keys.filter((k) => keyCode(k) === code || keyCode(k).startsWith(`${code}_`));
+  const byName = keys.filter((k) => {
+    const kc = keyCode(k);
+    return kc === code || (kc.startsWith(code) && VERSION_SUFFIX.test(kc.slice(code.length)));
+  });
   if (byName.length > 0) return byName;
   const tail = descriptionTail(prova.descricao);
   return keys.filter((k) => descriptionTail(k.descricao) === tail);
 }
 
-/** Mais de um definitivo para o mesmo caderno: vale o ATUALIZADO; senão o mais recente. */
+const isUpdated = (f: CebraspeFile) => /ATUALIZADO/i.test(f.descricao);
+const newestFirst = (a: CebraspeFile, b: CebraspeFile) => b.data.localeCompare(a.data);
+
+/** Mais de um definitivo para o mesmo caderno: vale o ATUALIZADO (o mais recente, se houver vários); senão o mais recente. */
 function bestKey(candidates: CebraspeFile[]): CebraspeFile | null {
   if (candidates.length === 0) return null;
-  const updated = candidates.find((f) => /ATUALIZADO/i.test(f.descricao));
-  if (updated) return updated;
-  return [...candidates].sort((a, b) => b.data.localeCompare(a.data))[0];
+  const updated = candidates.filter(isUpdated);
+  const pool = updated.length > 0 ? updated : candidates;
+  return [...pool].sort(newestFirst)[0];
+}
+
+/**
+ * Um gabarito serve a UMA prova. Se duas provas apontam para o mesmo (prova republicada como ATUALIZADO, nomes em
+ * hash), vence a ATUALIZADO, senão a mais recente; empate sem critério → nenhuma (pendente), para não casar item com
+ * a resposta de outro caderno.
+ */
+function winnerFor(provas: CebraspeFile[]): CebraspeFile | null {
+  if (provas.length === 1) return provas[0];
+  const updated = provas.filter(isUpdated);
+  if (updated.length === 1) return updated[0];
+  const sorted = [...provas].sort(newestFirst);
+  return sorted[0].data !== sorted[1].data ? sorted[0] : null;
 }
 
 export function selectExamPairs(detail: CebraspeEventDetail): {
@@ -57,19 +79,30 @@ export function selectExamPairs(detail: CebraspeEventDetail): {
   const keys = detail.arquivos.filter(isDefinitiveKey);
   const pares: ExamPair[] = [];
   const pendentes: string[] = [];
-  const used = new Set<CebraspeFile>();
+  const used = new Set<CebraspeFile>(keys);
 
+  const provasByKey = new Map<CebraspeFile, CebraspeFile[]>();
   for (const prova of detail.arquivos.filter(isObjectiveExam)) {
-    const caderno = baseName(prova.nomeArquivo);
     const gabarito = bestKey(keysFor(prova, keys));
-    used.add(prova);
     if (!gabarito) {
-      pendentes.push(caderno);
+      pendentes.push(baseName(prova.nomeArquivo));
+      used.add(prova);
       continue;
     }
-    pares.push({ prova, gabarito, caderno });
+    provasByKey.set(gabarito, [...(provasByKey.get(gabarito) ?? []), prova]);
   }
-  for (const k of keys) used.add(k);
+  for (const [gabarito, provas] of provasByKey) {
+    const prova = winnerFor(provas);
+    if (!prova) {
+      for (const p of provas) {
+        pendentes.push(baseName(p.nomeArquivo));
+        used.add(p);
+      }
+      continue;
+    }
+    used.add(prova);
+    pares.push({ prova, gabarito, caderno: baseName(prova.nomeArquivo) });
+  }
 
   const justificativas = detail.arquivos.filter(isJustification);
   const ignorados = detail.arquivos

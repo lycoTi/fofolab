@@ -31,6 +31,13 @@ describe('Acervo: lote, repetidas e arquivo estável', () => {
     expect(regra.procedencias.map((p) => `${p.caderno}:${p.numero}`)).toEqual(['A:51', 'B:7']);
   });
 
+  it('mesmo texto com gabarito diferente (anulado num caderno, válido noutro) NÃO vira um item só', () => {
+    const anulado = { ...acervoItem('B', 7, 'A regra vale.'), gabarito: null, anulado: true };
+    const merged = mergeDuplicates([acervoItem('A', 51, 'A regra vale.'), anulado]);
+    expect(merged).toHaveLength(2);
+    expect(merged.find((i) => i.anulado)!.procedencias.map((p) => p.caderno)).toEqual(['B']);
+  });
+
   it('grava em ordem de caderno e número, com as áreas do concurso uma vez só no cabeçalho', () => {
     const dir = mkdtempSync(join(tmpdir(), 'acervo-'));
     const itens = [acervoItem('A', 100, 'Cem.'), acervoItem('A', 51, 'Cinquenta e um.')];

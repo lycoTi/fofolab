@@ -65,6 +65,37 @@ describe('Escolha da prova e do gabarito definitivo de cada caderno', () => {
     expect(pendentes).toEqual([]);
   });
 
+  it('gabarito de outro caderno (sufixo numérico) não serve; fica pendente', () => {
+    const { pares, pendentes } = selectExamPairs(
+      detail([file('PROVA OBJETIVA – CARGO 1', '100_X_001.PDF'), file('GABARITO DEFINITIVO – CARGO 2', 'GAB_DEFINITIVO_100_X_001_02.PDF')])
+    );
+    expect(pares).toEqual([]);
+    expect(pendentes).toEqual(['100_X_001']);
+  });
+
+  it('prova republicada (ATUALIZADO) fica no lugar da antiga: um gabarito nunca serve a duas provas', () => {
+    const { pares, ignorados } = selectExamPairs(
+      detail([
+        file('PROVA OBJETIVA – PROCAP', 'AAAA.pdf'),
+        file('PROVA OBJETIVA – PROCAP – ATUALIZADO', 'BBBB.pdf'),
+        file('GABARITO DEFINITIVO – PROCAP', 'CCCC.pdf'),
+      ])
+    );
+    expect(pares.map((p) => p.prova.nomeArquivo)).toEqual(['BBBB.pdf']);
+    expect(ignorados).toContain('AAAA.pdf');
+  });
+
+  it('dois definitivos ATUALIZADO: vale o mais recente', () => {
+    const { pares } = selectExamPairs(
+      detail([
+        file('PROVA OBJETIVA – P1', '900_X_CG1_01.PDF'),
+        { descricao: 'GABARITO DEFINITIVO – P1 - ATUALIZADO', nomeArquivo: 'GAB_DEFINITIVO_900_X_CG1_01_A.PDF', data: '2024-01-01T00:00:00' },
+        { descricao: 'GABARITO DEFINITIVO – P1 - ATUALIZADO', nomeArquivo: 'GAB_DEFINITIVO_900_X_CG1_01_B.PDF', data: '2024-03-01T00:00:00' },
+      ])
+    );
+    expect(pares[0].gabarito.nomeArquivo).toBe('GAB_DEFINITIVO_900_X_CG1_01_B.PDF');
+  });
+
   it('arquivo único com prova e gabarito é ignorado; justificativas vão à parte', () => {
     const { pares, ignorados, justificativas } = selectExamPairs(
       detail([
