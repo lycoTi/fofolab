@@ -57,6 +57,90 @@ function topicPaths(subject: EditalSubject): string[][] {
   });
 }
 
+export interface PropostaAssunto {
+  caminho: string[];
+  confianca: number;
+}
+
+/** Palavras de 3+ letras, sem acento, cortadas no 6º caractere: "estruturas" e "estrutura" contam igual. */
+const nameWords = (text: string) => new Set(slug(text).split('-').filter((w) => w.length >= 3).map((w) => w.slice(0, 6)));
+
+function jaccard(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 && b.size === 0) return 1;
+  const inter = [...a].filter((w) => b.has(w)).length;
+  return inter / (a.size + b.size - inter);
+}
+
+/** Mesmo pai e nome do assunto quase igual (≥ 0.8) — para não duplicar "Estrutura de dados" × "Estruturas de dados". */
+const NEAR = 0.8;
+const sameParent = (a: string[], b: string[]) => assuntoId(a.slice(0, -1)) === assuntoId(b.slice(0, -1));
+
+function findExisting(assuntos: Assunto[], caminho: string[]): Assunto | undefined {
+  const id = assuntoId(caminho);
+  const exact = assuntos.find((a) => a.id === id);
+  if (exact) return exact;
+  const leaf = nameWords(caminho.at(-1) ?? '');
+  return assuntos.find((a) => a.caminho.length === caminho.length && sameParent(a.caminho, caminho) && jaccard(nameWords(a.caminho.at(-1) ?? ''), leaf) >= NEAR);
+}
+
+/**
+ * Propostas da IA (spec 12 §6.4): igual ou quase igual a um assunto existente vira esse assunto (`mapeadas`, chave =
+ * id proposto); nova com confiança ≥ `minConfianca` entra numa versão nova (uma por chamada, com a lista do que mudou);
+ * abaixo fica pendente — os itens dela ficam incertos até uma rodada com modelo melhor.
+ */
+export function applyProposals(
+  vocab: Vocabulario,
+  propostas: PropostaAssunto[],
+  minConfianca: number
+): { vocab: Vocabulario; aceitas: string[]; pendentes: PropostaAssunto[]; mapeadas: Record<string, string> } {
+  const assuntos = [...vocab.assuntos];
+  const aceitas: string[] = [];
+  const pendentes: PropostaAssunto[] = [];
+  const mapeadas: Record<string, string> = {};
+  for (const proposta of propostas) {
+    const caminho = proposta.caminho.map((p) => p.trim()).filter(Boolean);
+    if (caminho.length === 0) continue;
+    const existing = findExisting(assuntos, caminho);
+    if (existing) {
+      mapeadas[assuntoId(caminho)] = existing.id;
+      continue;
+    }
+    if (proposta.confianca < minConfianca) {
+      pendentes.push(proposta);
+      continue;
+    }
+    const novo: Assunto = { id: assuntoId(caminho), caminho, sinonimos: [], origem: 'proposta' };
+    assuntos.push(novo);
+    aceitas.push(novo.id);
+  }
+  if (aceitas.length === 0) return { vocab, aceitas, pendentes, mapeadas };
+  const versao = vocab.versao + 1;
+  const byId = new Map(assuntos.map((a) => [a.id, a]));
+  const mudancas = aceitas.map((id) => `novo assunto: ${byId.get(id)!.caminho.join(' › ')}`);
+  return {
+    vocab: { versao, assuntos: assuntos.sort((a, b) => a.id.localeCompare(b.id)), historico: [...vocab.historico, { versao, mudancas }] },
+    aceitas,
+    pendentes,
+    mapeadas,
+  };
+}
+
+/** Pares de irmãos com nomes quase iguais: sugestão de junção para o relatório (não junta sozinho). */
+export function mergeCandidates(vocab: Vocabulario): [string, string][] {
+  const pares: [string, string][] = [];
+  const list = vocab.assuntos;
+  for (let i = 0; i < list.length; i += 1) {
+    for (let j = i + 1; j < list.length; j += 1) {
+      const [a, b] = [list[i], list[j]];
+      if (a.caminho.length !== b.caminho.length || !sameParent(a.caminho, b.caminho)) continue;
+      if (jaccard(nameWords(a.caminho.at(-1) ?? ''), nameWords(b.caminho.at(-1) ?? '')) >= NEAR) {
+        pares.push([a.id, b.id].sort() as [string, string]);
+      }
+    }
+  }
+  return pares;
+}
+
 export function seedFromEdital(lines: string[]): Vocabulario {
   const edital = parseEdital(lines);
   const subjects = [...edital.commonSubjects, ...Object.values(edital.roleSubjects).flat()];
