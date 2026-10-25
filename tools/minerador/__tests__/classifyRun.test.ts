@@ -39,8 +39,11 @@ function setup() {
   return dir;
 }
 
-/** Provedor falso: escolhe o 1º (ou o 2º, se `pick` mandar) candidato; confiança 0.9 em número par, 0.5 em ímpar. */
-function fakeProvider(modelo: string, pick: (itemId: string) => number = () => 0): AiProvider & { prompts: string[] } {
+/** Itens de número par no `setup` (os códigos do lote escondem o número, então o falso decide pelo enunciado). */
+const PARES = /agregadas|tabelas/;
+
+/** Provedor falso: escolhe o 1º (ou o 2º, se `pick` mandar) candidato; confiança 0.9 nos itens pares, 0.5 nos ímpares. */
+function fakeProvider(modelo: string, pick: (enunciado: string) => number = () => 0): AiProvider & { prompts: string[] } {
   const prompts: string[] = [];
   return {
     nome: 'fake', modelo, tamanhoLote: 2, prompts,
@@ -48,10 +51,10 @@ function fakeProvider(modelo: string, pick: (itemId: string) => number = () => 0
       prompts.push(prompt);
       const resultados = prompt.split('### Item ').slice(1).map((block) => {
         const id = block.split('\n')[0].trim();
+        const enunciado = /^Enunciado: (.*)$/m.exec(block)?.[1] ?? '';
         const candidatos = [...block.matchAll(/^ {2}- (\S+) — /gm)].map((m) => m[1]);
-        const n = Number(id.split(':').at(-1));
-        const escolhido = candidatos[Math.min(pick(id), candidatos.length - 1)];
-        return { id, assuntos: escolhido ? [{ id: escolhido, confianca: n % 2 === 0 ? 0.9 : 0.5 }] : [], proposta: null };
+        const escolhido = candidatos[Math.min(pick(enunciado), candidatos.length - 1)];
+        return { id, assuntos: escolhido ? [{ id: escolhido, confianca: PARES.test(enunciado) ? 0.9 : 0.5 }] : [], proposta: null };
       });
       return JSON.stringify({ resultados });
     },
@@ -103,7 +106,7 @@ describe('Rodada de classificação retomável', () => {
   it('conferência independente: guarda as duas opiniões, não manda a anterior no prompt e marca quem discorda', async () => {
     const dir = setup();
     await runClassificacao({ provider: fakeProvider('m1'), acervoDir: dir, limite: 100, alvo: 'sem-opiniao', k: 5 });
-    const second = fakeProvider('m2', (id) => (id === 'B_23:C:1' ? 1 : 0));
+    const second = fakeProvider('m2', (enunciado) => (enunciado.startsWith('Injeção') ? 1 : 0));
     const r = await runClassificacao({ provider: second, acervoDir: dir, limite: 100, alvo: 'todos', k: 5 });
     expect(r.classificados).toBe(5);
     expect(second.prompts.join('\n')).not.toMatch(/fake:m1|opini/i);
@@ -115,7 +118,7 @@ describe('Rodada de classificação retomável', () => {
     const third = fakeProvider('m3');
     await runClassificacao({ provider: third, acervoDir: dir, limite: 100, alvo: 'discordantes', k: 5 });
     expect(third.prompts).toHaveLength(1);
-    expect(third.prompts[0]).toContain('### Item B_23:C:1');
+    expect(third.prompts[0]).toContain('Injeção de SQL em consultas.');
   });
 
   it('limite diário no meio: para, guarda o lote já feito e avisa', async () => {

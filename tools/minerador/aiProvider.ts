@@ -39,6 +39,8 @@ export function loadKeys(env: NodeJS.ProcessEnv, files: string[]): { groq?: stri
 }
 
 const SHORT_WAIT_SEC = 120;
+/** Tokens a mais no teto dos modelos que raciocinam antes de responder. */
+const REASONING_BUDGET = 1000;
 const MAX_RETRIES = 3;
 const defaultSleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
@@ -59,10 +61,16 @@ export function createProvider(opts: {
   const { url } = HTTP[opts.nome];
   const modelo = opts.modelo ?? HTTP[opts.nome].modelo;
 
-  const body = (prompt: string, maxTokens: number) =>
-    opts.nome === 'groq'
-      ? { model: modelo, max_completion_tokens: maxTokens, response_format: { type: 'json_object' }, messages: [{ role: 'user', content: prompt }] }
-      : { model: modelo, max_tokens: maxTokens, thinking: { type: 'disabled' }, response_format: { type: 'json_object' }, messages: [{ role: 'user', content: prompt }] };
+  // gpt-oss "pensa" antes de responder e o raciocínio conta no teto: esforço baixo e folga (testado em 25/10: ~855
+  // tokens de saída para 10 itens, todos válidos)
+  const reasoning = /gpt-oss/i.test(modelo);
+  const body = (prompt: string, maxTokens: number) => {
+    const messages = [{ role: 'user', content: prompt }];
+    const response_format = { type: 'json_object' };
+    if (opts.nome === 'deepseek') return { model: modelo, max_tokens: maxTokens, thinking: { type: 'disabled' }, response_format, messages };
+    if (reasoning) return { model: modelo, reasoning_effort: 'low', max_completion_tokens: maxTokens + REASONING_BUDGET, response_format, messages };
+    return { model: modelo, max_completion_tokens: maxTokens, response_format, messages };
+  };
 
   return {
     nome: opts.nome,

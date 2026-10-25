@@ -49,6 +49,13 @@ describe('Provedor HTTP (Groq/DeepSeek)', () => {
     expect(String((err as Error).message)).not.toContain('segredo-123');
   });
 
+  it('gpt-oss no Groq: raciocínio "low" e folga no teto, senão o raciocínio come a resposta', async () => {
+    const fetchImpl = vi.fn().mockResolvedValue(ok());
+    await createProvider({ nome: 'groq', chave: 'k', modelo: 'openai/gpt-oss-120b', fetchImpl }).complete('oi', 700);
+    const body = JSON.parse(String((fetchImpl.mock.calls[0] as [string, RequestInit])[1].body));
+    expect(body).toMatchObject({ model: 'openai/gpt-oss-120b', reasoning_effort: 'low', max_completion_tokens: 1700 });
+  });
+
   it('DeepSeek desliga o modo de raciocínio', async () => {
     const fetchImpl = vi.fn().mockResolvedValue(ok());
     await createProvider({ nome: 'deepseek', chave: 'k', fetchImpl }).complete('oi', 100);

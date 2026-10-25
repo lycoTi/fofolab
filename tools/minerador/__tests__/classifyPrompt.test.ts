@@ -17,10 +17,14 @@ const batch: BatchEntry[] = [
 ];
 
 describe('Prompt do lote e validação da resposta', () => {
-  it('o prompt leva o item, os candidatos por id e avisa que a matéria de origem é só pista', () => {
+  it('o prompt leva o item e os candidatos com códigos curtos do lote (não os ids longos) e avisa que a matéria de origem é só pista', () => {
     const prompt = buildBatchPrompt(batch);
     expect(prompt).toContain('O LEFT JOIN retorna clientes sem pedidos.');
-    expect(prompt).toContain('bd>sql');
+    expect(prompt).toContain('### Item i1');
+    expect(prompt).toContain('s1 — Banco › SQL');
+    expect(prompt).toContain('s2 — Banco › Modelagem');
+    expect(prompt).not.toContain('bd>sql');
+    expect(prompt).not.toContain('X:C:1');
     expect(prompt).toMatch(/matéria de origem é só uma pista/i);
     expect(prompt).toMatch(/somente/i);
     expect(estimateTokens(prompt)).toBeGreaterThan(50);
@@ -34,18 +38,22 @@ describe('Prompt do lote e validação da resposta', () => {
     expect(prompt).toMatch(/nunca específico de um órgão/i);
   });
 
-  it('aceita cercas de código, descarta assunto fora da lista do item e id fora do lote; corta a confiança em 0–1', () => {
+  it('traduz os códigos de volta; aceita cercas, descarta assunto fora da lista do item e id fora do lote; corta a confiança em 0–1', () => {
     const text = '```json\n' + JSON.stringify({
       resultados: [
-        { id: 'X:C:1', assuntos: [{ id: 'bd>sql', confianca: 1.4 }, { id: 'inventado', confianca: 0.9 }], proposta: null },
-        { id: 'X:C:2', assuntos: [{ id: 'bd>sql', confianca: 0.9 }], proposta: { caminho: ['Banco', 'Normalização'], confianca: 0.85 } },
-        { id: 'FORA:1', assuntos: [{ id: 'bd>sql', confianca: 0.9 }], proposta: null },
+        { id: 'i1', assuntos: [{ id: 's1', confianca: 1.4 }, { id: 's9', confianca: 0.9 }], proposta: null },
+        // id completo e código de assunto que não é candidato deste item (s1 só vale para o i1)
+        { id: 'X:C:2', assuntos: [{ id: 's1', confianca: 0.9 }], proposta: { caminho: ['Banco', 'Normalização'], confianca: 0.85 } },
+        { id: 'FORA:1', assuntos: [{ id: 's1', confianca: 0.9 }], proposta: null },
       ],
     }) + '\n```';
     const parsed = parseBatchResponse(text, batch);
     expect(parsed.get('X:C:1')).toEqual({ assuntos: [{ id: 'bd>sql', confianca: 1 }], proposta: null });
-    // bd>sql não era candidato do item 2: sai; a proposta fica
+    // s1 (bd>sql) não era candidato do item 2: sai; a proposta fica
     expect(parsed.get('X:C:2')).toEqual({ assuntos: [], proposta: { caminho: ['Banco', 'Normalização'], confianca: 0.85 } });
+    // O id completo do assunto também é aceito, se o modelo o repetir
+    const full = parseBatchResponse(JSON.stringify({ resultados: [{ id: 'i2', assuntos: [{ id: 'bd>modelo', confianca: 0.8 }] }] }), batch);
+    expect(full.get('X:C:2')!.assuntos).toEqual([{ id: 'bd>modelo', confianca: 0.8 }]);
     expect(parsed.has('FORA:1')).toBe(false);
   });
 

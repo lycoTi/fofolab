@@ -35,11 +35,15 @@ const CANDIDATOS = 10;
  */
 const EDITAIS_SEMENTE = ['SERPRO_23', 'TCE_SC_21_AUDITOR', 'CNJ_24', 'CD_25_NS', 'MPO_24', 'SEFAZ_RN_25_AUDITOR'];
 
-/** Modelo padrão de cada comando no Antigravity: classificar com Gemini; conferir e desempatar com outra família. */
-const AGY_PADRAO: Record<Alvo, string> = {
-  'sem-opiniao': 'gemini-3.8-flash-low',
-  todos: 'claude-sonnet-5-5-low',
-  discordantes: 'gemini-4-argon-medium',
+/**
+ * Provedor e modelo padrão de cada comando, pelo que a cota permite (medido em 25/10): classificar com o Gemini Flash
+ * (assinatura Google; ~5 mil itens por semana); conferir com o gpt-oss-120b no Groq grátis (outra família, ~10 mil por
+ * dia); desempatar com o Claude Sonnet pelo Antigravity, que esgota a janela de 5 h em ~200 itens — só para poucos.
+ */
+const PADRAO: Record<Alvo, { provedor: 'agy' | 'groq' | 'deepseek'; modelo: string }> = {
+  'sem-opiniao': { provedor: 'agy', modelo: 'gemini-3.8-flash-low' },
+  todos: { provedor: 'groq', modelo: 'openai/gpt-oss-120b' },
+  discordantes: { provedor: 'agy', modelo: 'claude-sonnet-5-5-low' },
 };
 
 const writeJson = (path: string, data: unknown) => writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
@@ -60,9 +64,10 @@ function agyPaths() {
 }
 
 function providerFrom(args: string[], alvo: Alvo): AiProvider {
-  const nome = flag(args, 'provedor') ?? 'agy';
-  const modelo = flag(args, 'modelo');
-  if (nome === 'agy') return createAgyProvider({ modelo: modelo ?? AGY_PADRAO[alvo], ...agyPaths() });
+  const nome = flag(args, 'provedor') ?? PADRAO[alvo].provedor;
+  // Modelo padrão só vale com o provedor padrão; trocou o provedor sem dizer o modelo, vale o padrão daquele provedor
+  const modelo = flag(args, 'modelo') ?? (nome === PADRAO[alvo].provedor ? PADRAO[alvo].modelo : undefined);
+  if (nome === 'agy') return createAgyProvider({ modelo, ...agyPaths() });
   if (nome !== 'groq' && nome !== 'deepseek') throw new Error(`Provedor desconhecido: ${nome} (use agy, groq ou deepseek)`);
   const keys = loadKeys(process.env, ['.env.local', '.env']);
   const chave = keys[nome];
