@@ -5,7 +5,7 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
-- **25/10/2026:** spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida).
+- **25/10/2026:** spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10) e **FofoIA (11)** — banco na migração **v10**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -200,7 +200,25 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
     (21–35), TRF6 24 ("item 203" fantasma).
   - Repetidos **entre concursos** ainda não se juntam (só dentro do mesmo concurso): fica para o pacote da 12b.
   **Segundo lote (decisão do dono):** provas de procurador e de servidor de MP e TJ (Direito Público, para P1/P2).
-  **Próximas:** 12b (assuntos canônicos com IA, vocabulário vigiado, pacote) → brainstorm da aba Questões → 12c (app).
+  [PARCIAL] **12b — assuntos canônicos** (25/10/2026, plano `docs/superpowers/plans/2026-10-25-12b-assuntos-canonicos.md`):
+  `npm run minerar -- semente | classificar | conferir | desempatar | juntar | recalcular | pacote`. Vocabulário
+  (`acervo/vocabulario.json`, v14) nasce do edital da CGU + 6 editais de abertura do acervo (Português, Raciocínio
+  Lógico, Direito, Contabilidade, Economia, TI): 3.917 assuntos em 92 matérias; a IA propõe assunto novo (aceito com
+  confiança ≥ 0,8, canonizado contra o que já existe em qualquer nível da matéria, versão nova a cada mudança);
+  `juntar` funde repetido (vira sinônimo). Classificação em `acervo/classificacao/<ID>.json`: uma opinião por modelo,
+  consenso derivado (mesmo tópico = pai/filho ou mesmo nome em matérias diferentes; concorda quando o principal de uma
+  opinião está na escolha de todas; selinho "incerto" abaixo de 0,7 de confiança média). Candidatos locais por palavras
+  raras + pistas de matéria (Português pelo código do texto "CB2A1", parágrafo, aspas…); fila com as matérias da CGU
+  primeiro. Provedores sem chave: `agy` (Antigravity CLI, em pasta vazia e `--sandbox`) com Gemini/Claude; Groq/DeepSeek
+  por chave. 101 testes em `tools/minerador/`.
+  **Rodada real (25/10):** 300 de 27,5 mil itens com a opinião do Gemini 3.8 Flash (2 incertos, ~24 min, 22 assuntos
+  novos aceitos, 2 juntados à mão); conferidos à mão 12 de matérias diferentes — todos fazem sentido. Conferência com o
+  gpt-oss-120b (Groq grátis) parou em 107 itens (limite de ~200 mil tokens por dia, ~100 itens) e discordou em 35 — na
+  maioria erro do Groq (item de interpretação de texto classificado pelo assunto do texto; inflação em "governança de
+  estatais"). **Falta:** terminar a 1ª opinião (cota do Gemini ≈ 5 mil itens/semana → ~5 semanas; CGU primeiro);
+  decidir a 2ª opinião (DeepSeek quando houver crédito, para conferir todos — decisão do dono; o Groq não serve para o
+  acervo todo); `pacote` + 12c.
+  **Próximas:** terminar a 12b → brainstorm da aba Questões → 12c (app).
   Depois: outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
   provas antigas.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência

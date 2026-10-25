@@ -59,3 +59,5 @@ A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS
 - `src/App.tsx` — orquestra estado e painéis; componentes em `src/components/` e `src/features/`.
 - `tools/minerador/` — minerador da Cebraspe (spec 12), **fora do app**: `npm run minerar -- lote | rodar`. Grava o acervo
   em `acervo/cebraspe/<ID>.json` (no git); PDFs ficam em `.minerador-cache/` (fora do git). Nada em `src/` importa `tools/`.
+  Assuntos (12b): `semente | classificar | conferir | desempatar | juntar | recalcular | pacote` → `acervo/vocabulario.json`
+  e `acervo/classificacao/<ID>.json`; o `agy` (Antigravity CLI) roda numa pasta vazia com `--sandbox`. Um comando por vez.

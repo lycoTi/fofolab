@@ -9,9 +9,17 @@
   `tools/minerador/` (fora do app, `npm run minerar -- lote | rodar`), acervo com **29,9 mil itens** de 59 concursos (revisão independente corrigida) em
   `acervo/cebraspe/*.json` (no git, 32 MB); PDFs em `.minerador-cache/` (fora do git — no outro PC, `rodar` baixa de
   novo, devagar). Quarentenas e pendentes com motivo no BACKLOG e em `acervo/quarentena.json`.
-- **Próximo:** 12b (assuntos canônicos com IA — DeepSeek quando o dono puser crédito; vocabulário vigiado; pacote para o
-  app) → **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no plano).
-  Em paralelo, se o dono pedir: FofoIA conversacional (cumprimentos sem IA, resposta surgindo por parágrafo).
+- **12b em andamento [PARCIAL]** (detalhes no BACKLOG): vocabulário v14 e 300 itens classificados pelo Gemini. Para
+  continuar a fila (CGU primeiro; para limpo no limite e continua de onde parou):
+  `npm run minerar -- classificar --limite 1000` (Gemini 3.8 Flash pelo Antigravity CLI `agy`, já logado neste PC —
+  ~5 mil itens por semana de cota). **Nunca rode dois comandos do minerador ao mesmo tempo:** os dois gravam os
+  mesmos arquivos de `acervo/classificacao/`. Assunto repetido no vocabulário: `npm run minerar -- juntar <de> <para>`.
+  O Groq grátis só confere ~100 itens por dia (limite de tokens) e erra mais que o Gemini em interpretação de texto;
+  a 2ª opinião do acervo todo fica para o DeepSeek, quando o dono puser crédito (decisão dele).
+- **Depois:** **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no
+  plano).
+- **FofoIA (25/10):** "oi"/"valeu"/"ok" respondidos pelo app (`src/lib/fofoia/smallTalk.ts`), resposta nova surgindo
+  por parágrafo (`RichText reveal`).
 - **Stack `~/.agents`** instalada neste PC (casa) e ligada ao Antigravity; plugin `zizi-skills` desligado no Claude.
 - **Armadilhas do minerador:** a Cebraspe publica alguns arquivos com nome em hash (pareia pela descrição); a 1ª página
   tem instruções em duas colunas acima do título da seção (descartadas); o recuo de continuação é aprendido da linha após
