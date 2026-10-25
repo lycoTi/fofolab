@@ -65,11 +65,25 @@ describe('Escolha da prova e do gabarito definitivo de cada caderno', () => {
     expect(pendentes).toEqual([]);
   });
 
-  it('gabarito de outro caderno (sufixo numérico) não serve; fica pendente', () => {
-    const { pares, pendentes } = selectExamPairs(
-      detail([file('PROVA OBJETIVA – CARGO 1', '100_X_001.PDF'), file('GABARITO DEFINITIVO – CARGO 2', 'GAB_DEFINITIVO_100_X_001_02.PDF')])
+  it('gabarito com data de versão no fim do nome pareia (SEFAZ SE 2021)', () => {
+    const { pares } = selectExamPairs(
+      detail([
+        file('PROVA OBJETIVA – AUDITOR – 3', '777_SEFAZ3_001_01.PDF'),
+        file('GABARITO DEFINITIVO – AUDITOR – 3', 'GAB_DEFINITIVO_777_SEFAZ3_001_01_3_1_12_22.PDF'),
+      ])
     );
-    expect(pares).toEqual([]);
+    expect(pares.map((p) => p.gabarito.nomeArquivo)).toEqual(['GAB_DEFINITIVO_777_SEFAZ3_001_01_3_1_12_22.PDF']);
+  });
+
+  it('gabarito vai para a prova de código mais específico: o de 100_X_001_02 não serve a 100_X_001', () => {
+    const { pares, pendentes } = selectExamPairs(
+      detail([
+        file('PROVA OBJETIVA – CARGO 1', '100_X_001.PDF'),
+        file('PROVA OBJETIVA – CARGO 2', '100_X_001_02.PDF'),
+        file('GABARITO DEFINITIVO – CARGO 2', 'GAB_DEFINITIVO_100_X_001_02.PDF'),
+      ])
+    );
+    expect(pares.map((p) => [p.caderno, p.gabarito.nomeArquivo])).toEqual([['100_X_001_02', 'GAB_DEFINITIVO_100_X_001_02.PDF']]);
     expect(pendentes).toEqual(['100_X_001']);
   });
 

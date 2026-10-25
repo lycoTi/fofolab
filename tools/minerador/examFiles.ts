@@ -32,14 +32,20 @@ const descriptionTail = (descricao: string) =>
     .trim()
     .toUpperCase();
 
-/** Depois do código do caderno, só marcador de versão em letras ("_AT"); "_02" seria OUTRO caderno. */
-const VERSION_SUFFIX = /^_[A-Z]+$/;
+const provaCode = (f: CebraspeFile) => baseName(f.nomeArquivo).toUpperCase();
+const nameMatches = (kc: string, code: string) => kc === code || kc.startsWith(`${code}_`);
 
-function keysFor(prova: CebraspeFile, keys: CebraspeFile[]): CebraspeFile[] {
-  const code = baseName(prova.nomeArquivo).toUpperCase();
+/**
+ * Gabarito pelo nome: o código do caderno, às vezes com uma versão no fim ("…_001_01_3_1_12_22", SEFAZ SE 2021). O
+ * gabarito só vale para a prova de código MAIS específico que casa com ele: o de "100_X_001_02" não serve a "100_X_001"
+ * quando a prova "100_X_001_02" existe. Sem casamento pelo nome, tenta pela descrição.
+ */
+function keysFor(prova: CebraspeFile, keys: CebraspeFile[], allCodes: string[]): CebraspeFile[] {
+  const code = provaCode(prova);
   const byName = keys.filter((k) => {
     const kc = keyCode(k);
-    return kc === code || (kc.startsWith(code) && VERSION_SUFFIX.test(kc.slice(code.length)));
+    if (!nameMatches(kc, code)) return false;
+    return !allCodes.some((other) => other.length > code.length && nameMatches(kc, other));
   });
   if (byName.length > 0) return byName;
   const tail = descriptionTail(prova.descricao);
@@ -81,9 +87,11 @@ export function selectExamPairs(detail: CebraspeEventDetail): {
   const pendentes: string[] = [];
   const used = new Set<CebraspeFile>(keys);
 
+  const provas = detail.arquivos.filter(isObjectiveExam);
+  const allCodes = provas.map(provaCode);
   const provasByKey = new Map<CebraspeFile, CebraspeFile[]>();
-  for (const prova of detail.arquivos.filter(isObjectiveExam)) {
-    const gabarito = bestKey(keysFor(prova, keys));
+  for (const prova of provas) {
+    const gabarito = bestKey(keysFor(prova, keys, allCodes));
     if (!gabarito) {
       pendentes.push(baseName(prova.nomeArquivo));
       used.add(prova);
