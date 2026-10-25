@@ -15,7 +15,11 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 type Part = 'enunciado' | 'alternativa' | 'depois';
 
 export function segmentMultipleChoice(lines: PdfLine[]): ExtractedItem[] {
-  const continues = continuationChecker(lines, (l) => QUESTION_HEADER.test(l.text) || SUBJECT_HEADER.test(l.text));
+  const continues = continuationChecker(
+    lines,
+    (l) => QUESTION_HEADER.test(l.text) || SUBJECT_HEADER.test(l.text),
+    (l) => l.atMargin && /^[A-E] /.test(l.text)
+  );
   const items: ExtractedItem[] = [];
   let current: ExtractedItem | null = null;
   let part: Part = 'depois';

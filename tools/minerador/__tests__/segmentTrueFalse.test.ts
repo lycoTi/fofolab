@@ -3,7 +3,7 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { segmentTrueFalse } from '../segmentTrueFalse';
 import type { ExtractedItem, PdfLine } from '../types';
 import { parseAnswerKey } from '../answerKey';
-import { DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureLines, SERPRO_PROVA } from './fixtures';
+import { DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureLines, SERPRO_PROVA, STM_CG1_GABARITO, STM_CG1_PROVA } from './fixtures';
 
 const line = (text: string, atMargin: boolean): PdfLine => ({ page: 1, column: 'L', x: atMargin ? 28 : 46, y: 0, text, atMargin });
 
@@ -58,6 +58,16 @@ describe('Itens Certo/Errado com o texto-base (SERPRO 2023, específicos)', () =
     const key = parseAnswerKey(await fixtureLines(DATAPREV_CG1_GABARITO, { singleColumn: true }));
     expect(items.map((i) => i.numero)).toEqual([...key.keys()].sort((a, b) => a - b));
     expect(items.find((i) => i.numero === 6)!.enunciado.startsWith('No trecho “desde eletrodomésticos até equipamentos')).toBe(true);
+  });
+
+  it('instruções acima do título da seção são lidas antes e não viram margem nem texto-base', async () => {
+    const items = segmentTrueFalse(await fixtureLines(STM_CG1_PROVA));
+    const key = parseAnswerKey(await fixtureLines(STM_CG1_GABARITO, { singleColumn: true }));
+    expect(items.map((i) => i.numero)).toEqual([...key.keys()].sort((a, b) => a - b));
+    const item3 = items.find((i) => i.numero === 3)!;
+    expect(item3.enunciado.startsWith('A oração “Se a mudança não tivesse sido adotada”')).toBe(true);
+    expect(item3.textoBase ?? '').not.toContain('caso julgue o item ERRADO');
+    expect(item3.textoBase).toBe(items.find((i) => i.numero === 1)!.textoBase);
   });
 
   it('linha que começa com número fora da sequência não abre item (vira texto-base)', () => {

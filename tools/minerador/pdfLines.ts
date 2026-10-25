@@ -48,7 +48,23 @@ function columnMargin(xs: number[]): number {
   return repeated ?? sorted[0];
 }
 
-/** Agrupa os pedaços de uma página em linhas, já na ordem de leitura. */
+/** Título de seção da Cebraspe, centralizado: "-- CONHECIMENTOS GERAIS --". */
+const SECTION_HEADER = /^-+\s*.+?\s*-+$/;
+
+function markMargins(lines: PdfLine[]): void {
+  for (const column of ['L', 'R'] as const) {
+    const inColumn = lines.filter((l) => l.column === column);
+    if (inColumn.length === 0) continue;
+    const margin = columnMargin(inColumn.map((l) => l.x));
+    for (const line of inColumn) line.atMargin = Math.abs(line.x - margin) <= MARGIN_TOLERANCE;
+  }
+}
+
+/**
+ * Agrupa os pedaços de uma página em linhas, já na ordem de leitura. Na 1ª página, o que fica acima do título da seção
+ * é capa e instruções (também em duas colunas): sai — senão o fim delas, na coluna da direita, viraria margem e
+ * texto-base dos itens (STM 2025, DATAPREV 2023).
+ */
 function pageLines(pieces: Piece[], page: number): PdfLine[] {
   const sorted = [...pieces].sort((a, b) => {
     if (a.column !== b.column) return a.column === 'L' ? -1 : 1;
@@ -65,13 +81,11 @@ function pageLines(pieces: Piece[], page: number): PdfLine[] {
   const lines = groups
     .map((g) => ({ page, column: g[0].column, x: Math.min(...g.map((p) => p.x)), y: g[0].y, text: joinPieces(g), atMargin: false }))
     .filter((l) => l.text !== '' && !BOILERPLATE.test(l.text));
-  for (const column of ['L', 'R'] as const) {
-    const inColumn = lines.filter((l) => l.column === column);
-    if (inColumn.length === 0) continue;
-    const margin = columnMargin(inColumn.map((l) => l.x));
-    for (const line of inColumn) line.atMargin = Math.abs(line.x - margin) <= MARGIN_TOLERANCE;
-  }
-  return lines;
+  const header = page === 1 ? lines.find((l) => SECTION_HEADER.test(l.text)) : undefined;
+  // Só na 1ª página: em páginas seguintes, um título no meio da página tem itens de verdade acima dele
+  const content = header ? lines.filter((l) => l.y <= header.y + SAME_LINE_TOLERANCE) : lines;
+  markMargins(content);
+  return content;
 }
 
 /** Acima desta fração de linhas "à direita" que atravessam o meio, a página tem uma coluna só. */
@@ -122,12 +136,49 @@ function withoutRepeatedHeaders(lines: PdfLine[], band: Set<PdfLine>, pageCount:
 /** Diferença máxima para uma linha estar "no recuo de continuação". */
 const INDENT_TOLERANCE = 3;
 
+const mostCommon = (values: number[]): number | null => {
+  const counts = new Map<number, number>();
+  for (const v of values) counts.set(v, (counts.get(v) ?? 0) + 1);
+  const best = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
+  return best ? best[0] : null;
+};
+
 /**
- * Diz se uma linha fora da margem está no recuo de continuação (de item ou alternativa) da sua página/coluna — o `x`
- * mais comum entre as linhas fora da margem. O parágrafo do texto-base às vezes começa com recuo de primeira linha
- * MAIOR (ex.: margem 303, continuação 321, parágrafo 332): essa linha não continua o item anterior.
+ * Diz se uma linha fora da margem está no recuo de continuação (de item ou alternativa). O recuo é aprendido da linha
+ * que vem logo depois do começo de um item (`isStart`), como deslocamento em relação à margem da coluna — é o mesmo no
+ * documento todo (+18 na Cebraspe). Contar o recuo "mais comum da página" falha quando o texto da prova tem mais
+ * começos de parágrafo (recuo 57) que continuações de item (46), como na 1ª página do STM 2025. Sem nenhum começo
+ * reconhecido, usa o `x` mais comum fora da margem em cada página/coluna.
  */
-export function continuationChecker(lines: PdfLine[], ignore: (line: PdfLine) => boolean = () => false): (line: PdfLine) => boolean {
+export function continuationChecker(
+  lines: PdfLine[],
+  ignore: (line: PdfLine) => boolean = () => false,
+  isStart: (line: PdfLine) => boolean = () => false
+): (line: PdfLine) => boolean {
+  const keyOf = (l: PdfLine) => `${l.page}${l.column}`;
+  const margins = new Map<string, number>();
+  for (const l of lines) {
+    if (!l.atMargin) continue;
+    margins.set(keyOf(l), Math.min(margins.get(keyOf(l)) ?? Infinity, l.x));
+  }
+  const offsets: number[] = [];
+  for (let i = 0; i < lines.length - 1; i += 1) {
+    const [start, next] = [lines[i], lines[i + 1]];
+    const margin = margins.get(keyOf(start));
+    if (margin === undefined || !isStart(start) || next.atMargin || keyOf(next) !== keyOf(start) || ignore(next)) continue;
+    offsets.push(Math.round(next.x - margin));
+  }
+  const offset = mostCommon(offsets);
+  if (offset !== null) {
+    return (line) => {
+      const margin = margins.get(keyOf(line));
+      return margin !== undefined && Math.abs(line.x - margin - offset) <= INDENT_TOLERANCE;
+    };
+  }
+  return pageModeChecker(lines, ignore);
+}
+
+function pageModeChecker(lines: PdfLine[], ignore: (line: PdfLine) => boolean): (line: PdfLine) => boolean {
   const counts = new Map<string, Map<number, number>>();
   for (const line of lines) {
     // Títulos centralizados ("Questão 78", nome da matéria) não são continuação e distorceriam a contagem

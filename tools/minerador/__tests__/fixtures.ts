@@ -16,3 +16,6 @@ export const PMSC_GABARITO = 'GAB_DEFINITIVO_860_PMSC_OFICIAL_OBJ_001_01.PDF';
 /** Conhecimentos gerais com texto de Português: na 1ª página sobra uma linha das instruções à esquerda dos itens. */
 export const DATAPREV_CG1_PROVA = '893_DATAPREV_CG1_01.PDF';
 export const DATAPREV_CG1_GABARITO = 'GAB_DEFINITIVO_893_DATAPREV_CG1_01.PDF';
+/** Instruções da 1ª página em duas colunas, acima do título da seção: não podem virar margem nem texto-base. */
+export const STM_CG1_PROVA = '072_STM_CG1_01.PDF';
+export const STM_CG1_GABARITO = 'GAB_DEFINITIVO_072_STM_CG1_01.PDF';

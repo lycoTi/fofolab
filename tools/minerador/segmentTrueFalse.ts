@@ -19,7 +19,7 @@ const CODE_PUNCTUATION = /[(){};=[\]]|^['"“‘]|^\w+:\s?\S/;
 const isIndentedCode = (text: string) => CODE_START.test(text.trim()) && CODE_PUNCTUATION.test(text.trim());
 
 export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
-  const continuesItem = continuationChecker(lines);
+  const continuesItem = continuationChecker(lines, () => false, (l) => l.atMargin && ITEM_START.test(l.text));
   const items: ExtractedItem[] = [];
   let current: ExtractedItem | null = null;
   let expected: number | null = null;
