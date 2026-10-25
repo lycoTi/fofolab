@@ -17,7 +17,7 @@ import { readEditalLines, readVocabulario, seedFromEdital, writeVocabulario } fr
  *   npm run minerar -- lote          → gera acervo/lote.json (o dono confere e edita a lista)
  *   npm run minerar -- rodar         → minera o lote, grava acervo/cebraspe/*.json e acervo/quarentena.json
  *   npm run minerar -- semente [edital.pdf] [--forcar]   → vocabulário inicial a partir do edital (padrão: CGU 2026)
- *   npm run minerar -- classificar [--provedor agy|groq|deepseek] [--modelo id] [--limite N]   → 1ª opinião
+ *   npm run minerar -- classificar [--provedor agy|groq|deepseek] [--modelo id] [--limite N]   → 1ª opinião  (--paralelo N: lotes simultâneos)
  *   npm run minerar -- conferir    [...]   → opinião independente de outro modelo em todos os itens
  *   npm run minerar -- desempatar  [...]   → só os itens em que as opiniões discordam
  *   npm run minerar -- pacote      → acervo/pacote/fofolab-acervo-cebraspe.json (para o app, na 12c)
@@ -83,8 +83,12 @@ function formatClassifyReport(r: ClassifyReport, provider: AiProvider): string {
 async function classify(args: string[], alvo: Alvo): Promise<number> {
   const provider = providerFrom(args, alvo);
   const limite = Number(flag(args, 'limite') ?? 1000);
-  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS });
+  // O Antigravity aguenta lotes simultâneos (cada um leva ~1,5 min); o Groq grátis tem limite por minuto, então um por vez
+  const paralelo = Number(flag(args, 'paralelo') ?? (provider.nome === 'agy' ? 3 : 1));
+  const inicio = Date.now();
+  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo });
   console.log(formatClassifyReport(report, provider));
+  console.log(`Tempo: ${Math.round((Date.now() - inicio) / 1000)} s com ${paralelo} lote(s) em paralelo.`);
   return 0;
 }
 

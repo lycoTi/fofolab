@@ -122,6 +122,25 @@ describe('Rodada de classificação retomável', () => {
     expect(r.classificados).toBe(2);
   });
 
+  it('em paralelo: vários lotes ao mesmo tempo, até o limite pedido, e nada se perde', async () => {
+    const dir = setup();
+    const base = fakeProvider('m1');
+    let active = 0;
+    let peak = 0;
+    const slow: AiProvider = { ...base, tamanhoLote: 1, async complete(prompt, max) {
+      active += 1;
+      peak = Math.max(peak, active);
+      await new Promise((r) => setTimeout(r, 20));
+      active -= 1;
+      return base.complete(prompt, max);
+    } };
+    const r = await runClassificacao({ provider: slow, acervoDir: dir, limite: 100, alvo: 'sem-opiniao', k: 5, paralelo: 3 });
+    expect(r.classificados).toBe(5);
+    expect(peak).toBe(3);
+    const all = { ...readClassificacao(join(dir, 'classificacao'), 'A_23').itens, ...readClassificacao(join(dir, 'classificacao'), 'B_23').itens };
+    expect(Object.keys(all)).toHaveLength(5);
+  });
+
   it('regravar sem mudança dá o mesmo arquivo, byte a byte', async () => {
     const dir = setup();
     await runClassificacao({ provider: fakeProvider('m1'), acervoDir: dir, limite: 100, alvo: 'sem-opiniao', k: 5 });

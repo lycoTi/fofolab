@@ -87,11 +87,23 @@ function batches(queue: Queued[], vocab: Vocabulario, provider: AiProvider, k: n
   return out;
 }
 
-export async function runClassificacao(opts: { provider: AiProvider; acervoDir: string; limite: number; alvo: Alvo; k: number }): Promise<ClassifyReport> {
+/**
+ * `paralelo`: lotes ao mesmo tempo (o `agy` leva ~1,5 min por lote de 30). O que vem depois de cada resposta — validar,
+ * aplicar propostas, gravar — não tem `await`, então dois lotes nunca se atropelam ao mexer no vocabulário ou nos arquivos.
+ */
+export async function runClassificacao(opts: {
+  provider: AiProvider;
+  acervoDir: string;
+  limite: number;
+  alvo: Alvo;
+  k: number;
+  paralelo?: number;
+}): Promise<ClassifyReport> {
   const vocabPath = join(opts.acervoDir, 'vocabulario.json');
   const classifDir = join(opts.acervoDir, 'classificacao');
-  let vocab = readVocabulario(vocabPath);
-  if (!vocab) throw new Error('Falta acervo/vocabulario.json: rode "npm run minerar -- semente" primeiro.');
+  const loaded = readVocabulario(vocabPath);
+  if (!loaded) throw new Error('Falta acervo/vocabulario.json: rode "npm run minerar -- semente" primeiro.');
+  let vocab: Vocabulario = loaded;
   const key = `${opts.provider.nome}:${opts.provider.modelo}`;
   const report: ClassifyReport = {
     classificados: 0, incertos: 0, concordam: 0, discordam: 0, semResposta: 0, propostasAceitas: [], propostasPendentes: 0,
@@ -103,19 +115,27 @@ export async function runClassificacao(opts: { provider: AiProvider; acervoDir: 
   const concursoOf = new Map(queue.map((q) => [q.item.id, q.concurso]));
   const selected = ordered.map((item) => ({ item, concurso: concursoOf.get(item.id)! }));
 
-  for (const batch of batches(selected, vocab, opts.provider, opts.k)) {
-    let text: string;
-    try {
-      text = await opts.provider.complete(buildBatchPrompt(batch.entries, materiasOf(vocab)), TOKENS_POR_ITEM * batch.entries.length + 100);
-    } catch (err) {
-      if (err instanceof LimiteDiario) {
-        report.parouNoLimite = true;
-        break;
+  const pending = batches(selected, vocab, opts.provider, opts.k);
+  const worker = async () => {
+    for (let batch = pending.shift(); batch && !report.parouNoLimite; batch = pending.shift()) {
+      let text: string;
+      try {
+        text = await opts.provider.complete(buildBatchPrompt(batch.entries, materiasOf(vocab)), TOKENS_POR_ITEM * batch.entries.length + 100);
+      } catch (err) {
+        if (err instanceof LimiteDiario) {
+          report.parouNoLimite = true;
+          return;
+        }
+        // Falha avulsa (rede, resposta fora do esquema): os itens voltam à fila na próxima rodada
+        report.semResposta += batch.entries.length;
+        continue;
       }
-      // Falha avulsa (rede, resposta fora do esquema): os itens voltam à fila na próxima rodada
-      report.semResposta += batch.entries.length;
-      continue;
+      absorb(batch, text);
     }
+  };
+
+  /** Síncrono de propósito: validar, aplicar propostas e gravar sem pausa no meio (seguro com lotes em paralelo). */
+  const absorb = (batch: { entries: BatchEntry[]; owners: Queued[] }, text: string) => {
     const parsed = parseBatchResponse(text, batch.entries);
     const propostas = [...parsed.values()].flatMap((r) => (r.proposta ? [r.proposta] : []));
     const applied = applyProposals(vocab, propostas, MIN_CONFIANCA_PROPOSTA);
@@ -149,7 +169,10 @@ export async function runClassificacao(opts: { provider: AiProvider; acervoDir: 
     }
     for (const concurso of touched) writeClassificacao(classifDir, classif.get(concurso)!);
     if (applied.aceitas.length > 0) writeVocabulario(vocabPath, vocab);
-  }
+  };
+
+  const workers = Math.max(1, opts.paralelo ?? 1);
+  await Promise.all(Array.from({ length: workers }, () => worker()));
 
   report.versaoVocabulario = vocab.versao;
   report.juncoesSugeridas = mergeCandidates(vocab);
