@@ -3,12 +3,26 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { parseEventDetail } from '../cebraspeApi';
-import { selectExamPairs } from '../examFiles';
+import { selectExamPairs, selectOpeningEdital } from '../examFiles';
 import type { CebraspeEventDetail, CebraspeFile } from '../types';
 
 const serpro = parseEventDetail(JSON.parse(readFileSync(join(__dirname, '..', '__fixtures__', 'evento-SERPRO_23.json'), 'utf8')));
 const file = (descricao: string, nomeArquivo: string): CebraspeFile => ({ descricao, nomeArquivo, data: '' });
 const detail = (arquivos: CebraspeFile[]): CebraspeEventDetail => ({ ...serpro, arquivos });
+
+describe('Edital de abertura (para a semente do vocabulário)', () => {
+  it('acha o "Edital nº 1 – Abertura" e ignora retificação e versão em Libras', () => {
+    expect(selectOpeningEdital(serpro)?.nomeArquivo).toBe('ED_1_SERPRO_2023_ABERTURA.PDF');
+    const other = detail([
+      { descricao: 'Edital nº 1 – Abertura – Libras', nomeArquivo: 'LIBRAS.PDF', data: '2024-01-01T00:00:00' },
+      { descricao: 'Edital nº 1 – Retificação', nomeArquivo: 'RET.PDF', data: '2024-01-02T00:00:00' },
+      { descricao: 'Edital nº 10 – Resultado final', nomeArquivo: 'ED10.PDF', data: '2024-03-01T00:00:00' },
+      { descricao: 'Edital nº 1 – Abertura', nomeArquivo: 'ED1.PDF', data: '2024-01-01T00:00:00' },
+    ]);
+    expect(selectOpeningEdital(other)?.nomeArquivo).toBe('ED1.PDF');
+    expect(selectOpeningEdital(detail([]))).toBeNull();
+  });
+});
 
 describe('Escolha da prova e do gabarito definitivo de cada caderno', () => {
   it('SERPRO 2023: dois cadernos objetivos; discursiva e padrões de resposta ficam de fora', () => {

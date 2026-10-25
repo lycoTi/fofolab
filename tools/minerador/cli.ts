@@ -3,14 +3,15 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildLote, LOTE_PALAVRAS_PADRAO } from './acervoStore';
 import { createAgyProvider, createProvider, loadKeys, type AiProvider } from './aiProvider';
-import { eventListUrl, parseEventList } from './cebraspeApi';
+import { eventDetailUrl, eventListUrl, fileUrl, isSafeIdentifier, parseEventDetail, parseEventList } from './cebraspeApi';
 import { CLASSIFY_SCHEMA } from './classifyPrompt';
 import { recalcularConsenso, runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
 import { buildPacote, writePacote } from './pacote';
 import { createPoliteClient } from './politeClient';
 import { formatReport } from './report';
-import { runMinerador } from './runMinerador';
-import { readEditalLines, readVocabulario, seedFromEdital, writeVocabulario } from './vocab';
+import { runMinerador, safeFileName } from './runMinerador';
+import { selectOpeningEdital } from './examFiles';
+import { mergeVocabularios, readEditalLines, readVocabulario, seedFromEdital, writeVocabulario } from './vocab';
 
 /**
  * Minerador da Cebraspe (spec 12). Uso, na raiz do projeto:
@@ -28,6 +29,11 @@ const ANO_MINIMO = 2021;
 const USER_AGENT = 'FofoLab-minerador (estudo pessoal; github.com/lycoTi)';
 const EDITAL_PADRAO = join('e2e', 'fixtures', 'cgu-2026-affc-edital.pdf');
 const CANDIDATOS = 10;
+/**
+ * Editais de abertura que completam a semente (Português, Raciocínio Lógico, Direito, Contabilidade, Economia, TI): o
+ * edital da CGU não tem essas matérias e, sem semente, cada modelo inventava um nome (spec 12 §6.4).
+ */
+const EDITAIS_SEMENTE = ['SERPRO_23', 'TCE_SC_21_AUDITOR', 'CNJ_24', 'CD_25_NS', 'MPO_24', 'SEFAZ_RN_25_AUDITOR'];
 
 /** Modelo padrão de cada comando no Antigravity: classificar com Gemini; conferir e desempatar com outra família. */
 const AGY_PADRAO: Record<Alvo, string> = {
@@ -123,11 +129,34 @@ async function main(args: string[]): Promise<number> {
       console.error('O vocabulário já existe (e pode ter assuntos aceitos pela IA). Use --forcar para recomeçar da semente.');
       return 1;
     }
+    // O edital do dono primeiro (os nomes dele vencem na junção); depois os de abertura de concursos do acervo
     const edital = args[1] && !args[1].startsWith('--') ? args[1] : EDITAL_PADRAO;
-    const vocab = seedFromEdital(await readEditalLines(edital));
+    const vocabs = [seedFromEdital(await readEditalLines(edital))];
+    console.log(`  ${edital}: ${vocabs[0].assuntos.length} assuntos`);
+    const ids = (flag(args, 'editais') ?? EDITAIS_SEMENTE.join(',')).split(',').map((s) => s.trim()).filter(Boolean);
+    const client = createPoliteClient({ delayMs: 1000, userAgent: USER_AGENT });
+    for (const id of ids) {
+      if (!isSafeIdentifier(id)) continue;
+      const detail = parseEventDetail(await client.getJson(eventDetailUrl(id)));
+      const opening = selectOpeningEdital(detail);
+      if (!opening) {
+        console.log(`  ${id}: sem edital de abertura — ignorado`);
+        continue;
+      }
+      const { path } = await client.download(fileUrl(detail.tipo, id, opening.nomeArquivo), join(CACHE, id, safeFileName(opening.nomeArquivo)));
+      const seeded = seedFromEdital(await readEditalLines(path));
+      // O leitor de edital foi feito no formato da CGU 2026: edital em que ele não acha matérias fica de fora
+      if (seeded.assuntos.length === 0) {
+        console.log(`  ${id}: o leitor não reconheceu as matérias — ignorado`);
+        continue;
+      }
+      vocabs.push(seeded);
+      console.log(`  ${id}: ${seeded.assuntos.length} assuntos`);
+    }
+    const vocab = mergeVocabularios(vocabs);
     writeVocabulario(vocabPath, vocab);
     const materias = vocab.assuntos.filter((a) => a.caminho.length === 1).length;
-    console.log(`Vocabulário criado: ${vocab.assuntos.length} assuntos em ${materias} matérias (${edital}).`);
+    console.log(`Vocabulário criado: ${vocab.assuntos.length} assuntos em ${materias} matérias, de ${vocabs.length} editais.`);
     return 0;
   }
 

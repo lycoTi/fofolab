@@ -76,6 +76,17 @@ function winnerFor(provas: CebraspeFile[]): CebraspeFile | null {
   return sorted[0].data !== sorted[1].data ? sorted[0] : null;
 }
 
+/**
+ * "Edital nº 1 – Abertura": traz o conteúdo programático, fonte da semente do vocabulário. Retificação e a versão em
+ * Libras ficam de fora; havendo mais de um, o mais antigo (o original).
+ */
+export function selectOpeningEdital(detail: CebraspeEventDetail): CebraspeFile | null {
+  const candidates = detail.arquivos.filter(
+    (f) => /^\s*Edital\s+n\S*\s*1\b/i.test(f.descricao) && !/retifica|libras/i.test(f.descricao)
+  );
+  return [...candidates].sort((a, b) => a.data.localeCompare(b.data))[0] ?? null;
+}
+
 export function selectExamPairs(detail: CebraspeEventDetail): {
   pares: ExamPair[];
   pendentes: string[];

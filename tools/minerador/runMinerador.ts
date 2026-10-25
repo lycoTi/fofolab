@@ -25,7 +25,7 @@ function segment(lines: PdfLine[]) {
 }
 
 /** O nome do arquivo vem da API (entrada não confiável): no caminho do cache, só caracteres seguros. */
-const safeFileName = (nome: string) => nome.replace(/[^\w.\- ]/g, '_').replace(/^\.+/, '_');
+export const safeFileName = (nome: string) => nome.replace(/[^\w.\- ]/g, '_').replace(/^\.+/, '_');
 
 async function fetchFile(client: PoliteClient, cacheDir: string, detail: CebraspeEventDetail, file: CebraspeFile, report: RunReport) {
   const result = await client.download(

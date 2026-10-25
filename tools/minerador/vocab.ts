@@ -54,7 +54,7 @@ function topicPaths(subject: EditalSubject): string[][] {
       const parentTitle = titleByCode.get(parts.slice(0, i).join('.'));
       if (parentTitle) parents.push(parentTitle);
     }
-    return [subject.name, ...parents, topic.title];
+    return [cleanSubjectName(subject.name), ...parents, topic.title];
   });
 }
 
@@ -207,6 +207,41 @@ export function writeVocabulario(path: string, vocab: Vocabulario): void {
   writeFileSync(path, `${JSON.stringify(file, null, 2)}\n`);
 }
 
+/**
+ * Nome da matéria como ele deve ficar no vocabulário: sem a ressalva de cargo ("(Exceto para o Cargo de …)", às vezes
+ * cortada sem fechar o parêntese) nem o resto de numeração romana que o leitor de edital cola ("…: I Estatística").
+ */
+export function cleanSubjectName(name: string): string {
+  return name
+    // Resto do tópico anterior colado no começo ("(Sei). Gestão…", "Nbc Tsp 34. Legislação…"): curto e termina em ". "
+    .replace(/^[^.]{1,16}\.\s+(?=[A-ZÀ-Ý])/, '')
+    .replace(/\s*\((exceto|para|somente|apenas|exclusivo)\b.*$/i, '')
+    .replace(/:\s*[IVX]+\s.*$/, '')
+    .trim();
+}
+
+/**
+ * Junta vocabulários de vários editais (o da CGU primeiro): cada caminho é canonizado contra o que já entrou — matéria
+ * de mesmo nome ou contido ("Noções de Direito Constitucional" × "Direito Constitucional") vira uma só, e tópico igual
+ * não repete. Pais antes dos filhos, para o filho achar o pai já canonizado.
+ */
+export function mergeVocabularios(vocabs: Vocabulario[]): Vocabulario {
+  const assuntos: Assunto[] = [];
+  const ids = new Set<string>();
+  for (const vocab of vocabs) {
+    const ordered = [...vocab.assuntos].sort((a, b) => a.caminho.length - b.caminho.length || a.id.localeCompare(b.id));
+    for (const assunto of ordered) {
+      const caminho = canonicalPath(assuntos, assunto.caminho);
+      const id = assuntoId(caminho);
+      if (ids.has(id)) continue;
+      ids.add(id);
+      assuntos.push({ id, caminho, sinonimos: [], origem: 'edital' });
+    }
+  }
+  const sorted = assuntos.sort((a, b) => a.id.localeCompare(b.id));
+  return { versao: 1, assuntos: sorted, historico: [{ versao: 1, mudancas: [`semente: ${sorted.length} assuntos de ${vocabs.length} editais`] }] };
+}
+
 export function seedFromEdital(lines: string[]): Vocabulario {
   const edital = parseEdital(lines);
   const subjects = [...edital.commonSubjects, ...Object.values(edital.roleSubjects).flat()];
@@ -217,7 +252,7 @@ export function seedFromEdital(lines: string[]): Vocabulario {
   };
   for (const subject of subjects) {
     // A matéria também é assunto: item que cabe nela sem caber num tópico específico
-    add([subject.name]);
+    add([cleanSubjectName(subject.name)]);
     for (const path of topicPaths(subject)) add(path);
   }
   const assuntos = [...byId.values()].sort((a, b) => a.id.localeCompare(b.id));

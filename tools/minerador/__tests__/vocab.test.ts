@@ -1,7 +1,9 @@
 // @vitest-environment node
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { applyProposals, assuntoId, mergeCandidates, readEditalLines, seedFromEdital, type Vocabulario } from '../vocab';
+import {
+  applyProposals, assuntoId, cleanSubjectName, mergeCandidates, mergeVocabularios, readEditalLines, seedFromEdital, type Vocabulario,
+} from '../vocab';
 
 const EDITAL = join(__dirname, '..', '..', '..', 'e2e', 'fixtures', 'cgu-2026-affc-edital.pdf');
 
@@ -82,6 +84,36 @@ describe('Propostas de assunto novo e versões', () => {
     const pares = mergeCandidates(base());
     expect(pares).toContainEqual([assuntoId(['X', 'Algoritmos e estrutura de dados']), assuntoId(['X', 'Algoritmos e estruturas de dados'])]);
     expect(pares.flat()).not.toContain(assuntoId(['X', 'Redes de computadores']));
+  });
+});
+
+describe('Semente com vários editais', () => {
+  it('limpa o nome da matéria: ressalva de cargo entre parênteses e resto de numeração romana', () => {
+    expect(cleanSubjectName('Noções de Direito Administrativo (Exceto para o Cargo de Auditor Fiscal de Controle Externo – Área: Direito)')).toBe('Noções de Direito Administrativo');
+    expect(cleanSubjectName('Noções de Administração Pública (Exceto para ')).toBe('Noções de Administração Pública');
+    expect(cleanSubjectName('Estatística e Raciocínio Lógico: I Estatística')).toBe('Estatística e Raciocínio Lógico');
+    expect(cleanSubjectName('Língua Portuguesa')).toBe('Língua Portuguesa');
+    // Resto do tópico anterior que o leitor colou no começo do nome
+    expect(cleanSubjectName('(Sei). Gestão de Contratos')).toBe('Gestão de Contratos');
+    expect(cleanSubjectName('Nbc Tsp 34. Legislação Tributária Estadual')).toBe('Legislação Tributária Estadual');
+    expect(cleanSubjectName('Noções de Estatística/Probabilidade')).toBe('Noções de Estatística/Probabilidade');
+  });
+
+  it('junta os vocabulários: matéria de mesmo nome (ou contido) vira uma só; tópicos iguais não repetem', () => {
+    const v = (assuntos: string[][]): Vocabulario => ({
+      versao: 1, historico: [], assuntos: assuntos.map((c) => ({ id: assuntoId(c), caminho: c, sinonimos: [], origem: 'edital' as const })),
+    });
+    const merged = mergeVocabularios([
+      v([['Engenharia de Software e Programação'], ['Engenharia de Software e Programação', 'Requisitos']]),
+      v([['Língua Portuguesa'], ['Língua Portuguesa', 'Coesão textual'], ['Direito Constitucional'], ['Direito Constitucional', 'Direitos fundamentais']]),
+      v([['Língua Portuguesa'], ['Língua Portuguesa', 'Coesão textual'], ['Noções de Direito Constitucional'], ['Noções de Direito Constitucional', 'Controle de constitucionalidade']]),
+    ]);
+    const caminhos = merged.assuntos.map((a) => a.caminho.join(' › '));
+    expect(caminhos.filter((c) => c === 'Língua Portuguesa › Coesão textual')).toHaveLength(1);
+    expect(caminhos).toContain('Direito Constitucional › Controle de constitucionalidade');
+    expect(caminhos.some((c) => c.startsWith('Noções de Direito Constitucional'))).toBe(false);
+    expect(merged.versao).toBe(1);
+    expect(new Set(merged.assuntos.map((a) => a.id)).size).toBe(merged.assuntos.length);
   });
 });
 
