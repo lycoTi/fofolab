@@ -1,16 +1,12 @@
 // @vitest-environment node
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { readPdfLines } from '../pdfLines';
 import type { PdfLine } from '../types';
-
-export const readFixture = (name: string) => new Uint8Array(readFileSync(join(__dirname, '..', '__fixtures__', name)));
+import { fixtureLines, SERPRO_PROVA } from './fixtures';
 
 describe('Linhas do PDF da prova (SERPRO 2023, específicos)', () => {
   let lines: PdfLine[];
   beforeAll(async () => {
-    lines = await readPdfLines(readFixture('846_SERPRO_23_001_01.PDF'));
+    lines = await fixtureLines(SERPRO_PROVA);
   });
 
   it('linha justificada ganha os espaços que o PDF não tem', () => {
