@@ -9,7 +9,7 @@ import { fixtureLines, PMSC_GABARITO, PMSC_PROVA, SERPRO_GABARITO, SERPRO_PROVA 
 
 const origemSerpro: Omit<Procedencia, 'numero'> = {
   banca: 'Cebraspe', identificador: 'SERPRO_23', concurso: 'SERPRO 23', ano: 2023,
-  areas: ['ANALISTA – ESPECIALIZAÇÃO: TECNOLOGIA'], prova: 'PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS', caderno: '846_SERPRO_23_001_01',
+  prova: 'PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS', caderno: '846_SERPRO_23_001_01',
 };
 
 describe('Montagem da prova: gabarito, anulados, código e figura', () => {

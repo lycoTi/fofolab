@@ -74,7 +74,7 @@ export async function runMinerador(opts: { client: PoliteClient; acervoDir: stri
       const outcome = assembleExam(
         segment(await readPdfLines(provaBytes)),
         parseAnswerKey(await readPdfLines(gabaritoBytes, { singleColumn: true })),
-        { banca: 'Cebraspe', identificador, concurso: detail.nome, ano: detail.ano, areas: detail.areas, prova: pair.prova.descricao, caderno: pair.caderno }
+        { banca: 'Cebraspe', identificador, concurso: detail.nome, ano: detail.ano, prova: pair.prova.descricao, caderno: pair.caderno }
       );
       processed.add(pair.caderno);
       if (outcome.kind === 'quarentena') {
@@ -88,7 +88,8 @@ export async function runMinerador(opts: { client: PoliteClient; acervoDir: stri
     if (novos.length === 0) continue;
     // Caderno que falhou agora (rede) mantém o que já estava no acervo; só os processados são substituídos
     const mantidos = readConcurso(concursosDir, identificador).filter((i) => !processed.has(i.procedencias[0].caderno));
-    writeConcurso(concursosDir, identificador, mergeDuplicates([...mantidos, ...novos]));
+    const meta = { identificador, concurso: detail.nome, ano: detail.ano, areas: detail.areas };
+    writeConcurso(concursosDir, meta, mergeDuplicates([...mantidos, ...novos]));
     report.concursos += 1;
     report.itens += novos.length;
     report.anulados += novos.filter((i) => i.anulado).length;

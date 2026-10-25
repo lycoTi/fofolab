@@ -49,15 +49,23 @@ export interface ExtractedItem {
 /** 'E' serve aos dois formatos (Errado e alternativa E); 'X' = item anulado. */
 export type AnswerMark = 'C' | 'E' | 'A' | 'B' | 'D' | 'X';
 
+/** As áreas/cargos do concurso ficam uma vez no cabeçalho do arquivo (`AcervoConcurso`), não em cada item. */
 export interface Procedencia {
   banca: 'Cebraspe';
   identificador: string;
   concurso: string;
   ano: number;
-  areas: string[];
   prova: string;
   caderno: string;
   numero: number;
+}
+
+/** Cabeçalho de `acervo/cebraspe/<ID>.json`. */
+export interface ConcursoMeta {
+  identificador: string;
+  concurso: string;
+  ano: number;
+  areas: string[];
 }
 
 export interface AcervoItem {

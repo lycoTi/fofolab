@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { normalizeStatement } from '../../src/lib/questionImport';
-import type { AcervoItem, CebraspeEvent, Procedencia } from './types';
+import type { AcervoItem, CebraspeEvent, ConcursoMeta, Procedencia } from './types';
 
 /**
  * Acervo no git (spec 12 §6.2): um JSON por concurso em `acervo/cebraspe/<ID>.json`. A saída é determinística — mesma
@@ -66,22 +66,38 @@ function stable(item: AcervoItem): AcervoItem {
     temCodigo: item.temCodigo,
     dependeDeFigura: item.dependeDeFigura,
     procedencias: item.procedencias.map((p) => ({
-      banca: p.banca, identificador: p.identificador, concurso: p.concurso, ano: p.ano, areas: p.areas, prova: p.prova,
-      caderno: p.caderno, numero: p.numero,
+      banca: p.banca, identificador: p.identificador, concurso: p.concurso, ano: p.ano, prova: p.prova, caderno: p.caderno,
+      numero: p.numero,
     })),
   };
 }
+
+/**
+ * Versão do formato do arquivo do concurso. 1: cabeçalho (identificador, concurso, ano, áreas) + itens. As áreas saíram
+ * dos itens porque repeti-las em cada um era mais da metade do acervo (CTI 2023 tem centenas de áreas).
+ */
+export const ACERVO_VERSAO = 1;
 
 const concursoPath = (dir: string, identificador: string) => join(dir, `${identificador}.json`);
 
 export function readConcurso(dir: string, identificador: string): AcervoItem[] {
   const path = concursoPath(dir, identificador);
   if (!existsSync(path)) return [];
-  return JSON.parse(readFileSync(path, 'utf8')) as AcervoItem[];
+  const data = JSON.parse(readFileSync(path, 'utf8')) as { versao?: number; itens?: AcervoItem[] };
+  // Arquivo de formato antigo (lista solta, antes do cabeçalho) é refeito pela rodada
+  return data.versao === ACERVO_VERSAO && Array.isArray(data.itens) ? data.itens : [];
 }
 
-export function writeConcurso(dir: string, identificador: string, itens: AcervoItem[]): void {
+export function writeConcurso(dir: string, concurso: ConcursoMeta, itens: AcervoItem[]): void {
   mkdirSync(dir, { recursive: true });
   const ordered = [...itens].sort((a, b) => byOrigin(firstOrigin(a), firstOrigin(b))).map(stable);
-  writeFileSync(concursoPath(dir, identificador), `${JSON.stringify(ordered, null, 2)}\n`);
+  const file = {
+    versao: ACERVO_VERSAO,
+    identificador: concurso.identificador,
+    concurso: concurso.concurso,
+    ano: concurso.ano,
+    areas: concurso.areas,
+    itens: ordered,
+  };
+  writeFileSync(concursoPath(dir, concurso.identificador), `${JSON.stringify(file, null, 2)}\n`);
 }

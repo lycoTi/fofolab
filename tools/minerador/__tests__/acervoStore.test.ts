@@ -1,9 +1,9 @@
 // @vitest-environment node
-import { mkdtempSync } from 'node:fs';
+import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { buildLote, LOTE_PALAVRAS_PADRAO, mergeDuplicates, readConcurso, writeConcurso } from '../acervoStore';
+import { ACERVO_VERSAO, buildLote, LOTE_PALAVRAS_PADRAO, mergeDuplicates, readConcurso, writeConcurso } from '../acervoStore';
 import type { AcervoItem, CebraspeEvent } from '../types';
 
 const event = (identificador: string, nome: string, ano: number): CebraspeEvent => ({ identificador, nome, ano, tipo: 'concursos', status: 'encerrado' });
@@ -11,7 +11,7 @@ const event = (identificador: string, nome: string, ano: number): CebraspeEvent 
 const acervoItem = (caderno: string, numero: number, enunciado: string): AcervoItem => ({
   id: `X_23:${caderno}:${numero}`, formato: 'CERTO_ERRADO', textoBase: 'Julgue os itens.', enunciado, alternativas: null,
   gabarito: 'C', anulado: false, materiaOrigem: null, temCodigo: false, dependeDeFigura: false,
-  procedencias: [{ banca: 'Cebraspe', identificador: 'X_23', concurso: 'X 23', ano: 2023, areas: [], prova: 'P', caderno, numero }],
+  procedencias: [{ banca: 'Cebraspe', identificador: 'X_23', concurso: 'X 23', ano: 2023, prova: 'P', caderno, numero }],
 });
 
 describe('Acervo: lote, repetidas e arquivo estável', () => {
@@ -31,12 +31,15 @@ describe('Acervo: lote, repetidas e arquivo estável', () => {
     expect(regra.procedencias.map((p) => `${p.caderno}:${p.numero}`)).toEqual(['A:51', 'B:7']);
   });
 
-  it('grava em ordem de caderno e número, e a releitura devolve o mesmo', () => {
+  it('grava em ordem de caderno e número, com as áreas do concurso uma vez só no cabeçalho', () => {
     const dir = mkdtempSync(join(tmpdir(), 'acervo-'));
     const itens = [acervoItem('A', 100, 'Cem.'), acervoItem('A', 51, 'Cinquenta e um.')];
-    writeConcurso(dir, 'X_23', itens);
-    const lidos = readConcurso(dir, 'X_23');
-    expect(lidos.map((i) => i.procedencias[0].numero)).toEqual([51, 100]);
+    const concurso = { identificador: 'X_23', concurso: 'X 23', ano: 2023, areas: ['ANALISTA – TI', 'AUDITOR'] };
+    writeConcurso(dir, concurso, itens);
+    const raw = JSON.parse(readFileSync(join(dir, 'X_23.json'), 'utf8'));
+    expect(raw).toMatchObject({ versao: ACERVO_VERSAO, ...concurso });
+    expect(JSON.stringify(raw.itens)).not.toContain('AUDITOR');
+    expect(readConcurso(dir, 'X_23').map((i) => i.procedencias[0].numero)).toEqual([51, 100]);
     expect(readConcurso(dir, 'NAO_EXISTE')).toEqual([]);
   });
 });
