@@ -94,6 +94,15 @@ export function readConcurso(dir: string, identificador: string): AcervoItem[] {
   return data.versao === ACERVO_VERSAO && Array.isArray(data.itens) ? data.itens : [];
 }
 
+/** Cabeçalho do concurso (para o pacote do app); `null` se o arquivo não existe ou é de formato antigo. */
+export function readConcursoMeta(dir: string, identificador: string): ConcursoMeta | null {
+  const path = concursoPath(dir, identificador);
+  if (!existsSync(path)) return null;
+  const data = JSON.parse(readFileSync(path, 'utf8')) as Partial<ConcursoMeta> & { versao?: number };
+  if (data.versao !== ACERVO_VERSAO) return null;
+  return { identificador, concurso: data.concurso ?? identificador, ano: data.ano ?? 0, areas: data.areas ?? [] };
+}
+
 /** Concurso sem nenhum item válido (todos os cadernos em quarentena) sai do acervo. */
 export function removeConcurso(dir: string, identificador: string): void {
   const path = concursoPath(dir, identificador);
