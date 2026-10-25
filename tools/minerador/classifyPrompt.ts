@@ -51,7 +51,7 @@ export const CLASSIFY_SCHEMA = {
   required: ['resultados'],
 } as const;
 
-const RULES = `Você classifica itens de provas de concurso (banca Cebraspe) por ASSUNTO. Regras:
+const RULES = `Você classifica itens de provas de concurso (banca Cebraspe) por ASSUNTO. Não use ferramentas nem comandos: responda direto. Regras:
 1. A fonte é o texto do item (texto-base, enunciado e alternativas). Classifique pelo que o item PERGUNTA.
 2. A matéria de origem é só uma pista e pode estar errada ou ser genérica ("CONHECIMENTOS ESPECÍFICOS").
 3. Para cada item, escolha de 1 a 3 assuntos SOMENTE da lista de candidatos daquele item, pelo id, com confiança de 0 a 1.
