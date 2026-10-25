@@ -10,6 +10,8 @@ import type { ExtractedItem, PdfLine } from './types';
 const QUESTION_HEADER = /^Quest[ãa]o\s+(\d{1,3})\s*$/i;
 /** Nome da matéria: centralizado (fora da margem) e todo em maiúsculas, como "DIREITO CONSTITUCIONAL". */
 const SUBJECT_HEADER = /^[A-ZÀ-Ý][A-ZÀ-Ý ,()–-]{5,}$/;
+/** Título de seção da Cebraspe: "-- CONHECIMENTOS ESPECÍFICOS --". */
+const SECTION_HEADER = /^-+\s*(.+?)\s*-+$/;
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 
 type Part = 'enunciado' | 'alternativa' | 'depois';
@@ -17,7 +19,7 @@ type Part = 'enunciado' | 'alternativa' | 'depois';
 export function segmentMultipleChoice(lines: PdfLine[]): ExtractedItem[] {
   const continues = continuationChecker(
     lines,
-    (l) => QUESTION_HEADER.test(l.text) || SUBJECT_HEADER.test(l.text),
+    (l) => QUESTION_HEADER.test(l.text) || SUBJECT_HEADER.test(l.text) || SECTION_HEADER.test(l.text),
     (l) => l.atMargin && /^[A-E] /.test(l.text)
   );
   const items: ExtractedItem[] = [];
@@ -52,9 +54,10 @@ export function segmentMultipleChoice(lines: PdfLine[]): ExtractedItem[] {
       continue;
     }
 
-    if (!line.atMargin && SUBJECT_HEADER.test(line.text)) {
-      // Matéria nova: o texto-base da anterior não vale para ela
-      materia = line.text;
+    const section = SECTION_HEADER.exec(line.text);
+    if (section || (!line.atMargin && SUBJECT_HEADER.test(line.text))) {
+      // Matéria ou seção nova ("DIREITO CONSTITUCIONAL", "-- CONHECIMENTOS ESPECÍFICOS --"): o texto-base da anterior não vale
+      materia = section ? section[1].trim() : line.text;
       current = null;
       part = 'depois';
       textoBase = null;

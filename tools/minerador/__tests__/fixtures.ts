@@ -19,3 +19,7 @@ export const DATAPREV_CG1_GABARITO = 'GAB_DEFINITIVO_893_DATAPREV_CG1_01.PDF';
 /** Instruções da 1ª página em duas colunas, acima do título da seção: não podem virar margem nem texto-base. */
 export const STM_CG1_PROVA = '072_STM_CG1_01.PDF';
 export const STM_CG1_GABARITO = 'GAB_DEFINITIVO_072_STM_CG1_01.PDF';
+/** Fórmulas em fonte própria: expoentes e subscritos soltos em linhas com recuo esquisito. */
+export const ANATEL_002_PROVA = '961_ANATEL_002_01.PDF';
+/** Texto-base começando com recuo de primeira linha logo depois do título da seção. */
+export const ANATEL_003_PROVA = '961_ANATEL_003_01.PDF';

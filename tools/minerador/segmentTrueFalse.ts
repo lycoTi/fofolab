@@ -17,6 +17,11 @@ const ITEM_START = /^(\d{1,3})(?=\s|[A-ZÀ-Ý“"(])\s*(.*)$/;
 const CODE_START = /^([a-z_$)}\]'"“‘]|[A-Z]\w*\()/;
 const CODE_PUNCTUATION = /[(){};=[\]]|^['"“‘]|^\w+:\s?\S/;
 const isIndentedCode = (text: string) => CODE_START.test(text.trim()) && CODE_PUNCTUATION.test(text.trim());
+/**
+ * Pedaço de fórmula: expoente, subscrito ou símbolo solto numa linha própria com recuo esquisito ("–2", "⡹⡰"). Curto
+ * e sem palavra de prosa — não é começo de parágrafo de texto-base (ANATEL 2024).
+ */
+const isFormulaFragment = (text: string) => text.trim().length <= 8 || !/[A-Za-zÀ-ú]{4,}/.test(text);
 
 export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
   const continuesItem = continuationChecker(lines, () => false, (l) => l.atMargin && ITEM_START.test(l.text));
@@ -39,18 +44,14 @@ export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
     }
 
     if (!line.atMargin) {
-      // Código tem recuo próprio (mais fundo que a continuação): com pontuação de código, ainda é o item
-      if (current && (continuesItem(line) || isIndentedCode(line.text))) {
+      // Código tem recuo próprio (mais fundo que a continuação); fórmulas soltam pedaços com recuo esquisito: ainda é o item
+      if (current && (continuesItem(line) || isIndentedCode(line.text) || isFormulaFragment(line.text))) {
         current.enunciado += `\n${line.text}`;
         continue;
       }
-      if (current) {
-        // Recuo diferente do da continuação: é o começo de um parágrafo de texto-base
-        current = null;
-        pendingBase.push(line.text);
-        continue;
-      }
-      if (pendingBase.length > 0) pendingBase.push(line.text);
+      // Prosa num recuo diferente (ou sem item aberto, ex.: logo depois do título da seção): começo de parágrafo de texto-base
+      current = null;
+      pendingBase.push(line.text);
       continue;
     }
 

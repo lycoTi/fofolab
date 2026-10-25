@@ -1,8 +1,22 @@
 // @vitest-environment node
 import { beforeAll, describe, expect, it } from 'vitest';
 import { segmentMultipleChoice } from '../segmentMultipleChoice';
-import type { ExtractedItem } from '../types';
+import type { ExtractedItem, PdfLine } from '../types';
 import { fixtureLines, PMSC_PROVA } from './fixtures';
+
+describe('Título de seção na múltipla escolha', () => {
+  it('"-- CONHECIMENTOS ESPECÍFICOS --" vira matéria de origem, não texto-base', () => {
+    const at = (text: string, x: number): PdfLine => ({ page: 1, column: 'L', x, y: 0, text, atMargin: x === 28 });
+    const items = segmentMultipleChoice([
+      at('-- CONHECIMENTOS ESPECÍFICOS --', 150),
+      at('Questão 51', 51),
+      at('Assinale a opção correta.', 28),
+      ...['A um', 'B dois', 'C três', 'D quatro', 'E cinco'].map((t) => at(t, 28)),
+    ]);
+    expect(items[0].textoBase).toBeNull();
+    expect(items[0].materiaOrigem).toBe('CONHECIMENTOS ESPECÍFICOS');
+  });
+});
 
 describe('Questões de múltipla escolha (PM SC 2023, Oficial)', () => {
   let items: ExtractedItem[];

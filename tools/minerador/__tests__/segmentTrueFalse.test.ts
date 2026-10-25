@@ -3,7 +3,10 @@ import { beforeAll, describe, expect, it } from 'vitest';
 import { segmentTrueFalse } from '../segmentTrueFalse';
 import type { ExtractedItem, PdfLine } from '../types';
 import { parseAnswerKey } from '../answerKey';
-import { DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureLines, SERPRO_PROVA, STM_CG1_GABARITO, STM_CG1_PROVA } from './fixtures';
+import {
+  ANATEL_002_PROVA, ANATEL_003_PROVA, DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureLines, SERPRO_PROVA, STM_CG1_GABARITO,
+  STM_CG1_PROVA,
+} from './fixtures';
 
 const line = (text: string, atMargin: boolean): PdfLine => ({ page: 1, column: 'L', x: atMargin ? 28 : 46, y: 0, text, atMargin });
 
@@ -68,6 +71,21 @@ describe('Itens Certo/Errado com o texto-base (SERPRO 2023, específicos)', () =
     expect(item3.enunciado.startsWith('A oração “Se a mudança não tivesse sido adotada”')).toBe(true);
     expect(item3.textoBase ?? '').not.toContain('caso julgue o item ERRADO');
     expect(item3.textoBase).toBe(items.find((i) => i.numero === 1)!.textoBase);
+  });
+
+  it('pedaço de fórmula (expoente, subscrito) no meio do item não corta o item', async () => {
+    const items = segmentTrueFalse(await fixtureLines(ANATEL_002_PROVA));
+    const item = (n: number) => items.find((i) => i.numero === n)!;
+    expect(item(51).enunciado).toContain('aleatória X será');
+    expect(item(52).textoBase).toBe(item(51).textoBase);
+    expect(item(51).textoBase).toContain('julgue os itens a seguir.');
+    // O parágrafo seguinte (recuo de primeira linha, prosa longa) abre o texto-base do item 56
+    expect(item(56).textoBase!.startsWith('Os valores 2, 3, 1, 0, 2 constituem uma amostra aleatória')).toBe(true);
+  });
+
+  it('a primeira linha recuada logo depois do título da seção abre o texto-base (não some)', async () => {
+    const items = segmentTrueFalse(await fixtureLines(ANATEL_003_PROVA));
+    expect(items.find((i) => i.numero === 51)!.textoBase!.startsWith('O Conselho Diretor da ANATEL aprovou, por maioria')).toBe(true);
   });
 
   it('linha que começa com número fora da sequência não abre item (vira texto-base)', () => {
