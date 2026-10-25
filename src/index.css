@@ -17,6 +17,23 @@
   background: #475569;
 }
 
+/*
+ * O Edge recente desenha a barra nativa (clara e grossa) e ignora o ::-webkit-scrollbar acima; as propriedades padrão
+ * valem nele e no Firefox. Na barra de abas a rolagem é um recurso de espaço, não conteúdo: só aparece ao passar o
+ * mouse ou ao navegar pelo teclado.
+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+.fofolab-tabs {
+  scrollbar-color: transparent transparent;
+}
+.fofolab-tabs:hover,
+.fofolab-tabs:focus-within {
+  scrollbar-color: #334155 transparent;
+}
+
 /* Enquanto uma divisória de painel é arrastada, o leitor de PDF não pode selecionar texto */
 body.fofolab-resizing {
   cursor: col-resize;

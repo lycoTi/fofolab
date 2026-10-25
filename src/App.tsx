@@ -1094,7 +1094,7 @@ export default function App() {
             {(
               <>
                 <div
-                  className={`px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 overflow-x-auto ${
+                  className={`fofolab-tabs px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 overflow-x-auto ${
                     readerExpanded ? 'hidden' : 'flex'
                   }`}
                 >
