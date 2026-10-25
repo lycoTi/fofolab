@@ -5,6 +5,7 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
+- **25/10/2026:** spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida).
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10) e **FofoIA (11)** — banco na migração **v10**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -166,10 +167,42 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
     tokens "pensando" (a aula bateu no teto). Correção de fundo: **FofoIA com a letra da lei** (`ctresb/leis`, brainstorm
     próprio). Depois: **professores personalizados** (ideia).
 - **Caderno:** já grava sozinho ("Salvo automaticamente", como o Google Docs) — avaliar tirar o botão "Salvar" redundante.
-- **Épico — Banco de questões a partir das provas oficiais:** provas e gabaritos definitivos baixados **das bancas**
-  (não do TEC: os Termos de Uso §18.8 proíbem extrair/processar com script ou IA o que vem da plataforma, mesmo para uso
-  pessoal); extração, sem duplicadas (`normalizeStatement`), classificação por tópico. Catálogo de provas feito à mão ou
-  por descoberta nos sites das bancas — **brainstorm próprio antes de construir**.
+- **Épico — Banco de questões a partir das provas oficiais** — brainstorm feito (25/10), **spec `12-minerador-cebraspe.md`**
+  (só Cebraspe, qualquer formato; assunto canônico no acervo + ligação barata no app; acervo no git, PDFs só em cache).
+  [DONE] **12a — minerador até o acervo cru** (25/10/2026, plano `docs/superpowers/plans/2026-10-25-12a-minerador-acervo-cru.md`):
+  `tools/minerador/` (fora do app; `npm run minerar -- lote | rodar`), API pública da Cebraspe com verificação de formato,
+  1 requisição/s com cache, prova ↔ gabarito definitivo (nome do caderno ou descrição, para arquivos com nome em hash;
+  `ATUALIZADO` vence, `SEM EFEITO`/preliminar fora), itens Certo/Errado e múltipla escolha com texto-base, anulados,
+  código em bloco, figura marcada, quarentena quando as contagens não batem, acervo determinístico (`acervo/cebraspe/<ID>.json`,
+  formato v1 com cabeçalho do concurso). 57 testes com 6 provas reais (SERPRO 23, PM SC 23, DATAPREV 23, STM 25, ANATEL 24 ×2).
+  **Rodada real:** lote de 67 concursos (2021+, TI e controle, conferido pelo dono) → 59 com itens, 481 provas,
+  **29.892 itens** (27,5 mil depois de juntar repetidos entre cadernos), 1.007 anulados, 212 com código, 936 dependem de
+  figura/tabela, acervo de 33 MB; conferidos à mão contra o PDF (TCE SC 21 item 60, BCB 24 item 48, CD 25 item 170) e
+  gabaritos conferidos por uma leitura independente da grade; rodar de novo não baixa nada e não muda o acervo.
+  **Revisão independente (25/10), corrigida com teste:** grade do gabarito fora de ordem (línguas estrangeiras, INPI 23)
+  era ignorada e o espanhol ficava com as respostas do inglês → quarentena; repetidos com gabarito diferente (anulado num
+  caderno, válido noutro — TRT10 24) eram juntados → o gabarito entra na chave; um gabarito podia servir a duas provas →
+  um para um, prova ATUALIZADO vence, código mais específico vence; pedaços de fórmula cortavam o item e viravam
+  texto-base; 1ª linha recuada após o título da seção sumia; "-- X --" virava texto-base na múltipla escolha; "definição",
+  "importância", "classe" viravam código; PDF ruim derrubava a rodada (agora quarentena; cache valida `%PDF-`); regravar
+  um caderno apagava procedências de outros; identificador/nome de arquivo da API iam crus para o caminho do cache.
+  Item com fórmula que o PDF não traduz ganhou `temSimboloIlegivel` (≈1 mil itens) — o app decide se avisa ou esconde.
+  Ficou de fora (motivos em `acervo/quarentena.json`):
+  - **SEFAZ AL 21 / SEFAZ CE 21 ("MATRIZ"):** uma prova por cargo com básicos + específicos, mas gabarito em 2 arquivos
+    (o pareamento assume 1 gabarito por prova). **INPI 23 básicos** (línguas estrangeiras com numeração repetida) e
+    **SEPLAG CE 24 básicos** (grade fora de ordem): quarentena de propósito — precisam de leitura por bloco de língua.
+  - **TELEBRAS 21 (17 cadernos), SERPRO 21, APEX 21-2, SEFA PR 25, SUSEP 25, ANVISA 24:** prova sem gabarito definitivo
+    reconhecido (publicação em outro formato) — 32 cadernos "pendentes".
+  - **Múltipla escolha com alternativa perdida na virada de página/coluna:** FINEP 23 q47, ITAIPU 23 q42, TCE PR 24 q54,
+    SEFAZ SE 25 q100, TCE MG 25 q38, TST 23 q48.
+  - **Casos isolados:** ANAC 23 (básicos para no item 35; específicos no 66), CNPq 23 e MPO 24 (gerais sem nenhum item),
+    INFRASA 26, INPI 23 (item 120), MME 23 (item 30), PETROBRAS 21 (itens 1–4), SEFIN Fortaleza 23 (142–150), SEPLAG CE 24
+    (21–35), TRF6 24 ("item 203" fantasma).
+  - Repetidos **entre concursos** ainda não se juntam (só dentro do mesmo concurso): fica para o pacote da 12b.
+  **Segundo lote (decisão do dono):** provas de procurador e de servidor de MP e TJ (Direito Público, para P1/P2).
+  **Próximas:** 12b (assuntos canônicos com IA, vocabulário vigiado, pacote) → brainstorm da aba Questões → 12c (app).
+  Depois: outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
+  provas antigas.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
   (reduz prioridade), nunca escondido.
 - **TEC só por registro manual (feito na 7b):** a importação do desempenho por arquivo salvo (spec 07 §9) fica descartada —

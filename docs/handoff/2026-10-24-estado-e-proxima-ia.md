@@ -4,6 +4,19 @@
 > vive no repositório, não na memória da IA. Substitui `2026-10-22-continuar-no-outro-pc.md` (que segue válido para
 > preparar um PC novo: stack `~/.agents`, Impeccable, `npm install`).
 
+## 0. Atualização de 25/10/2026 (leia primeiro)
+- **Spec 12 — minerador de provas da Cebraspe** (`docs/specs/12-minerador-cebraspe.md`) e entrega **12a** prontas:
+  `tools/minerador/` (fora do app, `npm run minerar -- lote | rodar`), acervo com **29,9 mil itens** de 59 concursos (revisão independente corrigida) em
+  `acervo/cebraspe/*.json` (no git, 32 MB); PDFs em `.minerador-cache/` (fora do git — no outro PC, `rodar` baixa de
+  novo, devagar). Quarentenas e pendentes com motivo no BACKLOG e em `acervo/quarentena.json`.
+- **Próximo:** 12b (assuntos canônicos com IA — DeepSeek quando o dono puser crédito; vocabulário vigiado; pacote para o
+  app) → **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no plano).
+  Em paralelo, se o dono pedir: FofoIA conversacional (cumprimentos sem IA, resposta surgindo por parágrafo).
+- **Stack `~/.agents`** instalada neste PC (casa) e ligada ao Antigravity; plugin `zizi-skills` desligado no Claude.
+- **Armadilhas do minerador:** a Cebraspe publica alguns arquivos com nome em hash (pareia pela descrição); a 1ª página
+  tem instruções em duas colunas acima do título da seção (descartadas); o recuo de continuação é aprendido da linha após
+  o começo do item, relativo à margem. Cada caso tem prova real em `tools/minerador/__fixtures__/`.
+
 ## 1. Onde o projeto está
 - **Branch de trabalho:** `fatia-7-edital-ciclo` (a `main` tem só até as fatias 5.5–5.7). Commits locais podem não ter
   ido ao GitHub: confira com `git status` / `git log origin/fatia-7-edital-ciclo..` e pergunte ao dono antes de `push`.
