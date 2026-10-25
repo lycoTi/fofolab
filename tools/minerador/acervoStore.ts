@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { normalizeStatement } from '../../src/lib/questionImport';
 import type { AcervoItem, CebraspeEvent, ConcursoMeta, Procedencia } from './types';
@@ -92,6 +92,12 @@ export function readConcurso(dir: string, identificador: string): AcervoItem[] {
   const data = JSON.parse(readFileSync(path, 'utf8')) as { versao?: number; itens?: AcervoItem[] };
   // Arquivo de formato antigo (lista solta, antes do cabeçalho) é refeito pela rodada
   return data.versao === ACERVO_VERSAO && Array.isArray(data.itens) ? data.itens : [];
+}
+
+/** Concurso sem nenhum item válido (todos os cadernos em quarentena) sai do acervo. */
+export function removeConcurso(dir: string, identificador: string): void {
+  const path = concursoPath(dir, identificador);
+  if (existsSync(path)) rmSync(path);
 }
 
 export function writeConcurso(dir: string, concurso: ConcursoMeta, itens: AcervoItem[]): void {

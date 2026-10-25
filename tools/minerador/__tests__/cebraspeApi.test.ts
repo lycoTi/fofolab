@@ -34,6 +34,8 @@ describe('API da Cebraspe: lista e detalhe validados', () => {
   it('formato inesperado para com o nome do campo que faltou', () => {
     expect(campoDoErro(() => parseEventList({}))).toBe('eventos');
     expect(campoDoErro(() => parseEventList([{ faseEvento: 'x', ordem: 1, eventos: [{ eventoAno: 2023 }] }]))).toBe('eventoURL');
+    // Identificador que viraria caminho fora do acervo ("../") também é formato inesperado
+    expect(campoDoErro(() => parseEventDetail({ eventoURL: '../x', eventoAno: 2023, eventoTipo: 'concursos', arquivosGabarito: [], arquivosEdital: [], eventoCargos: [] }))).toBe('eventoURL');
     expect(campoDoErro(() => parseEventDetail({ eventoURL: 'X_23', eventoAno: 2023, eventoTipo: 'concursos' }))).toBe('arquivosGabarito');
   });
 

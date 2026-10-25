@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it, vi } from 'vitest';
@@ -26,10 +26,10 @@ describe('Cliente educado: pausa, identificação e cache', () => {
 
   it('baixa uma vez e depois usa o cache, sem pedir de novo', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'minerador-'));
-    const { client, fetchImpl } = setup(() => new Response(new Uint8Array([1, 2, 3])));
+    const { client, fetchImpl } = setup(() => new Response(new TextEncoder().encode('%PDF-1.4 ok')));
     const path = join(dir, 'SERPRO_23', 'prova.pdf');
     expect(await client.download('https://x/prova.pdf', path)).toEqual({ path, fromCache: false });
-    expect([...readFileSync(path)]).toEqual([1, 2, 3]);
+    expect(readFileSync(path, 'utf8')).toBe('%PDF-1.4 ok');
     expect(await client.download('https://x/prova.pdf', path)).toEqual({ path, fromCache: true });
     expect(fetchImpl).toHaveBeenCalledOnce();
   });
@@ -43,6 +43,18 @@ describe('Cliente educado: pausa, identificação e cache', () => {
     await expect(client.download('https://x/503.pdf', join(dir, 'a.pdf'))).rejects.toMatchObject({ name: 'FalhaDeRede', status: 503 });
     expect(existsSync(join(dir, 'a.pdf'))).toBe(false);
     await expect(client.getJson('https://x/caiu')).rejects.toMatchObject({ name: 'FalhaDeRede', status: null });
+  });
+
+  it('arquivo .pdf que não é PDF não entra no cache; cache corrompido é baixado de novo', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'minerador-'));
+    const html = setup(() => new Response('<html>página de erro</html>'));
+    await expect(html.client.download('https://x/p.pdf', join(dir, 'p.pdf'))).rejects.toMatchObject({ name: 'FalhaDeRede' });
+    expect(existsSync(join(dir, 'p.pdf'))).toBe(false);
+
+    writeFileSync(join(dir, 'q.PDF'), '<html>salvo errado</html>');
+    const ok = setup(() => new Response(new TextEncoder().encode('%PDF-1.4 conteúdo')));
+    expect(await ok.client.download('https://x/q.PDF', join(dir, 'q.PDF'))).toMatchObject({ fromCache: false });
+    expect(readFileSync(join(dir, 'q.PDF'), 'utf8').startsWith('%PDF-')).toBe(true);
   });
 
   it('corpo que não é JSON vira FalhaDeRede', async () => {

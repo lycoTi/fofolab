@@ -46,9 +46,13 @@ function nullableArray(obj: Json, campo: string): unknown[] {
   return value;
 }
 
+/** O identificador vira nome de arquivo no acervo e no cache: só letras, números, "_" e "-". */
+export const isSafeIdentifier = (id: string) => /^[A-Za-z0-9_-]+$/.test(id);
+
 function parseEvent(raw: unknown): CebraspeEvent {
   const obj = asObject(raw, 'eventos');
   const identificador = requireString(obj, 'eventoURL');
+  if (!isSafeIdentifier(identificador)) throw new FormatoCebraspeMudou('eventoURL');
   return {
     identificador,
     nome: typeof obj.eventoNomeAbreviado === 'string' ? obj.eventoNomeAbreviado.trim() : identificador,
