@@ -57,3 +57,5 @@ A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS
 - `src/features/study-block/` — bloco de estudo (máquina pura `studyBlockMachine.ts` + cartão e relógio do cabeçalho) • `features/cycle/` — aba Ciclo • `features/heatmap/` — grade do Mapa de Calor.
 - `src/lib/timeFormat.ts` — HH:mm • `src/components/RichText.tsx` — texto da IA/caderno formatado com segurança.
 - `src/App.tsx` — orquestra estado e painéis; componentes em `src/components/` e `src/features/`.
+- `tools/minerador/` — minerador da Cebraspe (spec 12), **fora do app**: `npm run minerar -- lote | rodar`. Grava o acervo
+  em `acervo/cebraspe/<ID>.json` (no git); PDFs ficam em `.minerador-cache/` (fora do git). Nada em `src/` importa `tools/`.

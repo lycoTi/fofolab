@@ -1,0 +1,2812 @@
+{
+  "versao": 1,
+  "identificador": "SEPLAD_DF_22_AUDITOR",
+  "concurso": "SEPLAD DF 22 AUDITOR",
+  "ano": 2022,
+  "areas": [
+    "CARGO 1: AUDITOR DE CONTROLE INTERNO DO DISTRITO FEDERAL – ESPECIALIDADE: FINANÇAS E CONTROLE",
+    "CARGO 2: AUDITOR DE CONTROLE INTERNO DO DISTRITO FEDERAL – ESPECIALIDADE: PLANEJAMENTO E ORÇAMENTO"
+  ],
+  "itens": [
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:1",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que apresenta, na ordem correta, as etapas sequenciais em que se dividem as fases de execução e de comunicação dos resultados de uma auditoria.",
+      "alternativas": [
+        "A) elaboração e revisão da matriz de achados; elaboração e revisão da matriz de responsabilização, quando aplicável; aplicação dos procedimentos definidos na etapa de planejamento; elaboração, revisão e emissão do relatório preliminar; análise da manifestação dos gestores; elaboração, revisão e emissão do relatório; e publicação",
+        "B) aplicação dos procedimentos definidos na etapa de planejamento; elaboração e revisão da matriz de achados; elaboração e revisão da matriz de responsabilização, quando aplicável; elaboração, revisão e emissão do relatório preliminar; análise da manifestação dos gestores; elaboração, revisão e emissão do relatório; e publicação",
+        "C) aplicação dos procedimentos definidos na etapa de planejamento; elaboração e revisão da matriz de responsabilização, quando aplicável; elaboração e revisão da matriz de achados; elaboração, revisão e emissão do relatório preliminar; análise da manifestação dos gestores; elaboração, revisão e emissão do relatório; e publicação",
+        "D) elaboração e revisão da matriz de achados; aplicação dos procedimentos definidos na etapa de planejamento; elaboração e revisão da matriz de responsabilização, quando aplicável; elaboração, revisão e emissão do relatório preliminar; análise da manifestação dos gestores; elaboração, revisão e emissão do relatório; e publicação"
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 1
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:2",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Tendo em vista que a secretaria pode selecionar as opções de tratamento de risco apropriadas para cada risco identificado, assinale a opção que consiste em reduzir o impacto do risco por meio de medidas preventivas ou preparatórias, como, por exemplo, a criação de planos de contingência.",
+      "alternativas": [
+        "A) transferência",
+        "B) aceitação",
+        "C) tratamento",
+        "D) mitigação"
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 2
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:3",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A materialização dos riscos na atividade de controle interno traz consequências com efeito sistêmico para a administração pública. Uma dessas consequências pode levar a um efeito generalizado de corrupção e a solução para isso pode ser a implementação de medidas rigorosas de fiscalização e transparência, como uma estrutura de compliance, treinamento de servidores públicos em ética e integridade, e punições severas para violações. As características descritas no texto precedente referem-se a",
+      "alternativas": [
+        "A) falta de capacitação adequada dos servidores públicos.",
+        "B) falha na implementação de políticas públicas.",
+        "C) falta de integridade no setor público.",
+        "D) práticas de gestão de recursos humanos inadequadas."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 3
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:4",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Um dos principais papéis da auditoria em obras públicas na promoção da transparência e prestação de contas é",
+      "alternativas": [
+        "A) prover detalhes sobre a utilização dos recursos públicos.",
+        "B) focar exclusivamente em aspectos financeiros da obra.",
+        "C) permitir acesso restrito às informações do projeto.",
+        "D) facilitar a compreensão técnica do público em geral."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 4
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:5",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com o conceito de auditoria de obras públicas, a atividade que é essencial para garantir a eficácia da auditoria em termos de prevenção de irregularidades e promoção da qualidade é",
+      "alternativas": [
+        "A) o foco exclusivo em redução de custos.",
+        "B) a priorização de aspectos estéticos do projeto.",
+        "C) a avaliação subjetiva do progresso da obra.",
+        "D) a verificação da conformidade com normas técnicas e legais."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 5
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:6",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Conforme descrito no Decreto n.º 40.015/2019, o papel primário do CeTIC-DF é",
+      "alternativas": [
+        "A) atuar como um centro de pesquisa e desenvolvimento em TI.",
+        "B) oferecer serviços exclusivos de segurança da informação.",
+        "C) fornecer infraestrutura de rede e comunicação para órgãos públicos.",
+        "D) servir como um datacenter privado, provendo serviços de nuvem e hospedagem."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 6
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:7",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Considerando-se os desafios da TI no Distrito Federal, é correto afirmar que um dos principais problemas enfrentados no alinhamento do planejamento estratégico de TIC com os instrumentos de planejamento governamental é a",
+      "alternativas": [
+        "A) dificuldade de alinhamento com o planejamento estratégico do DF.",
+        "B) falta de integração com redes privadas de comunicação.",
+        "C) sobrecarga de demanda nos serviços de TI do CeTIC-DF.",
+        "D) ineficiência na implementação de novas tecnologias."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 7
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:8",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base no art. 64 da Portaria n.º 163/2023-CGDF, assinale a opção que apresenta corretamente um dos relatórios de auditoria da folha de pagamento utilizados na prestação de contas anuais do governador.",
+      "alternativas": [
+        "A) relatório sobre o demonstrativo das despesas geradas no ano em curso com indicação da natureza e dos respectivos montantes para cumprir a obrigatoriedade de informação e demonstração de responsabilidade fiscal",
+        "B) relatório sobre o demonstrativo das renúncias de receitas e dos incentivos, remissões, parcelamentos de dívidas, anistias, isenções, subsídios e benefícios de natureza financeira, tributária, creditícia e outros",
+        "C) relatório sobre o cumprimento das políticas, das diretrizes e metas do PPA, LDO e dos orçamentos, com avaliação dos resultados globais da gestão governamental, por programa de governo",
+        "D) relatório do controle sobre o deferimento de vantagens e a forma de calcular qualquer parcela integrante da remuneração, vencimento ou salário dos membros do Poder Executivo do Distrito Federal"
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 8
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:9",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com os artigos 30-A e 30-B da Lei Complementar n.º 769/2008, é beneficiário de pensão vitalícia",
+      "alternativas": [
+        "A) a mãe ou o pai com percepção de pensão alimentícia.",
+        "B) o filho ou o enteado inválido.",
+        "C) o companheiro ou a companheira.",
+        "D) o irmão inválido, que perceba pensão alimentícia."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 9
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:10",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Para os fins dos procedimentos correcionais na administração do Distrito Federal, inclui-se entre os objetivos da tomada de contas especial (TCE) I esclarecer fatos que tenham gerado lesão ao erário. II gerar título executivo extrajudicial, com seu relatório final, para ressarcimento do erário. III definir o valor da lesão ao patrimônio público. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 10
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:11",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Acerca dos procedimentos correcionais na administração do Distrito Federal, assinale a opção correta, a respeito da TCE.",
+      "alternativas": [
+        "A) Toda TCE deve prosseguir até o relatório final, ainda que no curso do procedimento se constate inexistência de dano ao erário.",
+        "B) Na hipótese de a legislação autorizar que não se instaure TCE em determinada situação, deve proceder-se ao cancelamento do débito correspondente ao ato.",
+        "C) Independentemente do valor do possível dano, deve-se instaurar TCE, se houver determinação do Tribunal de Contas do Distrito Federal (TCDF).",
+        "D) É obrigatório instaurar TCE no caso de roubo ou furto de veículo oficial."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 11
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:12",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "As TCEs",
+      "alternativas": [
+        "A) devem ser julgadas regulares apenas quando não tiver havido nulidade formal em seu procedimento.",
+        "B) que tramitem no rito sumaríssimo não precisam, como regra, ser enviadas ao TCDF nem ao controle interno, para certificação.",
+        "C) conduzidas no rito sumário devem ser remetidas ao TCDF, quando encerradas, para julgamento.",
+        "D) sob rito ordinário devem ser enviadas ao controle interno, para certificação, no prazo improrrogável de 30 dias de sua instauração."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 12
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:13",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "As características qualitativas são atributos que tornam a informação útil para os usuários e dão suporte ao cumprimento dos objetivos da informação contábil. De acordo com o disposto na NBC TSP – Estrutura Contábil, a verificabilidade é a qualidade da informação que",
+      "alternativas": [
+        "A) estabelece que a informação deve estar disponível aos usuários antes que ela perca a sua capacidade de ser útil para fins do objetivo da elaboração e divulgação da informação contábil.",
+        "B) ajuda a assegurar aos usuários que a informação contida nos relatórios contábeis representa fielmente os fenômenos econômicos ou de outra natureza que se propõe a apresentar.",
+        "C) permite que os usuários compreendam o seu significado.",
+        "D) possibilita que os usuários identifiquem semelhanças e diferenças entre dois conjuntos de fenômenos."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 13
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:14",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Determinada entidade governamental adquiriu um bem móvel para uso efetuando o seguinte fluxo de registro contábil. • Data 1: empenho da despesa, com geração da nota de empenho. • Data 2: liquidação da despesa após a entrega do bem móvel pelo fornecedor. • Data 3: pagamento da despesa junto ao fornecedor. Tendo-se em vista que, além do registro dos fatos ligados à execução orçamentária, deve-se proceder à evidenciação dos fatos ligados à administração financeira e patrimonial, o registro relativo à incorporação do referido bem móvel ao patrimônio dessa entidade governamental deve ocorrer",
+      "alternativas": [
+        "A) independentemente da execução orçamentária, no momento da entrega do bem móvel pelo fornecedor.",
+        "B) concomitantemente com o empenho da despesa.",
+        "C) após o pagamento da despesa.",
+        "D) no momento da liquidação da despesa."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 14
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:15",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Considerando-se a estrutura do plano de contas aplicado ao setor público e sua relação com as naturezas da informação contábil, é correto afirmar que o registro contábil relativo ao reconhecimento de uma obrigação decorrente da prestação de serviços deve ser registrado em contas de natureza",
+      "alternativas": [
+        "A) financeira, debitando a conta caixa e equivalentes de caixa (Classe 1) e creditando um passivo circulante (Classe 2).",
+        "B) de controle, debitando uma disponibilidade de recursos (Classe 8) e creditando um passivo circulante (Classe 2).",
+        "C) patrimonial, debitando uma variação patrimonial diminutiva (Classe 3) e creditando um passivo circulante (Classe 2).",
+        "D) orçamentária, debitando um crédito disponível (Classe 6) e creditando um passivo circulante (Classe 2)."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 15
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:16",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O resultado patrimonial do período é apurado na demonstração das variações patrimoniais (DVP) pelo confronto entre",
+      "alternativas": [
+        "A) o saldo seguinte e o saldo anterior.",
+        "B) os fluxos de caixa operacional, investimentos e financiamento.",
+        "C) a receita arrecadada e a despesa empenhada.",
+        "D) as variações patrimoniais quantitativas aumentativas e diminutivas."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 16
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:17",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Constitui operação equiparada à operação de crédito, nos termos da Lei de Responsabilidade Fiscal e normatização correlata",
+      "alternativas": [
+        "A) a compra financiada de um bem para uso público.",
+        "B) o financiamento privado de uma obra pública.",
+        "C) um contrato de mútuo.",
+        "D) um empréstimo bancário."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 17
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:18",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Constitui a dívida pública contratual de um estado da federação ou município",
+      "alternativas": [
+        "A) um instrumento de dívida mobiliária.",
+        "B) uma transação equiparada a operação de crédito, pela LRF, com prazo inferior a 12 meses.",
+        "C) uma antecipação de receita orçamentária.",
+        "D) os serviços de dívida dos RPPS custeados com recursos dos próprios RPPS."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 18
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:19",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação (FUNDEB) de cada estado da Federação e do Distrito Federal é constituído por",
+      "alternativas": [
+        "A) 15% do ITBI.",
+        "B) 12% do FPE.",
+        "C) 25% do ICMS.",
+        "D) 20% do IPVA."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 19
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:20",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A respeito da estrutura administrativa do governo do Distrito Federal, julgue os itens que se seguem. I O Distrito Federal não possui municípios, mas se divide em Administrações Regionais. II A Controladoria-Geral do Distrito Federal detém status equivalente ao de Secretaria de Estado. III Mediante fundamentação adequada, o governador do DF pode avocar e redistribuir a outro órgão ou entidade da administração pública matéria de competência das secretarias de governo. IV O Instituto de Previdência dos Servidores do Distrito Federal (IPREV/DF) é diretamente subordinado ao gabinete do governador do DF. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item IV está certo.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Apenas os itens II e IV estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 20
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:21",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que apresenta uma das atribuições específicas do servidor membro da carreira de auditoria de controle interno do Distrito Federal que desempenhe funções da especialidade finanças e controle.",
+      "alternativas": [
+        "A) fornecer orientações técnicas relacionadas a sua área de atuação",
+        "B) promover a articulação entre planejamento e orçamento governamentais",
+        "C) controlar a movimentação financeira dos fundos existentes",
+        "D) elaborar propostas, programação e reprogramação orçamentárias"
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 21
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:22",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que apresenta a teoria de governança que destaca a importância de alinhar os interesses de gestores e acionistas na busca pela realização dos objetivos propostos.",
+      "alternativas": [
+        "A) teoria da custódia",
+        "B) teoria da representatividade",
+        "C) teoria da agência",
+        "D) teoria dos stakeholders"
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 22
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:23",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Em relação ao Fundo Constitucional do Distrito Federal (FCDF), assinale a opção correta.",
+      "alternativas": [
+        "A) Recursos alocados no FCDF para a segurança pública do DF e não utilizados nessa finalidade devem ser devolvidos à União.",
+        "B) Em seu processo de autonomização, que levou à criação do FCDF, o DF, até a Constituição de 1988, era governado por um prefeito nomeado pelo presidente da República.",
+        "C) O FCDF destina-se estritamente a fornecer recursos para organizar e manter a polícia civil, a polícia militar e o corpo de bombeiros militar do DF.",
+        "D) Os recursos do FCDF destinados à segurança pública são federais e são fiscalizados pelo Tribunal de Contas da União."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 23
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:24",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base na Lei n.º 13.019/2014, que estabelece o regime jurídico das parcerias entre a administração pública e as Organizações da Sociedade Civil Sem Fins Lucrativos (OSCs), em regime de mútua cooperação para consecução de finalidades de interesse público e recíproco, mediante execução de projetos e atividades estabelecidos em plano de trabalho, assinale a opção correta.",
+      "alternativas": [
+        "A) Os termos de fomento se caracterizam pela transferência de recursos em que a OSC propõe a parceria.",
+        "B) A administração pública poderá dispensar a realização do chamamento público de parceria no caso de urgência decorrente de paralisação de atividades de relevante interesse público, pelo prazo de até 150 (cento e cinquenta) dias.",
+        "C) A contratação entre a administração pública e as OSCs somente pode ocorrer por meio de edital de chamamento público ou diretamente, por dispensa ou inexigibilidade de licitação.",
+        "D) Os instrumentos jurídicos das parcerias entre a administração pública e as OSCs resumem-se aos termos de fomento e de colaboração."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 24
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:25",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se relaciona ao sistema de registro de preços na administração pública, assinale a opção correta.",
+      "alternativas": [
+        "A) A existência de projeto padronizado, sem complexidade técnica e operacional, constitui um dos requisitos para a contratação pela administração pública de execução de obras e serviços de engenharia pelo sistema de registro de preços.",
+        "B) O prazo de vigência da ata de registro de preços é de 18 (dezoito) meses e pode ser prorrogado, por igual período, desde que comprovado o preço vantajoso.",
+        "C) O edital de licitação para registro de preços deve dispor sobre as especificidades da licitação e de seu objeto, inclusive a quantidade mínima de cada item que poderá ser adquirido.",
+        "D) O edital de licitação para registro de preços pode estabelecer a possibilidade de prever preços diferentes quando o objeto for realizado ou entregue em locais diferentes, mas não em razão da forma e do local de acondicionamento."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 25
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:26",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A respeito da fiscalização de contratos administrativos no âmbito do Distrito Federal, de acordo com o Decreto distrital n.º 32.598/2010 e suas alterações, assinale a opção correta.",
+      "alternativas": [
+        "A) É vedada a indicação de um mesmo gestor ou fiscal para mais de um contrato.",
+        "B) A indicação do gestor, do fiscal ou da comissão deve recair apenas sobre os agentes públicos de elevada índole moral, independentemente de suas qualificações técnicas.",
+        "C) A designação do gestor, do fiscal ou da comissão produzirá efeitos apenas com a publicação do extrato do contrato administrativo no Diário Oficial do Distrito Federal.",
+        "D) A supervisão técnica de contratos administrativos de obras é de competência do órgão contratante."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 26
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:27",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se relaciona à gestão de riscos corporativos para integridade pública, julgue os itens a seguir de acordo com o tratamento dado no módulo de gestão de riscos da ferramenta tecnológica SAEWEB — Sistema de Gestão de Auditoria do Distrito Federal —, de uso dos órgãos e entidades do governo do Distrito Federal. I A etapa 1, do módulo 4 da ferramenta, permite registrar informações da estrutura do sistema de gestão de riscos e controles internos (GRCI), em especial, a forma de registro e as evidências da atuação da instância de governança (IG). II Na etapa 4, do módulo 4 da ferramenta, os eventos de risco são avaliados quanto a probabilidade e impacto. Além disso, são realizadas as identificações e registros de controles existentes e novos, os quais farão parte da etapa seguinte: tratamento dos riscos (plano de tratamento de ações de controle do órgão). III Na gestão de riscos, os controles existentes e os controles do plano de ação, o parecer e a avaliação registrados pelos proprietários e responsáveis pela supervisão (riscos, controles existentes e controles do plano de ação) são facilitadores para o sucesso de um sistema de GRCI. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas os itens I e II estão certos.",
+        "B) Apenas os itens I e III estão certos.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 27
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:28",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A gestão de riscos encartada na ferramenta tecnológica SAEWEB permite o registro e acompanhamento de projetos e sistemas de gerenciamento de riscos corporativos. A respeito da gestão de riscos integrante do sistema de controle interno das diversas unidades do Distrito Federal, assinale a opção correta.",
+      "alternativas": [
+        "A) A etapa 8 disponibiliza uma opção para o usuário verificar de forma detalhada o status da execução ou inexecução dos projetos, segundo a tipologia: implantados, parcialmente implantados, os pendentes de implantação e, por fim, os não implantados, independentemente do motivo.",
+        "B) A etapa 8 disponibiliza uma opção para o usuário verificar a situação que se encontra a gestão de risco e, de forma minudente, levantar os controles realizados (em andamento ou não realizados) bem como a lista de novas propostas pendentes de inclusão de novos riscos ou as excluídas pelo gestor, independentemente do motivo.",
+        "C) A ferramenta tecnológica SAEWEB permite troca de mensagens entre os usuários do sistema, contudo, somente em runtime (durante o tempo de execução), ou seja, não permite agendamento para o envio em horários específicos e(ou) em momento futuro mais adequado aos destinatários.",
+        "D) Na identificação dos eventos de risco do sistema ou projeto, o gestor pode indicar as causas e consequências bem como o macroprocesso/processo ou atividade relacionada ao evento de risco."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 28
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:29",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Em relação à gestão financeira, julgue os itens a seguir. I O empenho é definido como o ato emanado de autoridade competente que cria para o Estado obrigação de pagamento, pendente ou não, de implemento de condição. II Mesmo após o empenho, o Estado não se vê obrigado ao pagamento da despesa, uma vez que o implemento de condição poderá estar incluído ou não. III A liquidação nada mais é do que a entrega de numerário ao credor do Estado, extinguindo o crédito ou a obrigação. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 29
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:30",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base no Decreto n.º 32.598/2010, julgue os itens que se seguem. I Nenhuma despesa poderá ser realizada sem prévia autorização dos ordenadores de despesa, que conterá, entre outras exigências, informações sobre o limite da despesa na programação mensal e trimestral da unidade. II A emissão da nota de empenho poderá ser precedida de licitação, salvo se houver sido autorizada sua dispensa, inexigibilidade ou suprimento de fundos, ainda que de forma tácita, nos termos da legislação em vigor. III Fica o órgão central de administração financeira (SUTES) responsável pela orientação normativa referente à liquidação da despesa, sendo que o controle e a liquidação da despesa serão exercidos pela unidade gestora responsável pela emissão da nota de empenho. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 30
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:31",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com o Decreto n.º 32.767/2011, assinale a opção correta.",
+      "alternativas": [
+        "A) Qualquer movimentação bancária deverá conter a anuência mínima de um dos gestores financeiros de que trata o artigo 10 do referido decreto, sob pena de nulidade do documento.",
+        "B) São gestores financeiros e representantes do Distrito Federal perante as instituições bancárias o subsecretário do Tesouro, o diretor-geral de Gestão Financeira (atual chefe da UGEF) e o gerente de pagamento e controle financeiro (atual diretor da DIPAG).",
+        "C) São gestores financeiros e representantes do Distrito Federal perante as instituições bancárias o subsecretário do Tesouro Nacional e o gerente de Pagamento e Controle Financeiro (atual diretor da DIPAG), somente.",
+        "D) São gestores financeiros e representantes do Distrito Federal perante as instituições bancárias o subsecretário do Tesouro Nacional e o diretor-geral de gestão financeira (atual chefe da UGEF), somente."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 31
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:32",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com relação ao sistema integrado de gestão governamental (SIGGo), julgue os itens a seguir. I O SIGGo tem como objetivo específico permitir a elaboração/programação do orçamento e o acompanhamento da execução financeira e patrimonial do Governo do Distrito Federal, com opção de consulta em tempo real pela modalidade sintética. II O fundamento lógico do SIGGo é o evento, o qual possibilita o trato contábil de forma normalizada e padronizada em todo o território distrital, evitando disfunções, disparidades, erros e enganos de quaisquer naturezas. III A nota de lançamento é o documento utilizado para registro de retenções de obrigações e baixa patrimonial, dentre outros. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 32
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:33",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com a Lei Complementar n.º 840/2011, julgue os itens a seguir. I Os servidores públicos civis do Distrito Federal são chamados de serventuários justamente porque a admissão em cargo ou emprego público implica uma relação profissional obediente a regras estritas de subserviência social. II O cargo público é criado por lei, possui denominação própria e os empossados recebem subsídios ou vencimentos pagos pelos cofres públicos. III O prazo de validade dos concursos públicos no Distrito Federal é de quatro anos, exceto para o caso dos concursos com prazo de noventa dias, pois, neste caso, exige-se prorrogação da validade inicial em até 180 dias. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item II está certo.",
+        "B) Apenas o item III está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 33
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:34",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base na Lei Complementar n.º 840/2011, assinale a opção correta.",
+      "alternativas": [
+        "A) A vaga não preenchida em razão de necessidade especial do aprovado incompatível com as atribuições do cargo não pode ser revertida para provimento dos demais candidatos.",
+        "B) O servidor torna-se estável após cumprir três anos de efetivo exercício e, depois disso, somente perderá o cargo após processo administrativo devidamente autuado.",
+        "C) O futuro servidor público do Distrito Federal pode solicitar remanejamento de sua classificação para o final da lista de nomeação dos aprovados, contudo, para deferimento do pleito, exige-se que o pedido seja efetuado dentro de prazo tipificado.",
+        "D) É exonerado sumariamente o candidato aprovado no concurso público que não tomou a posse dentro do prazo legal."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 34
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:35",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "São considerados anexos da lei de diretrizes orçamentárias (LDO) do Distrito Federal",
+      "alternativas": [
+        "A) os anexos de metas e prioridades, de acréscimo em pessoal e de riscos fiscais.",
+        "B) os anexos de metas fiscais anuais, de acréscimo em pessoal e o relatório de inexecução das emendas parlamentares individuais.",
+        "C) os anexos de metas e prioridades, de acréscimo em pessoal e a relação de projetos em andamento.",
+        "D) os anexos de metas e prioridades, de metas fiscais anuais e a relação de projetos em andamento."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 35
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:36",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com a LDO, assinale a opção correta no que se refere a limitação de empenho e movimentação financeira.",
+      "alternativas": [
+        "A) Excluem-se da limitação de empenho e movimentação financeira as demais despesas facultativas.",
+        "B) Não se excluem da limitação de empenho e movimentação financeira as despesas com pessoal e encargos sociais.",
+        "C) Não se excluem da limitação de empenho e movimentação financeira as dotações destinadas ao atendimento da criança e do adolescente, inclusive do Fundo dos Direitos da Criança e do Adolescente.",
+        "D) Excluem-se da limitação de empenho e movimentação financeira as dotações do Fundo de Apoio à Cultura."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 36
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:37",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Constitui um princípio da Lei de Responsabilidade Fiscal (LRF) a",
+      "alternativas": [
+        "A) adoção de política tributária previsível e estável.",
+        "B) ação planejada.",
+        "C) gestão responsável das finanças públicas.",
+        "D) limitação dos gastos com servidores."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 37
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:38",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A previsão de que a concessão ou ampliação de incentivo ou benefício de natureza tributária da qual decorra renúncia de receita deve estar acompanhada de estimativa do impacto orçamentário-financeiro, no exercício em que deva iniciar sua vigência e nos dois seguintes, é exigência da norma legal denominada",
+      "alternativas": [
+        "A) Lei de Responsabilidade Fiscal (LRF).",
+        "B) Plano Plurianual (PPA).",
+        "C) Lei de Diretrizes Orçamentárias (LDO).",
+        "D) Lei Orçamentária Anual (LOA)."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 38
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:39",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Para fins de controle, os valores brutos gastos com inativos e pensionistas e os valores totais pagos com recursos do regime próprio de previdência social (RPPS) para esse segmento, conforme previsão da Lei de Responsabilidade Fiscal (LRF), podem ser encontrados no",
+      "alternativas": [
+        "A) relatório resumido da execução orçamentária.",
+        "B) anexo de metas fiscais.",
+        "C) relatório de gestão fiscal.",
+        "D) anexo de riscos fiscais."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 39
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:40",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A respeito da lei orçamentária anual (LOA) no âmbito do Distrito Federal (DF), julgue os itens a seguir. I A LOA é ferramenta de planejamento de curto prazo do ente. II No DF, o orçamento da seguridade social não será compreendido pela LOA, que se limitará aos orçamentos fiscal e de investimento. III O projeto de LOA, no DF, é de iniciativa do Poder Legislativo. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 40
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:41",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com o art. 4.º da LDO 2024 do Distrito Federal, a mensagem que encaminhar o projeto de lei orçamentária anual (PLOA) de 2024 à Câmara Legislativa do Distrito Federal deverá demonstrar",
+      "alternativas": [
+        "A) os critérios adotados para a estimativa dos principais itens da receita tributária, mas não da alienação de bens e operações de crédito.",
+        "B) a exposição e justificação da política econômico-financeira do governo.",
+        "C) a compatibilidade das programações constantes do PLOA com o anexo de metas e prioridades desta Lei, desacompanhadas das justificativas relativas às prioridades não contempladas no orçamento.",
+        "D) a comparação entre o montante das receitas oriundas de operações de crédito e o montante estimado para as despesas correntes previstas no PLOA."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 41
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:42",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Em relação aos anexos da lei orçamentária anual (LOA), julgue os itens a seguir. I O anexo II diz respeito ao resumo geral da despesa e tem a finalidade de evidenciar a categoria econômica e o grupo de despesa, separados entre recursos do Tesouro e de outras fontes. II Os anexos IV e VIII são os mais extensos da LOA e têm o propósito de garantir o nível de transparência e detalhamento adequado de maneira que o orçamento público seja capaz de oferecer a visualização das programações orçamentárias completas. III O anexo IX, intitulado margem de expansão das despesas obrigatórias de caráter continuado, deve evidenciar as receitas e despesas dos orçamentos fiscal e da seguridade social, isolada e conjuntamente, por categoria econômica. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item II está certo.",
+        "B) Apenas o item III está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 42
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:43",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se refere ao planejamento no Brasil, julgue os itens a seguir. I Uma mudança que contribuiu para a melhoria do sistema de planejamento foi a absorção, pelas secretarias de administração dos ministérios setoriais, das respectivas atividades de planejamento e orçamento que, assim, ganhavam mais importância na hierarquia da organização pública. II A criação da Secretaria Federal de Controle promoveu um processo de progressivo fortalecimento do aparato de controle das ações do governo federal, mas esse fortalecimento, ao ser exacerbado, inibiu a atuação dos gestores e criou óbices à eficiência da gestão pública. III Um projeto nacional deve ter propósitos amplos, voltados para a construção de uma visão estratégica dos interesses nacionais de longo prazo, que contemple as ações requeridas para a promoção desses interesses e as medidas necessárias para sua defesa no contexto das relações internacionais. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 43
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:44",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Acerca de planejamento e governabilidade, julgue os próximos itens. I O governante pode decidir quanto às variáveis que controla, mas, muitas vezes, não pode assegurar resultados, porque estes dependem de aspectos da realidade que não são controlados pelo governante. II Embora os planos estejam inerentemente relacionados com incertezas e imprevisibilidades, há técnicas de planificação seguras que podem ser aplicadas para garantir que o planejamento seja bem-sucedido. III A teoria do governo consiste em uma teoria de controle determinístico do governante sobre um sistema. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": null,
+      "anulado": true,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 44
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:45",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que apresenta o tipo de ação orçamentária referente a um conjunto de operações contínuas e permanentes que tem como resultado um produto necessário à manutenção da ação de governo.",
+      "alternativas": [
+        "A) operação especial",
+        "B) programa",
+        "C) projeto",
+        "D) atividade"
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 45
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:46",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A Lei distrital n.º 7.212/2022 (LOA/2023) autorizou o Poder Executivo a abrir créditos suplementares, mediante ato próprio, com a finalidade de atender as insuficiências nas dotações orçamentárias, até o limite de",
+      "alternativas": [
+        "A) 35% do valor total de cada unidade orçamentária, no orçamento fiscal, apenas.",
+        "B) 30% do valor total de cada unidade orçamentária, nos orçamentos fiscal e de investimento das empresas estatais.",
+        "C) 20% do valor total de cada unidade orçamentária, nos orçamentos fiscal e da seguridade social.",
+        "D) 25% do valor total de cada unidade orçamentária, nos orçamentos fiscal, da seguridade social e de investimento das empresas estatais."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 46
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:47",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O objetivo principal do módulo de gestão de riscos da ferramenta tecnológica SAEWEB é",
+      "alternativas": [
+        "A) a análise estatística de dados de projetos e sistemas de gerenciamento de riscos corporativos passados.",
+        "B) o monitoramento e controle financeiro de projetos e sistemas de gerenciamento de riscos corporativos.",
+        "C) a comunicação interna entre os membros da equipe de projetos e sistemas de gerenciamento de riscos corporativos.",
+        "D) o registro e acompanhamento de projetos e sistemas de gerenciamento de riscos corporativos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 47
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:48",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No sistema SAEWEB, a etapa denominada análise e avaliação de riscos tem a função de",
+      "alternativas": [
+        "A) avaliar os eventos de risco quanto a probabilidade e impacto.",
+        "B) coletar feedback dos usuários do sistema sobre a interface.",
+        "C) determinar a alocação orçamentária para cada risco.",
+        "D) gerar relatórios financeiros automáticos."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 48
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:49",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Concessão comum é definida como",
+      "alternativas": [
+        "A) delegação da prestação de serviço público, precedida ou não de obra pública, feita pelo poder concedente, mediante licitação, a pessoa jurídica ou a consórcio de empresas, por prazo determinado.",
+        "B) delegação da prestação de serviço público, precedida ou não de obra pública, feita pelo poder concedente, mediante licitação, a pessoa jurídica ou a consórcio de empresas, por prazo indeterminado.",
+        "C) transferência da prestação de serviço público para a iniciativa privada, sem a necessidade de licitação, garantida a exploração por prazo determinado.",
+        "D) transferência do serviço público para a iniciativa privada, sem a necessidade de licitação, garantida a exploração por tempo indeterminado."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 49
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:50",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Nas parcerias público-privadas que envolvam centros administrativos ou restaurantes comunitários, sendo necessário o pagamento de contraprestação pecuniária pelo poder público, considera-se o empreendimento",
+      "alternativas": [
+        "A) neutro.",
+        "B) sustentável.",
+        "C) deficitário.",
+        "D) lucrativo."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 1",
+          "caderno": "953_SEPLAD_DF_CF_001_01",
+          "numero": 50
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:1",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Acerca das avaliações dos programas de governo no âmbito do Distrito Federal, assinale a opção correta.",
+      "alternativas": [
+        "A) Mesmo na ausência de indicadores robustos e com histórico consistente de apuração, a avaliação de efetividade é plenamente possível e confiável.",
+        "B) O critério de eficiência é entendido como uma meta definida pela própria gestão, seja meta do plano plurianual, seja meta de outro instrumento de planejamento, até mesmo meta declarada pela gestão à equipe de auditoria.",
+        "C) Os resultados das avaliações de programas de governo devem ser encaminhados ao Tribunal de Contas do Distrito Federal junto à prestação de contas anual do governador e, portanto, as auditorias são anuais, admitindo-se prorrogação máxima de prazo de três meses.",
+        "D) Nem sempre é possível realizar a análise considerando-se todos os aspectos da eficiência, uma vez que as limitações para realizar uma avaliação integral estão quase sempre relacionadas à insuficiência de informações."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 1
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:2",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O chamado conflito de interesses caracteriza-se pela",
+      "alternativas": [
+        "A) falta de colaboração das áreas da organização com o controle interno ou de informações necessárias para a realização das atividades de controle interno.",
+        "B) incompatibilidade entre os interesses pessoais ou profissionais dos auditores internos e sua obrigação de fornecer uma avaliação objetiva e independente das operações governamentais.",
+        "C) falta de valorização da transparência e da responsabilidade pela cultura organizacional da entidade governamental.",
+        "D) pressão exercida por líderes políticos sobre o controle interno, com a finalidade de evitar a investigação de problemas."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 2
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:3",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No âmbito da auditoria em obras, o documento que contém, entre outros aspectos, as exigências de caráter prescritivo ou de desempenho a serem satisfeitas pelo empreendimento a ser concebido é o",
+      "alternativas": [
+        "A) projeto básico.",
+        "B) estudo de viabilidade.",
+        "C) anteprojeto.",
+        "D) programa de necessidades."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 3
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:4",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O fluxo de trabalho para definir o plano de auditoria de TI compreende quatro etapas, sendo a terceira delas a etapa de executar a avaliação de risco. Essa etapa inclui",
+      "alternativas": [
+        "A) selecionar temas de auditoria para trabalhos distintos.",
+        "B) validar o plano de auditoria com a administração.",
+        "C) desenvolver processos para identificar riscos.",
+        "D) mapear a relação dos processos de negócios e TI."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 4
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:5",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que indica o documento emitido pelo controle interno com a finalidade de opinar pela legalidade ou não de atos concessórios de aposentadorias, reformas e pensões, quando da sua análise.",
+      "alternativas": [
+        "A) nota técnica",
+        "B) proposta de diligência",
+        "C) parecer",
+        "D) diligência"
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 5
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:6",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que diz respeito aos procedimentos correcionais na administração do Distrito Federal (DF), assinale a opção correta.",
+      "alternativas": [
+        "A) As regras e os princípios que regem o direito administrativo disciplinar são, essencialmente, os mesmos que regulam o direito penal.",
+        "B) Devido ao caráter formal do processo administrativo disciplinar, uma vez encerrada a fase instrutória, não é possível acrescentar nova prova ao procedimento.",
+        "C) Como regra, no campo da responsabilidade disciplinar dos agentes públicos, as infrações disciplinares mais graves absorvem as menos graves.",
+        "D) O prazo prescricional da pretensão punitiva disciplinar e de ressarcimento do erário começa sempre da data da prática do ato ou da ocorrência do fato juridicamente relevante."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 6
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:7",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Mário, agente público do Distrito Federal, solicitou propina para si, no exercício da função, a pretexto de praticar ato de sua esfera de competência. Após o devido processo legal, Mário foi condenado na instância disciplinar. Nessa situação hipotética, Mário",
+      "alternativas": [
+        "A) estaria sujeito à cassação de aposentadoria, se houvesse ocupado cargo efetivo e estivesse aposentado ao tempo do julgamento do processo administrativo disciplinar.",
+        "B) estará incompatibilizado para ser investido em novo cargo público no Distrito Federal, pelo prazo de cinco anos.",
+        "C) não estaria mais sujeito a sanção disciplinar, caso ocupasse cargo em comissão quando da prática do ato e dele houvesse pedido exoneração.",
+        "D) estará sujeito a demissão, apenas no caso de reincidir em infração média ou grave."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 7
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:8",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que concerne ao poder disciplinar na administração do DF, assinale a opção correta.",
+      "alternativas": [
+        "A) É juridicamente possível o início de apuração disciplinar na administração do DF com base em denúncia anônima.",
+        "B) Uma vez exercido o juízo de admissibilidade da notícia de infração disciplinar, os caminhos possíveis são, exclusivamente, o arquivamento sumário, a instauração de sindicância ou a instauração de PAD.",
+        "C) Qualquer pessoa pode informar o poder público do DF acerca de infração disciplinar, mas somente poderá fazê-lo por meio dos canais eletrônicos apropriados.",
+        "D) A sindicância é obrigatória, como etapa inicial do processo administrativo disciplinar (PAD)."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 8
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:9",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Entre as etapas da receita orçamentária, o lançamento",
+      "alternativas": [
+        "A) promove a transferência dos valores arrecadados à conta específica do Tesouro, responsável pela administração e pelo controle da arrecadação e programação financeira, observando-se o princípio da unidade de tesouraria ou de caixa.",
+        "B) compreende a previsão de arrecadação da receita orçamentária constante da lei orçamentária anual (LOA) resultante de metodologias de projeção usualmente adotadas.",
+        "C) corresponde à entrega dos recursos devidos ao Tesouro pelos contribuintes ou devedores, por meio de agentes arrecadadores ou instituições financeiras autorizadas pelo ente.",
+        "D) é a etapa em que se verificam a procedência do crédito fiscal e a pessoa que lhe é devedora e se inscreve o débito desta."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 9
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:10",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Os restos a pagar com prescrição interrompida, quando ainda vigente o direito do credor,",
+      "alternativas": [
+        "A) podem ser pagos com a mesma dotação já reservada para os restos a pagar processados.",
+        "B) devem ficar pendentes, em liquidação, até que a prescrição seja reestabelecida.",
+        "C) poderão ser pagos como despesas de exercícios anteriores.",
+        "D) devem ser reinscritos como restos a pagar não processados."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 10
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:11",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A metodologia utilizada para a estruturação do Plano de Contas Aplicado ao Setor Público (PCASP) segrega as contas contábeis em grandes grupos de acordo com as características dos atos e fatos nelas registrados, sendo as contas contábeis\n```\nclassificadas segundo a natureza das informações que\nevidenciam. Em atendimento às regras de integridade do PCASP,\n```\nos lançamentos de natureza orçamentária apenas debitam e creditam as classes",
+      "alternativas": [
+        "A) 1 e 2.",
+        "B) 3 e 4.",
+        "C) 5 e 6.",
+        "D) 7 e 8."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": true,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 11
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:12",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Para contrair um empréstimo com garantia da União, o ente subnacional interessado deve apresentar um resultado favorável acerca de sua capacidade de pagamento. Nesse sentido, o indicador de endividamento desse ente estará na classificação parcial A quando a despesa corrente for",
+      "alternativas": [
+        "A) menor que 60%.",
+        "B) maior que 60% e menor que 75%.",
+        "C) superior a 100%.",
+        "D) igual a 75%."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 12
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:13",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Considere que no DF os gastos com pessoal estejam distribuídos da seguinte forma. Poder Legislativo, incluso o TCDF: 2,8% Poder Judiciário: 5,7% Poder Executivo: 49,5% MPDFT: 1,5% Com base na situação hipotética precedente e sabendo que a Lei de Responsabilidade Fiscal (LRF), para os fins do disposto no caput do art. 169 da Constituição Federal de 1988, definiu os limites de gastos com pessoal, como percentual da receita corrente líquida, para os três Poderes da União, dos estados, do Distrito Federal e dos municípios, assinale a opção correta.",
+      "alternativas": [
+        "A) O DF deve reduzir os gastos do Poder Executivo.",
+        "B) O DF obedeceu aos limites impostos pela LRF.",
+        "C) O DF deve aumentar os gastos do MPDFT.",
+        "D) Os gastos com pessoal no DF estão 0,5% abaixo do teto."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 13
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:14",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se relaciona à dívida pública, julgue os itens que se seguem. I Segundo especialistas, o endividamento público, mesmo que gere mais serviços e investimentos públicos, produz inequidade geracional. II Operações de crédito de prazo inferior a doze meses com receitas incluídas no orçamento fazem parte da dívida pública fundada. III Operações de crédito por ARO, quando destinadas a investimento público, devem ser liquidadas até o final da legislatura em que foram contratadas. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 14
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:15",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Relativamente à estrutura da administração do Distrito Federal (DF), assinale a opção correta.",
+      "alternativas": [
+        "A) Como ente federativo autônomo, o DF tem competência privativa para legislar sobre a manutenção de sua ordem e segurança internas.",
+        "B) A criação e a extinção de regiões administrativas podem dar-se mediante decreto do governador do DF.",
+        "C) A remuneração dos administradores regionais pode ser de até 90% da fixada para os secretários de governo do DF, no que se conhece como subteto.",
+        "D) A atuação dos órgãos da administração do DF compreende a promoção do desenvolvimento humano e ambientalmente sustentável, a transparência e publicidade de seus atos e a adoção de mecanismos de controle da própria administração."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 15
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:16",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Inclui-se nas competências da Controladoria-Geral do Distrito Federal I supervisionar e tratar os dados do Portal da Transparência. II realizar correições e auditorias administrativas. III executar ações de prevenção e combate à corrupção. IV apurar indícios de irregularidades. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas os itens I, II e IV estão certos.",
+        "B) Apenas os itens I, III e IV estão certos.",
+        "C) Apenas os itens II, III e IV estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 16
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:17",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No âmbito do Sistema de Controle Interno do Poder Executivo Distrital (SICON), orientar e avaliar a execução orçamentária é finalidade do subsistema de",
+      "alternativas": [
+        "A) planejamento.",
+        "B) auditoria.",
+        "C) orçamento.",
+        "D) contabilidade."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 17
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:18",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Um dos mecanismos para o exercício da governança pública\n```\ndefinidos na Política de Governança é a liderança, que pode ser\ndefinida como\n```",
+      "alternativas": [
+        "A) o conjunto de práticas de natureza humana ou comportamental, como integridade, competência, responsabilidade e motivação, exercido nos principais cargos de órgãos ou entidades.",
+        "B) o processo estruturado para mitigar os possíveis riscos com vistas ao alcance dos objetivos institucionais e para garantir a execução ordenada, ética, econômica, eficiente e eficaz das atividades do órgão ou entidade.",
+        "C) a definição de diretrizes, objetivos, planos e ações, além de critérios de priorização e alinhamento entre os órgãos e entidades e as partes interessadas.",
+        "D) o conjunto de práticas aleatórias que visam a obter responsabilidade e motivação para o exercido dos principais cargos de órgãos ou entidades públicas e a sua governança."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": true,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 18
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:19",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se refere ao Fundo Constitucional do Distrito Federal (FCDF), assinale a opção correta.",
+      "alternativas": [
+        "A) Se houver cancelamento de dotação orçamentária do FCDF nas áreas de saúde e educação, será necessário suplementar o montante cancelado com crédito adicional distrital.",
+        "B) Os recursos do FCDF destinam-se à segurança pública, à saúde, à educação e à manutenção do patrimônio tombado do Plano Piloto de Brasília.",
+        "C) Os atos de pessoal custeados pelo FCDF são objeto de registro no Tribunal de Contas da União, por envolverem recursos federais.",
+        "D) Os recursos do FCDF integram apenas o orçamento do DF, com base em estimativas das transferências feitas pela União em cada exercício."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 19
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:20",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A respeito das modalidades contratuais utilizadas pela administração pública, assinale a opção correta.",
+      "alternativas": [
+        "A) O contrato de alienação, em regra, é precedido por licitação na modalidade de pregão e tem por objeto bens públicos móveis ou imóveis de natureza dominical ou mesmo bens inservíveis ou apreendidos.",
+        "B) Estudos técnicos, planejamentos, projetos básicos e projetos executivos constituem exemplos de serviços de natureza comum nos contratos de prestação de serviços.",
+        "C) O contrato de obra pública visa à execução direta de obras cuja titularidade pertence ao Estado.",
+        "D) Contrato de gestão é o acordo firmado entre a administração pública, por intermédio de suas agências executivas, com certos entes privados, tais como as organizações sociais."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 20
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:21",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que corresponde à cláusula geral, utilizada nos contratos administrativos, a fim de se assegurar o equilíbrio econômico-financeiro, que impacta sobre qualquer modificação expressiva no contexto fático que imponha uma onerosidade excessiva a qualquer das partes; seu fato motivador deve ser extraordinário e posterior à celebração do contrato, ainda que não se atrele aos índices de preços.",
+      "alternativas": [
+        "A) revisão",
+        "B) atualização monetária",
+        "C) reajuste",
+        "D) repactuação"
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 21
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:22",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Relativamente à gestão de riscos corporativos para integridade pública, realizada por meio do Sistema de Gestão de Auditoria do Distrito Federal (SAEWEB), julgue os itens a seguir. I A funcionalidade criar projeto permite realizar cadastro de um projeto de governança, risco e compliance (GRC), sendo necessário registrar o gerente do projeto, bem como os proprietários de risco. II O mapa de riscos positivos e negativos é um produto do módulo 4 da ferramenta SAEWEB, intitulado Análise e Avaliação de Riscos, cuja compilação decorre do tratamento dado aos riscos por meio da funcionalidade tratamento dos riscos. III A gestão de riscos, os controles existentes e os controles do plano de ação são elementos e atividades fundamentais para o sucesso de um sistema de gestão de riscos e controles internos (GRCI). Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 22
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:23",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base nas disposições da Lei Complementar distrital n.º 925/2017, julgue os itens a seguir. I Órgãos que se encontrem com superávit financeiro ao final de cada exercício financeiro devem reverter esse saldo ao Tesouro do Distrito Federal em até 30 dias após o encerramento do exercício. II Eventuais superávits financeiros vinculados ao IPREV/DF, os decorrentes de operações de crédito e os decorrentes de recursos de convênios estão excetuados da obrigação de reversão ao Tesouro do Distrito Federal. III A alocação ou realocação no orçamento dos recursos decorrentes do superávit financeiro revertido ao Tesouro do Distrito Federal condiciona-se a prévia autorização legislativa, observados o disposto na legislação orçamentária e a finalidade para a qual a receita foi instituída. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas os itens I e II estão certos.",
+        "B) Apenas os itens I e III estão certos.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 23
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:24",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Considerando o disposto no Decreto n.º 45.057/2023, assinale a opção correta.",
+      "alternativas": [
+        "A) Ficam ressalvados da vedação da emissão de nota de empenho após o prazo previsto no decreto em questão os empenhos de valor até R$ 5 mil, não sendo vedado o fracionamento de despesa que tenha o mesmo objeto.",
+        "B) A vedação da emissão de nota de empenho após o prazo previsto no citado decreto abrange os empenhos relativos a despesas com suprimento de fundos de caráter secreto.",
+        "C) A partir de 30 de novembro de 2023, a emissão de nota de empenho ficou vedada aos órgãos e às entidades integrantes do orçamento fiscal, sem exceção.",
+        "D) Ressalvadas as exceções estabelecidas no citado decreto, desde 27 de outubro de 2023, a emissão de nota de empenho está vedada aos órgãos e às entidades integrantes do orçamento fiscal e da seguridade social."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 24
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:25",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No que se relaciona ao Sistema Integrado de Gestão Governamental (SIGGo), julgue os itens a seguir. I Todos os servidores do Tribunal de Contas do Distrito Federal terão acesso irrestrito ao modo consulta do SIAC e de outros sistemas integrados ao SIGGo e seu extrator de dados. II É permitida a habilitação de senha para acesso ao SIGGo ao servidor comissionado, se atendidas todas as exigências para deferimento do pleito. III A previsão de pagamento no SIGGo registra a previsão de pagamento de todas as despesas das Unidades Gestoras da Administração do Distrito Federal. IV O evento tem seu código composto por seis números (XX.X.XXX), dispostos da seguinte maneira:\n```\nXX – classe representativa do dispêndio;\nX – tipo;\n```\nXXX – código sequencial. Assinale a opção correta.",
+      "alternativas": [
+        "A) Todos os itens estão certos.",
+        "B) Apenas os itens I e II estão certos.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e IV estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": true,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 25
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:26",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Julgue os itens a seguir, de acordo com o Regime Jurídico Único dos Servidores Públicos do Distrito Federal (Lei Complementar distrital n.º 840/2011). I A investidura em cargo público no Distrito Federal (DF) exige a observância e a comprovação de certos requisitos na ocasião da posse, entre os quais estão o gozo dos direitos políticos e a aptidão física e mental. II Ao entrar em exercício, o servidor público ficará sujeito a estágio probatório pelo período de três anos. III Todo servidor aposentado poderá retornar à atividade, mas deve fazê-lo no prazo de quinze dias após a ciência do deferimento do pleito de reversão. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item II está certo.",
+        "B) Apenas o item III está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 26
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:27",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base no Regime Jurídico Único dos Servidores Públicos do Distrito Federal (Lei Complementar distrital n.º 840/2011), assinale a opção correta.",
+      "alternativas": [
+        "A) Os cargos públicos no DF se dividem em cargos de provimento efetivo — que dependem de aprovação em concurso público — e cargos de comissão — que são de livre nomeação e exoneração pela autoridade competente.",
+        "B) O referido estatuto aplica-se às empresas públicas e às sociedades de economia mista do DF se as suas leis de criação tiverem estabelecido aos seus empregados submissão ao regime estatutário.",
+        "C) Diferentemente da Constituição Federal de 1988, o estatuto vigente no DF assegura à autoridade competente discricionariedade para escolher todos os seus comissionados.",
+        "D) Em obediência ao estatuto vigente no DF, os editais de concursos públicos devem reservar até 20% das vagas para serem preenchidas por pessoas com deficiência."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 27
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:28",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "São quadros da Lei de Diretrizes Orçamentárias do Distrito Federal",
+      "alternativas": [
+        "A) a relação de projetos em andamento, o relatório de inexecução das emendas parlamentares individuais e o acréscimo em pessoal.",
+        "B) o relatório de conservação do patrimônio público, o relatório de inexecução das emendas parlamentares individuais e o acréscimo em pessoal.",
+        "C) a relação de projetos em andamento, o relatório de conservação do patrimônio público e o acréscimo em pessoal.",
+        "D) a relação de projetos em andamento, o relatório de conservação do patrimônio público e o relatório de inexecução das emendas parlamentares individuais."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 28
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:29",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A Lei Orçamentária Anual (LOA) de 2024",
+      "alternativas": [
+        "A) não pode incluir projetos ou subtítulos de projetos novos.",
+        "B) pode incluir projetos ou subtítulos de projetos novos, desde que contemplados os recursos necessários para viabilizar a conclusão de uma etapa ou de uma unidade completa de um projeto, excluídas as contrapartidas.",
+        "C) pode incluir projetos ou subtítulos de projetos novos, depois de contemplados, entre outros requisitos, os projetos e respectivos subtítulos em andamento.",
+        "D) pode incluir projetos ou subtítulos de projetos novos, bastando, para tanto, o cumprimento das despesas obrigatórias de caráter constitucional ou legal."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 29
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:30",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com base na LOA de 2024, julgue os itens a seguir. I A LOA de 2024 os créditos adicionais somente podem incluir projetos ou subtítulos de projetos novos, depois de contemplados os projetos e respectivos subtítulos em andamento. II A LOA de 2024 os créditos adicionais somente podem incluir projetos ou subtítulos de projetos novos, depois de contempladas as despesas com a conservação do patrimônio público. III A LOA de 2024 os créditos adicionais somente podem incluir projetos ou subtítulos de projetos novos, depois de contemplados os recursos necessários para viabilizar a conclusão de uma etapa ou de uma unidade completa de um projeto, incluindo as contrapartidas. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas os itens I e II estão certos.",
+        "B) Apenas os itens I e III estão certos.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 30
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:31",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Tendo em vista que o Anexo IV da LDO do Distrito Federal é subdividido em duas seções, assinale a opção correta acerca de cada uma delas.",
+      "alternativas": [
+        "A) A primeira dispõe sobre criação e(ou) provimento de cargos, empregos e funções, bem como admissão ou contratação de pessoal, a qualquer título, exceto reposições; e a segunda dispõe sobre alteração de estrutura de carreiras e aumento de remuneração.",
+        "B) A primeira dispõe sobre criação e(ou) provimento de cargos, e funções, mas não de empregos, bem como admissão ou contratação de pessoal efetivo, somente, exceto reposições; e a segunda dispõe somente sobre aumento de remuneração.",
+        "C) A primeira dispõe sobre criação e(ou) provimento de cargos, e funções, mas não de empregos, bem como admissão ou contratação de pessoal efetivo, somente, exceto reposições; e a segunda dispõe apenas de alteração de estrutura de carreiras.",
+        "D) A primeira dispõe sobre criação e(ou) provimento de cargos, empregos, mas não de funções, bem como admissão ou contratação de pessoal, a qualquer título, exceto reposições; e a segunda dispõe somente sobre aumento de remuneração."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 31
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:32",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Independentemente de empenho e de acordo com o regime de competência, a despesa total com pessoal é apurada somando-se a despesa realizada no mês em referência com as imediatamente anteriores realizadas nos últimos",
+      "alternativas": [
+        "A) 9 meses.",
+        "B) 12 meses.",
+        "C) 10 meses.",
+        "D) 11 meses."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 32
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:33",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Uma operação de crédito por antecipação de receita, além de atender às determinações do art. 32 da Lei de Responsabilidade Fiscal (LRF), deve também",
+      "alternativas": [
+        "A) ser contratada com encargos prefixados ou indexados ao IGPM ou a outro índice similar.",
+        "B) observar a vedação de contratação, caso exista outra operação de mesma natureza não totalmente quitada.",
+        "C) realizar-se apenas após o segundo decêndio do início do exercício.",
+        "D) ser totalmente liquidada até o final do exercício em que foi contratada."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 33
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:34",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O demonstrativo das operações de crédito, que abrange as operações de crédito internas e externas, inclusive por antecipação de receita, de cada ente da respectiva esfera de governo, compõe apenas o",
+      "alternativas": [
+        "A) anexo de metas fiscais (AMF).",
+        "B) anexo de riscos fiscais (ARF).",
+        "C) relatório de gestão fiscal (RGF) do Poder Executivo.",
+        "D) relatório resumido da execução orçamentária (RREO)."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 34
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:35",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "À luz da Lei Orgânica do Distrito Federal, julgue os itens a seguir. I O projeto de LOA para o exercício seguinte deve ser encaminhado pelo Poder Executivo até 4 meses antes do encerramento do exercício financeiro em curso. II Os projetos de lei relativos ao plano plurianual, às diretrizes orçamentárias, ao orçamento anual e aos créditos adicionais serão encaminhados à Câmara Legislativa, que os apreciará na forma estabelecida em seu regimento interno. III O projeto de LOA deve ser devolvido pelo Legislativo para sanção até o encerramento do segundo período da sessão legislativa, o que ocorre no dia 15 de dezembro. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 35
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:36",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "De acordo com o art. 5.º do projeto de LOA do Distrito Federal (DF) para 2024, o Poder Executivo está autorizado a abrir créditos suplementares, mediante ato próprio, com a finalidade de atender as insuficiências nas dotações orçamentárias",
+      "alternativas": [
+        "A) até o limite de 25% do valor total de cada unidade orçamentária, nos orçamentos fiscal, da seguridade social e de investimento das empresas estatais, mediante a utilização de recursos provenientes da anulação parcial ou total de dotações orçamentárias autorizadas pela LOA, e de excesso de arrecadação.",
+        "B) até o limite de 15% do valor total de cada unidade orçamentária, nos orçamentos fiscal, da seguridade social e de investimento das empresas estatais, mediante a utilização somente de recursos provenientes da anulação parcial ou total de dotações orçamentárias autorizadas pela LOA.",
+        "C) até o limite de 10% do valor total de cada unidade orçamentária, nos orçamentos fiscal e da seguridade social, somente, mediante a utilização de recursos provenientes exclusivamente da anulação parcial ou total de dotações orçamentárias autorizadas pela LOA.",
+        "D) até o limite de 15% do valor total de cada unidade orçamentária, nos orçamentos fiscal, da seguridade social e de investimento das empresas estatais, mediante a utilização de recursos provenientes exclusivamente de excesso de arrecadação."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 36
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:37",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "No projeto de LOA do DF para 2024, a figura precedente corresponde ao",
+      "alternativas": [
+        "A) Anexo IV – Detalhamento dos Créditos Orçamentários dos orçamentos fiscal e da seguridade social.",
+        "B) Anexo III – Demonstrativo da Despesa, por Poder, Órgão, Unidade Orçamentária, Fonte de Recursos e Grupo de Despesa.",
+        "C) Anexo I – Resumo Geral da Receita.",
+        "D) Anexo II – Resumo Geral da Despesa."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": true,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 37
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:38",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Acerca de resultado primário e nominal e de suas formas de apuração, julgue os itens a seguir. I A apuração de resultado pela metodologia “acima da linha” corresponde à diferença entre as receitas e as despesas do setor público, enquanto que a apuração de resultado pela metodologia “abaixo da linha” corresponde à variação da dívida líquida total, interna ou externa. II O resultado primário deve ser apurado pela metodologia “acima da linha”. III O resultado nominal deve ser apurado pela metodologia “abaixo da linha”. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas os itens I e II estão certos.",
+        "C) Apenas os itens II e III estão certos.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 38
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:39",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A Portaria Conjunta STN/SOF n.º 20/2021 estabeleceu a padronização das fontes ou destinações de recursos, com codificação composta por 4 dígitos e dividida em 2 níveis de classificação. A esse respeito, assinale a opção correta.",
+      "alternativas": [
+        "A) A padronização estabelecida pela referida portaria deve ser observada por todos os estados e pelo DF, excluindo-se dessa obrigação os municípios.",
+        "B) O segundo nível, com somente dois dígitos, corresponderá à classificação padronizada para toda a Federação.",
+        "C) No segundo nível, com três dígitos, só serão utilizados os números de 0 a 499, no caso dos estados, do DF e dos municípios.",
+        "D) De modo a garantir a continuidade das informações e a consistência das análises históricas, a solução encontrada para o DF foi utilizar, a partir do 5.º dígito, o detalhamento livre."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 39
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:40",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Em relação ao planejamento no Brasil, julgue os itens que se seguem. I Uma das mudanças administrativas empreendidas no começo dos anos 1990 que contribuiu para a destruição da estrutura de planejamento federal vigente foi a substituição da figura do secretário-geral dos ministérios pela do secretário-executivo. II A sequência de crises que assolaram os primeiros anos do mandato presidencial de Fernando Henrique Cardoso contribuiu para que o foco das atenções permanecesse dirigido ao curto prazo, com a centralização do comando sobre as decisões de política econômica no Ministério da Fazenda. III No governo de Fernando Henrique Cardoso, o Ministério do Planejamento abandonou a tarefa de eleição de projetos prioritários e a busca de meios para assegurar os recursos necessários para sua implementação, o que fez com que a proposta de PPA se afastasse de um mero orçamento plurianual. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item II está certo.",
+        "B) Apenas o item III está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": true,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 40
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:41",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Em relação a planejamento e gestão, julgue os itens a seguir. I A reação à excessiva rigidez das normas leva à deturpação de conceitos e incentiva a imaginação para interpretar as normas de modo que atenda a interesses particulares. II O clima generalizado de desconfianças e antagonismos sob o qual se processam as relações políticas e institucionais não contribui para o ativismo dos órgãos encarregados de controlar a conformidade dos atos praticados pelos gestores públicos às normas legais e administrativas. III A excessiva rigidez das normas viabilizou a outorga ao órgão de planejamento da atribuição de selecionar um conjunto de projetos prioritários e instituir procedimentos especiais para viabilizar sua execução, reforçando, com isso, o aumento da importância do planejamento. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas os itens I e III estão certos.",
+        "D) Apenas os itens II e III estão certos."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 41
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:42",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Com relação ao planejamento como uma aposta, julgue os itens a seguir. I Os fundamentos das apostas de um governante são tanto mais sólidos quanto maior for o peso das variáveis que controla em relação ao das que não controla, e são mais débeis se as variáveis que controla forem poucas e de pouco peso. II No jogo social, a certeza dos resultados é impossível porque o jogador escolhe seu plano segundo o controle que tem sobre as variáveis que para ele são opções, mas apenas uma parcela das variáveis é relevante para calcular o resultado de sua ação e porque o jogador não pode escolher as circunstâncias em que tem de realizar o plano. III A planificação tradicional formula seus planos em um vazio de contexto situacional que ignora o político como oposto ao técnico. Assinale a opção correta.",
+      "alternativas": [
+        "A) Apenas o item I está certo.",
+        "B) Apenas o item II está certo.",
+        "C) Apenas o item III está certo.",
+        "D) Todos os itens estão certos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 42
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:43",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A respeito do planejamento no governo do Distrito Federal, julgue os itens que se seguem. I O objetivo de programa temático não pode se configurar como uma lista de desejos sem conexão com as realidades de vida das pessoas; deve congregar todos os elementos necessários para enfrentamento de um problema complexo; e os seus componentes devem se conectar entre si de forma que se caracterizem como um plano específico (dentro de sua temática) que contribuirá para a melhoria de vida dos cidadãos do Distrito Federal. II A ação ou projeto priorizado ou selecionado não somente deve conter em sua essência os elementos que o justifiquem, mas também deve ser objeto de comparações com outras ações ou projetos que ficaram impossibilitados de ser executados, dadas as escolhas ou seleções feitas pelos gestores públicos. III O levantamento pormenorizado dos recursos disponíveis (estrutura administrativa atual, quadro de força de trabalho e sua distribuição, estruturas físicas ocupadas e o orçamento vigente, detalhado nas principais receitas e despesas da Unidade) é facultativo, assim como a segregação dos gastos das áreas-fim e área-meio. Assinale a opção correta.",
+      "alternativas": [
+        "A) Nenhum item está certo.",
+        "B) Apenas o item III está certo.",
+        "C) Apenas os itens I e II estão certos.",
+        "D) Apenas os itens I e III estão certos."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 43
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:44",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O relatório de acompanhamento da execução físico-financeira governamental do DF é elaborado pela SEPLAD e publicado",
+      "alternativas": [
+        "A) semestralmente.",
+        "B) anualmente.",
+        "C) mensalmente.",
+        "D) bimestralmente."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 44
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:45",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "O processo de prestação de informações relativas ao acompanhamento da execução físico-financeira governamental do 1.º ao 5.º bimestre do exercício pelo SAG WEB é subsidiado, entre outros documentos,",
+      "alternativas": [
+        "A) pelo quadro de detalhamento da despesa (QDD).",
+        "B) pela lei de diretrizes orçamentárias (LDO).",
+        "C) pelo relatório de gestão fiscal (RGF).",
+        "D) pelo plano plurianual (PPA)."
+      ],
+      "gabarito": "A",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 45
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:46",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A abertura de créditos suplementares e especiais depende da existência de recursos disponíveis para ocorrer a despesa, incluindo-se entre as possíveis fontes de recursos",
+      "alternativas": [
+        "A) transferências correntes.",
+        "B) transferências de capital.",
+        "C) superávit financeiro.",
+        "D) aumento de dotação."
+      ],
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 46
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:47",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que apresenta a forma de alteração orçamentária em que a unidade requisitante solicita modificações em IDUSO ou em modalidade de aplicação, sendo a alteração processada por meio de portaria SEPLAD, com execução direta processada pela SUOP, sem a necessidade de parecer do órgão central de orçamento.",
+      "alternativas": [
+        "A) descentralização de crédito",
+        "B) descontingenciamento",
+        "C) antecipação de cota",
+        "D) alteração de QDD"
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 47
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:48",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "As despesas de exercícios encerrados para as quais o orçamento respectivo consignava crédito próprio, com saldo suficiente para atendê-las, e que não se tenham processado na época própria representam",
+      "alternativas": [
+        "A) anulação de dotação.",
+        "B) despesas de exercícios anteriores.",
+        "C) transposição de despesas.",
+        "D) restos a pagar."
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 48
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:49",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "A funcionalidade de Cadastro de Projeto do SAEWEB beneficia o gerenciamento de riscos corporativos, na medida em que",
+      "alternativas": [
+        "A) prioriza projetos com base em sua rentabilidade.",
+        "B) automatiza integralmente o processo de tomada de decisão.",
+        "C) facilita a alocação de recursos financeiros.",
+        "D) permite o registro de informações essenciais de projetos de gerenciamento de riscos corporativos."
+      ],
+      "gabarito": "D",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 49
+        }
+      ]
+    },
+    {
+      "id": "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:50",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "-- PROVA DE VERIFICAÇÃO DE APRENDIZAGEM --",
+      "enunciado": "Assinale a opção que corresponde ao instrumento por meio do qual são formalizadas as parcerias estabelecidas pela administração pública do GDF com organizações da sociedade civil sem fins lucrativos, em que há interesse público e recíproco por propostas dessas organizações, envolvendo a transferência de recursos financeiros.",
+      "alternativas": [
+        "A) contrato de gestão",
+        "B) termo de fomento",
+        "C) termo de colaboração",
+        "D) parceria público-privada"
+      ],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": null,
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "SEPLAD_DF_22_AUDITOR",
+          "concurso": "SEPLAD DF 22 AUDITOR",
+          "ano": 2022,
+          "prova": "PROVA OBJETIVA - CURSO DE FORMAÇÃO PROFISSIONAL - CARGO 2",
+          "caderno": "953_SEPLAD_DF_CF_002_01",
+          "numero": 50
+        }
+      ]
+    }
+  ]
+}
