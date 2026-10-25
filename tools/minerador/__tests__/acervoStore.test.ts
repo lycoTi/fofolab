@@ -10,7 +10,7 @@ const event = (identificador: string, nome: string, ano: number): CebraspeEvent 
 
 const acervoItem = (caderno: string, numero: number, enunciado: string): AcervoItem => ({
   id: `X_23:${caderno}:${numero}`, formato: 'CERTO_ERRADO', textoBase: 'Julgue os itens.', enunciado, alternativas: null,
-  gabarito: 'C', anulado: false, materiaOrigem: null, temCodigo: false, dependeDeFigura: false,
+  gabarito: 'C', anulado: false, materiaOrigem: null, temCodigo: false, dependeDeFigura: false, temSimboloIlegivel: false,
   procedencias: [{ banca: 'Cebraspe', identificador: 'X_23', concurso: 'X 23', ano: 2023, prova: 'P', caderno, numero }],
 });
 

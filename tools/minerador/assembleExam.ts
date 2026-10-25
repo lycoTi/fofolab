@@ -13,10 +13,13 @@ const MIN_ALTERNATIVES = 4;
 function looksLikeCode(line: string): boolean {
   const t = line.trim();
   if (t === '') return false;
-  if (/^(def|class|import|from|return|public|private|protected|function|const|let|var|print\(|System\.|console\.)/.test(t)) return true;
+  // Palavra-chave inteira: "definição", "importância", "classe" e "variação" são prosa
+  if (/^(def|class|import|from|return|public|private|protected|function|const|let|var)\b/.test(t)) return true;
+  if (/^(print\(|System\.|console\.)/.test(t)) return true;
   if (/[;{}]$/.test(t)) return true;
   if (/^[\w.[\]]+\s*(=|\+=|-=)\s*[^=]/.test(t)) return true;
-  return t.length <= 6 && !/[a-zA-ZÀ-ú]{2,}/.test(t);
+  // Fechamento curto de código ("“))", "});"); pedaço de fórmula ("–2") não conta
+  return t.length <= 6 && /^[)\]}'"“”;,.]+$/.test(t);
 }
 
 /** Dentro de um bloco já aberto: linha que só faz sentido como parte dele ("child: Text(", "'Olá',", "),"). */
@@ -54,11 +57,21 @@ export function detectCode(text: string): { temCodigo: boolean; texto: string } 
   return { temCodigo, texto: parts.filter(Boolean).join('\n') };
 }
 
-/** "Imagem" sozinha é comum em Direito (direito à imagem): só conta com "a seguir", "acima", "precedente"… */
+/**
+ * "Imagem", "tabela" e "quadro" sozinhos são comuns (direito à imagem, "a tabela clientes" num item de SQL): só contam
+ * com "a seguir", "acima", "precedente"…
+ */
 export function dependsOnFigure(text: string): boolean {
   if (/\b(figura|gr[aá]fico|ilustra[çc][ãa]o)\b/i.test(text)) return true;
-  return /\bimagem\s+(a seguir|acima|abaixo|precedente|anterior|apresentada|mostrada)\b/i.test(text);
+  return /\b(imagem|tabela|quadro)\s+(a seguir|acima|abaixo|precedente|anterior|apresentad[oa]|mostrad[oa])\b/i.test(text);
 }
+
+/**
+ * Símbolo de fórmula que o PDF não traduz (fonte própria da banca): sai como braile, mongol, CJK ou área de uso
+ * privado ("ᡘ䙦ᡶ䙧"). O item fica marcado para o app avisar ou esconder — o texto não dá para ler.
+ */
+const ILLEGIBLE = /[᠀-᢯⠀-⣿぀-ヿ㐀-鿿가-힯-]/;
+export const hasIllegibleSymbols = (text: string) => ILLEGIBLE.test(text);
 
 function formatLabel(item: ExtractedItem): string {
   return item.formato === 'CERTO_ERRADO' ? 'Certo/Errado' : 'múltipla escolha';
@@ -103,6 +116,7 @@ export function assembleExam(
       materiaOrigem: item.materiaOrigem,
       temCodigo: Boolean(base?.temCodigo || enunciado.temCodigo || alternativas?.some((a) => a.temCodigo)),
       dependeDeFigura: dependsOnFigure(fullText),
+      temSimboloIlegivel: hasIllegibleSymbols(fullText),
       procedencias: [{ ...origem, numero: item.numero }],
     });
   }

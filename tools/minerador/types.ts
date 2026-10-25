@@ -82,6 +82,8 @@ export interface AcervoItem {
   materiaOrigem: string | null;
   temCodigo: boolean;
   dependeDeFigura: boolean;
+  /** Fórmula em fonte própria da banca que o PDF não traduz: o texto tem símbolos ilegíveis. */
+  temSimboloIlegivel: boolean;
   /** Item reaplicado em outra prova acumula procedências. */
   procedencias: Procedencia[];
 }

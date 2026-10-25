@@ -79,6 +79,22 @@ describe('Montagem da prova: gabarito, anulados, código e figura', () => {
     });
   });
 
+  it('prosa que começa com "definição", "importância", "classe" não vira código', () => {
+    expect(detectCode('definição da arquitetura em camadas\nimportância da coesão do módulo\nclasse de equivalência').temCodigo).toBe(false);
+    expect(detectCode('def area(r):\n    return 3.14 * r * r').temCodigo).toBe(true);
+  });
+
+  it('tabela ou quadro "a seguir" é figura; "a tabela clientes" não; símbolo de fórmula ilegível é marcado', () => {
+    expect(dependsOnFigure('Com base na tabela a seguir, julgue o item.')).toBe(true);
+    expect(dependsOnFigure('Considere o quadro abaixo.')).toBe(true);
+    expect(dependsOnFigure('A tabela clientes possui chave primária.')).toBe(false);
+    const item = (enunciado: string): ExtractedItem => ({ numero: 1, formato: 'CERTO_ERRADO', textoBase: null, enunciado, alternativas: null, materiaOrigem: null });
+    const outcome = assembleExam([item('A função ᡘ䙦ᡶ䙧 é contínua.')], new Map([[1, 'C' as const]]), origemSerpro);
+    expect(outcome.kind === 'ok' && outcome.itens[0].temSimboloIlegivel).toBe(true);
+    const clean = assembleExam([item('A integridade é uma propriedade.')], new Map([[1, 'C' as const]]), origemSerpro);
+    expect(clean.kind === 'ok' && clean.itens[0].temSimboloIlegivel).toBe(false);
+  });
+
   it('código isolado numa linha não vira bloco; figura é reconhecida', () => {
     expect(detectCode('O valor de x = 2 foi usado\nno cálculo.')).toEqual({ temCodigo: false, texto: 'O valor de x = 2 foi usado no cálculo.' });
     expect(dependsOnFigure('Na figura a seguir, julgue o item.')).toBe(true);

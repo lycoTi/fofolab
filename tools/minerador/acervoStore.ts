@@ -70,6 +70,7 @@ function stable(item: AcervoItem): AcervoItem {
     materiaOrigem: item.materiaOrigem,
     temCodigo: item.temCodigo,
     dependeDeFigura: item.dependeDeFigura,
+    temSimboloIlegivel: item.temSimboloIlegivel,
     procedencias: item.procedencias.map((p) => ({
       banca: p.banca, identificador: p.identificador, concurso: p.concurso, ano: p.ano, prova: p.prova, caderno: p.caderno,
       numero: p.numero,
