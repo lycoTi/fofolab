@@ -35,6 +35,24 @@ describe('Candidatos locais (antes da IA) e ordem da fila', () => {
     expect(first.caminho.join(' › ')).toMatch(/dados|SQL/i);
   });
 
+  it('pista de matéria: item de Português traz os tópicos de Língua Portuguesa, mesmo falando de outro assunto', () => {
+    const v: Vocabulario = {
+      versao: 1, historico: [], assuntos: [
+        ['Língua Portuguesa'], ['Língua Portuguesa', 'Domínio dos mecanismos de coesão textual'], ['Língua Portuguesa', 'Domínio da ortografia oficial'],
+        ['Raciocínio Lógico'], ['Raciocínio Lógico', 'Lógica proposicional'],
+        ['Sociedade Brasileira'], ['Sociedade Brasileira', 'Tecnologia social e desenvolvimento'],
+      ].map((c) => ({ id: c.join('>').toLowerCase(), caminho: c, sinonimos: [], origem: 'edital' as const })),
+    };
+    const pt = item('p', 'No trecho “as tecnologias sociais valorizam saberes”, a substituição do vocábulo “valorizam” por “estimam” manteria a correção gramatical do texto.');
+    const ids = candidatesFor(pt, v, 10).map((c) => c.id);
+    expect(ids).toContain('língua portuguesa>domínio dos mecanismos de coesão textual');
+    expect(ids).toContain('língua portuguesa>domínio da ortografia oficial');
+    // O assunto do texto continua entre os candidatos
+    expect(ids).toContain('sociedade brasileira>tecnologia social e desenvolvimento');
+    const rl = item('r', 'A proposição “se chove, então a rua molha” tem a mesma tabela-verdade de sua contrapositiva.');
+    expect(candidatesFor(rl, v, 10).map((c) => c.id)).toContain('raciocínio lógico>lógica proposicional');
+  });
+
   it('item sem palavra em comum com o vocabulário não tem candidato', () => {
     expect(candidatesFor(item('b', 'Xyzzy plugh frobozz.'), vocab, 5)).toEqual([]);
   });

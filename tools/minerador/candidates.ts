@@ -54,6 +54,39 @@ function index(vocab: Vocabulario) {
 
 const itemText = (item: AcervoItem) => [item.textoBase ?? '', item.enunciado, ...(item.alternativas ?? [])].join(' ');
 
+/**
+ * Pistas de matéria: o item de Português fala do ASSUNTO do texto ("tecnologia social") e quase não tem palavras em
+ * comum com "coesão" ou "morfossintaxe" — sem a pista, os tópicos de Português nem chegavam à IA e ela inventava um
+ * novo (amostra de 25/10: 11 de 17 propostas eram de Português). Com a marca típica da questão, os tópicos de 2º nível
+ * da matéria entram como candidatos.
+ */
+const PISTAS: { materia: RegExp; marca: (text: string) => boolean }[] = [
+  {
+    materia: /^l[ií]ngua portuguesa$/i,
+    marca: (t) =>
+      /\b(trecho|voc[áa]bulo|ora[çc][ãa]o|corre[çc][ãa]o gramatical|crase|concord[âa]ncia (verbal|nominal)|reg[êe]ncia|pontua[çc][ãa]o|acentua[çc][ãa]o|reescrit\w*|coes[ãa]o|pronome|conjun[çc][ãa]o|preposi[çc][ãa]o|v[íi]rgula|sentido original)\b/i.test(t),
+  },
+  {
+    materia: /racioc[íi]nio l[óo]gico/i,
+    marca: (t) =>
+      /\b(proposi[çc][ãa]o|proposi[çc][õo]es|tabela-verdade|contrapositiva|silogismo|tautologia|equival[êe]ncia l[óo]gica|permuta[çc][õo]es|an[áa]lise combinat[óo]ria)\b/i.test(t),
+  },
+  { materia: /^l[ií]ngua inglesa$/i, marca: (t) => (t.match(/\b(the|and|of|to|is|that|which|are)\b/gi) ?? []).length >= 4 },
+];
+const MAX_PISTA = 10;
+
+function cueCandidates(item: AcervoItem, vocab: Vocabulario): string[] {
+  const text = itemText(item);
+  const ids: string[] = [];
+  for (const pista of PISTAS) {
+    if (!pista.marca(text)) continue;
+    const materia = vocab.assuntos.find((a) => a.caminho.length === 1 && pista.materia.test(a.caminho[0]));
+    if (!materia) continue;
+    for (const a of vocab.assuntos) if (a.caminho.length === 2 && a.caminho[0] === materia.caminho[0]) ids.push(a.id);
+  }
+  return ids.slice(0, MAX_PISTA);
+}
+
 export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): { id: string; score: number }[] {
   const { indexed, idf } = index(vocab);
   const words = keywords(itemText(item));
@@ -68,10 +101,13 @@ export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): 
     if (score > 0) for (const w of origin) if (parents.has(w) || leaf.has(w)) score += 0.25 * (idf.get(w) ?? 0);
     return { id: assunto.id, score };
   });
-  return scored
+  const top = scored
     .filter((c) => c.score > 0)
     .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
     .slice(0, k);
+  const present = new Set(top.map((c) => c.id));
+  const extras = cueCandidates(item, vocab).filter((id) => !present.has(id)).map((id) => ({ id, score: 0 }));
+  return [...top, ...extras];
 }
 
 /** Fila da classificação: o que mais casa com o vocabulário (o edital do dono) primeiro. */
