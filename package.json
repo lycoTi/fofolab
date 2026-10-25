@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "minerar": "tsx tools/minerador/cli.ts"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.12.4",
@@ -38,6 +39,7 @@
     "jsdom": "^29.1.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
     "typescript": "^5.8.3",
     "vite": "^7.2.4",
     "vitest": "^5.0.5"

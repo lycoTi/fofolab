@@ -66,3 +66,6 @@ e2e/.screens/
 
 # graphify: o grafo e o relatório vão para o repositório (servem aos dois PCs); o cache cada máquina refaz
 graphify-out/cache/
+
+# Minerador (spec 12): PDFs baixados da banca ficam só neste PC; a Cebraspe é a fonte
+.minerador-cache/
