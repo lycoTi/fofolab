@@ -37,6 +37,21 @@ describe('Itens Certo/Errado com o texto-base (SERPRO 2023, específicos)', () =
     expect(item(73).enunciado.startsWith('Para permitir a integração entre os frameworks React e')).toBe(true);
   });
 
+  it('parágrafo recuado com parênteses na prosa abre texto-base; código recuado continua o item', () => {
+    const at = (text: string, x: number): PdfLine => ({ page: 1, column: 'L', x, y: 0, text, atMargin: x === 28 });
+    const synthetic = segmentTrueFalse([
+      at('10 O trecho a seguir é válido.', 28),
+      at('continuação do item.', 46),
+      at('  runApp(Center(', 60),
+      at('SPA (single-page app), ou aplicativo de página', 56),
+      at('única, julgue o item.', 28),
+      at('11 O SPA recarrega a página.', 28),
+      at('fim.', 46),
+    ]);
+    expect(synthetic[0].enunciado).toContain('runApp(Center(');
+    expect(synthetic[1].textoBase!.startsWith('SPA (single-page app)')).toBe(true);
+  });
+
   it('linha que começa com número fora da sequência não abre item (vira texto-base)', () => {
     const synthetic = segmentTrueFalse([
       line('10 O prazo foi prorrogado no', true),

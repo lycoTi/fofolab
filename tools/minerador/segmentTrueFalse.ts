@@ -10,6 +10,13 @@ import type { ExtractedItem, PdfLine } from './types';
 const SECTION_HEADER = /^-+\s*(.+?)\s*-+$/;
 /** Número de 1 a 3 dígitos colado ou não ao texto: "51 A integridade", "51A integridade". */
 const ITEM_START = /^(\d{1,3})(?=\s|[A-ZÀ-Ý“"(])\s*(.*)$/;
+/**
+ * Linha de código recuada: começa como código (minúscula, símbolo ou `Nome(`) e tem pontuação de código. Parágrafo de
+ * prosa recuado ("SPA (single-page app), ou…") começa com palavra maiúscula seguida de espaço e não entra.
+ */
+const CODE_START = /^([a-z_$)}\]'"“‘]|[A-Z]\w*\()/;
+const CODE_PUNCTUATION = /[(){};=[\]]|^['"“‘]|^\w+:\s?\S/;
+const isIndentedCode = (text: string) => CODE_START.test(text.trim()) && CODE_PUNCTUATION.test(text.trim());
 
 export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
   const continuesItem = continuationChecker(lines);
@@ -32,7 +39,8 @@ export function segmentTrueFalse(lines: PdfLine[]): ExtractedItem[] {
     }
 
     if (!line.atMargin) {
-      if (current && continuesItem(line)) {
+      // Código tem recuo próprio (mais fundo que a continuação): com pontuação de código, ainda é o item
+      if (current && (continuesItem(line) || isIndentedCode(line.text))) {
         current.enunciado += `\n${line.text}`;
         continue;
       }
