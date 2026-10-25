@@ -15,9 +15,12 @@ function numberRow(text: string): number[] | null {
   const tokens = tokensOf(text);
   if (tokens.length < 2 || !tokens.every((t) => /^\d{1,3}$/.test(t))) return null;
   const numbers = tokens.map(Number);
-  // Linha de números de verdade é crescente; a de "0 0 0" (grade vazia) não
-  const ascending = numbers.every((n, i) => i === 0 || n > numbers[i - 1]);
-  return ascending ? numbers : null;
+  // Linha de números de verdade é crescente, com zeros só no fim (preenchimento da grade: "111 … 120 0 0 0");
+  // a linha toda de zeros não é de números
+  const used = numbers.slice(0, numbers.indexOf(0) === -1 ? numbers.length : numbers.indexOf(0));
+  const onlyPaddingAfter = numbers.slice(used.length).every((n) => n === 0);
+  const ascending = used.every((n, i) => i === 0 || n > used[i - 1]);
+  return used.length > 0 && ascending && onlyPaddingAfter ? numbers : null;
 }
 
 function marksRow(text: string, size: number): string[] | null {
