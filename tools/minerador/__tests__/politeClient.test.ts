@@ -8,7 +8,7 @@ import { createPoliteClient, FalhaDeRede } from '../politeClient';
 const UA = 'FofoLab-minerador (teste)';
 
 function setup(responder: (url: string) => Response | Promise<Response>) {
-  const fetchImpl = vi.fn(async (url: string | URL | Request) => responder(String(url)));
+  const fetchImpl = vi.fn(async (url: string | URL | Request, _init?: RequestInit) => responder(String(url)));
   const sleep = vi.fn(async () => {});
   const client = createPoliteClient({ delayMs: 1000, userAgent: UA, fetchImpl: fetchImpl as unknown as typeof fetch, sleep });
   return { client, fetchImpl, sleep };
