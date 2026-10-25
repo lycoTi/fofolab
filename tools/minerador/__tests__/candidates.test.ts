@@ -49,6 +49,18 @@ describe('Candidatos locais (antes da IA) e ordem da fila', () => {
     expect(ids).toContain('língua portuguesa>domínio da ortografia oficial');
     // O assunto do texto continua entre os candidatos
     expect(ids).toContain('sociedade brasileira>tecnologia social e desenvolvimento');
+    // Itens de Português da ITAIPU 2023 que ficaram sem candidato (e sem resposta) na amostra de 25/10
+    for (const enunciado of [
+      'No que concerne a tipologia e gênero textual, o texto CB2A1 classifica-se como',
+      'No quinto período do primeiro parágrafo do texto CB2A1, a palavra “ainda” expressa uma ideia de',
+      'A respeito das ideias veiculadas no texto CB3A1, julgue os itens a seguir.',
+      'No primeiro período do último parágrafo, o termo “a eólica” exerce a mesma função sintática que',
+    ]) {
+      expect(candidatesFor(item('t', enunciado), v, 10).map((c) => c.id)).toContain('língua portuguesa>domínio dos mecanismos de coesão textual');
+    }
+    // "Período" de Contabilidade não é pista de Português
+    const contabil = item('c', 'No período contábil, a entidade reconheceu a despesa de depreciação do ativo.');
+    expect(candidatesFor(contabil, v, 10).map((c) => c.id)).not.toContain('língua portuguesa>domínio da ortografia oficial');
     const rl = item('r', 'A proposição “se chove, então a rua molha” tem a mesma tabela-verdade de sua contrapositiva.');
     expect(candidatesFor(rl, v, 10).map((c) => c.id)).toContain('raciocínio lógico>lógica proposicional');
   });
@@ -61,5 +73,18 @@ describe('Candidatos locais (antes da IA) e ordem da fila', () => {
     const sql = item('a', 'O comando SQL com junção entre tabelas relacionais retorna linhas da chave estrangeira.');
     const militar = item('b', 'O regime disciplinar dos militares estaduais prevê punição por transgressão.');
     expect(queueOrder([militar, sql], vocab).map((i) => i.id)).toEqual(['a', 'b']);
+  });
+
+  it('fila com prioridade: itens das matérias do edital do dono vêm antes, mesmo casando menos', () => {
+    const v: Vocabulario = {
+      versao: 1, historico: [], assuntos: [
+        ['Banco de Dados'], ['Banco de Dados', 'Linguagem SQL junção tabelas relacionais chave estrangeira'],
+        ['Contabilidade'], ['Contabilidade', 'Depreciação do ativo imobilizado'],
+      ].map((c) => ({ id: c.join('>').toLowerCase(), caminho: c, sinonimos: [], origem: 'edital' as const })),
+    };
+    const sql = item('a', 'O comando SQL com junção entre tabelas relacionais retorna linhas da chave estrangeira.');
+    const contabil = item('b', 'A depreciação reduz o valor do ativo.');
+    expect(queueOrder([contabil, sql], v).map((i) => i.id)).toEqual(['a', 'b']);
+    expect(queueOrder([sql, contabil], v, new Set(['contabilidade'])).map((i) => i.id)).toEqual(['b', 'a']);
   });
 });

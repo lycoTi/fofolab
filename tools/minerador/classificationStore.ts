@@ -38,10 +38,42 @@ function cleanOpinion(assuntos: AssuntoDoItem[]): AssuntoDoItem[] {
   return sorted.filter((a, i) => i === 0 || a.confianca >= SECUNDARIO_MINIMO);
 }
 
+/** Palavras que não identificam um tópico sozinhas: "Conceitos básicos" existe em quase toda matéria. */
+const GENERICAS = new Set([
+  'conceitos', 'basicos', 'basicas', 'nocoes', 'gerais', 'geral', 'introducao', 'fundamentos', 'principios', 'aspectos',
+  'definicao', 'definicoes', 'caracteristicas', 'tipos', 'classificacao', 'disposicoes', 'outros', 'outras', 'temas',
+]);
+
+const leafOf = (id: string) => id.slice(id.lastIndexOf('>') + 1);
+const depth = (id: string) => id.split('>').length;
+/** O último nível identifica o tópico quando tem duas palavras de 4+ letras que não sejam genéricas. */
+const distinctiveLeaf = (id: string) => leafOf(id).split('-').filter((w) => w.length >= 4 && !GENERICAS.has(w)).length >= 2;
+
+/**
+ * Mesmo tópico: o mesmo id; um dentro do outro (pai e filho do mesmo ramo); ou o mesmo nome no último nível em matérias
+ * diferentes — o vocabulário junta editais, e "Despesas de exercícios anteriores" vem em Finanças Públicas num e em
+ * Administração Orçamentária noutro (amostra de 25/10: discordâncias que eram o mesmo tópico).
+ */
+function sameTopic(a: string, b: string): boolean {
+  if (a === b || a.startsWith(`${b}>`) || b.startsWith(`${a}>`)) return true;
+  return leafOf(a) === leafOf(b) && distinctiveLeaf(a);
+}
+
+function groupTopics(ids: string[]): string[][] {
+  const groups: string[][] = [];
+  for (const id of ids) {
+    const matching = groups.filter((g) => g.some((m) => sameTopic(m, id)));
+    for (const g of matching) groups.splice(groups.indexOf(g), 1);
+    groups.push([...matching.flat(), id]);
+  }
+  return groups;
+}
+
 /**
  * Uma opinião: o consenso é ela; incerto se o principal tem confiança < 0,7 ou se nada foi escolhido. Duas ou mais: os
- * assuntos escolhidos pela maioria (com a confiança média); "concordam" quando o principal de todas é o mesmo; senão
- * "discordam", incerto, e o consenso leva o principal de cada uma.
+ * assuntos de todas viram grupos quando são o mesmo tópico (`sameTopic`), e o grupo fala pelo mais específico; entram
+ * os grupos escolhidos pela maioria (com a confiança média); "concordam" quando o principal de alguma opinião está na
+ * escolha de todas; senão "discordam", incerto, e o consenso leva o principal de cada uma.
  */
 export function consensus(opinioes: Record<string, Opiniao>): Pick<ClassificacaoItem, 'consenso' | 'incerto' | 'concordancia'> {
   const lists = Object.keys(opinioes).sort().map((k) => cleanOpinion(opinioes[k].assuntos));
@@ -49,16 +81,25 @@ export function consensus(opinioes: Record<string, Opiniao>): Pick<Classificacao
     const only = lists[0] ?? [];
     return { consenso: only, incerto: only.length === 0 || only[0].confianca < CONFIANCA_CERTA, concordancia: 'uma-opiniao' };
   }
-  // Concordam quando o principal de cada opinião está na escolha de todas as outras: os mesmos dois assuntos em ordem
-  // trocada ("Leitura dos balanços" × "Relações entre execuções", SECONT 2022) não é discordância
-  const sets = lists.map((l) => new Set(l.map((a) => a.id)));
-  const agree = lists.every((l) => l.length > 0 && sets.every((s) => s.has(l[0].id)));
-  const votes = new Map<string, number[]>();
-  for (const list of lists) for (const a of list) votes.set(a.id, [...(votes.get(a.id) ?? []), a.confianca]);
+  const groups = groupTopics([...new Set(lists.flatMap((l) => l.map((a) => a.id)))].sort());
+  const scored = groups.map((members) => {
+    // A melhor confiança de cada opinião dentro do grupo (uma opinião pode ter escolhido o pai e o filho)
+    const confs = lists.flatMap((l) => {
+      const inGroup = l.filter((a) => members.includes(a.id));
+      return inGroup.length > 0 ? [Math.max(...inGroup.map((a) => a.confianca))] : [];
+    });
+    const id = [...members].sort((a, b) => depth(b) - depth(a) || a.localeCompare(b))[0];
+    return { members, id, votes: confs.length, confianca: round(confs.reduce((s, c) => s + c, 0) / lists.length) };
+  });
+  const votesOf = (id: string) => scored.find((g) => g.members.includes(id))?.votes ?? 0;
+  // Concordam quando o principal de alguma opinião está na escolha de todas: ordem trocada ("Leitura dos balanços" ×
+  // "Relações entre execuções", SECONT 2022) ou um como secundário do outro (amostra de 25/10: políticas sociais ×
+  // direitos humanos, com direitos humanos nos dois). Secundário fraco puxa a média para baixo e deixa o selinho
+  const agree = lists.every((l) => l.length > 0) && lists.some((l) => votesOf(l[0].id) === lists.length);
   const majority = Math.floor(lists.length / 2) + 1;
-  const chosen = [...votes.entries()]
-    .filter(([, confs]) => confs.length >= majority)
-    .map(([id, confs]) => ({ id, confianca: round(confs.reduce((s, c) => s + c, 0) / lists.length) }))
+  const chosen = scored
+    .filter((g) => g.votes >= majority)
+    .map(({ id, confianca }) => ({ id, confianca }))
     .sort(byConfidence);
   if (agree) return { consenso: chosen, incerto: (chosen[0]?.confianca ?? 0) < CONFIANCA_CERTA, concordancia: 'concordam' };
   const fallback = lists.flatMap((l) => (l[0] ? [{ id: l[0].id, confianca: round(l[0].confianca / lists.length) }] : []));

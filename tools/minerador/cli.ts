@@ -91,13 +91,20 @@ function formatClassifyReport(r: ClassifyReport, provider: AiProvider): string {
   return lines.join('\n');
 }
 
+/** Matérias do edital do dono (ids de 1º nível): os itens delas vão para o começo da fila. */
+async function ownerSubjects(): Promise<Set<string>> {
+  const seeded = seedFromEdital(await readEditalLines(EDITAL_PADRAO));
+  return new Set(seeded.assuntos.filter((a) => a.caminho.length === 1).map((a) => a.id));
+}
+
 async function classify(args: string[], alvo: Alvo): Promise<number> {
   const provider = providerFrom(args, alvo);
   const limite = Number(flag(args, 'limite') ?? 1000);
   // O Antigravity aguenta lotes simultâneos (cada um leva ~1,5 min); o Groq grátis tem limite por minuto, então um por vez
   const paralelo = Number(flag(args, 'paralelo') ?? (provider.nome === 'agy' ? 3 : 1));
+  const prioridade = await ownerSubjects();
   const inicio = Date.now();
-  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo });
+  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo, prioridade });
   console.log(formatClassifyReport(report, provider));
   console.log(`Tempo: ${Math.round((Date.now() - inicio) / 1000)} s com ${paralelo} lote(s) em paralelo.`);
   return 0;

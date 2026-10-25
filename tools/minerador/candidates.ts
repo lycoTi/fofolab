@@ -60,11 +60,15 @@ const itemText = (item: AcervoItem) => [item.textoBase ?? '', item.enunciado, ..
  * novo (amostra de 25/10: 11 de 17 propostas eram de Português). Com a marca típica da questão, os tópicos de 2º nível
  * da matéria entram como candidatos.
  */
+/** Código do texto de apoio da Cebraspe ("texto CB2A1", "texto 1A1-I"): a questão é sobre aquele texto. */
+const CODIGO_DO_TEXTO = /\b[Tt]exto (?=[A-Z0-9]*\d)[A-Z0-9]{3,}\b/;
+
 const PISTAS: { materia: RegExp; marca: (text: string) => boolean }[] = [
   {
     materia: /^l[ií]ngua portuguesa$/i,
     marca: (t) =>
-      /\b(trecho|voc[áa]bulo|ora[çc][ãa]o|corre[çc][ãa]o gramatical|crase|concord[âa]ncia (verbal|nominal)|reg[êe]ncia|pontua[çc][ãa]o|acentua[çc][ãa]o|reescrit\w*|coes[ãa]o|pronome|conjun[çc][ãa]o|preposi[çc][ãa]o|v[íi]rgula|sentido original)\b/i.test(t),
+      CODIGO_DO_TEXTO.test(t) ||
+      /\b(trecho|voc[áa]bulo|ora[çc][ãa]o|corre[çc][ãa]o gramatical|crase|concord[âa]ncia (verbal|nominal)|reg[êe]ncia|pontua[çc][ãa]o|acentua[çc][ãa]o|reescrit\w*|coes[ãa]o|pronome|conjun[çc][ãa]o|preposi[çc][ãa]o|v[íi]rgula|sentido original|par[áa]grafo|tipologia|g[êe]nero textual|fun[çc][ãa]o sint[áa]tica|aspas|ideias veiculadas|(palavra|termo|express[ãa]o) [“"])/i.test(t),
   },
   {
     materia: /racioc[íi]nio l[óo]gico/i,
@@ -73,7 +77,7 @@ const PISTAS: { materia: RegExp; marca: (text: string) => boolean }[] = [
   },
   { materia: /^l[ií]ngua inglesa$/i, marca: (t) => (t.match(/\b(the|and|of|to|is|that|which|are)\b/gi) ?? []).length >= 4 },
 ];
-const MAX_PISTA = 10;
+const MAX_PISTA = 12;
 
 function cueCandidates(item: AcervoItem, vocab: Vocabulario): string[] {
   const text = itemText(item);
@@ -110,8 +114,17 @@ export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): 
   return [...top, ...extras];
 }
 
-/** Fila da classificação: o que mais casa com o vocabulário (o edital do dono) primeiro. */
-export function queueOrder(items: AcervoItem[], vocab: Vocabulario): AcervoItem[] {
-  const best = new Map(items.map((i) => [i.id, candidatesFor(i, vocab, 1)[0]?.score ?? 0]));
-  return [...items].sort((a, b) => (best.get(b.id) ?? 0) - (best.get(a.id) ?? 0) || a.id.localeCompare(b.id));
+/**
+ * Fila da classificação: primeiro os itens cujo melhor candidato é de uma matéria de `prioridade` (ids de 1º nível — as
+ * matérias do edital do dono; o acervo tem ~27 mil itens e a cota do Gemini faz ~5 mil por semana); dentro de cada
+ * grupo, o que mais casa com o vocabulário.
+ */
+export function queueOrder(items: AcervoItem[], vocab: Vocabulario, prioridade: ReadonlySet<string> = new Set()): AcervoItem[] {
+  const best = new Map(items.map((i) => [i.id, candidatesFor(i, vocab, 1)[0]]));
+  const score = (i: AcervoItem) => best.get(i.id)?.score ?? 0;
+  const preferred = (i: AcervoItem) => {
+    const top = best.get(i.id);
+    return top !== undefined && top.score > 0 && prioridade.has(top.id.split('>')[0]) ? 1 : 0;
+  };
+  return [...items].sort((a, b) => preferred(b) - preferred(a) || score(b) - score(a) || a.id.localeCompare(b.id));
 }

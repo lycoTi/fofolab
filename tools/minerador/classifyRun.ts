@@ -120,6 +120,8 @@ export async function runClassificacao(opts: {
   alvo: Alvo;
   k: number;
   paralelo?: number;
+  /** Matérias (ids de 1º nível) que vão para o começo da fila — as do edital do dono. */
+  prioridade?: ReadonlySet<string>;
 }): Promise<ClassifyReport> {
   const vocabPath = join(opts.acervoDir, 'vocabulario.json');
   const classifDir = join(opts.acervoDir, 'classificacao');
@@ -133,7 +135,7 @@ export async function runClassificacao(opts: {
   };
 
   const { classif, queue } = loadQueue(opts.acervoDir, classifDir, opts.alvo, key);
-  const ordered = queueOrder(queue.map((q) => q.item), vocab).slice(0, opts.limite);
+  const ordered = queueOrder(queue.map((q) => q.item), vocab, opts.prioridade).slice(0, opts.limite);
   const concursoOf = new Map(queue.map((q) => [q.item.id, q.concurso]));
   const selected = ordered.map((item) => ({ item, concurso: concursoOf.get(item.id)! }));
 

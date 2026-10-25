@@ -98,3 +98,23 @@ describe('Nomes do edital em letras normais', () => {
     );
   });
 });
+
+describe('Rodapé de página no meio do conteúdo programático', () => {
+  it('o número da página sozinho na linha não entra no tópico nem esconde o tópico seguinte', () => {
+    const lines = [
+      '15.2.1 CONHECIMENTOS BÁSICOS',
+      'CONTABILIDADE: 1 Mensuração de ativos. 1.1 Reavaliação e redução ao valor',
+      '27',
+      'recuperável. 2 Estatística.',
+      '28',
+      '2.1 Estatística descritiva.',
+    ];
+    const titles = parseEdital(lines).commonSubjects[0].topics.map((t) => `${t.code} ${t.title}`);
+    expect(titles).toEqual([
+      '1 Mensuração de ativos',
+      '1.1 Reavaliação e redução ao valor recuperável',
+      '2 Estatística',
+      '2.1 Estatística descritiva',
+    ]);
+  });
+});

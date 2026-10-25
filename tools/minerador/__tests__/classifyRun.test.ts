@@ -77,6 +77,43 @@ describe('Consenso entre opiniões', () => {
     expect(c.incerto).toBe(false);
   });
 
+  it('mesmo tópico vindo de editais diferentes (nome igual no último nível) ou pai/filho no mesmo ramo concordam', () => {
+    const sameLeaf = consensus({
+      'agy:g': { assuntos: [{ id: 'financas-publicas>despesas-de-exercicios-anteriores', confianca: 0.9 }], versaoVocabulario: 1 },
+      'groq:o': { assuntos: [{ id: 'administracao-orcamentaria>despesa-publica>despesas-de-exercicios-anteriores', confianca: 0.8 }], versaoVocabulario: 1 },
+    });
+    expect(sameLeaf.concordancia).toBe('concordam');
+    const parentChild = consensus({
+      'agy:g': { assuntos: [{ id: 'lp>coesao', confianca: 0.9 }], versaoVocabulario: 1 },
+      'groq:o': { assuntos: [{ id: 'lp>coesao>referenciacao', confianca: 0.8 }], versaoVocabulario: 1 },
+    });
+    expect(parentChild.concordancia).toBe('concordam');
+    // Fica o mais específico
+    expect(parentChild.consenso[0].id).toBe('lp>coesao>referenciacao');
+    // Nome genérico no último nível não junta matérias diferentes
+    const generic = consensus({
+      'agy:g': { assuntos: [{ id: 'direito-constitucional>conceitos-basicos', confianca: 0.9 }], versaoVocabulario: 1 },
+      'groq:o': { assuntos: [{ id: 'contabilidade>conceitos-basicos', confianca: 0.8 }], versaoVocabulario: 1 },
+    });
+    expect(generic.concordancia).toBe('discordam');
+  });
+
+  it('o principal de uma opinião também escolhido pela outra concorda nele; a confiança média decide o selinho', () => {
+    // Programa Segundo Tempo (TRT10 2024): políticas sociais × direitos humanos, os dois com direitos humanos
+    const c = consensus({
+      'agy:g': { assuntos: [{ id: 'politicas-sociais', confianca: 0.85 }, { id: 'direitos-humanos', confianca: 0.75 }], versaoVocabulario: 1 },
+      'groq:o': { assuntos: [{ id: 'direitos-humanos', confianca: 0.9 }], versaoVocabulario: 1 },
+    });
+    expect(c).toEqual({ consenso: [{ id: 'direitos-humanos', confianca: 0.83 }], incerto: false, concordancia: 'concordam' });
+    // Só como secundário fraco do outro: concorda, mas fica incerto
+    const fraco = consensus({
+      'agy:g': { assuntos: [{ id: 'x', confianca: 0.9 }], versaoVocabulario: 1 },
+      'groq:o': { assuntos: [{ id: 'y', confianca: 0.9 }, { id: 'x', confianca: 0.45 }], versaoVocabulario: 1 },
+    });
+    expect(fraco.concordancia).toBe('concordam');
+    expect(fraco.incerto).toBe(true);
+  });
+
   it('duas opiniões que discordam no principal: incerto, com os dois principais', () => {
     const c = consensus({
       'agy:g': { assuntos: [{ id: 'x', confianca: 0.9 }], versaoVocabulario: 1 },

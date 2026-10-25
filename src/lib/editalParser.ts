@@ -236,6 +236,9 @@ function findContent(lines: string[], parts: EditalExamPart[]) {
     }
     if (!inContent) continue;
     if (/^ANEXO\b/.test(line)) break;
+    // Número da página sozinho (rodapé): no meio do texto, virava "redução ao valor 27 recuperável" e escondia o
+    // tópico seguinte ("Estatística. 28 2.1 Estatística descritiva")
+    if (/^\d{1,3}$/.test(line)) continue;
 
     const role = line.match(ROLE_HEADING);
     if (role) {
