@@ -49,8 +49,10 @@ export function consensus(opinioes: Record<string, Opiniao>): Pick<Classificacao
     const only = lists[0] ?? [];
     return { consenso: only, incerto: only.length === 0 || only[0].confianca < CONFIANCA_CERTA, concordancia: 'uma-opiniao' };
   }
-  const principals = lists.map((l) => l[0]?.id ?? null);
-  const agree = principals.every((p) => p !== null && p === principals[0]);
+  // Concordam quando o principal de cada opinião está na escolha de todas as outras: os mesmos dois assuntos em ordem
+  // trocada ("Leitura dos balanços" × "Relações entre execuções", SECONT 2022) não é discordância
+  const sets = lists.map((l) => new Set(l.map((a) => a.id)));
+  const agree = lists.every((l) => l.length > 0 && sets.every((s) => s.has(l[0].id)));
   const votes = new Map<string, number[]>();
   for (const list of lists) for (const a of list) votes.set(a.id, [...(votes.get(a.id) ?? []), a.confianca]);
   const majority = Math.floor(lists.length / 2) + 1;

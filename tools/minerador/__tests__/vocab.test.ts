@@ -70,6 +70,14 @@ describe('Propostas de assunto novo e versões', () => {
     expect(r.mapeadas[assuntoId(['Raciocínio Lógico e Matemática', 'Conjuntos'])]).toBe(assuntoId(['Raciocínio Lógico-Matemático', 'Conjuntos']));
   });
 
+  it('nome de uma palavra longa contido no outro casa ("Pontuação" × "Emprego dos sinais de pontuação")', () => {
+    const v = base();
+    v.assuntos.push({ id: assuntoId(['Língua Portuguesa', 'Pontuação']), caminho: ['Língua Portuguesa', 'Pontuação'], sinonimos: [], origem: 'proposta' });
+    const r = applyProposals(v, [{ caminho: ['Língua Portuguesa', 'Emprego dos sinais de pontuação'], confianca: 0.9 }], 0.8);
+    expect(r.aceitas).toEqual([]);
+    expect(r.mapeadas[assuntoId(['Língua Portuguesa', 'Emprego dos sinais de pontuação'])]).toBe(assuntoId(['Língua Portuguesa', 'Pontuação']));
+  });
+
   it('junções sugeridas: irmãos com nomes quase iguais (só para o relatório)', () => {
     const pares = mergeCandidates(base());
     expect(pares).toContainEqual([assuntoId(['X', 'Algoritmos e estrutura de dados']), assuntoId(['X', 'Algoritmos e estruturas de dados'])]);

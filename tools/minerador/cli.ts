@@ -5,7 +5,7 @@ import { buildLote, LOTE_PALAVRAS_PADRAO } from './acervoStore';
 import { createAgyProvider, createProvider, loadKeys, type AiProvider } from './aiProvider';
 import { eventListUrl, parseEventList } from './cebraspeApi';
 import { CLASSIFY_SCHEMA } from './classifyPrompt';
-import { runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
+import { recalcularConsenso, runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
 import { buildPacote, writePacote } from './pacote';
 import { createPoliteClient } from './politeClient';
 import { formatReport } from './report';
@@ -135,6 +135,12 @@ async function main(args: string[]): Promise<number> {
   if (command === 'conferir') return classify(args, 'todos');
   if (command === 'desempatar') return classify(args, 'discordantes');
 
+  if (command === 'recalcular') {
+    const t = recalcularConsenso(ACERVO);
+    console.log(`Consenso refeito: concordam ${t.concordam} · discordam ${t.discordam} · uma opinião ${t.umaOpiniao} · incertos ${t.incertos}.`);
+    return 0;
+  }
+
   if (command === 'pacote') {
     const path = join(ACERVO, 'pacote', 'fofolab-acervo-cebraspe.json');
     const pacote = buildPacote(ACERVO);
@@ -144,7 +150,7 @@ async function main(args: string[]): Promise<number> {
     return 0;
   }
 
-  console.error('Uso: npm run minerar -- lote | rodar | semente | classificar | conferir | desempatar | pacote');
+  console.error('Uso: npm run minerar -- lote | rodar | semente | classificar | conferir | desempatar | recalcular | pacote');
   return 1;
 }
 

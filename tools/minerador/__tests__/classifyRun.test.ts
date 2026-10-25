@@ -6,7 +6,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { writeConcurso } from '../acervoStore';
 import { LimiteDiario, type AiProvider } from '../aiProvider';
 import { consensus, readClassificacao, writeClassificacao } from '../classificationStore';
-import { runClassificacao } from '../classifyRun';
+import { recalcularConsenso, runClassificacao } from '../classifyRun';
 import type { AcervoItem } from '../types';
 import { assuntoId, writeVocabulario, type Vocabulario } from '../vocab';
 
@@ -62,6 +62,16 @@ describe('Consenso entre opiniões', () => {
   it('uma opinião: incerto pela confiança do principal; secundário fraco não entra', () => {
     const c = consensus({ 'agy:g': { assuntos: [{ id: 'x', confianca: 0.95 }, { id: 'y', confianca: 0.15 }], versaoVocabulario: 1 } });
     expect(c).toEqual({ consenso: [{ id: 'x', confianca: 0.95 }], incerto: false, concordancia: 'uma-opiniao' });
+  });
+
+  it('mesmos assuntos em ordem diferente concordam (o principal de cada um está na escolha do outro)', () => {
+    const c = consensus({
+      'agy:g': { assuntos: [{ id: 'x', confianca: 0.9 }, { id: 'y', confianca: 0.85 }], versaoVocabulario: 1 },
+      'agy:c': { assuntos: [{ id: 'y', confianca: 0.7 }, { id: 'x', confianca: 0.5 }], versaoVocabulario: 1 },
+    });
+    expect(c.concordancia).toBe('concordam');
+    expect(c.consenso.map((a) => a.id).sort()).toEqual(['x', 'y']);
+    expect(c.incerto).toBe(false);
   });
 
   it('duas opiniões que discordam no principal: incerto, com os dois principais', () => {
@@ -139,6 +149,26 @@ describe('Rodada de classificação retomável', () => {
     expect(peak).toBe(3);
     const all = { ...readClassificacao(join(dir, 'classificacao'), 'A_23').itens, ...readClassificacao(join(dir, 'classificacao'), 'B_23').itens };
     expect(Object.keys(all)).toHaveLength(5);
+  });
+
+  it('recalcular refaz o consenso a partir das opiniões guardadas (sem chamar IA)', () => {
+    const dir = setup();
+    writeClassificacao(join(dir, 'classificacao'), {
+      identificador: 'A_23',
+      itens: {
+        'A_23:C:1': {
+          opinioes: {
+            'agy:g': { assuntos: [{ id: 'x', confianca: 0.9 }, { id: 'y', confianca: 0.85 }], versaoVocabulario: 1 },
+            'agy:c': { assuntos: [{ id: 'y', confianca: 0.8 }, { id: 'x', confianca: 0.6 }], versaoVocabulario: 1 },
+          },
+          // Consenso antigo, calculado pela regra anterior
+          consenso: [], incerto: true, concordancia: 'discordam',
+        },
+      },
+    });
+    const r = recalcularConsenso(dir);
+    expect(r).toMatchObject({ concordam: 1, discordam: 0 });
+    expect(readClassificacao(join(dir, 'classificacao'), 'A_23').itens['A_23:C:1'].concordancia).toBe('concordam');
   });
 
   it('regravar sem mudança dá o mesmo arquivo, byte a byte', async () => {

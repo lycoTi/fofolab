@@ -36,6 +36,28 @@ const MIN_CONFIANCA_PROPOSTA = 0.8;
 const MAX_PROMPT_TOKENS = { groq: 6000, default: 40000 };
 const TOKENS_POR_ITEM = 60;
 
+/**
+ * Refaz o consenso de todos os itens a partir das opiniões guardadas, sem chamar IA — as opiniões são a fonte; o
+ * consenso é derivado e muda quando a regra muda.
+ */
+export function recalcularConsenso(acervoDir: string): { concordam: number; discordam: number; umaOpiniao: number; incertos: number } {
+  const dir = join(acervoDir, 'classificacao');
+  const totals = { concordam: 0, discordam: 0, umaOpiniao: 0, incertos: 0 };
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
+    const c = readClassificacao(dir, file.slice(0, -5));
+    for (const [id, item] of Object.entries(c.itens)) {
+      const updated = { opinioes: item.opinioes, ...consensus(item.opinioes) };
+      c.itens[id] = updated;
+      if (updated.concordancia === 'concordam') totals.concordam += 1;
+      if (updated.concordancia === 'discordam') totals.discordam += 1;
+      if (updated.concordancia === 'uma-opiniao') totals.umaOpiniao += 1;
+      if (updated.incerto) totals.incertos += 1;
+    }
+    writeClassificacao(dir, c);
+  }
+  return totals;
+}
+
 /** Matérias (primeiro nível) do vocabulário atual: vão no prompt para a proposta não inventar variação de nome. */
 const materiasOf = (vocab: Vocabulario) => vocab.assuntos.filter((a) => a.caminho.length === 1).map((a) => a.caminho[0]).sort();
 

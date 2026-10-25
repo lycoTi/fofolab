@@ -94,7 +94,9 @@ function sameName(a: string, b: string): boolean {
   const [wa, wb] = [nameWords(a), nameWords(b)];
   if (jaccard(wa, wb) >= NEAR) return true;
   const [small, large] = wa.size <= wb.size ? [wa, wb] : [wb, wa];
-  return small.size >= 2 && [...small].every((w) => large.has(w));
+  // Uma palavra só basta se for longa ("Pontuação" ⊂ "Emprego dos sinais de pontuação"); curta seria genérica demais
+  const enough = small.size >= 2 || (small.size === 1 && [...small][0].length >= 6);
+  return enough && [...small].every((w) => large.has(w));
 }
 
 /** Nomes já usados num nível, abaixo de um pai (os pais existem implícitos nos caminhos dos assuntos). */
