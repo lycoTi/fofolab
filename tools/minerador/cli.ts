@@ -5,7 +5,7 @@ import { buildLote, LOTE_PALAVRAS_PADRAO } from './acervoStore';
 import { createAgyProvider, createProvider, loadKeys, type AiProvider } from './aiProvider';
 import { eventDetailUrl, eventListUrl, fileUrl, isSafeIdentifier, parseEventDetail, parseEventList } from './cebraspeApi';
 import { CLASSIFY_SCHEMA } from './classifyPrompt';
-import { recalcularConsenso, runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
+import { juntar, recalcularConsenso, runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
 import { buildPacote, writePacote } from './pacote';
 import { createPoliteClient } from './politeClient';
 import { formatReport } from './report';
@@ -21,6 +21,8 @@ import { mergeVocabularios, readEditalLines, readVocabulario, seedFromEdital, wr
  *   npm run minerar -- classificar [--provedor agy|groq|deepseek] [--modelo id] [--limite N]   → 1ª opinião  (--paralelo N: lotes simultâneos)
  *   npm run minerar -- conferir    [...]   → opinião independente de outro modelo em todos os itens
  *   npm run minerar -- desempatar  [...]   → só os itens em que as opiniões discordam
+ *   npm run minerar -- juntar <de> <para>   → assunto repetido vira o outro (vocabulário e classificações)
+ *   npm run minerar -- recalcular  → refaz o consenso das opiniões guardadas, sem IA
  *   npm run minerar -- pacote      → acervo/pacote/fofolab-acervo-cebraspe.json (para o app, na 12c)
  */
 const ACERVO = 'acervo';
@@ -37,8 +39,9 @@ const EDITAIS_SEMENTE = ['SERPRO_23', 'TCE_SC_21_AUDITOR', 'CNJ_24', 'CD_25_NS',
 
 /**
  * Provedor e modelo padrão de cada comando, pelo que a cota permite (medido em 25/10): classificar com o Gemini Flash
- * (assinatura Google; ~5 mil itens por semana); conferir com o gpt-oss-120b no Groq grátis (outra família, ~10 mil por
- * dia); desempatar com o Claude Sonnet pelo Antigravity, que esgota a janela de 5 h em ~200 itens — só para poucos.
+ * (assinatura Google; ~5 mil itens por semana, 300 em ~24 min); conferir com o gpt-oss-120b no Groq grátis (outra
+ * família; o limite de tokens por dia para em ~100 itens — e erra mais que o Gemini nos itens de interpretação de
+ * texto); desempatar com o Claude Sonnet pelo Antigravity, que esgota a janela de 5 h em ~200 itens — só para poucos.
  */
 const PADRAO: Record<Alvo, { provedor: 'agy' | 'groq' | 'deepseek'; modelo: string }> = {
   'sem-opiniao': { provedor: 'agy', modelo: 'gemini-3.8-flash-low' },
@@ -176,6 +179,17 @@ async function main(args: string[]): Promise<number> {
   if (command === 'conferir') return classify(args, 'todos');
   if (command === 'desempatar') return classify(args, 'discordantes');
 
+  if (command === 'juntar') {
+    const [de, para] = [args[1], args[2]];
+    if (!de || !para) {
+      console.error('Uso: npm run minerar -- juntar <id-repetido> <id-que-fica>  (ids como estão em acervo/vocabulario.json)');
+      return 1;
+    }
+    const r = juntar(ACERVO, de, para);
+    console.log(`Junção feita: vocabulário na versão ${r.versaoVocabulario}; ${r.itensAfetados} itens classificados trocaram de assunto.`);
+    return 0;
+  }
+
   if (command === 'recalcular') {
     const t = recalcularConsenso(ACERVO);
     console.log(`Consenso refeito: concordam ${t.concordam} · discordam ${t.discordam} · uma opinião ${t.umaOpiniao} · incertos ${t.incertos}.`);
@@ -191,7 +205,7 @@ async function main(args: string[]): Promise<number> {
     return 0;
   }
 
-  console.error('Uso: npm run minerar -- lote | rodar | semente | classificar | conferir | desempatar | recalcular | pacote');
+  console.error('Uso: npm run minerar -- lote | rodar | semente | classificar | conferir | desempatar | juntar | recalcular | pacote');
   return 1;
 }
 

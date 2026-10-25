@@ -63,16 +63,24 @@ export interface PropostaAssunto {
   confianca: number;
 }
 
+/** Singular aproximado, já sem acento: "razoes" → "razao", "pães" → "pao", "processuais" → "processual", "textos" → "texto". */
+function singular(w: string): string {
+  if (w.endsWith('oes') || w.endsWith('aes')) return `${w.slice(0, -3)}ao`;
+  if (w.length > 4 && w.endsWith('ais')) return `${w.slice(0, -2)}l`;
+  if (w.length > 4 && w.endsWith('s')) return w.slice(0, -1);
+  return w;
+}
+
 /**
- * Palavras de 3+ letras, sem acento, sem o "s" do plural, cortadas no 6º caractere: "estruturas" e "estrutura",
- * "textos" e "texto" contam igual.
+ * Palavras de 3+ letras, sem acento, no singular, cortadas no 6º caractere: "estruturas" e "estrutura", "Razões e
+ * proporções" e "razão e proporção" contam igual.
  */
 const nameWords = (text: string) =>
   new Set(
     slug(text)
       .split('-')
       .filter((w) => w.length >= 3)
-      .map((w) => (w.length > 4 && w.endsWith('s') ? w.slice(0, -1) : w).slice(0, 6))
+      .map((w) => singular(w).slice(0, 6))
   );
 
 function jaccard(a: Set<string>, b: Set<string>): number {
@@ -120,7 +128,29 @@ function canonicalPath(assuntos: Assunto[], caminho: string[]): string[] {
     const existing = namesAt(assuntos, out).find((n) => sameName(n, name));
     out.push(existing ?? name);
   }
-  return out;
+  if (out.length < 2 || assuntos.some((a) => a.id === assuntoId(out))) return out;
+  return deepMatch(assuntos, out) ?? out;
+}
+
+/**
+ * O tópico proposto pode já existir num nível mais fundo da mesma matéria: a IA propôs "Raciocínio Lógico › Regra de
+ * três simples e composta", e o edital tem "Raciocínio Lógico › Razões e proporções › Regras de três simples e
+ * compostas" (rodada de 25/10). Aqui vale nome quase igual ou um contido no outro com 2+ palavras — uma palavra só
+ * ("Princípios") existe em todo canto da matéria. Entre vários, o mais parecido; depois o mais raso.
+ */
+function deepMatch(assuntos: Assunto[], caminho: string[]): string[] | null {
+  const materiaId = assuntoId(caminho.slice(0, 1));
+  const wanted = nameWords(caminho.at(-1) ?? '');
+  const matches = assuntos
+    .filter((a) => a.caminho.length >= 2 && assuntoId(a.caminho.slice(0, 1)) === materiaId)
+    .map((a) => ({ a, words: nameWords(a.caminho.at(-1) ?? '') }))
+    .filter(({ words }) => {
+      if (jaccard(words, wanted) >= NEAR) return true;
+      const [small, large] = words.size <= wanted.size ? [words, wanted] : [wanted, words];
+      return small.size >= 2 && [...small].every((w) => large.has(w));
+    })
+    .sort((x, y) => jaccard(y.words, wanted) - jaccard(x.words, wanted) || x.a.caminho.length - y.a.caminho.length || x.a.id.localeCompare(y.a.id));
+  return matches[0]?.a.caminho ?? null;
 }
 
 /**
@@ -171,6 +201,29 @@ export function applyProposals(
     pendentes,
     mapeadas,
   };
+}
+
+/**
+ * Junta um assunto repetido noutro (`npm run minerar -- juntar <de> <para>`): `de` e tudo abaixo dele somem e passam a
+ * ser `para`; o nome de `de` fica como sinônimo de `para` (ajuda os candidatos locais). Versão nova, com a junção no
+ * histórico. `remap` diz o destino de cada id que sumiu — para trocar nas classificações já feitas.
+ */
+export function juntarAssunto(vocab: Vocabulario, de: string, para: string): { vocab: Vocabulario; remap: Record<string, string> } {
+  const byId = new Map(vocab.assuntos.map((a) => [a.id, a]));
+  const origem = byId.get(de);
+  const destino = byId.get(para);
+  if (!origem) throw new Error(`O assunto ${de} não existe no vocabulário.`);
+  if (!destino) throw new Error(`O assunto ${para} não existe no vocabulário.`);
+  const inside = (id: string) => id === de || id.startsWith(`${de}>`);
+  if (inside(para)) throw new Error(`${para} está dentro de ${de}: juntar apagaria o destino.`);
+  const remap: Record<string, string> = {};
+  for (const a of vocab.assuntos) if (inside(a.id)) remap[a.id] = para;
+  const name = origem.caminho.at(-1) ?? '';
+  const sinonimos = [...new Set([...destino.sinonimos, name, ...origem.sinonimos])].filter((s) => s && s !== destino.caminho.at(-1));
+  const assuntos = vocab.assuntos.filter((a) => !inside(a.id)).map((a) => (a.id === para ? { ...a, sinonimos } : a));
+  const versao = vocab.versao + 1;
+  const mudancas = [`junção: ${origem.caminho.join(' › ')} → ${destino.caminho.join(' › ')}`];
+  return { vocab: { versao, assuntos, historico: [...vocab.historico, { versao, mudancas }] }, remap };
 }
 
 /** Pares de irmãos com nomes quase iguais: sugestão de junção para o relatório (não junta sozinho). */

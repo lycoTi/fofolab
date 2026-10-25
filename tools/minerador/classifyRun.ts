@@ -3,10 +3,10 @@ import { join } from 'node:path';
 import { readConcurso } from './acervoStore';
 import { LimiteDiario, type AiProvider } from './aiProvider';
 import { candidatesFor, queueOrder } from './candidates';
-import { consensus, readClassificacao, writeClassificacao, type ClassificacaoConcurso } from './classificationStore';
+import { consensus, readClassificacao, writeClassificacao, type ClassificacaoConcurso, type Opiniao } from './classificationStore';
 import { buildBatchPrompt, estimateTokens, parseBatchResponse, type AssuntoDoItem, type BatchEntry } from './classifyPrompt';
 import type { AcervoItem } from './types';
-import { applyProposals, assuntoId, mergeCandidates, readVocabulario, writeVocabulario, type Assunto, type Vocabulario } from './vocab';
+import { applyProposals, assuntoId, juntarAssunto, mergeCandidates, readVocabulario, writeVocabulario, type Assunto, type Vocabulario } from './vocab';
 
 /**
  * Uma rodada de classificação (spec 12 §6.4) com um provedor: fila por relevância, lotes, validação, propostas e
@@ -40,13 +40,18 @@ const TOKENS_POR_ITEM = 60;
  * Refaz o consenso de todos os itens a partir das opiniões guardadas, sem chamar IA — as opiniões são a fonte; o
  * consenso é derivado e muda quando a regra muda.
  */
-export function recalcularConsenso(acervoDir: string): { concordam: number; discordam: number; umaOpiniao: number; incertos: number } {
+export function recalcularConsenso(
+  acervoDir: string,
+  remap: Record<string, string> = {}
+): { concordam: number; discordam: number; umaOpiniao: number; incertos: number; afetados: number } {
   const dir = join(acervoDir, 'classificacao');
-  const totals = { concordam: 0, discordam: 0, umaOpiniao: 0, incertos: 0 };
+  const totals = { concordam: 0, discordam: 0, umaOpiniao: 0, incertos: 0, afetados: 0 };
   for (const file of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
     const c = readClassificacao(dir, file.slice(0, -5));
     for (const [id, item] of Object.entries(c.itens)) {
-      const updated = { opinioes: item.opinioes, ...consensus(item.opinioes) };
+      const opinioes = remapOpinioes(item.opinioes, remap);
+      if (opinioes !== item.opinioes) totals.afetados += 1;
+      const updated = { opinioes, ...consensus(opinioes) };
       c.itens[id] = updated;
       if (updated.concordancia === 'concordam') totals.concordam += 1;
       if (updated.concordancia === 'discordam') totals.discordam += 1;
@@ -56,6 +61,33 @@ export function recalcularConsenso(acervoDir: string): { concordam: number; disc
     writeClassificacao(dir, c);
   }
   return totals;
+}
+
+/** Troca os ids juntados; dois assuntos que viram o mesmo ficam um só, com a confiança maior. Sem troca, o mesmo objeto. */
+function remapOpinioes(opinioes: Record<string, Opiniao>, remap: Record<string, string>): Record<string, Opiniao> {
+  const touched = Object.values(opinioes).some((o) => o.assuntos.some((a) => remap[a.id]));
+  if (!touched) return opinioes;
+  const out: Record<string, Opiniao> = {};
+  for (const [key, o] of Object.entries(opinioes)) {
+    const best = new Map<string, number>();
+    for (const a of o.assuntos) {
+      const id = remap[a.id] ?? a.id;
+      best.set(id, Math.max(best.get(id) ?? 0, a.confianca));
+    }
+    out[key] = { ...o, assuntos: [...best.entries()].map(([id, confianca]) => ({ id, confianca })).sort((x, y) => y.confianca - x.confianca) };
+  }
+  return out;
+}
+
+/** Junta `de` em `para` no vocabulário e em todas as opiniões guardadas; o consenso é refeito. */
+export function juntar(acervoDir: string, de: string, para: string): { versaoVocabulario: number; itensAfetados: number } {
+  const vocabPath = join(acervoDir, 'vocabulario.json');
+  const loaded = readVocabulario(vocabPath);
+  if (!loaded) throw new Error('Falta acervo/vocabulario.json: rode "npm run minerar -- semente" primeiro.');
+  const { vocab, remap } = juntarAssunto(loaded, de, para);
+  writeVocabulario(vocabPath, vocab);
+  const { afetados } = recalcularConsenso(acervoDir, remap);
+  return { versaoVocabulario: vocab.versao, itensAfetados: afetados };
 }
 
 /** Matérias (primeiro nível) do vocabulário atual: vão no prompt para a proposta não inventar variação de nome. */

@@ -2,7 +2,7 @@
 import { join } from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 import {
-  applyProposals, assuntoId, cleanSubjectName, mergeCandidates, mergeVocabularios, readEditalLines, seedFromEdital, type Vocabulario,
+  applyProposals, assuntoId, cleanSubjectName, juntarAssunto, mergeCandidates, mergeVocabularios, readEditalLines, seedFromEdital, type Vocabulario,
 } from '../vocab';
 
 const EDITAL = join(__dirname, '..', '..', '..', 'e2e', 'fixtures', 'cgu-2026-affc-edital.pdf');
@@ -70,6 +70,45 @@ describe('Propostas de assunto novo e versões', () => {
     // Toda proposta (aceita ou casada) tem destino em `mapeadas`
     expect(r.mapeadas[assuntoId(['Língua Portuguesa', 'Compreensão e interpretação de textos'])]).toBe(assuntoId(['Língua Portuguesa', 'Interpretação de texto']));
     expect(r.mapeadas[assuntoId(['Raciocínio Lógico e Matemática', 'Conjuntos'])]).toBe(assuntoId(['Raciocínio Lógico-Matemático', 'Conjuntos']));
+  });
+
+  it('proposta casa com tópico de nível mais fundo da mesma matéria, com plural em "-ões" (rodada de 25/10)', () => {
+    const v = base();
+    for (const c of [['Raciocínio Lógico'], ['Raciocínio Lógico', 'Razões e proporções'], ['Raciocínio Lógico', 'Razões e proporções', 'Regras de três simples e compostas']]) {
+      v.assuntos.push({ id: assuntoId(c), caminho: c, sinonimos: [], origem: 'edital' });
+    }
+    const r = applyProposals(
+      v,
+      [
+        { caminho: ['Raciocínio Lógico', 'Regra de três simples e composta'], confianca: 0.95 },
+        { caminho: ['Raciocínio Lógico', 'Razão, proporção e divisão proporcional'], confianca: 0.95 },
+      ],
+      0.8
+    );
+    expect(r.aceitas).toEqual([]);
+    expect(r.mapeadas[assuntoId(['Raciocínio Lógico', 'Regra de três simples e composta'])]).toBe(
+      assuntoId(['Raciocínio Lógico', 'Razões e proporções', 'Regras de três simples e compostas'])
+    );
+    expect(r.mapeadas[assuntoId(['Raciocínio Lógico', 'Razão, proporção e divisão proporcional'])]).toBe(assuntoId(['Raciocínio Lógico', 'Razões e proporções']));
+  });
+
+  it('juntar: o assunto (e o que está abaixo dele) vira o outro; o nome fica de sinônimo; versão nova com a junção', () => {
+    const v = base();
+    const add = (c: string[], origem: 'edital' | 'proposta' = 'edital') => v.assuntos.push({ id: assuntoId(c), caminho: c, sinonimos: [], origem });
+    add(['RL']);
+    add(['RL', 'Razões e proporções']);
+    add(['RL', 'Razão e divisão'], 'proposta');
+    add(['RL', 'Razão e divisão', 'Exemplos'], 'proposta');
+    const [de, para] = [assuntoId(['RL', 'Razão e divisão']), assuntoId(['RL', 'Razões e proporções'])];
+    const r = juntarAssunto(v, de, para);
+    expect(r.remap).toEqual({ [de]: para, [assuntoId(['RL', 'Razão e divisão', 'Exemplos'])]: para });
+    expect(r.vocab.assuntos.map((a) => a.id)).not.toContain(de);
+    expect(r.vocab.assuntos.find((a) => a.id === para)!.sinonimos).toEqual(['Razão e divisão']);
+    expect(r.vocab.versao).toBe(2);
+    expect(r.vocab.historico.at(-1)!.mudancas[0]).toBe('junção: RL › Razão e divisão → RL › Razões e proporções');
+    expect(() => juntarAssunto(v, 'nao-existe', para)).toThrow(/não existe/);
+    // Juntar a matéria num tópico dela mesma apagaria o destino
+    expect(() => juntarAssunto(v, assuntoId(['RL']), para)).toThrow(/dentro/);
   });
 
   it('nome de uma palavra longa contido no outro casa ("Pontuação" × "Emprego dos sinais de pontuação")', () => {

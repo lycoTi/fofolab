@@ -6,9 +6,9 @@ import { describe, expect, it, vi } from 'vitest';
 import { writeConcurso } from '../acervoStore';
 import { LimiteDiario, type AiProvider } from '../aiProvider';
 import { consensus, readClassificacao, writeClassificacao } from '../classificationStore';
-import { recalcularConsenso, runClassificacao } from '../classifyRun';
+import { juntar, recalcularConsenso, runClassificacao } from '../classifyRun';
 import type { AcervoItem } from '../types';
-import { assuntoId, writeVocabulario, type Vocabulario } from '../vocab';
+import { assuntoId, readVocabulario, writeVocabulario, type Vocabulario } from '../vocab';
 
 const vocab: Vocabulario = {
   versao: 1,
@@ -189,6 +189,30 @@ describe('Rodada de classificação retomável', () => {
     expect(peak).toBe(3);
     const all = { ...readClassificacao(join(dir, 'classificacao'), 'A_23').itens, ...readClassificacao(join(dir, 'classificacao'), 'B_23').itens };
     expect(Object.keys(all)).toHaveLength(5);
+  });
+
+  it('juntar troca o assunto no vocabulário e nas opiniões guardadas, e refaz o consenso', () => {
+    const dir = setup();
+    const INJECAO = assuntoId(['Segurança', 'Injeção']);
+    writeClassificacao(join(dir, 'classificacao'), {
+      identificador: 'B_23',
+      itens: {
+        'B_23:C:1': {
+          opinioes: {
+            'agy:g': { assuntos: [{ id: INJECAO, confianca: 0.9 }, { id: SQL, confianca: 0.6 }], versaoVocabulario: 1 },
+            'groq:o': { assuntos: [{ id: SQL, confianca: 0.8 }], versaoVocabulario: 1 },
+          },
+          consenso: [], incerto: true, concordancia: 'discordam',
+        },
+      },
+    });
+    const r = juntar(dir, INJECAO, SQL);
+    expect(r).toEqual({ versaoVocabulario: 2, itensAfetados: 1 });
+    expect(readVocabulario(join(dir, 'vocabulario.json'))!.assuntos.map((a) => a.id)).not.toContain(INJECAO);
+    const item = readClassificacao(join(dir, 'classificacao'), 'B_23').itens['B_23:C:1'];
+    // Os dois assuntos da 1ª opinião viraram um só, com a confiança maior
+    expect(item.opinioes['agy:g'].assuntos).toEqual([{ id: SQL, confianca: 0.9 }]);
+    expect(item.concordancia).toBe('concordam');
   });
 
   it('recalcular refaz o consenso a partir das opiniões guardadas (sem chamar IA)', () => {
