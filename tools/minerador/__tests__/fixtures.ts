@@ -13,3 +13,6 @@ export const SERPRO_PROVA = '846_SERPRO_23_001_01.PDF';
 export const SERPRO_GABARITO = 'GAB_DEFINITIVO_846_SERPRO_23_001_01.PDF';
 export const PMSC_PROVA = '860_PMSC_OFICIAL_OBJ_001_01.PDF';
 export const PMSC_GABARITO = 'GAB_DEFINITIVO_860_PMSC_OFICIAL_OBJ_001_01.PDF';
+/** Conhecimentos gerais com texto de Português: na 1ª página sobra uma linha das instruções à esquerda dos itens. */
+export const DATAPREV_CG1_PROVA = '893_DATAPREV_CG1_01.PDF';
+export const DATAPREV_CG1_GABARITO = 'GAB_DEFINITIVO_893_DATAPREV_CG1_01.PDF';

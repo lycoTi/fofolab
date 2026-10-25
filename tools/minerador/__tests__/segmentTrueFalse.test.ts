@@ -2,7 +2,8 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { segmentTrueFalse } from '../segmentTrueFalse';
 import type { ExtractedItem, PdfLine } from '../types';
-import { fixtureLines, SERPRO_PROVA } from './fixtures';
+import { parseAnswerKey } from '../answerKey';
+import { DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureLines, SERPRO_PROVA } from './fixtures';
 
 const line = (text: string, atMargin: boolean): PdfLine => ({ page: 1, column: 'L', x: atMargin ? 28 : 46, y: 0, text, atMargin });
 
@@ -50,6 +51,13 @@ describe('Itens Certo/Errado com o texto-base (SERPRO 2023, específicos)', () =
     ]);
     expect(synthetic[0].enunciado).toContain('runApp(Center(');
     expect(synthetic[1].textoBase!.startsWith('SPA (single-page app)')).toBe(true);
+  });
+
+  it('linha solitária mais à esquerda (resto das instruções) não muda a margem da coluna', async () => {
+    const items = segmentTrueFalse(await fixtureLines(DATAPREV_CG1_PROVA));
+    const key = parseAnswerKey(await fixtureLines(DATAPREV_CG1_GABARITO, { singleColumn: true }));
+    expect(items.map((i) => i.numero)).toEqual([...key.keys()].sort((a, b) => a - b));
+    expect(items.find((i) => i.numero === 6)!.enunciado.startsWith('No trecho “desde eletrodomésticos até equipamentos')).toBe(true);
   });
 
   it('linha que começa com número fora da sequência não abre item (vira texto-base)', () => {

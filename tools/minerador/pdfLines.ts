@@ -38,6 +38,16 @@ function joinPieces(pieces: Piece[]): string {
   return text.replace(/\s+/g, ' ').trim();
 }
 
+/**
+ * Margem da coluna: a menor posição que se repete em pelo menos 2 linhas. Uma linha solitária mais à esquerda (resto
+ * das instruções na 1ª página do DATAPREV 2023, em x=298 contra 303 dos itens) não pode virar a margem.
+ */
+function columnMargin(xs: number[]): number {
+  const sorted = [...xs].sort((a, b) => a - b);
+  const repeated = sorted.find((x) => sorted.filter((other) => Math.abs(other - x) <= MARGIN_TOLERANCE).length >= 2);
+  return repeated ?? sorted[0];
+}
+
 /** Agrupa os pedaços de uma página em linhas, já na ordem de leitura. */
 function pageLines(pieces: Piece[], page: number): PdfLine[] {
   const sorted = [...pieces].sort((a, b) => {
@@ -58,8 +68,8 @@ function pageLines(pieces: Piece[], page: number): PdfLine[] {
   for (const column of ['L', 'R'] as const) {
     const inColumn = lines.filter((l) => l.column === column);
     if (inColumn.length === 0) continue;
-    const margin = Math.min(...inColumn.map((l) => l.x));
-    for (const line of inColumn) line.atMargin = line.x - margin <= MARGIN_TOLERANCE;
+    const margin = columnMargin(inColumn.map((l) => l.x));
+    for (const line of inColumn) line.atMargin = Math.abs(line.x - margin) <= MARGIN_TOLERANCE;
   }
   return lines;
 }

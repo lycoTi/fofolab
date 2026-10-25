@@ -10,14 +10,35 @@ const DEFINITIVO_PREFIX = /^GAB_DEFINITIVO_/i;
 /** Arquivos que interessam ao relatório (prova, gabarito, caderno); editais e comunicados nem são listados. */
 const isExamRelated = (f: CebraspeFile) => /PROVA|GABARITO|CADERNO|PADR[ÃA]O DE RESPOSTA/i.test(f.descricao);
 const isCombined = (f: CebraspeFile) => /PROVA OBJETIVA E GABARITO/i.test(f.descricao);
+/** Começa com "PROVA OBJETIVA": "Edital nº 4 – Resultado final na prova objetiva" não é prova. */
 const isObjectiveExam = (f: CebraspeFile) =>
-  /PROVA OBJETIVA/i.test(f.descricao) && !/GABARITO/i.test(f.descricao) && !isCombined(f);
+  /^\s*PROVA OBJETIVA/i.test(f.descricao) && !/GABARITO/i.test(f.descricao) && !isCombined(f);
 const isDefinitiveKey = (f: CebraspeFile) =>
   /GABARITO DEFINITIVO/i.test(f.descricao) && !/SEM EFEITO/i.test(f.descricao) && !isCombined(f);
 const isJustification = (f: CebraspeFile) => /JUSTIFICATIVA/i.test(f.descricao);
 
 const baseName = (nomeArquivo: string) => nomeArquivo.replace(/\.[^.]+$/, '');
 const keyCode = (f: CebraspeFile) => baseName(f.nomeArquivo).replace(DEFINITIVO_PREFIX, '').toUpperCase();
+
+/**
+ * O que a descrição diz depois do tipo do arquivo, sem "ATUALIZADO": "PROVA OBJETIVA – PROCAP – 2ª TURMA" e
+ * "GABARITO DEFINITIVO – PROCAP – 2ª TURMA" dão o mesmo resto. Serve quando a Cebraspe publica com nome em hash.
+ */
+const descriptionTail = (descricao: string) =>
+  descricao
+    .replace(/^\s*(PROVA OBJETIVA|GABARITO DEFINITIVO)/i, '')
+    .replace(/[-–—]\s*ATUALIZADO\s*$/i, '')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+    .toUpperCase();
+
+function keysFor(prova: CebraspeFile, keys: CebraspeFile[]): CebraspeFile[] {
+  const code = baseName(prova.nomeArquivo).toUpperCase();
+  const byName = keys.filter((k) => keyCode(k) === code || keyCode(k).startsWith(`${code}_`));
+  if (byName.length > 0) return byName;
+  const tail = descriptionTail(prova.descricao);
+  return keys.filter((k) => descriptionTail(k.descricao) === tail);
+}
 
 /** Mais de um definitivo para o mesmo caderno: vale o ATUALIZADO; senão o mais recente. */
 function bestKey(candidates: CebraspeFile[]): CebraspeFile | null {
@@ -40,8 +61,7 @@ export function selectExamPairs(detail: CebraspeEventDetail): {
 
   for (const prova of detail.arquivos.filter(isObjectiveExam)) {
     const caderno = baseName(prova.nomeArquivo);
-    const code = caderno.toUpperCase();
-    const gabarito = bestKey(keys.filter((k) => keyCode(k) === code || keyCode(k).startsWith(`${code}_`)));
+    const gabarito = bestKey(keysFor(prova, keys));
     used.add(prova);
     if (!gabarito) {
       pendentes.push(caderno);

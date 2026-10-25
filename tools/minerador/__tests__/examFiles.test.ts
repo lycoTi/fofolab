@@ -48,6 +48,23 @@ describe('Escolha da prova e do gabarito definitivo de cada caderno', () => {
     expect(pendentes).toEqual(['885_PGE_CB1_01']);
   });
 
+  it('nome do arquivo em hash: pareia pela descrição; edital de resultado "na prova objetiva" não é prova', () => {
+    const { pares, pendentes } = selectExamPairs(
+      detail([
+        file('PROVA OBJETIVA – PROGRAMA DE CAPACITAÇÃO (PROCAP) – 2ª TURMA', '7CB3CA8191F93FA0DFF1.pdf'),
+        file('GABARITO DEFINITIVO – PROGRAMA DE CAPACITAÇÃO (PROCAP) – 2ª TURMA', '0A7F0581FB096CC2E249.pdf'),
+        file('GABARITO DEFINITIVO – PROGRAMA DE CAPACITAÇÃO (PROCAP) - ATUALIZADO', '1111.pdf'),
+        file('PROVA OBJETIVA – PROGRAMA DE CAPACITAÇÃO (PROCAP)', '2222.pdf'),
+        file('Edital nº 4 – Resultado final na prova objetiva e convocação', 'ED_4_RES_FINAL_OBJ.PDF'),
+      ])
+    );
+    expect(pares.map((p) => [p.prova.nomeArquivo, p.gabarito.nomeArquivo])).toEqual([
+      ['7CB3CA8191F93FA0DFF1.pdf', '0A7F0581FB096CC2E249.pdf'],
+      ['2222.pdf', '1111.pdf'],
+    ]);
+    expect(pendentes).toEqual([]);
+  });
+
   it('arquivo único com prova e gabarito é ignorado; justificativas vão à parte', () => {
     const { pares, ignorados, justificativas } = selectExamPairs(
       detail([
