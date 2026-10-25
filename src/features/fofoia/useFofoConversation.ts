@@ -5,6 +5,7 @@ import type { FofoContext } from '../../lib/fofoia/context';
 import { matchEditalTopics, type EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import { readLessonPart } from '../../lib/fofoia/lessonPart';
 import { chooseMode, shouldSuggestLesson, type FofoMode, type ModeSignals } from '../../lib/fofoia/signals';
+import { smallTalkReply } from '../../lib/fofoia/smallTalk';
 import { parseSummary, type ReviewSummary } from '../../lib/fofoia/summary';
 
 export interface FofoTurn {
@@ -20,9 +21,13 @@ export interface FofoTurn {
   summary?: ReviewSummary | null;
   /** Para "Tentar de novo" quando o provedor falha. */
   retry?: { message: string; requested: FofoMode | null; part?: number };
+  /** Cumprimento/agradecimento respondido pelo app: fica fora do histórico mandado à IA e da contagem de perguntas. */
+  smallTalk?: boolean;
 }
 
 export type BaseSignals = Omit<ModeSignals, 'requested' | 'text' | 'followUps'>;
+
+const isQuestionOpen = (s: BaseSignals) => s.activeQuestion !== null && !s.activeQuestion.answered;
 
 let seq = 0;
 const nextId = (prefix: string) => `${prefix}-${Date.now()}-${(seq += 1)}`;
@@ -55,10 +60,20 @@ export function useFofoConversation(input: {
   const send = async (message: string, requested: FofoMode | null = null, part?: number) => {
     const text = message.trim();
     if (!text || loading) return;
+    // Pedido de botão nunca é cumprimento; texto livre que é só "oi" ou "valeu" o próprio app responde
+    const local = requested === null ? smallTalkReply(text, { topicLabel: input.topicLabel, questionOpen: isQuestionOpen(input.baseSignals) }) : null;
+    if (local) {
+      setTurns((prev) => [
+        ...prev,
+        { id: nextId('s'), role: 'student', content: text, smallTalk: true },
+        { id: nextId('t'), role: 'tutor', content: local, smallTalk: true },
+      ]);
+      return;
+    }
     const conversation: ChatTurn[] = turns
-      .filter((t) => t.role !== 'notice' && !t.failed)
+      .filter((t) => t.role !== 'notice' && !t.failed && !t.smallTalk)
       .map((t) => ({ id: t.id, role: t.role === 'student' ? 'student' : 'tutor', content: t.content, createdAt: '' }));
-    const followUps = turns.filter((t) => t.role === 'student').length;
+    const followUps = turns.filter((t) => t.role === 'student' && !t.smallTalk).length;
     const signals: ModeSignals = { ...input.baseSignals, requested, text, followUps };
     const mode = chooseMode(signals);
     const editalCandidates = mode === 'EDITAL' ? matchEditalTopics(text, input.editalTopics) : undefined;

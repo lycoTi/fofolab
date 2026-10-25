@@ -190,6 +190,26 @@ body.fofolab-resizing {
   }
 }
 
+/* Resposta nova da FofoIA: um parágrafo de cada vez (o atraso de cada um vem do RichText) */
+@keyframes fofolab-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fofolab-reveal {
+  animation: fofolab-reveal 320ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fofolab-reveal {
+    animation: none;
+  }
+}
+
 /* Modais (Wizard, "ⓘ", importações) entram com um fade curto em vez de aparecer de supetão */
 @keyframes fofolab-fade-in {
   from {

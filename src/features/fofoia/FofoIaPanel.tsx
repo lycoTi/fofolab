@@ -129,10 +129,11 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             {`Oi! Sou a FofoIA. Pergunte o que quiser sobre ${topicLabel}: eu explico rápido ou dou uma aula completa.`}
           </p>
         )}
-        {turns.map((turn) => (
+        {turns.map((turn, index) => (
           <FofoMessage
             key={turn.id}
             turn={turn}
+            reveal={index === turns.length - 1 && turn.role === 'tutor'}
             topicLabel={topicLabel}
             aiConfigured={props.aiConfigured}
             onContinue={(part) => lesson(part)}

@@ -62,6 +62,28 @@ describe('Painel da FofoIA (spec 11)', () => {
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
   });
 
+  it('"oi" recebe um convite curto do app, sem selinho de jeito nem "Salvar resumo"', async () => {
+    const { container } = render(<FofoIaPanel {...props()} />);
+    await ask('oi');
+    expect(screen.getByText(/Estou aqui para estudar/)).toBeTruthy();
+    expect(container.textContent).not.toContain('🐹💡 Rápida');
+    expect(container.textContent).not.toContain('Exemplo simulado');
+    expect(screen.queryByRole('button', { name: 'Salvar resumo de revisão' })).toBeNull();
+  });
+
+  it('só a resposta mais nova surge por parágrafo', async () => {
+    const { container } = render(<FofoIaPanel {...props()} />);
+    await ask('qual a diferença entre orquestração e coreografia?');
+    const first = container.querySelectorAll('.fofolab-reveal').length;
+    expect(first).toBeGreaterThan(0);
+    await ask('e a coreografia escala melhor?');
+    // A resposta anterior já está parada; a nova é a que anima
+    expect(container.querySelectorAll('.fofolab-reveal').length).toBeGreaterThan(0);
+    const answers = [...container.querySelectorAll('.fofolab-enter.rounded-xl.border')];
+    expect(answers[0].querySelector('.fofolab-reveal')).toBeNull();
+    expect(answers.at(-1)!.querySelector('.fofolab-reveal')).not.toBeNull();
+  });
+
   it('pergunta de base vira "Do zero" e sugere a aula completa', async () => {
     render(<FofoIaPanel {...props()} />);
     await ask('o que é um microsserviço?');

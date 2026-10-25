@@ -5,6 +5,7 @@ import { demoFofoReply } from '../lib/fofoia/demo';
 import { matchEditalTopics, EDITAL_MAX_CANDIDATES, type EditalTopicEntry } from '../lib/fofoia/editalMatch';
 import { readLessonPart } from '../lib/fofoia/lessonPart';
 import { isTrueFalseQuestion, trueFalseHint } from '../lib/fofoia/trueFalseHint';
+import { smallTalkReply } from '../lib/fofoia/smallTalk';
 import { buildFofoPrompt } from '../lib/fofoia/prompts';
 import { chooseMode, isBasicQuestion, shouldSuggestLesson, type ModeSignals } from '../lib/fofoia/signals';
 import { formatSummaryForNotebook, parseSummary } from '../lib/fofoia/summary';
@@ -233,5 +234,31 @@ describe('Modo demonstração (sem chave)', () => {
     const hint = demoFofoReply('HINT', ctx, 'qual a resposta?');
     expect(hint).not.toMatch(/gabarito|errado|letra e/i);
     expect(parseSummary(demoFofoReply('SUMMARY', ctx, 'resumo'))).not.toBeNull();
+  });
+});
+
+describe('Cumprimento e agradecimento: do próprio app, sem IA', () => {
+  const opts = { topicLabel: '1.1 Monolitos e microsserviços', questionOpen: false };
+
+  it('responde "oi", "bom dia", "tudo bem?" com convite curto e o tópico, sem despejar conteúdo', () => {
+    for (const msg of ['oi', 'Olá!!', 'bom dia 😊', 'oi, tudo bem?', 'E aí, Fofo?', 'Boa noite, FofoIA']) {
+      const reply = smallTalkReply(msg, opts);
+      expect(reply, msg).toContain('1.1 Monolitos e microsserviços');
+      expect(reply!.length).toBeLessThan(260);
+    }
+    expect(smallTalkReply('oi, tudo bem?', opts)).toMatch(/^Oi! Tudo bem por aqui\./);
+    expect(smallTalkReply('oi', { ...opts, questionOpen: true })).toContain('pista');
+  });
+
+  it('agradecimento e "ok" têm a própria resposta', () => {
+    expect(smallTalkReply('valeu!', opts)).toMatch(/^De nada/);
+    expect(smallTalkReply('Muito obrigada', opts)).toMatch(/^De nada/);
+    expect(smallTalkReply('ok, entendi', opts)).toMatch(/^Que bom/);
+  });
+
+  it('cumprimento com pergunta, "não entendi" ou "certo?" vão para a IA', () => {
+    for (const msg of ['oi, o que é microsserviço?', 'Bom dia, me explica orquestração', 'não entendi', 'certo?', 'obrigado, mas e a coreografia?', '']) {
+      expect(smallTalkReply(msg, opts), msg).toBeNull();
+    }
   });
 });
