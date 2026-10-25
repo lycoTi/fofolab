@@ -1,30 +1,63 @@
 {
   "identificador": "TELEBRAS_25",
   "itens": {
-    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:105": {
+    "TELEBRAS_25:02A841CD7E3B256A0F85C4096A481C4BE5C82237B440909486D211B69F01732E:119": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-              "confianca": 0.7
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
-              "confianca": 0.85
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:02A841CD7E3B256A0F85C4096A481C4BE5C82237B440909486D211B69F01732E:120": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:2674085EC4BD06F038C4F781375511F5EE6A9836AE402A6DEBAB4969F1142A3E:53": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
             },
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-              "confianca": 0.8
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.85
             }
           ],
           "versaoVocabulario": 7
@@ -32,58 +65,166 @@
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-          "confianca": 0.75
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
         },
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
-          "confianca": 0.68
+          "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:53": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:79": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 5
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.92
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.94
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:53": {
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:80": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.85
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
-              "confianca": 0.6
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.9
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
             },
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
               "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 5
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.91
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-          "confianca": 0.88
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.48
         },
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
-          "confianca": 0.73
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.46
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:81": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

@@ -3,105 +3,137 @@
   "itens": {
     "ITAIPU_23:924_ITAIPU_002_01:25": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
-              "confianca": 0.6
-            },
-            {
-              "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>abuso-do-poder-confiado-e-apropriacao-de-decisoes-publicas-em-beneficio-particular-dimensoes-politica-administrativa-e-publico-privada",
-              "confianca": 0.4
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
-              "confianca": 0.85
-            },
-            {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
-              "confianca": 0.8
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.96
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
-          "confianca": 0.73
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.96
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
+    "ITAIPU_23:924_ITAIPU_008_01:42": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ITAIPU_23:924_ITAIPU_017_01:46": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.95
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
               "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
               "confianca": 0.97
             }
           ],
-          "versaoVocabulario": 9
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 4
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-          "confianca": 0.98
+          "confianca": 0.96
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "ITAIPU_23:924_ITAIPU_017_01:48": {
+    "ITAIPU_23:924_ITAIPU_017_01:47": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
               "confianca": 0.95
             },
             {
-              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao",
+              "id": "raciocinio-logico>nocoes-de-estatistica>medidas-de-posicao-media-moda-e-mediana",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
               "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
           "confianca": 0.95
+        },
+        {
+          "id": "raciocinio-logico>nocoes-de-estatistica>medidas-de-posicao-media-moda-e-mediana",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

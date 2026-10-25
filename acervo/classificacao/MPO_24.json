@@ -3,20 +3,19 @@
   "itens": {
     "MPO_24:958_MPO_ANALISTA_001_01:41": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+              "confianca": 0.95
+            },
+            {
               "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
-              "confianca": 0.98
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>conceitos-de-economicidade-eficiencia-eficacia-efetividade-e-equidade-aplicados-a-administracao-publica",
+              "confianca": 0.85
             }
           ],
           "versaoVocabulario": 7
@@ -24,28 +23,302 @@
       },
       "consenso": [
         {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+          "confianca": 0.95
+        },
+        {
           "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
-          "confianca": 0.97
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>conceitos-de-economicidade-eficiencia-eficacia-efetividade-e-equidade-aplicados-a-administracao-publica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_001_01:42": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+              "confianca": 0.98
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.92
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>conceitos-de-economicidade-eficiencia-eficacia-efetividade-e-equidade-aplicados-a-administracao-publica",
+              "confianca": 0.88
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+          "confianca": 0.98
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+          "confianca": 0.92
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>conceitos-de-economicidade-eficiencia-eficacia-efetividade-e-equidade-aplicados-a-administracao-publica",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:100": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.88
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+          "confianca": 0.93
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "MPO_24:958_MPO_ANALISTA_001_01:42": {
+    "MPO_24:958_MPO_ANALISTA_007_01:61": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.95
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+          "confianca": 0.95
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:62": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:64": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+          "confianca": 0.48
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:65": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+          "confianca": 0.48
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:69": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-operacao-de-infraestrutura-e-atendimento-a-usuarios-de-tic-portaria-sgd-mgi-n-1-070-de-1-de-junho-de-2023",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-operacao-de-infraestrutura-e-atendimento-a-usuarios-de-tic-portaria-sgd-mgi-n-1-070-de-1-de-junho-de-2023",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-e-gestao-de-estacoes-de-trabalho-portaria-sgd-mgi-n-2-715-de-21-de-junho-de-2023",
+              "confianca": 0.95
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-e-gestao-de-estacoes-de-trabalho-portaria-sgd-mgi-n-2-715-de-21-de-junho-de-2023",
+          "confianca": 0.95
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:71": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-outsourcing-de-impressao-portaria-sgd-mgi-n-370-de-8-de-marco-de-2023",
               "confianca": 0.98
             }
           ],
@@ -54,8 +327,199 @@
       },
       "consenso": [
         {
-          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
-          "confianca": 0.97
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-servicos-de-outsourcing-de-impressao-portaria-sgd-mgi-n-370-de-8-de-marco-de-2023",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:91": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+              "confianca": 0.88
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+          "confianca": 0.64
+        }
+      ],
+      "incerto": true,
+      "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:93": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>realizacao-de-pesquisa-de-precos-instrucao-normativa-seges-me-n-65-de-7-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:94": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.94
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:95": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+          "confianca": 0.93
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:97": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.95
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+          "confianca": 0.95
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:99": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.93
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+          "confianca": 0.96
         }
       ],
       "incerto": false,

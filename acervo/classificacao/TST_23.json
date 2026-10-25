@@ -1,61 +1,122 @@
 {
   "identificador": "TST_23",
   "itens": {
+    "TST_23:918_TST_SERVIDOR_CB1_01:10": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:11": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:12": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TST_23:918_TST_SERVIDOR_CB1_01:18": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.85
+              "confianca": 0.75
             }
           ],
-          "versaoVocabulario": 9
+          "versaoVocabulario": 5
         },
-        "agy:gemini-3.8-flash-low": {
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
               "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 3
-        }
-      },
-      "consenso": [
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-          "confianca": 0.88
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "TST_23:918_TST_SERVIDOR_CB1_01:20": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
+            },
             {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
               "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-          "confianca": 0.88
+          "confianca": 0.83
         }
       ],
       "incerto": false,
@@ -63,23 +124,44 @@
     },
     "TST_23:918_TST_SERVIDOR_CB1_01:21": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:22": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
               "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 13
+          "versaoVocabulario": 2
         },
-        "agy:gemini-3.8-flash-low": {
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 7
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
@@ -91,35 +173,55 @@
       "incerto": false,
       "concordancia": "concordam"
     },
-    "TST_23:918_TST_SERVIDOR_CB1_01:22": {
+    "TST_23:918_TST_SERVIDOR_CB1_01:26": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "id": "normas-institucionais>regimento-interno-do-tst",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 9
         }
       },
       "consenso": [
         {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-          "confianca": 0.9
+          "id": "normas-institucionais>regimento-interno-do-tst",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:9": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

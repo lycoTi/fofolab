@@ -1,35 +1,97 @@
 {
   "identificador": "SEFAZ_SE_25_AUDITOR",
   "itens": {
-    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:19": {
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:118": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
               "confianca": 0.95
             }
           ],
           "versaoVocabulario": 8
-        },
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:17": {
+      "opinioes": {
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>utilizacao-do-credito-disponivel-pre-empenho-empenho-e-descentralizacao-de-credito-interna-e-externa",
               "confianca": 0.85
             },
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>utilizacao-do-credito-disponivel-pre-empenho-empenho-e-descentralizacao-de-credito-interna-e-externa",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:19": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
               "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
-          "confianca": 0.9
+          "confianca": 0.88
         }
       ],
       "incerto": false,
@@ -37,61 +99,91 @@
     },
     "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:58": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>normas-gerais-de-direito-financeiro",
-              "confianca": 0.85
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>regime-constitucional-das-financas-publicas",
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>financas-publicas",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 3
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>regime-constitucional-das-financas-publicas",
-          "confianca": 0.48
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>normas-gerais-de-direito-financeiro",
-          "confianca": 0.43
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.77
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "concordam"
     },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:81": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:83": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
               "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 8
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
@@ -103,111 +195,64 @@
       "incerto": false,
       "concordancia": "concordam"
     },
-    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:83": {
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:85": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 11
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 10
         }
       },
       "consenso": [
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.97
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:88": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
-              "confianca": 0.8
-            },
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.6
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.9
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-saldo-credor-na-conta-caixa-por-falta-de-emissao-de-documentos-fiscais",
+              "confianca": 0.95
             },
             {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 8
-        }
-      },
-      "consenso": [
-        {
-          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
-          "confianca": 0.83
-        },
-        {
-          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.75
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:90": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.8
-            },
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
               "confianca": 0.4
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 4
         },
-        "agy:gemini-3.8-flash-low": {
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.85
+            },
+            {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.9
+              "confianca": 0.7
             }
           ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.85
+          "confianca": 0.55
         }
       ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "incerto": true,
+      "concordancia": "discordam"
     }
   }
 }

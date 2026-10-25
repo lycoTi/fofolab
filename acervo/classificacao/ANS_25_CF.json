@@ -3,33 +3,40 @@
   "itens": {
     "ANS_25_CF:062_ANS_CF_001_01:93": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-              "confianca": 0.98
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>medidas-de-posicao-dispersao-e-assimetria-propriedades-da-media-e-da-variancia-numeros-indices",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 10
         }
       },
       "consenso": [
         {
           "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
-          "confianca": 0.97
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>medidas-de-posicao-dispersao-e-assimetria-propriedades-da-media-e-da-variancia-numeros-indices",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

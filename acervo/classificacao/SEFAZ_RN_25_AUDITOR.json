@@ -3,203 +3,266 @@
   "itens": {
     "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:1": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
             }
           ],
           "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.96
+            }
+          ],
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.93
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.49
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.48
         }
       ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:32": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 10
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
               "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 7
         }
       },
       "consenso": [
         {
           "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
           "confianca": 0.95
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:59": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.85
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 9
         },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.95
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 5
-        }
-      },
-      "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
           "confianca": 0.9
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:35": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>poderes-da-administracao-publica>hierarquico-disciplinar-regulamentar-e-de-policia",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>poderes-da-administracao-publica>vinculado-discricionario-hierarquico-disciplinar-e-regulamentar",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>poderes-da-administracao-publica>hierarquico-disciplinar-regulamentar-e-de-policia",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>poderes-da-administracao-publica>vinculado-discricionario-hierarquico-disciplinar-e-regulamentar",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:59": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:24": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
               "confianca": 0.95
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>testes-substantivos",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 3
+          "versaoVocabulario": 5
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.95
+          "confianca": 0.93
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:33": {
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:52": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-              "confianca": 0.7
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 5
-        }
-      },
-      "consenso": [
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-          "confianca": 0.8
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:62": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
-              "confianca": 0.8
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.98
             },
             {
-              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
-              "confianca": 0.6
-            }
-          ],
-          "versaoVocabulario": 11
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
-              "confianca": 0.9
-            },
-            {
-              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
+              "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
               "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 9
         }
       },
       "consenso": [
         {
-          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>pre-processamento-e-classificacao-de-textos",
-          "confianca": 0.83
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.98
         },
         {
-          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>representacoes-vetoriais-embeddings-e-similaridade-semantica",
-          "confianca": 0.75
+          "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:60": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>series-temporais-estacionariedade-processo-autorregressivo-e-de-media-movel",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.94
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:63": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>qualidade-e-rastreabilidade>completude-consistencia-validade-unicidade-acuracia-e-atualidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>qualidade-e-rastreabilidade>metadados-catalogo-e-linhagem",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>qualidade-e-rastreabilidade>completude-consistencia-validade-unicidade-acuracia-e-atualidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>qualidade-e-rastreabilidade>metadados-catalogo-e-linhagem",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

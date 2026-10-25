@@ -1,77 +1,111 @@
 {
   "identificador": "STJ_24",
   "itens": {
-    "STJ_24:018_STJ_001_01:95": {
+    "STJ_24:018_STJ_003_01:113": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.97
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>prompts-recuperacao-de-informacao-para-geracao-de-respostas-e-ajuste-de-modelos",
               "confianca": 0.98
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>integracao-com-dados-e-ia>representacoes-vetoriais-busca-semantica-e-recuperacao-de-informacao-para-geracao-de-respostas",
+              "confianca": 0.85
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>modelos-de-linguagem-e-llms",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 7
+          "versaoVocabulario": 6
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>prompts-recuperacao-de-informacao-para-geracao-de-respostas-e-ajuste-de-modelos",
           "confianca": 0.98
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>integracao-com-dados-e-ia>representacoes-vetoriais-busca-semantica-e-recuperacao-de-informacao-para-geracao-de-respostas",
+          "confianca": 0.85
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>modelos-de-linguagem-e-llms",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_007_01:113": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.75
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.75
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "STJ_24:018_STJ_007_01:81": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-              "confianca": 0.98
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.6
             }
           ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.94
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "STJ_24:018_STJ_007_01:82": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
@@ -79,29 +113,20 @@
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.93
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "STJ_24:018_STJ_007_01:83": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
@@ -109,77 +134,88 @@
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.93
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
-    },
-    "STJ_24:018_STJ_007_01:98": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.97
-            }
-          ],
-          "versaoVocabulario": 12
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 7
-        }
-      },
-      "consenso": [
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.98
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "STJ_24:018_STJ_016_01:110": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
               "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 9
+          "versaoVocabulario": 5
         },
-        "agy:gemini-3.8-flash-low": {
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.92
+            },
+            {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.95
+              "confianca": 0.88
             }
           ],
-          "versaoVocabulario": 4
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-          "confianca": 0.93
+          "confianca": 0.89
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "STJ_24:018_STJ_CB1_01:25": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

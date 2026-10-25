@@ -1,68 +1,68 @@
 {
   "identificador": "SEPLAD_DF_22_AUDITOR",
   "itens": {
-    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:43": {
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:19": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
-              "confianca": 0.9
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+              "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 13
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>distribuicao-de-recursos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
-          "confianca": 0.9
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+          "confianca": 0.93
         }
       ],
       "incerto": false,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:8": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
-              "confianca": 0.8
+              "confianca": 0.9
             },
             {
               "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
               "confianca": 0.6
             }
           ],
-          "versaoVocabulario": 12
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
-              "confianca": 0.92
-            },
-            {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 7
+          "versaoVocabulario": 4
         }
       },
       "consenso": [
         {
           "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>qualificacao-de-noticias-de-irregularidade-e-juizo-de-admissibilidade-arquivamento-fundamentado-investigacao-e-instauracao-de-processo",
-          "confianca": 0.86
+          "confianca": 0.9
         },
         {
           "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
-          "confianca": 0.7
+          "confianca": 0.6
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

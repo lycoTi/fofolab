@@ -1,22 +1,13 @@
 {
   "identificador": "SEFIN_FORTALEZA_CE_23",
   "itens": {
-    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_001_01:123": {
+    "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_001_01:132": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.98
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
             }
           ],
           "versaoVocabulario": 6
@@ -24,28 +15,82 @@
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.97
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
-    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:80": {
+    "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_CG1_01:20": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>responsabilidade-objetiva-da-pessoa-juridica-e-requisitos-de-ato-lesivo-e-interesse-ou-beneficio",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>responsabilidade-objetiva-da-pessoa-juridica-e-requisitos-de-ato-lesivo-e-interesse-ou-beneficio",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_005_01:139": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>principios-orcamentarios",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 5
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>principios-orcamentarios",
+          "confianca": 0.48
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:1": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
               "confianca": 0.98
             }
           ],
@@ -54,152 +99,112 @@
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-          "confianca": 0.97
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:1": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 9
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 5
-        }
-      },
-      "consenso": [
-        {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.48
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
-          "confianca": 0.25
-        }
-      ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "concordancia": "uma-opiniao"
     },
     "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:2": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
-              "confianca": 0.4
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
             }
           ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 7
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.48
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
-          "confianca": 0.2
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:3": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-              "confianca": 0.7
-            },
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
-              "confianca": 0.6
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
             }
           ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 7
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.48
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-          "confianca": 0.35
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
-    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:4": {
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:35": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
+              "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
               "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 9
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 5
+          "versaoVocabulario": 7
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.48
+          "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+          "confianca": 0.95
         },
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>progressividade-regressividade-e-neutralidade-da-tributacao-resultados-primario-e-nominal-deficit-e-necessidades-de-financiamento-restricoes-riscos-e-sustentabilidade-fiscal-em-analise-aplicada",
-          "confianca": 0.4
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.8
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_CG1_01:4": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

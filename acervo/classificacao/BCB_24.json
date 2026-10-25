@@ -1,125 +1,63 @@
 {
   "identificador": "BCB_24",
   "itens": {
-    "BCB_24:959_BCB_CB1_01:14": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 12
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 8
-        }
-      },
-      "consenso": [
-        {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.92
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "BCB_24:959_BCB_CB1_01:15": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 12
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 8
-        }
-      },
-      "consenso": [
-        {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.92
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
     "BCB_24:959_BCB_CB1_01:16": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.98
             }
           ],
-          "versaoVocabulario": 3
+          "versaoVocabulario": 6
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.9
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.98
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
-    "BCB_24:959_BCB_CB1_01:17": {
+    "BCB_24:959_BCB_CB1_01:39": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
               "confianca": 0.95
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>diferenca-entre-dados-pessoais-e-dados-pessoais-sensiveis-nocoes-de-tarjamento-anonimizacao-e-risco-de-reidentificacao",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 6
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.9
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>diferenca-entre-dados-pessoais-e-dados-pessoais-sensiveis-nocoes-de-tarjamento-anonimizacao-e-risco-de-reidentificacao",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

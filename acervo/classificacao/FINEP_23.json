@@ -3,63 +3,108 @@
   "itens": {
     "FINEP_23:931_FINEP_001_01:48": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
-              "confianca": 0.95
+              "confianca": 0.92
             }
           ],
           "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
+              "confianca": 0.99
+            }
+          ],
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
+        {
+          "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
+          "confianca": 0.5
+        },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
-          "confianca": 0.93
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "FINEP_23:931_FINEP_004_01:48": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
-              "confianca": 0.75
-            }
-          ],
-          "versaoVocabulario": 6
-        }
-      },
-      "consenso": [
-        {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
-          "confianca": 0.63
+          "confianca": 0.46
         }
       ],
       "incerto": true,
-      "concordancia": "concordam"
+      "concordancia": "discordam"
+    },
+    "FINEP_23:931_FINEP_004_01:48": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FINEP_23:931_FINEP_005_01:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FINEP_23:931_FINEP_CG1_01_OUTRA:28": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 10
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

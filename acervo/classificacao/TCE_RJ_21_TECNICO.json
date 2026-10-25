@@ -1,22 +1,21 @@
 {
   "identificador": "TCE_RJ_21_TECNICO",
   "itens": {
-    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:123": {
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:79": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.98
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.92
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.9
             }
           ],
           "versaoVocabulario": 6
@@ -25,41 +24,19 @@
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.97
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:79": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 9
+          "confianca": 0.95
         },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 4
-        }
-      },
-      "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.89
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.92
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

@@ -3,49 +3,11 @@
   "itens": {
     "TCE_MG_25:1BE88E5CAB961D2715C5F5658004FAE90A1B371535394273449447D23021EBE5:47": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>normas-gerais-de-direito-financeiro",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>normas-gerais-de-direito-financeiro",
+              "id": "direito-financeiro>direito-financeiro",
               "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 3
-        }
-      },
-      "consenso": [
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>normas-gerais-de-direito-financeiro",
-          "confianca": 0.93
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:17": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [],
-          "versaoVocabulario": 11
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
-              "confianca": 0.75
-            },
-            {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
-              "confianca": 0.7
             }
           ],
           "versaoVocabulario": 6
@@ -53,33 +15,120 @@
       },
       "consenso": [
         {
-          "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
-          "confianca": 0.38
+          "id": "direito-financeiro>direito-financeiro",
+          "confianca": 0.95
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:16": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.95
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.95
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:17": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-constitucional>poder-legislativo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 10
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>poder-legislativo",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:20": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:22": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:31": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.8
-            },
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
-              "confianca": 0.7
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-              "confianca": 0.9
+              "confianca": 0.95
             },
             {
               "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
@@ -87,37 +136,45 @@
             }
           ],
           "versaoVocabulario": 2
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.85
-        },
-        {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
-          "confianca": 0.77
+          "confianca": 0.73
         }
       ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "incerto": true,
+      "concordancia": "discordam"
     },
-    "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:70": {
+    "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:34": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>evidencia-e-conclusao>suficiencia-adequacao-e-confiabilidade-nocao-de-achado-e-de-limitacoes",
               "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.85
             }
           ],
           "versaoVocabulario": 6
@@ -125,36 +182,31 @@
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>evidencia-e-conclusao>suficiencia-adequacao-e-confiabilidade-nocao-de-achado-e-de-limitacoes",
           "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
-    "TCE_MG_25:722978F212C4C1FC816EFAB03D8D8DC0128A84530A6F0B4E3E27DF476DB322A7:71": {
+    "TCE_MG_25:3422016E039040021DE299BA96CF130F5FD3F653FDDAA2F4183B89EC70E49ACB:70": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
-              "confianca": 0.8
-            },
-            {
-              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
-              "confianca": 0.7
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>notas-explicativas-as-demonstracoes-contabeis",
               "confianca": 0.95
             },
             {
-              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
               "confianca": 0.85
             }
           ],
@@ -163,41 +215,49 @@
       },
       "consenso": [
         {
-          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
-          "confianca": 0.88
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>notas-explicativas-as-demonstracoes-contabeis",
+          "confianca": 0.95
         },
         {
-          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
-          "confianca": 0.77
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
-    "TCE_MG_25:A0975A53B51C23A08DD7956AE1979BC7C50E0EA2AE9DEDDC5062F1AE2812099F:47": {
+    "TCE_MG_25:722978F212C4C1FC816EFAB03D8D8DC0128A84530A6F0B4E3E27DF476DB322A7:71": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
-              "confianca": 0.92
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.95
             },
             {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
               "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.7
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 4
         }
       },
       "consenso": [
         {
-          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
-          "confianca": 0.92
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.95
         },
         {
-          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
           "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -205,45 +265,82 @@
     },
     "TCE_MG_25:A1559974E62EFEE70A476728E778E766A05DAD5986180CD64DCE4634728CF0A4:36": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
-              "confianca": 0.7
-            },
-            {
-              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
-              "confianca": 0.4
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
-              "confianca": 0.8
-            },
-            {
-              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
-              "confianca": 0.7
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 9
         }
       },
       "consenso": [
         {
-          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
-          "confianca": 0.7
-        },
-        {
-          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
-          "confianca": 0.6
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:A1559974E62EFEE70A476728E778E766A05DAD5986180CD64DCE4634728CF0A4:39": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>integridade-como-responsabilidade-institucional>coerencia-entre-regras-e-praticas-ambiente-organizacional-e-incentivos-canais-de-orientacao-e-relato-papel-do-exemplo-da-confianca-e-da-prestacao-de-contas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>integridade-como-responsabilidade-institucional>coerencia-entre-regras-e-praticas-ambiente-organizacional-e-incentivos-canais-de-orientacao-e-relato-papel-do-exemplo-da-confianca-e-da-prestacao-de-contas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:A1559974E62EFEE70A476728E778E766A05DAD5986180CD64DCE4634728CF0A4:43": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>uso-responsavel-de-inteligencia-artificial>erros-conteudo-nao-sustentado-vieses-e-efeitos-sobre-grupos-protecao-de-informacoes-supervisao-rastreabilidade-e-contestacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>uso-responsavel-de-inteligencia-artificial>possibilidades-de-classificacao-busca-sintese-e-apoio-a-analise-escolha-entre-ia-solucao-simples-e-revisao-humana",
+              "confianca": 0.85
+            },
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 7
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>uso-responsavel-de-inteligencia-artificial>erros-conteudo-nao-sustentado-vieses-e-efeitos-sobre-grupos-protecao-de-informacoes-supervisao-rastreabilidade-e-contestacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>uso-responsavel-de-inteligencia-artificial>possibilidades-de-classificacao-busca-sintese-e-apoio-a-analise-escolha-entre-ia-solucao-simples-e-revisao-humana",
+          "confianca": 0.85
+        },
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

@@ -1,0 +1,39 @@
+{
+  "identificador": "EMPREL_23",
+  "itens": {
+    "EMPREL_23:863_EMPREL_CG1_01:21": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+          "confianca": 0.48
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    }
+  }
+}

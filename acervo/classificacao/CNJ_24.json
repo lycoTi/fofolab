@@ -1,25 +1,58 @@
 {
   "identificador": "CNJ_24",
   "itens": {
+    "CNJ_24:979_CNJ_004_01:102": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.9
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CNJ_24:979_CNJ_004_01:103": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.95
+            },
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
               "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
               "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
@@ -31,363 +64,310 @@
       "incerto": false,
       "concordancia": "concordam"
     },
-    "CNJ_24:979_CNJ_007_01:111": {
+    "CNJ_24:979_CNJ_004_01:104": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
-              "confianca": 0.6
-            },
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
-              "confianca": 0.4
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
-              "confianca": 0.85
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.9
             },
             {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
-              "confianca": 0.75
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 8
         }
       },
       "consenso": [
         {
-          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
-          "confianca": 0.73
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.9
         },
         {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
-          "confianca": 0.57
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "CNJ_24:979_CNJ_004_01:105": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.9
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:1": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.94
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:10": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>coesao-e-coerencia-textual",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>coesao-e-coerencia-textual",
-          "confianca": 0.48
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
         },
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.4
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.8
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:2": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>conectivos-e-relacoes-de-coesao",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 10
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>coesao-coerencia-e-reescrita-de-frases",
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
               "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>coesao-coerencia-e-reescrita-de-frases",
-          "confianca": 0.48
-        },
-        {
-          "id": "lingua-portuguesa>conectivos-e-relacoes-de-coesao",
-          "confianca": 0.43
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.93
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "concordam"
     },
     "CNJ_24:979_CNJ_CB3_01:3": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.88
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:4": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 8
+          "assuntos": [],
+          "versaoVocabulario": 11
         }
       },
-      "consenso": [
-        {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.94
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:5": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
               "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 13
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.88
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:6": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>classes-de-palavras-e-coesao-textual",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>morfossintaxe-e-funcoes-do-que",
-              "confianca": 0.98
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>morfossintaxe-e-funcoes-do-que",
-          "confianca": 0.49
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.95
         },
         {
-          "id": "lingua-portuguesa>classes-de-palavras-e-coesao-textual",
-          "confianca": 0.45
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.9
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:7": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.94
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "CNJ_24:979_CNJ_CB3_01:8": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>interpretacao-de-texto",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 5
+          "assuntos": [],
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [],
+          "versaoVocabulario": 12
         }
       },
-      "consenso": [
-        {
-          "id": "lingua-portuguesa>interpretacao-de-texto",
-          "confianca": 0.94
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "CNJ_24:979_CNJ_CB3_01:9": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>reescrita-de-frases-e-niveis-de-formalidade",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>concordancia-e-reescrita-de-frases",
-              "confianca": 0.98
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 8
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>concordancia-e-reescrita-de-frases",
-          "confianca": 0.49
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.95
         },
         {
-          "id": "lingua-portuguesa>reescrita-de-frases-e-niveis-de-formalidade",
-          "confianca": 0.45
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

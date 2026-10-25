@@ -1,89 +1,169 @@
 {
   "identificador": "CAPES_23",
   "itens": {
-    "CAPES_23:947_CAPES_003_01:81": {
+    "CAPES_23:947_CAPES_001_01:73": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 8
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
               "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+              "confianca": 0.5
             }
           ],
-          "versaoVocabulario": 2
+          "versaoVocabulario": 4
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_003_01:81": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.88
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.95
+          "confianca": 0.48
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.48
         }
       ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "CAPES_23:947_CAPES_004_01:78": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            },
+            {
               "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
-              "confianca": 0.98
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 8
         }
       },
       "consenso": [
         {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        },
+        {
           "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
-          "confianca": 0.97
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
-    "CAPES_23:947_CAPES_005_01:54": {
+    "CAPES_23:947_CAPES_005_01:53": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
+        "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
-              "confianca": 0.6
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.85
             },
             {
               "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
-              "confianca": 0.55
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 12
+          "versaoVocabulario": 11
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+          "confianca": 0.9
         },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_005_01:54": {
+      "opinioes": {
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
               "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
-              "confianca": 0.88
+              "confianca": 0.9
             },
             {
               "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.9
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>estudo-tecnico-preliminar-e-termo-de-referencia",
               "confianca": 0.85
             }
           ],
@@ -93,15 +173,127 @@
       "consenso": [
         {
           "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
-          "confianca": 0.74
+          "confianca": 0.9
         },
         {
           "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_005_01:70": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
           "confianca": 0.7
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_005_01:72": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>tratamento-de-informacao-classificada-e-decreto-n-7-845-2012",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>tratamento-de-informacao-classificada-e-decreto-n-7-845-2012",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_005_01:74": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.85
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.85
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CAPES_23:947_CAPES_005_01:75": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-737-2012-lei-de-delitos-informaticos-art-2",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-737-2012-lei-de-delitos-informaticos-art-2",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

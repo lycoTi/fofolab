@@ -1,39 +1,34 @@
 {
   "identificador": "SEFAZ_SE_21_AUDITOR",
   "itens": {
-    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_CG1_01:3": {
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_001_01:46": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>emprego-dos-sinais-de-pontuacao",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 11
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>pontuacao",
-              "confianca": 0.99
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>importancias-da-amostragem-estatistica-em-auditoria",
+              "confianca": 0.75
             }
           ],
-          "versaoVocabulario": 6
+          "versaoVocabulario": 8
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>pontuacao",
-          "confianca": 0.5
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.9
         },
         {
-          "id": "lingua-portuguesa>emprego-dos-sinais-de-pontuacao",
-          "confianca": 0.45
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>importancias-da-amostragem-estatistica-em-auditoria",
+          "confianca": 0.75
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

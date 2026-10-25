@@ -1,85 +1,74 @@
 {
   "identificador": "SEFAZ_AC_23",
   "itens": {
-    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:56": {
+    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:41": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.98
-            }
-          ],
-          "versaoVocabulario": 7
-        }
-      },
-      "consenso": [
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.94
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:57": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
               "confianca": 0.9
             },
             {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
-              "confianca": 0.6
-            }
-          ],
-          "versaoVocabulario": 9
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 3
-        }
-      },
-      "consenso": [
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.93
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:60": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>controle-externo-e-tribunais-de-contas",
-              "confianca": 0.7
-            },
-            {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
-              "confianca": 0.6
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.75
             }
           ],
           "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+          "confianca": 0.9
         },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:57": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.95
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 6
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.95
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_AC_23:946_SEFAZ_AC_003_01:60": {
+      "opinioes": {
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
@@ -87,47 +76,26 @@
               "confianca": 0.9
             },
             {
-              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
               "confianca": 0.85
             }
           ],
-          "versaoVocabulario": 2
-        }
-      },
-      "consenso": [
-        {
-          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
-          "confianca": 0.75
-        }
-      ],
-      "incerto": true,
-      "concordancia": "discordam"
-    },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:10": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>redacao-oficial",
-              "confianca": 0.9
-            }
-          ],
-          "versaoVocabulario": 9
+          "versaoVocabulario": 3
         },
-        "agy:gemini-3.8-flash-low": {
+        "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>redacao-oficial",
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 4
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>redacao-oficial",
-          "confianca": 0.93
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -135,50 +103,11 @@
     },
     "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:12": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>regra-de-tres-e-proporcionalidade",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "estatistica-programacao-e-analise-de-dados>regra-de-tres-e-proporcionalidade",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 4
-        }
-      },
-      "consenso": [
-        {
-          "id": "estatistica-programacao-e-analise-de-dados>regra-de-tres-e-proporcionalidade",
-          "confianca": 0.95
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:15": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>matematica-financeira",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "estatistica-programacao-e-analise-de-dados>matematica-financeira",
-              "confianca": 0.95
+              "id": "raciocinio-logico>razoes-e-proporcoes>regras-de-tres-simples-e-compostas",
+              "confianca": 0.98
             }
           ],
           "versaoVocabulario": 6
@@ -186,136 +115,186 @@
       },
       "consenso": [
         {
-          "id": "estatistica-programacao-e-analise-de-dados>matematica-financeira",
-          "confianca": 0.9
+          "id": "raciocinio-logico>razoes-e-proporcoes>regras-de-tres-simples-e-compostas",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:15": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxa-real-e-inflacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 4
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>coerencia-entre-objetivos-recursos-e-resultados-divulgados-compromissos-de-politicas-publicas-e-informacoes-da-carta-anual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>taxa-real-e-inflacao",
+          "confianca": 0.48
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>coerencia-entre-objetivos-recursos-e-resultados-divulgados-compromissos-de-politicas-publicas-e-informacoes-da-carta-anual",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:4": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.48
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "discordam"
+    },
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:6": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 12
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.98
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:4": {
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:9": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>pontuacao",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>pontuacao",
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
               "confianca": 0.98
             }
           ],
-          "versaoVocabulario": 4
+          "versaoVocabulario": 3
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.96
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 12
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>pontuacao",
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
           "confianca": 0.97
         }
       ],
       "incerto": false,
       "concordancia": "concordam"
     },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:6": {
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG3_01:15": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>coesao-textual-e-conectivos",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>coesao-e-coerencia-textual",
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
               "confianca": 0.95
             }
           ],
-          "versaoVocabulario": 3
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>coesao-e-coerencia-textual",
-          "confianca": 0.48
-        },
-        {
-          "id": "lingua-portuguesa>coesao-textual-e-conectivos",
-          "confianca": 0.43
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.95
         }
       ],
-      "incerto": true,
-      "concordancia": "discordam"
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG1_01:9": {
+    "SEFAZ_AC_23:946_SEFAZ_AC_CG3_01:25": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "lingua-portuguesa>redacao-oficial",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 9
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "lingua-portuguesa>redacao-oficial",
-              "confianca": 0.95
+              "id": "realidade-brasileira>geografia-e-urbanizacao-regional",
+              "confianca": 0.9
             }
           ],
-          "versaoVocabulario": 3
+          "versaoVocabulario": 10
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>redacao-oficial",
+          "id": "realidade-brasileira>geografia-e-urbanizacao-regional",
           "confianca": 0.9
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
-    },
-    "SEFAZ_AC_23:946_SEFAZ_AC_CG3_01:25": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-              "confianca": 0.7
-            }
-          ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-              "confianca": 0.8
-            }
-          ],
-          "versaoVocabulario": 6
-        }
-      },
-      "consenso": [
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.75
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }

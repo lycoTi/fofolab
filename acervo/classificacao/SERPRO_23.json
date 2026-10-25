@@ -1,0 +1,79 @@
+{
+  "identificador": "SERPRO_23",
+  "itens": {
+    "SERPRO_23:846_SERPRO_23_001_01:100": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>design-de-software>microsservicos-orquestracao-de-servicos-e-api-gateway-e-containers>padroes-de-microsservicos-saga-e-cqrs",
+              "confianca": 0.95
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>arquiteturas-em-camadas-servicos-e-microservicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>design-de-software>microsservicos-orquestracao-de-servicos-e-api-gateway-e-containers",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 9
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>design-de-software>microsservicos-orquestracao-de-servicos-e-api-gateway-e-containers>padroes-de-microsservicos-saga-e-cqrs",
+          "confianca": 0.95
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>arquiteturas-em-camadas-servicos-e-microservicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>design-de-software>microsservicos-orquestracao-de-servicos-e-api-gateway-e-containers",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SERPRO_23:846_SERPRO_23_001_01:88": {
+      "opinioes": {
+        "agy:gemini-3.8-flash-low": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>gestao-de-projetos-e-produtos-de-software>tecnicas-de-priorizacao-e-de-estimativas-story-points",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 8
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>gestao-de-projetos-e-produtos-de-software>tecnicas-de-priorizacao-e-de-estimativas-story-points",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

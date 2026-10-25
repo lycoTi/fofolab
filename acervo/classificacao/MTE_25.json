@@ -1,119 +1,79 @@
 {
   "identificador": "MTE_25",
   "itens": {
-    "MTE_25:070_MTE_CF_001_01:10": {
+    "MTE_25:070_MTE_CF_001_01:12": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
-              "confianca": 0.7
-            },
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>fundamentos-sociologicos>instituicoes-socializacao-e-acao-coletiva-estratificacao-e-mobilidade-social-redes-poder-discriminacao-e-reproducao-das-desigualdades",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 13
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>fundamentos-sociologicos>instituicoes-socializacao-e-acao-coletiva-estratificacao-e-mobilidade-social-redes-poder-discriminacao-e-reproducao-das-desigualdades",
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
               "confianca": 0.9
             },
             {
-              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
-              "confianca": 0.75
+              "id": "realidade-brasileira>genero-raca-etnia-e-classe-social>politicas-de-transferencia-de-renda-3-4-discriminacao-e-exclusao-social",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+              "confianca": 0.8
             }
           ],
           "versaoVocabulario": 7
-        }
-      },
-      "consenso": [
-        {
-          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
-          "confianca": 0.73
-        },
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>fundamentos-sociologicos>instituicoes-socializacao-e-acao-coletiva-estratificacao-e-mobilidade-social-redes-poder-discriminacao-e-reproducao-das-desigualdades",
-          "confianca": 0.7
-        }
-      ],
-      "incerto": false,
-      "concordancia": "concordam"
-    },
-    "MTE_25:070_MTE_CF_001_01:12": {
-      "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
-              "confianca": 0.85
-            }
-          ],
-          "versaoVocabulario": 10
-        },
-        "agy:gemini-3.8-flash-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
-              "confianca": 0.95
-            }
-          ],
-          "versaoVocabulario": 6
         }
       },
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
           "confianca": 0.9
+        },
+        {
+          "id": "realidade-brasileira>genero-raca-etnia-e-classe-social>politicas-de-transferencia-de-renda-3-4-discriminacao-e-exclusao-social",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     },
     "MTE_25:090_MTECF_001_01:12": {
       "opinioes": {
-        "agy:claude-sonnet-5-5-low": {
-          "assuntos": [
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.9
-            },
-            {
-              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
-              "confianca": 0.5
-            }
-          ],
-          "versaoVocabulario": 12
-        },
         "agy:gemini-3.8-flash-low": {
           "assuntos": [
             {
+              "id": "direitos-humanos>conceitos-fundamentais-do-direito-da-antidiscriminacao>conceitos-fundamentais-do-racismo-sexismo-intolerancia-religiosa-lgbtqiapn-fobia",
+              "confianca": 0.9
+            },
+            {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-              "confianca": 0.92
+              "confianca": 0.85
             },
             {
               "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
-              "confianca": 0.88
+              "confianca": 0.8
             }
           ],
-          "versaoVocabulario": 7
+          "versaoVocabulario": 11
         }
       },
       "consenso": [
         {
+          "id": "direitos-humanos>conceitos-fundamentais-do-direito-da-antidiscriminacao>conceitos-fundamentais-do-racismo-sexismo-intolerancia-religiosa-lgbtqiapn-fobia",
+          "confianca": 0.9
+        },
+        {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
-          "confianca": 0.91
+          "confianca": 0.85
         },
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
-          "confianca": 0.69
+          "confianca": 0.8
         }
       ],
       "incerto": false,
-      "concordancia": "concordam"
+      "concordancia": "uma-opiniao"
     }
   }
 }
