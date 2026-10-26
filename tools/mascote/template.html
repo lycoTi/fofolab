@@ -1,0 +1,361 @@
+<title>Mascote do FofoLab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Página escura de propósito: é o fundo do app onde o mascote vai morar.
+     Layout: uma faixa por direção, palco grande à esquerda e detalhes à direita, separadas por linhas de 1px. */
+  :root {
+    color-scheme: dark;
+    --bg: #020617;
+    --surface: #0f172a;
+    --line: #1e293b;
+    --grid: #0e1629;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #f97316;
+    --accent-2: #fbbf24;
+    --pixel: "Pixelify Sans", "Courier New", monospace;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --app: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+  main {
+    max-width: 1040px; margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 56px;
+  }
+  header.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; padding-bottom: 28px; }
+  header.top > div { min-width: 0; max-width: 62ch; }
+  h1 { font-family: var(--pixel); font-weight: 700; font-size: 2.1rem; line-height: 1.1; margin: 0 0 10px; letter-spacing: 0.01em; text-wrap: balance; }
+  h1 span { color: var(--accent); }
+  .lede { margin: 0; color: var(--muted); }
+  button.pause {
+    font: 500 0.875rem var(--body); color: var(--fg); background: transparent;
+    border: 1px solid var(--line); border-radius: 6px; padding: 7px 12px; cursor: pointer;
+    transition: border-color 160ms ease, color 160ms ease;
+  }
+  button.pause:hover { border-color: var(--accent); color: #fff; }
+  button.pause:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+
+  section.dir { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 28px 36px; padding-block: 32px; border-top: 1px solid var(--line); }
+  .stage {
+    /* Grade de 8 px alinhada aos pixels do sprite ampliado 8 vezes, como num editor de pixel art */
+    display: grid; place-items: center; box-sizing: content-box; width: 288px; height: 288px; max-width: 100%;
+    background-color: var(--bg); border: 1px solid var(--line); border-radius: 4px;
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 8px 8px; background-position: 0 0;
+  }
+  .info { min-width: 0; display: grid; gap: 18px; align-content: start; }
+  .name { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h2 { font-family: var(--pixel); font-weight: 700; font-size: 1.5rem; line-height: 1.15; margin: 0; }
+  .num { font-family: var(--pixel); color: var(--accent); font-size: 1rem; }
+  .ref { color: var(--muted); font-size: 0.8125rem; }
+  .idea { margin: 0; max-width: 60ch; }
+  .idea strong { color: #fff; font-weight: 600; }
+  .anim { margin: 0; color: var(--muted); font-size: 0.8125rem; }
+
+  .sizes { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .sizes figure { margin: 0; display: grid; gap: 8px; justify-items: start; }
+  .sizes figcaption { font-size: 0.75rem; color: var(--muted); line-height: 1.35; font-variant-numeric: tabular-nums; }
+  .sizes figcaption b { color: var(--fg); font-weight: 600; }
+  .sizes figure.original { order: 9; padding-left: 28px; border-left: 1px solid var(--line); }
+  .sizes figure.original img { display: block; width: 128px; height: 128px; object-fit: contain; background: #f8fafc; border-radius: 6px; }
+  h2.group { font-family: var(--pixel); font-weight: 500; font-size: 1.15rem; color: var(--muted); margin: 0; padding: 28px 0 4px; border-top: 1px solid var(--line); }
+  h2.group + section.dir { border-top: 0; padding-top: 16px; }
+
+  .mock { display: flex; align-items: center; gap: 10px; min-width: 0; flex-wrap: wrap;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font-family: var(--app); }
+  .mock .brand { font-weight: 700; color: #fff; font-size: 0.9375rem; margin-right: 10px; }
+  .mock .tab { font-size: 0.8125rem; color: var(--muted); padding: 4px 8px; border-radius: 6px; }
+  .mock .tab.on { color: #fff; background: var(--line); }
+  .mock-label { font-size: 0.75rem; color: var(--muted); margin: 0 0 6px; }
+
+  section.rules { display: grid; gap: 14px; padding-block: 4px 32px; }
+  section.rules h2 { font-size: 1.25rem; }
+  section.rules .idea, section.rules .anim { max-width: 70ch; }
+  table.wardrobe { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .wardrobe th { text-align: left; font-weight: 500; color: var(--muted); font-size: 0.75rem; padding: 0 16px 8px 0; border-bottom: 1px solid var(--line); }
+  .wardrobe td { padding: 8px 16px 8px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .wardrobe td:nth-child(3) { color: var(--muted); }
+  .wardrobe .who-in { display: flex; align-items: center; gap: 12px; white-space: nowrap; font-weight: 600; }
+  footer.next { border-top: 1px solid var(--line); padding-top: 24px; color: var(--muted); max-width: 70ch; }
+  footer.next h3 { font-family: var(--pixel); font-weight: 500; color: var(--fg); font-size: 1.05rem; margin: 0 0 8px; }
+  footer.next p { margin: 0 0 8px; }
+
+  svg.sprite { display: block; image-rendering: pixelated; }
+  .fa { animation: frameA var(--alt, 1s) step-end infinite; }
+  .fb { opacity: 0; animation: frameB var(--alt, 1s) step-end infinite; }
+  .eyes-shut { opacity: 0; animation: blink 4.8s step-end infinite; }
+  @keyframes frameA { 0% { opacity: 1; } 50% { opacity: 0; } }
+  @keyframes frameB { 0% { opacity: 0; } 50% { opacity: 1; } }
+  @keyframes blink { 0% { opacity: 0; } 92% { opacity: 1; } 95% { opacity: 0; } }
+  .paused .fa, .paused .fb, .paused .eyes-shut { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) {
+    .fa, .fb, .eyes-shut { animation: none; }
+    .fb, .eyes-shut { opacity: 0; }
+    button.pause { display: none; }
+  }
+  @media (max-width: 720px) {
+    section.dir { grid-template-columns: minmax(0, 1fr); }
+    .stage { width: 100%; }
+    h1 { font-size: 1.7rem; }
+    .wardrobe thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .wardrobe tr { display: grid; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .wardrobe td { display: block; padding: 0; border: 0; }
+  }
+</style>
+
+<main id="app">
+  <header class="top">
+    <div>
+      <h1>Mascote do <span>FofoLab</span></h1>
+      <p class="lede">O hamster do FofoDeck redesenhado em pixel art de 32×32, pixel a pixel, com um guarda-roupa: três roupas para momentos do app, cinco para datas especiais e duas para marcos do concurso. Ele aparece só no cabeçalho, na FofoIA, no FofoDoro e em telas vazias; o resto da interface continua limpo.</p>
+    </div>
+    <button class="pause" id="pause" type="button" aria-pressed="false">Pausar animação</button>
+  </header>
+
+  <section class="rules" aria-labelledby="rules-title">
+    <h2 id="rules-title">Como usar todas</h2>
+    <p class="idea">O app troca a roupa sozinho. Vale a primeira linha que combinar, de cima para baixo.</p>
+    <table class="wardrobe">
+      <thead><tr><th scope="col">Roupa</th><th scope="col">Quando</th><th scope="col">Por quê</th></tr></thead>
+      <tbody>
+        <tr data-sprite="prova"><td class="who"></td><td>No dia da prova cadastrada</td><td>Nada passa na frente do dia da prova</td></tr>
+        <tr data-sprite="nomeado"><td class="who"></td><td>Desde que você marca que foi nomeado até desligar ou cadastrar uma prova nova</td><td>Prova nova é concurso escada: volta ao normal</td></tr>
+        <tr data-sprite="halloween"><td class="who"></td><td>Outubro inteiro</td><td>Data especial ganha da hora e da aba</td></tr>
+        <tr data-sprite="natal"><td class="who"></td><td>De 1º a 30 de dezembro</td><td>Data especial ganha da hora e da aba</td></tr>
+        <tr data-sprite="anonovo"><td class="who"></td><td>De 31 de dezembro a 31 de janeiro</td><td>Data especial</td></tr>
+        <tr data-sprite="carnaval"><td class="who"></td><td>Das 2 semanas antes do Carnaval até a Quarta-feira de Cinzas</td><td>A data muda todo ano; o app calcula pela Páscoa</td></tr>
+        <tr data-sprite="junina"><td class="who"></td><td>Junho inteiro</td><td>Data especial</td></tr>
+        <tr data-sprite="madrugada"><td class="who"></td><td>Das 22:00 às 05:00, em todo o app</td><td>Quem estuda de madrugada encontra o Fofo de vela acesa</td></tr>
+        <tr data-sprite="fazendeiro"><td class="who"></td><td>Plano de estudo e Revisão do dia</td><td>Planta o ciclo e rega o que está murchando</td></tr>
+        <tr data-sprite="explorador"><td class="who"></td><td>Questões e Edital</td><td>Explora o mapa da prova, sala por sala</td></tr>
+        <tr data-sprite="fofodeck"><td class="who"></td><td>Início, FofoDoro e o resto</td><td>O de sempre, com o relógio do pomodoro</td></tr>
+      </tbody>
+    </table>
+    <p class="anim">Nas configurações, "Roupa do Fofo": Automática (padrão) ou uma roupa fixa, que passa na frente de todas as regras.</p>
+  </section>
+
+  <section class="dir" data-sprite="fofodeck" data-alt="1.2s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Base</span><h2>Hamster do FofoDeck</h2><span class="ref">o mesmo do bot do Discord</span></div>
+      <p class="idea"><strong>Um personagem só, do bot ao app.</strong> Fone cinza, sobrancelhas, bochechas rosadas, peito creme e o relógio do pomodoro, que aqui vira o FofoDoro.</p>
+      <p class="anim">Animação: pisca e a nota musical sobe e desce.</p>
+      <div class="sizes"><figure class="original"><img src="/*REF*/" width="128" height="128" alt="Hamster original do FofoDeck, com fone e relógio 25:00"><figcaption><b>Original</b><br>FofoDeck</figcaption></figure></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <h2 class="group">Roupas para os momentos do app</h2>
+
+  <section class="dir" data-sprite="fazendeiro" data-alt="1.6s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Roupa 1</span><h2>Fazendeiro</h2><span class="ref">no clima de Stardew Valley</span></div>
+      <p class="idea"><strong>Cultiva o edital.</strong> Chapéu de palha e uma muda no vaso. Combina com a revisão: tópico esquecido murcha, revisão rega.</p>
+      <p class="anim">Animação: pisca e a muda balança.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="explorador" data-alt="0.9s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Roupa 2</span><h2>Explorador</h2><span class="ref">no clima de Zelda</span></div>
+      <p class="idea"><strong>A prova é a masmorra final.</strong> Mochila com saco de dormir, lenço e lanterna, sem tirar o fone. Cada tópico é uma sala do mapa, e a lanterna ilumina o caminho.</p>
+      <p class="anim">Animação: pisca e a chama da lanterna tremula.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="madrugada" data-alt="0.7s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Roupa 3</span><h2>Estudante da madrugada</h2><span class="ref">no clima de Graveyard Keeper</span></div>
+      <p class="idea"><strong>Estudo à luz de vela.</strong> Capuz com orelhinhas, fone por cima, óculos redondos, livro aberto e vela. Paleta mais escura, que conversa com o tema do app.</p>
+      <p class="anim">Animação: pisca e a vela tremula.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <h2 class="group">Datas especiais</h2>
+
+  <section class="dir" data-sprite="halloween" data-alt="0.8s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Data 1</span><h2>Halloween</h2><span class="ref">fantasminha de lençol</span></div>
+      <p class="idea"><strong>O lençol tem o formato do Fofo.</strong> Orelhas e bochechas marcadas no pano, fone por cima, olhos de fantasma com brilho e um balde de abóbora acesa. Um morcego bate as asas no canto. Aparece o mês de outubro inteiro.</p>
+      <p class="anim">Animação: pisca, a barra do lençol ondula, a abóbora tremula e o morcego bate as asas.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="natal" data-alt="1s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Data 2</span><h2>Natal</h2><span class="ref">o mesmo do FofoDeck de Natal</span></div>
+      <p class="idea"><strong>Gorro, cachecol listrado e nariz azul.</strong> Segura um presente, e o gorro fica por cima do fone: em 32 px, o arco por cima do gorro parecia um capacete. Aparece de 1º a 30 de dezembro.</p>
+      <p class="anim">Animação: pisca, o pompom balança e a neve cai.</p>
+      <div class="sizes"><figure class="original"><img src="/*REF_NATAL*/" width="128" height="128" alt="Hamster de Natal original do FofoDeck, com gorro, fone e cachecol listrado"><figcaption><b>Original</b><br>FofoDeck de Natal</figcaption></figure></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="anonovo" data-alt="0.6s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Data 3</span><h2>Ano-novo</h2><span class="ref">réveillon</span></div>
+      <p class="idea"><strong>Chapéu de festa, estrelinha acesa e fogos.</strong> Sem o ano escrito: o desenho não envelhece. Aparece de 31 de dezembro a 31 de janeiro.</p>
+      <p class="anim">Animação: pisca, a estrelinha solta faíscas e os fogos estouram dos dois lados.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="carnaval" data-alt="0.5s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Data 4</span><h2>Carnaval</h2><span class="ref">máscara e pandeiro</span></div>
+      <p class="idea"><strong>Máscara de baile, colar de flores e pandeiro.</strong> Serpentina nos cantos e confete caindo, tudo dentro do desenho. Aparece nas 2 semanas antes do Carnaval e vai até a Quarta-feira de Cinzas.</p>
+      <p class="anim">Animação: pisca, os guizos do pandeiro mexem, a serpentina ondula e o confete cai.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="junina" data-alt="1.2s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Data 5</span><h2>Festa junina</h2><span class="ref">arraiá</span></div>
+      <p class="idea"><strong>Chapéu de palha remendado, sardas e lenço xadrez.</strong> Milho na mão e bandeirinhas no alto. O chapéu é desfiado e remendado para não confundir com o fazendeiro. Aparece em junho.</p>
+      <p class="anim">Animação: pisca e as bandeirinhas balançam.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <h2 class="group">Marcos do concurso</h2>
+
+  <section class="dir" data-sprite="prova" data-alt="1.4s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Marco 1</span><h2>Dia da prova</h2><span class="ref">documento e caneta</span></div>
+      <p class="idea"><strong>Documento com foto e caneta preta de corpo transparente</strong>, do jeito que o edital pede. Aparece no dia da prova cadastrada.</p>
+      <p class="anim">Animação: pisca e o brilho corre pela caneta.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="nomeado" data-alt="0.9s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Marco 2</span><h2>Nomeado</h2><span class="ref">terno e Diário Oficial</span></div>
+      <p class="idea"><strong>Terno, gravata e o Diário Oficial com o seu nome grifado de amarelo.</strong> Aparece quando você marca que foi nomeado e fica até você desligar ou cadastrar uma prova nova.</p>
+      <p class="anim">Animação: pisca e os brilhos trocam de lado.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <footer class="next">
+    <h3>Próximos passos</h3>
+    <p>Refino o traço e faço as poses que têm função: pensando enquanto a FofoIA responde, dormindo no descanso do FofoDoro e comemorando a meta da semana. O ícone de 16 px da janela ganha um desenho próprio, mais simples.</p>
+    <p>No app, o guarda-roupa vira uma função pequena com teste: recebe a data, a hora, a aba e a escolha fixa e devolve a roupa.</p>
+  </footer>
+</main>
+
+<script>
+  const SPRITES = /*SPRITES*/;
+  const NAMES = { fofodeck: 'Hamster do FofoDeck com fone e relógio', fazendeiro: 'Hamster fazendeiro', explorador: 'Hamster explorador', madrugada: 'Hamster estudante da madrugada', natal: 'Hamster de Natal com gorro, cachecol e presente', halloween: 'Hamster fantasiado de fantasma, com balde de abóbora', anonovo: 'Hamster de ano-novo com chapéu de festa e estrelinha', carnaval: 'Hamster de carnaval com máscara, colar de flores e pandeiro', junina: 'Hamster de festa junina com chapéu remendado, lenço xadrez e milho', prova: 'Hamster no dia da prova, com documento e caneta transparente', nomeado: 'Hamster nomeado, de terno, com o Diário Oficial' };
+  const SHORT = { fofodeck: 'Base', fazendeiro: 'Fazendeiro', explorador: 'Explorador', madrugada: 'Madrugada', natal: 'Natal', halloween: 'Halloween', anonovo: 'Ano-novo', carnaval: 'Carnaval', junina: 'Festa junina', prova: 'Dia da prova', nomeado: 'Nomeado' };
+  const SIZES = [
+    { scale: 4, use: 'telas vazias e meta cumprida' },
+    { scale: 2, use: 'FofoIA e FofoDoro' },
+    { scale: 1, use: 'cabeçalho' },
+  ];
+  const NS = 'http://www.w3.org/2000/svg';
+
+  // Junta pixels iguais vizinhos na mesma linha num só retângulo
+  function layer(grid, palette, className) {
+    const g = document.createElementNS(NS, 'g');
+    if (className) g.setAttribute('class', className);
+    grid.forEach((row, y) => {
+      for (let x = 0; x < row.length; x++) {
+        const c = row[x];
+        if (c === '.') continue;
+        let n = 1;
+        while (row[x + n] === c) n++;
+        const r = document.createElementNS(NS, 'rect');
+        r.setAttribute('x', x); r.setAttribute('y', y); r.setAttribute('width', n); r.setAttribute('height', 1);
+        r.setAttribute('fill', palette[c]);
+        g.appendChild(r);
+        x += n - 1;
+      }
+    });
+    return g;
+  }
+
+  function sprite(data, scale, label) {
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('class', 'sprite');
+    svg.setAttribute('viewBox', '0 0 32 32');
+    svg.setAttribute('width', 32 * scale);
+    svg.setAttribute('height', 32 * scale);
+    svg.setAttribute('shape-rendering', 'crispEdges');
+    if (label) { svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', label); }
+    else svg.setAttribute('aria-hidden', 'true');
+    svg.appendChild(layer(data.A, data.palette, 'fa'));
+    svg.appendChild(layer(data.B, data.palette, 'fb'));
+    svg.appendChild(layer(data.closed, data.palette, 'eyes-shut'));
+    return svg;
+  }
+
+  const byId = Object.fromEntries(SPRITES.map((s) => [s.id, s]));
+  document.querySelectorAll('section.dir').forEach((section) => {
+    const data = byId[section.dataset.sprite];
+    section.style.setProperty('--alt', section.dataset.alt);
+    section.querySelector('.stage').appendChild(sprite(data, 8, `${NAMES[data.id]}, ampliado 8 vezes`));
+    const sizes = section.querySelector('.sizes');
+    const original = sizes.querySelector('figure.original');
+    SIZES.forEach(({ scale, use }) => {
+      const fig = document.createElement('figure');
+      fig.appendChild(sprite(data, scale));
+      const cap = document.createElement('figcaption');
+      cap.innerHTML = `<b>${32 * scale} px</b> · ${scale}×<br>${use}`;
+      fig.appendChild(cap);
+      sizes.insertBefore(fig, original);
+    });
+    const mock = section.querySelector('.mock');
+    mock.appendChild(sprite(data, 1));
+    mock.insertAdjacentHTML('beforeend', '<span class="brand">FofoLab</span><span class="tab on">Início</span><span class="tab">Questões</span><span class="tab">Plano de estudo</span>');
+  });
+
+  // Tabela do guarda-roupa: cada linha mostra a roupa em 2× com o mesmo ritmo de animação da seção dela
+  const altById = Object.fromEntries([...document.querySelectorAll('section.dir')].map((s) => [s.dataset.sprite, s.dataset.alt]));
+  document.querySelectorAll('tr[data-sprite]').forEach((tr) => {
+    const data = byId[tr.dataset.sprite];
+    tr.style.setProperty('--alt', altById[data.id]);
+    const who = document.createElement('div');
+    who.className = 'who-in';
+    who.appendChild(sprite(data, 2));
+    who.insertAdjacentHTML('beforeend', `<span>${SHORT[data.id]}</span>`);
+    tr.querySelector('.who').appendChild(who);
+  });
+
+  const app = document.getElementById('app');
+  const pause = document.getElementById('pause');
+  pause.addEventListener('click', () => {
+    const paused = app.classList.toggle('paused');
+    pause.setAttribute('aria-pressed', String(paused));
+    pause.textContent = paused ? 'Retomar animação' : 'Pausar animação';
+  });
+</script>

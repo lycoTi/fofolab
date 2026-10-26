@@ -1,0 +1,42 @@
+# Fofo — o mascote em pixel art
+
+O hamster do FofoDeck redesenhado em pixel art 32×32, pixel a pixel, com um guarda-roupa. Fica **fora do app**:
+nada em `src/` importa esta pasta. Quando o Fofo entrar no app, os sprites saem do `sprites.json`.
+Como e onde ele aparece (zonas, voz, ordem e calendário das roupas): `.agents/rules/identidade-fofolab.md`.
+
+## Roupas
+| id | Roupa | Quando |
+|---|---|---|
+| `fofodeck` | Base (fone e relógio "25") | Início, FofoDoro e o resto |
+| `fazendeiro` | Fazendeiro | Plano de estudo e Revisão do dia |
+| `explorador` | Explorador | Questões e Edital |
+| `madrugada` | Estudante da madrugada | 22:00 às 05:00 |
+| `halloween` | Fantasminha de lençol | outubro |
+| `natal` | Natal (o do FofoDeck de Natal) | 1º a 30/12 |
+| `anonovo` | Ano-novo | 31/12 a 31/01 |
+| `carnaval` | Carnaval | 2 semanas antes até a Quarta-feira de Cinzas |
+| `junina` | Festa junina | junho |
+| `prova` | Dia da prova | data da prova cadastrada |
+| `nomeado` | Nomeado | até desligar ou cadastrar prova nova |
+
+## Comandos (na raiz do projeto)
+- `node tools/mascote/gen.cjs` — redesenha tudo e grava `sprites.json` (+ `preview.html` para conferir).
+- `node tools/mascote/build.cjs` — monta `mascote-fofolab.html`, a página de comparação (sprites + originais do FofoDeck).
+- `node tools/mascote/zoom.cjs prova nomeado` — `zoom.html` com as roupas pedidas ampliadas 10×.
+- `node tools/mascote/shot.cjs entrada.html saida.png [largura]` e `mobile.cjs` — prints pelo Edge (conferir a 375 px).
+- `node tools/mascote/thumb.cjs imagem.png saida.txt 256 [x y lado]` — reduz uma imagem de referência para embutir.
+
+## Como o desenho funciona (`gen.cjs`)
+- Cada sprite é uma grade de 32 linhas de caracteres; cada caractere é uma cor da paleta do sprite, `.` é transparente.
+- `hamsterBody()` faz a silhueta, a sombra e o creme; `face()` o rosto; `headphones()` o fone (as orelhas ficam na
+  frente do arco); `outline()` contorna cada camada; `over`/`under` empilham camadas.
+- Quadros A e B alternam na animação; `closed` é a camada dos olhos fechados (piscar).
+- **Pata segurando** (`grip()`): a palma fica na borda de fora do objeto e os dedos dobram para a frente dele, com o
+  objeto entre a pata e o centro do corpo. Pata entre o corpo e o objeto parece segurar com as costas da mão.
+- Escala só inteira (1×, 2×, 4×, 8×) e sem suavização (`shape-rendering="crispEdges"`).
+
+## Roupa nova
+Função de desenho + entrada na lista `sprites` de `gen.cjs` (id, paleta), seção e linha da tabela em `template.html`,
+nome em `NAMES`/`SHORT`; no app, a regra de quando aparece + teste (ver a regra de identidade).
+
+Referências: `ref-fofodeck*.txt` são as imagens originais do FofoDeck, reduzidas, só para comparação na página.

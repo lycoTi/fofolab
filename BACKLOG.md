@@ -64,6 +64,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
+- [ ] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos prontos em `tools/mascote/`, 11 roupas):
+  trocar os emojis da interface (🐹 e afins) pelo Fofo e por ícones/quadradinhos; guarda-roupa como função pura com
+  teste (roupa fixa > dia da prova/nomeado > data especial > madrugada > aba > base); opção "Roupa do Fofo" nas
+  configurações; botão "fui nomeado"; teste de auditoria reprovando emoji em texto de interface. Antes: brainstorming
+  e plano. Depois: poses (pensando, dormindo, comemorando) e o ícone de 16 px.
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):
