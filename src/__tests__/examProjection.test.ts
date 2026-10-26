@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { estimateTopicMinutes, realPace, TOPIC_MINUTES_BY_LEVEL, topicLevel } from '../lib/examProjection';
+import { estimateTopicMinutes, realPace, stretchStartKey, TOPIC_MINUTES_BY_LEVEL, topicLevel, weekSlots } from '../lib/examProjection';
 import type { StudySession, Subject, Topic } from '../types/database';
 
 const NOW = new Date(2026, 9, 26, 10, 0); // segunda 26/10/2026
@@ -50,5 +50,41 @@ describe('Tempo por tópico (spec 13 §4.3)', () => {
     expect(estimateTopicMinutes(120, { minutesPerTopic: null, sample: 0 })).toBe(120);
     expect(estimateTopicMinutes(120, { minutesPerTopic: 60, sample: 5 })).toBe(90);
     expect(estimateTopicMinutes(120, { minutesPerTopic: 60, sample: 45 })).toBe(65);
+  });
+});
+
+describe('Horas para tópico novo em cada semana até a reta final (spec 13 §4.3)', () => {
+  const EVERY_DAY: [number, number, number, number, number, number, number] = [180, 180, 180, 180, 180, 180, 180];
+  const base = { now: NOW, examDate: '2026-12-13', finalStretchDays: 14, pattern: EVERY_DAY, overrides: {}, todayStudiedMinutes: 0, reviewEnabled: true };
+
+  it('a reta final começa exatamente N dias antes da prova', () => {
+    expect(stretchStartKey('2026-12-13', 14)).toBe('2026-11-29');
+    expect(stretchStartKey('2026-12-13', 21)).toBe('2026-11-22');
+  });
+
+  it('semanas de hoje até a da prova, com as fases: teoria, últimos tópicos e reta final', () => {
+    const slots = weekSlots(base);
+    expect(slots.map((s) => s.weekStartKey)).toEqual(['2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-23', '2026-11-30', '2026-12-07']);
+    expect(slots.map((s) => s.phase)).toEqual(['TEORIA', 'TEORIA', 'TEORIA', 'TEORIA', 'ULTIMOS', 'RETA_FINAL', 'RETA_FINAL']);
+    // Semana dos últimos tópicos: só os 6 dias antes de 29/11 (domingo) contam (a revisão dela cai no domingo, já na reta final)
+    expect(slots[4].newTopicMinutes).toBe(6 * 180);
+    expect(slots[5].newTopicMinutes).toBe(0);
+  });
+
+  it('a semana de hoje desconta o que já foi estudado hoje e a Revisão da semana', () => {
+    const slots = weekSlots({ ...base, todayStudiedMinutes: 60 });
+    expect(slots[0].newTopicMinutes).toBe(7 * 180 - 60 - 90);
+    expect(weekSlots({ ...base, reviewEnabled: false })[0].newTopicMinutes).toBe(7 * 180);
+  });
+
+  it('semana atípica de folga (7 exceções 0) não tem tempo para tópico novo', () => {
+    const off = Object.fromEntries(['2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08'].map((k) => [k, 0]));
+    expect(weekSlots({ ...base, overrides: off })[1].newTopicMinutes).toBe(0);
+  });
+
+  it('hoje já dentro da reta final: tudo é reta final; prova no passado: nenhuma semana', () => {
+    const inStretch = weekSlots({ ...base, now: new Date(2026, 11, 1, 9, 0) });
+    expect(inStretch.every((s) => s.phase === 'RETA_FINAL' && s.newTopicMinutes === 0)).toBe(true);
+    expect(weekSlots({ ...base, now: new Date(2026, 11, 20, 9, 0) })).toEqual([]);
   });
 });

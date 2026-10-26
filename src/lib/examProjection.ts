@@ -1,3 +1,6 @@
+import { minutesForDay, weekBudgetMinutes, weekDateKeys, weeklyReviewDay, weekReviewDuration, type WeekdayMinutes } from './availability';
+import { startOfWeek } from './cycleEngine';
+import { localDateKey } from './timeFormat';
 import type { StudySession, Subject, Topic } from '../types/database';
 
 /**
@@ -54,4 +57,62 @@ export function estimateTopicMinutes(levelMinutes: number, pace: { minutesPerTop
   if (pace.minutesPerTopic === null || pace.sample === 0) return levelMinutes;
   const confidence = pace.sample / (pace.sample + PACE_K);
   return roundTo5(confidence * pace.minutesPerTopic + (1 - confidence) * levelMinutes);
+}
+
+/** Data local 'YYYY-MM-DD' de N dias antes da prova: o primeiro dia da reta final. */
+export function stretchStartKey(examDate: string, finalStretchDays: number): string {
+  const [year, month, day] = examDate.split('-').map(Number);
+  return localDateKey(new Date(year, month - 1, day - finalStretchDays));
+}
+
+export type WeekPhase = 'TEORIA' | 'ULTIMOS' | 'RETA_FINAL';
+
+export interface WeekSlot {
+  weekStart: Date;
+  weekStartKey: string;
+  /** Tempo para tópico novo: os dias de hoje em diante e antes da reta final, menos a Revisão da semana. */
+  newTopicMinutes: number;
+  phase: WeekPhase;
+}
+
+/**
+ * Semanas de hoje até a da prova. Teoria: a semana inteira antes da reta final; Últimos tópicos: a que tem dias antes e
+ * dentro dela; Reta final: nenhum tópico novo. Hoje vale o que sobra do dia; dia que passou não conta.
+ */
+export function weekSlots(input: {
+  now: Date;
+  examDate: string;
+  finalStretchDays: number;
+  pattern: WeekdayMinutes;
+  overrides: Record<string, number>;
+  todayStudiedMinutes: number;
+  reviewEnabled: boolean;
+}): WeekSlot[] {
+  const todayKey = localDateKey(input.now);
+  if (input.examDate < todayKey) return [];
+  const stretchKey = stretchStartKey(input.examDate, input.finalStretchDays);
+  const [ey, em, ed] = input.examDate.split('-').map(Number);
+  const lastWeek = startOfWeek(new Date(ey, em - 1, ed)).getTime();
+
+  const slots: WeekSlot[] = [];
+  for (let weekStart = startOfWeek(input.now); weekStart.getTime() <= lastWeek; ) {
+    const keys = weekDateKeys(weekStart);
+    let minutes = 0;
+    for (const key of keys) {
+      if (key < todayKey || key >= stretchKey) continue;
+      const day = minutesForDay(key, input.pattern, input.overrides);
+      minutes += key === todayKey ? Math.max(0, day - input.todayStudiedMinutes) : day;
+    }
+    const reviewDay = input.reviewEnabled ? weeklyReviewDay(weekStart, input.pattern, input.overrides) : null;
+    if (reviewDay && reviewDay >= todayKey && reviewDay < stretchKey) {
+      minutes = Math.max(0, minutes - weekReviewDuration(weekBudgetMinutes(weekStart, input.pattern, input.overrides)));
+    }
+    const before = keys.some((k) => k >= todayKey && k < stretchKey);
+    const inside = keys.some((k) => k >= stretchKey);
+    let phase: WeekPhase = 'TEORIA';
+    if (inside) phase = before ? 'ULTIMOS' : 'RETA_FINAL';
+    slots.push({ weekStart, weekStartKey: keys[0], newTopicMinutes: minutes, phase });
+    weekStart = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + 7);
+  }
+  return slots;
 }
