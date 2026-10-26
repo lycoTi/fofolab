@@ -4,7 +4,7 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 
 ## Antes de mexer
 1. Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md` (onde paramos, armadilhas, próximos passos) e `BACKLOG.md` (estado real, definição de pronto).
-2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação, 07 edital real/ciclo pela nota mínima, 08 mapa de incidência (rascunho), 09 bancada/roteiro/Revisão do dia, 10 FofoDoro, 11 FofoIA e diagnóstico pela confiança).
+2. Leia só a spec do módulo que vai tocar em `docs/specs/` (01 banco, 02 IA/métricas, 03 admin, 05 wizard/meu dia, 06 persistência/importação, 07 edital real/ciclo pela nota mínima, 08 mapa de incidência (rascunho), 09 bancada/roteiro/Revisão do dia, 10 FofoDoro, 11 FofoIA e diagnóstico pela confiança, 12 minerador da Cebraspe, 13 plano de estudo).
 3. Histórico de decisões: `docs/reviews/2026-10-21-estado-do-projeto.md`.
 4. `graphify-out/` ajuda a navegar (`graphify query "..."`), mas confira a data: rode `graphify update .` depois de mudar código (o grafo fica velho fácil).
 
@@ -54,7 +54,7 @@ A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS
 - `src/features/pdf-reader/` — leitor de PDF (pdf.js): página atual, páginas lidas, zoom; maximizar/tela cheia ficam no `App.tsx`.
 - `src/lib/questionImport.ts` / `syllabusImport.ts` — importadores (texto/JSON e conteúdo programático).
 - `src/lib/editalParser.ts` + `src/features/edital-import/` — edital em PDF → prévia → plano (spec 07); teste com o PDF real em `e2e/fixtures/`.
-- `src/features/study-block/` — bloco de estudo (máquina pura `studyBlockMachine.ts` + cartão e relógio do cabeçalho) • `features/cycle/` — aba Ciclo • `features/heatmap/` — grade do Mapa de Calor.
+- `src/features/study-block/` — bloco de estudo (máquina pura `studyBlockMachine.ts` + cartão e relógio do cabeçalho) • `features/study-plan/` — aba Plano de estudo (Sua semana, Ajustar; spec 13) + `lib/availability.ts` (horas por dia) e `lib/weekForecast.ts` (previsão da semana) • `features/cycle/` — divisão da semana por matéria • `features/heatmap/` — grade do Mapa de Calor.
 - `src/lib/timeFormat.ts` — HH:mm • `src/components/RichText.tsx` — texto da IA/caderno formatado com segurança.
 - `src/App.tsx` — orquestra estado e painéis; componentes em `src/components/` e `src/features/`.
 - `tools/minerador/` — minerador da Cebraspe (spec 12), **fora do app**: `npm run minerar -- lote | rodar`. Grava o acervo

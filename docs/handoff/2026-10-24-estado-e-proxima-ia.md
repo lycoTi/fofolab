@@ -16,8 +16,13 @@
   mesmos arquivos de `acervo/classificacao/`. Assunto repetido no vocabulário: `npm run minerar -- juntar <de> <para>`.
   O Groq grátis só confere ~100 itens por dia (limite de tokens) e erra mais que o Gemini em interpretação de texto;
   a 2ª opinião do acervo todo fica para o DeepSeek, quando o dono puser crédito (decisão dele).
+- **Plano de estudo (spec 13) — 13a pronta (25/10):** a aba Ciclo virou "Plano de estudo": dias de estudo e horas de cada
+  dia (folga fixa), semana atípica, "Mudar o tempo de hoje" na coluna, roteiro pelas horas do dia (blocos de até 02:00 em
+  dia longo), Revisão da semana no dia mais longo e a semana dia a dia (feito, hoje, previsão). Código em
+  `src/lib/availability.ts`, `src/lib/weekForecast.ts`, `src/features/study-plan/`. **Próximo de maior valor:** 13b
+  ("Dá tempo?", linha do tempo, reta final) — a prova da CGU é em 13/12/2026.
 - **Depois:** **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no
-  plano).
+  plano). O dono estuda as questões no TEC até a prova; o app serve para organizar e priorizar.
 - **FofoIA (25/10):** "oi"/"valeu"/"ok" respondidos pelo app (`src/lib/fofoia/smallTalk.ts`), resposta nova surgindo
   por parágrafo (`RichText reveal`).
 - **Stack `~/.agents`** instalada neste PC (casa) e ligada ao Antigravity; plugin `zizi-skills` desligado no Claude.
@@ -28,9 +33,9 @@
 ## 1. Onde o projeto está
 - **Branch de trabalho:** `fatia-7-edital-ciclo` (a `main` tem só até as fatias 5.5–5.7). Commits locais podem não ter
   ido ao GitHub: confira com `git status` / `git log origin/fatia-7-edital-ciclo..` e pergunte ao dono antes de `push`.
-- **Banco:** migração **v10** (`LATEST_SCHEMA_VERSION = 10`): v5 roteiro do dia, v6 assinatura do perfil, v7 registro de
+- **Banco:** migração **v11** (`LATEST_SCHEMA_VERSION = 11`): v5 roteiro do dia, v6 assinatura do perfil, v7 registro de
   questões feitas fora do app, v8 Revisão do dia, v9 "Tenho meu método" da FofoIA, v10 delta de domínio aplicado por
-  tentativa. Nunca edite uma migração existente.
+  tentativa, v11 horas por dia da semana e exceções por data (spec 13). Nunca edite uma migração existente.
 - **Verificado em 24/10:** `npm test` (355), `npm run test:e2e` (31, duas rodadas), `npm run build` verdes; revisão
   independente da FofoIA feita e corrigida (commit `9375fe9`).
 - **Entregas prontas (planos em `docs/superpowers/plans/`):** 9a casca • 9b roteiro na coluna • 7b registro de fora •

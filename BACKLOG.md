@@ -5,7 +5,7 @@
 ## 📌 Status Global
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
-- **25/10/2026:** spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
+- **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10) e **FofoIA (11)** — banco na migração **v10**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -128,12 +128,21 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   proporcional ao foco e pausa longa a cada N (contando entre blocos do dia), ajustes lembrados, prévia do bloco, avisos
   em toast, foco nunca recomeça sozinho; resumo do fim do dia e totais (hoje/semana/ano/tudo) no Ciclo. 219 unit + 22 E2E.
 - [DONE] **Barras do tempo reservado no Ciclo** (comprimento proporcional à matéria com mais tempo; preenchimento = estudado).
-- **Nome da aba Ciclo:** quando o cronograma entrar, ciclo e cronograma ficam na mesma aba; renomear (ex.: "Plano de estudo").
-- **Topo da aba Ciclo → redesenhar junto com o cronograma (decisão do dono, 23/10):** a lista por prova está boa; o topo
-  não. Os totais "Hoje / Esta semana / Este ano / Desde o começo" não ajudam a decidir nada (o Início já mostra as últimas 4
-  semanas). Proposta para o brainstorm do cronograma: o topo vira **"Sua semana"** — feito × meta com **uma barrinha por
-  dia** (seg–dom, com a meta de cada dia), que é onde o cronograma encaixa; as horas por semana e a estratégia continuam
-  recolhidas em "Ajustar"; as sugestões do ciclo ficam logo abaixo. Até lá, nada muda.
+- **Épico — Plano de estudo (spec `13-plano-de-estudo.md`, brainstorm e design aprovados em 25/10/2026):** a aba Ciclo
+  virou **"Plano de estudo"**, com a semana dia a dia e (13b/13c) o caminho até a prova.
+  [DONE] **13a — horas por dia e "Sua semana"** (25/10/2026, plano `docs/superpowers/plans/2026-10-25-13a-horas-por-dia-e-sua-semana.md`):
+  "Em quais dias você estuda?" + horas de cada dia (folga fixa sem cobrança; atalho "mesmo tempo nos dias de estudo"), no
+  "Ajustar" do Plano e no passo 2 do Wizard; **semana atípica** ("Só esta semana é diferente" / "Voltar ao padrão");
+  **"Mudar o tempo de hoje"** na coluna ("Hoje não vou estudar" deixa a coluna neutra; os blocos já feitos ficam no roteiro).
+  O orçamento do ciclo é a soma dos dias da semana (folga e imprevisto não viram dívida). Roteiro do dia pelas horas do dia:
+  dia de até 03:00 igual a antes; dia longo com blocos de até 02:00, matérias intercaladas. **Revisão da semana**: um bloco
+  no dia mais longo, no tópico estudado mais frio que não está no dia (some com a Revisão do dia desligada). **Sua semana**:
+  dias que passaram com o feito, hoje com o roteiro, os próximos como previsão (o mesmo planejador). Totais "Este ano /
+  Desde o começo" saíram. Migração **v11** (`weekday_minutes_json`, `final_stretch_days`, `plan_day_overrides`).
+  Verificado: unit (526), E2E 33 em duas rodadas (`e2e/plano.spec.ts` com recarregar; a semana com o edital real da CGU em
+  `bancada.spec.ts`), build. Pendente de olhar no `.exe` (nunca compilado).
+  **Próximas:** 13b ("Dá tempo?", linha do tempo por semana, reta final de 14 dias no roteiro e no projetor, ritmo real) →
+  13c (mapa matéria × semana, sugestão de ajustar o padrão).
 - [DONE] **FofoIA + diagnóstico pela confiança (spec 11, 24/10/2026; plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`):**
   um só professor na coluna direita (aba **FofoIA**; o painel de IA saiu da aba, que virou **Questões**), com jeitos
   escolhidos pelos sinais e selinho (Rápida · Do zero · Aula completa em partes, alargando a coluna · Resumo no formato da
@@ -225,6 +234,6 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   (reduz prioridade), nunca escondido.
 - **TEC só por registro manual (feito na 7b):** a importação do desempenho por arquivo salvo (spec 07 §9) fica descartada —
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
-- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); formato cronograma (planos por dias — formato preferido pela esposa do dono, segunda usuária); tópicos relacionados entre matérias.
+- **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); tópicos relacionados entre matérias. (O formato por dias, preferido pela esposa do dono, entrou na 13a.)
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
 - **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~420 linhas) e `App.tsx` (~1440) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
