@@ -274,3 +274,23 @@ describe('Revisão da semana não repete tópico do dia (spec 13 §4.2)', () => 
     expect(new Set(topics).size).toBe(topics.length);
   });
 });
+
+describe('Revisão da semana sem tópico livre (revisão independente, 25/10)', () => {
+  it('o único tópico estudado vai para um bloco de estudo: o tempo da revisão volta para estudo, não some', () => {
+    const day = 86_400_000;
+    const onlyOne: Record<string, Topic[]> = Object.fromEntries(
+      Object.entries(topicsBySubject).map(([id, list]) => [
+        id,
+        list.map((t) => ({ ...t, last_studied_at: t.id === 't-cgu-3-1' ? new Date(NOW.getTime() - 5 * day).toISOString() : null })),
+      ])
+    );
+    const cycleData = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject: onlyOne, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW,
+    });
+    const plan = planDailyBlocks({ cycleData, topicsBySubject: onlyOne, weeklyHoursTarget: 31.5, dayMinutesBudget: 300, weekReviewMinutes: 90 });
+    const total = plan.blocks.reduce((acc, b) => acc + b.durationMinutes, 0);
+    if (!plan.blocks.some((b) => b.kind === 'WEEK_REVIEW')) expect(total).toBeGreaterThanOrEqual(280);
+    const topics = plan.blocks.map((b) => b.topic?.id);
+    expect(new Set(topics).size).toBe(topics.length);
+  });
+});

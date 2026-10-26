@@ -105,11 +105,20 @@ export function planDailyBlocks(params: {
     const heat = topicHeatmapRanking.find((h) => free(h) && !excluded.has(h.topic.id)) ?? topicHeatmapRanking.find(free);
     return { topic: heat?.topic ?? (topicsBySubject[subjectId] || [])[0] ?? null, heat };
   };
-  const studyBudget = dailyMinutesBudget - reviewMinutes;
-  const studyBlocks =
-    studyBudget > LONG_DAY_MINUTES
-      ? longDayBlocks({ candidates, budget: studyBudget, weekCompleted, pickTopic, usedTopicIds })
-      : shortDayBlocks({ candidates, budget: studyBudget, weekCompleted, pickTopic, usedTopicIds });
+  const planStudy = (budget: number) => {
+    usedTopicIds.clear();
+    const input = { candidates, budget, weekCompleted, pickTopic, usedTopicIds };
+    return budget > LONG_DAY_MINUTES ? longDayBlocks(input) : shortDayBlocks(input);
+  };
+  // O tópico da revisão é o estudado mais frio que os blocos de estudo do dia não usaram
+  const coldestFree = () => coldestStudied(topicHeatmapRanking.filter((h) => !usedTopicIds.has(h.topic.id)));
+  let studyBlocks = planStudy(dailyMinutesBudget - reviewMinutes);
+  let reviewHeat = reviewMinutes >= MIN_BLOCK_MINUTES ? coldestFree() : null;
+  // Os blocos ficaram com o único tópico estudado: sem revisão hoje, o tempo dela volta para estudo
+  if (reviewMinutes > 0 && !reviewHeat) {
+    studyBlocks = planStudy(dailyMinutesBudget);
+    reviewHeat = null;
+  }
 
   const blocks: DailyFocusBlock[] = studyBlocks.map((b, i) => ({
     blockNumber: i + 1,
@@ -122,8 +131,7 @@ export function planDailyBlocks(params: {
     kind: 'STUDY',
   }));
 
-  // 3. A revisão fecha o dia, no tópico estudado mais frio que não está nos blocos de hoje
-  const reviewHeat = reviewMinutes >= MIN_BLOCK_MINUTES ? coldestStudied(topicHeatmapRanking.filter((h) => !usedTopicIds.has(h.topic.id))) : null;
+  // 3. A revisão fecha o dia
   const reviewAllocation = reviewHeat ? allocations.find((a) => a.subject.id === reviewHeat.topic.subject_id) : undefined;
   if (reviewHeat && reviewAllocation) {
     const days = Math.round(reviewHeat.daysSinceLastStudy ?? 0);
