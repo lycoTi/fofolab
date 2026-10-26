@@ -13,6 +13,7 @@ import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { forecastWeek } from './lib/weekForecast';
+import { weekReviewDuration } from './lib/availability';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
 import { FofoDoroPreview } from './features/fofodoro/FofoDoroPreview';
@@ -382,6 +383,12 @@ export default function App() {
     return getStudyTotals(new Date());
   }, [dbReady, sessions]);
 
+  // Revisão da semana (spec 13): só no dia mais longo da semana e só com a Revisão do dia ligada
+  let todayReviewMinutes = 0;
+  if (availability.reviewDayKey === availability.todayKey && activePlan?.daily_review_enabled !== 0) {
+    todayReviewMinutes = weekReviewDuration(availability.weekBudget);
+  }
+
   // Roteiro de hoje na coluna esquerda (spec 09): congelado no dia, classificado pelas sessões de hoje
   const routine = useDailyRoutine({
     dbReady,
@@ -391,6 +398,8 @@ export default function App() {
     topicsBySubject,
     weekSessions: sessions,
     dataVersion,
+    dayMinutes: availability.todayMinutes,
+    weekReviewMinutes: todayReviewMinutes,
   });
   const routineBlockTopic = routine.currentItem?.topic ?? null;
 
@@ -1070,6 +1079,11 @@ export default function App() {
           selectedTopicId={currentTopic?.id ?? null}
           liveFocusMs={routineLiveFocusMs}
           todayStudiedMinutes={studyTotals?.todayMinutes ?? 0}
+          todayTime={{
+            minutes: availability.todayMinutes,
+            overridden: availability.overrides[availability.todayKey] !== undefined,
+            onChange: availability.setTodayMinutes,
+          }}
           fofodoro={blockActive && runningOnRoutineBlock ? fofodoroNode : null}
           freeBlock={blockActive && !runningOnRoutineBlock ? fofodoroNode : null}
           freeBlockTitle={freeBlockTitle}

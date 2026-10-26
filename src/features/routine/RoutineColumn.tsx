@@ -7,6 +7,7 @@ import type { Topic } from '../../types/database';
 import { PeekBanner, type PeekInfo } from './PeekBanner';
 import { QuestionLogPanel, type QuestionLogPanelProps } from './QuestionLogPanel';
 import { RoutineBlockItem, type RoutineMaterials } from './RoutineBlockItem';
+import { TodayTimeControl, type TodayTime } from './TodayTimeControl';
 
 export interface RoutineColumnProps {
   items: RoutineItem[];
@@ -44,6 +45,8 @@ export interface RoutineColumnProps {
   freeBlockTitle?: string;
   /** Estudo registrado hoje (todas as matérias), para o resumo do fim do dia. */
   todayStudiedMinutes?: number;
+  /** Tempo de hoje (spec 13): "Mudar o tempo de hoje" e a folga. */
+  todayTime?: TodayTime;
 }
 
 const footerLink = 'flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300';
@@ -54,6 +57,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
   const currentIndex = items.findIndex((i) => i.status === 'current');
   const allDone = items.length > 0 && currentIndex === -1;
   const afterBreak = currentIndex > 0 && items[currentIndex - 1].status === 'done';
+  const restDay = props.todayTime?.minutes === 0;
 
   const currentExtras = (startLabel: string, item: RoutineItem) => ({
     group: props.group,
@@ -73,6 +77,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
     <div aria-label="Roteiro de hoje" className="flex h-full w-full min-w-0 flex-col">
       <div className="shrink-0 border-b border-slate-800 py-3 pl-4 pr-10">
         <h2 className="text-sm font-semibold text-white">{`Hoje · ${formatDuration(props.dayTotalMinutes)}`}</h2>
+        {props.todayTime && <TodayTimeControl {...props.todayTime} />}
       </div>
 
       <Collapse open={peek !== null} className="shrink-0">
@@ -89,7 +94,12 @@ export function RoutineColumn(props: RoutineColumnProps) {
       </Collapse>
 
       <ol className="flex-1 space-y-2 overflow-y-auto p-3">
-        {items.length === 0 && <li className="text-xs text-slate-400">Calibre seu perfil para o roteiro de hoje aparecer aqui.</li>}
+        {items.length === 0 && restDay && (
+          <li className="text-xs text-slate-300">Hoje é dia de folga. Descansar também faz parte: a memória se firma no intervalo.</li>
+        )}
+        {items.length === 0 && !restDay && (
+          <li className="text-xs text-slate-400">Calibre seu perfil para o roteiro de hoje aparecer aqui.</li>
+        )}
         {items.map((item, index) => (
           <RoutineItemRow key={item.block.blockNumber} showBreak={afterBreak && index === currentIndex}>
             <RoutineBlockItem item={item} current={index === currentIndex ? currentExtras('Iniciar bloco', item) : undefined} />

@@ -207,3 +207,37 @@ describe('bloco em andamento que já não é o atual do roteiro', () => {
     expect(region.textContent).not.toContain('fora do roteiro');
   });
 });
+
+describe('tempo de hoje e Revisão da semana na coluna (spec 13)', () => {
+  it('"Mudar o tempo de hoje": escolher um tempo ou "Hoje não vou estudar" muda só hoje', () => {
+    const onChange = vi.fn();
+    render(<RoutineColumn {...props({ todayTime: { minutes: 150, overridden: false, onChange } })} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Mudar o tempo de hoje' }));
+    fireEvent.change(screen.getByLabelText('Tempo de hoje'), { target: { value: '60' } });
+    expect(onChange).toHaveBeenLastCalledWith(60);
+    fireEvent.click(screen.getByRole('button', { name: 'Hoje não vou estudar' }));
+    expect(onChange).toHaveBeenLastCalledWith(0);
+    expect(screen.queryByRole('button', { name: 'Voltar ao tempo de sempre' })).toBeNull();
+  });
+
+  it('com o tempo de hoje mudado, dá para voltar ao tempo de sempre', () => {
+    const onChange = vi.fn();
+    render(<RoutineColumn {...props({ todayTime: { minutes: 60, overridden: true, onChange } })} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Mudar o tempo de hoje' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Voltar ao tempo de sempre' }));
+    expect(onChange).toHaveBeenLastCalledWith(null);
+  });
+
+  it('dia de folga: mensagem neutra, sem cobrança e sem pedir calibragem', () => {
+    const { container } = render(<RoutineColumn {...props({ items: [], dayTotalMinutes: 0, todayTime: { minutes: 0, overridden: false, onChange: vi.fn() } })} />);
+    expect(screen.getByText(/Hoje é dia de folga/)).toBeTruthy();
+    expect(container.textContent).not.toMatch(/Calibre seu perfil|atrasad|falt(a|ou) estudar/i);
+  });
+
+  it('o bloco da Revisão da semana aparece com o nome', () => {
+    const review = { ...item(3, 'next', 'CASP', topic('pcasp', '3.1', 'PCASP'), 60) };
+    review.block = { ...review.block, kind: 'WEEK_REVIEW' };
+    render(<RoutineColumn {...props({ items: [props().items[0], props().items[1], review] })} />);
+    expect(screen.getByText('Revisão da semana')).toBeTruthy();
+  });
+});

@@ -77,7 +77,7 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
     return (
       <div className="flex items-center gap-2">
         <Check size={13} className="shrink-0 text-emerald-400" />
-        <span className="truncate">{`${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
+        <span className="truncate">{`${block.kind === 'WEEK_REVIEW' ? 'Revisão da semana · ' : ''}${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
         <span className="ml-auto shrink-0">{formatDuration(block.durationMinutes)}</span>
       </div>
     );
@@ -87,6 +87,9 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
     <div className="flex items-center gap-2">
       <span className={`shrink-0 rounded-full ${open ? 'h-2.5 w-2.5' : 'h-2 w-2'}`} style={{ backgroundColor: subject.color }} />
       <span className={`truncate ${open ? 'font-semibold text-white' : 'font-medium text-slate-200'}`}>{subject.name}</span>
+      {block.kind === 'WEEK_REVIEW' && (
+        <span className="shrink-0 rounded bg-blue-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-blue-200">Revisão da semana</span>
+      )}
       <span className={`ml-auto shrink-0 ${open ? 'text-slate-300' : 'text-slate-400'}`}>
         {open ? `${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}` : formatDuration(block.durationMinutes)}
       </span>

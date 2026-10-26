@@ -25,17 +25,33 @@ export function useDailyRoutine(params: {
   /** Sessões da semana (o App já carrega); as de hoje são filtradas aqui. */
   weekSessions: StudySession[];
   dataVersion: number;
+  /** Minutos de hoje (spec 13: padrão de horas + "mudar o tempo de hoje"); ausente = horas da semana ÷ 7. */
+  dayMinutes?: number;
+  /** Hoje é o dia da Revisão da semana: o tempo dela (0 = não é). */
+  weekReviewMinutes?: number;
 }) {
-  const { dbReady, plan, cycleData, subjects, topicsBySubject, weekSessions, dataVersion } = params;
+  const { dbReady, plan, cycleData, subjects, topicsBySubject, weekSessions, dataVersion, dayMinutes, weekReviewMinutes } = params;
   const dateKey = localDateKey(new Date());
   const [savedVersion, setSavedVersion] = useState(0);
 
   const livePlan = useMemo(() => {
     if (!plan || !cycleData) return null;
-    return planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: plan.weekly_hours_target });
-  }, [plan, cycleData, topicsBySubject]);
+    return planDailyBlocks({
+      cycleData,
+      topicsBySubject,
+      weeklyHoursTarget: plan.weekly_hours_target,
+      dayMinutesBudget: dayMinutes,
+      weekReviewMinutes,
+    });
+  }, [plan, cycleData, topicsBySubject, dayMinutes, weekReviewMinutes]);
 
-  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject) : '';
+  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject, dayMinutes) : '';
+
+  // A data entra nas dependências: virar a meia-noite com o app aberto não pode levar o tempo de ontem
+  const todaySessions = useMemo(() => {
+    const since = startOfDayIso(dateKey);
+    return weekSessions.filter((s) => s.started_at >= since);
+  }, [weekSessions, dateKey]);
 
   // Roteiro gravado só vale se foi congelado com o perfil atual
   const frozen = useMemo(() => {
@@ -48,20 +64,41 @@ export function useDailyRoutine(params: {
     return saved.blocks;
   }, [dbReady, plan, dateKey, profileKey, dataVersion, savedVersion]);
 
-  // 1. Primeira abertura do dia (ou perfil recalibrado): congela o que o motor planejou
+  // 1. Primeira abertura do dia (ou perfil/tempo de hoje mudou): congela o que o motor planejou. Os blocos que já foram
+  //    feitos hoje continuam no roteiro; o tempo que sobra do dia vai para blocos novos
   useEffect(() => {
-    if (!dbReady || !plan || frozen || !livePlan || livePlan.blocks.length === 0) return;
-    saveDailyPlan(plan.id, dateKey, freezeDailyPlan(livePlan), profileKey);
+    if (!dbReady || !plan || frozen || !livePlan || !cycleData) return;
+    const previous = getDailyPlan(plan.id, dateKey);
+    const kept = previous
+      ? buildRoutine({ blocks: previous.blocks, subjects, topicsBySubject, todaySessions })
+          .filter((i) => i.status === 'done')
+          .map((i) => i.block)
+      : [];
+    if (kept.length === 0) {
+      if (livePlan.blocks.length === 0) return;
+      saveDailyPlan(plan.id, dateKey, freezeDailyPlan(livePlan), profileKey);
+      setSavedVersion((v) => v + 1);
+      return;
+    }
+    const keptMinutes = kept.reduce((acc, b) => acc + b.durationMinutes, 0);
+    const rest =
+      dayMinutes === undefined
+        ? livePlan
+        : planDailyBlocks({
+            cycleData,
+            topicsBySubject,
+            weeklyHoursTarget: plan.weekly_hours_target,
+            dayMinutesBudget: Math.max(0, dayMinutes - keptMinutes),
+            weekReviewMinutes,
+          });
+    const keptTopics = new Set(kept.map((b) => b.topicId));
+    const fresh = freezeDailyPlan(rest).filter((b) => !keptTopics.has(b.topicId));
+    const blocks = [...kept, ...fresh].map((b, i) => ({ ...b, blockNumber: i + 1 }));
+    saveDailyPlan(plan.id, dateKey, blocks, profileKey);
     setSavedVersion((v) => v + 1);
-  }, [dbReady, plan, frozen, livePlan, dateKey, profileKey]);
+  }, [dbReady, plan, frozen, livePlan, cycleData, dateKey, profileKey, subjects, topicsBySubject, todaySessions, dayMinutes, weekReviewMinutes]);
 
   const blocks = useMemo(() => frozen ?? (livePlan ? freezeDailyPlan(livePlan) : []), [frozen, livePlan]);
-
-  // A data entra nas dependências: virar a meia-noite com o app aberto não pode levar o tempo de ontem
-  const todaySessions = useMemo(() => {
-    const since = startOfDayIso(dateKey);
-    return weekSessions.filter((s) => s.started_at >= since);
-  }, [weekSessions, dateKey]);
 
   const items = useMemo(
     () => buildRoutine({ blocks, subjects, topicsBySubject, todaySessions }),

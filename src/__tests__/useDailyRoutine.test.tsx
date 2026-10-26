@@ -15,7 +15,10 @@ vi.mock('../lib/database', () => ({
 }));
 
 let livePlan: DailyPlan;
-vi.mock('../lib/dailyPlanner', () => ({ planDailyBlocks: () => livePlan }));
+// Dia sem tempo sobrando não tem bloco novo; fora isso, o plano que o teste mandar
+vi.mock('../lib/dailyPlanner', () => ({
+  planDailyBlocks: (p: { dayMinutesBudget?: number }) => (p.dayMinutesBudget === 0 ? { ...livePlan, blocks: [] } : livePlan),
+}));
 
 const { useDailyRoutine } = await import('../features/routine/useDailyRoutine');
 
@@ -29,9 +32,22 @@ const live = (topic: Topic, minutes = 30) =>
 const session = (iso: string, minutes: number) =>
   ({ subject_id: 'ti', duration_minutes: minutes, session_type: 'POMODORO', started_at: iso }) as unknown as StudySession;
 
-function setup(initial: { planId?: string; sessions?: StudySession[]; version?: number } = {}) {
+interface HookProps {
+  planId: string;
+  sessions: StudySession[];
+  version: number;
+  dayMinutes?: number;
+}
+
+function setup(initial: Partial<HookProps> = {}) {
+  const initialProps: HookProps = {
+    planId: initial.planId ?? 'p1',
+    sessions: initial.sessions ?? [],
+    version: initial.version ?? 0,
+    dayMinutes: initial.dayMinutes,
+  };
   return renderHook(
-    (p: { planId: string; sessions: StudySession[]; version: number }) =>
+    (p: HookProps) =>
       useDailyRoutine({
         dbReady: true,
         plan: plan(p.planId),
@@ -40,8 +56,9 @@ function setup(initial: { planId?: string; sessions?: StudySession[]; version?: 
         topicsBySubject: { ti: [topicA, topicB, topicC] },
         weekSessions: p.sessions,
         dataVersion: p.version,
+        dayMinutes: p.dayMinutes,
       }),
-    { initialProps: { planId: initial.planId ?? 'p1', sessions: initial.sessions ?? [], version: initial.version ?? 0 } }
+    { initialProps }
   );
 }
 
@@ -95,5 +112,23 @@ describe('roteiro do dia (hook)', () => {
     const { result } = setup({ planId: 'p1' });
     expect(result.current.items[0].topic?.id).toBe('a');
     expect(store.get('p1|2026-10-22')?.blocks[0].topicId).toBe('a');
+  });
+
+  it('mudar o tempo de hoje regrava o roteiro: blocos feitos continuam feitos e o resto encolhe', () => {
+    livePlan = live(topicA, 90);
+    const done = session(new Date(2026, 9, 22, 20, 0).toISOString(), 90);
+    const { result, rerender } = setup({ sessions: [done], dayMinutes: 150 });
+    expect(result.current.items.map((i) => i.status)).toEqual(['done']);
+
+    // O dia passa de 02:30 para 01:00 com 01:30 já estudado: nada novo a fazer, o feito fica
+    livePlan = live(topicB, 60);
+    rerender({ planId: 'p1', sessions: [done], version: 0, dayMinutes: 60 });
+    expect(result.current.items.map((i) => [i.topic?.id, i.status])).toEqual([['a', 'done']]);
+    expect(result.current.items.every((i) => i.remainingMinutes >= 0)).toBe(true);
+    expect(store.get('p1|2026-10-22')?.blocks.map((b) => b.topicId)).toEqual(['a']);
+
+    // O dia passa para 04:00: o feito continua e entra bloco novo no tempo que sobrou
+    rerender({ planId: 'p1', sessions: [done], version: 0, dayMinutes: 240 });
+    expect(result.current.items.map((i) => [i.topic?.id, i.status])).toEqual([['a', 'done'], ['b', 'current']]);
   });
 });
