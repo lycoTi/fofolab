@@ -1,6 +1,6 @@
 # 🧭 Spec 13 — Plano de estudo: a semana dia a dia e o caminho até a prova
 
-> Status: design **aprovado** em 25/10/2026. **13a construída** (plano `docs/superpowers/plans/2026-10-25-13a-horas-por-dia-e-sua-semana.md`). 13b e 13c ainda não.
+> Status: design **aprovado** em 25/10/2026. **13a e 13b construídas** (planos `docs/superpowers/plans/2026-10-25-13a-horas-por-dia-e-sua-semana.md` e `2026-10-26-13b-da-tempo-linha-do-tempo-reta-final.md`). 13c ainda não.
 > Brainstorm de 25/10/2026 (Claude Code + dono). Esboço aprovado: `.superpowers/brainstorm/298-1792968740/content/plano-semana-e-caminho.html` (fora do git).
 > Marcação: o que o dono decidiu está escrito como fato; escolhas do Claude estão marcadas **(decisão do Claude)** e podem ser revistas.
 > Skills: `brainstorming`; na construção, `impeccable`/`ux-ui-clean` (tela) e as de ciência da aprendizagem em `.agents/skills/` (`spaced-practice-scheduler`, `interleaving-unit-planner`).

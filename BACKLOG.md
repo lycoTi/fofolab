@@ -143,8 +143,18 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   `bancada.spec.ts`), build. Revisão independente (26/10) corrigida com teste: divisão do ciclo gravada pela semana padrão
   (semana de folga/atípica zerava a divisão), previsão limitada ao que sobra da semana, roteiro refeito sem perder tempo
   nem duplicar a revisão, plano novo herda os dias, tempo de hoje travado com bloco rodando. Pendente de olhar no `.exe`.
-  **Próximas:** 13b ("Dá tempo?", linha do tempo por semana, reta final de 14 dias no roteiro e no projetor, ritmo real) →
-  13c (mapa matéria × semana, sugestão de ajustar o padrão).
+  [DONE] **13b — "Dá tempo?", linha do tempo e reta final** (26/10/2026, plano
+  `docs/superpowers/plans/2026-10-26-13b-da-tempo-linha-do-tempo-reta-final.md`): projetor puro (`src/lib/examProjection.ts`)
+  — tempo por tópico pela autoavaliação (Nunca vi 02:00 … Domino 00:30) misturado ao ritmo real das 4 semanas
+  (`C = n ÷ (n + 5)`); horas de cada semana até a reta final (dias, folgas, semanas atípicas, menos a Revisão da semana);
+  tópicos que faltam espalhados pela divisão do ciclo (matéria que fecha devolve o tempo). **"Dá tempo?"**: % do edital
+  visto até a véspera da reta final, ritmo real quando 10%+ abaixo do plano (7+ dias de uso), "+HH:mm por semana" (abre o
+  Ajustar) e a lista do que fica para depois, P1/P2/P3 com o aviso da nota mínima; "ⓘ" explica a conta (e que ela tende a
+  ser otimista). **Linha do tempo** por semana (fase, tópicos novos, % visto). **Reta final** ajustável (7/10/14/21 dias):
+  o roteiro do dia e a previsão passam a ser só de revisão (tópico estudado mais frio; sem nenhum estudado, roteiro normal).
+  Verificado: unit (583), E2E 35 em duas rodadas (`e2e/plano-ate-a-prova.spec.ts` com o edital real da CGU e a reta final),
+  build. Com o edital real (cargo 4, ~200 tópicos) e 21:00 por semana sem autoavaliação: 28% até 28/11.
+  **Próxima:** 13c (mapa matéria × semana, sugestão de ajustar o padrão).
 - [DONE] **FofoIA + diagnóstico pela confiança (spec 11, 24/10/2026; plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`):**
   um só professor na coluna direita (aba **FofoIA**; o painel de IA saiu da aba, que virou **Questões**), com jeitos
   escolhidos pelos sinais e selinho (Rápida · Do zero · Aula completa em partes, alargando a coluna · Resumo no formato da

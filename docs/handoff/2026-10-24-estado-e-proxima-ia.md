@@ -19,8 +19,10 @@
 - **Plano de estudo (spec 13) — 13a pronta (25/10):** a aba Ciclo virou "Plano de estudo": dias de estudo e horas de cada
   dia (folga fixa), semana atípica, "Mudar o tempo de hoje" na coluna, roteiro pelas horas do dia (blocos de até 02:00 em
   dia longo), Revisão da semana no dia mais longo e a semana dia a dia (feito, hoje, previsão). Código em
-  `src/lib/availability.ts`, `src/lib/weekForecast.ts`, `src/features/study-plan/`. **Próximo de maior valor:** 13b
-  ("Dá tempo?", linha do tempo, reta final) — a prova da CGU é em 13/12/2026.
+  `src/lib/availability.ts`, `src/lib/weekForecast.ts`, `src/features/study-plan/`.
+- **13b pronta (26/10):** "Dá tempo?" (pelo plano e pelo ritmo real), linha do tempo semana a semana e reta final
+  ajustável (o roteiro vira só revisão) — `src/lib/examProjection.ts`, `ExamOutlookCard`, `WeekTimeline`. Próximo: 13c
+  (mapa matéria × semana, sugestão de ajustar o padrão). A prova da CGU é em 13/12/2026.
 - **Depois:** **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no
   plano). O dono estuda as questões no TEC até a prova; o app serve para organizar e priorizar.
 - **FofoIA (25/10):** "oi"/"valeu"/"ok" respondidos pelo app (`src/lib/fofoia/smallTalk.ts`), resposta nova surgindo
