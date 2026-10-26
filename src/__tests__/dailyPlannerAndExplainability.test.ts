@@ -168,11 +168,18 @@ describe('Roteiro pelas horas do dia (spec 13 §4.2)', () => {
     const plan = planDailyBlocks({ cycleData, topicsBySubject: studied, weeklyHoursTarget: 31.5, dayMinutesBudget: 300, weekReviewMinutes: 60 });
     const review = plan.blocks.filter((b) => b.kind === 'WEEK_REVIEW');
     expect(review).toHaveLength(1);
-    expect(review[0].topic?.id).toBe(old.id);
     expect(review[0].durationMinutes).toBe(60);
-    expect(review[0].reasonText).toMatch(/Revisão da semana: .+ foi estudado há 9 dias/);
+    expect(review[0].reasonText).toMatch(/Revisão da semana: .+ foi estudado há \d+ dias?\./);
     expect(total(plan.blocks)).toBeLessThanOrEqual(300);
-    expect(plan.blocks.filter((b) => b.kind === 'STUDY').every((b) => b.topic?.id !== old.id)).toBe(true);
+    // O tópico da revisão não repete um bloco de estudo do mesmo dia; entre os que sobram, é o mais frio
+    const studyTopics = new Set(plan.blocks.filter((b) => b.kind === 'STUDY').map((b) => b.topic?.id));
+    expect(studyTopics.has(review[0].topic?.id)).toBe(false);
+    const recall = (h: (typeof cycleData.topicHeatmapRanking)[number]) => Math.pow(2, -(h.daysSinceLastStudy ?? 0) / Math.max(1, h.memoryHalfLifeDays));
+    const coldestFree = cycleData.topicHeatmapRanking
+      .filter((h) => h.daysSinceLastStudy !== null && !studyTopics.has(h.topic.id))
+      .sort((a, b) => recall(a) - recall(b))[0];
+    expect(review[0].topic?.id).toBe(coldestFree.topic.id);
+    if (!studyTopics.has(old.id)) expect(review[0].topic?.id).toBe(old.id);
 
     // Sem nenhum tópico estudado não há revisão: o tempo vai para estudo
     const unseen: Record<string, Topic[]> = Object.fromEntries(
@@ -247,5 +254,23 @@ describe('Explicabilidade: a conta exibida é a conta que o motor faz', () => {
     const ids = cycle.topicHeatmapRanking.map((h) => h.topic.id);
     expect(ids).toContain('t-filho');
     expect(ids).not.toContain('t-pai');
+  });
+});
+
+describe('Revisão da semana não repete tópico do dia (spec 13 §4.2)', () => {
+  it('matéria com um tópico só, que é o mais frio: o estudo fica com ele e a revisão vai para outro', () => {
+    const day = 86_400_000;
+    const [contab, ...others] = cguSubjects;
+    const single: Record<string, Topic[]> = { ...topicsBySubject };
+    const only = { ...topicsBySubject[contab.id][0], last_studied_at: new Date(NOW.getTime() - 20 * day).toISOString() };
+    single[contab.id] = [only];
+    const warm = { ...topicsBySubject[others[0].id][0], last_studied_at: new Date(NOW.getTime() - 3 * day).toISOString() };
+    single[others[0].id] = [warm, ...topicsBySubject[others[0].id].slice(1)];
+    const cycleData = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject: single, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW,
+    });
+    const plan = planDailyBlocks({ cycleData, topicsBySubject: single, weeklyHoursTarget: 31.5, dayMinutesBudget: 300, weekReviewMinutes: 60 });
+    const topics = plan.blocks.map((b) => b.topic?.id);
+    expect(new Set(topics).size).toBe(topics.length);
   });
 });

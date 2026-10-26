@@ -92,11 +92,12 @@ export function planDailyBlocks(params: {
     : [...pending].sort((a, b) => b.remainingThisWeekMinutes - a.remainingThisWeekMinutes || byPriority(a, b));
   const topScore = Math.max(...allocations.map((a) => a.elasticScore));
 
-  // 1. Revisão da semana: separa o tempo dela, no tópico estudado que mais esfriou
-  const reviewHeat = (params.weekReviewMinutes ?? 0) > 0 ? coldestStudied(topicHeatmapRanking) : null;
-  const reviewAllocation = reviewHeat ? allocations.find((a) => a.subject.id === reviewHeat.topic.subject_id) : undefined;
-  const reviewMinutes = reviewAllocation ? Math.min(params.weekReviewMinutes ?? 0, dailyMinutesBudget) : 0;
-  const usedTopicIds = new Set<string>(reviewHeat && reviewAllocation ? [reviewHeat.topic.id] : []);
+  // 1. Revisão da semana: separa o tempo dela (só se já há tópico estudado; senão o tempo é de estudo)
+  const reviewMinutes =
+    (params.weekReviewMinutes ?? 0) > 0 && coldestStudied(topicHeatmapRanking) !== null
+      ? Math.min(params.weekReviewMinutes ?? 0, dailyMinutesBudget)
+      : 0;
+  const usedTopicIds = new Set<string>();
 
   // 2. Blocos de estudo
   const pickTopic = (subjectId: string): { topic: Topic | null; heat: TopicHeatItem | undefined } => {
@@ -121,8 +122,10 @@ export function planDailyBlocks(params: {
     kind: 'STUDY',
   }));
 
-  // 3. A revisão fecha o dia
-  if (reviewHeat && reviewAllocation && reviewMinutes >= MIN_BLOCK_MINUTES) {
+  // 3. A revisão fecha o dia, no tópico estudado mais frio que não está nos blocos de hoje
+  const reviewHeat = reviewMinutes >= MIN_BLOCK_MINUTES ? coldestStudied(topicHeatmapRanking.filter((h) => !usedTopicIds.has(h.topic.id))) : null;
+  const reviewAllocation = reviewHeat ? allocations.find((a) => a.subject.id === reviewHeat.topic.subject_id) : undefined;
+  if (reviewHeat && reviewAllocation) {
     const days = Math.round(reviewHeat.daysSinceLastStudy ?? 0);
     const label = `${reviewHeat.topic.code ?? ''} ${reviewHeat.topic.title}`.trim();
     blocks.push({

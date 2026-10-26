@@ -73,11 +73,11 @@ export function WeekdayHoursEditor({
 
       {total > 0 && (
         <div className="space-y-2">
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 sm:grid-cols-3">
+          <ul className="flex flex-wrap gap-x-5 gap-y-1.5">
             {WEEKDAY_LABELS.map((label, i) =>
               value[i] > 0 ? (
-                <li key={label} className="flex items-center justify-between gap-2 text-xs text-slate-300">
-                  <span>{label}</span>
+                <li key={label} className="flex items-center gap-2 text-xs text-slate-300">
+                  <span className="w-7">{label}</span>
                   <select
                     aria-label={`Tempo de ${WEEKDAY_NAMES[i]}`}
                     value={String(value[i])}
