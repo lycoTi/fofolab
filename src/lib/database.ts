@@ -728,15 +728,28 @@ export function setActiveStudyPlan(planId: string): StudyPlan[] {
   return getStudyPlans();
 }
 
+/**
+ * Dias de estudo do plano ativo para um plano novo (spec 13): a rotina é da pessoa, não do concurso. As horas da semana
+ * do plano novo valem; cada dia muda na mesma proporção e as folgas continuam folgas. Sem padrão gravado: nulo (horas ÷ 7).
+ */
+function inheritedWeekdayJson(db: Database, weeklyHours: number): string | null {
+  const active = queryOne<StudyPlan>(db, 'SELECT * FROM study_plans WHERE is_active = 1 LIMIT 1');
+  if (!active?.weekday_minutes_json) return null;
+  const pattern = parseWeekdayMinutes(active.weekday_minutes_json, active.weekly_hours_target);
+  return JSON.stringify(scaleWeekdayMinutes(pattern, Math.round(weeklyHours * 60)));
+}
+
 export function createStudyPlan(input: CreateStudyPlanInput): StudyPlan {
   const db = getDb();
   const id = newId('plan');
   const now = new Date().toISOString();
+  const weekdayJson = inheritedWeekdayJson(db, input.weekly_hours_target);
 
   db.run('UPDATE study_plans SET is_active = 0');
   db.run(
-    `INSERT INTO study_plans (id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target, is_active, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?)`,
+    `INSERT INTO study_plans (id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target, is_active, created_at,
+       weekday_minutes_json)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?, ?)`,
     [
       id,
       input.track_id ?? null,
@@ -747,6 +760,7 @@ export function createStudyPlan(input: CreateStudyPlanInput): StudyPlan {
       input.exam_date,
       input.weekly_hours_target,
       now,
+      weekdayJson,
     ]
   );
 
@@ -889,14 +903,16 @@ export function createPlanFromEdital(input: EditalPlanInput): StudyPlan {
   const planId = newId('plan');
   const now = new Date().toISOString();
 
+  const weekdayJson = inheritedWeekdayJson(db, input.weeklyHoursTarget);
+
   db.run('BEGIN TRANSACTION;');
   try {
     // 1. Plano (edital publicado = pós-edital)
     db.run('UPDATE study_plans SET is_active = 0');
     db.run(
       `INSERT INTO study_plans (id, track_id, title, organ, exam_board, role_title, exam_date, weekly_hours_target,
-         is_active, created_at, study_moment, registration_deadline, min_total_score, selected_role)
-       VALUES (?, NULL, ?, ?, ?, ?, ?, ?, 1, ?, 'POS_EDITAL', ?, ?, ?)`,
+         is_active, created_at, study_moment, registration_deadline, min_total_score, selected_role, weekday_minutes_json)
+       VALUES (?, NULL, ?, ?, ?, ?, ?, ?, 1, ?, 'POS_EDITAL', ?, ?, ?, ?)`,
       [
         planId,
         input.title.trim(),
@@ -909,6 +925,7 @@ export function createPlanFromEdital(input: EditalPlanInput): StudyPlan {
         input.registrationDeadline,
         input.minTotalScore,
         input.roleTitle,
+        weekdayJson,
       ]
     );
 

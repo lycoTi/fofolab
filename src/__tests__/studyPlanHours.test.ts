@@ -62,6 +62,16 @@ describe('Horas por dia do plano (spec 13 §4.1, migração v11)', () => {
     expect(updated?.weekday_minutes_json).toBe('[300,300,300,300,300,600,0]');
   });
 
+  it('plano novo herda os dias de estudo do plano ativo, na proporção das horas dele', async () => {
+    const db = await openDatabase();
+    const active = db.getStudyPlans().find((p) => p.is_active === 1)!;
+    db.updateWeekdayMinutes(active.id, [150, 150, 150, 150, 150, 300, 0]);
+    const created = db.createStudyPlan({
+      title: 'Outro concurso', organ: 'X', exam_board: 'Cebraspe', role_title: 'Analista', exam_date: null, weekly_hours_target: 35,
+    });
+    expect(created.weekday_minutes_json).toBe('[300,300,300,300,300,600,0]');
+  });
+
   it('apagar o plano apaga as exceções dele', async () => {
     const db = await openDatabase();
     const planId = db.getStudyPlans()[0].id;
