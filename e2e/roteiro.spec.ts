@@ -45,7 +45,7 @@ test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Volt
   const subject = await currentSubject(page).innerText();
 
   // Abre pelo Ciclo uma matéria que não é a do bloco
-  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
+  await page.getByRole('button', { name: 'Plano de estudo', exact: true }).click();
   await page.getByRole('button', { name: /^Abrir .* na bancada$/ }).filter({ hasNotText: subject }).first().click();
   await expect(column(page)).toContainText('fora do roteiro de hoje');
   await expect(page.getByRole('button', { name: 'Continuar bloco' })).toBeVisible();

@@ -82,7 +82,7 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   await expect(page.getByText('Calibrar Meu Roteiro de Estudos')).toHaveCount(0);
 
   await openPro(page);
-  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
+  await page.getByRole('button', { name: 'Plano de estudo', exact: true }).click();
   await expect(page.getByText(/Alta rentabilidade \(maior peso na prova\)/).first()).toBeVisible();
   // O assistente já aplicou ao ciclo a distribuição da estratégia: nada a rebalancear
   await expect(page.getByText(/Sugestão para o próximo ciclo/)).toHaveCount(0);
@@ -402,8 +402,8 @@ test('bloco em pomodoros grava o estudo; ciclo por prova em HH:mm; mapa de calor
 
   // Ciclo: a semana mostra os 30 min gravados, tudo em HH:mm; a coluna conta o tempo no bloco
   await expect(routineColumn(page)).toContainText('00:30 de');
-  await page.getByRole('button', { name: 'Ciclo', exact: true }).click();
-  await expect(page.getByRole('region', { name: 'Semana de estudo' })).toContainText('00:30');
+  await page.getByRole('button', { name: 'Plano de estudo', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Sua semana' })).toContainText('00:30');
   await expect(page.locator('main')).not.toContainText(/\d+ ?min\b|\d+\.\d+h\b/);
   await page.screenshot({ path: `${SCREENS}/12-ciclo-por-prova.png`, fullPage: true });
 

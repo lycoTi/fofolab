@@ -10,7 +10,9 @@ import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { FofoIaPanel } from './features/fofoia/FofoIaPanel';
 import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
-import { CycleView } from './features/cycle/CycleView';
+import { StudyPlanView } from './features/study-plan/StudyPlanView';
+import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
+import { forecastWeek } from './lib/weekForecast';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
 import { FofoDoroPreview } from './features/fofodoro/FofoDoroPreview';
@@ -305,6 +307,10 @@ export default function App() {
     setPdfSource(getPdfSourceForTopic(selectedSubjectId, selectedTopicId));
   }, [dbReady, selectedSubjectId, selectedTopicId, dataVersion]);
 
+  // Horas da semana (spec 13): padrão seg–dom + exceções; o orçamento do ciclo é a soma dos dias desta semana
+  const refreshAfterHours = useCallback(() => refreshData(), [refreshData]);
+  const availability = useWeekAvailability({ plan: activePlan, onChanged: refreshAfterHours });
+
   const cycleData = useMemo(() => {
     if (!activePlan) return null;
     return calculateDynamicStudyCycle({
@@ -317,8 +323,9 @@ export default function App() {
       examParts,
       questionLogs,
       recallChecks,
+      weeklyMinutesBudget: availability.weekBudget,
     });
-  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs, recallChecks]);
+  }, [activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs, recallChecks, availability.weekBudget]);
 
   const currentSubject = subjects.find((s) => s.id === selectedSubjectId) || subjects[0] || null;
   const currentTopics = currentSubject ? topicsBySubject[currentSubject.id] || [] : [];
@@ -386,6 +393,22 @@ export default function App() {
     dataVersion,
   });
   const routineBlockTopic = routine.currentItem?.topic ?? null;
+
+  // Sua semana: feito, hoje (o roteiro gravado) e previsão dos próximos dias
+  const weekDays = useMemo(() => {
+    if (!activePlan || !cycleData) return [];
+    return forecastWeek({
+      weekStart: availability.weekStart,
+      now: new Date(),
+      pattern: availability.pattern,
+      overrides: availability.overrides,
+      cycleData,
+      topicsBySubject,
+      weekSessions: sessions,
+      todayBlocks: routine.items.map((i) => i.block),
+      reviewEnabled: activePlan.daily_review_enabled !== 0,
+    });
+  }, [activePlan, cycleData, availability.weekStart, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items]);
   const peek = usePeek({ selectedTopic: currentTopic, blockTopic: routineBlockTopic, studyBlock });
 
   // Ao terminar um bloco, convida a registrar as questões feitas fora do app (uma vez por bloco)
@@ -1040,7 +1063,7 @@ export default function App() {
           items={routine.items}
           dayTotalMinutes={routine.dayTotalMinutes}
           weekStudiedMinutes={routine.weekStudiedMinutes}
-          weekTargetMinutes={activePlan.weekly_hours_target * 60}
+          weekTargetMinutes={availability.weekBudget}
           extraBlock={routine.extraItem}
           blockRunning={studyBlock.state.phase !== 'IDLE' && studyBlock.state.phase !== 'DONE'}
           group={routineGroup(routineBlockTopic, topicsBySubject)}
@@ -1102,7 +1125,7 @@ export default function App() {
                     [
                       { id: 'today', label: 'Início', icon: Sun },
                       { id: 'questions', label: 'Questões', icon: HelpCircle },
-                      { id: 'cycle', label: 'Ciclo', icon: Layers },
+                      { id: 'cycle', label: 'Plano de estudo', icon: Layers },
                       { id: 'heatmap', label: 'Mapa de Calor', icon: Flame },
                       { id: 'reader', label: 'Leitura de PDF', icon: FileText },
                       { id: 'graph', label: 'Mapa de Conceitos', icon: Network },
@@ -1195,20 +1218,24 @@ export default function App() {
                     )}
 
                     {activeTab === 'cycle' && (
-                      <CycleView
+                      <StudyPlanView
                         plan={activePlan}
                         cycleData={cycleData}
                         examParts={examParts}
-                        onUpdateWeeklyHours={(newWeeklyHours) => {
-                          updateStudyPlan({ id: activePlan.id, weekly_hours_target: newWeeklyHours });
-                          refreshData(currentSubject?.id, currentTopic?.id);
-                        }}
+                        days={weekDays}
+                        weekBudget={availability.weekBudget}
+                        weekStart={availability.weekStart}
+                        pattern={availability.pattern}
+                        thisWeek={availability.thisWeek}
+                        subjects={subjects}
+                        topicsBySubject={topicsBySubject}
+                        onChangePattern={availability.setPattern}
+                        onChangeThisWeek={availability.setThisWeek}
                         onApplyRecommendedCycle={(newAllocations) => {
                           applyRecommendedCycleAllocations(newAllocations);
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
                         onOpenSubject={openSubjectOnWorkbench}
-                        totals={studyTotals ?? undefined}
                       />
                     )}
 

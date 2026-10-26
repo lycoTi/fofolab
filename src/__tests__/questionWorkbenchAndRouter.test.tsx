@@ -4,6 +4,7 @@ import { BackupPanel } from '../components/BackupPanel';
 import { QuestionWorkbench } from '../features/questions/QuestionWorkbench';
 import { FofoIaPanel } from '../features/fofoia/FofoIaPanel';
 import { CycleView } from '../features/cycle/CycleView';
+import { WeekdayHoursEditor } from '../features/study-plan/WeekdayHoursEditor';
 import { TopicHeatGrid } from '../features/heatmap/TopicHeatGrid';
 import { FofoDoro } from '../features/fofodoro/FofoDoro';
 import { FofoDoroPreview } from '../features/fofodoro/FofoDoroPreview';
@@ -133,10 +134,10 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
           plan={cguPlan}
           cycleData={cycleData}
           examParts={[]}
-          onUpdateWeeklyHours={vi.fn()}
           onApplyRecommendedCycle={vi.fn()}
         />
       ).container,
+      render(<WeekdayHoursEditor value={[150, 150, 150, 150, 150, 300, 0]} onChange={vi.fn()} />).container,
       render(<FofoDoroHarness />).container,
       render(<TopicHeatGrid cycleData={cycleData} examParts={[]} onJumpToTopic={vi.fn()} />).container,
       render(

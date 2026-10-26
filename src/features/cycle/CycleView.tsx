@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { CalendarClock, CheckCircle2, RefreshCw, Sliders, Sparkles } from 'lucide-react';
-import { STRATEGY_LABELS, type CycleCalculationResult } from '../../lib/cycleEngine';
+import { CheckCircle2, RefreshCw, Sparkles } from 'lucide-react';
+import type { CycleCalculationResult } from '../../lib/cycleEngine';
 import { formatDuration } from '../../lib/timeFormat';
 import type { ExamPart, StudyPlan } from '../../types/database';
 import { CycleSubjectRow } from './CycleSubjectRow';
@@ -10,61 +10,26 @@ import { groupAllocations } from './cycleGroups';
 const ACTIONABLE_SUGGESTIONS = new Set(['REBALANCE', 'OVERLOAD_WARNING', 'PREREQUISITE_ALERT']);
 
 /**
- * Aba Ciclo: os totais de estudo, a semana (meta, feito, dias até a prova) e as matérias agrupadas
- * pela prova, com tempo sempre em HH:mm. O Mapa de Calor fica numa aba própria.
+ * Divisão da semana por matéria, agrupada pela prova (pé da aba Plano de estudo, spec 13 §4.4): as sugestões do ciclo
+ * e o tempo de cada matéria, sempre em HH:mm. A semana dia a dia fica no `WeekView`.
  */
-export interface StudyTotals {
-  todayMinutes: number;
-  weekMinutes: number;
-  yearMinutes: number;
-  allMinutes: number;
-}
-
-/** "Seu estudo registrado": quatro números grandes, para ver a constância de relance. */
-function TotalsStrip({ totals }: { totals: StudyTotals }) {
-  const cells = [
-    { label: 'Hoje', minutes: totals.todayMinutes },
-    { label: 'Esta semana', minutes: totals.weekMinutes },
-    { label: 'Este ano', minutes: totals.yearMinutes },
-    { label: 'Desde o começo', minutes: totals.allMinutes },
-  ];
-  return (
-    <section aria-label="Seu estudo registrado" className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-      {cells.map((cell) => (
-        <div key={cell.label} className="rounded-xl border border-slate-800 bg-slate-900/70 px-3 py-2">
-          <div className="text-[11px] text-slate-400">{cell.label}</div>
-          <div className="font-mono text-base font-bold text-white">{formatDuration(cell.minutes)}</div>
-        </div>
-      ))}
-    </section>
-  );
-}
-
 export function CycleView({
   plan,
   cycleData,
   examParts,
-  onUpdateWeeklyHours,
   onApplyRecommendedCycle,
   onOpenSubject,
-  totals,
 }: {
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
   examParts: ExamPart[];
-  onUpdateWeeklyHours: (hours: number) => void;
   onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
   onOpenSubject?: (subjectId: string) => void;
-  /** Estudo registrado em minutos (hoje, semana, ano, tudo) — spec 10 §3.5. */
-  totals?: StudyTotals;
 }) {
   const [applied, setApplied] = useState(false);
-  const weekMet = cycleData.allocations.length > 0 && cycleData.allocations.every((a) => a.remainingThisWeekMinutes <= 0);
   // A mesma escala para todas as provas: dá para comparar a matéria de uma prova com a de outra
   const maxWeeklyMinutes = Math.max(1, ...cycleData.allocations.map((a) => a.currentWeeklyMinutes));
-  const { allocations, daysUntilExam, totalWeeklyMinutesBudget } = cycleData;
-  const studiedThisWeek = allocations.reduce((acc, a) => acc + a.studiedThisWeekMinutes, 0);
-  const weekProgress = totalWeeklyMinutesBudget > 0 ? Math.min(100, (studiedThisWeek / totalWeeklyMinutesBudget) * 100) : 0;
+  const { allocations, totalWeeklyMinutesBudget } = cycleData;
   const suggestions = cycleData.suggestions.filter((s) => ACTIONABLE_SUGGESTIONS.has(s.type));
   const groups = groupAllocations(allocations, examParts);
 
@@ -75,67 +40,7 @@ export function CycleView({
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-5">
-      {weekMet && (
-        <p className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-200">
-          <CheckCircle2 size={14} />
-          Meta da semana cumprida. Parabéns pela constância!
-        </p>
-      )}
-      {totals && <TotalsStrip totals={totals} />}
-      <section aria-label="Semana de estudo" className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <div className="text-xs text-slate-400">Esta semana</div>
-            <div className="text-lg font-bold text-white font-mono">
-              {formatDuration(studiedThisWeek)} <span className="text-slate-500 text-sm font-sans">de</span>{' '}
-              {formatDuration(totalWeeklyMinutesBudget)}
-            </div>
-          </div>
-          <div className="flex items-center gap-2 text-xs text-slate-300">
-            <CalendarClock size={15} className="text-orange-400" />
-            {daysUntilExam !== null ? (
-              <span>
-                Faltam <strong className="text-white">{daysUntilExam} dias</strong> para a prova
-              </span>
-            ) : (
-              <span>Data da prova em aberto</span>
-            )}
-          </div>
-        </div>
-        <div className="h-2 rounded-full bg-slate-800 overflow-hidden" aria-hidden="true">
-          <div className="h-full rounded-full bg-orange-500" style={{ width: `${weekProgress}%` }} />
-        </div>
-        <details className="text-xs text-slate-400">
-          <summary className="cursor-pointer select-none flex items-center gap-1.5 hover:text-slate-200">
-            <Sliders size={12} />
-            {formatDuration(totalWeeklyMinutesBudget)} por semana ({formatDuration(totalWeeklyMinutesBudget / 7)} por dia) • Estratégia:{' '}
-            {cycleData.strategy ? STRATEGY_LABELS[cycleData.strategy] : 'neutra'}
-          </summary>
-          <div className="pt-3 space-y-1">
-            <input
-              type="range"
-              min={7}
-              max={49}
-              step={3.5}
-              aria-label="Horas disponíveis na semana"
-              value={plan.weekly_hours_target}
-              onChange={(e) => onUpdateWeeklyHours(Number(e.target.value))}
-              className="w-full accent-orange-500 cursor-pointer"
-            />
-            <div className="flex justify-between text-[10px] text-slate-500 font-mono">
-              <span>07:00</span>
-              <span>21:00</span>
-              <span>31:30</span>
-              <span>49:00</span>
-            </div>
-            <p className="text-[11px] text-slate-500">
-              O tempo da semana é fixo; o ciclo só muda a divisão entre as matérias.
-            </p>
-          </div>
-        </details>
-      </section>
-
+    <div className="space-y-5">
       {suggestions.length > 0 && (
         <section aria-label="Sugestões para o próximo ciclo" className="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2.5">
           <div className="flex flex-wrap items-center justify-between gap-2">
