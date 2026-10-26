@@ -202,7 +202,7 @@ body.fofolab-resizing {
   }
 }
 .fofolab-reveal {
-  animation: fofolab-reveal 320ms ease-out both;
+  animation: fofolab-reveal 220ms ease-out both;
 }
 @media (prefers-reduced-motion: reduce) {
   .fofolab-reveal {

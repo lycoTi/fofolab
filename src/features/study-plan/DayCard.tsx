@@ -6,7 +6,7 @@ import type { Subject } from '../../types/database';
 /** Revisão da semana tem a própria cor (azul = revisão/mapeamento na semântica do app). */
 export const REVIEW_COLOR = '#60a5fa';
 /** Entrada dos cartões um a um, ao abrir a aba. */
-const STAGGER_MS = 40;
+const STAGGER_MS = 25;
 
 export function statusLine(day: DayForecast): string {
   if (day.when === 'past') return `${formatDuration(day.studiedMinutes)} feito`;
