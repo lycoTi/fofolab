@@ -31,29 +31,52 @@ describe('"Dá tempo?" na tela (spec 13 §4.3)', () => {
     expect(container.textContent).not.toMatch(/\d+\s?min\b/);
   });
 
-  it('quando não dá: as horas a mais por semana (abre o Ajustar) e o que fica para depois', () => {
+  it('quando não dá mas cabe: as horas a mais (de quanto para quanto, abre o Ajustar) e o que fica para depois', () => {
     const onAdjust = vi.fn();
     const left = [topic('3.4', 'Mensageria'), topic('2.5', 'Kubernetes'), topic('1.9', 'GraphQL')];
     render(<ExamOutlookCard outlook={{ ...base, coverageAtStretch: 80, extraWeeklyMinutes: 210, leftForLater: left }} onAdjust={onAdjust} />);
+    expect(screen.getByText(/de 21:00 para 24:30/)).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: '+03:30 por semana' }));
     expect(onAdjust).toHaveBeenCalled();
     fireEvent.click(screen.getByText('3 tópicos de menor prioridade ficam para depois'));
     expect(screen.getByText('3.4 Mensageria')).toBeTruthy();
   });
 
+  it('quando o acréscimo não é realista: "não cabe", sem botão em destaque, e a lista já aberta', () => {
+    const left = [topic('3.4', 'Mensageria')];
+    const { container } = render(
+      <ExamOutlookCard outlook={{ ...base, coverageAtStretch: 28, extraWeeklyMinutes: 2670, fits: false, leftForLater: left }} onAdjust={vi.fn()} />
+    );
+    expect(screen.getByText(/Não cabe até 28\/11: seriam 65:30 por semana \(hoje: 21:00\)/)).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /^\+/ })).toBeNull();
+    expect(container.querySelector('details')?.open).toBe(true);
+  });
+
+  it('com 1 tópico ficando para depois, mostra a saída mesmo que o % arredonde alto', () => {
+    render(<ExamOutlookCard outlook={{ ...base, coverageAtStretch: 99, extraWeeklyMinutes: 30, leftForLater: [topic('9.9', 'Último')] }} onAdjust={vi.fn()} />);
+    expect(screen.getByText('1 tópico de menor prioridade fica para depois')).toBeTruthy();
+  });
+
+  it('plano sem tópicos: pede o conteúdo do edital em vez de mostrar 0%', () => {
+    render(<ExamOutlookCard outlook={{ ...base, totalTopics: 0, coverageAtStretch: 0 }} onAdjust={vi.fn()} />);
+    expect(screen.getByText('Importe o conteúdo do edital para ver quanto dá para cobrir até a prova.')).toBeTruthy();
+    expect(screen.queryByText(/do edital visto/)).toBeNull();
+  });
+
   it('ritmo real abaixo do plano aparece ao lado do plano', () => {
     render(<ExamOutlookCard outlook={{ ...base, coverageAtStretch: 80, real: { weeklyMinutes: 930, coverageAtStretch: 65 } }} onAdjust={vi.fn()} />);
-    expect(screen.getByText(/No seu ritmo das últimas 2 semanas \(15:30 por semana\): 65%/)).toBeTruthy();
+    expect(screen.getByText(/No seu ritmo recente \(15:30 por semana\): 65%/)).toBeTruthy();
   });
 
   it('cada prova com o % projetado; a do aviso fica em atenção', () => {
-    render(<ExamOutlookCard outlook={{ ...base, partWarning: 'P2 está ficando para trás: 40% visto (as outras: 90%). Ela tem nota mínima.', parts: [
+    render(<ExamOutlookCard outlook={{ ...base, partWarning: 'P2 deve chegar a 40% até a reta final (as outras: 90%). Ela tem nota mínima.', parts: [
       { code: 'P1', name: 'Conhecimentos básicos', coverageAtStretch: 90 },
       { code: 'P2', name: 'Conhecimentos complementares', coverageAtStretch: 40 },
     ] }} onAdjust={vi.fn()} />);
-    const p2 = screen.getByRole('listitem', { name: /^P2/ });
+    const p2 = screen.getAllByRole('listitem').find((li) => li.textContent?.startsWith('P2'))!;
     expect(within(p2).getByText('atenção')).toBeTruthy();
-    expect(screen.getByText(/P2 está ficando para trás/)).toBeTruthy();
+    expect(p2.textContent).toContain('40%');
+    expect(screen.getByText(/P2 deve chegar a 40%/)).toBeTruthy();
   });
 
   it('sem data da prova, na reta final e depois da prova: a frase certa, sem projeção', () => {

@@ -61,6 +61,9 @@ function OutlookBody({ outlook, onAdjust }: { outlook: ExamOutlook | null; onAdj
   if (!outlook) return <p className="text-xs text-slate-400">Defina a data da prova no edital para ver o caminho até ela.</p>;
   if (outlook.status === 'PROVA_PASSOU') return <p className="text-xs text-slate-400">A prova já passou.</p>;
   if (outlook.status === 'RETA_FINAL') return <p className="text-xs text-slate-300">Reta final: só revisão e questões até a prova.</p>;
+  if (outlook.totalTopics === 0) {
+    return <p className="text-xs text-slate-400">Importe o conteúdo do edital para ver quanto dá para cobrir até a prova.</p>;
+  }
 
   const left = outlook.leftForLater;
   return (
@@ -70,25 +73,16 @@ function OutlookBody({ outlook, onAdjust }: { outlook: ExamOutlook | null; onAdj
         <p className="text-xs text-slate-400">Depois disso, reta final: só revisão e questões até a prova.</p>
         {outlook.real && (
           <p className="pt-1 text-xs text-amber-200">
-            {`No seu ritmo das últimas 2 semanas (${formatDuration(outlook.real.weeklyMinutes)} por semana): ${outlook.real.coverageAtStretch}%.`}
+            {`No seu ritmo recente (${formatDuration(outlook.real.weeklyMinutes)} por semana): ${outlook.real.coverageAtStretch}%.`}
           </p>
         )}
       </div>
 
-      {outlook.coverageAtStretch < 100 && (
+      {left.length > 0 && (
         <div className="space-y-2 border-t border-slate-800 pt-3 text-xs text-slate-300">
-          <p className="flex flex-wrap items-center gap-2">
-            Para ver tudo antes da reta final:
-            <button
-              type="button"
-              onClick={onAdjust}
-              className="rounded-lg border border-orange-500/60 px-2 py-0.5 font-mono text-orange-200 hover:bg-orange-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
-            >
-              {`+${formatDuration(outlook.extraWeeklyMinutes)} por semana`}
-            </button>
-          </p>
+          <ExtraHours outlook={outlook} onAdjust={onAdjust} />
           {left.length > 0 && (
-            <details>
+            <details open={!outlook.fits}>
               <summary className="cursor-pointer select-none text-slate-300 hover:text-white">
                 {`${left.length} ${left.length === 1 ? 'tópico de menor prioridade fica' : 'tópicos de menor prioridade ficam'} para depois`}
               </summary>
@@ -109,7 +103,7 @@ function OutlookBody({ outlook, onAdjust }: { outlook: ExamOutlook | null; onAdj
             {outlook.parts.map((part) => {
               const tag = partTag(part.code, part.coverageAtStretch, outlook.partWarning);
               return (
-                <li key={part.code} aria-label={`${part.code} ${part.name}`} className="grid grid-cols-[2rem_minmax(0,1fr)_6rem_2.75rem_4rem] items-center gap-3 py-1.5 text-xs">
+                <li key={part.code} className="grid grid-cols-[2rem_minmax(0,1fr)_6rem_2.75rem_4rem] items-center gap-3 py-1.5 text-xs">
                   <span className="font-semibold text-slate-100">{part.code}</span>
                   <span className="truncate text-slate-400">{part.name}</span>
                   <span className="block h-1.5 overflow-hidden rounded-full bg-slate-800" aria-hidden="true">
@@ -127,3 +121,33 @@ function OutlookBody({ outlook, onAdjust }: { outlook: ExamOutlook | null; onAdj
     </>
   );
 }
+
+/**
+ * O que fazer se não der: o acréscimo por semana quando ele é realista (até o dobro do plano e 08:00 por dia de estudo);
+ * senão, dizer que não cabe — um botão de "+44:30" faria parecer viável o que não é.
+ */
+function ExtraHours({ outlook, onAdjust }: { outlook: ExamOutlook; onAdjust: () => void }) {
+  const needed = outlook.plannedWeeklyMinutes + outlook.extraWeeklyMinutes;
+  const until = dayBefore(outlook.stretchStartKey);
+  if (!outlook.fits) {
+    const how = outlook.extraWeeklyMinutes > 0
+      ? `: seriam ${formatDuration(needed)} por semana (hoje: ${formatDuration(outlook.plannedWeeklyMinutes)}).`
+      : ' nem com muito mais horas.';
+    return <p className="text-slate-300">{`Não cabe até ${until}${how} O plano segue pela prioridade; estes ficam para depois:`}</p>;
+  }
+  return (
+    <p className="flex flex-wrap items-center gap-2">
+      Para ver tudo antes da reta final:
+      <button
+        type="button"
+        onClick={onAdjust}
+        title="Abre o Ajustar, para mudar as horas"
+        className="rounded-lg border border-orange-500/60 px-2 py-0.5 font-mono text-orange-200 hover:bg-orange-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
+      >
+        {`+${formatDuration(outlook.extraWeeklyMinutes)} por semana`}
+      </button>
+      <span className="text-slate-500">{`(de ${formatDuration(outlook.plannedWeeklyMinutes)} para ${formatDuration(needed)})`}</span>
+    </p>
+  );
+}
+

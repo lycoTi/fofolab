@@ -421,7 +421,6 @@ export default function App() {
     topicsBySubject,
     examParts,
     pattern: availability.pattern,
-    overrides: availability.overrides,
     weekSessions: sessions,
     dataVersion,
   });
