@@ -16,13 +16,15 @@ export interface TodayTime {
   overridden: boolean;
   /** Minutos de hoje; 0 = "Hoje não vou estudar"; `null` = tempo de sempre. */
   onChange: (minutes: number | null) => void;
+  /** Bloco rodando: o roteiro não muda no meio dele. */
+  disabled?: boolean;
 }
 
 /**
  * "Mudar o tempo de hoje" (spec 13 §4.1): imprevisto, cansaço ou um dia mais livre mudam só hoje. O roteiro se refaz
  * com os blocos já feitos mantidos; nada vira dívida para amanhã.
  */
-export function TodayTimeControl({ minutes, overridden, onChange }: TodayTime) {
+export function TodayTimeControl({ minutes, overridden, onChange, disabled = false }: TodayTime) {
   const [open, setOpen] = useState(false);
   const options = TIME_OPTIONS.includes(minutes) || minutes === 0 ? TIME_OPTIONS : [minutes, ...TIME_OPTIONS];
 
@@ -30,14 +32,16 @@ export function TodayTimeControl({ minutes, overridden, onChange }: TodayTime) {
     <div>
       <button
         type="button"
-        aria-expanded={open}
+        aria-expanded={open && !disabled}
+        disabled={disabled}
+        title={disabled ? 'Dá para mudar quando nenhum bloco estiver rodando' : undefined}
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1 text-[11px] font-medium text-orange-400 hover:text-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
+        className="flex items-center gap-1 text-[11px] font-medium text-orange-400 hover:text-orange-300 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
       >
         <Clock size={12} />
         Mudar o tempo de hoje
       </button>
-      <Collapse open={open}>
+      <Collapse open={open && !disabled}>
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <select
             aria-label="Tempo de hoje"

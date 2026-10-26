@@ -328,3 +328,19 @@ describe('Divisão recomendada pela semana padrão (revisão independente da 13a
     expect(standard.every((a) => a.minutes > 0)).toBe(true);
   });
 });
+
+describe('Textos com as horas da semana corrente (revisão independente da 13a)', () => {
+  it('a sugestão de rebalancear fala das horas desta semana, não das do padrão', () => {
+    const plan = SEED_STUDY_PLANS[0];
+    const subjects = SEED_SUBJECTS.filter((s) => s.plan_id === plan.id);
+    const topics: Record<string, Topic[]> = {};
+    for (const s of subjects) topics[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+    const r = calculateDynamicStudyCycle({
+      plan, subjects, topicsBySubject: topics, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, weeklyMinutesBudget: 900,
+    });
+    const rebalance = r.suggestions.find((s) => s.type === 'REBALANCE');
+    expect(rebalance).toBeTruthy();
+    expect(rebalance!.description).toContain('15:00 semanais');
+    expect(rebalance!.description).not.toContain('31:30');
+  });
+});

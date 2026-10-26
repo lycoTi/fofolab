@@ -87,3 +87,14 @@ describe('Disponibilidade da semana no app (spec 13 §4.1)', () => {
     expect(result.current.todayMinutes).toBe(0);
   });
 });
+
+describe('"Voltar ao tempo de sempre" só para a exceção de hoje (revisão independente da 13a)', () => {
+  it('hoje mudado sozinho pode voltar; dentro de uma semana atípica, não (quem edita é o "Ajustar")', () => {
+    const { result } = renderHook(() => useWeekAvailability({ plan, now: TUESDAY, onChanged: vi.fn() }));
+    expect(result.current.todayOverridden).toBe(false);
+    act(() => result.current.setTodayMinutes(60));
+    expect(result.current.todayOverridden).toBe(true);
+    act(() => result.current.setThisWeek([60, 60, 60, 60, 60, 60, 0]));
+    expect(result.current.todayOverridden).toBe(false);
+  });
+});

@@ -633,7 +633,7 @@ export function calculateDynamicStudyCycle(params: {
       id: 'sug-rebalance',
       type: 'REBALANCE',
       title: `Sugestão para o próximo ciclo: mover ${formatDuration(Math.abs(needMoreTime.deltaMinutes))} por semana`,
-      description: `O Mapa de Calor aponta mais urgência em "${needMoreTime.subject.name}" do que em "${canDonateTime.subject.name}" (${canDonateTime.studiedTopicsMastery}% de domínio nos tópicos estudados). Dá para mover cerca de ${formatDuration(Math.abs(needMoreTime.deltaMinutes))} por semana entre elas, mantendo suas ${formatDuration(plan.weekly_hours_target * 60)} semanais.`,
+      description: `O Mapa de Calor aponta mais urgência em "${needMoreTime.subject.name}" do que em "${canDonateTime.subject.name}" (${canDonateTime.studiedTopicsMastery}% de domínio nos tópicos estudados). Dá para mover cerca de ${formatDuration(Math.abs(needMoreTime.deltaMinutes))} por semana entre elas, mantendo suas ${formatDuration(totalWeeklyMinutesBudget)} semanais.`,
       actionLabel: 'Aplicar Equilíbrio Sugerido ao Próximo Ciclo',
     });
   }

@@ -418,7 +418,8 @@ export default function App() {
       todayBlocks: routine.items.map((i) => i.block),
       reviewEnabled: activePlan.daily_review_enabled !== 0,
     });
-  }, [activePlan, cycleData, availability.weekStart, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items]);
+    // O dia entra nas dependências: virar a meia-noite com o app aberto troca o "hoje" da semana
+  }, [activePlan, cycleData, availability.weekStart, availability.todayKey, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items]);
   const peek = usePeek({ selectedTopic: currentTopic, blockTopic: routineBlockTopic, studyBlock });
 
   // Ao terminar um bloco, convida a registrar as questões feitas fora do app (uma vez por bloco)
@@ -1082,7 +1083,7 @@ export default function App() {
           todayStudiedMinutes={studyTotals?.todayMinutes ?? 0}
           todayTime={{
             minutes: availability.todayMinutes,
-            overridden: availability.overrides[availability.todayKey] !== undefined,
+            overridden: availability.todayOverridden,
             onChange: availability.setTodayMinutes,
           }}
           fofodoro={blockActive && runningOnRoutineBlock ? fofodoroNode : null}

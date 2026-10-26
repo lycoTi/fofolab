@@ -49,7 +49,7 @@ export function CycleSubjectRow({
             <span className="text-xs font-semibold text-white leading-snug">{subject.name}</span>
           )}
           <MetricExplainer
-            explanation={explainSubjectAllocation(allocation, plan.weekly_hours_target, cycleData.daysUntilExam, cycleData.strategy)}
+            explanation={explainSubjectAllocation(allocation, cycleData.totalWeeklyMinutesBudget / 60, cycleData.daysUntilExam, cycleData.strategy)}
           />
         </div>
         <div className="shrink-0 text-right">

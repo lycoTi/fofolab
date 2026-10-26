@@ -83,6 +83,8 @@ export function useWeekAvailability({ plan, now, onChanged }: { plan: StudyPlan 
     weekBudget: plan ? weekBudgetMinutes(weekStart, pattern, overrides) : 0,
     reviewDayKey: plan ? weeklyReviewDay(weekStart, pattern, overrides) : null,
     thisWeek,
+    /** Só hoje está diferente do padrão (dentro de uma semana atípica, quem edita é o "Ajustar"). */
+    todayOverridden: overrides[todayKey] !== undefined && thisWeek === null,
     setPattern,
     setTodayMinutes,
     setThisWeek,

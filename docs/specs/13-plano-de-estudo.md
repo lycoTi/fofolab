@@ -58,7 +58,7 @@ Queremos: a aba **Ciclo vira "Plano de estudo"**, com a semana dia a dia (horas 
 - **O que não foi feito não vira dívida:** os dias que vêm só usam as próprias horas; se a semana não fecha, a sobra fica para o projetor (§4.3), não para amanhã.
 - **Dia longo, blocos menores:** hoje o roteiro tem até 2 blocos (60% / 40% do dia). Com horas por dia, um sábado de 06:00 viraria dois blocos de 03:00 — estudo em bloco. Regra nova: **bloco de no máximo 02:00**; o dia ganha quantos blocos precisar (até 4), sem repetir matéria enquanto houver outra com tempo na semana **(decisão do Claude**, pela intercalação**)**. Dia de até 03:00 continua como hoje.
 - **Revisão da semana:** um **bloco do roteiro** do dia com mais horas (empate: o mais tarde), ~10% da semana entre 00:30 e 01:30, tirado do orçamento da semana (soma zero). É um bloco **normal** do roteiro (matéria + tópico, relógio, sessão contada na matéria como qualquer bloco), no **tópico estudado que mais esfriou** (`R(Δt)` menor, já calculado), com o rótulo "Revisão da semana" e o motivo "‹tópico› foi estudado há N dias"; "Fiz questões fora do app" funciona como nos outros blocos. Sem tópico estudado, não há bloco de revisão e o tempo vai para estudo. (Ajuste do plano da 13a: um tópico por bloco, em vez de uma lista, reaproveita o roteiro gravado, o relógio e a contagem que já existem.) Some quando a Revisão do dia está desligada ("tenho meu próprio método", `daily_review_enabled = 0`) **(decisão do Claude)**.
-- Clicar num dia mostra o roteiro previsto daquele dia; hoje continua na coluna esquerda.
+- Cada cartão já mostra o roteiro (previsto, de hoje ou feito) do dia — no máximo 4 blocos e a revisão —, então não há clique para abrir; hoje continua na coluna esquerda. Dia futuro sem bloco porque a semana já foi cumprida diz "semana cumprida".
 - A aba **"Ciclo" vira "Plano de estudo"** (se o rótulo quebrar a barra de abas a 1.440 px, usar "Plano"). Saem os totais "Hoje / Esta semana / Este ano / Desde o começo" (o Início já mostra as últimas 4 semanas). A divisão da semana por matéria (lista atual por prova) fica no pé da aba.
 
 ### 4.3 Até a prova — entregas 13b e 13c
@@ -80,7 +80,7 @@ Queremos: a aba **Ciclo vira "Plano de estudo"**, com a semana dia a dia (horas 
 Sua semana → Dá tempo? → Linha do tempo → Mapa matéria × semana (recolhido) → divisão da semana por matéria. A sugestão de ajustar o padrão, quando houver, fica acima de tudo.
 
 ## 5. Dados (contrato SQL → migração v11, como manda o CLAUDE.md)
-- `study_plans.weekday_minutes_json TEXT` — sete inteiros seg–dom; migração preenche com `round(weekly_hours_target × 60 ÷ 7)`.
+- `study_plans.weekday_minutes_json TEXT` — sete inteiros seg–dom; NULL (planos antigos e sem padrão gravado) = `weekly_hours_target ÷ 7` em todos os dias, calculado na leitura (`parseWeekdayMinutes`) — a migração não precisa copiar dado.
 - `study_plans.final_stretch_days INTEGER NOT NULL DEFAULT 14`.
 - `plan_day_overrides (plan_id, date 'YYYY-MM-DD', minutes INTEGER, PRIMARY KEY (plan_id, date))`.
 - O "Agora não" da sugestão: data guardada em `study_plans` ou na preferência local — escolha do construtor.

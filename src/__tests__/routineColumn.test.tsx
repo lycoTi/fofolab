@@ -241,3 +241,10 @@ describe('tempo de hoje e Revisão da semana na coluna (spec 13)', () => {
     expect(screen.getByText('Revisão da semana')).toBeTruthy();
   });
 });
+
+describe('tempo de hoje com bloco rodando (revisão independente da 13a)', () => {
+  it('enquanto um bloco roda, "Mudar o tempo de hoje" fica travado (o roteiro não muda no meio do bloco)', () => {
+    render(<RoutineColumn {...props({ blockRunning: true, todayTime: { minutes: 150, overridden: false, onChange: vi.fn() } })} />);
+    expect((screen.getByRole('button', { name: 'Mudar o tempo de hoje' }) as HTMLButtonElement).disabled).toBe(true);
+  });
+});
