@@ -1,16 +1,14 @@
+import { shortSubjectName } from '../../lib/subjectShortName';
 import { formatDuration } from '../../lib/timeFormat';
-import type { DayForecast, ForecastBlock } from '../../lib/weekForecast';
-import type { Subject, Topic } from '../../types/database';
+import type { DayForecast } from '../../lib/weekForecast';
+import type { Subject } from '../../types/database';
 
-/** Cor do ponto de cada bloco: feito, hoje, revisão ou previsão (a mesma semântica de status do app). */
-function dotClass(block: ForecastBlock, when: DayForecast['when']): string {
-  if (block.kind === 'WEEK_REVIEW') return 'bg-blue-400';
-  if (when === 'past') return 'bg-emerald-400';
-  if (when === 'today') return 'bg-orange-400';
-  return 'bg-slate-600';
-}
+/** Revisão da semana tem a própria cor (azul = revisão/mapeamento na semântica do app). */
+export const REVIEW_COLOR = '#60a5fa';
+/** Entrada dos cartões um a um, ao abrir a aba. */
+const STAGGER_MS = 40;
 
-function statusLine(day: DayForecast): string {
+export function statusLine(day: DayForecast): string {
   if (day.when === 'past') return `${formatDuration(day.studiedMinutes)} feito`;
   if (day.when === 'today') return `${formatDuration(day.studiedMinutes)} de ${formatDuration(day.plannedMinutes)}`;
   // Dia com horas e sem bloco previsto: o que a semana pedia já foi feito
@@ -18,58 +16,72 @@ function statusLine(day: DayForecast): string {
   return 'previsão';
 }
 
-/** Um dia da Sua semana: horas do dia, feito × meta e os blocos (matéria · tópico · HH:mm). Folga em tom neutro. */
+/**
+ * Um dia da Sua semana, enxuto (spec 13 §4.2, opção A): uma linha por bloco — cor e nome curto da matéria, HH:mm. O
+ * nome inteiro e o tópico ficam no detalhe do dia escolhido. Folga em tom neutro.
+ */
 export function DayCard({
   day,
+  index,
+  selected,
   subjectsById,
-  topicsById,
+  onSelect,
 }: {
   day: DayForecast;
+  index: number;
+  selected: boolean;
   subjectsById: Map<string, Subject>;
-  topicsById: Map<string, Topic>;
+  onSelect: () => void;
 }) {
   const isToday = day.when === 'today';
+  const label = day.rest ? `${day.label}, folga` : day.label;
   const progress = day.plannedMinutes > 0 ? Math.min(100, (day.studiedMinutes / day.plannedMinutes) * 100) : 0;
   const metDay = day.plannedMinutes > 0 && day.studiedMinutes >= day.plannedMinutes;
-  const frame = isToday ? 'border-orange-500/70 bg-slate-900' : 'border-slate-800 bg-slate-950/60';
+  let frame = 'border-slate-800 bg-slate-950/60 hover:border-slate-700';
+  if (selected) frame = 'border-orange-500/70 bg-slate-900';
 
   return (
-    <li
-      aria-label={day.rest ? `${day.label}, folga` : day.label}
-      aria-current={isToday ? 'date' : undefined}
-      className={`flex min-h-28 flex-col gap-1.5 rounded-xl border p-2.5 text-[11px] ${frame} ${day.when === 'past' ? 'opacity-80' : ''}`}
-    >
-      <div className="flex items-baseline justify-between gap-2">
-        <span className={`text-xs font-semibold ${isToday ? 'text-orange-100' : 'text-slate-100'}`}>{day.label}</span>
-        <span className="font-mono tabular-nums text-slate-300">{day.rest ? 'Folga' : formatDuration(day.plannedMinutes)}</span>
-      </div>
+    <li aria-label={label} aria-current={isToday ? 'date' : undefined} className="fofolab-reveal" style={{ animationDelay: `${index * STAGGER_MS}ms` }}>
+      <button
+        type="button"
+        aria-label={label}
+        aria-pressed={selected}
+        onClick={onSelect}
+        className={`flex h-full min-h-28 w-full flex-col gap-1.5 rounded-xl border p-2.5 text-left text-[11px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 ${frame} ${day.when === 'past' ? 'opacity-80' : ''}`}
+      >
+        <span className="flex w-full items-baseline justify-between gap-2">
+          <span className={`text-xs font-semibold ${isToday ? 'text-orange-200' : 'text-slate-100'}`}>{day.label}</span>
+          <span className="font-mono tabular-nums text-slate-300">{day.rest ? 'Folga' : formatDuration(day.plannedMinutes)}</span>
+        </span>
 
-      {!day.rest && (
-        <>
-          <div className="h-1.5 overflow-hidden rounded-full bg-slate-800" aria-hidden="true">
-            <div className={`h-full rounded-full ${metDay ? 'bg-emerald-500' : 'bg-orange-500'}`} style={{ width: `${progress}%` }} />
-          </div>
-          <p className="text-[10px] text-slate-500">{statusLine(day)}</p>
-        </>
-      )}
+        {!day.rest && (
+          <>
+            <span className="block h-1 w-full overflow-hidden rounded-full bg-slate-800" aria-hidden="true">
+              <span className={`block h-full rounded-full ${metDay ? 'bg-emerald-500' : 'bg-orange-500'}`} style={{ width: `${progress}%` }} />
+            </span>
+            <span className="text-[10px] text-slate-500">{statusLine(day)}</span>
+          </>
+        )}
 
-      <ul className="space-y-1">
-        {day.blocks.map((block, i) => {
-          const subject = subjectsById.get(block.subjectId);
-          const topic = block.topicId ? topicsById.get(block.topicId) : undefined;
-          const title = block.kind === 'WEEK_REVIEW' ? 'Revisão da semana' : (subject?.name ?? 'Matéria');
-          return (
-            <li key={`${block.subjectId}-${block.topicId ?? ''}-${i}`} className="flex gap-1.5 rounded-md bg-slate-900/80 px-1.5 py-1">
-              <span className={`mt-1 h-1.5 w-1.5 shrink-0 rounded-full ${dotClass(block, day.when)}`} aria-hidden="true" />
-              <span className="min-w-0 flex-1" title={topic ? `${title} · ${topic.code ?? ''} ${topic.title}` : title}>
-                <span className="line-clamp-2 font-semibold leading-snug text-slate-200 [overflow-wrap:anywhere]">{title}</span>
-                {topic && <span className="line-clamp-2 leading-snug text-slate-400 [overflow-wrap:anywhere]">{`${topic.code ?? ''} ${topic.title}`.trim()}</span>}
+        <span className="flex w-full flex-col gap-0.5">
+          {day.blocks.map((block, i) => {
+            const subject = subjectsById.get(block.subjectId);
+            const review = block.kind === 'WEEK_REVIEW';
+            const name = review ? 'Revisão' : shortSubjectName(subject?.name ?? 'Matéria');
+            return (
+              <span key={`${block.subjectId}-${block.topicId ?? ''}-${i}`} className="flex w-full items-center gap-1.5 whitespace-nowrap">
+                <span
+                  className="h-1.5 w-1.5 shrink-0 rounded-full"
+                  style={{ backgroundColor: review ? REVIEW_COLOR : (subject?.color ?? '#64748b') }}
+                  aria-hidden="true"
+                />
+                <span className="min-w-0 flex-1 truncate text-slate-200">{name}</span>
+                <span className="shrink-0 font-mono tabular-nums text-slate-400">{formatDuration(block.minutes)}</span>
               </span>
-              <span className="shrink-0 font-mono tabular-nums text-slate-400">{formatDuration(block.minutes)}</span>
-            </li>
-          );
-        })}
-      </ul>
+            );
+          })}
+        </span>
+      </button>
     </li>
   );
 }

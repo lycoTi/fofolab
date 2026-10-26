@@ -85,7 +85,7 @@ describe('aba Plano de estudo: Sua semana (spec 13 §4.2)', () => {
     view();
     const week = screen.getByRole('region', { name: 'Sua semana' });
     const saturday = within(week).getByRole('listitem', { name: /^Sáb 31/ });
-    expect(saturday.textContent).toContain('Revisão da semana');
+    expect(saturday.textContent).toContain('Revisão');
   });
 
   it('saem os totais do topo (hoje, este ano, desde o começo)', () => {
@@ -120,5 +120,32 @@ describe('aba Plano de estudo: Sua semana (spec 13 §4.2)', () => {
     const { container } = view();
     expect(screen.queryByRole('group', { name: 'FofoDoro' })).toBeNull();
     expect(container.textContent).not.toMatch(/\d+\s?min\b/);
+  });
+});
+
+describe('Sua semana: cartão enxuto + detalhe do dia (opção A, 26/10)', () => {
+  const allTopics = Object.values(topicsBySubject).flat();
+
+  it('o cartão tem uma linha por bloco, com o nome curto da matéria e sem o tópico', () => {
+    view();
+    const week = screen.getByRole('region', { name: 'Sua semana' });
+    const tuesday = within(week).getByRole('listitem', { name: /^Ter 27/ });
+    for (const t of allTopics) expect(tuesday.textContent).not.toContain(t.title);
+    expect(tuesday.textContent).toMatch(/\d{2}:\d{2}/);
+  });
+
+  it('o detalhe abre no dia de hoje, com o nome inteiro da matéria e o tópico; clicar noutro dia troca', () => {
+    view();
+    const detail = screen.getByRole('region', { name: 'Dia escolhido' });
+    expect(detail.textContent).toContain('Terça 27');
+    expect(allTopics.some((t) => detail.textContent?.includes(t.title))).toBe(true);
+    fireEvent.click(within(screen.getByRole('region', { name: 'Sua semana' })).getByRole('button', { name: /^Qua 28/ }));
+    expect(screen.getByRole('region', { name: 'Dia escolhido' }).textContent).toContain('Quarta 28');
+  });
+
+  it('a Revisão da semana aparece no detalhe do dia dela', () => {
+    view();
+    fireEvent.click(within(screen.getByRole('region', { name: 'Sua semana' })).getByRole('button', { name: /^Sáb 31/ }));
+    expect(screen.getByRole('region', { name: 'Dia escolhido' }).textContent).toContain('Revisão da semana');
   });
 });

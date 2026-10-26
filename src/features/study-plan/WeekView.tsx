@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import { CalendarClock, CheckCircle2 } from 'lucide-react';
 import { formatDuration } from '../../lib/timeFormat';
 import type { DayForecast } from '../../lib/weekForecast';
 import type { Subject, Topic } from '../../types/database';
 import { DayCard } from './DayCard';
+import { DayDetail } from './DayDetail';
 
 const shortDate = (d: Date) => `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`;
 
-/** Sua semana (spec 13 §4.2): sete dias, cada um com as próprias horas; o que vem é previsão e se refaz sozinho. */
+/**
+ * Sua semana (spec 13 §4.2): sete dias, cada um com as próprias horas; o que vem é previsão e se refaz sozinho. Cartões
+ * enxutos (opção A do dono) e, embaixo, o detalhe do dia escolhido — hoje, até o estudante clicar noutro.
+ */
 export function WeekView({
   days,
   weekStart,
@@ -25,6 +30,8 @@ export function WeekView({
   topicsBySubject: Record<string, Topic[]>;
 }) {
   const studied = days.reduce((acc, d) => acc + d.studiedMinutes, 0);
+  const [chosenKey, setChosenKey] = useState<string | null>(null);
+  const chosen = days.find((d) => d.dateKey === chosenKey) ?? days.find((d) => d.when === 'today') ?? days[0];
   const weekEnd = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + 6);
   const subjectsById = new Map(subjects.map((s) => [s.id, s]));
   const topicsById = new Map(Object.values(topicsBySubject).flat().map((t) => [t.id, t]));
@@ -60,10 +67,18 @@ export function WeekView({
 
       {/* Colunas pelo espaço do centro (com os painéis abertos ele é estreito): 7 quando cabe, 4 + 3 quando não */}
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(8.5rem,1fr))] gap-2">
-        {days.map((day) => (
-          <DayCard key={day.dateKey} day={day} subjectsById={subjectsById} topicsById={topicsById} />
+        {days.map((day, index) => (
+          <DayCard
+            key={day.dateKey}
+            day={day}
+            index={index}
+            selected={day.dateKey === chosen?.dateKey}
+            subjectsById={subjectsById}
+            onSelect={() => setChosenKey(day.dateKey)}
+          />
         ))}
       </ul>
+      {chosen && <DayDetail day={chosen} subjectsById={subjectsById} topicsById={topicsById} />}
       <p className="text-[11px] text-slate-500">
         Os próximos dias são previsão: se você atrasar ou adiantar, o resto da semana se refaz sozinho, sem mudar o total.
       </p>
