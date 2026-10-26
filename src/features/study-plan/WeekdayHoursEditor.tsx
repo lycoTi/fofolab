@@ -4,25 +4,28 @@ import { formatDuration } from '../../lib/timeFormat';
 
 /** Tempos oferecidos para um dia: de 00:30 a 08:00, de meia em meia hora. */
 const TIME_OPTIONS = Array.from({ length: 16 }, (_, i) => (i + 1) * 30);
+/** Atalhos de "mesmo tempo nos dias de estudo". */
+const QUICK_TIMES = [60, 90, 120, 180, 270];
 /** Dia religado que nunca teve tempo começa com 01:00. */
 const DEFAULT_DAY_MINUTES = 60;
 
-const selectClass =
-  'rounded-lg border border-slate-800 bg-slate-950 px-2 py-1 font-mono text-xs text-slate-100 ' +
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400';
+const focusRing = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400';
+const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
 /**
- * Dias de estudo e horas de cada dia (spec 13 §4.1). Primeiro os dias — desligado é folga fixa, sem cobrança —, depois
- * o tempo de cada dia ligado. Usado no "Ajustar" do Plano, na semana atípica e no Wizard.
+ * Dias de estudo e horas de cada dia (spec 13 §4.1). Cada dia é uma coluna: o botão do dia liga/desliga e o tempo fica
+ * logo embaixo dele (desligado = "Folga", sem cobrança) — o dia aparece uma vez só. Usado no "Ajustar" do Plano, na
+ * semana atípica e no Wizard.
  */
 export function WeekdayHoursEditor({
   value,
   onChange,
-  title = 'Em quais dias você estuda?',
+  title = 'Em quais dias e quanto tempo você estuda?',
 }: {
   value: WeekdayMinutes;
   onChange: (next: WeekdayMinutes) => void;
-  title?: string;
+  /** `null` esconde o título (quando a tela já tem o próprio). */
+  title?: string | null;
 }) {
   // Tempo de cada dia antes de desligar: religar devolve o mesmo tempo
   const lastOn = useRef<number[]>(value.map((m) => (m > 0 ? m : DEFAULT_DAY_MINUTES)));
@@ -42,79 +45,68 @@ export function WeekdayHoursEditor({
     setDay(index, lastOn.current[index] || DEFAULT_DAY_MINUTES);
   };
   const applyToStudyDays = (minutes: number) => {
-    onChange(value.map((m) => (m > 0 ? minutes : 0)) as WeekdayMinutes);
+    const anyDay = value.some((m) => m > 0);
+    onChange(value.map((m) => (m > 0 || !anyDay ? minutes : 0)) as WeekdayMinutes);
   };
 
   return (
     <div className="space-y-3">
-      <div className="space-y-2">
-        <p className="text-xs font-semibold text-slate-100">{title}</p>
-        <div className="flex flex-wrap gap-1.5">
-          {WEEKDAY_LABELS.map((label, i) => {
-            const on = value[i] > 0;
-            return (
+      {title && <p className="text-xs font-semibold text-slate-100">{title}</p>}
+
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(3.6rem,1fr))] gap-1.5">
+        {WEEKDAY_LABELS.map((label, i) => {
+          const on = value[i] > 0;
+          return (
+            <div key={label} role="group" aria-label={capitalize(WEEKDAY_NAMES[i])} className="flex flex-col gap-1.5">
               <button
-                key={label}
                 type="button"
                 aria-pressed={on}
                 onClick={() => toggle(i)}
-                className={`min-w-11 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 ${
+                className={`rounded-lg border py-1.5 text-xs font-semibold transition-colors ${focusRing} ${
                   on
-                    ? 'border-orange-500/70 bg-orange-500/15 text-orange-100'
+                    ? 'border-orange-500/70 bg-orange-500/15 text-orange-100 hover:bg-orange-500/25'
                     : 'border-slate-800 bg-slate-950/70 text-slate-500 hover:text-slate-300'
                 }`}
               >
                 {label}
               </button>
-            );
-          })}
-        </div>
+              {on ? (
+                <select
+                  aria-label={`Tempo de ${WEEKDAY_NAMES[i]}`}
+                  value={String(value[i])}
+                  onChange={(e) => setDay(i, Number(e.target.value))}
+                  className={`fofolab-enter w-full rounded-lg border border-slate-800 bg-slate-950 py-1 text-center font-mono text-xs text-slate-100 ${focusRing}`}
+                >
+                  {!TIME_OPTIONS.includes(value[i]) && <option value={String(value[i])}>{formatDuration(value[i])}</option>}
+                  {TIME_OPTIONS.map((m) => (
+                    <option key={m} value={String(m)}>
+                      {formatDuration(m)}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <span className="rounded-lg border border-dashed border-slate-800 py-1 text-center text-[11px] text-slate-500">Folga</span>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {total > 0 && (
-        <div className="space-y-2">
-          <ul className="flex flex-wrap gap-x-5 gap-y-1.5">
-            {WEEKDAY_LABELS.map((label, i) =>
-              value[i] > 0 ? (
-                <li key={label} className="flex items-center gap-2 text-xs text-slate-300">
-                  <span className="w-7">{label}</span>
-                  <select
-                    aria-label={`Tempo de ${WEEKDAY_NAMES[i]}`}
-                    value={String(value[i])}
-                    onChange={(e) => setDay(i, Number(e.target.value))}
-                    className={selectClass}
-                  >
-                    {!TIME_OPTIONS.includes(value[i]) && <option value={String(value[i])}>{formatDuration(value[i])}</option>}
-                    {TIME_OPTIONS.map((m) => (
-                      <option key={m} value={String(m)}>
-                        {formatDuration(m)}
-                      </option>
-                    ))}
-                  </select>
-                </li>
-              ) : null
-            )}
-          </ul>
-          <label className="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
-            Mesmo tempo nos dias de estudo
-            <select
-              aria-label="Mesmo tempo nos dias de estudo"
-              value=""
-              onChange={(e) => e.target.value && applyToStudyDays(Number(e.target.value))}
-              className={selectClass}
-            >
-              <option value="">escolher</option>
-              {TIME_OPTIONS.map((m) => (
-                <option key={m} value={String(m)}>
-                  {formatDuration(m)}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-      )}
-
-      <p className="font-mono text-xs text-slate-300">{`${formatDuration(total)} por semana`}</p>
+      <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-400">
+        <span className="mr-0.5">Mesmo tempo nos dias de estudo:</span>
+        {QUICK_TIMES.map((m) => (
+          <button
+            key={m}
+            type="button"
+            aria-label={`${formatDuration(m)} nos dias de estudo`}
+            onClick={() => applyToStudyDays(m)}
+            className={`rounded-full border border-slate-700 px-2.5 py-0.5 font-mono text-slate-200 hover:border-orange-500/60 hover:text-white ${focusRing}`}
+          >
+            {formatDuration(m)}
+          </button>
+        ))}
+        <span className="ml-auto font-mono text-xs text-slate-300">{`${formatDuration(total)} por semana`}</span>
+      </div>
     </div>
   );
 }

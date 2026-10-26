@@ -173,7 +173,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
       />
     );
     fireEvent.click(screen.getByText(/Continuar/i));
-    fireEvent.click(screen.getByText('03:00 por dia'));
+    fireEvent.click(screen.getByRole('button', { name: '03:00 nos dias de estudo' }));
     for (let i = 0; i < 3; i += 1) fireEvent.click(screen.getByText(/Continuar/i));
     fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i));
     expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([180, 180, 180, 180, 180, 180, 0]);

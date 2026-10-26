@@ -21,9 +21,13 @@ function Harness({ initial, onChange }: { initial: WeekdayMinutes; onChange?: (v
 }
 
 describe('Editor de dias de estudo e horas (spec 13 §4.1)', () => {
-  it('pergunta os dias primeiro e mostra o tempo só dos dias ligados', () => {
+  it('cada dia é uma coluna: o dia em cima, o tempo logo embaixo; desligado mostra "Folga"', () => {
     render(<Harness initial={PATTERN} />);
-    expect(screen.getByText('Em quais dias você estuda?')).toBeTruthy();
+    expect(screen.getByText('Em quais dias e quanto tempo você estuda?')).toBeTruthy();
+    const sunday = screen.getByRole('group', { name: 'Domingo' });
+    expect(sunday.textContent).toContain('Folga');
+    const saturday = screen.getByRole('group', { name: 'Sábado' });
+    expect(saturday.contains(screen.getByLabelText('Tempo de sábado'))).toBe(true);
     expect(screen.getByRole('button', { name: 'Dom' }).getAttribute('aria-pressed')).toBe('false');
     expect(screen.getByRole('button', { name: 'Sáb' }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.queryByLabelText('Tempo de domingo')).toBeNull();
@@ -53,8 +57,13 @@ describe('Editor de dias de estudo e horas (spec 13 §4.1)', () => {
   it('"Mesmo tempo nos dias de estudo" aplica o tempo só aos dias ligados', () => {
     const onChange = vi.fn();
     render(<Harness initial={PATTERN} onChange={onChange} />);
-    fireEvent.change(screen.getByLabelText('Mesmo tempo nos dias de estudo'), { target: { value: '120' } });
+    fireEvent.click(screen.getByRole('button', { name: '02:00 nos dias de estudo' }));
     expect(onChange).toHaveBeenLastCalledWith([120, 120, 120, 120, 120, 120, 0]);
+  });
+
+  it('cada dia aparece uma vez só na seção (sem lista repetida de dias)', () => {
+    const { container } = render(<Harness initial={PATTERN} />);
+    expect(container.textContent?.match(/Sáb/g)).toHaveLength(1);
   });
 
   it('total da semana em HH:mm, sem minutos soltos', () => {

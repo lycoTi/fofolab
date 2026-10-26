@@ -63,7 +63,7 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
 
   await page.getByText('🔥 Modo Pós-Edital (Edital Publicado)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
-  await page.getByText('02:00 por dia', { exact: true }).click();
+  await page.getByRole('button', { name: '02:00 nos dias de estudo' }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   // Autoavaliação: pular mantém o nível que já estava em cada matéria
@@ -333,7 +333,7 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
 
   // O assistente abre nas horas e segue para a autoavaliação do plano novo
   await expect(page.getByText('Passo 2 de 5')).toBeVisible();
-  await page.getByText('03:00 por dia', { exact: true }).click();
+  await page.getByRole('button', { name: '03:00 nos dias de estudo' }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   // O plano novo já vem escolhido no passo "Qual edital você quer focar agora?"
   await expect(page.getByRole('button', { name: /\[CGU\] CGU 2026 — Tecnologia da Informação/ })).toBeVisible();
