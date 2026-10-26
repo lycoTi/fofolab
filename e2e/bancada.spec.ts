@@ -367,6 +367,15 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   await expect(routineColumn(page)).not.toContainText('não conta para o bloco de hoje');
   await page.screenshot({ path: `${SCREENS}/10-meu-dia-do-edital.png`, fullPage: true });
 
+  // Plano de estudo com o edital real (spec 13): 7 dias de 03:00 e previsão com as matérias do edital
+  await page.getByRole('button', { name: 'Plano de estudo', exact: true }).click();
+  const realWeek = page.getByRole('region', { name: 'Sua semana' });
+  await expect(realWeek.getByRole('listitem', { name: /^(Seg|Ter|Qua|Qui|Sex|Sáb|Dom) \d+$/ })).toHaveCount(7);
+  await expect(realWeek).toContainText('de 21:00');
+  await expect(realWeek).toContainText('Arquitetura e Integração de Sistemas');
+  await expect(page.locator('main')).not.toContainText(/\d+ ?min\b|NaN|undefined/);
+  await page.screenshot({ path: `${SCREENS}/16-plano-com-edital-real.png`, fullPage: true });
+
   // Recarregar não perde o plano nem a autoavaliação
   await waitSaved(page);
   await page.reload();

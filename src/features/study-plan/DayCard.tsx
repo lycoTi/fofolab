@@ -60,8 +60,8 @@ export function DayCard({
             <li key={`${block.subjectId}-${block.topicId ?? ''}-${i}`} className="flex gap-1.5 rounded-md bg-slate-900/80 px-1.5 py-1">
               <span className={`mt-1 h-1.5 w-1.5 shrink-0 rounded-full ${dotClass(block, day.when)}`} aria-hidden="true" />
               <span className="min-w-0 flex-1" title={topic ? `${title} · ${topic.code ?? ''} ${topic.title}` : title}>
-                <span className="line-clamp-2 font-semibold leading-snug text-slate-200">{title}</span>
-                {topic && <span className="line-clamp-2 leading-snug text-slate-400">{`${topic.code ?? ''} ${topic.title}`.trim()}</span>}
+                <span className="line-clamp-2 font-semibold leading-snug text-slate-200 [overflow-wrap:anywhere]">{title}</span>
+                {topic && <span className="line-clamp-2 leading-snug text-slate-400 [overflow-wrap:anywhere]">{`${topic.code ?? ''} ${topic.title}`.trim()}</span>}
               </span>
               <span className="shrink-0 font-mono tabular-nums text-slate-400">{formatDuration(block.minutes)}</span>
             </li>
