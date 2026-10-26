@@ -17,8 +17,13 @@ não a institucional; e existe uma zona com personalidade, onde mora o Fofo.
 - Escala só inteira e sem suavização: 32 px no cabeçalho, 64 px na FofoIA e no FofoDoro, 128 px em tela vazia
   e conquista. O ícone de 16 px tem desenho próprio.
 - **Guarda-roupa:** a roupa sai de uma função pura com teste (data, hora, aba, roupa fixa → roupa). Ordem:
-  roupa fixa nas configurações > data especial > madrugada (22:00–05:00) > aba (Plano de estudo e Revisão do
-  dia = fazendeiro; Questões e Edital = explorador) > base. Roupa nova = sprite + regra + teste.
+  roupa fixa nas configurações > marco do concurso (dia da prova, nomeado) > data especial > madrugada
+  (22:00–05:00) > aba (Plano de estudo e Revisão do dia = fazendeiro; Questões e Edital = explorador) > base.
+  Roupa nova = sprite + regra + teste.
+- **Calendário (cerca de um mês por festa, para as roupas de momento aparecerem no resto do ano):** Halloween em
+  outubro; Natal de 1º a 30/12; Ano-novo de 31/12 a 31/01; Carnaval das 2 semanas antes até a Quarta-feira de
+  Cinzas (calculado pela Páscoa); Festa junina em junho; Dia da prova na data cadastrada; Nomeado até o estudante
+  desligar ou cadastrar uma prova nova (concurso escada).
 - **Poses com função:** pensando (FofoIA respondendo), dormindo (pausa do FofoDoro), comemorando (marco real).
 - **Movimento:** em tela de estudo o Fofo fica parado (no máximo pisca); anima só em momento (pausa, conquista,
   resposta chegando). Respeita `prefers-reduced-motion`. O resto da interface segue 150–250 ms, sem quadros.
