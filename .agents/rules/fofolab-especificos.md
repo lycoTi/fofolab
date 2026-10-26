@@ -5,10 +5,11 @@ Este arquivo diz como elas se aplicam aqui.
 A skill `education-learning-science` é local (`.agents/skills/`).
 
 ## Testes (test-driven-development, tdd-suite, playwright-best-practices)
-- Unitários em `src/lib/__tests__/` (`cycleEngine.ts`, `aiRouter.ts`, complexidade, proteção de 1º contato no Estudo Reverso);
-  integração em `src/components/__tests__/` (filtrar, responder, diagnosticar, chat de Estudo Reverso, salvar no caderno).
+- Unitários e de integração ficam juntos em `src/__tests__/` (`cycleEngine.ts`, `aiRouter.ts`, complexidade, proteção de
+  1º contato no Estudo Reverso; filtrar, responder, diagnosticar, chat de Estudo Reverso, salvar no caderno).
 - Invariante crítica: **orçamento semanal fixo (soma zero)** — erros em questões nunca inflam as horas semanais do aluno.
-- Auditoria de UI limpa: `uiCleanliness.test.tsx` (termos proibidos em `ui-clean-design-and-tdd.md`).
+- Auditoria de UI limpa: não há um teste único; cada tela checa os termos proibidos de `ui-clean-design-and-tdd.md`
+  no próprio teste (ex.: `FORBIDDEN_JARGON` em `fofodoro.test.tsx`).
 
 ## Interface (impeccable, frontend-ui-engineering, ux-ui-clean)
 - Público: estudante de concurso (CGU, BACEN, tribunais). Tempo sempre em HH:mm (`formatDuration`/`formatClock`).

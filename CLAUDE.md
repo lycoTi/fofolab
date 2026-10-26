@@ -13,6 +13,7 @@ Projeto pessoal em pt-BR: bancada de estudos para concursos (CGU/BACEN), local-f
 @.agents/rules/ui-clean-design-and-tdd.md
 @.agents/rules/graphify.md
 @.agents/rules/fofolab-especificos.md
+@.agents/rules/identidade-fofolab.md
 
 ## Skills — leia o SKILL.md ANTES de começar o trabalho correspondente
 Globais (stack `~/.agents`, valem para todos os projetos; o que é só do FofoLab está em `.agents/rules/fofolab-especificos.md`)
@@ -23,8 +24,8 @@ A tabela de qual skill global usar para cada trabalho está em `~/.agents/AGENTS
 | Trabalho | Skill / regra |
 |---|---|
 | Ciclo, domínio, revisão espaçada, métricas, tutor de IA, qualquer regra "pedagógica" | `learning-analytics-interpretation-guide`, `individual-spacing-algorithm-explainer`, `spaced-practice-scheduler`, `productive-failure-desirable-difficulty-designer` e as demais de `.agents/skills/` + seção Pedagogia de `fofolab-especificos.md` |
-| Tela nova ou redesenho | `impeccable` + `ux-ui-clean` + paleta/tom em `fofolab-especificos.md` |
-| Ajuste em tela, modal, gráfico ou componente existente | `ux-ui-clean` + paleta/tom em `fofolab-especificos.md` |
+| Tela nova ou redesenho | `impeccable` + `ux-ui-clean` + `identidade-fofolab.md` (zonas, Fofo, pixel) + paleta/tom em `fofolab-especificos.md` |
+| Ajuste em tela, modal, gráfico ou componente existente | `ux-ui-clean` + `identidade-fofolab.md` + paleta/tom em `fofolab-especificos.md` |
 | Novo painel, componente grande, `App.tsx` | regra autoral de componentes (~250 linhas) + painéis em `fofolab-especificos.md` |
 | Prompts de IA, parser de provas/edital, extração JSON | regra autoral de prompts + camadas lei → jurisprudência → banca em `fofolab-especificos.md` |
 | Chaves de API, PDFs/HTML de bancas, `.fofopack` | `security-and-hardening` + seção Segurança de `fofolab-especificos.md` |
