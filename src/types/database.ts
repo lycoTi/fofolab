@@ -51,6 +51,8 @@ export interface StudyPlan {
   selected_role?: string | null;
   daily_review_enabled?: number; // [v8] 0 | 1 (ausente = ligada)
   productive_failure_hints?: number; // [v9] 0 | 1 (ausente = ligada)
+  weekday_minutes_json?: string | null; // [v11] minutos seg–dom em JSON (0 = folga; ausente = horas ÷ 7)
+  final_stretch_days?: number; // [v11] dias da reta final (padrão 14)
 }
 
 // 2b. exam_parts [v4] — provas objetivas do edital

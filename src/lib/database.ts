@@ -23,6 +23,7 @@ import {
 } from './storage';
 import { parentTopicCode } from './syllabusImport';
 import { localDateKey } from './timeFormat';
+import { parseWeekdayMinutes, scaleWeekdayMinutes, weekDateKeys, type WeekdayMinutes } from './availability';
 import {
   SEED_ADMIN_BLUEPRINTS,
   SEED_AI_DISSECTIONS,
@@ -758,10 +759,18 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
   const existing = queryOne<StudyPlan>(db, 'SELECT * FROM study_plans WHERE id = ?', [input.id]);
   if (!existing) return null;
 
+  // Horas da semana mudaram por outro caminho (gestão do edital): o padrão de dias acompanha, mantendo as folgas
+  const weeklyHours = input.weekly_hours_target ?? existing.weekly_hours_target;
+  const weekdayJson =
+    existing.weekday_minutes_json && weeklyHours !== existing.weekly_hours_target
+      ? JSON.stringify(scaleWeekdayMinutes(parseWeekdayMinutes(existing.weekday_minutes_json, weeklyHours), Math.round(weeklyHours * 60)))
+      : (existing.weekday_minutes_json ?? null);
+
   db.run(
     `UPDATE study_plans
      SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?,
-         strategy_mode = ?, study_moment = ?, daily_review_enabled = ?, productive_failure_hints = ?
+         strategy_mode = ?, study_moment = ?, daily_review_enabled = ?, productive_failure_hints = ?,
+         weekday_minutes_json = ?
      WHERE id = ?`,
     [
       input.title ?? existing.title,
@@ -774,12 +783,78 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
       input.study_moment !== undefined ? input.study_moment : existing.study_moment,
       input.daily_review_enabled ?? existing.daily_review_enabled ?? 1,
       input.productive_failure_hints ?? existing.productive_failure_hints ?? 1,
+      weekdayJson,
       input.id,
     ]
   );
 
   persistDatabase();
   return queryOne<StudyPlan>(db, 'SELECT * FROM study_plans WHERE id = ?', [input.id]);
+}
+
+/** Dias de estudo e horas de cada dia (spec 13 §4.1); as horas da semana passam a ser a soma deles. */
+export function updateWeekdayMinutes(planId: string, minutes: WeekdayMinutes): StudyPlan | null {
+  const db = getDb();
+  const clean = minutes.map((m) => Math.max(0, Math.round(m)));
+  const weeklyHours = clean.reduce((acc, m) => acc + m, 0) / 60;
+  db.run('UPDATE study_plans SET weekday_minutes_json = ?, weekly_hours_target = ? WHERE id = ?', [
+    JSON.stringify(clean),
+    weeklyHours,
+    planId,
+  ]);
+  persistDatabase();
+  return queryOne<StudyPlan>(db, 'SELECT * FROM study_plans WHERE id = ?', [planId]);
+}
+
+/** Exceções de horas entre duas datas locais (inclusive). */
+export function getDayOverrides(planId: string, fromKey: string, toKey: string): Record<string, number> {
+  const rows = queryAll<{ date: string; minutes: number }>(
+    getDb(),
+    'SELECT date, minutes FROM plan_day_overrides WHERE plan_id = ? AND date >= ? AND date <= ? ORDER BY date',
+    [planId, fromKey, toKey]
+  );
+  return Object.fromEntries(rows.map((r) => [r.date, r.minutes]));
+}
+
+/** "Hoje tenho menos tempo" / "Hoje não vou estudar" (0); `null` volta ao tempo do padrão. */
+export function setDayOverride(planId: string, dateKey: string, minutes: number | null): void {
+  const db = getDb();
+  if (minutes === null) {
+    db.run('DELETE FROM plan_day_overrides WHERE plan_id = ? AND date = ?', [planId, dateKey]);
+  } else {
+    db.run(
+      `INSERT INTO plan_day_overrides (plan_id, date, minutes) VALUES (?, ?, ?)
+       ON CONFLICT(plan_id, date) DO UPDATE SET minutes = excluded.minutes`,
+      [planId, dateKey, Math.max(0, Math.round(minutes))]
+    );
+  }
+  persistDatabase();
+}
+
+/** Semana atípica: grava os sete dias da semana que começa em `weekStartKey`; `null` volta ao padrão. */
+export function setWeekOverride(planId: string, weekStartKey: string, minutes: WeekdayMinutes | null): void {
+  const db = getDb();
+  const [year, month, day] = weekStartKey.split('-').map(Number);
+  const keys = weekDateKeys(new Date(year, month - 1, day));
+  db.run('BEGIN TRANSACTION;');
+  try {
+    for (const [i, key] of keys.entries()) {
+      if (minutes === null) {
+        db.run('DELETE FROM plan_day_overrides WHERE plan_id = ? AND date = ?', [planId, key]);
+      } else {
+        db.run(
+          `INSERT INTO plan_day_overrides (plan_id, date, minutes) VALUES (?, ?, ?)
+           ON CONFLICT(plan_id, date) DO UPDATE SET minutes = excluded.minutes`,
+          [planId, key, Math.max(0, Math.round(minutes[i]))]
+        );
+      }
+    }
+    db.run('COMMIT;');
+  } catch (err) {
+    db.run('ROLLBACK;');
+    throw err;
+  }
+  persistDatabase();
 }
 
 export function deleteStudyPlan(planId: string): void {

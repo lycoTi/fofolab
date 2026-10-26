@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 10;
+export const LATEST_SCHEMA_VERSION = 11;
 
 export interface Migration {
   version: number;
@@ -157,6 +157,24 @@ export const MIGRATIONS: Migration[] = [
       // Idempotente; tentativas antigas ficam com NULL e a troca usa o delta teórico, como antes
       const columns = db.exec('PRAGMA table_info(question_attempts)')[0]?.values.map((row) => String(row[1])) ?? [];
       if (!columns.includes('mastery_delta')) db.run('ALTER TABLE question_attempts ADD COLUMN mastery_delta REAL');
+    },
+  },
+  {
+    version: 11,
+    description: 'Plano de estudo (spec 13): horas de cada dia da semana, dias da reta final e exceções de horas por data',
+    up: (db) => {
+      // Idempotente; plano sem padrão gravado (NULL) continua com as horas da semana divididas pelos 7 dias
+      const columns = db.exec('PRAGMA table_info(study_plans)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('weekday_minutes_json')) db.run('ALTER TABLE study_plans ADD COLUMN weekday_minutes_json TEXT');
+      if (!columns.includes('final_stretch_days')) {
+        db.run('ALTER TABLE study_plans ADD COLUMN final_stretch_days INTEGER NOT NULL DEFAULT 14');
+      }
+      db.run(`CREATE TABLE IF NOT EXISTS plan_day_overrides (
+        plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+        date TEXT NOT NULL,
+        minutes INTEGER NOT NULL,
+        PRIMARY KEY (plan_id, date)
+      )`);
     },
   },
 ];

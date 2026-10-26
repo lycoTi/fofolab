@@ -41,7 +41,19 @@ CREATE TABLE IF NOT EXISTS study_plans (
     -- [v8] Revisão do dia ao abrir o app (1 = ligada; o estudante pode desligar na calibragem)
     daily_review_enabled INTEGER NOT NULL DEFAULT 1,
     -- [v9] FofoIA: aquecimento/convite antes da aula num tópico nunca tentado (0 = "Tenho meu método")
-    productive_failure_hints INTEGER NOT NULL DEFAULT 1
+    productive_failure_hints INTEGER NOT NULL DEFAULT 1,
+    -- [v11] Plano de estudo (spec 13): minutos de cada dia, seg–dom, em JSON (0 = folga fixa; NULL = horas ÷ 7)
+    weekday_minutes_json TEXT,
+    -- [v11] Dias da reta final antes da prova (só revisão e questões)
+    final_stretch_days INTEGER NOT NULL DEFAULT 14
+);
+
+-- [v11] Exceções de horas por data: "hoje tenho menos tempo", "hoje não vou estudar" e semana atípica (spec 13 §4.1)
+CREATE TABLE IF NOT EXISTS plan_day_overrides (
+    plan_id TEXT NOT NULL REFERENCES study_plans(id) ON DELETE CASCADE,
+    date TEXT NOT NULL,                    -- Data local 'YYYY-MM-DD'
+    minutes INTEGER NOT NULL,
+    PRIMARY KEY (plan_id, date)
 );
 
 -- [v4] Provas objetivas do edital (P1, P2, P3…) com pontuação e nota mínima eliminatória
