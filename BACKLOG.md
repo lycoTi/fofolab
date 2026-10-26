@@ -139,8 +139,10 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   no dia mais longo, no tópico estudado mais frio que não está no dia (some com a Revisão do dia desligada). **Sua semana**:
   dias que passaram com o feito, hoje com o roteiro, os próximos como previsão (o mesmo planejador). Totais "Este ano /
   Desde o começo" saíram. Migração **v11** (`weekday_minutes_json`, `final_stretch_days`, `plan_day_overrides`).
-  Verificado: unit (526), E2E 33 em duas rodadas (`e2e/plano.spec.ts` com recarregar; a semana com o edital real da CGU em
-  `bancada.spec.ts`), build. Pendente de olhar no `.exe` (nunca compilado).
+  Verificado: unit (539), E2E 33 em duas rodadas (`e2e/plano.spec.ts` com recarregar; a semana com o edital real da CGU em
+  `bancada.spec.ts`), build. Revisão independente (26/10) corrigida com teste: divisão do ciclo gravada pela semana padrão
+  (semana de folga/atípica zerava a divisão), previsão limitada ao que sobra da semana, roteiro refeito sem perder tempo
+  nem duplicar a revisão, plano novo herda os dias, tempo de hoje travado com bloco rodando. Pendente de olhar no `.exe`.
   **Próximas:** 13b ("Dá tempo?", linha do tempo por semana, reta final de 14 dias no roteiro e no projetor, ritmo real) →
   13c (mapa matéria × semana, sugestão de ajustar o padrão).
 - [DONE] **FofoIA + diagnóstico pela confiança (spec 11, 24/10/2026; plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`):**
