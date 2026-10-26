@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { estimateTopicMinutes, realPace, stretchStartKey, TOPIC_MINUTES_BY_LEVEL, topicLevel, weekSlots } from '../lib/examProjection';
+import { estimateTopicMinutes, projectTopics, realPace, stretchStartKey, TOPIC_MINUTES_BY_LEVEL, topicLevel, weekSlots } from '../lib/examProjection';
 import type { StudySession, Subject, Topic } from '../types/database';
 
 const NOW = new Date(2026, 9, 26, 10, 0); // segunda 26/10/2026
@@ -86,5 +86,58 @@ describe('Horas para tópico novo em cada semana até a reta final (spec 13 §4.
     const inStretch = weekSlots({ ...base, now: new Date(2026, 11, 1, 9, 0) });
     expect(inStretch.every((s) => s.phase === 'RETA_FINAL' && s.newTopicMinutes === 0)).toBe(true);
     expect(weekSlots({ ...base, now: new Date(2026, 11, 20, 9, 0) })).toEqual([]);
+  });
+});
+
+describe('Projetor: tópicos que faltam pelas semanas (spec 13 §4.3)', () => {
+  const slot = (key: string, minutes: number, phase: 'TEORIA' | 'ULTIMOS' | 'RETA_FINAL' = 'TEORIA') => ({
+    weekStart: new Date(`${key}T00:00:00`), weekStartKey: key, newTopicMinutes: minutes, phase,
+  });
+  const queue = (id: string, minutes: number[]) => minutes.map((m, i) => ({ topicId: `${id}${i + 1}`, minutes: m }));
+
+  it('o tópico só fica visto quando o tempo dele fecha; a sobra passa para a semana seguinte', () => {
+    const r = projectTopics([slot('2026-10-26', 90), slot('2026-11-02', 30)], [
+      { subjectId: 'a', partCode: null, share: 1, totalLeaf: 2, seen: 0, queue: queue('a', [60, 60]) },
+    ]);
+    expect(r.weeks.map((w) => w.newTopics)).toEqual([1, 1]);
+    expect(r.weeks.map((w) => w.coveragePercent)).toEqual([50, 100]);
+  });
+
+  it('matéria que fecha devolve o tempo às outras, na proporção delas', () => {
+    const r = projectTopics([slot('2026-10-26', 200)], [
+      { subjectId: 'a', partCode: null, share: 0.5, totalLeaf: 1, seen: 0, queue: queue('a', [30]) },
+      { subjectId: 'b', partCode: null, share: 0.5, totalLeaf: 3, seen: 0, queue: queue('b', [60, 60, 60]) },
+    ]);
+    expect(r.weeks[0].newTopics).toBe(3);
+    expect(r.seenAtStretch.get('b')).toBe(2);
+    expect(r.leftForLater).toEqual(['b3']);
+  });
+
+  it('reta final não recebe tópico novo e o % visto para nela', () => {
+    const r = projectTopics([slot('2026-11-23', 120, 'ULTIMOS'), slot('2026-11-30', 0, 'RETA_FINAL')], [
+      { subjectId: 'a', partCode: null, share: 1, totalLeaf: 10, seen: 4, queue: queue('a', [60, 60, 60, 60, 60, 60]) },
+    ]);
+    expect(r.weeks.map((w) => w.newTopics)).toEqual([2, 0]);
+    expect(r.weeks.map((w) => w.coveragePercent)).toEqual([60, 60]);
+    expect(r.leftForLater).toEqual(['a3', 'a4', 'a5', 'a6']);
+  });
+
+  it('o que não cabe fica para depois: o fim da fila de cada matéria, matéria a matéria', () => {
+    const r = projectTopics([slot('2026-10-26', 120)], [
+      { subjectId: 'a', partCode: null, share: 0.5, totalLeaf: 2, seen: 0, queue: queue('a', [60, 60]) },
+      { subjectId: 'b', partCode: null, share: 0.5, totalLeaf: 2, seen: 0, queue: queue('b', [60, 60]) },
+    ]);
+    expect(r.leftForLater).toEqual(['a2', 'b2']);
+  });
+
+  it('partes do ciclo todas 0: divisão igual; sem fila nenhuma: nada muda e não trava', () => {
+    const equal = projectTopics([slot('2026-10-26', 120)], [
+      { subjectId: 'a', partCode: null, share: 0, totalLeaf: 1, seen: 0, queue: queue('a', [60]) },
+      { subjectId: 'b', partCode: null, share: 0, totalLeaf: 1, seen: 0, queue: queue('b', [60]) },
+    ]);
+    expect(equal.weeks[0].newTopics).toBe(2);
+    const empty = projectTopics([slot('2026-10-26', 600)], [{ subjectId: 'a', partCode: null, share: 1, totalLeaf: 3, seen: 3, queue: [] }]);
+    expect(empty.weeks[0]).toMatchObject({ newTopics: 0, coveragePercent: 100 });
+    expect(projectTopics([slot('2026-10-26', 60)], []).weeks[0].coveragePercent).toBe(0);
   });
 });

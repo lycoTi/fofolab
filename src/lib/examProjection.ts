@@ -116,3 +116,78 @@ export function weekSlots(input: {
   }
   return slots;
 }
+
+export interface SubjectQueue {
+  subjectId: string;
+  partCode: string | null;
+  /** Parte da matéria no ciclo (0..1). */
+  share: number;
+  totalLeaf: number;
+  seen: number;
+  /** Tópicos ainda não vistos, na ordem de prioridade, com o tempo estimado de cada um. */
+  queue: { topicId: string; minutes: number }[];
+}
+
+export interface ProjectedWeek extends WeekSlot {
+  newTopics: number;
+  /** % do edital visto ao fim da semana. */
+  coveragePercent: number;
+}
+
+/** Voltas de redistribuição por semana: a sobra de quem fechou vai para quem tem fila (sempre termina). */
+const MAX_ROUNDS = 12;
+
+/**
+ * Espalha os tópicos que faltam pelas semanas: cada matéria recebe a parte dela do tempo da semana e consome a própria
+ * fila na ordem; o tópico fica visto quando o tempo dele fecha (a sobra passa para a semana seguinte). Matéria sem fila
+ * devolve o tempo às que têm, na proporção delas; partes todas 0 = divisão igual.
+ */
+export function projectTopics(
+  slots: WeekSlot[],
+  subjects: SubjectQueue[]
+): { weeks: ProjectedWeek[]; seenAtStretch: Map<string, number>; leftForLater: string[] } {
+  const state = subjects.map((s) => ({ ...s, next: 0, progress: 0 }));
+  const totalLeaf = subjects.reduce((acc, s) => acc + s.totalLeaf, 0);
+  const coverage = () => (totalLeaf === 0 ? 0 : Math.round((state.reduce((acc, s) => acc + s.seen, 0) / totalLeaf) * 100));
+
+  // Consome o tempo dado à matéria; devolve o que sobrou quando a fila acaba
+  const consume = (s: (typeof state)[number], minutes: number): { leftover: number; done: number } => {
+    let done = 0;
+    s.progress += minutes;
+    while (s.next < s.queue.length && s.progress >= s.queue[s.next].minutes) {
+      s.progress -= s.queue[s.next].minutes;
+      s.next += 1;
+      s.seen += 1;
+      done += 1;
+    }
+    if (s.next < s.queue.length) return { leftover: 0, done };
+    const leftover = s.progress;
+    s.progress = 0;
+    return { leftover, done };
+  };
+
+  const weeks = slots.map((slot) => {
+    let pool = slot.newTopicMinutes;
+    let newTopics = 0;
+    for (let round = 0; round < MAX_ROUNDS && pool >= 1; round += 1) {
+      const active = state.filter((s) => s.next < s.queue.length);
+      if (active.length === 0) break;
+      const shareSum = active.reduce((acc, s) => acc + s.share, 0);
+      let leftover = 0;
+      for (const s of active) {
+        const part = shareSum > 0 ? s.share / shareSum : 1 / active.length;
+        const result = consume(s, pool * part);
+        leftover += result.leftover;
+        newTopics += result.done;
+      }
+      pool = leftover;
+    }
+    return { ...slot, newTopics, coveragePercent: coverage() };
+  });
+
+  return {
+    weeks,
+    seenAtStretch: new Map(state.map((s) => [s.subjectId, s.seen])),
+    leftForLater: state.flatMap((s) => s.queue.slice(s.next).map((t) => t.topicId)),
+  };
+}
