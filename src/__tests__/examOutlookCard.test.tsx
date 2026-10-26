@@ -13,7 +13,8 @@ const weeks = [
   week('2026-11-30', 'RETA_FINAL', 0, 80), week('2026-12-07', 'RETA_FINAL', 0, 80),
 ];
 const base: ExamOutlook = {
-  status: 'PROJETANDO', stretchStartKey: '2026-11-29', weeks, coverageAtStretch: 100, real: null, extraWeeklyMinutes: 0,
+  status: 'PROJETANDO', stretchStartKey: '2026-11-29', weeks, totalTopics: 100, coverageAtStretch: 100, real: null,
+  plannedWeeklyMinutes: 1260, extraWeeklyMinutes: 0, fits: true,
   leftForLater: [], parts: [
     { code: 'P1', name: 'Conhecimentos básicos', coverageAtStretch: 100 },
     { code: 'P2', name: 'Conhecimentos complementares', coverageAtStretch: 95 },

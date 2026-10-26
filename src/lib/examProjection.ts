@@ -1,6 +1,6 @@
 import { minutesForDay, weekBudgetMinutes, weekDateKeys, weeklyReviewDay, weekReviewDuration, type WeekdayMinutes } from './availability';
 import { startOfWeek, type CycleCalculationResult } from './cycleEngine';
-import { examSituation } from './goodMorning';
+import { findBehindPart } from './goodMorning';
 import { localDateKey } from './timeFormat';
 import type { ExamPart, StudyPlan, StudySession, Subject, Topic } from '../types/database';
 
@@ -212,34 +212,48 @@ export interface ExamOutlook {
   status: 'PROJETANDO' | 'RETA_FINAL' | 'PROVA_PASSOU';
   stretchStartKey: string;
   weeks: ProjectedWeek[];
-  /** % do edital visto até a véspera da reta final, pelo plano. */
+  /** Tópicos folha do plano (0 = o conteúdo do edital ainda não foi importado). */
+  totalTopics: number;
+  /** % do edital visto até a véspera da reta final, pelo plano (arredondado para baixo). */
   coverageAtStretch: number;
-  /** Ritmo real bem abaixo do plano (10% ou mais), com 7+ dias de uso; senão nulo. */
+  /** Ritmo real das últimas 2 semanas 10% ou mais abaixo do que estava planejado nelas, com 7+ dias de uso; senão nulo. */
   real: { weeklyMinutes: number; coverageAtStretch: number } | null;
-  /** Tempo a mais por semana para ver tudo antes da reta final (0 quando dá). */
+  /** Horas da semana no padrão. */
+  plannedWeeklyMinutes: number;
+  /** Tempo a mais por semana que leva a projeção a 100% antes da reta final (0 quando já dá). */
   extraWeeklyMinutes: number;
+  /** O acréscimo é realista: até o dobro do plano e até 08:00 por dia de estudo. */
+  fits: boolean;
+  /** O que fica para depois, do menos para o mais prioritário (de todas as matérias). */
   leftForLater: Topic[];
   parts: { code: string; name: string; coverageAtStretch: number }[];
   partWarning: string | null;
   topicMinutes: { estimate: number; source: 'AUTOAVALIACAO' | 'RITMO_REAL' | 'MISTO'; sample: number };
 }
 
-/** Ritmo real só aparece com uma semana de uso e quando fica 10% ou mais abaixo do plano. */
+/** Ritmo real só aparece com uma semana de uso e quando fica 10% ou mais abaixo do planejado. */
 const REAL_PACE_MIN_DAYS = 7;
 const REAL_PACE_WINDOW_DAYS = 14;
 const REAL_PACE_GAP = 0.9;
 /** Amostra a partir da qual o ritmo real manda (C de 0,8 para cima). */
 const REAL_PACE_TRUSTED = 20;
+/** Busca do acréscimo: de 00:30 em 00:30, até 112:00 a mais por semana. */
+const EXTRA_STEP = 30;
+const EXTRA_MAX = 112 * 60;
+/** Acréscimo realista: até o dobro do plano e até 08:00 por dia de estudo. */
+const FIT_PLAN_FACTOR = 2;
+const FIT_MAX_PER_DAY = 480;
 
 /**
  * "Dá tempo?" (spec 13 §4.3): quanto do edital estará visto quando a reta final começar — pelo plano e, se ele estiver
- * bem abaixo, pelo ritmo real —, o que fazer se não der (horas a mais por semana; o que fica para depois) e cada prova.
- * Sem data da prova: nulo.
+ * bem abaixo do planejado, pelo ritmo real —, o que fazer se não der (horas a mais por semana; o que fica para depois) e
+ * cada prova. Sem data da prova: nulo.
  */
 export function examOutlook(input: {
   plan: StudyPlan;
   now: Date;
   pattern: WeekdayMinutes;
+  /** Exceções de horas da janela do ritmo real até a prova (semanas atípicas passadas e futuras). */
   overrides: Record<string, number>;
   subjects: Subject[];
   topicsBySubject: Record<string, Topic[]>;
@@ -258,20 +272,23 @@ export function examOutlook(input: {
   if (plan.exam_date < todayKey) status = 'PROVA_PASSOU';
   else if (todayKey >= stretchKey) status = 'RETA_FINAL';
 
-  // 1. Tópicos folha, vistos e por ver (o mesmo "visto" do Início)
+  // 1. Tópicos folha, vistos e por ver (o mesmo "visto" do Início); só as sessões deste plano contam
   const all = Object.values(input.topicsBySubject).flat();
+  const topicsById = new Map(all.map((t) => [t.id, t]));
   const parents = new Set(all.map((t) => t.parent_id).filter(Boolean));
   const leafOf = (subjectId: string) => (input.topicsBySubject[subjectId] ?? []).filter((t) => !parents.has(t.id));
   const isSeen = (t: Topic) => t.last_studied_at !== null || input.firstStudyDates[t.id] !== undefined;
   const leafIds = new Set(all.filter((t) => !parents.has(t.id)).map((t) => t.id));
-  const pace = realPace({ sessions: input.sessions, firstStudyDates: input.firstStudyDates, leafTopicIds: leafIds, now });
+  const subjectIds = new Set(input.subjects.map((s) => s.id));
+  const sessions = input.sessions.filter((s) => subjectIds.has(s.subject_id) && !s.was_skipped);
+  const pace = realPace({ sessions, firstStudyDates: input.firstStudyDates, leafTopicIds: leafIds, now });
 
   // 2. Fila de cada matéria, na ordem de prioridade do motor, com o tempo estimado de cada tópico
   const rank = new Map(input.cycleData.topicHeatmapRanking.map((h, i) => [h.topic.id, i]));
-  const byPriority = (a: Topic, b: Topic) =>
-    (rank.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (rank.get(b.id) ?? Number.MAX_SAFE_INTEGER) ||
-    (a.code ?? '').localeCompare(b.code ?? '', undefined, { numeric: true });
+  const rankOf = (t: Topic) => rank.get(t.id) ?? Number.MAX_SAFE_INTEGER;
+  const byPriority = (a: Topic, b: Topic) => rankOf(a) - rankOf(b) || (a.code ?? '').localeCompare(b.code ?? '', undefined, { numeric: true });
   const totalCycle = input.cycleData.allocations.reduce((acc, a) => acc + a.currentWeeklyMinutes, 0);
+  const levelOfParent = (t: Topic) => (t.parent_id ? (topicsById.get(t.parent_id)?.initial_knowledge_level ?? null) : null);
   const queues: SubjectQueue[] = input.subjects.map((subject) => {
     const leaf = leafOf(subject.id);
     const unseen = leaf.filter((t) => !isSeen(t)).sort(byPriority);
@@ -282,9 +299,13 @@ export function examOutlook(input: {
       share: totalCycle > 0 ? (allocation?.currentWeeklyMinutes ?? 0) / totalCycle : 0,
       totalLeaf: leaf.length,
       seen: leaf.length - unseen.length,
-      queue: unseen.map((t) => ({ topicId: t.id, minutes: estimateTopicMinutes(TOPIC_MINUTES_BY_LEVEL[topicLevel(t, subject)], pace) })),
+      queue: unseen.map((t) => ({
+        topicId: t.id,
+        minutes: estimateTopicMinutes(TOPIC_MINUTES_BY_LEVEL[topicLevel(t, subject, levelOfParent(t))], pace),
+      })),
     };
   });
+  const totalTopics = queues.reduce((acc, q) => acc + q.totalLeaf, 0);
 
   // 3. Projeção pelo plano
   const slots = weekSlots({
@@ -295,23 +316,30 @@ export function examOutlook(input: {
     overrides: input.overrides,
     todayStudiedMinutes: input.todayStudiedMinutes,
     reviewEnabled: plan.daily_review_enabled !== 0,
+    studiedAny: queues.some((q) => q.seen > 0),
   });
   const projected = projectTopics(slots, queues);
   const coverageAtStretch = projected.weeks.at(-1)?.coveragePercent ?? coverageNow(queues);
 
-  // 4. Ritmo real: horas feitas nas últimas 2 semanas (ou desde o começo, com 7+ dias de uso)
-  const real = realOutlook({ now, pattern: input.pattern, sessions: input.sessions, firstStudyDates: input.firstStudyDates, slots, queues });
+  // 4. Ritmo real: o que foi feito × o que estava planejado nos mesmos dias
+  const real = realOutlook({ now, pattern: input.pattern, overrides: input.overrides, sessions, slots, queues });
 
-  // 5. Se não dá: horas a mais por semana e o que fica para depois
-  const minutesById = new Map(queues.flatMap((q) => q.queue.map((t) => [t.topicId, t.minutes] as const)));
-  const neededMinutes = projected.leftForLater.reduce((acc, id) => acc + (minutesById.get(id) ?? 0), 0);
-  const theoryWeeks = Math.max(1, slots.filter((s) => s.phase !== 'RETA_FINAL').length);
-  const extraWeeklyMinutes = neededMinutes > 0 ? Math.ceil(neededMinutes / theoryWeeks / 30) * 30 : 0;
-  const topicsById = new Map(all.map((t) => [t.id, t]));
-  const leftForLater = projected.leftForLater.flatMap((id) => {
-    const topic = topicsById.get(id);
-    return topic ? [topic] : [];
-  });
+  // 5. Se não dá: o menor acréscimo por semana que leva a projeção a 100%, e se ele é realista
+  const plannedWeeklyMinutes = input.pattern.reduce((acc, m) => acc + m, 0);
+  const extra = projected.leftForLater.length > 0 ? extraForFullCoverage(slots, queues) : 0;
+  const studyDays = input.pattern.filter((m) => m > 0).length || 7;
+  const neededWeekly = plannedWeeklyMinutes + (extra ?? EXTRA_MAX);
+  const fits =
+    extra !== null &&
+    plannedWeeklyMinutes > 0 &&
+    neededWeekly <= plannedWeeklyMinutes * FIT_PLAN_FACTOR &&
+    neededWeekly / studyDays <= FIT_MAX_PER_DAY;
+  const leftForLater = projected.leftForLater
+    .flatMap((id) => {
+      const topic = topicsById.get(id);
+      return topic ? [topic] : [];
+    })
+    .sort((a, b) => byPriority(b, a));
 
   // 6. Cada prova: média das matérias dela (como o cabeçalho), com o aviso da que tem nota mínima e fica para trás
   const subjectCoverage = new Map(
@@ -325,14 +353,15 @@ export function examOutlook(input: {
         .map((s) => subjectCoverage.get(s.id))
         .filter((v): v is number => v !== null && v !== undefined);
       if (values.length === 0) return [];
-      return [{ code: part.code, name: part.name, coverageAtStretch: Math.round(values.reduce((acc, v) => acc + v, 0) / values.length) }];
+      return [{ code: part.code, name: part.name, coverageAtStretch: Math.floor(values.reduce((acc, v) => acc + v, 0) / values.length) }];
     });
-  const partWarning = examSituation({
-    plan,
-    parts: input.examParts,
-    progress: parts.map((p) => ({ code: p.code, coveragePercent: p.coverageAtStretch })),
-    now,
-  }).warning;
+  const behind = findBehindPart(
+    parts.map((p) => ({ code: p.code, coveragePercent: p.coverageAtStretch })),
+    input.examParts
+  );
+  const partWarning = behind
+    ? `${behind.code} deve chegar a ${behind.coverage}% até a reta final (as outras: ${behind.others}%). Ela tem nota mínima.`
+    : null;
 
   // 7. De onde vem o tempo por tópico (o "ⓘ")
   const estimates = queues.flatMap((q) => q.queue.map((t) => t.minutes));
@@ -345,9 +374,12 @@ export function examOutlook(input: {
     status,
     stretchStartKey: stretchKey,
     weeks: projected.weeks,
+    totalTopics,
     coverageAtStretch,
     real,
-    extraWeeklyMinutes,
+    plannedWeeklyMinutes,
+    extraWeeklyMinutes: extra ?? 0,
+    fits,
     leftForLater,
     parts,
     partWarning,
@@ -357,35 +389,67 @@ export function examOutlook(input: {
 
 function coverageNow(queues: SubjectQueue[]): number {
   const total = queues.reduce((acc, q) => acc + q.totalLeaf, 0);
-  return total === 0 ? 0 : Math.round((queues.reduce((acc, q) => acc + q.seen, 0) / total) * 100);
+  return total === 0 ? 0 : Math.floor((queues.reduce((acc, q) => acc + q.seen, 0) / total) * 100);
 }
 
-/** A mesma projeção com cada semana na proporção do ritmo real — só quando ele está bem abaixo do plano. */
+/**
+ * Menor acréscimo por semana (de 00:30 em 00:30) que leva a projeção a ver tudo antes da reta final — calculado pela
+ * própria projeção, então é coerente com ela. Cada semana ganha a parte dos dias dela. Nem com 112:00 a mais: nulo.
+ */
+function extraForFullCoverage(slots: WeekSlot[], queues: SubjectQueue[]): number | null {
+  const fullWith = (extra: number) =>
+    projectTopics(
+      slots.map((s) => ({ ...s, newTopicMinutes: s.newTopicMinutes + (extra * s.days) / 7 })),
+      queues
+    ).leftForLater.length === 0;
+  if (!fullWith(EXTRA_MAX)) return null;
+  let low = 0;
+  let high = EXTRA_MAX / EXTRA_STEP;
+  while (low < high) {
+    const mid = Math.floor((low + high) / 2);
+    if (fullWith(mid * EXTRA_STEP)) high = mid;
+    else low = mid + 1;
+  }
+  return low * EXTRA_STEP;
+}
+
+/**
+ * A mesma projeção com cada semana na proporção do ritmo real — só quando ele está bem abaixo do que estava planejado
+ * nos mesmos dias (folga planejada e semana atípica não contam como atraso). Janela: os 14 dias antes de hoje (ou desde a
+ * primeira sessão, com 7+ dias de uso).
+ */
 function realOutlook(input: {
   now: Date;
   pattern: WeekdayMinutes;
+  overrides: Record<string, number>;
   sessions: StudySession[];
-  firstStudyDates: Record<string, string>;
   slots: WeekSlot[];
   queues: SubjectQueue[];
 }): ExamOutlook['real'] {
-  const starts = [
-    ...Object.values(input.firstStudyDates).map((d) => new Date(d).getTime()),
-    ...input.sessions.map((s) => new Date(s.started_at).getTime()),
-  ];
-  if (starts.length === 0) return null;
-  const daysOfUse = Math.floor((input.now.getTime() - Math.min(...starts)) / DAY_MS);
+  if (input.sessions.length === 0) return null;
+  const today = new Date(input.now.getFullYear(), input.now.getMonth(), input.now.getDate());
+  const first = Math.min(...input.sessions.map((s) => new Date(s.started_at).getTime()));
+  const firstDay = new Date(first);
+  const daysOfUse = Math.round((today.getTime() - new Date(firstDay.getFullYear(), firstDay.getMonth(), firstDay.getDate()).getTime()) / DAY_MS);
   if (daysOfUse < REAL_PACE_MIN_DAYS) return null;
   const window = Math.min(REAL_PACE_WINDOW_DAYS, daysOfUse);
-  const since = input.now.getTime() - window * DAY_MS;
-  const minutes = input.sessions
-    .filter((s) => !s.was_skipped && new Date(s.started_at).getTime() >= since)
+  const since = today.getTime() - window * DAY_MS;
+  const done = input.sessions
+    .filter((s) => {
+      const at = new Date(s.started_at).getTime();
+      return at >= since && at < today.getTime();
+    })
     .reduce((acc, s) => acc + s.duration_minutes, 0);
-  const weeklyMinutes = Math.round((minutes / window) * 7);
-  const plannedWeekly = input.pattern.reduce((acc, m) => acc + m, 0);
-  if (plannedWeekly === 0 || weeklyMinutes > plannedWeekly * REAL_PACE_GAP) return null;
-  const factor = weeklyMinutes / plannedWeekly;
-  const scaled = input.slots.map((s) => ({ ...s, newTopicMinutes: s.newTopicMinutes * factor }));
+  let planned = 0;
+  for (let i = 1; i <= window; i += 1) {
+    const day = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i);
+    planned += minutesForDay(localDateKey(day), input.pattern, input.overrides);
+  }
+  if (planned === 0) return null;
+  const ratio = done / planned;
+  if (ratio > REAL_PACE_GAP) return null;
+  const weeklyMinutes = Math.round((done / window) * 7);
+  const scaled = input.slots.map((s) => ({ ...s, newTopicMinutes: s.newTopicMinutes * ratio }));
   const projected = projectTopics(scaled, input.queues);
   return { weeklyMinutes, coverageAtStretch: projected.weeks.at(-1)?.coveragePercent ?? coverageNow(input.queues) };
 }

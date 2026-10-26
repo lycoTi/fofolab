@@ -94,7 +94,11 @@ function daysLine(examDate: string | null, now: Date): string | null {
 }
 
 /** Um aviso só, para a prova eliminatória mais atrasada em relação às outras (nunca uma lista de cobranças). */
-function behindWarning(parts: { code: string; coveragePercent: number }[], examParts: ExamPart[]): string | null {
+/** A prova com nota mínima mais atrasada em relação à média das outras (20 pontos ou mais); nenhuma, nula. */
+export function findBehindPart(
+  parts: { code: string; coveragePercent: number }[],
+  examParts: ExamPart[]
+): { code: string; coverage: number; others: number } | null {
   let worst: { code: string; coverage: number; others: number; gap: number } | null = null;
   for (const p of parts) {
     const hasMinimum = examParts.find((x) => x.code === p.code)?.min_score != null;
@@ -106,6 +110,11 @@ function behindWarning(parts: { code: string; coveragePercent: number }[], examP
       worst = { code: p.code, coverage: p.coveragePercent, others: average, gap };
     }
   }
+  return worst ? { code: worst.code, coverage: worst.coverage, others: worst.others } : null;
+}
+
+function behindWarning(parts: { code: string; coveragePercent: number }[], examParts: ExamPart[]): string | null {
+  const worst = findBehindPart(parts, examParts);
   if (!worst) return null;
   return `${worst.code} está ficando para trás: ${worst.coverage}% visto (as outras: ${worst.others}%). Ela tem nota mínima.`;
 }

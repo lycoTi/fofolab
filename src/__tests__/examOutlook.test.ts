@@ -24,20 +24,25 @@ const cycleData = {
   ],
   topicHeatmapRanking: [],
 } as unknown as CycleCalculationResult;
-const session = (minutes: number, daysAgo: number): StudySession => ({
-  id: `s${daysAgo}-${minutes}`, subject_id: 'A', topic_id: 'A1', duration_minutes: minutes, session_type: 'POMODORO',
+const session = (minutes: number, daysAgo: number, subjectId = 'A'): StudySession => ({
+  id: `s${subjectId}${daysAgo}-${minutes}`, subject_id: subjectId, topic_id: null, duration_minutes: minutes, session_type: 'POMODORO',
   pauses_count: 0, was_skipped: 0, started_at: new Date(NOW.getTime() - daysAgo * DAY).toISOString(),
 });
+/** Uma sessão por dia nos últimos N dias (ontem para trás). */
+const daily = (minutes: number, days: number, subjectId = 'A') => Array.from({ length: days }, (_, i) => session(minutes, i + 1, subjectId));
 
-function outlook(over: { pattern?: WeekdayMinutes; sessions?: StudySession[]; firstStudyDates?: Record<string, string>; planOver?: Partial<StudyPlan> } = {}) {
+function outlook(over: {
+  pattern?: WeekdayMinutes; sessions?: StudySession[]; firstStudyDates?: Record<string, string>; planOver?: Partial<StudyPlan>;
+  overrides?: Record<string, number>; topics?: Record<string, Topic[]>; cycle?: CycleCalculationResult;
+} = {}) {
   return examOutlook({
     plan: { ...plan, ...over.planOver } as StudyPlan,
     now: NOW,
     pattern: over.pattern ?? [180, 180, 180, 180, 180, 180, 180],
-    overrides: {},
+    overrides: over.overrides ?? {},
     subjects: [subjectA, subjectB],
-    topicsBySubject,
-    cycleData,
+    topicsBySubject: over.topics ?? topicsBySubject,
+    cycleData: over.cycle ?? cycleData,
     examParts: parts,
     sessions: over.sessions ?? [],
     firstStudyDates: over.firstStudyDates ?? {},
@@ -66,22 +71,65 @@ describe('"Dá tempo?" (spec 13 §4.3)', () => {
   });
 
   it('ritmo real bem abaixo do plano aparece; perto do plano ou com pouco uso, não', () => {
-    const tenDaysAgo = new Date(NOW.getTime() - 20 * DAY).toISOString();
-    // 15:30 por semana nas últimas 2 semanas, com o plano em 21:00
-    const slow = outlook({ sessions: [session(930, 2), session(930, 9)], firstStudyDates: { A1: tenDaysAgo } })!;
-    expect(slow.real?.weeklyMinutes).toBe(930);
-    // 20:00 por semana: menos de 10% abaixo do plano
-    expect(outlook({ sessions: [session(1200, 2), session(1200, 9)], firstStudyDates: { A1: tenDaysAgo } })!.real).toBeNull();
-    // Só 5 dias de uso
-    const recent = new Date(NOW.getTime() - 5 * DAY).toISOString();
-    expect(outlook({ sessions: [session(100, 2)], firstStudyDates: { A1: recent } })!.real).toBeNull();
+    // 02:10 por dia (15:10 por semana) nas últimas 2 semanas, com o plano em 03:00 por dia
+    const slow = outlook({ sessions: daily(130, 14) })!;
+    expect(slow.real?.weeklyMinutes).toBe(910);
+    expect(slow.real!.coverageAtStretch).toBeLessThanOrEqual(slow.coverageAtStretch);
+    // 02:50 por dia: menos de 10% abaixo do plano
+    expect(outlook({ sessions: daily(170, 14) })!.real).toBeNull();
+    // Só 5 dias de uso (pela primeira sessão, não pela primeira questão)
+    expect(outlook({ sessions: daily(30, 5), firstStudyDates: { A1: new Date(NOW.getTime() - 40 * DAY).toISOString() } })!.real).toBeNull();
+  });
+
+  it('ritmo real: só as sessões deste plano contam', () => {
+    // 01:40 por dia aqui e 03:20 por dia noutro plano: o ritmo deste plano é 01:40
+    const o = outlook({ sessions: [...daily(100, 14), ...daily(200, 14, 'OUTRO')] })!;
+    expect(o.real?.weeklyMinutes).toBe(700);
+  });
+
+  it('ritmo real compara com o que estava planejado nos dias (folga planejada não é atraso)', () => {
+    // Semana passada de folga (exceções 0) e esta cumprida: o ritmo bate com o planejado
+    const lastWeek = Object.fromEntries(Array.from({ length: 7 }, (_, i) => {
+      const d = new Date(NOW.getTime() - (i + 8) * DAY);
+      return [`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`, 0];
+    }));
+    expect(outlook({ sessions: daily(180, 7), overrides: lastWeek })!.real).toBeNull();
+  });
+
+  it('"+HH:mm por semana" leva mesmo a 100%; quando passa do dobro do plano, não cabe', () => {
+    const tight = outlook({ pattern: [60, 60, 60, 60, 60, 0, 0] })!;
+    expect(tight.coverageAtStretch).toBeLessThan(100);
+    expect(tight.extraWeeklyMinutes % 30).toBe(0);
+    const perDay = tight.extraWeeklyMinutes / 7;
+    const withExtra = outlook({ pattern: [60 + perDay, 60 + perDay, 60 + perDay, 60 + perDay, 60 + perDay, perDay, perDay] })!;
+    expect(withExtra.coverageAtStretch).toBe(100);
+    expect(tight.fits).toBe(true);
+    expect(outlook({ pattern: [60, 0, 0, 0, 0, 0, 0] })!.fits).toBe(false);
+  });
+
+  it('o que fica para depois começa pelo de menor prioridade (de todas as matérias)', () => {
+    const ranked = { ...cycleData, topicHeatmapRanking: [...topicsOf('A'), ...topicsOf('B')].map((topic) => ({ topic })) } as unknown as CycleCalculationResult;
+    const o = outlook({ pattern: [120, 0, 0, 0, 0, 0, 0], cycle: ranked })!;
+    expect(o.leftForLater[0].id).toBe('B10');
+  });
+
+  it('sem nível próprio, o tópico usa a autoavaliação do grupo dele', () => {
+    const group = { id: 'GA', subject_id: 'A', code: '1', title: 'Grupo A', parent_id: null, initial_knowledge_level: 4, last_studied_at: null } as unknown as Topic;
+    const children = topicsOf('A').map((t) => ({ ...t, parent_id: 'GA' }));
+    const o = outlook({ topics: { A: [group, ...children], B: topicsOf('B') }, pattern: [120, 0, 0, 0, 0, 0, 0] })!;
+    // Filhos de A em "Domino" (00:30) e B em "Nunca vi" (02:00): média de 01:15
+    expect(o.topicMinutes.estimate).toBe(75);
+  });
+
+  it('plano sem tópicos: sem projeção de cobertura', () => {
+    expect(outlook({ topics: { A: [], B: [] } })!.totalTopics).toBe(0);
   });
 
   it('P1/P2 com o % projetado e o aviso da prova com nota mínima ficando para trás', () => {
     const o = outlook({ pattern: [120, 0, 0, 0, 0, 0, 0] })!;
     expect(o.parts.map((p) => p.code)).toEqual(['P1', 'P2']);
     expect(o.parts[0].coverageAtStretch).toBeGreaterThan(o.parts[1].coverageAtStretch);
-    expect(o.partWarning).toMatch(/^P2 está ficando para trás/);
+    expect(o.partWarning).toMatch(/^P2 deve chegar a \d+% até a reta final \(as outras: \d+%\)\. Ela tem nota mínima\.$/);
   });
 
   it('o "ⓘ" sabe de onde vem o tempo por tópico', () => {
