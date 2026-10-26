@@ -1609,7 +1609,8 @@ export function recordStudySession(params: {
     ]);
   }
 
-  if (params.topicId) {
+  // Pular o bloco (ou 0 minuto) não é estudo do tópico: não conta como visto nem mexe na memória dele
+  if (params.topicId && !params.wasSkipped && params.durationMinutes > 0) {
     db.run('UPDATE topics SET last_studied_at = ? WHERE id = ?', [now, params.topicId]);
   }
 
@@ -1753,7 +1754,7 @@ export function getTopicFirstStudyDates(): Record<string, string> {
   const rows = queryAll<{ topic_id: string; first_at: string }>(
     getDb(),
     `SELECT topic_id, MIN(at) AS first_at FROM (
-       SELECT topic_id, started_at AS at FROM study_sessions WHERE topic_id IS NOT NULL
+       SELECT topic_id, started_at AS at FROM study_sessions WHERE topic_id IS NOT NULL AND was_skipped = 0 AND duration_minutes > 0
        UNION ALL SELECT topic_id, attempted_at FROM question_attempts WHERE topic_id IS NOT NULL
        UNION ALL SELECT topic_id, logged_at FROM question_logs WHERE topic_id IS NOT NULL
      ) GROUP BY topic_id`

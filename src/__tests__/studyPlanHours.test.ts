@@ -95,3 +95,27 @@ describe('Horas por dia do plano (spec 13 §4.1, migração v11)', () => {
     expect(left).toBe(0);
   });
 });
+
+describe('Sessão pulada não é estudo do tópico (revisão independente da 13b)', () => {
+  it('pular o bloco (ou 0 minuto) não marca o tópico como visto; estudar marca', async () => {
+    const db = await openDatabase();
+    const before = db.getTopicFirstStudyDates();
+    const unseen = db
+      .getStudyPlans()
+      .flatMap((pl) => db.getSubjectsByPlan(pl.id))
+      .flatMap((s) => db.getTopicsBySubject(s.id))
+      .filter((t) => t.last_studied_at === null && before[t.id] === undefined);
+    const [skippedTopic, zeroTopic, studiedTopic] = unseen;
+    db.recordStudySession({ subjectId: skippedTopic.subject_id, topicId: skippedTopic.id, durationMinutes: 10, pausesCount: 0, wasSkipped: true });
+    db.recordStudySession({ subjectId: zeroTopic.subject_id, topicId: zeroTopic.id, durationMinutes: 0, pausesCount: 0, wasSkipped: false });
+    db.recordStudySession({ subjectId: studiedTopic.subject_id, topicId: studiedTopic.id, durationMinutes: 30, pausesCount: 0, wasSkipped: false });
+    const first = db.getTopicFirstStudyDates();
+    const topics = db.getStudyPlans().flatMap((pl) => db.getSubjectsByPlan(pl.id)).flatMap((s) => db.getTopicsBySubject(s.id));
+    expect(first[skippedTopic.id]).toBeUndefined();
+    expect(topics.find((t) => t.id === skippedTopic.id)!.last_studied_at).toBeNull();
+    expect(first[zeroTopic.id]).toBeUndefined();
+    expect(topics.find((t) => t.id === zeroTopic.id)!.last_studied_at).toBeNull();
+    expect(first[studiedTopic.id]).toBeDefined();
+    expect(topics.find((t) => t.id === studiedTopic.id)!.last_studied_at).not.toBeNull();
+  });
+});
