@@ -140,6 +140,26 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([120, 120, 120, 120, 120, 300, 0]);
   });
 
+  it('Wizard pede pelo menos um dia de estudo antes de seguir', () => {
+    render(
+      <OnboardingWizardModal
+        isOpen={true}
+        plans={SEED_STUDY_PLANS}
+        activePlan={{ ...cguPlan, weekday_minutes_json: '[60,0,0,0,0,0,0]' }}
+        onClose={vi.fn()}
+        onComplete={vi.fn()}
+        getPlanContent={getPlanContent}
+      />
+    );
+    fireEvent.click(screen.getByText(/Continuar/i));
+    fireEvent.click(screen.getByRole('button', { name: 'Seg' }));
+    expect(screen.getByText('Escolha pelo menos um dia de estudo para montar o plano.')).toBeTruthy();
+    const next = screen.getByText(/Continuar/i).closest('button')!;
+    expect(next.disabled).toBe(true);
+    fireEvent.click(screen.getByRole('button', { name: 'Qua' }));
+    expect(next.disabled).toBe(false);
+  });
+
   it('atalho de tempo do Wizard vale para os dias de estudo', () => {
     const onComplete = vi.fn();
     render(

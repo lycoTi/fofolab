@@ -13,7 +13,7 @@ import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { forecastWeek } from './lib/weekForecast';
-import { weekBudgetMinutes, weekDateKeys, weekReviewDuration } from './lib/availability';
+import { weekReviewDuration } from './lib/availability';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
 import { FofoDoroPreview } from './features/fofodoro/FofoDoroPreview';
@@ -43,7 +43,7 @@ import { usePeek } from './features/routine/usePeek';
 import { routineGroup, type RoutineItem } from './lib/dailyRoutine';
 import { describeRecalibrationHint, recalibrationHint } from './lib/recalibrationHint';
 import { generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
-import { calculateDynamicStudyCycle, startOfWeek } from './lib/cycleEngine';
+import { calculateDynamicStudyCycle, recommendedForStandardWeek, startOfWeek } from './lib/cycleEngine';
 import {
   applyRecommendedCycleAllocations,
   countDependents,
@@ -90,7 +90,6 @@ import {
   setActiveStudyPlan,
   updateStudyPlan,
   updateWeekdayMinutes,
-  getDayOverrides,
   updateSubject,
   updateTopic,
 } from './lib/database';
@@ -670,9 +669,8 @@ export default function App() {
       const planSubjects = getSubjectsByPlan(targetPlanId);
       const planTopics: Record<string, Topic[]> = {};
       for (const s of planSubjects) planTopics[s.id] = getTopicsBySubject(s.id);
-      const weekStart = startOfWeek(new Date());
-      const weekKeys = weekDateKeys(weekStart);
-      const recommended = calculateDynamicStudyCycle({
+      // A divisão gravada vem da semana padrão (os dias escolhidos), nunca de uma semana de folga ou atípica
+      const recommended = recommendedForStandardWeek({
         plan: updatedPlan,
         subjects: planSubjects,
         topicsBySubject: planTopics,
@@ -682,11 +680,8 @@ export default function App() {
         examParts: getExamPartsByPlan(targetPlanId),
         questionLogs: getQuestionLogs(),
         recallChecks: getRecallChecks(),
-        weeklyMinutesBudget: weekBudgetMinutes(weekStart, profile.weekdayMinutes, getDayOverrides(targetPlanId, weekKeys[0], weekKeys[6])),
-      });
-      applyRecommendedCycleAllocations(
-        recommended.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }))
-      );
+      }, profile.weekdayMinutes.reduce((acc, m) => acc + m, 0));
+      if (recommended) applyRecommendedCycleAllocations(recommended);
     }
     if (targetPlanId === activePlan.id) {
       refreshData(currentSubject?.id, currentTopic?.id);
@@ -1251,8 +1246,12 @@ export default function App() {
                         topicsBySubject={topicsBySubject}
                         onChangePattern={availability.setPattern}
                         onChangeThisWeek={availability.setThisWeek}
-                        onApplyRecommendedCycle={(newAllocations) => {
-                          applyRecommendedCycleAllocations(newAllocations);
+                        onApplyRecommendedCycle={() => {
+                          const recommended = recommendedForStandardWeek(
+                            { plan: activePlan, subjects, topicsBySubject, attempts, sessions, topicLinks, examParts, questionLogs, recallChecks },
+                            availability.pattern.reduce((acc, m) => acc + m, 0)
+                          );
+                          if (recommended) applyRecommendedCycleAllocations(recommended);
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
                         onOpenSubject={openSubjectOnWorkbench}

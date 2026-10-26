@@ -3,6 +3,7 @@ import {
   calculateDynamicStudyCycle,
   calculateMemoryDecayBoost,
   calculateSampleConfidencePercent,
+  recommendedForStandardWeek,
   getSampleSubtopicsForCalibration,
   RECALL_CHECK_WEIGHT,
 } from '../lib/cycleEngine';
@@ -303,5 +304,27 @@ describe('diagnósticos novos no motor (spec 11 §5.5)', () => {
   it('falsa certeza esquenta mais que um chute errado; com pegadinha, não', () => {
     expect(heatOf([attempt(1, 'BASE_GAP', false, 'SURE')]).heatScore).toBeGreaterThan(heatOf([attempt(1, 'BASE_GAP', false, 'GUESS')]).heatScore);
     expect(heatOf([attempt(1, 'BOARD_TRAP', false, 'SURE')]).heatScore).toBe(heatOf([attempt(1, 'BOARD_TRAP', false, 'GUESS')]).heatScore);
+  });
+});
+
+describe('Divisão recomendada pela semana padrão (revisão independente da 13a)', () => {
+  const plan = SEED_STUDY_PLANS[0];
+  const subjects = SEED_SUBJECTS.filter((s) => s.plan_id === plan.id);
+  const topics: Record<string, Topic[]> = {};
+  for (const s of subjects) topics[s.id] = SEED_TOPICS.filter((t) => t.subject_id === s.id);
+  const base = { plan, subjects, topicsBySubject: topics, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS };
+
+  it('semana padrão de folga: nada a aplicar (a divisão gravada não é zerada)', () => {
+    expect(recommendedForStandardWeek(base, 0)).toBeNull();
+  });
+
+  it('semana atípica não distorce: a divisão aplicada é a da semana padrão', () => {
+    const standard = recommendedForStandardWeek(base, 1050)!;
+    const fromStandard = calculateDynamicStudyCycle({ ...base, weeklyMinutesBudget: 1050 }).allocations.map((a) => ({
+      subjectId: a.subject.id,
+      minutes: a.recommendedWeeklyMinutes,
+    }));
+    expect(standard).toEqual(fromStandard);
+    expect(standard.every((a) => a.minutes > 0)).toBe(true);
   });
 });

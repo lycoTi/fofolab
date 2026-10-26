@@ -54,6 +54,9 @@ export function HoursStep({ value, onChange }: { value: WeekdayMinutes; onChange
       <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-3">
         <WeekdayHoursEditor value={value} onChange={onChange} />
       </div>
+      {value.every((m) => m === 0) && (
+        <p className="text-[11px] text-amber-300">Escolha pelo menos um dia de estudo para montar o plano.</p>
+      )}
     </div>
   );
 }

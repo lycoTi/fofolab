@@ -23,7 +23,8 @@ export function CycleView({
   plan: StudyPlan;
   cycleData: CycleCalculationResult;
   examParts: ExamPart[];
-  onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
+  /** Grava a divisão sugerida (o App calcula pela semana padrão, não pela semana corrente). */
+  onApplyRecommendedCycle: () => void;
   onOpenSubject?: (subjectId: string) => void;
 }) {
   const [applied, setApplied] = useState(false);
@@ -34,7 +35,7 @@ export function CycleView({
   const groups = groupAllocations(allocations, examParts);
 
   const applySuggestion = () => {
-    onApplyRecommendedCycle(allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes })));
+    onApplyRecommendedCycle();
     setApplied(true);
     window.setTimeout(() => setApplied(false), 4000);
   };

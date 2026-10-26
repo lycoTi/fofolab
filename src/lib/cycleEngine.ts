@@ -680,3 +680,18 @@ export function calculateDynamicStudyCycle(params: {
     suggestions,
   };
 }
+
+/**
+ * Divisão recomendada para gravar no ciclo (Wizard e "Aplicar sugestão"): sempre calculada sobre a semana padrão do
+ * estudante (soma do padrão de dias), nunca sobre a semana corrente — uma semana de folga ou atípica gravaria uma divisão
+ * zerada ou distorcida (mínimo de 00:30 e arredondamento de 00:15) que ficaria para as semanas seguintes. Semana padrão
+ * sem nenhum dia de estudo: nada a aplicar.
+ */
+export function recommendedForStandardWeek(
+  params: Parameters<typeof calculateDynamicStudyCycle>[0],
+  standardWeeklyMinutes: number
+): { subjectId: string; minutes: number }[] | null {
+  if (standardWeeklyMinutes <= 0) return null;
+  const result = calculateDynamicStudyCycle({ ...params, weeklyMinutesBudget: standardWeeklyMinutes });
+  return result.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }));
+}

@@ -44,7 +44,7 @@ export function StudyPlanView({
   topicsBySubject: Record<string, Topic[]>;
   onChangePattern: (minutes: WeekdayMinutes) => void;
   onChangeThisWeek: (minutes: WeekdayMinutes | null) => void;
-  onApplyRecommendedCycle: (allocations: { subjectId: string; minutes: number }[]) => void;
+  onApplyRecommendedCycle: () => void;
   onOpenSubject?: (subjectId: string) => void;
 }) {
   const weekMet = cycleData.allocations.length > 0 && cycleData.allocations.every((a) => a.remainingThisWeekMinutes <= 0);

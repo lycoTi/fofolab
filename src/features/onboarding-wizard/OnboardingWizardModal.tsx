@@ -69,6 +69,8 @@ export function OnboardingWizardModal({
 }: OnboardingWizardModalProps) {
   const [step, setStep] = useState<number>(1);
   const [profile, setProfile] = useState<OnboardingProfile>(() => profileFromPlan(activePlan));
+  // Sem nenhum dia de estudo não há plano a montar (e a divisão do ciclo não pode ser gravada zerada)
+  const noStudyDay = profile.weekdayMinutes.every((m) => m === 0);
   const [strategyTouched, setStrategyTouched] = useState<boolean>(false);
   const [selectedPlanId, setSelectedPlanId] = useState<string>(activePlan.id);
   const planContent = useMemo(
@@ -345,7 +347,8 @@ export function OnboardingWizardModal({
           <button
             type="button"
             onClick={handleNext}
-            className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-orange-500/20 transition"
+            disabled={step === 2 && noStudyDay}
+            className="px-5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-orange-500/20 transition disabled:opacity-40 disabled:pointer-events-none"
           >
             {step === TOTAL_STEPS ? (
               <>
