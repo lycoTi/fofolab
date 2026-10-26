@@ -13,6 +13,7 @@ import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { forecastWeek } from './lib/weekForecast';
+import { stretchStartKey } from './lib/examProjection';
 import { weekReviewDuration } from './lib/availability';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
@@ -390,6 +391,11 @@ export default function App() {
     todayReviewMinutes = weekReviewDuration(availability.weekBudget);
   }
 
+  // Reta final (spec 13 §4.3): nos últimos dias antes da prova, o roteiro é só de revisão
+  const stretchKey = activePlan?.exam_date ? stretchStartKey(activePlan.exam_date, activePlan.final_stretch_days ?? 14) : null;
+  const inFinalStretch =
+    stretchKey !== null && activePlan?.exam_date != null && availability.todayKey >= stretchKey && availability.todayKey <= activePlan.exam_date;
+
   // Roteiro de hoje na coluna esquerda (spec 09): congelado no dia, classificado pelas sessões de hoje
   const routine = useDailyRoutine({
     dbReady,
@@ -401,6 +407,7 @@ export default function App() {
     dataVersion,
     dayMinutes: availability.todayMinutes,
     weekReviewMinutes: todayReviewMinutes,
+    finalStretch: inFinalStretch,
   });
   const routineBlockTopic = routine.currentItem?.topic ?? null;
 
@@ -417,9 +424,10 @@ export default function App() {
       weekSessions: sessions,
       todayBlocks: routine.items.map((i) => i.block),
       reviewEnabled: activePlan.daily_review_enabled !== 0,
+      stretchStartKey: stretchKey,
     });
     // O dia entra nas dependências: virar a meia-noite com o app aberto troca o "hoje" da semana
-  }, [activePlan, cycleData, availability.weekStart, availability.todayKey, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items]);
+  }, [activePlan, cycleData, availability.weekStart, availability.todayKey, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items, stretchKey]);
   const peek = usePeek({ selectedTopic: currentTopic, blockTopic: routineBlockTopic, studyBlock });
 
   // Ao terminar um bloco, convida a registrar as questões feitas fora do app (uma vez por bloco)

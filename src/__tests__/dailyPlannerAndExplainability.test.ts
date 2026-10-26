@@ -311,3 +311,35 @@ describe('Dia de até 03:00 usa o dia inteiro (sábado da tela do dono, 26/10)',
     expect(new Set(plan.blocks.map((blk) => blk.subject.id)).size).toBe(plan.blocks.length);
   });
 });
+
+describe('Reta final no roteiro do dia (spec 13 §4.3)', () => {
+  const recall = (h: { daysSinceLastStudy: number | null; memoryHalfLifeDays: number }) =>
+    Math.pow(2, -(h.daysSinceLastStudy ?? 0) / Math.max(1, h.memoryHalfLifeDays));
+
+  it('só tópicos já estudados, o mais frio da matéria primeiro, nada novo', () => {
+    const cycleData = cycleFor(cguPlan);
+    const plan = planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: 31.5, dayMinutesBudget: 180, finalStretch: true });
+    expect(plan.blocks.length).toBeGreaterThan(0);
+    for (const b of plan.blocks) {
+      const heat = cycleData.topicHeatmapRanking.find((h) => h.topic.id === b.topic?.id)!;
+      expect(heat.daysSinceLastStudy).not.toBeNull();
+      const studiedOfSubject = cycleData.topicHeatmapRanking.filter((h) => h.topic.subject_id === b.subject.id && h.daysSinceLastStudy !== null);
+      if (b === plan.blocks.find((x) => x.subject.id === b.subject.id)) {
+        expect(recall(heat)).toBe(Math.min(...studiedOfSubject.map(recall)));
+      }
+      if (b.kind === 'STUDY') expect(b.reasonText).toMatch(/^Reta final: revisar /);
+    }
+  });
+
+  it('sem nenhum tópico estudado no plano, a reta final segue o roteiro normal', () => {
+    const unseen: Record<string, Topic[]> = Object.fromEntries(
+      Object.entries(topicsBySubject).map(([id, list]) => [id, list.map((t) => ({ ...t, last_studied_at: null }))])
+    );
+    const cycleData = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject: unseen, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW,
+    });
+    const plan = planDailyBlocks({ cycleData, topicsBySubject: unseen, weeklyHoursTarget: 31.5, dayMinutesBudget: 180, finalStretch: true });
+    expect(plan.blocks.length).toBeGreaterThan(0);
+    expect(plan.blocks.every((b) => !b.reasonText.startsWith('Reta final'))).toBe(true);
+  });
+});

@@ -60,6 +60,12 @@ function describeReason(allocation: SubjectCycleAllocation, weekCompleted: boole
 /** Chance de lembrar hoje, `2^(−dias ÷ meia-vida)` — a mesma conta do motor e da Revisão do dia. */
 const recallOf = (h: TopicHeatItem) => Math.pow(2, -(h.daysSinceLastStudy ?? 0) / Math.max(1, h.memoryHalfLifeDays));
 
+function stretchReason(heat: TopicHeatItem): string {
+  const days = Math.round(heat.daysSinceLastStudy ?? 0);
+  const label = `${heat.topic.code ?? ''} ${heat.topic.title}`.trim();
+  return `Reta final: revisar ${label} (estudado há ${days} ${days === 1 ? 'dia' : 'dias'}).`;
+}
+
 /** O tópico já estudado que mais esfriou; nenhum estudado, nenhum. */
 function coldestStudied(ranking: TopicHeatItem[]): TopicHeatItem | null {
   const studied = ranking.filter((h) => h.daysSinceLastStudy !== null);
@@ -77,6 +83,8 @@ export function planDailyBlocks(params: {
   weekReviewMinutes?: number;
   /** Tópicos já usados nos dias anteriores da previsão da semana (liberados se a matéria não tiver outro). */
   excludeTopicIds?: ReadonlySet<string>;
+  /** Reta final (spec 13 §4.3): só tópicos já estudados, o mais frio primeiro — nada novo. */
+  finalStretch?: boolean;
 }): DailyPlan {
   const { cycleData, topicsBySubject, weeklyHoursTarget } = params;
   const { allocations, topicHeatmapRanking } = cycleData;
@@ -87,9 +95,13 @@ export function planDailyBlocks(params: {
   const pending = allocations.filter((a) => a.remainingThisWeekMinutes > 0);
   const weekCompleted = allocations.length > 0 && pending.length === 0;
   const byPriority = (a: SubjectCycleAllocation, b: SubjectCycleAllocation) => b.elasticScore - a.elasticScore;
-  const candidates = weekCompleted
+  // Reta final sem nenhum tópico estudado no plano inteiro: segue o roteiro normal (não deixa o dia vazio)
+  const stretch = params.finalStretch === true && coldestStudied(topicHeatmapRanking) !== null;
+  const hasStudied = (subjectId: string) => topicHeatmapRanking.some((h) => h.topic.subject_id === subjectId && h.daysSinceLastStudy !== null);
+  const ordered = weekCompleted
     ? [...allocations].sort(byPriority)
     : [...pending].sort((a, b) => b.remainingThisWeekMinutes - a.remainingThisWeekMinutes || byPriority(a, b));
+  const candidates = stretch ? ordered.filter((a) => hasStudied(a.subject.id)) : ordered;
   const topScore = Math.max(...allocations.map((a) => a.elasticScore));
 
   // 1. Revisão da semana: separa o tempo dela (só se já há tópico estudado; senão o tempo é de estudo)
@@ -101,6 +113,10 @@ export function planDailyBlocks(params: {
 
   // 2. Blocos de estudo
   const pickTopic = (subjectId: string): { topic: Topic | null; heat: TopicHeatItem | undefined } => {
+    if (stretch) {
+      const heat = coldestStudied(topicHeatmapRanking.filter((h) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id))) ?? undefined;
+      return { topic: heat?.topic ?? null, heat };
+    }
     const free = (h: TopicHeatItem) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id);
     const heat = topicHeatmapRanking.find((h) => free(h) && !excluded.has(h.topic.id)) ?? topicHeatmapRanking.find(free);
     return { topic: heat?.topic ?? (topicsBySubject[subjectId] || [])[0] ?? null, heat };
@@ -127,7 +143,7 @@ export function planDailyBlocks(params: {
     allocation: b.allocation,
     durationMinutes: b.durationMinutes,
     costBenefitBadge: pickBadge(b.heat?.heatScore ?? null, b.allocation.elasticScore === topScore),
-    reasonText: describeReason(b.allocation, weekCompleted),
+    reasonText: stretch && b.heat ? stretchReason(b.heat) : describeReason(b.allocation, weekCompleted),
     kind: 'STUDY',
   }));
 

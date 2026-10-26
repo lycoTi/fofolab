@@ -58,6 +58,8 @@ export function forecastWeek(input: {
   weekSessions: StudySession[];
   todayBlocks: FrozenBlock[];
   reviewEnabled: boolean;
+  /** Primeiro dia da reta final (spec 13 §4.3): a partir dele, só revisão. */
+  stretchStartKey?: string | null;
 }): DayForecast[] {
   const { weekStart, pattern, overrides, cycleData, topicsBySubject } = input;
   const todayKey = localDateKey(input.now);
@@ -125,6 +127,7 @@ export function forecastWeek(input: {
       dayMinutesBudget: dayCap,
       weekReviewMinutes: dateKey === reviewDay ? reviewMinutes : 0,
       excludeTopicIds: usedTopics,
+      finalStretch: input.stretchStartKey ? dateKey >= input.stretchStartKey : false,
     });
     const blocks = plan.blocks.map((b) => ({ subjectId: b.subject.id, topicId: b.topic?.id ?? null, minutes: b.durationMinutes, kind: b.kind }));
     for (const b of blocks) {

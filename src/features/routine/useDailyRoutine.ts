@@ -29,8 +29,10 @@ export function useDailyRoutine(params: {
   dayMinutes?: number;
   /** Hoje é o dia da Revisão da semana: o tempo dela (0 = não é). */
   weekReviewMinutes?: number;
+  /** Hoje está na reta final (spec 13 §4.3): só revisão. */
+  finalStretch?: boolean;
 }) {
-  const { dbReady, plan, cycleData, subjects, topicsBySubject, weekSessions, dataVersion, dayMinutes, weekReviewMinutes } = params;
+  const { dbReady, plan, cycleData, subjects, topicsBySubject, weekSessions, dataVersion, dayMinutes, weekReviewMinutes, finalStretch } = params;
   const dateKey = localDateKey(new Date());
   const [savedVersion, setSavedVersion] = useState(0);
 
@@ -42,10 +44,11 @@ export function useDailyRoutine(params: {
       weeklyHoursTarget: plan.weekly_hours_target,
       dayMinutesBudget: dayMinutes,
       weekReviewMinutes,
+      finalStretch,
     });
-  }, [plan, cycleData, topicsBySubject, dayMinutes, weekReviewMinutes]);
+  }, [plan, cycleData, topicsBySubject, dayMinutes, weekReviewMinutes, finalStretch]);
 
-  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject, dayMinutes, weekReviewMinutes) : '';
+  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject, dayMinutes, weekReviewMinutes, finalStretch) : '';
 
   // A data entra nas dependências: virar a meia-noite com o app aberto não pode levar o tempo de ontem
   const todaySessions = useMemo(() => {
@@ -91,11 +94,12 @@ export function useDailyRoutine(params: {
       dayMinutesBudget: dayMinutes === undefined ? undefined : Math.max(0, dayMinutes - keptMinutes),
       weekReviewMinutes: reviewDone ? 0 : weekReviewMinutes,
       excludeTopicIds: keptTopics,
+      finalStretch,
     });
     const blocks = [...kept, ...freezeDailyPlan(rest)].map((b, i) => ({ ...b, blockNumber: i + 1 }));
     saveDailyPlan(plan.id, dateKey, blocks, profileKey);
     setSavedVersion((v) => v + 1);
-  }, [dbReady, plan, frozen, livePlan, cycleData, dateKey, profileKey, subjects, topicsBySubject, todaySessions, dayMinutes, weekReviewMinutes]);
+  }, [dbReady, plan, frozen, livePlan, cycleData, dateKey, profileKey, subjects, topicsBySubject, todaySessions, dayMinutes, weekReviewMinutes, finalStretch]);
 
   const blocks = useMemo(() => frozen ?? (livePlan ? freezeDailyPlan(livePlan) : []), [frozen, livePlan]);
 

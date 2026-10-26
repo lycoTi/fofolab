@@ -123,3 +123,21 @@ describe('Previsão da semana: revisão independente (25/10)', () => {
     expect(days[0].blocks).toEqual([]);
   });
 });
+
+describe('Previsão na reta final (spec 13 §4.3)', () => {
+  it('a partir do primeiro dia da reta final, os dias previstos só têm tópicos já estudados', () => {
+    const budget = weekBudgetMinutes(MONDAY, PATTERN, {});
+    const cycleData = calculateDynamicStudyCycle({
+      plan, subjects, topicsBySubject, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW, weeklyMinutesBudget: budget,
+    });
+    const todayBlocks = freezeDailyPlan(planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: budget / 60, dayMinutesBudget: 150 }));
+    const days = forecastWeek({
+      weekStart: MONDAY, now: NOW, pattern: PATTERN, overrides: {}, cycleData, topicsBySubject, weekSessions: [], todayBlocks,
+      reviewEnabled: false, stretchStartKey: '2026-10-29',
+    });
+    const studied = new Set(cycleData.topicHeatmapRanking.filter((h) => h.daysSinceLastStudy !== null).map((h) => h.topic.id));
+    for (const d of days.filter((x) => x.when === 'future' && x.dateKey >= '2026-10-29')) {
+      for (const b of d.blocks) expect(studied.has(b.topicId ?? '')).toBe(true);
+    }
+  });
+});
