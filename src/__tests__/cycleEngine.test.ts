@@ -56,6 +56,47 @@ describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', 
     expect(result.topicHeatmapRanking[0].topic.id).toBe('t-cgu-3-1');
   });
 
+  it('orçamento da semana vindo dos dias (spec 13): soma zero com o valor recebido', () => {
+    const result = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS,
+      weeklyMinutesBudget: 900,
+    });
+    expect(result.totalWeeklyMinutesBudget).toBe(900);
+    const recommended = result.allocations.reduce((acc, a) => acc + a.recommendedWeeklyMinutes, 0);
+    expect(recommended).toBeLessThanOrEqual(900 + result.allocations.length);
+    expect(recommended).toBeGreaterThanOrEqual(900 - result.allocations.length);
+  });
+
+  it('semana inteira de folga: orçamento 0 sem inventar minutos nem gerar NaN', () => {
+    const result = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS,
+      weeklyMinutesBudget: 0,
+    });
+    expect(result.totalWeeklyMinutesBudget).toBe(0);
+    // Folga não é "pouco tempo para muitas matérias": nada de aviso de sobrecarga, nem com 5 matérias
+    const five = Array.from({ length: 5 }, (_, i) => ({ ...cguSubjects[0], id: `s-folga-${i}` }));
+    const many = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: five, topicsBySubject: {}, attempts: [], sessions: [], topicLinks: [], weeklyMinutesBudget: 0,
+    });
+    expect(many.isOverloaded).toBe(false);
+    for (const a of result.allocations) {
+      expect(a.recommendedWeeklyMinutes).toBe(0);
+      expect(a.currentWeeklyMinutes).toBe(0);
+      expect(a.remainingThisWeekMinutes).toBe(0);
+      for (const value of [a.sharePercent, a.elasticScore, a.deltaMinutes, a.blocksPerWeek, a.floorMinutes]) {
+        expect(Number.isNaN(value)).toBe(false);
+      }
+    }
+  });
+
+  it('plano antigo sem padrão de dias: o ciclo quase não muda (só o arredondamento por dia)', () => {
+    const base = { plan: cguPlan, subjects: cguSubjects, topicsBySubject, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS };
+    const before = calculateDynamicStudyCycle(base);
+    const after = calculateDynamicStudyCycle({ ...base, weeklyMinutesBudget: 7 * Math.round((cguPlan.weekly_hours_target * 60) / 7) });
+    const diff = before.allocations.reduce((acc, a, i) => acc + Math.abs(a.recommendedWeeklyMinutes - after.allocations[i].recommendedWeeklyMinutes), 0);
+    expect(diff).toBeLessThanOrEqual(7);
+  });
+
   it('substitui a regra fixa de 3 questões por Curva Contínua de Confiança da Amostra (estilo saturação BM25)', () => {
     // Com apenas 3 questões, a confiança da amostra ainda não saturou (< 55%), mantendo calibração ativa
     const conf3SmallSubj = calculateSampleConfidencePercent(3, 4);

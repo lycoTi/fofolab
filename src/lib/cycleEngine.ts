@@ -342,6 +342,8 @@ export function calculateDynamicStudyCycle(params: {
   /** Autoavaliações da pergunta aberta da Revisão do dia (só memória; não são amostra de questões). */
   recallChecks?: RecallCheck[];
   now?: Date;
+  /** Orçamento da semana corrente (spec 13): a soma das horas dos sete dias dela — pode ser 0 (semana de folga). */
+  weeklyMinutesBudget?: number;
 }): CycleCalculationResult {
   const { plan, subjects, topicsBySubject, attempts, sessions, topicLinks } = params;
   const examParts = params.examParts ?? [];
@@ -371,7 +373,12 @@ export function calculateDynamicStudyCycle(params: {
   const nowMs = now.getTime();
   const strategy = plan.strategy_mode ?? null;
 
-  const totalWeeklyMinutesBudget = Math.max(60, Math.round(plan.weekly_hours_target * 60));
+  const totalWeeklyMinutesBudget =
+    params.weeklyMinutesBudget !== undefined
+      ? Math.max(0, Math.round(params.weeklyMinutesBudget))
+      : Math.max(60, Math.round(plan.weekly_hours_target * 60));
+  // Semana de folga: nenhuma matéria recebe tempo (o mínimo de 30 min por matéria só vale quando há horas)
+  const restWeek = totalWeeklyMinutesBudget === 0;
   const dailyAverageMinutes = Math.round(totalWeeklyMinutesBudget / 7);
 
   // 1. Dias até a prova
@@ -385,7 +392,7 @@ export function calculateDynamicStudyCycle(params: {
   // 2. Sobrecarga cognitiva (< 180 min/semana por disciplina com 5+ disciplinas)
   const avgMinutesPerSubject = subjects.length > 0 ? totalWeeklyMinutesBudget / subjects.length : 0;
   // Plano do edital: toda matéria tem prova com nota mínima, então "largar matérias" não é conselho válido
-  const isOverloaded = !fromEdital && subjects.length >= 5 && avgMinutesPerSubject < 180;
+  const isOverloaded = !fromEdital && !restWeek && subjects.length >= 5 && avgMinutesPerSubject < 180;
   const overloadMessage = isOverloaded
     ? `Você está com ${subjects.length} disciplinas simultâneas para ${formatDuration(totalWeeklyMinutesBudget)} por semana (cerca de ${formatDuration(avgMinutesPerSubject)} por matéria). Considere focar em 4 a 5 matérias principais neste ciclo para não pulverizar sua retenção.`
     : null;
@@ -580,8 +587,8 @@ export function calculateDynamicStudyCycle(params: {
   const allocations: SubjectCycleAllocation[] = rawSubjectScores.map((item, index) => {
     const floorMinutes = totalFloorNeed > 0 ? (floorBudget * floorNeeds[index]) / totalFloorNeed : 0;
     const rawMinutes = floorMinutes + (item.elasticScore / totalElasticScore) * elasticBudget;
-    const shareRatio = rawMinutes / totalWeeklyMinutesBudget;
-    const recommendedWeeklyMinutes = Math.max(30, Math.round(rawMinutes / 15) * 15);
+    const shareRatio = restWeek ? 0 : rawMinutes / totalWeeklyMinutesBudget;
+    const recommendedWeeklyMinutes = restWeek ? 0 : Math.max(30, Math.round(rawMinutes / 15) * 15);
     const part = partOf(item.subject);
     const dominantReason =
       part && floorMinutes >= rawMinutes * MIN_SCORE_FLOOR.reasonShare
@@ -602,7 +609,7 @@ export function calculateDynamicStudyCycle(params: {
       currentWeeklyMinutes,
       recommendedWeeklyMinutes,
       deltaMinutes: recommendedWeeklyMinutes - currentWeeklyMinutes,
-      blocksPerWeek: Math.max(1, Math.round(recommendedWeeklyMinutes / 60)),
+      blocksPerWeek: restWeek ? 0 : Math.max(1, Math.round(recommendedWeeklyMinutes / 60)),
       studiedThisWeekMinutes,
       remainingThisWeekMinutes: Math.max(0, currentWeeklyMinutes - studiedThisWeekMinutes),
       floorMinutes: Math.round(floorMinutes),
