@@ -12,6 +12,7 @@ import { FofoIaPanel } from './features/fofoia/FofoIaPanel';
 import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
+import { useExamOutlook } from './features/study-plan/useExamOutlook';
 import { forecastWeek } from './lib/weekForecast';
 import { stretchStartKey } from './lib/examProjection';
 import { weekReviewDuration } from './lib/availability';
@@ -410,6 +411,20 @@ export default function App() {
     finalStretch: inFinalStretch,
   });
   const routineBlockTopic = routine.currentItem?.topic ?? null;
+
+  // Caminho até a prova (spec 13 §4.3): "Dá tempo?" e a linha do tempo
+  const outlook = useExamOutlook({
+    dbReady,
+    plan: activePlan,
+    cycleData,
+    subjects,
+    topicsBySubject,
+    examParts,
+    pattern: availability.pattern,
+    overrides: availability.overrides,
+    weekSessions: sessions,
+    dataVersion,
+  });
 
   // Sua semana: feito, hoje (o roteiro gravado) e previsão dos próximos dias
   const weekDays = useMemo(() => {
@@ -1251,6 +1266,7 @@ export default function App() {
                         weekStart={availability.weekStart}
                         pattern={availability.pattern}
                         thisWeek={availability.thisWeek}
+                        outlook={outlook}
                         subjects={subjects}
                         topicsBySubject={topicsBySubject}
                         onChangePattern={availability.setPattern}

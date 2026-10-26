@@ -6,6 +6,7 @@ import { calculateDynamicStudyCycle, startOfWeek } from '../lib/cycleEngine';
 import { planDailyBlocks } from '../lib/dailyPlanner';
 import { freezeDailyPlan } from '../lib/dailyRoutine';
 import { forecastWeek } from '../lib/weekForecast';
+import { examOutlook, type ExamOutlook } from '../lib/examProjection';
 import { StudyPlanView } from '../features/study-plan/StudyPlanView';
 import type { StudySession, Topic } from '../types/database';
 
@@ -36,7 +37,7 @@ function build(opts: { sessions?: StudySession[]; met?: boolean } = {}) {
   return { cycleData, days, weekBudget };
 }
 
-function view(opts: { sessions?: StudySession[]; met?: boolean; thisWeek?: WeekdayMinutes | null } = {}) {
+function view(opts: { sessions?: StudySession[]; met?: boolean; thisWeek?: WeekdayMinutes | null; outlook?: ExamOutlook | null } = {}) {
   const { cycleData, days, weekBudget } = build(opts);
   const handlers = { onChangePattern: vi.fn(), onChangeThisWeek: vi.fn(), onApplyRecommendedCycle: vi.fn(), onChangeFinalStretch: vi.fn() };
   const utils = render(
@@ -49,6 +50,7 @@ function view(opts: { sessions?: StudySession[]; met?: boolean; thisWeek?: Weekd
       weekStart={MONDAY}
       pattern={PATTERN}
       thisWeek={opts.thisWeek ?? null}
+      outlook={opts.outlook ?? null}
       subjects={subjects}
       topicsBySubject={topicsBySubject}
       {...handlers}
@@ -161,3 +163,32 @@ describe('Reta final no Ajustar (spec 13 §4.3)', () => {
     expect(v.onChangeFinalStretch).toHaveBeenCalledWith(21);
   });
 });
+
+describe('Caminho até a prova no Plano (spec 13 §4.4)', () => {
+  const projected = () => {
+    const { cycleData } = build();
+    return examOutlook({
+      plan: { ...plan, exam_date: '2026-12-13', final_stretch_days: 14 }, now: NOW, pattern: [30, 0, 0, 0, 0, 0, 0], overrides: {},
+      subjects, topicsBySubject, cycleData, examParts: [], sessions: [], firstStudyDates: {}, todayStudiedMinutes: 0,
+    });
+  };
+
+  it('ordem: Sua semana → Dá tempo? → linha do tempo → Ajustar → divisão por matéria', () => {
+    const { container } = view({ outlook: projected() });
+    const order = ['Sua semana', 'Dá tempo?', 'Linha do tempo até a prova'].map((name) => screen.getByRole('region', { name }));
+    for (let i = 1; i < order.length; i += 1) {
+      expect(order[i - 1].compareDocumentPosition(order[i]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    }
+    const adjust = [...container.querySelectorAll('details')].find((d) => d.querySelector('summary')?.textContent?.includes('Ajustar'))!;
+    expect(order[2].compareDocumentPosition(adjust) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('"+HH:mm por semana" abre o Ajustar', () => {
+    const { container } = view({ outlook: projected() });
+    const adjust = [...container.querySelectorAll('details')].find((d) => d.querySelector('summary')?.textContent?.includes('Ajustar'))!;
+    expect(adjust.open).toBe(false);
+    fireEvent.click(screen.getByRole('button', { name: /^\+\d{2}:\d{2} por semana$/ }));
+    expect(adjust.open).toBe(true);
+  });
+});
+

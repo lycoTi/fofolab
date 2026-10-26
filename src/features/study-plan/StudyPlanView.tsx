@@ -1,10 +1,14 @@
+import { useRef, useState } from 'react';
 import { RotateCcw, Sliders } from 'lucide-react';
 import type { WeekdayMinutes } from '../../lib/availability';
 import { STRATEGY_LABELS, type CycleCalculationResult } from '../../lib/cycleEngine';
 import type { DayForecast } from '../../lib/weekForecast';
 import type { ExamPart, StudyPlan, Subject, Topic } from '../../types/database';
 import { CycleView } from '../cycle/CycleView';
+import type { ExamOutlook } from '../../lib/examProjection';
+import { ExamOutlookCard } from './ExamOutlookCard';
 import { WeekdayHoursEditor } from './WeekdayHoursEditor';
+import { WeekTimeline } from './WeekTimeline';
 import { WeekView } from './WeekView';
 
 /** Reta final: 7 a 21 dias antes da prova (spec 13 §4.3). */
@@ -27,6 +31,7 @@ export function StudyPlanView({
   weekStart,
   pattern,
   thisWeek,
+  outlook,
   subjects,
   topicsBySubject,
   onChangePattern,
@@ -44,6 +49,8 @@ export function StudyPlanView({
   pattern: WeekdayMinutes;
   /** Horas desta semana quando ela é diferente do padrão; `null` = segue o padrão. */
   thisWeek: WeekdayMinutes | null;
+  /** "Dá tempo?" e a linha do tempo (13b); nulo sem data da prova. */
+  outlook: ExamOutlook | null;
   subjects: Subject[];
   topicsBySubject: Record<string, Topic[]>;
   onChangePattern: (minutes: WeekdayMinutes) => void;
@@ -54,6 +61,13 @@ export function StudyPlanView({
 }) {
   const weekMet = cycleData.allocations.length > 0 && cycleData.allocations.every((a) => a.remainingThisWeekMinutes <= 0);
   const currentWeek = days.map((d) => d.plannedMinutes) as WeekdayMinutes;
+  // "+HH:mm por semana" no "Dá tempo?" abre o Ajustar e leva até ele
+  const [adjustOpen, setAdjustOpen] = useState(false);
+  const adjustRef = useRef<HTMLDetailsElement>(null);
+  const openAdjust = () => {
+    setAdjustOpen(true);
+    adjustRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <div className="mx-auto max-w-5xl space-y-5">
@@ -67,7 +81,15 @@ export function StudyPlanView({
         topicsBySubject={topicsBySubject}
       />
 
-      <details className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs text-slate-300">
+      <ExamOutlookCard outlook={outlook} onAdjust={openAdjust} />
+      {outlook?.status === 'PROJETANDO' && outlook.weeks.length > 0 && <WeekTimeline weeks={outlook.weeks} />}
+
+      <details
+        ref={adjustRef}
+        open={adjustOpen}
+        onToggle={(e) => setAdjustOpen(e.currentTarget.open)}
+        className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs text-slate-300"
+      >
         <summary className="flex cursor-pointer select-none items-center gap-1.5 text-slate-200 hover:text-white">
           <Sliders size={13} />
           Ajustar
