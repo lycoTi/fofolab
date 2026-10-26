@@ -7,6 +7,9 @@ import { CycleView } from '../cycle/CycleView';
 import { WeekdayHoursEditor } from './WeekdayHoursEditor';
 import { WeekView } from './WeekView';
 
+/** Reta final: 7 a 21 dias antes da prova (spec 13 §4.3). */
+const FINAL_STRETCH_OPTIONS = [7, 10, 14, 21];
+
 const secondaryButton =
   'inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1 text-[11px] text-slate-200 ' +
   'hover:border-orange-500/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400';
@@ -29,6 +32,7 @@ export function StudyPlanView({
   onChangePattern,
   onChangeThisWeek,
   onApplyRecommendedCycle,
+  onChangeFinalStretch,
   onOpenSubject,
 }: {
   plan: StudyPlan;
@@ -45,6 +49,7 @@ export function StudyPlanView({
   onChangePattern: (minutes: WeekdayMinutes) => void;
   onChangeThisWeek: (minutes: WeekdayMinutes | null) => void;
   onApplyRecommendedCycle: () => void;
+  onChangeFinalStretch: (days: number) => void;
   onOpenSubject?: (subjectId: string) => void;
 }) {
   const weekMet = cycleData.allocations.length > 0 && cycleData.allocations.every((a) => a.remainingThisWeekMinutes <= 0);
@@ -70,6 +75,22 @@ export function StudyPlanView({
         </summary>
         <div className="mt-4 space-y-5">
           <WeekdayHoursEditor value={pattern} onChange={onChangePattern} />
+          <label className="flex flex-wrap items-center gap-2 border-t border-slate-800 pt-4 text-xs text-slate-300">
+            Reta final: últimos
+            <select
+              aria-label="Dias da reta final"
+              value={String(plan.final_stretch_days ?? 14)}
+              onChange={(e) => onChangeFinalStretch(Number(e.target.value))}
+              className="rounded-lg border border-slate-800 bg-slate-950 px-2 py-1 font-mono text-xs text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
+            >
+              {FINAL_STRETCH_OPTIONS.map((d) => (
+                <option key={d} value={String(d)}>
+                  {d}
+                </option>
+              ))}
+            </select>
+            dias antes da prova — só revisão e questões
+          </label>
           <div className="space-y-3 border-t border-slate-800 pt-4">
             {thisWeek === null ? (
               <div className="flex flex-wrap items-center gap-2">

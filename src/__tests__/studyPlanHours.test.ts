@@ -72,6 +72,20 @@ describe('Horas por dia do plano (spec 13 §4.1, migração v11)', () => {
     expect(created.weekday_minutes_json).toBe('[300,300,300,300,300,600,0]');
   });
 
+  it('reta final (spec 13 §4.3): grava, volta depois de reabrir e fica entre 7 e 21 dias', async () => {
+    const storage = createMemoryStorage();
+    let db = await openDatabase(storage);
+    const planId = db.getStudyPlans()[0].id;
+    expect(db.getStudyPlans()[0].final_stretch_days).toBe(14);
+    expect(db.updateStudyPlan({ id: planId, final_stretch_days: 21 })?.final_stretch_days).toBe(21);
+    await db.flushDatabase();
+    await db.closeDatabase();
+    db = await openDatabase(storage);
+    expect(db.getStudyPlans().find((p) => p.id === planId)?.final_stretch_days).toBe(21);
+    expect(db.updateStudyPlan({ id: planId, final_stretch_days: 40 })?.final_stretch_days).toBe(21);
+    expect(db.updateStudyPlan({ id: planId, final_stretch_days: 2 })?.final_stretch_days).toBe(7);
+  });
+
   it('apagar o plano apaga as exceções dele', async () => {
     const db = await openDatabase();
     const planId = db.getStudyPlans()[0].id;

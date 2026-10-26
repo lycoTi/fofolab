@@ -1263,6 +1263,10 @@ export default function App() {
                           if (recommended) applyRecommendedCycleAllocations(recommended);
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
+                        onChangeFinalStretch={(days) => {
+                          updateStudyPlan({ id: activePlan.id, final_stretch_days: days });
+                          refreshData(currentSubject?.id, currentTopic?.id);
+                        }}
                         onOpenSubject={openSubjectOnWorkbench}
                       />
                     )}

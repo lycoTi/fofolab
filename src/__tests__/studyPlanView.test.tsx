@@ -38,7 +38,7 @@ function build(opts: { sessions?: StudySession[]; met?: boolean } = {}) {
 
 function view(opts: { sessions?: StudySession[]; met?: boolean; thisWeek?: WeekdayMinutes | null } = {}) {
   const { cycleData, days, weekBudget } = build(opts);
-  const handlers = { onChangePattern: vi.fn(), onChangeThisWeek: vi.fn(), onApplyRecommendedCycle: vi.fn() };
+  const handlers = { onChangePattern: vi.fn(), onChangeThisWeek: vi.fn(), onApplyRecommendedCycle: vi.fn(), onChangeFinalStretch: vi.fn() };
   const utils = render(
     <StudyPlanView
       plan={plan}
@@ -147,5 +147,17 @@ describe('Sua semana: cartão enxuto + detalhe do dia (opção A, 26/10)', () =>
     view();
     fireEvent.click(within(screen.getByRole('region', { name: 'Sua semana' })).getByRole('button', { name: /^Sáb 31/ }));
     expect(screen.getByRole('region', { name: 'Dia escolhido' }).textContent).toContain('Revisão da semana');
+  });
+});
+
+describe('Reta final no Ajustar (spec 13 §4.3)', () => {
+  it('o Ajustar mostra a reta final e muda pelo select', () => {
+    const v = view();
+    fireEvent.click(screen.getByText('Ajustar'));
+    const select = screen.getByLabelText('Dias da reta final') as HTMLSelectElement;
+    expect(select.value).toBe('14');
+    expect([...select.options].map((o) => o.value)).toEqual(['7', '10', '14', '21']);
+    fireEvent.change(select, { target: { value: '21' } });
+    expect(v.onChangeFinalStretch).toHaveBeenCalledWith(21);
   });
 });

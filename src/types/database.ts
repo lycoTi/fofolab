@@ -259,6 +259,8 @@ export interface UpdateStudyPlanInput extends Partial<CreateStudyPlanInput> {
   study_moment?: StudyMoment | null;
   daily_review_enabled?: number;
   productive_failure_hints?: number;
+  /** [v11] Dias da reta final (7 a 21). */
+  final_stretch_days?: number;
 }
 
 export interface CreateSubjectInput {
