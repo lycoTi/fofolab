@@ -9,6 +9,8 @@ import { localDateKey } from './timeFormat';
 export type WeekdayMinutes = [number, number, number, number, number, number, number];
 
 export const WEEKDAY_LABELS = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'] as const;
+/** Nome por extenso, para rótulos acessíveis ("Tempo de sábado"). */
+export const WEEKDAY_NAMES = ['segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'] as const;
 
 /** Revisão da semana: 10% do tempo da semana, entre 00:30 e 01:30; semana abaixo de 05:00 não tem bloco separado. */
 const REVIEW_SHARE = 0.1;
