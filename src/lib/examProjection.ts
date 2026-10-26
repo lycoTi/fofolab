@@ -19,9 +19,12 @@ const DAY_MS = 86_400_000;
 
 const roundTo5 = (minutes: number) => Math.round(minutes / 5) * 5;
 
-/** Nível do tópico (1–4); sem nível próprio, o da matéria. */
-export function topicLevel(topic: Topic, subject: Subject): 1 | 2 | 3 | 4 {
-  const level = topic.initial_knowledge_level ?? subject.initial_knowledge_level;
+/**
+ * Nível do tópico (1–4): o próprio; senão o do grupo (o Wizard avalia os tópicos de primeiro nível, que no edital são
+ * os pais); senão o da matéria — a mesma herança do motor do ciclo.
+ */
+export function topicLevel(topic: Topic, subject: Subject, parentLevel: number | null = null): 1 | 2 | 3 | 4 {
+  const level = topic.initial_knowledge_level ?? parentLevel ?? subject.initial_knowledge_level;
   return Math.min(4, Math.max(1, Math.round(level))) as 1 | 2 | 3 | 4;
 }
 
@@ -74,6 +77,8 @@ export interface WeekSlot {
   /** Tempo para tópico novo: os dias de hoje em diante e antes da reta final, menos a Revisão da semana. */
   newTopicMinutes: number;
   phase: WeekPhase;
+  /** Dias da semana (de hoje em diante) antes da reta final. */
+  days: number;
 }
 
 /**
@@ -88,6 +93,8 @@ export function weekSlots(input: {
   overrides: Record<string, number>;
   todayStudiedMinutes: number;
   reviewEnabled: boolean;
+  /** Já há tópico estudado: só então o roteiro desta semana faz a Revisão da semana (as próximas, sim). */
+  studiedAny?: boolean;
 }): WeekSlot[] {
   const todayKey = localDateKey(input.now);
   if (input.examDate < todayKey) return [];
@@ -99,12 +106,16 @@ export function weekSlots(input: {
   for (let weekStart = startOfWeek(input.now); weekStart.getTime() <= lastWeek; ) {
     const keys = weekDateKeys(weekStart);
     let minutes = 0;
+    let days = 0;
     for (const key of keys) {
       if (key < todayKey || key >= stretchKey) continue;
       const day = minutesForDay(key, input.pattern, input.overrides);
       minutes += key === todayKey ? Math.max(0, day - input.todayStudiedMinutes) : day;
+      days += 1;
     }
-    const reviewDay = input.reviewEnabled ? weeklyReviewDay(weekStart, input.pattern, input.overrides) : null;
+    const isThisWeek = keys.includes(todayKey);
+    const reviewHappens = input.reviewEnabled && (!isThisWeek || input.studiedAny !== false);
+    const reviewDay = reviewHappens ? weeklyReviewDay(weekStart, input.pattern, input.overrides) : null;
     if (reviewDay && reviewDay >= todayKey && reviewDay < stretchKey) {
       minutes = Math.max(0, minutes - weekReviewDuration(weekBudgetMinutes(weekStart, input.pattern, input.overrides)));
     }
@@ -112,7 +123,7 @@ export function weekSlots(input: {
     const inside = keys.some((k) => k >= stretchKey);
     let phase: WeekPhase = 'TEORIA';
     if (inside) phase = before ? 'ULTIMOS' : 'RETA_FINAL';
-    slots.push({ weekStart, weekStartKey: keys[0], newTopicMinutes: minutes, phase });
+    slots.push({ weekStart, weekStartKey: keys[0], newTopicMinutes: minutes, phase, days });
     weekStart = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + 7);
   }
   return slots;
@@ -135,13 +146,12 @@ export interface ProjectedWeek extends WeekSlot {
   coveragePercent: number;
 }
 
-/** Voltas de redistribuição por semana: a sobra de quem fechou vai para quem tem fila (sempre termina). */
-const MAX_ROUNDS = 12;
-
 /**
  * Espalha os tópicos que faltam pelas semanas: cada matéria recebe a parte dela do tempo da semana e consome a própria
  * fila na ordem; o tópico fica visto quando o tempo dele fecha (a sobra passa para a semana seguinte). Matéria sem fila
- * devolve o tempo às que têm, na proporção delas; partes todas 0 = divisão igual.
+ * devolve o tempo às que têm, na proporção delas; partes todas 0 = divisão igual. A cobertura e os tópicos novos contam
+ * o avanço parcial do tópico em andamento — com muitas matérias e tópicos longos, senão, semanas cheias apareceriam com
+ * 0 tópico novo. A cobertura é arredondada para baixo: com tópico ficando para depois, nunca mostra 100%.
  */
 export function projectTopics(
   slots: WeekSlot[],
@@ -149,46 +159,51 @@ export function projectTopics(
 ): { weeks: ProjectedWeek[]; seenAtStretch: Map<string, number>; leftForLater: string[] } {
   const state = subjects.map((s) => ({ ...s, next: 0, progress: 0 }));
   const totalLeaf = subjects.reduce((acc, s) => acc + s.totalLeaf, 0);
-  const coverage = () => (totalLeaf === 0 ? 0 : Math.round((state.reduce((acc, s) => acc + s.seen, 0) / totalLeaf) * 100));
+  // Visto + a fração do tópico em andamento
+  const seenOf = (s: (typeof state)[number]) => s.seen + (s.next < s.queue.length ? s.progress / s.queue[s.next].minutes : 0);
+  const seenTotal = () => state.reduce((acc, s) => acc + seenOf(s), 0);
+  const coverage = () => (totalLeaf === 0 ? 0 : Math.floor((seenTotal() / totalLeaf) * 100 + 1e-9));
+  // Cada volta tira pelo menos uma matéria da fila ou zera a sobra: matérias + 1 voltas sempre bastam
+  const maxRounds = subjects.length + 1;
 
   // Consome o tempo dado à matéria; devolve o que sobrou quando a fila acaba
-  const consume = (s: (typeof state)[number], minutes: number): { leftover: number; done: number } => {
-    let done = 0;
+  const consume = (s: (typeof state)[number], minutes: number): number => {
     s.progress += minutes;
     while (s.next < s.queue.length && s.progress >= s.queue[s.next].minutes) {
       s.progress -= s.queue[s.next].minutes;
       s.next += 1;
       s.seen += 1;
-      done += 1;
     }
-    if (s.next < s.queue.length) return { leftover: 0, done };
+    if (s.next < s.queue.length) return 0;
     const leftover = s.progress;
     s.progress = 0;
-    return { leftover, done };
+    return leftover;
   };
 
+  let shownSeen = Math.round(seenTotal());
   const weeks = slots.map((slot) => {
     let pool = slot.newTopicMinutes;
-    let newTopics = 0;
-    for (let round = 0; round < MAX_ROUNDS && pool >= 1; round += 1) {
+    for (let round = 0; round < maxRounds && pool >= 1; round += 1) {
       const active = state.filter((s) => s.next < s.queue.length);
       if (active.length === 0) break;
       const shareSum = active.reduce((acc, s) => acc + s.share, 0);
       let leftover = 0;
       for (const s of active) {
         const part = shareSum > 0 ? s.share / shareSum : 1 / active.length;
-        const result = consume(s, pool * part);
-        leftover += result.leftover;
-        newTopics += result.done;
+        leftover += consume(s, pool * part);
       }
       pool = leftover;
     }
+    // Arredondamento acumulado: os tópicos novos das semanas somam o total
+    const nowSeen = Math.round(seenTotal());
+    const newTopics = nowSeen - shownSeen;
+    shownSeen = nowSeen;
     return { ...slot, newTopics, coveragePercent: coverage() };
   });
 
   return {
     weeks,
-    seenAtStretch: new Map(state.map((s) => [s.subjectId, s.seen])),
+    seenAtStretch: new Map(state.map((s) => [s.subjectId, seenOf(s)])),
     leftForLater: state.flatMap((s) => s.queue.slice(s.next).map((t) => t.topicId)),
   };
 }

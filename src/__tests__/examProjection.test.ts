@@ -25,6 +25,12 @@ describe('Tempo por tópico (spec 13 §4.3)', () => {
     expect(topicLevel(topic('a', 0), subject(2))).toBe(1);
   });
 
+  it('sem nível próprio, o tópico herda o do grupo (o Wizard avalia os grupos) antes do da matéria', () => {
+    expect(topicLevel(topic('a', null), subject(1), 4)).toBe(4);
+    expect(topicLevel(topic('a', 2), subject(1), 4)).toBe(2);
+    expect(topicLevel(topic('a', null), subject(1), null)).toBe(1);
+  });
+
   it('ritmo real: média dos minutos nos tópicos vistos pela 1ª vez nas últimas 4 semanas', () => {
     const leaf = new Set(['a', 'b', 'c', 'd', 'e']);
     const pace = realPace({
@@ -55,7 +61,7 @@ describe('Tempo por tópico (spec 13 §4.3)', () => {
 
 describe('Horas para tópico novo em cada semana até a reta final (spec 13 §4.3)', () => {
   const EVERY_DAY: [number, number, number, number, number, number, number] = [180, 180, 180, 180, 180, 180, 180];
-  const base = { now: NOW, examDate: '2026-12-13', finalStretchDays: 14, pattern: EVERY_DAY, overrides: {}, todayStudiedMinutes: 0, reviewEnabled: true };
+  const base = { now: NOW, examDate: '2026-12-13', finalStretchDays: 14, pattern: EVERY_DAY, overrides: {}, todayStudiedMinutes: 0, reviewEnabled: true, studiedAny: true };
 
   it('a reta final começa exatamente N dias antes da prova', () => {
     expect(stretchStartKey('2026-12-13', 14)).toBe('2026-11-29');
@@ -77,6 +83,16 @@ describe('Horas para tópico novo em cada semana até a reta final (spec 13 §4.
     expect(weekSlots({ ...base, reviewEnabled: false })[0].newTopicMinutes).toBe(7 * 180);
   });
 
+  it('sem nenhum tópico estudado ainda, a revisão desta semana não é descontada (o roteiro ainda não a faz)', () => {
+    const slots = weekSlots({ ...base, studiedAny: false });
+    expect(slots[0].newTopicMinutes).toBe(7 * 180);
+    expect(slots[1].newTopicMinutes).toBe(7 * 180 - 90);
+  });
+
+  it('cada semana sabe quantos dias tem para tópico novo', () => {
+    expect(weekSlots(base).map((s) => s.days)).toEqual([7, 7, 7, 7, 6, 0, 0]);
+  });
+
   it('semana atípica de folga (7 exceções 0) não tem tempo para tópico novo', () => {
     const off = Object.fromEntries(['2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06', '2026-11-07', '2026-11-08'].map((k) => [k, 0]));
     expect(weekSlots({ ...base, overrides: off })[1].newTopicMinutes).toBe(0);
@@ -91,16 +107,33 @@ describe('Horas para tópico novo em cada semana até a reta final (spec 13 §4.
 
 describe('Projetor: tópicos que faltam pelas semanas (spec 13 §4.3)', () => {
   const slot = (key: string, minutes: number, phase: 'TEORIA' | 'ULTIMOS' | 'RETA_FINAL' = 'TEORIA') => ({
-    weekStart: new Date(`${key}T00:00:00`), weekStartKey: key, newTopicMinutes: minutes, phase,
+    weekStart: new Date(`${key}T00:00:00`), weekStartKey: key, newTopicMinutes: minutes, phase, days: phase === 'RETA_FINAL' ? 0 : 7,
   });
   const queue = (id: string, minutes: number[]) => minutes.map((m, i) => ({ topicId: `${id}${i + 1}`, minutes: m }));
 
-  it('o tópico só fica visto quando o tempo dele fecha; a sobra passa para a semana seguinte', () => {
+  it('o avanço parcial conta na cobertura; os tópicos novos das semanas somam o total', () => {
     const r = projectTopics([slot('2026-10-26', 90), slot('2026-11-02', 30)], [
       { subjectId: 'a', partCode: null, share: 1, totalLeaf: 2, seen: 0, queue: queue('a', [60, 60]) },
     ]);
-    expect(r.weeks.map((w) => w.newTopics)).toEqual([1, 1]);
-    expect(r.weeks.map((w) => w.coveragePercent)).toEqual([50, 100]);
+    expect(r.weeks.map((w) => w.coveragePercent)).toEqual([75, 100]);
+    expect(r.weeks.reduce((acc, w) => acc + w.newTopics, 0)).toBe(2);
+    expect(r.leftForLater).toEqual([]);
+  });
+
+  it('muitas matérias com tópicos longos: nenhuma semana cheia aparece com 0 tópico novo', () => {
+    const subjectsMany = Array.from({ length: 15 }, (_, i) => ({
+      subjectId: `s${i}`, partCode: null, share: 1 / 15, totalLeaf: 20, seen: 0, queue: queue(`s${i}-`, Array(20).fill(120)),
+    }));
+    const r = projectTopics(['2026-10-26', '2026-11-02', '2026-11-09', '2026-11-16'].map((k) => slot(k, 1260)), subjectsMany);
+    for (const w of r.weeks) expect(w.newTopics).toBeGreaterThan(5);
+  });
+
+  it('cobertura arredondada para baixo: com tópico ficando para depois, nunca mostra 100%', () => {
+    const r = projectTopics([slot('2026-10-26', 11_900)], [
+      { subjectId: 'a', partCode: null, share: 1, totalLeaf: 200, seen: 0, queue: queue('a', Array(200).fill(60)) },
+    ]);
+    expect(r.leftForLater.length).toBe(2);
+    expect(r.weeks[0].coveragePercent).toBe(99);
   });
 
   it('matéria que fecha devolve o tempo às outras, na proporção delas', () => {
@@ -108,8 +141,9 @@ describe('Projetor: tópicos que faltam pelas semanas (spec 13 §4.3)', () => {
       { subjectId: 'a', partCode: null, share: 0.5, totalLeaf: 1, seen: 0, queue: queue('a', [30]) },
       { subjectId: 'b', partCode: null, share: 0.5, totalLeaf: 3, seen: 0, queue: queue('b', [60, 60, 60]) },
     ]);
-    expect(r.weeks[0].newTopics).toBe(3);
-    expect(r.seenAtStretch.get('b')).toBe(2);
+    // A fecha (1) e B faz 2 inteiros + 50 de 60 minutos do 3º
+    expect(r.weeks[0].newTopics).toBe(4);
+    expect(r.seenAtStretch.get('b')).toBeCloseTo(2 + 50 / 60, 5);
     expect(r.leftForLater).toEqual(['b3']);
   });
 

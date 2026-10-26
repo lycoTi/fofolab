@@ -6,7 +6,7 @@ import { WeekTimeline } from '../features/study-plan/WeekTimeline';
 import type { Topic } from '../types/database';
 
 const week = (key: string, phase: ProjectedWeek['phase'], newTopics: number, coveragePercent: number): ProjectedWeek => ({
-  weekStart: new Date(`${key}T00:00:00`), weekStartKey: key, newTopicMinutes: newTopics * 90, phase, newTopics, coveragePercent,
+  weekStart: new Date(`${key}T00:00:00`), weekStartKey: key, newTopicMinutes: newTopics * 90, phase, newTopics, coveragePercent, days: phase === 'RETA_FINAL' ? 0 : 7,
 });
 const weeks = [
   week('2026-10-26', 'TEORIA', 8, 30), week('2026-11-02', 'TEORIA', 9, 50), week('2026-11-23', 'ULTIMOS', 7, 80),
