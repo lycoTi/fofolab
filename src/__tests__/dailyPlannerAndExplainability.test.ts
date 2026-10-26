@@ -343,3 +343,42 @@ describe('Reta final no roteiro do dia (spec 13 §4.3)', () => {
     expect(plan.blocks.every((b) => !b.reasonText.startsWith('Reta final'))).toBe(true);
   });
 });
+
+describe('Reta final: revisão independente da 13b (26/10)', () => {
+  const day = 86_400_000;
+  // Só Contabilidade tem tópicos estudados; as outras matérias nunca foram vistas
+  const onlyContab: Record<string, Topic[]> = Object.fromEntries(
+    Object.entries(topicsBySubject).map(([id, list]) => [
+      id,
+      list.map((t, i) => ({ ...t, last_studied_at: id === 'subj-cgu-contabilidade' ? new Date(NOW.getTime() - (3 + i) * day).toISOString() : null })),
+    ])
+  );
+  const cycleWith = (sessions: StudySession[] = []) =>
+    calculateDynamicStudyCycle({ plan: cguPlan, subjects: cguSubjects, topicsBySubject: onlyContab, attempts: [], sessions, topicLinks: SEED_TOPIC_LINKS, now: NOW });
+  const total = (blocks: { durationMinutes: number }[]) => blocks.reduce((acc, b) => acc + b.durationMinutes, 0);
+
+  it('a matéria estudada já cumpriu a semana: a reta final ainda enche o dia com revisão (não fica vazia)', () => {
+    const base = cycleWith();
+    const contab = base.allocations.find((a) => a.subject.id === 'subj-cgu-contabilidade')!;
+    const met = cycleWith([sessionOf(contab.subject.id, contab.currentWeeklyMinutes, new Date(startOfWeek(NOW).getTime() + 3600_000))]);
+    const plan = planDailyBlocks({ cycleData: met, topicsBySubject: onlyContab, weeklyHoursTarget: 31.5, dayMinutesBudget: 120, finalStretch: true });
+    expect(total(plan.blocks)).toBeGreaterThanOrEqual(100);
+    expect(plan.blocks.every((b) => b.subject.id === 'subj-cgu-contabilidade')).toBe(true);
+  });
+
+  it('a matéria estudada tem pouco tempo sobrando na semana: o dia não fica pela metade', () => {
+    const base = cycleWith();
+    const contab = base.allocations.find((a) => a.subject.id === 'subj-cgu-contabilidade')!;
+    const almost = cycleWith([sessionOf(contab.subject.id, contab.currentWeeklyMinutes - 40, new Date(startOfWeek(NOW).getTime() + 3600_000))]);
+    const plan = planDailyBlocks({ cycleData: almost, topicsBySubject: onlyContab, weeklyHoursTarget: 31.5, dayMinutesBudget: 240, finalStretch: true });
+    expect(total(plan.blocks)).toBeGreaterThanOrEqual(200);
+  });
+
+  it('na previsão, o tópico revisado num dia não volta no dia seguinte enquanto houver outro estudado', () => {
+    const cycleData = cycleWith();
+    const first = planDailyBlocks({ cycleData, topicsBySubject: onlyContab, weeklyHoursTarget: 31.5, dayMinutesBudget: 60, finalStretch: true });
+    const used = new Set(first.blocks.map((b) => b.topic!.id));
+    const next = planDailyBlocks({ cycleData, topicsBySubject: onlyContab, weeklyHoursTarget: 31.5, dayMinutesBudget: 60, finalStretch: true, excludeTopicIds: used });
+    expect(next.blocks.some((b) => used.has(b.topic!.id))).toBe(false);
+  });
+});

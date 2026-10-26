@@ -101,7 +101,10 @@ export function planDailyBlocks(params: {
   const ordered = weekCompleted
     ? [...allocations].sort(byPriority)
     : [...pending].sort((a, b) => b.remainingThisWeekMinutes - a.remainingThisWeekMinutes || byPriority(a, b));
-  const candidates = stretch ? ordered.filter((a) => hasStudied(a.subject.id)) : ordered;
+  // Na reta final o dia é de revisão: entram todas as matérias com tópico estudado, por prioridade, e o bloco não é
+  // limitado pelo que falta da matéria na semana (senão o dia encolhia ou ficava vazio)
+  const candidates = stretch ? [...allocations].filter((a) => hasStudied(a.subject.id)).sort(byPriority) : ordered;
+  const fillDay = weekCompleted || stretch;
   const topScore = Math.max(...allocations.map((a) => a.elasticScore));
 
   // 1. Revisão da semana: separa o tempo dela (só se já há tópico estudado; senão o tempo é de estudo)
@@ -114,7 +117,9 @@ export function planDailyBlocks(params: {
   // 2. Blocos de estudo
   const pickTopic = (subjectId: string): { topic: Topic | null; heat: TopicHeatItem | undefined } => {
     if (stretch) {
-      const heat = coldestStudied(topicHeatmapRanking.filter((h) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id))) ?? undefined;
+      // O mais frio que a semana ainda não revisou; sem outro, o mais frio de todos
+      const ofSubject = topicHeatmapRanking.filter((h) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id));
+      const heat = coldestStudied(ofSubject.filter((h) => !excluded.has(h.topic.id))) ?? coldestStudied(ofSubject) ?? undefined;
       return { topic: heat?.topic ?? null, heat };
     }
     const free = (h: TopicHeatItem) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id);
@@ -123,8 +128,9 @@ export function planDailyBlocks(params: {
   };
   const planStudy = (budget: number) => {
     usedTopicIds.clear();
-    const input = { candidates, budget, weekCompleted, pickTopic, usedTopicIds };
-    return budget > LONG_DAY_MINUTES ? longDayBlocks(input) : shortDayBlocks(input);
+    const input = { candidates, budget, weekCompleted: fillDay, pickTopic, usedTopicIds };
+    // Reta final: blocos de até 02:00 que podem repetir a matéria com outro tópico (poucas matérias estudadas)
+    return budget > LONG_DAY_MINUTES || stretch ? longDayBlocks(input) : shortDayBlocks(input);
   };
   // O tópico da revisão é o estudado mais frio que os blocos de estudo do dia não usaram
   const coldestFree = () => coldestStudied(topicHeatmapRanking.filter((h) => !usedTopicIds.has(h.topic.id)));
