@@ -13,6 +13,8 @@ function dotClass(block: ForecastBlock, when: DayForecast['when']): string {
 function statusLine(day: DayForecast): string {
   if (day.when === 'past') return `${formatDuration(day.studiedMinutes)} feito`;
   if (day.when === 'today') return `${formatDuration(day.studiedMinutes)} de ${formatDuration(day.plannedMinutes)}`;
+  // Dia com horas e sem bloco previsto: o que a semana pedia já foi feito
+  if (day.blocks.length === 0) return 'semana cumprida';
   return 'previsão';
 }
 

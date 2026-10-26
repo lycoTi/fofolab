@@ -98,6 +98,9 @@ describe('aba Plano de estudo: Sua semana (spec 13 §4.2)', () => {
   it('semana cumprida ganha um parabéns', () => {
     view({ met: true });
     expect(screen.getByText('Meta da semana cumprida. Parabéns pela constância!')).toBeTruthy();
+    // Os próximos dias não inventam bloco: dizem que a semana já está cumprida
+    const week = screen.getByRole('region', { name: 'Sua semana' });
+    expect(within(week).getByRole('listitem', { name: /^Qua 28/ }).textContent).toContain('semana cumprida');
   });
 
   it('"Só esta semana é diferente" grava a semana; "Voltar ao padrão" apaga', () => {

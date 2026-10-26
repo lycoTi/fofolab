@@ -98,3 +98,28 @@ describe('Previsão da semana dia a dia (spec 13 §4.2)', () => {
     expect(days.every((d) => Number.isFinite(d.plannedMinutes) && Number.isFinite(d.studiedMinutes))).toBe(true);
   });
 });
+
+describe('Previsão da semana: revisão independente (25/10)', () => {
+  it('estudante adiantado: a previsão não passa do orçamento da semana nem enche os dias de bloco extra', () => {
+    const monday = new Date(2026, 9, 26, 8, 0);
+    const big = subjects.map((s, i) => session(s.id, null, i === 0 ? 1050 : 0, new Date(monday.getTime() + i * 60_000)));
+    const { days } = setup({ sessions: big });
+    // Hoje é o roteiro de verdade (com o bloco extra de semana cumprida); a previsão é dos dias que vêm
+    for (const d of days.filter((x) => x.when === 'future')) expect(d.blocks).toEqual([]);
+  });
+
+  it('com 06:40 feitas na segunda, a soma da semana fica no orçamento (revisão inclusive)', () => {
+    const monday = new Date(2026, 9, 26, 8, 0);
+    const { days, budget } = setup({ sessions: [session(subjects[0].id, null, 400, monday)] });
+    const total = days.reduce((acc, d) => acc + (d.when === 'past' ? d.studiedMinutes : sum(d.blocks)), 0);
+    expect(total).toBeLessThanOrEqual(budget);
+  });
+
+  it('sessão pulada não conta como feita (o ciclo também não conta)', () => {
+    const monday = new Date(2026, 9, 26, 19, 0);
+    const skipped = { ...session(subjects[0].id, null, 90, monday), was_skipped: 1 };
+    const { days } = setup({ sessions: [skipped] });
+    expect(days[0].studiedMinutes).toBe(0);
+    expect(days[0].blocks).toEqual([]);
+  });
+});
