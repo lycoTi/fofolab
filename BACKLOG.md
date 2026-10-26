@@ -152,8 +152,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Ajustar) e a lista do que fica para depois, P1/P2/P3 com o aviso da nota mínima; "ⓘ" explica a conta (e que ela tende a
   ser otimista). **Linha do tempo** por semana (fase, tópicos novos, % visto). **Reta final** ajustável (7/10/14/21 dias):
   o roteiro do dia e a previsão passam a ser só de revisão (tópico estudado mais frio; sem nenhum estudado, roteiro normal).
-  Verificado: unit (583), E2E 35 em duas rodadas (`e2e/plano-ate-a-prova.spec.ts` com o edital real da CGU e a reta final),
-  build. Com o edital real (cargo 4, ~200 tópicos) e 21:00 por semana sem autoavaliação: 28% até 28/11.
+  Revisão independente (26/10) corrigida com teste: reta final enchia pouco ou deixava a coluna vazia; nível do grupo
+  (Wizard) ignorado; "+HH:mm" errado e irreal (agora calculado pela projeção, e "Não cabe" quando passaria do dobro do
+  plano ou de 08:00 por dia); ritmo real com sessões de outros planos e contra o padrão cru (agora contra o planejado nos
+  dias); semanas cheias com "0 tópicos novos" (avanço parcial); lista do que fica para depois pela menor prioridade;
+  sessão pulada marcava o tópico como estudado. Ficou de fora (menor): a previsão da semana não para a reta final na data da
+  prova.
+  Verificado: unit (602), E2E 35 em duas rodadas (`e2e/plano-ate-a-prova.spec.ts` com o edital real da CGU e a reta final),
+  build. Com o edital real (cargo 4, ~200 tópicos) e 21:00 por semana sem autoavaliação: 31% até 28/11, "não cabe".
   **Próxima:** 13c (mapa matéria × semana, sugestão de ajustar o padrão).
 - [DONE] **FofoIA + diagnóstico pela confiança (spec 11, 24/10/2026; plano `docs/superpowers/plans/2026-10-24-11-fofoia.md`):**
   um só professor na coluna direita (aba **FofoIA**; o painel de IA saiu da aba, que virou **Questões**), com jeitos
