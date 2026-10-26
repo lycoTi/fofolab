@@ -133,4 +133,31 @@ describe('assinatura do perfil do roteiro', () => {
   it('não muda só porque o estudante estudou (domínio mudou)', () => {
     expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300, 90)], { ti: [owasp] })).toBe(base);
   });
+
+  it('muda quando o tempo de hoje muda ("mudar o tempo de hoje" regrava o roteiro)', () => {
+    const today = routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 150);
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 60)).not.toBe(today);
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 150)).toBe(today);
+  });
+});
+
+describe('Revisão da semana no roteiro gravado (spec 13 §4.2)', () => {
+  it('o bloco de revisão é gravado com o tipo; o de estudo, como sempre', () => {
+    const plan = {
+      blocks: [
+        { blockNumber: 1, subject: ti, topic: owasp, durationMinutes: 50, reasonText: 'a', kind: 'STUDY' },
+        { blockNumber: 2, subject: casp, topic: pcasp, durationMinutes: 60, reasonText: 'b', kind: 'WEEK_REVIEW' },
+      ],
+    } as unknown as DailyPlan;
+    const [study, review] = freezeDailyPlan(plan);
+    expect(study.kind).toBeUndefined();
+    expect(review.kind).toBe('WEEK_REVIEW');
+  });
+
+  it('o bloco de revisão conta pelo tempo da matéria do tópico, como os outros', () => {
+    const withReview = [frozen(1, 'ti', 'owasp', 60), { ...frozen(2, 'casp', 'pcasp', 30), kind: 'WEEK_REVIEW' as const }];
+    const items = buildRoutine({ blocks: withReview, subjects: [ti, casp], topicsBySubject, todaySessions: [session('ti', 60), session('casp', 30)] });
+    expect(items.map((i) => i.status)).toEqual(['done', 'done']);
+    expect(items[1].block.kind).toBe('WEEK_REVIEW');
+  });
 });

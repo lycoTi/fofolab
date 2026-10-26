@@ -213,6 +213,8 @@ export interface FrozenBlock {
   topicId: string | null;
   durationMinutes: number;
   reasonText: string;
+  /** [spec 13] Revisão da semana; ausente = bloco de estudo (os roteiros gravados antes continuam valendo). */
+  kind?: 'WEEK_REVIEW';
 }
 
 // 11c. question_logs — questões resolvidas fora do app (números agregados)

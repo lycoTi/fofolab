@@ -17,13 +17,18 @@ export interface RoutineItem {
 }
 
 export function freezeDailyPlan(plan: DailyPlan): FrozenBlock[] {
-  return plan.blocks.map((b) => ({
-    blockNumber: b.blockNumber,
-    subjectId: b.subject.id,
-    topicId: b.topic?.id ?? null,
-    durationMinutes: b.durationMinutes,
-    reasonText: b.reasonText,
-  }));
+  return plan.blocks.map((b) => {
+    const block: FrozenBlock = {
+      blockNumber: b.blockNumber,
+      subjectId: b.subject.id,
+      topicId: b.topic?.id ?? null,
+      durationMinutes: b.durationMinutes,
+      reasonText: b.reasonText,
+    };
+    // Só a revisão leva o tipo: os roteiros gravados antes dela continuam iguais
+    if (b.kind === 'WEEK_REVIEW') block.kind = 'WEEK_REVIEW';
+    return block;
+  });
 }
 
 export function buildRoutine(params: {
@@ -93,10 +98,16 @@ export function pickExtraBlock(live: DailyPlan, frozen: FrozenBlock[]): FrozenBl
 
 /**
  * Assinatura do perfil com que o roteiro foi congelado: horas, estratégia, autoavaliação e distribuição do
- * ciclo. Se mudar (recalibrou), o roteiro gravado está desatualizado e é refeito — mesmo que o app tenha sido
- * fechado antes de gravar o roteiro novo. Estudar (domínio, calor) não muda a assinatura.
+ * ciclo, e o tempo de hoje (spec 13: "mudar o tempo de hoje"). Se mudar, o roteiro gravado está desatualizado e é
+ * refeito — mesmo que o app tenha sido fechado antes de gravar o roteiro novo. Estudar (domínio, calor) não muda a
+ * assinatura.
  */
-export function routineProfileKey(plan: StudyPlan, subjects: Subject[], topicsBySubject: Record<string, Topic[]>): string {
+export function routineProfileKey(
+  plan: StudyPlan,
+  subjects: Subject[],
+  topicsBySubject: Record<string, Topic[]>,
+  dayMinutes?: number
+): string {
   const subjectPart = [...subjects]
     .sort((a, b) => a.id.localeCompare(b.id))
     .map((s) => `${s.id}:${s.initial_knowledge_level}:${s.cycle_allocated_minutes}`)
@@ -107,5 +118,6 @@ export function routineProfileKey(plan: StudyPlan, subjects: Subject[], topicsBy
     .map((t) => `${t.id}:${t.initial_knowledge_level}`)
     .sort()
     .join(',');
-  return `${plan.weekly_hours_target}|${plan.strategy_mode ?? ''}|${subjectPart}|${topicPart}`;
+  const key = `${plan.weekly_hours_target}|${plan.strategy_mode ?? ''}|${subjectPart}|${topicPart}`;
+  return dayMinutes === undefined ? key : `${key}|dia:${dayMinutes}`;
 }

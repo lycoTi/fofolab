@@ -7,7 +7,7 @@ import {
   startOfWeek,
   STRATEGY_FACTORS,
 } from '../lib/cycleEngine';
-import { planDailyBlocks } from '../lib/dailyPlanner';
+import { MAX_BLOCK_MINUTES, MAX_BLOCKS_LONG_DAY, planDailyBlocks } from '../lib/dailyPlanner';
 import { explainSubjectAllocation, explainTopicHeat, formatDecimal } from '../lib/explainabilityEngine';
 import type { StudyPlan, StudySession, Topic } from '../types/database';
 
@@ -53,7 +53,9 @@ describe('Meu Dia de Hoje: roteiro pelo que falta na semana (não por ordem alfa
     // Na lista, Auditoria vem antes (ordem alfabética), mas Contabilidade tem mais minutos no ciclo aplicado
     expect(cguSubjects.map((s) => s.name)[0]).toBe('Auditoria Governamental');
     expect(plan.blocks[0].subject.id).toBe('subj-cgu-contabilidade');
-    expect(plan.blocks).toHaveLength(2);
+    // 04:30 por dia é dia longo (spec 13): blocos de até 02:00
+    expect(plan.blocks.length).toBeGreaterThanOrEqual(2);
+    for (const b of plan.blocks) expect(b.durationMinutes).toBeLessThanOrEqual(MAX_BLOCK_MINUTES);
     expect(plan.blocks.reduce((acc, b) => acc + b.durationMinutes, 0)).toBeLessThanOrEqual(plan.dailyMinutesBudget);
   });
 
@@ -100,6 +102,88 @@ describe('Meu Dia de Hoje: roteiro pelo que falta na semana (não por ordem alfa
     const topPriority = [...base.allocations].sort((a, b) => b.elasticScore - a.elasticScore)[0];
     expect(plan.weekCompleted).toBe(true);
     expect(plan.blocks[0].subject.id).toBe(topPriority.subject.id);
+  });
+});
+
+describe('Roteiro pelas horas do dia (spec 13 §4.2)', () => {
+  const total = (blocks: { durationMinutes: number }[]) => blocks.reduce((acc, b) => acc + b.durationMinutes, 0);
+
+  it('dia de até 03:00 continua como hoje', () => {
+    const cycleData = cycleFor(cguPlan);
+    const byDay = planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: cguPlan.weekly_hours_target, dayMinutesBudget: 150 });
+    const byWeek = planDailyBlocks({ cycleData, topicsBySubject, weeklyHoursTarget: (150 * 7) / 60 });
+    expect(byDay.dailyMinutesBudget).toBe(150);
+    expect(byDay.blocks.map((b) => [b.subject.id, b.topic?.id, b.durationMinutes])).toEqual(
+      byWeek.blocks.map((b) => [b.subject.id, b.topic?.id, b.durationMinutes])
+    );
+    expect(byDay.blocks.length).toBeLessThanOrEqual(2);
+  });
+
+  it('dia longo: bloco de no máximo 02:00 e sem repetir matéria enquanto houver outra', () => {
+    const plan = planDailyBlocks({ cycleData: cycleFor(cguPlan), topicsBySubject, weeklyHoursTarget: 31.5, dayMinutesBudget: 360 });
+    expect(plan.blocks.length).toBeGreaterThanOrEqual(3);
+    expect(plan.blocks.length).toBeLessThanOrEqual(MAX_BLOCKS_LONG_DAY);
+    for (const b of plan.blocks) expect(b.durationMinutes).toBeLessThanOrEqual(MAX_BLOCK_MINUTES);
+    expect(new Set(plan.blocks.map((b) => b.subject.id)).size).toBe(plan.blocks.length);
+    expect(total(plan.blocks)).toBeLessThanOrEqual(360);
+  });
+
+  it('dia longo com só 2 matérias pendentes: a matéria repete com outro tópico', () => {
+    const base = cycleFor(cguPlan);
+    const monday = startOfWeek(NOW);
+    const [a, b, ...done] = [...base.allocations].sort((x, y) => y.currentWeeklyMinutes - x.currentWeeklyMinutes);
+    const sessions = done.map((d, i) => sessionOf(d.subject.id, d.currentWeeklyMinutes, new Date(monday.getTime() + (i + 1) * 3600_000)));
+    expect(a.currentWeeklyMinutes).toBeGreaterThanOrEqual(200);
+    expect(b.currentWeeklyMinutes).toBeGreaterThanOrEqual(200);
+    const plan = planDailyBlocks({ cycleData: cycleFor(cguPlan, sessions), topicsBySubject, weeklyHoursTarget: 31.5, dayMinutesBudget: 360 });
+    for (const blk of plan.blocks) {
+      expect(blk.durationMinutes).toBeLessThanOrEqual(MAX_BLOCK_MINUTES);
+      expect([a.subject.id, b.subject.id]).toContain(blk.subject.id);
+    }
+    expect(plan.blocks.length).toBeGreaterThan(2);
+    const topicIds = plan.blocks.map((blk) => blk.topic?.id);
+    expect(new Set(topicIds).size).toBe(topicIds.length);
+  });
+
+  it('dia de folga (orçamento 0): nenhum bloco', () => {
+    const plan = planDailyBlocks({ cycleData: cycleFor(cguPlan), topicsBySubject, weeklyHoursTarget: 31.5, dayMinutesBudget: 0 });
+    expect(plan.blocks).toEqual([]);
+  });
+
+  it('Revisão da semana: um bloco no tópico estudado que mais esfriou, dentro do tempo do dia', () => {
+    const contabTopics = topicsBySubject['subj-cgu-contabilidade'];
+    const [recent, old] = contabTopics;
+    const day = 86_400_000;
+    const studied: Record<string, Topic[]> = {
+      ...topicsBySubject,
+      'subj-cgu-contabilidade': contabTopics.map((t) => {
+        if (t.id === recent.id) return { ...t, last_studied_at: new Date(NOW.getTime() - 1 * day).toISOString() };
+        if (t.id === old.id) return { ...t, last_studied_at: new Date(NOW.getTime() - 9 * day).toISOString() };
+        return t;
+      }),
+    };
+    const cycleData = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject: studied, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW,
+    });
+    const plan = planDailyBlocks({ cycleData, topicsBySubject: studied, weeklyHoursTarget: 31.5, dayMinutesBudget: 300, weekReviewMinutes: 60 });
+    const review = plan.blocks.filter((b) => b.kind === 'WEEK_REVIEW');
+    expect(review).toHaveLength(1);
+    expect(review[0].topic?.id).toBe(old.id);
+    expect(review[0].durationMinutes).toBe(60);
+    expect(review[0].reasonText).toMatch(/Revisão da semana: .+ foi estudado há 9 dias/);
+    expect(total(plan.blocks)).toBeLessThanOrEqual(300);
+    expect(plan.blocks.filter((b) => b.kind === 'STUDY').every((b) => b.topic?.id !== old.id)).toBe(true);
+
+    // Sem nenhum tópico estudado não há revisão: o tempo vai para estudo
+    const unseen: Record<string, Topic[]> = Object.fromEntries(
+      Object.entries(topicsBySubject).map(([id, list]) => [id, list.map((t) => ({ ...t, last_studied_at: null }))])
+    );
+    const unseenCycle = calculateDynamicStudyCycle({
+      plan: cguPlan, subjects: cguSubjects, topicsBySubject: unseen, attempts: [], sessions: [], topicLinks: SEED_TOPIC_LINKS, now: NOW,
+    });
+    const fresh = planDailyBlocks({ cycleData: unseenCycle, topicsBySubject: unseen, weeklyHoursTarget: 31.5, dayMinutesBudget: 300, weekReviewMinutes: 60 });
+    expect(fresh.blocks.some((b) => b.kind === 'WEEK_REVIEW')).toBe(false);
+    expect(fresh.blocks.length).toBeGreaterThan(0);
   });
 });
 
