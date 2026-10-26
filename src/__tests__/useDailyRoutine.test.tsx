@@ -16,8 +16,13 @@ vi.mock('../lib/database', () => ({
 
 let livePlan: DailyPlan;
 // Dia sem tempo sobrando não tem bloco novo; fora isso, o plano que o teste mandar
+type PlannerCall = { dayMinutesBudget?: number; weekReviewMinutes?: number; excludeTopicIds?: ReadonlySet<string> };
+const plannerCalls: PlannerCall[] = [];
 vi.mock('../lib/dailyPlanner', () => ({
-  planDailyBlocks: (p: { dayMinutesBudget?: number }) => (p.dayMinutesBudget === 0 ? { ...livePlan, blocks: [] } : livePlan),
+  planDailyBlocks: (p: PlannerCall) => {
+    plannerCalls.push(p);
+    return p.dayMinutesBudget === 0 ? { ...livePlan, blocks: [] } : livePlan;
+  },
 }));
 
 const { useDailyRoutine } = await import('../features/routine/useDailyRoutine');
@@ -130,5 +135,24 @@ describe('roteiro do dia (hook)', () => {
     // O dia passa para 04:00: o feito continua e entra bloco novo no tempo que sobrou
     rerender({ planId: 'p1', sessions: [done], version: 0, dayMinutes: 240 });
     expect(result.current.items.map((i) => [i.topic?.id, i.status])).toEqual([['a', 'done'], ['b', 'current']]);
+  });
+
+  it('roteiro refeito com blocos feitos (inclusive a revisão): o planejador evita os tópicos deles e não põe outra revisão', () => {
+    const done = [session(new Date(2026, 9, 22, 20, 0).toISOString(), 90)];
+    store.set('p1|2026-10-22', {
+      blocks: [
+        { blockNumber: 1, subjectId: 'ti', topicId: 'a', durationMinutes: 60, reasonText: 'estudo' },
+        { blockNumber: 2, subjectId: 'ti', topicId: 'b', durationMinutes: 30, reasonText: 'revisão', kind: 'WEEK_REVIEW' },
+      ],
+      profileKey: 'perfil-de-antes',
+    });
+    livePlan = live(topicC, 60);
+    plannerCalls.length = 0;
+    const { result } = setup({ sessions: done, dayMinutes: 150 });
+    const refreeze = plannerCalls.find((c) => c.dayMinutesBudget === 60);
+    expect(refreeze).toBeTruthy();
+    expect([...(refreeze?.excludeTopicIds ?? [])].sort()).toEqual(['a', 'b']);
+    expect(refreeze?.weekReviewMinutes ?? 0).toBe(0);
+    expect(result.current.items.map((i) => [i.topic?.id, i.status])).toEqual([['a', 'done'], ['b', 'done'], ['c', 'current']]);
   });
 });

@@ -106,7 +106,8 @@ export function routineProfileKey(
   plan: StudyPlan,
   subjects: Subject[],
   topicsBySubject: Record<string, Topic[]>,
-  dayMinutes?: number
+  dayMinutes?: number,
+  weekReviewMinutes = 0
 ): string {
   const subjectPart = [...subjects]
     .sort((a, b) => a.id.localeCompare(b.id))
@@ -119,5 +120,7 @@ export function routineProfileKey(
     .sort()
     .join(',');
   const key = `${plan.weekly_hours_target}|${plan.strategy_mode ?? ''}|${subjectPart}|${topicPart}`;
-  return dayMinutes === undefined ? key : `${key}|dia:${dayMinutes}`;
+  if (dayMinutes === undefined) return key;
+  // A Revisão da semana muda de dia quando a semana atípica troca o dia mais longo
+  return weekReviewMinutes > 0 ? `${key}|dia:${dayMinutes}|rev:${weekReviewMinutes}` : `${key}|dia:${dayMinutes}`;
 }

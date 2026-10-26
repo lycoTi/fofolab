@@ -134,6 +134,11 @@ describe('assinatura do perfil do roteiro', () => {
     expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300, 90)], { ti: [owasp] })).toBe(base);
   });
 
+  it('muda quando a Revisão da semana de hoje muda (semana atípica trocou o dia mais longo)', () => {
+    const withReview = routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 150, 90);
+    expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 150, 0)).not.toBe(withReview);
+  });
+
   it('muda quando o tempo de hoje muda ("mudar o tempo de hoje" regrava o roteiro)', () => {
     const today = routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 150);
     expect(routineProfileKey(planOf(14, 'MAIS_COBRADOS'), [subj(2, 300)], { ti: [owasp] }, 60)).not.toBe(today);

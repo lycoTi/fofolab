@@ -45,7 +45,7 @@ export function useDailyRoutine(params: {
     });
   }, [plan, cycleData, topicsBySubject, dayMinutes, weekReviewMinutes]);
 
-  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject, dayMinutes) : '';
+  const profileKey = plan ? routineProfileKey(plan, subjects, topicsBySubject, dayMinutes, weekReviewMinutes) : '';
 
   // A data entra nas dependências: virar a meia-noite com o app aberto não pode levar o tempo de ontem
   const todaySessions = useMemo(() => {
@@ -80,20 +80,19 @@ export function useDailyRoutine(params: {
       setSavedVersion((v) => v + 1);
       return;
     }
+    // O planejador evita os tópicos já feitos hoje e não põe outra Revisão da semana se ela já foi feita
     const keptMinutes = kept.reduce((acc, b) => acc + b.durationMinutes, 0);
-    const rest =
-      dayMinutes === undefined
-        ? livePlan
-        : planDailyBlocks({
-            cycleData,
-            topicsBySubject,
-            weeklyHoursTarget: plan.weekly_hours_target,
-            dayMinutesBudget: Math.max(0, dayMinutes - keptMinutes),
-            weekReviewMinutes,
-          });
-    const keptTopics = new Set(kept.map((b) => b.topicId));
-    const fresh = freezeDailyPlan(rest).filter((b) => !keptTopics.has(b.topicId));
-    const blocks = [...kept, ...fresh].map((b, i) => ({ ...b, blockNumber: i + 1 }));
+    const keptTopics = new Set(kept.flatMap((b) => (b.topicId ? [b.topicId] : [])));
+    const reviewDone = kept.some((b) => b.kind === 'WEEK_REVIEW');
+    const rest = planDailyBlocks({
+      cycleData,
+      topicsBySubject,
+      weeklyHoursTarget: plan.weekly_hours_target,
+      dayMinutesBudget: dayMinutes === undefined ? undefined : Math.max(0, dayMinutes - keptMinutes),
+      weekReviewMinutes: reviewDone ? 0 : weekReviewMinutes,
+      excludeTopicIds: keptTopics,
+    });
+    const blocks = [...kept, ...freezeDailyPlan(rest)].map((b, i) => ({ ...b, blockNumber: i + 1 }));
     saveDailyPlan(plan.id, dateKey, blocks, profileKey);
     setSavedVersion((v) => v + 1);
   }, [dbReady, plan, frozen, livePlan, cycleData, dateKey, profileKey, subjects, topicsBySubject, todaySessions, dayMinutes, weekReviewMinutes]);
