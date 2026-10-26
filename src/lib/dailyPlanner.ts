@@ -182,6 +182,19 @@ function shortDayBlocks({ candidates, budget: dayBudget, weekCompleted, pickTopi
     blocks.push({ allocation, topic, heat, durationMinutes });
     budget -= durationMinutes;
   }
+  // As matérias dos 2 blocos tinham pouco tempo sobrando na semana: outras completam o dia (fim de semana com tudo
+  // quase cumprido deixava o sábado pela metade)
+  const used = new Set(blocks.map((b) => b.allocation.subject.id));
+  for (const allocation of candidates) {
+    if (blocks.length >= MAX_BLOCKS_LONG_DAY || budget < MIN_BLOCK_MINUTES || weekCompleted) break;
+    if (used.has(allocation.subject.id)) continue;
+    const durationMinutes = Math.min(budget, Math.max(MIN_BLOCK_MINUTES, roundTo5(allocation.remainingThisWeekMinutes)));
+    const { topic, heat } = pickTopic(allocation.subject.id);
+    if (topic) usedTopicIds.add(topic.id);
+    blocks.push({ allocation, topic, heat, durationMinutes });
+    used.add(allocation.subject.id);
+    budget -= durationMinutes;
+  }
   return blocks;
 }
 

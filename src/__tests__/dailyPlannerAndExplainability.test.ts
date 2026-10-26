@@ -294,3 +294,20 @@ describe('Revisão da semana sem tópico livre (revisão independente, 25/10)', 
     expect(new Set(topics).size).toBe(topics.length);
   });
 });
+
+describe('Dia de até 03:00 usa o dia inteiro (sábado da tela do dono, 26/10)', () => {
+  it('as duas matérias que mais faltam têm pouco tempo sobrando: entram outras até encher o dia', () => {
+    const base = cycleFor(cguPlan);
+    const monday = startOfWeek(NOW);
+    // Fim de semana: todas as matérias com pouco tempo sobrando (00:50, 00:45, 00:45, 00:45)
+    const left = [50, 45, 45, 45];
+    const sessions = base.allocations.map((al, i) =>
+      sessionOf(al.subject.id, al.currentWeeklyMinutes - left[i % left.length], new Date(monday.getTime() + (i + 1) * 3600_000))
+    );
+    const plan = planDailyBlocks({ cycleData: cycleFor(cguPlan, sessions), topicsBySubject, weeklyHoursTarget: 31.5, dayMinutesBudget: 180 });
+    const total = plan.blocks.reduce((acc, blk) => acc + blk.durationMinutes, 0);
+    expect(total).toBeGreaterThanOrEqual(170);
+    expect(plan.blocks.length).toBeLessThanOrEqual(MAX_BLOCKS_LONG_DAY);
+    expect(new Set(plan.blocks.map((blk) => blk.subject.id)).size).toBe(plan.blocks.length);
+  });
+});
