@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, Compass, FileUp, Sparkles, Target, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, Compass, FileUp, Sparkles, Target, X } from 'lucide-react';
+import { parseWeekdayMinutes, type WeekdayMinutes } from '../../lib/availability';
+import { HoursStep } from './HoursStep';
 import type { SelfAssessmentInput, StudyMoment, StudyPlan, StudyStrategy } from '../../types/database';
 import {
   initialSelfAssessment,
@@ -10,8 +12,8 @@ import {
 
 export interface OnboardingProfile {
   studyMoment: StudyMoment;
-  dailyHours: number;
-  weeklyHours: number;
+  /** Minutos de cada dia, seg–dom (0 = folga fixa); as horas da semana são a soma. */
+  weekdayMinutes: WeekdayMinutes;
   strategyMode: StudyStrategy;
   /** Revisão do dia ao abrir o app; desligada para quem já tem o próprio método de revisão. */
   dailyReviewEnabled: boolean;
@@ -46,11 +48,9 @@ const STRATEGY_FOR_MOMENT: Record<StudyMoment, StudyStrategy> = {
 
 function profileFromPlan(plan: StudyPlan): OnboardingProfile {
   const studyMoment = plan.study_moment ?? 'PRE_EDITAL';
-  const weeklyHours = plan.weekly_hours_target || 10.5;
   return {
     studyMoment,
-    dailyHours: Math.round((weeklyHours / 7) * 10) / 10,
-    weeklyHours,
+    weekdayMinutes: parseWeekdayMinutes(plan.weekday_minutes_json, plan.weekly_hours_target || 10.5),
     strategyMode: plan.strategy_mode ?? STRATEGY_FOR_MOMENT[studyMoment],
     dailyReviewEnabled: plan.daily_review_enabled !== 0,
     productiveFailureHints: plan.productive_failure_hints !== 0,
@@ -208,41 +208,7 @@ export function OnboardingWizardModal({
 
         {/* Passo 2: Disponibilidade Diária Real */}
         {step === 2 && (
-          <div className="space-y-4 animate-fade-in">
-            <div className="space-y-1">
-              <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                <Clock size={16} className="text-orange-400" />
-                Quanto tempo real você consegue estudar por dia?
-              </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Seja realista com sua rotina de casa e trabalho. Menos horas cumpridas com consistência vencem promessas exageradas!
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {[
-                { daily: 1.0, weekly: 7.0, label: '01:00 por dia (07:00 por semana)', desc: 'Perfeito para quem tem rotina puxada' },
-                { daily: 1.5, weekly: 10.5, label: '01:30 por dia (10:30 por semana)', desc: 'Ritmo constante e sustentável' },
-                { daily: 2.0, weekly: 14.0, label: '02:00 por dia (14:00 por semana)', desc: 'Equilíbrio ideal entre teoria e questões' },
-                { daily: 3.0, weekly: 21.0, label: '03:00 por dia (21:00 por semana)', desc: 'Foco intenso e avanço rápido' },
-                { daily: 4.5, weekly: 31.5, label: '04:30 por dia (31:30 por semana)', desc: 'Dedicação exclusiva / Reta final' },
-              ].map((item) => (
-                <button
-                  key={item.daily}
-                  type="button"
-                  onClick={() => setProfile((p) => ({ ...p, dailyHours: item.daily, weeklyHours: item.weekly }))}
-                  className={`p-3 rounded-xl border text-left transition ${
-                    profile.dailyHours === item.daily
-                      ? 'bg-orange-500/15 border-orange-500 text-white'
-                      : 'bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700'
-                  }`}
-                >
-                  <div className="font-semibold text-xs text-orange-200">{item.label}</div>
-                  <div className="text-[10px] text-slate-400 mt-0.5">{item.desc}</div>
-                </button>
-              ))}
-            </div>
-          </div>
+          <HoursStep value={profile.weekdayMinutes} onChange={(weekdayMinutes) => setProfile((p) => ({ ...p, weekdayMinutes }))} />
         )}
 
         {/* Passo 3: Área / Concurso Alvo */}

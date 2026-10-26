@@ -119,6 +119,46 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
+  it('Wizard grava os dias de estudo: domingo desligado e sábado 05:00 chegam ao plano (spec 13)', () => {
+    const onComplete = vi.fn();
+    render(
+      <OnboardingWizardModal
+        isOpen={true}
+        plans={SEED_STUDY_PLANS}
+        activePlan={{ ...cguPlan, weekly_hours_target: 14, weekday_minutes_json: null }}
+        onClose={vi.fn()}
+        onComplete={onComplete}
+        getPlanContent={getPlanContent}
+      />
+    );
+    fireEvent.click(screen.getByText(/Continuar/i));
+    expect(screen.getByText('Em quais dias e quanto tempo você consegue estudar?')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Dom' }));
+    fireEvent.change(screen.getByLabelText('Tempo de sábado'), { target: { value: '300' } });
+    for (let i = 0; i < 3; i += 1) fireEvent.click(screen.getByText(/Continuar/i));
+    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i));
+    expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([120, 120, 120, 120, 120, 300, 0]);
+  });
+
+  it('atalho de tempo do Wizard vale para os dias de estudo', () => {
+    const onComplete = vi.fn();
+    render(
+      <OnboardingWizardModal
+        isOpen={true}
+        plans={SEED_STUDY_PLANS}
+        activePlan={{ ...cguPlan, weekday_minutes_json: '[150,150,150,150,150,300,0]' }}
+        onClose={vi.fn()}
+        onComplete={onComplete}
+        getPlanContent={getPlanContent}
+      />
+    );
+    fireEvent.click(screen.getByText(/Continuar/i));
+    fireEvent.click(screen.getByText('03:00 por dia'));
+    for (let i = 0; i < 3; i += 1) fireEvent.click(screen.getByText(/Continuar/i));
+    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i));
+    expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([180, 180, 180, 180, 180, 180, 0]);
+  });
+
   it('clicar na matéria no Ciclo pede para abrir a matéria na bancada', () => {
     const onOpenSubject = vi.fn();
     const allocation = cycleData.allocations[0];

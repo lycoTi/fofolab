@@ -13,7 +13,7 @@ import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { forecastWeek } from './lib/weekForecast';
-import { weekReviewDuration } from './lib/availability';
+import { weekBudgetMinutes, weekDateKeys, weekReviewDuration } from './lib/availability';
 import { TopicHeatGrid } from './features/heatmap/TopicHeatGrid';
 import { FofoDoro } from './features/fofodoro/FofoDoro';
 import { FofoDoroPreview } from './features/fofodoro/FofoDoroPreview';
@@ -89,6 +89,8 @@ import {
   saveSelfAssessment,
   setActiveStudyPlan,
   updateStudyPlan,
+  updateWeekdayMinutes,
+  getDayOverrides,
   updateSubject,
   updateTopic,
 } from './lib/database';
@@ -655,9 +657,10 @@ export default function App() {
     selfAssessment: SelfAssessmentInput
   ) => {
     saveSelfAssessment(selfAssessment);
+    // Dias de estudo e horas de cada dia (spec 13): as horas da semana passam a ser a soma deles
+    updateWeekdayMinutes(targetPlanId, profile.weekdayMinutes);
     const updatedPlan = updateStudyPlan({
       id: targetPlanId,
-      weekly_hours_target: profile.weeklyHours,
       strategy_mode: profile.strategyMode,
       study_moment: profile.studyMoment,
       daily_review_enabled: profile.dailyReviewEnabled ? 1 : 0,
@@ -667,6 +670,8 @@ export default function App() {
       const planSubjects = getSubjectsByPlan(targetPlanId);
       const planTopics: Record<string, Topic[]> = {};
       for (const s of planSubjects) planTopics[s.id] = getTopicsBySubject(s.id);
+      const weekStart = startOfWeek(new Date());
+      const weekKeys = weekDateKeys(weekStart);
       const recommended = calculateDynamicStudyCycle({
         plan: updatedPlan,
         subjects: planSubjects,
@@ -677,6 +682,7 @@ export default function App() {
         examParts: getExamPartsByPlan(targetPlanId),
         questionLogs: getQuestionLogs(),
         recallChecks: getRecallChecks(),
+        weeklyMinutesBudget: weekBudgetMinutes(weekStart, profile.weekdayMinutes, getDayOverrides(targetPlanId, weekKeys[0], weekKeys[6])),
       });
       applyRecommendedCycleAllocations(
         recommended.allocations.map((a) => ({ subjectId: a.subject.id, minutes: a.recommendedWeeklyMinutes }))
