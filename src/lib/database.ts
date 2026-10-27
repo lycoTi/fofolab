@@ -123,7 +123,7 @@ export class InconsistentDiagnosisError extends Error {
 // Utilitários de consulta
 // ============================================================================
 
-function queryAll<T>(db: Database, sql: string, params: (string | number | null)[] = []): T[] {
+export function queryAll<T>(db: Database, sql: string, params: (string | number | null)[] = []): T[] {
   const results = db.exec(sql, params);
   if (!results.length) return [];
   const { columns, values } = results[0];
@@ -136,7 +136,7 @@ function queryAll<T>(db: Database, sql: string, params: (string | number | null)
   });
 }
 
-function queryOne<T>(db: Database, sql: string, params: (string | number | null)[] = []): T | null {
+export function queryOne<T>(db: Database, sql: string, params: (string | number | null)[] = []): T | null {
   const rows = queryAll<T>(db, sql, params);
   return rows[0] ?? null;
 }
@@ -531,6 +531,12 @@ export function getDb(): Database {
     throw new Error('SQLite ainda não foi inicializado. Chame await initDatabase() primeiro.');
   }
   return dbInstance;
+}
+
+/** O motor sql.js já carregado (o acervo da Cebraspe abre o banco dele com o mesmo motor). */
+export function getSqlJs(): SqlJsStatic {
+  if (!SQL) throw new Error('O motor do banco ainda não foi carregado. Chame await initDatabase() primeiro.');
+  return SQL;
 }
 
 /** Marca o banco como alterado e agenda a gravação (imediata se estava parado; ver `SAVE_THROTTLE_MS`). */

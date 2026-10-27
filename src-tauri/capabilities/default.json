@@ -1,7 +1,7 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "Permissões da janela principal: núcleo do Tauri + leitura/escrita SOMENTE na pasta de dados do app ($APPDATA), onde ficam fofolab.db, backups/ e quarantine/",
+  "description": "Permissões da janela principal: núcleo do Tauri + leitura/escrita SOMENTE na pasta de dados do app ($APPDATA), onde ficam fofolab.db, acervo.db (acervo da Cebraspe), backups/ e quarantine/",
   "windows": [
     "main"
   ],

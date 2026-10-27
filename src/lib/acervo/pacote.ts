@@ -147,14 +147,18 @@ export function parsePacote(text: string): { ok: true; pacote: PacoteValido } | 
   return { ok: true, pacote: { vocabVersion: vocab.versao, assuntos, itens, invalidItems } };
 }
 
+/** Nome do concurso com o ano inteiro: "ANATEL 24" de 2024 → "ANATEL 2024" (vira o órgão da questão). */
+export function concursoComAno(p: PacoteProcedencia): string {
+  const shortYear = String(p.ano % 100).padStart(2, '0');
+  return p.concurso.replace(new RegExp(`(^|\\s)${shortYear}(?=\\s|$)`), `$1${p.ano}`);
+}
+
 /**
  * Procedência como aparece no cartão: "Cebraspe · ANATEL 2024 · item 40". O minerador nomeia o concurso com o ano em
  * 2 dígitos ("ANATEL 24"); só o número solto igual ao fim do ano vira o ano inteiro ("TRT10" continua "TRT10").
  */
 export function formatProcedencia(p: PacoteProcedencia, others: number): string {
-  const shortYear = String(p.ano % 100).padStart(2, '0');
-  const concurso = p.concurso.replace(new RegExp(`(^|\\s)${shortYear}(?=\\s|$)`), `$1${p.ano}`);
-  const label = `${p.banca} · ${concurso} · item ${p.numero}`;
+  const label = `${p.banca} · ${concursoComAno(p)} · item ${p.numero}`;
   if (others <= 0) return label;
   return `${label} (e em mais ${others} ${others === 1 ? 'prova' : 'provas'})`;
 }

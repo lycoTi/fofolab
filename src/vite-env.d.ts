@@ -26,8 +26,15 @@ declare module 'sql.js' {
     values: (string | number | Uint8Array | null)[][];
   }
 
+  /** Comando preparado: reaproveitado em lote (importação do acervo). */
+  export class Statement {
+    run(params?: (string | number | null | Uint8Array)[]): void;
+    free(): boolean;
+  }
+
   export class Database {
     constructor(data?: ArrayLike<number> | Buffer | null);
+    prepare(sql: string): Statement;
     run(sql: string, params?: (string | number | null | Uint8Array)[]): this;
     exec(sql: string, params?: (string | number | null | Uint8Array)[]): QueryExecResult[];
     export(): Uint8Array;
