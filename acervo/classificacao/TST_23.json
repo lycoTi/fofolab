@@ -1,6 +1,27 @@
 {
   "identificador": "TST_23",
   "itens": {
+    "TST_23:918_TST_SERVIDOR_002_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TST_23:918_TST_SERVIDOR_CB1_01:10": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

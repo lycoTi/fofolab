@@ -104,6 +104,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CNMP_23:814_CNMP_004_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+              "confianca": 0.75
+            },
+            {
+              "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNMP_23:814_CNMP_004_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>passivo-exigivel",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>passivo-exigivel",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNMP_23:814_CNMP_004_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.55
+            },
+            {
+              "id": "contabilidade-geral>analise-das-demonstracoes-contabeis-estrutura-e-participacao-de-capitais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-das-demonstracoes-contabeis-estrutura-e-participacao-de-capitais",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CNMP_23:814_CNMP_004_01:94": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -128,6 +215,35 @@
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
           "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "CNMP_23:814_CNMP_010_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>fonte-de-receita-e-fonte-de-recursos",
+              "confianca": 0.65
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>fonte-de-receita-e-fonte-de-recursos",
+          "confianca": 0.65
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.55
         }
       ],
       "incerto": true,

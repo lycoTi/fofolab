@@ -1,6 +1,43 @@
 {
   "identificador": "TCU_25_TEFC",
   "itens": {
+    "TCU_25_TEFC:108_TCUTEFC_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>analise-critica-aos-modelos-de-gestao-publica-patrimonialista-burocratico-gerencial-e-suas-variantes",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>modelos-de-administracao>burocracia-e-profissionalizacao-gestao-orientada-a-resultados-participacao-e-governanca-limites-e-contribuicoes-de-diferentes-modelos-na-realidade-brasileira",
+              "confianca": 0.75
+            },
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>analise-critica-aos-modelos-de-gestao-publica-patrimonialista-burocratico-gerencial-e-suas-variantes",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>modelos-de-administracao>burocracia-e-profissionalizacao-gestao-orientada-a-resultados-participacao-e-governanca-limites-e-contribuicoes-de-diferentes-modelos-na-realidade-brasileira",
+          "confianca": 0.75
+        },
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCU_25_TEFC:108_TCUTEFC_001_01:98": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

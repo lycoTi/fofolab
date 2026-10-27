@@ -1,6 +1,35 @@
 {
   "identificador": "ITAIPU_23",
   "itens": {
+    "ITAIPU_23:924_ITAIPU_002_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>responsabilidade-objetiva-da-pessoa-juridica-e-requisitos-de-ato-lesivo-e-interesse-ou-beneficio",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>responsabilidade-objetiva-da-pessoa-juridica-e-requisitos-de-ato-lesivo-e-interesse-ou-beneficio",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ITAIPU_23:924_ITAIPU_002_01:25": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -156,6 +185,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ITAIPU_23:924_ITAIPU_008_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>balanco-orcamentario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>balanco-orcamentario",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ITAIPU_23:924_ITAIPU_008_01:46": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -233,6 +291,27 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_011_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 19
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "ITAIPU_23:924_ITAIPU_011_01:50": {
@@ -330,6 +409,38 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_020_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ITAIPU_23:924_ITAIPU_024_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+          "confianca": 0.8
         }
       ],
       "incerto": false,

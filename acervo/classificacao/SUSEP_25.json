@@ -1,6 +1,35 @@
 {
   "identificador": "SUSEP_25",
   "itens": {
+    "SUSEP_25:065_SUSEP_004_01:129": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SUSEP_25:065_SUSEP_004_01:71": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -67,6 +96,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SUSEP_25:065_SUSEP_004_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SUSEP_25:065_SUSEP_004_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>metodos-de-autenticacao>protocolos-de-autenticacao-oauth-2-0-openid-connect-jwt-json-web-tokens-e-sso",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>metodos-de-autenticacao>protocolos-de-autenticacao-oauth-2-0-openid-connect-jwt-json-web-tokens-e-sso",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SUSEP_25:065_SUSEP_004_01:80": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -91,6 +178,43 @@
         {
           "id": "seguranca-da-informacao>autenticacao-de-dois-fatores-mfa",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SUSEP_25:065_SUSEP_004_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+              "confianca": 0.95
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>firewall-prevencao-de-intrusoes-waf-protecao-contra-negacao-de-servico-e-acesso-remoto-seguro",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+          "confianca": 0.95
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>firewall-prevencao-de-intrusoes-waf-protecao-contra-negacao-de-servico-e-acesso-remoto-seguro",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+          "confianca": 0.7
         }
       ],
       "incerto": false,

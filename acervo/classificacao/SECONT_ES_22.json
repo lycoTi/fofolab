@@ -1,6 +1,35 @@
 {
   "identificador": "SECONT_ES_22",
   "itens": {
+    "SECONT_ES_22:690_SECONT_ES_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+              "confianca": 0.82
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+          "confianca": 0.82
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SECONT_ES_22:690_SECONT_ES_002_01:73": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -137,6 +166,56 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "SECONT_ES_22:690_SECONT_ES_002_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>codigo-da-conta-contabil",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>codigo-da-conta-contabil",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SECONT_ES_22:690_SECONT_ES_004_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>termo-de-ajustamento-de-conduta-requisitos-proporcionalidade-e-acompanhamento",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>termo-de-ajustamento-de-conduta-requisitos-proporcionalidade-e-acompanhamento",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SECONT_ES_22:690_SECONT_ES_006_01:103": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -161,6 +240,64 @@
         {
           "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SECONT_ES_22:690_SECONT_ES_006_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio>normas-abnt-nbr-iso-iec-27005-2019-e",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio>normas-abnt-nbr-iso-iec-27005-2019-e",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SECONT_ES_22:690_SECONT_ES_006_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>atos-normativos-do-me-slti-instrucao-normativa-n-1-2019",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>atos-normativos-do-me-slti-instrucao-normativa-n-1-2019",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>gestao-e-fiscalizacao-de-contratos-de-tecnologia-da-informacao",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -193,6 +330,43 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SECONT_ES_22:690_SECONT_ES_006_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+              "confianca": 0.7
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+          "confianca": 0.7
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     }
   }

@@ -1,6 +1,43 @@
 {
   "identificador": "BCB_24",
   "itens": {
+    "BCB_24:959_BCB_002_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+              "confianca": 0.9
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+          "confianca": 0.9
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BCB_24:959_BCB_CB1_01:16": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -53,6 +90,35 @@
         },
         {
           "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>diferenca-entre-dados-pessoais-e-dados-pessoais-sensiveis-nocoes-de-tarjamento-anonimizacao-e-risco-de-reidentificacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BCB_24:959_BCB_CB1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
           "confianca": 0.8
         }
       ],

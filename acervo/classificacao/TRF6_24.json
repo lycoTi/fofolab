@@ -1,6 +1,43 @@
 {
   "identificador": "TRF6_24",
   "itens": {
+    "TRF6_24:034_TRF6_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>o-estado-e-as-funcoes-economicas-governamentais>funcao-estabilizadora-alocativa-e-distributiva",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>politicas-alocativas-distributivas-e-de-estabilizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>o-estado-e-as-funcoes-economicas-governamentais>funcao-estabilizadora-alocativa-e-distributiva",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>politicas-alocativas-distributivas-e-de-estabilizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRF6_24:034_TRF6_001_01:118": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -33,6 +70,35 @@
         {
           "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>necessidades-de-financiamento-do-setor-publico-nfsp",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+          "confianca": 0.55
         }
       ],
       "incerto": false,
@@ -469,6 +535,109 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TRF6_24:034_TRF6_005_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.85
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.75
+            },
+            {
+              "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-111-2010-159-2012-192-2014-305-2019-472-2022-526-2023-e-suas-alteracoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.85
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.75
+        },
+        {
+          "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-111-2010-159-2012-192-2014-305-2019-472-2022-526-2023-e-suas-alteracoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_006_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.65
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>coordenacao-de-equipes-e-mudancas-de-escopo-sem-comprometer-a-inferencia-conjunta-selecao-aleatoria-e-por-risco-e-seus-propositos",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.65
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>coordenacao-de-equipes-e-mudancas-de-escopo-sem-comprometer-a-inferencia-conjunta-selecao-aleatoria-e-por-risco-e-seus-propositos",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_006_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRF6_24:034_TRF6_006_01:75": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -501,6 +670,93 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_006_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 19
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_006_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+              "confianca": 0.8
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+          "confianca": 0.8
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_008_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>reajuste-contratual-e-aplicacao-de-indices",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>reajuste-contratual-e-aplicacao-de-indices",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -559,6 +815,64 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_012_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_012_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -781,6 +1095,43 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "TRF6_24:034_TRF6_026_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+          "confianca": 0.6
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.5
+        },
+        {
+          "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "TRF6_24:034_TRF6_027_01:117": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -805,6 +1156,27 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_CG4_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
         }
       ],
       "incerto": false,

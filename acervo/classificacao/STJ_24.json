@@ -96,6 +96,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "STJ_24:018_STJ_007_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 26
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "STJ_24:018_STJ_007_01:113": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -128,6 +157,72 @@
         {
           "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_007_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_007_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 26
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -204,6 +299,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "STJ_24:018_STJ_007_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.85
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.85
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "STJ_24:018_STJ_007_01:98": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -235,6 +359,27 @@
         },
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_008_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>biosseguranca-e-gerenciamento-de-residuos-de-servicos-de-saude",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>biosseguranca-e-gerenciamento-de-residuos-de-servicos-de-saude",
           "confianca": 0.85
         }
       ],
@@ -310,6 +455,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "STJ_24:018_STJ_CB3_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+          "confianca": 0.6
+        },
+        {
+          "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

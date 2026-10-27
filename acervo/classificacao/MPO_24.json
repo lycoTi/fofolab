@@ -104,6 +104,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPO_24:958_MPO_ANALISTA_003_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gestao-do-conhecimento>dados-abertos>politica-de-dados-abertos-decreto-n-8-777-de-11-de-maio-de-2016-e-suas-alteracoes",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gestao-do-conhecimento>dados-abertos>politica-de-dados-abertos-decreto-n-8-777-de-11-de-maio-de-2016-e-suas-alteracoes",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPO_24:958_MPO_ANALISTA_007_01:100": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -309,6 +338,43 @@
       "incerto": true,
       "concordancia": "discordam"
     },
+    "MPO_24:958_MPO_ANALISTA_007_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.82
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>recomendacoes-e-jurisprudencias-dos-orgaos-de-controle-quanto-as-contratacoes-de-ti",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.82
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>recomendacoes-e-jurisprudencias-dos-orgaos-de-controle-quanto-as-contratacoes-de-ti",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPO_24:958_MPO_ANALISTA_007_01:67": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -333,6 +399,43 @@
         {
           "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>fiscalizacao-pagamento-e-verificacao-de-entregas",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPO_24:958_MPO_ANALISTA_007_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-software-e-de-servicos-de-computacao-em-nuvem-portaria-sgd-mgi-n-5-950-de-26-de-outubro-de-2023",
+              "confianca": 0.95
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.7
+            },
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 18
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>modelos>contratacao-de-software-e-de-servicos-de-computacao-em-nuvem-portaria-sgd-mgi-n-5-950-de-26-de-outubro-de-2023",
+          "confianca": 0.95
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.7
+        },
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.55
         }
       ],
       "incerto": false,

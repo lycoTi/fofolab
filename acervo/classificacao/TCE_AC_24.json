@@ -1,6 +1,109 @@
 {
   "identificador": "TCE_AC_24",
   "itens": {
+    "TCE_AC_24:993_TCE_AC_002_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_AC_24:993_TCE_AC_002_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 26
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_AC_24:993_TCE_AC_002_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>mensuracao-de-ativos>reavaliacao-e-reducao-ao-valor-recuperavel",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>mensuracao-de-ativos>reavaliacao-e-reducao-ao-valor-recuperavel",
+          "confianca": 0.6
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_AC_24:993_TCE_AC_002_01:70": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -415,6 +518,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TCE_AC_24:993_TCE_AC_014_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+              "confianca": 0.9
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>avaliacao-executiva-avaliacao-de-desenho-avaliacao-de-governanca-avaliacao-de-resultados-avaliacao-de-impacto-e-avaliacao-economica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>avaliacao-executiva-avaliacao-de-desenho-avaliacao-de-governanca-avaliacao-de-resultados-avaliacao-de-impacto-e-avaliacao-economica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_AC_24:993_TCE_AC_015_01:110": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -519,6 +651,17 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "TCE_AC_24:993_TCE_AC_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 18
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
     },
     "TCE_AC_24:993_TCE_AC_CB4_01:3": {
       "opinioes": {

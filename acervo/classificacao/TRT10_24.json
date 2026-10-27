@@ -152,6 +152,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TRT10_24:050_TRT10_002_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>convenios-acordos-ajustes-e-outros-instrumentos-congeneres",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-11-531-2023-e-portaria-conjunta-mgi-mf-cgu-n-33-2023-convenios-e-instrumentos-congeneres",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>convenios-acordos-ajustes-e-outros-instrumentos-congeneres",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-11-531-2023-e-portaria-conjunta-mgi-mf-cgu-n-33-2023-convenios-e-instrumentos-congeneres",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRT10_24:050_TRT10_002_01:109": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -288,6 +317,315 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "TRT10_24:050_TRT10_003_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_005_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>sigilo-profissional-e-dever-de-confidencialidade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 20
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>sigilo-profissional-e-dever-de-confidencialidade",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.75
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.75
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.75
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.65
+            },
+            {
+              "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.75
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.65
+        },
+        {
+          "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_007_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.75
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.75
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_011_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>autenticacao-de-dois-fatores-mfa",
+              "confianca": 0.75
+            },
+            {
+              "id": "seguranca-da-informacao>metodos-de-autenticacao>autenticacao-multifator-baseada-em-biometria-por-token-e-certificados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>autenticacao-de-dois-fatores-mfa",
+          "confianca": 0.75
+        },
+        {
+          "id": "seguranca-da-informacao>metodos-de-autenticacao>autenticacao-multifator-baseada-em-biometria-por-token-e-certificados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRT10_24:050_TRT10_012_01:51": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -320,6 +658,35 @@
         {
           "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_014_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais>in-mpog-n-5-2017-e-in-seges-me-n-98-2022",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais>in-mpog-n-5-2017-e-in-seges-me-n-98-2022",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -457,6 +824,43 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "TRT10_24:050_TRT10_014_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TRT10_24:050_TRT10_CB1_01:33": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -489,6 +893,35 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRT10_24:050_TRT10_CB3_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

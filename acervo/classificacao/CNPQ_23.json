@@ -30,6 +30,72 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "CNPQ_23:917_CNPQ_ANALISTA_003_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>conformidade>legislacao-aplicada-a-seguranca-da-informacao-na-administracao-publica-federal>programa-de-privacidade-e-seguranca-da-informacao-portaria-sgd-mgi-n-852-de-28-de-marco-de-2023-e-normas-correlatas",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>conformidade>legislacao-aplicada-a-seguranca-da-informacao-na-administracao-publica-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>conformidade>legislacao-aplicada-a-seguranca-da-informacao-na-administracao-publica-federal>programa-de-privacidade-e-seguranca-da-informacao-portaria-sgd-mgi-n-852-de-28-de-marco-de-2023-e-normas-correlatas",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>conformidade>legislacao-aplicada-a-seguranca-da-informacao-na-administracao-publica-federal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNPQ_23:917_CNPQ_ANALISTA_004_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>o-ciclo-das-politicas-publicas-construcao-de-agenda-formulacao-da-politica-e-processo-decisorio",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>o-ciclo-das-politicas-publicas-construcao-de-agenda-formulacao-da-politica-e-processo-decisorio",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CNPQ_23:917_CNPQ_ANALISTA_005_01:60": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -54,6 +120,43 @@
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNPQ_23:917_CNPQ_ANALISTA_006_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -141,6 +244,35 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CNPQ_23:917_CNPQ_ANALISTA_007_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.8
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.8
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>governanca-e-responsabilidade>protecao-de-dados-pessoais-e-informacoes-sensiveis",
+          "confianca": 0.5
         }
       ],
       "incerto": false,

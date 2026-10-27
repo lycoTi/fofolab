@@ -29,6 +29,35 @@
       ],
       "incerto": false,
       "concordancia": "uma-opiniao"
+    },
+    "PETROBRAS_21_NS:658_PETROBRAS_007_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>metricas-e-efeitos-das-decisoes>precisao-sensibilidade-especificidade-calibracao-e-metricas-de-regressao",
+              "confianca": 0.95
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>metricas-e-efeitos-das-decisoes>custos-dos-falsos-positivos-e-falsos-negativos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 19
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>metricas-e-efeitos-das-decisoes>precisao-sensibilidade-especificidade-calibracao-e-metricas-de-regressao",
+          "confianca": 0.95
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>metricas-e-efeitos-das-decisoes>custos-dos-falsos-positivos-e-falsos-negativos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

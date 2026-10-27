@@ -1,0 +1,42 @@
+{
+  "identificador": "TCE_RJ_22_PROCURADOR",
+  "itens": {
+    "TCE_RJ_22_PROCURADOR:788_TCE_RJ_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>servicos-publicos>delegacao>concessao-permissao-e-autorizacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>servicos-publicos>formas-de-prestacao-e-meios-de-execucao",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>servicos-publicos>delegacao>concessao-permissao-e-autorizacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>servicos-publicos>formas-de-prestacao-e-meios-de-execucao",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

@@ -133,6 +133,72 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TCE_PR_24_AUDITOR:990_TCEPR_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.75
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.75
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_PR_24_AUDITOR:990_TCEPR_002_01:52": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -165,6 +231,48 @@
         {
           "id": "contabilidade-geral>reducao-ao-valor-recuperavel-de-ativos",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 19
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -399,6 +507,80 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "TCE_PR_24_AUDITOR:990_TCEPR_002_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.85
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.85
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_004_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>licitacao-de-obras-publicas>anteprojeto-projeto-basico-e-projeto-executivo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>licitacao-de-obras-publicas>anteprojeto-projeto-basico-e-projeto-executivo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_PR_24_AUDITOR:990_TCEPR_005_01:76": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -440,6 +622,43 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "TCE_PR_24_AUDITOR:990_TCEPR_005_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>registro-e-notificacao-de-irregularidades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 18
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>processo-de-contratacao-de-solucoes-de-tic-instrucao-normativa-sgd-me-n-94-de-23-de-dezembro-de-2022",
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>registro-e-notificacao-de-irregularidades",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "TCE_PR_24_AUDITOR:990_TCEPR_005_01:79": {
       "opinioes": {

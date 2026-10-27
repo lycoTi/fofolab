@@ -22,6 +22,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TCE_MG_25:1BE88E5CAB961D2715C5F5658004FAE90A1B371535394273449447D23021EBE5:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+              "confianca": 0.5
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+          "confianca": 0.5
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:16": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -117,6 +146,43 @@
         {
           "id": "direito-administrativo>controle-da-administracao-publica",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:320D70B97CC0EDBE166890B55FCDA7A4D04AC4E219402DE1DDEE1BDC051EC6F5:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.6
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.6
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -374,6 +440,77 @@
         {
           "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:722978F212C4C1FC816EFAB03D8D8DC0128A84530A6F0B4E3E27DF476DB322A7:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:A0975A53B51C23A08DD7956AE1979BC7C50E0EA2AE9DEDDC5062F1AE2812099F:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "psicologia>elaboracao-de-documentos-psicologicos-e-resolucao-do-cfp",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "psicologia>elaboracao-de-documentos-psicologicos-e-resolucao-do-cfp",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:A1559974E62EFEE70A476728E778E766A05DAD5986180CD64DCE4634728CF0A4:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>planejamento-e-gestao-da-comunicacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>planejamento-e-gestao-da-comunicacao",
+          "confianca": 0.85
         }
       ],
       "incerto": false,

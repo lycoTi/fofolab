@@ -51,6 +51,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "SEFIN_FORTALEZA_CE_23:847_SEFIN_CE_AUDITOR_CG1_01:20": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -117,6 +146,167 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_001_01:129": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 19
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_001_01:140": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:142": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+              "confianca": 0.75
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>avaliacao-ex-ante-e-ex-post",
+              "confianca": 0.65
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+          "confianca": 0.75
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>avaliacao-ex-ante-e-ex-post",
+          "confianca": 0.65
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>insumos-atividades-produtos-resultados-e-impactos-eficiencia-eficacia-efetividade-e-equidade",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:150": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>tecnicas-de-inferencia-causal>metodos-de-pareamento-e-diferenca-em-diferencas-did",
+              "confianca": 0.9
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>diferencas-em-diferencas-regressao-descontinua-e-pareamento-em-interpretacao-aplicada-com-hipoteses-e-ameacas-a-validade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>tecnicas-de-inferencia-causal>metodos-de-pareamento-e-diferenca-em-diferencas-did",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>diferencas-em-diferencas-regressao-descontinua-e-pareamento-em-interpretacao-aplicada-com-hipoteses-e-ameacas-a-validade",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_003_01:80": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -149,6 +339,72 @@
         {
           "id": "econometria>contabilidade-fiscal>resultados-nominal-operacional-e-primario",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_004_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>realizacao-da-variacao-patrimonial",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>realizacao-da-variacao-patrimonial",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFIN_FORTALEZA_CE_23:848_SEFIN_CE_ANALISTA_004_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.7
         }
       ],
       "incerto": false,

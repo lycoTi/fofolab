@@ -101,6 +101,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-papel-do-estado-e-a-atuacao-do-governo-nas-financas-publicas>formas-e-dimensoes-da-intervencao-da-administracao-na-economia",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-papel-do-estado-e-a-atuacao-do-governo-nas-financas-publicas>formas-e-dimensoes-da-intervencao-da-administracao-na-economia",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:17": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -205,6 +234,43 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:58": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -272,6 +338,35 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>materialidades-risco-e-relevancia",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>materialidades-risco-e-relevancia",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:83": {
       "opinioes": {

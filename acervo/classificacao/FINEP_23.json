@@ -1,6 +1,27 @@
 {
   "identificador": "FINEP_23",
   "itens": {
+    "FINEP_23:931_FINEP_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>custo-efetividade-e-custo-beneficio-custo-de-oportunidade-e-sensibilidade-heterogeneidade-de-efeitos-equidade-e-impactos-territoriais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>custo-efetividade-e-custo-beneficio-custo-de-oportunidade-e-sensibilidade-heterogeneidade-de-efeitos-equidade-e-impactos-territoriais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FINEP_23:931_FINEP_001_01:48": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {

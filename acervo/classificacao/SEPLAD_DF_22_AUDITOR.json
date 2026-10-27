@@ -60,6 +60,43 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:11": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -89,6 +126,43 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>direito-publico-aplicado-as-respostas-de-controle>definicao-de-prioridades-e-combinacao-de-respostas-preventivas-corretivas-e-de-responsabilizacao-competencias-motivacao-proporcionalidade-consequencias-praticas-e-condicoes-de-atuacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 26
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>direito-publico-aplicado-as-respostas-de-controle>definicao-de-prioridades-e-combinacao-de-respostas-preventivas-corretivas-e-de-responsabilizacao-competencias-motivacao-proporcionalidade-consequencias-praticas-e-condicoes-de-atuacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:18": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -113,6 +187,43 @@
         {
           "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+              "confianca": 0.55
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+          "confianca": 0.55
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -167,6 +278,27 @@
         {
           "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEPLAD_DF_22_AUDITOR:953_SEPLAD_DF_CF_002_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
         }
       ],
       "incerto": false,

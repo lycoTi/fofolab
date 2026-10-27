@@ -43,6 +43,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TELEBRAS_25:2674085EC4BD06F038C4F781375511F5EE6A9836AE402A6DEBAB4969F1142A3E:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.5
+            },
+            {
+              "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.5
+        },
+        {
+          "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "TELEBRAS_25:2674085EC4BD06F038C4F781375511F5EE6A9836AE402A6DEBAB4969F1142A3E:53": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -75,6 +104,77 @@
         {
           "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:2674085EC4BD06F038C4F781375511F5EE6A9836AE402A6DEBAB4969F1142A3E:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-67-2009-60-2008-75-2009-80-2009-81-2009-107-2010-113-2010-125-2010-135-2011-158-2012-163-2012-194-2014-207-2015-212-2015-213-2015-231-2016-253-2018-254-2018-255-2018-287-2019-288-2019-299-2019-307-2019-351-2020-395-2021-400-2021-401-2021-425-2021-453-2022-454-2022-466-2022-470-2022-487-2023-490-2023-492-2023-498-2023-520-2023-524-2023-530-2023-532-2023-542-2023-543-2024-e-suas-alteracoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:2674085EC4BD06F038C4F781375511F5EE6A9836AE402A6DEBAB4969F1142A3E:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-965-2014-marco-civil-da-internet-capitulos-ii-e-iii-secoes-i-e-ii",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>compliance>marco-civil-da-internet-lei-n-12-965-2014-e-suas-alteracoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-965-2014-marco-civil-da-internet-capitulos-ii-e-iii-secoes-i-e-ii",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>compliance>marco-civil-da-internet-lei-n-12-965-2014-e-suas-alteracoes",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:92FB4B86D7C5AC2A5CC08DF9CD991140E639B55610EE5900A299D821FFFBB14F:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -136,6 +236,43 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:A6B9F82B9941174FD606106FBEF89D5B4FCEB698687057117320C717A8B496F6:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:79": {
@@ -249,6 +386,159 @@
         },
         {
           "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 21
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E745E981210ACFFB4253484290CCDA28BDD29A946F7EAADA73A5B6899C2A2327:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>principios-e-metodos-da-pesquisa-quantitativa-e-qualitativa",
+              "confianca": 0.85
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.7
+            },
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>principios-e-metodos-da-pesquisa-quantitativa-e-qualitativa",
+          "confianca": 0.85
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.7
+        },
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_25:E9833EC4FF5FC50CC007365ED3BCD842C5D20DD218A5EA4BE24EFB8E79FC7F91:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>conta-unica-do-tesouro-nacional",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>a-conta-unica-do-tesouro",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>conta-unica-do-tesouro-nacional",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>a-conta-unica-do-tesouro",
           "confianca": 0.5
         }
       ],

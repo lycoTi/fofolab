@@ -1,6 +1,27 @@
 {
   "identificador": "SEFAZ_RN_25_AUDITOR",
   "itens": {
+    "SEFAZ_RN_25_AUDITOR:355613AE6F4CBAEBA889E8A28F0DB4FC3887AE80F556A18EFF6980A58F662096:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>consolidacao-das-demonstracoes-contabeis-conceito-e-objetivos-da-consolidacao-procedimentos-e-criterios-contabeis-aplicados-obrigatoriedade-e-divulgacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>consolidacao-das-demonstracoes-contabeis-conceito-e-objetivos-da-consolidacao-procedimentos-e-criterios-contabeis-aplicados-obrigatoriedade-e-divulgacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:1": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -101,6 +122,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>programacao-financeira-e-cronograma-de-desembolso",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 24
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+          "confianca": 0.6
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.5
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>programacao-financeira-e-cronograma-de-desembolso",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_RN_25_AUDITOR:4340D68739F96A011498EEC630CCE234A4289F61DD55DF0D032D04C4D673B6CC:59": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -196,6 +254,27 @@
         {
           "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_RN_25_AUDITOR:A04377ECD0117203BF0777181EE813F41E59996F099A35C1B9214C3C65E1AD16:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
         }
       ],
       "incerto": false,

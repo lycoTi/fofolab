@@ -68,6 +68,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "ANTT_23:951_ANTT_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>direito-publico-aplicado-as-respostas-de-controle>definicao-de-prioridades-e-combinacao-de-respostas-preventivas-corretivas-e-de-responsabilizacao-competencias-motivacao-proporcionalidade-consequencias-praticas-e-condicoes-de-atuacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 26
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>direito-publico-aplicado-as-respostas-de-controle>definicao-de-prioridades-e-combinacao-de-respostas-preventivas-corretivas-e-de-responsabilizacao-competencias-motivacao-proporcionalidade-consequencias-praticas-e-condicoes-de-atuacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANTT_23:951_ANTT_002_01:90": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -103,6 +132,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANTT_23:951_ANTT_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.55
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>problema-desenho-e-avaliabilidade>relacao-entre-problema-pressupostos-hipoteses-e-evidencias-explicacoes-alternativas-e-efeitos-nao-pretendidos",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.55
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>problema-desenho-e-avaliabilidade>relacao-entre-problema-pressupostos-hipoteses-e-evidencias-explicacoes-alternativas-e-efeitos-nao-pretendidos",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

@@ -1,6 +1,43 @@
 {
   "identificador": "MTE_25",
   "itens": {
+    "MTE_25:070_MTE_CF_001_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>conceitos-fundamentais-do-direito-da-antidiscriminacao>acoes-afirmativas",
+              "confianca": 0.85
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.75
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 17
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>conceitos-fundamentais-do-direito-da-antidiscriminacao>acoes-afirmativas",
+          "confianca": 0.85
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.75
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:070_MTE_CF_001_01:12": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -38,6 +75,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MTE_25:071_MTE_CF_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>projeto-de-instalacoes-prediais-e-industriais",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-eletrica>circuitos-trifasicos-e-analise-de-faltas-em-sistemas-de-energia-eletrica>tensao-corrente-potencia-e-fator-de-potencia-em-circuitos-equilibrados-e-desequilibrados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 16
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>projeto-de-instalacoes-prediais-e-industriais",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-eletrica>circuitos-trifasicos-e-analise-de-faltas-em-sistemas-de-energia-eletrica>tensao-corrente-potencia-e-fator-de-potencia-em-circuitos-equilibrados-e-desequilibrados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+              "confianca": 0.55
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-18-capacitacao-e-treinamento-de-trabalhadores",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 18
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-18-capacitacao-e-treinamento-de-trabalhadores",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.8
+            },
+            {
+              "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.8
+        },
+        {
+          "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:090_MTECF_001_01:12": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -70,6 +194,27 @@
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.85
         }
       ],
       "incerto": false,

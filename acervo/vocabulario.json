@@ -1,5 +1,5 @@
 {
-  "versao": 16,
+  "versao": 27,
   "assuntos": [
     {
       "id": "administracao-geral",
@@ -5172,6 +5172,15 @@
       "origem": "edital"
     },
     {
+      "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>objetivos-e-elementos-do-trabalho-de-auditoria-independente",
+      "caminho": [
+        "Auditoria Governamental: Avaliação, Consultoria e Apuração",
+        "Objetivos e elementos do trabalho de auditoria independente"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho",
       "caminho": [
         "Auditoria Governamental: Avaliação, Consultoria e Apuração",
@@ -7960,6 +7969,15 @@
       "origem": "edital"
     },
     {
+      "id": "comunicacao>planejamento-e-gestao-da-comunicacao",
+      "caminho": [
+        "Comunicação",
+        "Planejamento e gestão da comunicação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "comunicacao>redacao-e-jornalismo",
       "caminho": [
         "Comunicação",
@@ -8266,6 +8284,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "contabilidade-geral>analise-das-demonstracoes-contabeis-estrutura-e-participacao-de-capitais",
+      "caminho": [
+        "Contabilidade Geral",
+        "Análise das demonstrações contábeis: estrutura e participação de capitais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "contabilidade-geral>analise-economico-financeira",
@@ -14516,6 +14543,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+      "caminho": [
+        "Direito Constitucional",
+        "Responsabilidade civil do Estado e de pessoas jurídicas de direito privado prestadoras de serviço público"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-constitucional>seguranca-publica",
       "caminho": [
         "Direito Constitucional",
@@ -14611,6 +14647,23 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-do-trabalho",
+      "caminho": [
+        "Direito do Trabalho"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+      "caminho": [
+        "Direito do Trabalho",
+        "Estabilidade provisória e CIPA"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-financeiro",
@@ -16167,6 +16220,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-tributario>creditos-tributarios-e-concurso-de-credores-na-falencia",
+      "caminho": [
+        "Direito Tributário",
+        "Créditos tributários e concurso de credores na falência"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-tributario>direito-tributario-conceito-e-principios",
@@ -22108,6 +22170,15 @@
       "origem": "edital"
     },
     {
+      "id": "estatistica-programacao-e-analise-de-dados>variaveis-tipos-qualitativas-e-quantitativas",
+      "caminho": [
+        "Estatística, Programação e Análise de Dados",
+        "Variáveis: tipos qualitativas e quantitativas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "estrategia-e-planejamento",
       "caminho": [
         "Estratégia e Planejamento"
@@ -22516,6 +22587,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "etica-no-setor-publico>sigilo-profissional-e-dever-de-confidencialidade",
+      "caminho": [
+        "Ética no Setor Público",
+        "Sigilo profissional e dever de confidencialidade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "etica-publica-e-responsabilidade-profissional",
@@ -27162,6 +27242,15 @@
       "caminho": [
         "Licitações, Contratos e Convênios",
         "Poderes do Tribunal de Contas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "licitacoes-contratos-e-convenios>reajuste-contratual-e-aplicacao-de-indices",
+      "caminho": [
+        "Licitações, Contratos e Convênios",
+        "Reajuste contratual e aplicação de índices"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -34038,6 +34127,23 @@
       "origem": "edital"
     },
     {
+      "id": "psicologia",
+      "caminho": [
+        "Psicologia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "psicologia>elaboracao-de-documentos-psicologicos-e-resolucao-do-cfp",
+      "caminho": [
+        "Psicologia",
+        "Elaboração de documentos psicológicos e Resolução do CFP"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "raciocinio-logico",
       "caminho": [
         "Raciocínio Lógico"
@@ -35362,6 +35468,15 @@
       "origem": "edital"
     },
     {
+      "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+      "caminho": [
+        "Segurança da Informação",
+        "Gestão de riscos de segurança da informação (NBR ISO/IEC 27005): tipos de controles"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
       "caminho": [
         "Segurança da Informação",
@@ -35915,6 +36030,68 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho",
+      "caminho": [
+        "Segurança e Saúde no Trabalho"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>biosseguranca-e-gerenciamento-de-residuos-de-servicos-de-saude",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Biossegurança e gerenciamento de resíduos de serviços de saúde"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Gerenciamento de riscos ocupacionais e controle médico de saúde ocupacional"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Gestão de riscos ocupacionais e camadas de controle"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>nr-18-capacitacao-e-treinamento-de-trabalhadores",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "NR 18 - Capacitação e treinamento de trabalhadores"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Plano de resposta a emergências e evacuação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Responsabilidade civil e penal do engenheiro de segurança do trabalho e insalubridade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento",
@@ -38765,6 +38942,81 @@
         "novo assunto: Direito Administrativo › Marco Legal de Ciência, Tecnologia e Inovação",
         "novo assunto: Políticas Públicas e Métodos de Investigação e Avaliação › Serviço Social e Trabalho Coletivo",
         "novo assunto: Legislação Especial › Resoluções do Conselho Nacional do Ministério Público (CNMP)"
+      ]
+    },
+    {
+      "versao": 17,
+      "mudancas": [
+        "novo assunto: Comunicação › Planejamento e gestão da comunicação"
+      ]
+    },
+    {
+      "versao": 18,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho",
+        "novo assunto: Segurança e Saúde no Trabalho › NR 18 - Capacitação e treinamento de trabalhadores",
+        "novo assunto: Direito Tributário › Créditos tributários e concurso de credores na falência"
+      ]
+    },
+    {
+      "versao": 19,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho › Responsabilidade civil e penal do engenheiro de segurança do trabalho e insalubridade"
+      ]
+    },
+    {
+      "versao": 20,
+      "mudancas": [
+        "novo assunto: Ética no Setor Público › Sigilo profissional e dever de confidencialidade"
+      ]
+    },
+    {
+      "versao": 21,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho › Biossegurança e gerenciamento de resíduos de serviços de saúde"
+      ]
+    },
+    {
+      "versao": 22,
+      "mudancas": [
+        "novo assunto: Direito Constitucional › Responsabilidade civil do Estado e de pessoas jurídicas de direito privado prestadoras de serviço público",
+        "novo assunto: Segurança e Saúde no Trabalho › Gestão de riscos ocupacionais e camadas de controle",
+        "novo assunto: Auditoria Governamental: Avaliação, Consultoria e Apuração › Objetivos e elementos do trabalho de auditoria independente"
+      ]
+    },
+    {
+      "versao": 23,
+      "mudancas": [
+        "novo assunto: Contabilidade Geral › Análise das demonstrações contábeis: estrutura e participação de capitais",
+        "novo assunto: Segurança da Informação › Gestão de riscos de segurança da informação (NBR ISO/IEC 27005): tipos de controles"
+      ]
+    },
+    {
+      "versao": 24,
+      "mudancas": [
+        "novo assunto: Estatística, Programação e Análise de Dados › Variáveis: tipos qualitativas e quantitativas"
+      ]
+    },
+    {
+      "versao": 25,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho › Plano de resposta a emergências e evacuação",
+        "novo assunto: Licitações, Contratos e Convênios › Reajuste contratual e aplicação de índices",
+        "novo assunto: Direito do Trabalho",
+        "novo assunto: Direito do Trabalho › Estabilidade provisória e CIPA"
+      ]
+    },
+    {
+      "versao": 26,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho › Gerenciamento de riscos ocupacionais e controle médico de saúde ocupacional"
+      ]
+    },
+    {
+      "versao": 27,
+      "mudancas": [
+        "novo assunto: Psicologia",
+        "novo assunto: Psicologia › Elaboração de documentos psicológicos e Resolução do CFP"
       ]
     }
   ]

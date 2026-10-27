@@ -1,6 +1,43 @@
 {
   "identificador": "SEFAZ_SE_21_AUDITOR",
   "itens": {
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>preferencias-e-privilegios-creditorios",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>creditos-tributarios-e-concurso-de-credores-na-falencia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 18
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>creditos-tributarios-e-concurso-de-credores-na-falencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-civil>preferencias-e-privilegios-creditorios",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_001_01:46": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -25,6 +62,114 @@
         {
           "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>importancias-da-amostragem-estatistica-em-auditoria",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_002_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 23
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_21_AUDITOR:667_SEFAZ_SE_002_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade>lei-de-acesso-a-informacao-lai-lei-n-12-527-de-18-de-novembro-de-2011",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 25
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade>lei-de-acesso-a-informacao-lai-lei-n-12-527-de-18-de-novembro-de-2011",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_21_AUDITOR:776_SEFAZ_SE_21_AUDITOR_001_01_PROVA_2:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.5
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>objetivos-e-elementos-do-trabalho-de-auditoria-independente",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 22
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>objetivos-e-elementos-do-trabalho-de-auditoria-independente",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
