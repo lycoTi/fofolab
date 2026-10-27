@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { AlertTriangle, CheckCircle2, Database } from 'lucide-react';
 import { importAcervoPacote, type AcervoImportSummary, type LinkAi } from '../../lib/acervo/importAcervo';
+import { MAX_PACOTE_BYTES } from '../../lib/acervo/pacote';
+
+const UNEXPECTED_FAILURE = 'Não foi possível importar o acervo. Tente de novo; se continuar, feche e abra o FofoLab.';
 
 function count(n: number, singular: string, plural: string): string {
   return `${n} ${n === 1 ? singular : plural}`;
@@ -37,12 +40,25 @@ export function AcervoImportPanel(props: { planId: string; ai: LinkAi | null; on
 
   const start = async () => {
     if (!file) return;
+    // Recusa antes de ler: o arquivo inteiro iria para a memória só para ser recusado depois
+    if (file.size > MAX_PACOTE_BYTES) {
+      setState({ kind: 'error', message: 'O arquivo passa de 80 MB.' });
+      return;
+    }
     setState({ kind: 'running', progress: null });
-    const result = await importAcervoPacote(await file.text(), {
-      planId: props.planId,
-      ai: props.ai,
-      onProgress: (done, total) => setState({ kind: 'running', progress: { done, total } }),
-    });
+    let result: Awaited<ReturnType<typeof importAcervoPacote>>;
+    try {
+      result = await importAcervoPacote(await file.text(), {
+        planId: props.planId,
+        ai: props.ai,
+        onProgress: (done, total) => setState({ kind: 'running', progress: { done, total } }),
+      });
+    } catch (err) {
+      // Armazenamento cheio ou bloqueado, falha de escrita no app de desktop, tópico apagado no meio da ligação
+      console.error('[FofoLab] Falha ao importar o acervo:', err);
+      setState({ kind: 'error', message: UNEXPECTED_FAILURE });
+      return;
+    }
     if (!result.ok) {
       setState({ kind: 'error', message: result.message });
       return;

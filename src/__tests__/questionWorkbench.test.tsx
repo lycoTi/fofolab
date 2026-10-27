@@ -173,6 +173,12 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     expect(acervo.onShowGroup).toHaveBeenCalledTimes(1);
   });
 
+  it('enquanto o acervo abre, diz que está carregando em vez de "não há questões"', () => {
+    renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps({ groupCode: '2.3' }), loading: true });
+    expect(screen.getByText('Carregando as questões do acervo…')).toBeTruthy();
+    expect(screen.queryByText('Ainda não há questões classificadas neste tópico.')).toBeNull();
+  });
+
   it('tópico vazio sem grupo: sem o botão do grupo', () => {
     renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps() });
     expect(screen.getByText('Ainda não há questões classificadas neste tópico.')).toBeTruthy();

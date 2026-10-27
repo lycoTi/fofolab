@@ -1274,6 +1274,7 @@ export default function App() {
                         scopeFilter={questionScope}
                         onChangeScopeFilter={setQuestionScope}
                         acervo={acervoActions}
+                        loading={questionsView.loading}
                         onAnswer={handleAnswer}
                         onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}

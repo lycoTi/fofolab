@@ -77,6 +77,27 @@ describe('Importar o acervo da Cebraspe (spec 12c §5.2)', () => {
     ).toEqual(['1 questão com assunto · 1 tópico do seu plano ligado · 0 sem ligação', '1 ficou de fora (figura ou fórmula que não dá para ler).']);
   });
 
+  it('falha inesperada (armazenamento cheio, por exemplo) mostra mensagem humana e libera os controles', async () => {
+    importMock.mockRejectedValue(new Error('QuotaExceededError'));
+    const { onImported } = setup();
+    fireEvent.click(screen.getByRole('button', { name: 'Importar acervo' }));
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'Não foi possível importar o acervo. Tente de novo; se continuar, feche e abra o FofoLab.'
+    );
+    expect((screen.getByRole('button', { name: 'Importar acervo' }) as HTMLButtonElement).disabled).toBe(false);
+    expect(onImported).not.toHaveBeenCalled();
+  });
+
+  it('arquivo acima de 80 MB é recusado antes de ser lido', async () => {
+    render(<AcervoImportPanel planId="p1" ai={null} onImported={vi.fn()} />);
+    const big = new File(['x'], 'grande.json', { type: 'application/json' });
+    Object.defineProperty(big, 'size', { value: 80 * 1024 * 1024 + 1 });
+    fireEvent.change(screen.getByLabelText('Escolher o arquivo do pacote'), { target: { files: [big] } });
+    fireEvent.click(screen.getByRole('button', { name: 'Importar acervo' }));
+    expect((await screen.findByRole('alert')).textContent).toBe('O arquivo passa de 80 MB.');
+    expect(importMock).not.toHaveBeenCalled();
+  });
+
   it('sem arquivo escolhido, o botão fica desligado', () => {
     render(<AcervoImportPanel planId="p1" ai={null} onImported={vi.fn()} />);
     expect((screen.getByRole('button', { name: 'Importar acervo' }) as HTMLButtonElement).disabled).toBe(true);

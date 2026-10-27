@@ -45,6 +45,8 @@ export interface QuestionWorkbenchProps {
     onRestoreItem: (itemId: string) => void;
     onShowGroup: () => void;
   };
+  /** O acervo ainda está abrindo (primeira vez na sessão): ainda não dá para dizer que o tópico não tem questões. */
+  loading?: boolean;
 }
 
 interface AttemptState {
@@ -159,7 +161,12 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       <div className="space-y-4">
         {filters}
         {linkBar}
-        {emptyTopic && (
+        {emptyTopic && props.loading && (
+          <p className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+            Carregando as questões do acervo…
+          </p>
+        )}
+        {emptyTopic && !props.loading && (
           <EmptyTopicQuestions groupCode={acervo?.view.groupCode ?? null} onShowGroup={acervo?.onShowGroup} canImport={Boolean(props.onOpenImport)} />
         )}
         {!emptyTopic && (
