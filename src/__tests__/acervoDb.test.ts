@@ -9,6 +9,7 @@ import {
   buildAcervoDb,
   itemsByIds,
   itemsForAssuntos,
+  itemsForAssuntosQuery,
   readAcervoVocab,
 } from '../lib/acervo/acervoDb';
 import { createIndexedDbAcervoStorage, createMemoryAcervoStorage } from '../lib/acervo/acervoStore';
@@ -89,6 +90,17 @@ describe('Banco do acervo (spec 12c §5.1)', () => {
     );
     expect(itemsForAssuntos(db, ['x>atos']).map((r) => r.id).sort()).toEqual(['i-atos', 'i-atributos']);
     expect(itemsForAssuntos(db, ['x>atos-normativos']).map((r) => r.id)).toEqual(['i-normativos']);
+  });
+
+  it('a busca por assunto usa o índice (com o acervo todo classificado, varrer a tabela travaria "Todo o plano")', () => {
+    const { db } = buildAcervoDb(SQL, pacoteWith([item('i-atos', ['x>atos'])]));
+    const { sql, params } = itemsForAssuntosQuery(['x>atos', 'x>atos-normativos']);
+    const plan = db
+      .exec(`EXPLAIN QUERY PLAN ${sql}`, params)[0]
+      .values.map((row) => String(row[3]))
+      .join(' | ');
+    expect(plan).toContain('idx_item_assuntos_assunto');
+    expect(plan).not.toMatch(/SCAN a\b/);
   });
 
   it('item com dois assuntos ligados aparece uma vez; ordem pelo ano mais recente', () => {

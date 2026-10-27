@@ -118,19 +118,24 @@ export function assuntoCaminhos(db: Database, ids: string[]): Record<string, str
 }
 
 /**
- * Itens dos assuntos ligados e dos descendentes deles ("x>atos" traz "x>atos>atributos", mas não "x>atos-normativos":
- * o separador entra no padrão). Sem os escondidos, sem repetir, do ano mais recente para o mais antigo.
+ * Consulta dos itens de um conjunto de assuntos e dos descendentes ("x>atos" traz "x>atos>atributos", mas não
+ * "x>atos-normativos"). Descendente = id na faixa [id + '>', id + '?'): '?' vem logo depois de '>' na tabela ASCII e os
+ * ids só têm [a-z0-9->]. A faixa usa o índice de `assunto_id` — o LIKE varria o acervo inteiro a cada tópico.
  */
+export function itemsForAssuntosQuery(assuntoIds: string[]): { sql: string; params: string[] } {
+  const conditions = assuntoIds.map(() => '(a.assunto_id = ? OR (a.assunto_id > ? AND a.assunto_id < ?))').join(' OR ');
+  return {
+    sql: `SELECT DISTINCT ${ROW_COLUMNS} FROM itens i JOIN item_assuntos a ON a.item_id = i.id
+     WHERE i.hidden = 0 AND (${conditions}) ORDER BY i.exam_year DESC, i.id`,
+    params: assuntoIds.flatMap((id) => [id, `${id}>`, `${id}?`]),
+  };
+}
+
+/** Itens dos assuntos ligados e dos descendentes deles; sem os escondidos, sem repetir, do ano mais recente ao mais antigo. */
 export function itemsForAssuntos(db: Database, assuntoIds: string[]): AcervoRow[] {
   if (assuntoIds.length === 0) return [];
-  const conditions = assuntoIds.map(() => '(a.assunto_id = ? OR a.assunto_id LIKE ?)').join(' OR ');
-  const params = assuntoIds.flatMap((id) => [id, `${id}>%`]);
-  return queryAll<AcervoRow>(
-    db,
-    `SELECT DISTINCT ${ROW_COLUMNS} FROM itens i JOIN item_assuntos a ON a.item_id = i.id
-     WHERE i.hidden = 0 AND (${conditions}) ORDER BY i.exam_year DESC, i.id`,
-    params
-  );
+  const { sql, params } = itemsForAssuntosQuery(assuntoIds);
+  return queryAll<AcervoRow>(db, sql, params);
 }
 
 export function itemsByIds(db: Database, ids: string[]): AcervoRow[] {

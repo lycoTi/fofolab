@@ -81,7 +81,34 @@ function ownQuestions(input: ScopeInput, topicIds: string[]): Question[] {
   }
 }
 
-/** Itens ligados aos tópicos do escopo, cada um uma vez (no primeiro tópico em que aparece). */
+/**
+ * Tópicos do mais específico para o mais geral. Um item coberto pela folha e pelo grupo dela (o grupo também é ligado)
+ * fica na folha: tentativa no tópico agrupador sairia do Mapa de Calor, da cobertura e da Revisão do dia.
+ */
+function deepestFirst(topicIds: string[], subjectIds: string[]): string[] {
+  if (subjectIds.length === 0) return topicIds;
+  const parentOf = new Map(
+    queryAll<{ id: string; parent_id: string | null }>(
+      getDb(),
+      `SELECT id, parent_id FROM topics WHERE subject_id IN (${placeholders(subjectIds.length)})`,
+      subjectIds
+    ).map((t) => [t.id, t.parent_id])
+  );
+  const depth = (id: string): number => {
+    let d = 0;
+    const seen = new Set<string>();
+    for (let p = parentOf.get(id) ?? null; p && !seen.has(p); p = parentOf.get(p) ?? null) {
+      seen.add(p);
+      d += 1;
+    }
+    return d;
+  };
+  const depths = new Map(topicIds.map((id) => [id, depth(id)]));
+  // sort é estável: na mesma profundidade, fica a ordem do edital
+  return [...topicIds].sort((a, b) => (depths.get(b) ?? 0) - (depths.get(a) ?? 0));
+}
+
+/** Itens ligados aos tópicos do escopo, cada um uma vez (no tópico mais específico em que aparece). */
 function acervoQuestions(acervo: Database, topicIds: string[]): Question[] {
   const links = getAcervoLinks(topicIds).filter((l) => l.disabled === 0);
   if (links.length === 0) return [];
@@ -96,7 +123,7 @@ function acervoQuestions(acervo: Database, topicIds: string[]): Question[] {
 
   const picked: { row: AcervoRow; topicId: string; subjectId: string }[] = [];
   const seen = new Set<string>();
-  for (const topicId of topicIds) {
+  for (const topicId of deepestFirst(topicIds, [...new Set(subjectOf.values())])) {
     const assuntos = assuntosByTopic.get(topicId);
     const subjectId = subjectOf.get(topicId);
     if (!assuntos || !subjectId) continue;

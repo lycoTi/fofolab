@@ -109,6 +109,18 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     expect(shown).toMatchObject({ id: virtual.id, final_answer: 'E', topic_id: ctx.a.id });
   });
 
+  it('nos escopos amplos, o item vai para o tópico mais específico que o cobre (folha antes do grupo)', async () => {
+    const ctx = await open();
+    // O grupo também ligado (a importação liga tópicos pai): o assunto dele cobre o da folha A
+    ctx.student.saveAcervoLinks([{ topicId: ctx.parent.id, assuntoId: 'x>atos', origin: 'NAME', vocabVersion: 7 }]);
+    for (const scope of ['subject', 'all'] as const) {
+      const topicOf = (itemId: string) => viewOf(ctx, ctx.a.id, scope).items.find((i) => i.question.acervo_item_id === itemId)!.question.topic_id;
+      expect(topicOf('i1')).toBe(ctx.a.id);
+      expect(topicOf('i2')).toBe(ctx.a.id);
+      expect(topicOf('i3')).toBe(ctx.b.id);
+    }
+  });
+
   it('anulado aparece marcado (só para leitura)', async () => {
     const ctx = await open();
     expect(viewOf(ctx, ctx.a.id).items.find((i) => i.question.acervo_item_id === 'i4')!.question).toMatchObject({
