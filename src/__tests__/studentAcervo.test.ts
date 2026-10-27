@@ -203,3 +203,55 @@ describe('Reimportação atualiza as cópias sem tocar nas tentativas (spec 12c 
     expect(db.getQuestionWithDissection(same.id)!.question).toMatchObject({ is_annulled: 1, final_answer: 'X' });
   });
 });
+
+describe('Cópia fora do assunto ligado sai da Revisão do dia (revisão independente da 12c)', () => {
+  async function withAcervoDb() {
+    const ctx = await open();
+    const { buildAcervoDb } = await import('../lib/acervo/acervoDb');
+    const base = { formato: 'CERTO_ERRADO' as const, textoBase: null, alternativas: null, gabarito: 'C', anulado: false, dependeDeFigura: false, temSimboloIlegivel: false, incerto: false };
+    const proc = [{ banca: 'Cebraspe', concurso: 'TESTE 24', ano: 2024, numero: 1 }];
+    const acervoDb = buildAcervoDb(ctx.db.getSqlJs(), {
+      vocabVersion: 3,
+      assuntos: ['x', 'x>atos', 'x>licit'].map((id) => ({ id, caminho: id.split('>'), sinonimos: [] })),
+      itens: [
+        { ...base, id: 'T:c1:1', enunciado: 'Item de atos', procedencias: proc, assuntos: [{ id: 'x>atos', confianca: 0.9 }] },
+        { ...base, id: 'T:c1:2', enunciado: 'Item de licitação', procedencias: proc, assuntos: [{ id: 'x>licit', confianca: 0.9 }] },
+      ],
+      invalidItems: 0,
+    }).db;
+    const plan = setupPlan(ctx.db);
+    const rowOf = (id: string) => row(id);
+    return { ...ctx, ...plan, acervoDb, rowOf };
+  }
+
+  it('desligar o assunto tira a cópia da revisão do tópico; as tentativas ficam', async () => {
+    const { db, acervo, acervoDb, subject, topicA } = await withAcervoDb();
+    acervo.saveAcervoLinks([{ topicId: topicA.id, assuntoId: 'x>atos', origin: 'NAME', vocabVersion: 3 }]);
+    const q = acervo.toVirtualQuestion(row('T:c1:1'), subject.id, topicA.id);
+    acervo.materializeQuestion(q);
+    db.recordQuestionDiagnosis({ questionId: q.id, topicId: topicA.id, selectedOption: 'C', isCorrect: true, selfDiagnosis: 'MASTERED' });
+    expect(db.getReviewQuestionCandidates([topicA.id])[topicA.id]?.map((c) => c.questionId)).toEqual([q.id]);
+
+    acervo.disableAcervoLink(topicA.id, 'x>atos');
+    expect(acervo.detachUncoveredCopies(acervoDb, [topicA.id])).toBe(1);
+    expect(db.getReviewQuestionCandidates([topicA.id])[topicA.id]).toBeUndefined();
+    expect(count(db, 'SELECT COUNT(*) FROM question_attempts WHERE question_id = ? AND topic_id = ?', [q.id, topicA.id])).toBe(1);
+  });
+
+  it('cópia ainda coberta pelo tópico fica onde está', async () => {
+    const { acervo, acervoDb, subject, topicA } = await withAcervoDb();
+    acervo.saveAcervoLinks([{ topicId: topicA.id, assuntoId: 'x', origin: 'AI', vocabVersion: 3 }]);
+    acervo.materializeQuestion(acervo.toVirtualQuestion(row('T:c1:1'), subject.id, topicA.id));
+    expect(acervo.detachUncoveredCopies(acervoDb)).toBe(0);
+  });
+
+  it('responder de novo num tópico que cobre o item devolve a cópia à revisão dele', async () => {
+    const { db, acervo, acervoDb, subject, topicA, topicB } = await withAcervoDb();
+    const q = acervo.toVirtualQuestion(row('T:c1:1'), subject.id, topicA.id);
+    acervo.materializeQuestion(q);
+    acervo.detachUncoveredCopies(acervoDb, [topicA.id]);
+    expect(count(db, 'SELECT COUNT(*) FROM questions WHERE id = ? AND topic_id IS NULL', [q.id])).toBe(1);
+    acervo.materializeQuestion({ ...q, topic_id: topicB.id });
+    expect(db.getReviewQuestionCandidates([topicB.id])[topicB.id]?.map((c) => c.questionId)).toEqual([q.id]);
+  });
+});

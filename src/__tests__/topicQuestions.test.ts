@@ -165,6 +165,20 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     expect(viewOf(ctx, ctx.c.id, 'topic', null).acervoMissing).toBe(false);
   });
 
+  it('"Desligar este assunto" tira o assunto da lista e as cópias dele da Revisão do dia do tópico', async () => {
+    const ctx = await open();
+    const store = await import('../lib/acervo/acervoStore');
+    store.setAcervoStorageForTests(store.createMemoryAcervoStorage());
+    await store.replaceAcervo(ctx.acervo);
+    const used = viewOf(ctx, ctx.a.id).items.find((i) => i.question.acervo_item_id === 'i1')!.question;
+    ctx.student.materializeQuestion(used);
+    expect(ctx.db.getReviewQuestionCandidates([ctx.a.id])[ctx.a.id]?.map((c) => c.questionId)).toContain(used.id);
+
+    await ctx.view.disableLinkForTopic(ctx.a.id, 'x>atos');
+    expect(labels(viewOf(ctx, ctx.a.id))).toEqual(['Questão própria do tópico A']);
+    expect(ctx.db.getReviewQuestionCandidates([ctx.a.id])[ctx.a.id]?.map((c) => c.questionId)).not.toContain(used.id);
+  });
+
   it('tópicos do escopo e se há ligação ativa neles', async () => {
     const ctx = await open();
     const ids = (scope: 'topic' | 'group' | 'subject' | 'all', topicId = ctx.c.id) =>

@@ -2,7 +2,15 @@ import type { Database } from 'sql.js';
 import type { AiDissection, Question, Topic } from '../../types/database';
 import { getDb, queryAll, queryOne } from '../database';
 import { assuntoCaminhos, itemsByIds, itemsForAssuntos, type AcervoRow } from './acervoDb';
-import { acervoQuestionId, getAcervoLinks, getExcludedItemIds, toVirtualQuestion } from './studentAcervo';
+import { openAcervo } from './acervoStore';
+import {
+  acervoQuestionId,
+  detachUncoveredCopies,
+  disableAcervoLink,
+  getAcervoLinks,
+  getExcludedItemIds,
+  toVirtualQuestion,
+} from './studentAcervo';
 
 /**
  * Lista de questões da aba Questões (spec 12c §5.4): as próprias (importadas por texto/JSON) mais os itens do acervo
@@ -195,4 +203,14 @@ export function getQuestionsView(input: ScopeInput & { acervo: Database | null }
     sourceLabel: row.source_label,
   }));
   return view;
+}
+
+/**
+ * "Desligar este assunto" (spec 12c §5.3): a ligação sai de vez e as cópias que só ela cobria saem da Revisão do dia
+ * daquele tópico (as tentativas ficam).
+ */
+export async function disableLinkForTopic(topicId: string, assuntoId: string): Promise<void> {
+  disableAcervoLink(topicId, assuntoId);
+  const acervo = await openAcervo();
+  if (acervo) detachUncoveredCopies(acervo, [topicId]);
 }

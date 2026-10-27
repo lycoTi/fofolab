@@ -7,6 +7,7 @@ import { aiCandidates, buildLinkPrompt, linkByName, MAX_AI_CANDIDATES, parseLink
 import { parsePacote, type PacoteAssunto } from './pacote';
 import {
   countStaleCopies,
+  detachUncoveredCopies,
   newestLinkVocabVersion,
   getAcervoLinks,
   refreshCopiedQuestions,
@@ -190,7 +191,10 @@ async function runImport(text: string, input: ImportInput): Promise<AcervoImport
     input.onProgress?.(pending.length, pending.length);
   }
 
-  // 9. Gravar e resumir (números do plano inteiro: reimportar o mesmo pacote mostra o mesmo resumo)
+  // 9. Cópia que o tópico não cobre mais (item reclassificado) sai da Revisão do dia dele
+  detachUncoveredCopies(acervo);
+
+  // 10. Gravar e resumir (números do plano inteiro: reimportar o mesmo pacote mostra o mesmo resumo)
   persistDatabase();
   return {
     ok: true,

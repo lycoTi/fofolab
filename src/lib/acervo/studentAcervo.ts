@@ -1,6 +1,7 @@
 import type { Question } from '../../types/database';
 import { getDb, persistDatabase, queryAll, queryOne } from '../database';
-import type { AcervoRow } from './acervoDb';
+import type { Database } from 'sql.js';
+import { itemsForAssuntos, type AcervoRow } from './acervoDb';
 
 /**
  * O que o acervo da Cebraspe grava no banco do ESTUDANTE (spec 12c §5.3, §5.5 e §5.7): ligações tópico ↔ assunto,
@@ -59,6 +60,42 @@ export function materializeQuestion(question: Question): void {
       question.acervo_uncertain ?? 0,
     ]
   );
+  // Cópia que saiu do tópico (assunto desligado ou reclassificado) e foi usada de novo num tópico que a cobre volta à
+  // Revisão do dia dele
+  getDb().run('UPDATE questions SET topic_id = ? WHERE id = ? AND topic_id IS NULL', [question.topic_id, question.id]);
+}
+
+/**
+ * Cópias cujo tópico não cobre mais o item (assunto desligado, ou o item reclassificado num pacote novo) ficam sem
+ * tópico: a Revisão do dia sorteia pelo tópico da cópia e traria questão de outro assunto (anti-objetivo do dono). As
+ * tentativas não mudam (valem "dali em diante", spec 12c §5.6). `topicIds` limita a conferência; sem ele, todas.
+ */
+export function detachUncoveredCopies(acervo: Database, topicIds?: string[]): number {
+  if (topicIds?.length === 0) return 0;
+  const db = getDb();
+  const filter = topicIds ? ` AND topic_id IN (${placeholders(topicIds.length)})` : '';
+  const copies = queryAll<{ id: string; topic_id: string; acervo_item_id: string }>(
+    db,
+    `SELECT id, topic_id, acervo_item_id FROM questions WHERE acervo_item_id IS NOT NULL AND topic_id IS NOT NULL${filter}`,
+    topicIds ?? []
+  );
+  const coveredByTopic = new Map<string, Set<string>>();
+  let detached = 0;
+  for (const copy of copies) {
+    let covered = coveredByTopic.get(copy.topic_id);
+    if (!covered) {
+      const assuntos = getAcervoLinks([copy.topic_id])
+        .filter((l) => l.disabled === 0)
+        .map((l) => l.assunto_id);
+      covered = new Set(itemsForAssuntos(acervo, assuntos).map((r) => r.id));
+      coveredByTopic.set(copy.topic_id, covered);
+    }
+    if (covered.has(copy.acervo_item_id)) continue;
+    db.run('UPDATE questions SET topic_id = NULL WHERE id = ?', [copy.id]);
+    detached += 1;
+  }
+  if (detached > 0) persistDatabase();
+  return detached;
 }
 
 // ============================================================================

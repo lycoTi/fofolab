@@ -210,4 +210,19 @@ it('pacote mais antigo que as ligações deste banco (veio de outro computador, 
     // Terminada a primeira, a próxima importação volta a valer
     expect((await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null })).ok).toBe(true);
   });
+  it('item reclassificado para outro assunto num pacote novo sai da Revisão do dia do tópico antigo', async () => {
+    const { db, store, student, acervoDb, importAcervoPacote, plan, subject, topics } = await open();
+    await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null });
+    const [row] = acervoDb.itemsByIds((await store.openAcervo())!, ['TESTE_24:c1:1']);
+    const q = student.toVirtualQuestion(row, subject.id, topics[0].id);
+    student.materializeQuestion(q);
+    expect(db.getReviewQuestionCandidates([topics[0].id])[topics[0].id]?.map((c) => c.questionId)).toEqual([q.id]);
+
+    const reclassified = pacoteText((p) => {
+      p.vocabulario.versao = 6;
+      (p.itens[0] as { assuntos: unknown }).assuntos = [{ id: 'direito-administrativo>licitacoes', confianca: 0.9 }];
+    });
+    await importAcervoPacote(reclassified, { planId: plan.id, ai: null });
+    expect(db.getReviewQuestionCandidates([topics[0].id])[topics[0].id]).toBeUndefined();
+  });
 });

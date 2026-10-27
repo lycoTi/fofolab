@@ -40,8 +40,8 @@ import { QuestionImportModal } from './features/question-import/QuestionImportMo
 import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
 import { AcervoImportPanel } from './features/acervo/AcervoImportPanel';
 import { ACERVO_LINK_MAX_TOKENS } from './lib/acervo/importAcervo';
-import { disableAcervoLink, excludeItemFromTopic, materializeQuestion, restoreItemToTopic } from './lib/acervo/studentAcervo';
-import type { QuestionScope } from './lib/acervo/topicQuestions';
+import { excludeItemFromTopic, materializeQuestion, restoreItemToTopic } from './lib/acervo/studentAcervo';
+import { disableLinkForTopic, type QuestionScope } from './lib/acervo/topicQuestions';
 import { AppHeader } from './features/workbench-shell/AppHeader';
 import { summarizeExamParts } from './features/workbench-shell/headerSummary';
 import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from './features/workbench-shell/RightDock';
@@ -311,8 +311,7 @@ export default function App() {
   const acervoActions = {
     view: questionsView,
     onDisableLink: (assuntoId: string) => {
-      disableAcervoLink(selectedTopicId, assuntoId);
-      bumpQuestions();
+      void disableLinkForTopic(selectedTopicId, assuntoId).then(bumpQuestions);
     },
     onExcludeItem: (question: Question) => {
       if (!question.acervo_item_id) return;
