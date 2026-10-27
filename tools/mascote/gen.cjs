@@ -606,6 +606,23 @@ const out = sprites.map((s) => {
 });
 const dir = __dirname;
 fs.writeFileSync(path.join(dir, 'sprites.json'), JSON.stringify(out));
+// Cópia tipada para o app (src/ não importa tools/): o TypeScript reclama se faltar ou sobrar uma roupa
+const byId = Object.fromEntries(out.map(({ id, ...sprite }) => [id, sprite]));
+fs.writeFileSync(
+  path.join(dir, '../../src/features/mascot/fofoSprites.generated.ts'),
+  `// Gerado por tools/mascote/gen.cjs (node tools/mascote/gen.cjs). Não edite à mão.
+import type { OutfitId } from './wardrobe';
+
+export interface SpriteData {
+  palette: Record<string, string>;
+  A: string[];
+  B: string[];
+  closed: string[];
+}
+
+export const FOFO_SPRITES: Record<OutfitId, SpriteData> = ${JSON.stringify(byId, null, 2)};
+`,
+);
 for (const s of out) { console.log('== ' + s.id); console.log(s.A.join('\n')); }
 const toSvg = (s, grid, scale) => {
   let rects = '';

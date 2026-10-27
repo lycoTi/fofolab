@@ -1,7 +1,8 @@
 # Fofo — o mascote em pixel art
 
 O hamster do FofoDeck redesenhado em pixel art 32×32, pixel a pixel, com um guarda-roupa. Fica **fora do app**:
-nada em `src/` importa esta pasta. Quando o Fofo entrar no app, os sprites saem do `sprites.json`.
+nada em `src/` importa esta pasta. O gerador também escreve `src/features/mascot/fofoSprites.generated.ts`, a cópia
+tipada que o app usa (quando quem escolhe a roupa está em `src/features/mascot/wardrobe.ts`).
 Como e onde ele aparece (zonas, voz, ordem e calendário das roupas): `.agents/rules/identidade-fofolab.md`.
 
 ## Roupas
@@ -20,7 +21,8 @@ Como e onde ele aparece (zonas, voz, ordem e calendário das roupas): `.agents/r
 | `nomeado` | Nomeado | até desligar ou cadastrar prova nova |
 
 ## Comandos (na raiz do projeto)
-- `node tools/mascote/gen.cjs` — redesenha tudo e grava `sprites.json` (+ `preview.html` para conferir).
+- `node tools/mascote/gen.cjs` — redesenha tudo e grava `sprites.json`, a cópia do app
+  (`src/features/mascot/fofoSprites.generated.ts`) e `preview.html` para conferir. Mudou um desenho? Rode e commite os dois.
 - `node tools/mascote/build.cjs` — monta `mascote-fofolab.html`, a página de comparação (sprites + originais do FofoDeck).
 - `node tools/mascote/zoom.cjs prova nomeado` — `zoom.html` com as roupas pedidas ampliadas 10×.
 - `node tools/mascote/shot.cjs entrada.html saida.png [largura]` e `mobile.cjs` — prints pelo Edge (conferir a 375 px).

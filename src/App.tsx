@@ -10,6 +10,8 @@ import { SaveStatusIndicator } from './components/SaveStatusIndicator';
 import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { FofoIaPanel } from './features/fofoia/FofoIaPanel';
 import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
+import { FofoSprite } from './features/mascot/FofoSprite';
+import { CurrentFofo, FofoOutfitProvider, useFofoOutfit } from './features/mascot/FofoOutfitContext';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { useExamOutlook } from './features/study-plan/useExamOutlook';
@@ -511,11 +513,14 @@ export default function App() {
     },
   });
 
+  // Roupa do Fofo para a aba, a hora e a data de agora (regra em .agents/rules/identidade-fofolab.md)
+  const fofoOutfit = useFofoOutfit(activeTab, activePlan?.exam_date ? [activePlan.exam_date] : []);
+
   if (initError) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200 p-6">
         <div className="max-w-md space-y-2 text-sm text-center">
-          <div className="text-2xl">🐹</div>
+          <FofoSprite outfit="fofodeck" scale={2} motion="still" decorative className="mx-auto" />
           <p className="font-semibold text-white">Não foi possível abrir sua bancada de estudos.</p>
           <p className="text-xs text-slate-400">{initError}</p>
           <p className="text-xs text-slate-500">Feche e abra o FofoLab de novo. Seus estudos salvos não foram alterados.</p>
@@ -528,9 +533,7 @@ export default function App() {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200">
         <div className="flex items-center gap-3 text-sm">
-          <div className="h-8 w-8 rounded-lg bg-orange-500/20 border border-orange-500/40 flex items-center justify-center animate-pulse">
-            🐹
-          </div>
+          <FofoSprite outfit={fofoOutfit} motion="full" decorative />
           <span>Carregando sua bancada de estudos...</span>
         </div>
       </div>
@@ -1059,11 +1062,13 @@ export default function App() {
   };
 
   return (
+    <FofoOutfitProvider outfit={fofoOutfit}>
     <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
       {mode === 'student' && (
         <AppHeader
           hidden={readerExpanded}
+          mascot={<CurrentFofo />}
           planLabel={`[${activePlan.organ || 'Geral'}] ${activePlan.title}`}
           daysUntilExam={cycleData.daysUntilExam}
           examParts={summarizeExamParts(cycleData.allocations, examParts)}
@@ -1512,5 +1517,6 @@ export default function App() {
       {confirmDialog}
       <Toast message={studyBlock.message} messageId={studyBlock.messageId} onClose={studyBlock.dismissMessage} />
     </div>
+    </FofoOutfitProvider>
   );
 }

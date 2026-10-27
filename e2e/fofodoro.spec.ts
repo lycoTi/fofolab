@@ -15,7 +15,8 @@ async function openApp(page: Page) {
 }
 
 const column = (page: Page) => page.getByLabel('Roteiro de hoje');
-const toast = (page: Page) => page.getByRole('status').filter({ hasText: '🐹' });
+// O aviso aberto é a região de status com o botão de fechar (a região fica sempre montada, vazia entre avisos)
+const toast = (page: Page) => page.getByRole('status').filter({ has: page.getByRole('button', { name: 'Fechar aviso' }) });
 
 /** Avança o relógio como uma janela minimizada: o FofoDoro se acerta pelo horário real. */
 async function advance(page: Page, ms: number) {

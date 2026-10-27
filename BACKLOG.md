@@ -64,11 +64,18 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
-- [ ] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos prontos em `tools/mascote/`, 11 roupas):
-  trocar os emojis da interface (🐹 e afins) pelo Fofo e por ícones/quadradinhos; guarda-roupa como função pura com
-  teste (roupa fixa > dia da prova/nomeado > data especial > madrugada > aba > base); opção "Roupa do Fofo" nas
-  configurações; botão "fui nomeado"; teste de auditoria reprovando emoji em texto de interface. Antes: brainstorming
-  e plano. Depois: poses (pensando, dormindo, comemorando) e o ícone de 16 px.
+- [PARCIAL] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos em `tools/mascote/`, 11 roupas).
+  **Parte 1 feita (26/10/2026):** guarda-roupa `src/features/mascot/wardrobe.ts` (roupa fixa > dia da prova > nomeado >
+  data especial > madrugada > aba > base; Carnaval pela Páscoa), `FofoSprite` (SVG pixel a pixel; parado / só pisca /
+  momento; "reduzir movimento" para tudo), roupa por contexto refeita a cada minuto (`FofoOutfitContext`). O Fofo
+  aparece no cabeçalho (só pisca), no painel da FofoIA, no aviso do FofoDoro (se mexe) e nas telas de carregar/erro.
+  Sprites do app gerados por `node tools/mascote/gen.cjs` em `fofoSprites.generated.ts` (tipado: falta de roupa não
+  compila). Testes: `fofoWardrobe`, `fofoSprite`, `fofoOutfitContext` + E2E `e2e/fofo.spec.ts` (roupa por aba e
+  Halloween em outubro); `npm test` (616), `test:e2e` (37) e `build` verdes. Nada novo é gravado no banco.
+  **Falta (parte 2):** trocar os outros emojis (🐹 em "Pedir pista"/"Aprofundar", sinais da FofoIA, Wizard, 🟢🟡🔴…)
+  por ícones/quadradinhos + teste de auditoria reprovando emoji em texto de interface; "Roupa do Fofo" nas
+  configurações e botão "fui nomeado" (precisam gravar: migração); poses (pensando, dormindo, comemorando); ícone de
+  16 px. Rodar brainstorming e plano antes da parte 2.
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):

@@ -247,3 +247,54 @@ body.fofolab-resizing {
     animation: none;
   }
 }
+
+/* Fofo em pixel art: os quadros trocam em passos (sem fade, como num jogo) e ele pisca de vez em quando.
+   Quem pediu menos movimento vê o Fofo parado no primeiro quadro, de olhos abertos. */
+.fofo-sprite {
+  image-rendering: pixelated;
+}
+@keyframes fofo-frame-a {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes fofo-frame-b {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes fofo-blink {
+  0% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+.fofo-fa {
+  animation: fofo-frame-a var(--fofo-frame, 1s) step-end infinite;
+}
+.fofo-fb {
+  opacity: 0;
+  animation: fofo-frame-b var(--fofo-frame, 1s) step-end infinite;
+}
+.fofo-blink {
+  opacity: 0;
+  animation: fofo-blink 4.8s step-end infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fofo-fa,
+  .fofo-fb,
+  .fofo-blink {
+    animation: none;
+  }
+}

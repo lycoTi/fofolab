@@ -5,6 +5,7 @@ import { buildFofoContext } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import type { FofoMode } from '../../lib/fofoia/signals';
 import type { AiDissection, Question, SelfDiagnosisType } from '../../types/database';
+import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import { FofoMessage } from './FofoMessage';
 import { useFofoConversation } from './useFofoConversation';
 import { WarmupInvite } from './WarmupInvite';
@@ -118,9 +119,12 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
   return (
     <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
-      <div className="border-b border-slate-800 p-3.5">
-        <h3 className="text-xs font-bold text-white">🐹 FofoIA</h3>
-        <p className="truncate text-[10px] text-slate-400">{props.aiConfigured ? `Conversando sobre ${topicLabel}` : 'Modo demonstração — respostas de exemplo até a IA ser configurada'}</p>
+      <div className="flex items-center gap-2.5 border-b border-slate-800 p-3.5">
+        <CurrentFofo decorative />
+        <div className="min-w-0">
+          <h3 className="text-xs font-bold text-white">FofoIA</h3>
+          <p className="truncate text-[10px] text-slate-400">{props.aiConfigured ? `Conversando sobre ${topicLabel}` : 'Modo demonstração — respostas de exemplo até a IA ser configurada'}</p>
+        </div>
       </div>
 
       <div ref={listRef} className="flex-1 space-y-2.5 overflow-y-auto p-3.5">

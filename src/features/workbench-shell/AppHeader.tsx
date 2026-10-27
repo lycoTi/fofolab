@@ -5,6 +5,8 @@ import type { ExamPartProgress } from './headerSummary';
 interface AppHeaderProps {
   /** Leitura ampliada: escondido por CSS, não desmontado (o relógio do bloco continua contando). */
   hidden: boolean;
+  /** O Fofo com a roupa de agora, antes de tudo (zona do Fofo: só pisca). */
+  mascot?: ReactNode;
   planLabel: string;
   daysUntilExam: number | null;
   examParts: ExamPartProgress[];
@@ -24,6 +26,7 @@ function formatDays(days: number): string {
  */
 export function AppHeader({
   hidden,
+  mascot,
   planLabel,
   daysUntilExam,
   examParts,
@@ -41,6 +44,7 @@ export function AppHeader({
       }`}
     >
       <div className="flex min-w-0 items-center gap-3">
+        {mascot}
         {modeSwitch}
         <div className="flex min-w-0 items-center gap-2 text-xs text-slate-400">
           <strong className="truncate text-slate-200">{planLabel}</strong>
