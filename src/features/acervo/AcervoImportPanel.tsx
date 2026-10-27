@@ -11,7 +11,7 @@ export function summaryLines(s: AcervoImportSummary): string[] {
   const lines = [
     `${count(s.withSubject, 'questão com assunto', 'questões com assunto')} · ${count(s.topicsLinked, 'tópico do seu plano ligado', 'tópicos do seu plano ligados')} · ${s.topicsWithoutLink} sem ligação`,
   ];
-  if (s.hidden > 0) lines.push(`${s.hidden} ficaram de fora (figura ou fórmula que não dá para ler).`);
+  if (s.hidden > 0) lines.push(`${count(s.hidden, 'ficou de fora', 'ficaram de fora')} (figura ou fórmula que não dá para ler).`);
   if (s.invalidItems > 0) lines.push(`${count(s.invalidItems, 'item com problema foi ignorado', 'itens com problema foram ignorados')}.`);
   if (s.copiesUpdated > 0) {
     lines.push(`${count(s.copiesUpdated, 'questão que você já usou foi atualizada', 'questões que você já usou foram atualizadas')}.`);

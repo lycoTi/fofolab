@@ -1,0 +1,211 @@
+{
+  "formato": "fofolab-acervo",
+  "versao": 1,
+  "vocabulario": {
+    "versao": 1,
+    "assuntos": [
+      {
+        "id": "arquitetura-e-integracao-de-sistemas",
+        "caminho": [
+          "Arquitetura e Integração de Sistemas"
+        ],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes",
+        "caminho": [
+          "Arquitetura e Integração de Sistemas",
+          "Arquiteturas de aplicações"
+        ],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+        "caminho": [
+          "Arquitetura e Integração de Sistemas",
+          "Arquiteturas de aplicações",
+          "Monolitos, microsserviços e arquiteturas orientadas a eventos"
+        ],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>distribuicao-de-responsabilidades-acoplamento-e-dependencias",
+        "caminho": [
+          "Arquitetura e Integração de Sistemas",
+          "Arquiteturas de aplicações",
+          "Distribuição de responsabilidades, acoplamento e dependências"
+        ],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>desempenho-escalabilidade-seguranca-e-custo",
+        "caminho": [
+          "Arquitetura e Integração de Sistemas",
+          "Arquiteturas de aplicações",
+          "Desempenho, escalabilidade, segurança e custo"
+        ],
+        "sinonimos": [],
+        "origem": "edital"
+      }
+    ],
+    "historico": [
+      {
+        "versao": 1,
+        "mudancas": [
+          "fixture do E2E"
+        ]
+      }
+    ]
+  },
+  "concursos": [
+    {
+      "identificador": "TESTE_E2E",
+      "concurso": "TESTE 24",
+      "ano": 2024,
+      "areas": []
+    }
+  ],
+  "itens": [
+    {
+      "materiaOrigem": "TESTE",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "anulado": false,
+      "textoBase": null,
+      "incerto": false,
+      "concordancia": "uma-opiniao",
+      "id": "TESTE_E2E:c1:1",
+      "formato": "CERTO_ERRADO",
+      "enunciado": "Item de teste do E2E: num sistema em microsserviços, cada serviço pode ser implantado de forma independente.",
+      "alternativas": null,
+      "gabarito": "C",
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "TESTE_E2E",
+          "concurso": "TESTE 24",
+          "ano": 2024,
+          "prova": "Prova de teste",
+          "caderno": "c1",
+          "numero": 1
+        }
+      ],
+      "assuntos": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+          "confianca": 0.9
+        }
+      ]
+    },
+    {
+      "materiaOrigem": "TESTE",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "anulado": false,
+      "textoBase": null,
+      "incerto": false,
+      "concordancia": "uma-opiniao",
+      "id": "TESTE_E2E:c1:2",
+      "formato": "MULTIPLA_ESCOLHA",
+      "enunciado": "Item de teste do E2E: o acoplamento entre módulos tende a diminuir quando",
+      "alternativas": [
+        "A) os módulos compartilham o mesmo banco de dados.",
+        "B) cada módulo expõe uma interface estável.",
+        "C) todos os módulos são publicados juntos.",
+        "D) as dependências são circulares."
+      ],
+      "gabarito": "B",
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "TESTE_E2E",
+          "concurso": "TESTE 23",
+          "ano": 2023,
+          "prova": "Prova de teste",
+          "caderno": "c1",
+          "numero": 2
+        }
+      ],
+      "assuntos": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>distribuicao-de-responsabilidades-acoplamento-e-dependencias",
+          "confianca": 0.85
+        }
+      ]
+    },
+    {
+      "materiaOrigem": "TESTE",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "anulado": false,
+      "textoBase": null,
+      "incerto": true,
+      "concordancia": "uma-opiniao",
+      "id": "TESTE_E2E:c1:3",
+      "formato": "CERTO_ERRADO",
+      "enunciado": "Item de teste do E2E: injeção de dependência reduz o acoplamento entre classes.",
+      "alternativas": null,
+      "gabarito": "C",
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "TESTE_E2E",
+          "concurso": "TESTE 24",
+          "ano": 2024,
+          "prova": "Prova de teste",
+          "caderno": "c1",
+          "numero": 3
+        }
+      ],
+      "assuntos": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>distribuicao-de-responsabilidades-acoplamento-e-dependencias",
+          "confianca": 0.6
+        }
+      ]
+    },
+    {
+      "materiaOrigem": "TESTE",
+      "temCodigo": false,
+      "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
+      "anulado": false,
+      "textoBase": null,
+      "incerto": false,
+      "concordancia": "uma-opiniao",
+      "id": "TESTE_E2E:c1:4",
+      "formato": "CERTO_ERRADO",
+      "enunciado": "Item de teste do E2E: a figura mostra uma arquitetura orientada a eventos.",
+      "alternativas": null,
+      "gabarito": "E",
+      "procedencias": [
+        {
+          "banca": "Cebraspe",
+          "identificador": "TESTE_E2E",
+          "concurso": "TESTE 24",
+          "ano": 2024,
+          "prova": "Prova de teste",
+          "caderno": "c1",
+          "numero": 4
+        }
+      ],
+      "assuntos": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+          "confianca": 0.9
+        }
+      ]
+    }
+  ]
+}

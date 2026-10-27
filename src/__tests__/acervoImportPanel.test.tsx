@@ -70,6 +70,13 @@ describe('Importar o acervo da Cebraspe (spec 12c §5.2)', () => {
     await waitFor(() => expect(screen.queryByText('Ligando tópicos: 1 de 4')).toBeNull());
   });
 
+  it('resumo no singular quando é um só', async () => {
+    const { summaryLines } = await import('../features/acervo/AcervoImportPanel');
+    expect(
+      summaryLines({ withSubject: 1, hidden: 1, invalidItems: 0, topicsLinked: 1, topicsWithoutLink: 0, copiesUpdated: 0, aiSkipped: false })
+    ).toEqual(['1 questão com assunto · 1 tópico do seu plano ligado · 0 sem ligação', '1 ficou de fora (figura ou fórmula que não dá para ler).']);
+  });
+
   it('sem arquivo escolhido, o botão fica desligado', () => {
     render(<AcervoImportPanel planId="p1" ai={null} onImported={vi.fn()} />);
     expect((screen.getByRole('button', { name: 'Importar acervo' }) as HTMLButtonElement).disabled).toBe(true);
