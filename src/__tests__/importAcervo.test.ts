@@ -164,4 +164,50 @@ describe('Importar o pacote do acervo (spec 12c §5.2 e §5.3)', () => {
     await importAcervoPacote(changed, { planId: plan.id, ai: null });
     expect(await labels()).toBe(1);
   });
+it('pacote mais antigo que as ligações deste banco (veio de outro computador, sem acervo) é recusado e nada muda', async () => {
+    const { store, student, importAcervoPacote, plan, topics } = await open();
+    await importAcervoPacote(pacoteText((p) => (p.vocabulario.versao = 6)), { planId: plan.id, ai: null });
+    const before = student.getAcervoLinks(topics.map((t) => t.id));
+    // Outro computador: o banco do estudante veio junto (cópia de segurança), o acervo não
+    store.setAcervoStorageForTests(store.createMemoryAcervoStorage());
+    const older = await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null });
+    expect(older).toEqual({ ok: false, message: 'Este pacote é mais antigo que o acervo deste computador. Use o pacote mais novo do minerador.' });
+    expect(student.getAcervoLinks(topics.map((t) => t.id))).toEqual(before);
+    expect(await store.openAcervo()).toBeNull();
+  });
+
+  it('assunto desligado não volta pela IA nem por um assunto pai ou filho dele', async () => {
+    const { student, importAcervoPacote, plan, topics } = await open();
+    await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null });
+    student.disableAcervoLink(topics[0].id, 'direito-administrativo>atos-administrativos');
+    const prompts: string[] = [];
+    const ai = vi.fn(async (prompt: string) => {
+      prompts.push(prompt);
+      return ok('{"assuntos":[{"id":"direito-administrativo>atos-administrativos>atributos","confianca":0.95}]}');
+    });
+    await importAcervoPacote(pacoteText(), { planId: plan.id, ai });
+    expect(linksOf(student, topics[0].id)).toEqual([]);
+    const topicPrompt = prompts.find((p) => p.includes('TÓPICO DO PLANO: Direito Administrativo › Atos administrativos'));
+    expect(topicPrompt ?? '').not.toContain('direito-administrativo>atos-administrativos>');
+  });
+
+  it('uma importação por vez: a segunda, enquanto a primeira liga pela IA, é recusada', async () => {
+    const { importAcervoPacote, plan } = await open();
+    let release: () => void = () => {};
+    const gate = new Promise<void>((resolve) => (release = resolve));
+    const ai = vi.fn(async () => {
+      await gate;
+      return ok('{"assuntos":[]}');
+    });
+    const first = importAcervoPacote(pacoteText(), { planId: plan.id, ai });
+    await vi.waitFor(() => expect(ai).toHaveBeenCalled());
+    expect(await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null })).toEqual({
+      ok: false,
+      message: 'Já há uma importação do acervo em andamento. Espere ela terminar.',
+    });
+    release();
+    expect((await first).ok).toBe(true);
+    // Terminada a primeira, a próxima importação volta a valer
+    expect((await importAcervoPacote(pacoteText(), { planId: plan.id, ai: null })).ok).toBe(true);
+  });
 });

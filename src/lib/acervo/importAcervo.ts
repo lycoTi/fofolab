@@ -7,6 +7,7 @@ import { aiCandidates, buildLinkPrompt, linkByName, MAX_AI_CANDIDATES, parseLink
 import { parsePacote, type PacoteAssunto } from './pacote';
 import {
   countStaleCopies,
+  newestLinkVocabVersion,
   getAcervoLinks,
   refreshCopiedQuestions,
   removeVanishedLinks,
@@ -30,6 +31,7 @@ export interface AcervoImportSummary {
 export type AcervoImportResult = { ok: true; summary: AcervoImportSummary } | { ok: false; message: string };
 
 const OLDER_PACOTE = 'Este pacote é mais antigo que o acervo deste computador. Use o pacote mais novo do minerador.';
+const BUSY = 'Já há uma importação do acervo em andamento. Espere ela terminar.';
 /** Pausa pedida pelo plano grátis (429) é respeitada uma vez por tópico, até 1 minuto. */
 const MAX_WAIT_SECONDS = 60;
 /** Duas falhas seguidas = IA fora do ar ou sem limite: o resto fica para a próxima importação. */
@@ -53,14 +55,22 @@ function planTopics(planId: string): { topic: Topic; subjectName: string; byId: 
   });
 }
 
-/** Candidatos da IA: os empatados pelo nome primeiro, depois os de palavras; nunca um assunto que o estudante desligou. */
+/** O mesmo assunto, um pai ou um filho dele: ligar qualquer um traria de volta os itens que o estudante desligou. */
+function touchesDisabled(assuntoId: string, disabled: ReadonlySet<string>): boolean {
+  for (const d of disabled) {
+    if (assuntoId === d || assuntoId.startsWith(`${d}>`) || d.startsWith(`${assuntoId}>`)) return true;
+  }
+  return false;
+}
+
+/** Candidatos da IA: os empatados pelo nome primeiro, depois os de palavras; nada perto de um assunto desligado. */
 function candidatesFor(caminho: string[], ambiguous: string[], vocab: PacoteAssunto[], disabled: ReadonlySet<string>): PacoteAssunto[] {
   const byId = new Map(vocab.map((a) => [a.id, a]));
   const first = ambiguous.map((id) => byId.get(id)).filter((a): a is PacoteAssunto => a !== undefined);
   const seen = new Set<string>();
   return [...first, ...aiCandidates(caminho, vocab)]
     .filter((a) => {
-      if (seen.has(a.id) || disabled.has(a.id)) return false;
+      if (seen.has(a.id) || touchesDisabled(a.id, disabled)) return false;
       seen.add(a.id);
       return true;
     })
@@ -77,23 +87,41 @@ async function askAi(ai: LinkAi, prompt: string, wait: (ms: number) => Promise<v
   return second.ok ? second.text : null;
 }
 
+type ImportInput = {
+  planId: string;
+  ai: LinkAi | null;
+  onProgress?: (done: number, total: number) => void;
+  wait?: (ms: number) => Promise<void>;
+};
+
+/** Uma importação por vez ("Pode fechar" deixa a ligação pela IA rodando; outra em paralelo dobraria as chamadas). */
+let importing = false;
+
 /**
  * Importa (ou reimporta) o pacote do minerador: troca o acervo deste computador, atualiza as questões já usadas e liga
  * os tópicos do plano que ainda não têm ligação — pelo nome e, para o que sobrar, pela IA. Ligação existente não é
  * refeita (a IA não responde sempre igual; item visto não pode sumir à toa). Spec 12c §5.2 e §5.3.
  */
-export async function importAcervoPacote(
-  text: string,
-  input: { planId: string; ai: LinkAi | null; onProgress?: (done: number, total: number) => void; wait?: (ms: number) => Promise<void> }
-): Promise<AcervoImportResult> {
+export async function importAcervoPacote(text: string, input: ImportInput): Promise<AcervoImportResult> {
+  if (importing) return { ok: false, message: BUSY };
+  importing = true;
+  try {
+    return await runImport(text, input);
+  } finally {
+    importing = false;
+  }
+}
+
+async function runImport(text: string, input: ImportInput): Promise<AcervoImportResult> {
   // 1. Ler e validar (entrada não confiável)
   const parsed = parsePacote(text);
   if (!parsed.ok) return parsed;
   const { pacote } = parsed;
 
-  // 2. Nunca trocar o acervo por um mais antigo
+  // 2. Nunca trocar por um pacote mais antigo: nem o acervo deste computador, nem o que o banco do estudante já usou
   const current = await openAcervo();
-  if (current && acervoVocabVersion(current) > pacote.vocabVersion) return { ok: false, message: OLDER_PACOTE };
+  const newest = Math.max(current ? acervoVocabVersion(current) : 0, newestLinkVocabVersion());
+  if (newest > pacote.vocabVersion) return { ok: false, message: OLDER_PACOTE };
 
   // 3. Montar o acervo novo e passar a usá-lo
   const { db: acervo, stats } = buildAcervoDb(getSqlJs(), pacote);
@@ -130,7 +158,7 @@ export async function importAcervoPacote(
     const caminho = topicCaminho(subjectName, topic, byId);
     const disabled = disabledByTopic.get(topic.id) ?? new Set<string>();
     const result = linkByName(caminho, pacote.assuntos);
-    if (result.kind === 'linked' && !disabled.has(result.assuntoId)) {
+    if (result.kind === 'linked' && !touchesDisabled(result.assuntoId, disabled)) {
       byName.push({ topicId: topic.id, assuntoId: result.assuntoId, origin: 'NAME', vocabVersion: pacote.vocabVersion });
       linked.add(topic.id);
       continue;

@@ -1,5 +1,5 @@
 import type { Question } from '../../types/database';
-import { getDb, persistDatabase, queryAll } from '../database';
+import { getDb, persistDatabase, queryAll, queryOne } from '../database';
 import type { AcervoRow } from './acervoDb';
 
 /**
@@ -83,6 +83,14 @@ export function getAcervoLinks(topicIds: string[]): AcervoLink[] {
      WHERE topic_id IN (${placeholders(topicIds.length)}) ORDER BY topic_id, assunto_id`,
     topicIds
   );
+}
+
+/**
+ * Versão do vocabulário mais nova já usada numa ligação deste banco. O banco do estudante viaja entre computadores
+ * (cópia de segurança) e o acervo não: é ela que impede trocar tudo por um pacote mais antigo num computador sem acervo.
+ */
+export function newestLinkVocabVersion(): number {
+  return queryOne<{ v: number | null }>(getDb(), 'SELECT MAX(vocab_version) AS v FROM acervo_links')?.v ?? 0;
 }
 
 /** Ligação que já existe (inclusive desligada pelo estudante) fica como está: o "não" dele não é desfeito. */
