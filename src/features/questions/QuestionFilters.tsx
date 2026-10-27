@@ -2,6 +2,8 @@ import { ChevronLeft, ChevronRight, FileUp, Filter, Search } from 'lucide-react'
 import type { QuestionScope } from '../../lib/acervo/topicQuestions';
 
 export type { QuestionScope };
+export type QuestionStatusFilter = 'UNSOLVED' | 'RETRY' | 'ALL';
+export type QuestionFormatFilter = 'ALL' | 'CE' | 'ME';
 
 const select = 'px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 focus:border-orange-500 outline-none';
 
@@ -9,10 +11,15 @@ function groupLabel(groupCode: string | null): string {
   return groupCode ? `Do grupo ${groupCode}` : 'Do grupo';
 }
 
-/** Filtros (escopo, banca, complexidade, busca) e a navegação entre as questões filtradas. */
+/** Filtros (escopo, situação da fila, formato, banca, complexidade, busca) e navegação entre as questões filtradas. */
 export function QuestionFilters(props: {
   scope: QuestionScope;
   onScope: (scope: QuestionScope) => void;
+  statusFilter: QuestionStatusFilter;
+  onStatusFilter: (status: QuestionStatusFilter) => void;
+  counts: { unsolved: number; retry: number; all: number };
+  formatFilter: QuestionFormatFilter;
+  onFormatFilter: (format: QuestionFormatFilter) => void;
   board: string;
   boards: string[];
   onBoard: (board: string) => void;
@@ -40,6 +47,26 @@ export function QuestionFilters(props: {
           {(props.groupCode || props.scope === 'group') && <option value="group">{groupLabel(props.groupCode)}</option>}
           <option value="subject">Toda a matéria</option>
           <option value="all">Todo o plano</option>
+        </select>
+        <select
+          value={props.statusFilter}
+          onChange={(e) => props.onStatusFilter(e.target.value as QuestionStatusFilter)}
+          aria-label="Filtrar por situação"
+          className={select}
+        >
+          <option value="UNSOLVED">{`Inéditas (${props.counts.unsolved})`}</option>
+          <option value="RETRY">{`Errei ou chutei (${props.counts.retry})`}</option>
+          <option value="ALL">{`Todas (${props.counts.all})`}</option>
+        </select>
+        <select
+          value={props.formatFilter}
+          onChange={(e) => props.onFormatFilter(e.target.value as QuestionFormatFilter)}
+          aria-label="Filtrar por formato"
+          className={select}
+        >
+          <option value="ALL">Todos os formatos</option>
+          <option value="CE">Certo/Errado</option>
+          <option value="ME">Múltipla escolha</option>
         </select>
         <select value={props.board} onChange={(e) => props.onBoard(e.target.value)} aria-label="Filtrar por banca" className={select}>
           <option value="ALL">Todas as Bancas</option>
@@ -81,10 +108,24 @@ export function QuestionFilters(props: {
           <span className="text-slate-400">
             Questão <strong className="text-white">{index + 1}</strong> de <strong className="text-white">{total}</strong>
           </span>
-          <button type="button" disabled={index === 0} onClick={props.onPrev} aria-label="Questão anterior" title="Questão anterior" className="rounded-lg border border-slate-800 bg-slate-950 p-1.5 text-slate-300 hover:border-slate-700 disabled:opacity-40">
+          <button
+            type="button"
+            disabled={index === 0}
+            onClick={props.onPrev}
+            aria-label="Questão anterior"
+            title="Questão anterior"
+            className="rounded-lg border border-slate-800 bg-slate-950 p-1.5 text-slate-300 hover:border-slate-700 disabled:opacity-40"
+          >
             <ChevronLeft size={14} />
           </button>
-          <button type="button" disabled={index >= total - 1} onClick={props.onNext} aria-label="Próxima questão" title="Próxima questão" className="rounded-lg border border-slate-800 bg-slate-950 p-1.5 text-slate-300 hover:border-slate-700 disabled:opacity-40">
+          <button
+            type="button"
+            disabled={index >= total - 1}
+            onClick={props.onNext}
+            aria-label="Próxima questão"
+            title="Próxima questão"
+            className="rounded-lg border border-slate-800 bg-slate-950 p-1.5 text-slate-300 hover:border-slate-700 disabled:opacity-40"
+          >
             <ChevronRight size={14} />
           </button>
         </div>

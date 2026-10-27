@@ -197,9 +197,11 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     expect(screen.getByText('Classificação incerta')).toBeTruthy();
   });
 
-  it('anulada: só para ler, sem confiança, sem resposta e sem explicação antes', () => {
+  it('anulada: fora da fila de inéditas por padrão; aparece em "Todas" só para ler, sem confiança e sem resposta', () => {
     const annulled = { ...acervoItem, is_annulled: 1, final_answer: 'X' };
     const { props } = renderWorkbench({ questions: [{ question: annulled, dissection: null }], scopeFilter: 'topic', acervo: acervoProps() });
+    expect(screen.queryByText('Anulada pela banca')).toBeNull();
+    fireEvent.change(screen.getByLabelText('Filtrar por situação'), { target: { value: 'ALL' } });
     expect(screen.getByText('Anulada pela banca')).toBeTruthy();
     expect(screen.queryByRole('button', { name: 'Sei' })).toBeNull();
     expect(screen.queryByRole('button', { name: /Ver explicação antes de responder/ })).toBeNull();
@@ -263,5 +265,130 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     fireEvent.click(screen.getByRole('button', { name: 'Tirados deste tópico (1)' }));
     for (const term of FORBIDDEN) expect(container.textContent).not.toContain(term);
     expect(EMOJI.test(container.textContent ?? '')).toBe(false);
+  });
+
+  it('fila inteligente (spec 12d §3.2): mostra inéditas por padrão, ordena C/E antes de múltipla escolha, mantém na tela ao responder e permite refazer erros/chutes', () => {
+    const qMe: Question = {
+      ...SEED_QUESTIONS[0],
+      id: 'q-me',
+      topic_id: 't1',
+      statement: 'Questão inédita de múltipla escolha.',
+      exam_year: 2025,
+    };
+    const qCe: Question = {
+      ...acervoItem,
+      id: 'q-ce',
+      topic_id: 't1',
+      statement: 'Questão inédita Certo/Errado.',
+      exam_year: 2023,
+    };
+    const qErrada: Question = {
+      ...acervoItem,
+      id: 'q-err',
+      topic_id: 't1',
+      statement: 'Questão que eu já errei antes.',
+      exam_year: 2024,
+    };
+    const qDominada: Question = {
+      ...acervoItem,
+      id: 'q-dom',
+      topic_id: 't1',
+      statement: 'Questão que eu já dominei antes.',
+      exam_year: 2024,
+    };
+
+    const items = [
+      { question: qMe, dissection: null, attemptSummary: null },
+      { question: qCe, dissection: null, attemptSummary: null },
+      {
+        question: qErrada,
+        dissection: null,
+        attemptSummary: {
+          count: 1,
+          lastIsCorrect: false,
+          lastConfidence: 'THINK' as const,
+          lastDiagnosis: 'BASE_GAP' as const,
+          lastAttemptAt: '2026-10-25T12:00:00Z',
+          needsRetry: true,
+        },
+      },
+      {
+        question: qDominada,
+        dissection: null,
+        attemptSummary: {
+          count: 1,
+          lastIsCorrect: true,
+          lastConfidence: 'CERTAIN' as const,
+          lastDiagnosis: 'MASTERED' as const,
+          lastAttemptAt: '2026-10-25T12:00:00Z',
+          needsRetry: false,
+        },
+      },
+    ];
+
+    const { props, rerender } = renderWorkbench({ questions: items, scopeFilter: 'topic', acervo: acervoProps() });
+
+    // 1. Por padrão mostra só as 2 inéditas, e Certo/Errado vem antes de Múltipla Escolha
+    expect(screen.getByText('Questão inédita Certo/Errado.')).toBeTruthy();
+    expect(screen.queryByText('Questão que eu já errei antes.')).toBeNull();
+
+    // 2. Filtro de formato: escolher Múltipla Escolha mostra só a de múltipla escolha
+    fireEvent.change(screen.getByLabelText('Filtrar por formato'), { target: { value: 'ME' } });
+    expect(screen.getByText('Questão inédita de múltipla escolha.')).toBeTruthy();
+    fireEvent.change(screen.getByLabelText('Filtrar por formato'), { target: { value: 'ALL' } });
+    expect(screen.getByText('Questão inédita Certo/Errado.')).toBeTruthy();
+
+    // 3. Responder a questão inédita não esconde ela da tela mesmo quando attemptSummary passa a existir no banco
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Certo' }));
+    const updatedItems = items.map((it) =>
+      it.question.id === 'q-ce'
+        ? {
+            ...it,
+            attemptSummary: {
+              count: 1,
+              lastIsCorrect: true,
+              lastConfidence: 'CERTAIN' as const,
+              lastDiagnosis: 'MASTERED' as const,
+              lastAttemptAt: '2026-10-27T12:00:00Z',
+              needsRetry: false,
+            },
+          }
+        : it
+    );
+    rerender(<QuestionWorkbench {...props} questions={updatedItems} />);
+    expect(screen.getByText('Questão inédita Certo/Errado.')).toBeTruthy();
+    expect(screen.getByText('Você acertou.')).toBeTruthy();
+
+    // 4. Trocar para "Errei ou chutei" mostra a qErrada aberta para tentar de novo e com o selo da tentativa anterior
+    fireEvent.change(screen.getByLabelText('Filtrar por situação'), { target: { value: 'RETRY' } });
+    expect(screen.getByText('Questão que eu já errei antes.')).toBeTruthy();
+    expect(screen.getByText(/Já respondida · Errou/)).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Certo' }));
+    expect(props.onAnswer).toHaveBeenCalledTimes(2);
+  });
+
+  it('quando as inéditas do tópico acabam (mas há respondidas), oferece refazer as que errou/chutou, ver todas ou subir para o grupo', () => {
+    const qErrada: Question = { ...acervoItem, id: 'q-err', topic_id: 't1', statement: 'Questão já tentada.' };
+    const items = [
+      {
+        question: qErrada,
+        dissection: null,
+        attemptSummary: {
+          count: 1,
+          lastIsCorrect: false,
+          lastConfidence: 'THINK' as const,
+          lastDiagnosis: 'BASE_GAP' as const,
+          lastAttemptAt: '2026-10-25T12:00:00Z',
+          needsRetry: true,
+        },
+      },
+    ];
+    const acervo = acervoProps({ groupCode: '1.2' });
+    renderWorkbench({ questions: items, scopeFilter: 'topic', acervo });
+    expect(screen.getByText(/Você já respondeu todas as questões inéditas deste tópico/)).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: /Refazer as que errei ou chutei \(1\)/ }));
+    expect(screen.getByText('Questão já tentada.')).toBeTruthy();
   });
 });

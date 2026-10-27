@@ -1,12 +1,26 @@
 import { Eye, Lightbulb, Star } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import { StatusSquare } from '../../components/StatusSquare';
+import type { QuestionAttemptSummary } from '../../lib/acervo/topicQuestions';
 import type { QuestionComplexityProfile } from '../../lib/aiRouter';
 import { explainQuestionComplexity } from '../../lib/explainabilityEngine';
 import { parseQuestionOptions } from '../../lib/questionOptions';
 import type { Question, ReviewConfidence } from '../../types/database';
 import { AnswerOptions, isCertoErradoOptions, optionName } from '../answer-flow/AnswerOptions';
 import { ConfidencePicker } from '../answer-flow/ConfidencePicker';
+
+function formatAttemptBadge(summary: QuestionAttemptSummary): { label: string; tone: 'emerald' | 'amber' | 'rose' } {
+  if (summary.lastDiagnosis === 'FIRST_CONTACT') {
+    return { label: 'Já respondida · 1º contato', tone: 'amber' };
+  }
+  if (!summary.lastIsCorrect) {
+    return { label: 'Já respondida · Errou', tone: 'rose' };
+  }
+  if (summary.lastConfidence === 'GUESS' || summary.lastDiagnosis === 'GUESSED_RIGHT') {
+    return { label: 'Já respondida · Chutou', tone: 'amber' };
+  }
+  return { label: 'Já respondida · Acertou', tone: 'emerald' };
+}
 
 /**
  * Enunciado, confiança (obrigatória antes das alternativas — spec 11) e alternativas. Antes de responder, duas saídas
@@ -16,6 +30,7 @@ import { ConfidencePicker } from '../answer-flow/ConfidencePicker';
 export function QuestionCard(props: {
   question: Question;
   complexity: QuestionComplexityProfile;
+  attemptSummary?: QuestionAttemptSummary | null;
   confidence: ReviewConfidence | null;
   picked: string | null;
   locked: boolean;
@@ -26,10 +41,11 @@ export function QuestionCard(props: {
   /** Item do acervo no tópico: "Não é deste tópico" tira o item daqui (spec 12c §5.7). */
   onNotThisTopic?: () => void;
 }) {
-  const { question, complexity } = props;
+  const { question, complexity, attemptSummary } = props;
   const options = parseQuestionOptions(question.options_json);
   const annulled = question.is_annulled === 1;
   const origin = question.source_label ?? `${question.exam_board} (${question.exam_year})${question.organ ? ` • ${question.organ}` : ''}`;
+  const badge = attemptSummary ? formatAttemptBadge(attemptSummary) : null;
   return (
     <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
       <div className="flex flex-wrap items-center gap-2 text-xs">
@@ -43,6 +59,12 @@ export function QuestionCard(props: {
           <span className="ml-1 text-[11px] text-slate-300">{complexity.levelLabel}</span>
         </span>
         <MetricExplainer explanation={explainQuestionComplexity(complexity, question.exam_board)} />
+        {badge && (
+          <span className="flex items-center gap-1.5 text-slate-300">
+            <StatusSquare tone={badge.tone} />
+            {badge.label}
+          </span>
+        )}
         {question.acervo_uncertain === 1 && (
           <span className="flex items-center gap-1.5 text-slate-300" title="Classificação ainda não confirmada: pesa metade no domínio.">
             <StatusSquare tone="amber" />

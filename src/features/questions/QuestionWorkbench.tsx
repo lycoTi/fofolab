@@ -1,13 +1,20 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getQuestionComplexityProfile } from '../../lib/aiRouter';
 import { deriveDiagnosis } from '../../lib/dailyReview';
-import type { QuestionsView } from '../../lib/acervo/topicQuestions';
+import { parseQuestionOptions } from '../../lib/questionOptions';
+import type { QuestionAttemptSummary, QuestionsView } from '../../lib/acervo/topicQuestions';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
+import { isCertoErradoOptions } from '../answer-flow/AnswerOptions';
 import { AcervoLinkBar } from './AcervoLinkBar';
 import { EmptyTopicQuestions } from './EmptyTopicQuestions';
 import { QuestionCard } from './QuestionCard';
 import { QuestionCorrection } from './QuestionCorrection';
-import { QuestionFilters, type QuestionScope } from './QuestionFilters';
+import {
+  QuestionFilters,
+  type QuestionFormatFilter,
+  type QuestionScope,
+  type QuestionStatusFilter,
+} from './QuestionFilters';
 
 export interface AnswerSubmission {
   question: Question;
@@ -23,7 +30,7 @@ export interface AnswerSubmission {
 export type FofoQuestionRequest = { kind: 'deepen' | 'hint'; question: Question };
 
 export interface QuestionWorkbenchProps {
-  questions: { question: Question; dissection: AiDissection | null }[];
+  questions: { question: Question; dissection: AiDissection | null; attemptSummary?: QuestionAttemptSummary | null }[];
   scopeFilter: QuestionScope;
   onChangeScopeFilter: (scope: QuestionScope) => void;
   /** Grava a tentativa assim que o estudante responde (trocar de questão não perde nada). */
@@ -58,44 +65,93 @@ interface AttemptState {
 }
 
 const FRESH: AttemptState = { confidence: null, picked: null, firstContact: false, attemptId: null, diagnosis: null };
+const itemKey = (q: Question) => `${q.topic_id ?? ''}:${q.id}`;
 
-/** Aba Questões (spec 11): uma questão por vez, confiança antes de responder e a correção logo embaixo. */
+function isCertoErrado(question: Question): boolean {
+  return isCertoErradoOptions(parseQuestionOptions(question.options_json));
+}
+
+/** Aba Questões (spec 11 e 12d): fila de inéditas por padrão, Certo/Errado primeiro e correção logo embaixo. */
 export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   const { questions, onAnswer, onAskFofoIa, onActiveQuestionChange } = props;
+  const [statusFilter, setStatusFilter] = useState<QuestionStatusFilter>('UNSOLVED');
+  const [formatFilter, setFormatFilter] = useState<QuestionFormatFilter>('ALL');
   const [board, setBoard] = useState('ALL');
   const [complexity, setComplexity] = useState('ALL');
   const [search, setSearch] = useState('');
   const [index, setIndex] = useState(0);
-  // Uma tentativa por questão enquanto a aba está aberta: voltar a uma respondida mostra a correção travada
+  // Uma tentativa por questão na leva atual: responder não tira a questão da tela antes de o estudante avançar
   const [attempts, setAttempts] = useState<Record<string, AttemptState>>({});
   const shownAt = useRef(Date.now());
   const usedAi = useRef(false);
 
-  const enriched = useMemo(() => questions.map((item) => ({ ...item, complexity: getQuestionComplexityProfile(item.question, item.dissection) })), [questions]);
+  const enriched = useMemo(
+    () =>
+      questions.map((item) => ({
+        ...item,
+        attemptSummary: item.attemptSummary ?? null,
+        isCE: isCertoErrado(item.question),
+        complexity: getQuestionComplexityProfile(item.question, item.dissection),
+      })),
+    [questions]
+  );
+
+  const counts = useMemo(() => {
+    let unsolved = 0;
+    let retry = 0;
+    const all = enriched.length;
+    for (const item of enriched) {
+      if (item.question.is_annulled === 1) continue;
+      const touchedInSession = Boolean(attempts[itemKey(item.question)]);
+      if (!item.attemptSummary || touchedInSession) unsolved += 1;
+      if (item.attemptSummary?.needsRetry) retry += 1;
+    }
+    return { unsolved, retry, all };
+  }, [enriched, attempts]);
+
   const boards = useMemo(() => [...new Set(questions.map((q) => q.question.exam_board))].sort((a, b) => a.localeCompare(b)), [questions]);
+
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase();
-    return enriched.filter((item) => {
+    const list = enriched.filter((item) => {
+      const annulled = item.question.is_annulled === 1;
+      const touched = Boolean(attempts[itemKey(item.question)]);
+      if (statusFilter === 'UNSOLVED') {
+        if (annulled) return false;
+        if (item.attemptSummary && !touched) return false;
+      } else if (statusFilter === 'RETRY') {
+        if (annulled) return false;
+        if (!item.attemptSummary?.needsRetry && !touched) return false;
+      }
+      if (formatFilter === 'CE' && !item.isCE) return false;
+      if (formatFilter === 'ME' && item.isCE) return false;
       if (board !== 'ALL' && item.question.exam_board.toUpperCase() !== board.toUpperCase()) return false;
       if (complexity !== 'ALL' && item.complexity.levelLabel !== complexity) return false;
       return !term || item.question.statement.toLowerCase().includes(term);
     });
-  }, [enriched, board, complexity, search]);
 
-  // Mudar filtros volta ao começo (gravar uma resposta não mexe no índice)
-  useEffect(() => setIndex(0), [board, complexity, search, props.scopeFilter]);
+    if (formatFilter === 'ALL') {
+      // Ordenação estável: Certo/Errado primeiro (formato principal da prova), mantendo a ordem original dentro de cada grupo
+      return [...list].sort((a, b) => Number(b.isCE) - Number(a.isCE));
+    }
+    return list;
+  }, [enriched, attempts, statusFilter, formatFilter, board, complexity, search]);
+
+  // Mudar filtros limpa a memória da leva atual (para "Errei ou chutei" abrir desbloqueado) e volta ao começo
+  useEffect(() => {
+    setIndex(0);
+    setAttempts({});
+  }, [statusFilter, formatFilter, board, complexity, search, props.scopeFilter]);
 
   const safeIndex = filtered.length > 0 ? Math.min(index, filtered.length - 1) : 0;
   const active = filtered[safeIndex] ?? null;
-  // A tentativa é por tópico: o mesmo item do acervo em dois tópicos se responde em cada um (spec 12c §5.5)
-  const activeId = active ? `${active.question.topic_id ?? ''}:${active.question.id}` : undefined;
+  const activeId = active ? itemKey(active.question) : undefined;
   const current = (activeId && attempts[activeId]) || FRESH;
   const answered = current.picked !== null || current.firstContact;
   const setCurrent = (next: AttemptState) => {
     if (activeId) setAttempts((all) => ({ ...all, [activeId]: next }));
   };
 
-  // Questão nova na tela: o cronômetro e a ajuda da IA contam de novo
   useEffect(() => {
     shownAt.current = Date.now();
     usedAi.current = false;
@@ -103,10 +159,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
 
   useEffect(() => {
     onActiveQuestionChange?.(active ? { question: active.question, answered } : null);
-    // O objeto da questão muda a cada recarga dos dados; o que importa é qual questão e se já foi respondida
   }, [activeId, answered]);
 
-  // Saiu da aba Questões: não há mais questão ativa (a FofoIA não fica presa nela nem dá pista fora daqui)
   useEffect(() => () => onActiveQuestionChange?.(null), []);
 
   const record = (picked: string | null, confidence: ReviewConfidence | null) => {
@@ -134,6 +188,11 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     <QuestionFilters
       scope={props.scopeFilter}
       onScope={props.onChangeScopeFilter}
+      statusFilter={statusFilter}
+      onStatusFilter={setStatusFilter}
+      counts={counts}
+      formatFilter={formatFilter}
+      onFormatFilter={setFormatFilter}
       board={board}
       boards={boards}
       onBoard={setBoard}
@@ -156,8 +215,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   );
 
   if (!active) {
-    // Tópico sem nenhuma questão (não só sem resultado para o filtro de banca/busca)
     const emptyTopic = inTopic && questions.length === 0;
+    const allSolvedInTopic = statusFilter === 'UNSOLVED' && counts.unsolved === 0 && counts.all > 0;
     return (
       <div className="space-y-4">
         {filters}
@@ -170,7 +229,39 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         {emptyTopic && !props.loading && (
           <EmptyTopicQuestions groupCode={acervo?.view.groupCode ?? null} onShowGroup={acervo?.onShowGroup} canImport={Boolean(props.onOpenImport)} />
         )}
-        {!emptyTopic && (
+        {!emptyTopic && allSolvedInTopic && (
+          <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+            <p className="text-sm text-slate-200">Você já respondeu todas as questões inéditas deste tópico.</p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {counts.retry > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setStatusFilter('RETRY')}
+                  className="rounded-lg border border-orange-500/40 bg-orange-500/10 px-3 py-1.5 font-medium text-orange-200 hover:bg-orange-500/20"
+                >
+                  {`Refazer as que errei ou chutei (${counts.retry})`}
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setStatusFilter('ALL')}
+                className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+              >
+                {`Ver todas (${counts.all})`}
+              </button>
+              {acervo?.view.groupCode && acervo.onShowGroup && (
+                <button
+                  type="button"
+                  onClick={acervo.onShowGroup}
+                  className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+                >
+                  {`Ver as do grupo ${acervo.view.groupCode}`}
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+        {!emptyTopic && !allSolvedInTopic && (
           <div className="space-y-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
             <p>Nenhuma questão encontrada para o filtro selecionado. Experimente "Toda a matéria" ou "Todo o plano".</p>
             {props.onOpenImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
@@ -190,6 +281,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       <QuestionCard
         question={active.question}
         complexity={active.complexity}
+        attemptSummary={active.attemptSummary}
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
