@@ -38,6 +38,8 @@ import {
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
 import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
+import { AcervoImportPanel } from './features/acervo/AcervoImportPanel';
+import { ACERVO_LINK_MAX_TOKENS } from './lib/acervo/importAcervo';
 import { disableAcervoLink, excludeItemFromTopic, materializeQuestion, restoreItemToTopic } from './lib/acervo/studentAcervo';
 import type { QuestionScope } from './lib/acervo/topicQuestions';
 import { AppHeader } from './features/workbench-shell/AppHeader';
@@ -51,7 +53,7 @@ import { useDailyRoutine } from './features/routine/useDailyRoutine';
 import { usePeek } from './features/routine/usePeek';
 import { routineGroup, type RoutineItem } from './lib/dailyRoutine';
 import { describeRecalibrationHint, recalibrationHint } from './lib/recalibrationHint';
-import { generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
+import { callAiProviders, generateQuestionDissection, getAiStatus, type StudentContextSnapshot } from './lib/aiRouter';
 import { calculateDynamicStudyCycle, recommendedForStandardWeek, startOfWeek } from './lib/cycleEngine';
 import {
   applyRecommendedCycleAllocations,
@@ -1479,6 +1481,13 @@ export default function App() {
         defaultTopicId={currentTopic?.id ?? null}
         onClose={() => setImportOpen(false)}
         onImport={handleImportQuestions}
+        acervoPanel={
+          <AcervoImportPanel
+            planId={activePlan.id}
+            ai={aiStatus.configured ? (prompt) => callAiProviders(prompt, { json: true, maxTokens: ACERVO_LINK_MAX_TOKENS }) : null}
+            onImported={bumpQuestions}
+          />
+        }
       />
 
       <CurriculumManagerModal

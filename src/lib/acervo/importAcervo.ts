@@ -34,6 +34,8 @@ const OLDER_PACOTE = 'Este pacote é mais antigo que o acervo deste computador. 
 const MAX_WAIT_SECONDS = 60;
 /** Duas falhas seguidas = IA fora do ar ou sem limite: o resto fica para a próxima importação. */
 const MAX_CONSECUTIVE_FAILURES = 2;
+/** Teto da resposta da IA na ligação: até 3 ids em JSON curto (o plano grátis do Groq exige teto em todo pedido). */
+export const ACERVO_LINK_MAX_TOKENS = 300;
 
 const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 

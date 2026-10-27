@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { AlertTriangle, CheckCircle2, ChevronDown, ChevronUp, FileSearch, FileUp, X } from 'lucide-react';
 import { parseQuestionImport, toImportItems, type QuestionParseResult } from '../../lib/questionImport';
 import type { ImportQuestionItem, StudyPlan, Subject, Topic } from '../../types/database';
@@ -15,7 +15,16 @@ interface QuestionImportModalProps {
     subjectId: string,
     items: ImportQuestionItem[]
   ) => { inserted: number; skippedDuplicates: number };
+  /** Segunda opção da tela: o acervo da Cebraspe (spec 12c §5.2), montado fora deste modal. */
+  acervoPanel?: ReactNode;
 }
+
+type ImportMode = 'paste' | 'acervo';
+
+const MODE_SUBTITLE: Record<ImportMode, string> = {
+  paste: 'Cole as questões copiadas da prova (cada uma terminando com a linha "Gabarito:") ou uma lista em JSON.',
+  acervo: 'Questões da Cebraspe já classificadas por assunto, ligadas aos tópicos do seu plano.',
+};
 
 export const IMPORT_TEXT_EXAMPLE = `1. (FGV/CGU/2022) [tópico 1.1] Segundo a ISSAI 100, os componentes do risco de auditoria são:
 A) Risco de controle, operacional e de reputação.
@@ -39,7 +48,9 @@ export function QuestionImportModal({
   defaultTopicId,
   onClose,
   onImport,
+  acervoPanel,
 }: QuestionImportModalProps) {
+  const [mode, setMode] = useState<ImportMode>('paste');
   const [text, setText] = useState('');
   const [subjectId, setSubjectId] = useState<string>(defaultSubjectId ?? subjects[0]?.id ?? '');
   const [defaultTopic, setDefaultTopic] = useState<string>(defaultTopicId ?? '');
@@ -93,9 +104,22 @@ export function QuestionImportModal({
               <FileUp size={16} className="text-orange-400" />
               Importar Questões
             </h2>
-            <p className="text-xs text-slate-400 mt-0.5">
-              Cole as questões copiadas da prova (cada uma terminando com a linha "Gabarito:") ou uma lista em JSON.
-            </p>
+            <p className="text-xs text-slate-400 mt-0.5">{MODE_SUBTITLE[mode]}</p>
+            {acervoPanel && (
+              <div className="mt-3 flex gap-1 text-xs" role="group" aria-label="De onde vêm as questões">
+                {(['paste', 'acervo'] as const).map((m) => (
+                  <button
+                    key={m}
+                    type="button"
+                    aria-pressed={mode === m}
+                    onClick={() => setMode(m)}
+                    className={`rounded-lg border px-3 py-1.5 ${mode === m ? 'border-orange-500 bg-orange-500/15 text-orange-100' : 'border-slate-700 text-slate-300 hover:border-slate-500'}`}
+                  >
+                    {m === 'paste' ? 'Colar questões' : 'Acervo da Cebraspe (pacote do minerador)'}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <button
             type="button"
@@ -107,6 +131,8 @@ export function QuestionImportModal({
           </button>
         </div>
 
+        {mode === 'acervo' && <div className="flex-1 overflow-y-auto p-6 text-xs">{acervoPanel}</div>}
+        {mode === 'paste' && (
         <div className="flex-1 overflow-y-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 text-xs">
           <div className="space-y-3">
             <textarea
@@ -300,6 +326,7 @@ export function QuestionImportModal({
             )}
           </div>
         </div>
+        )}
       </div>
     </div>
   );
