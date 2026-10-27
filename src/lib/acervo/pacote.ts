@@ -78,6 +78,16 @@ function readAlternativas(formato: PacoteItem['formato'], value: unknown): strin
   return options.every((opt) => OPTION_PREFIX.test(opt)) ? options : undefined;
 }
 
+/**
+ * O gabarito precisa ser uma das alternativas (C/E no Certo/Errado): com uma alternativa perdida na extração, toda
+ * resposta contaria como erro e desceria o domínio do tópico.
+ */
+function answerFitsOptions(formato: PacoteItem['formato'], gabarito: string, alternativas: string[] | null): boolean {
+  if (gabarito === ANNULLED_ANSWER) return true;
+  if (formato === 'CERTO_ERRADO') return gabarito === 'C' || gabarito === 'E';
+  return (alternativas ?? []).some((opt) => opt.startsWith(`${gabarito})`));
+}
+
 function readGabarito(gabarito: unknown, anulado: unknown): string | null {
   if (anulado === true && gabarito === null) return ANNULLED_ANSWER;
   return isString(gabarito) && ANSWER.test(gabarito) ? gabarito : null;
@@ -93,7 +103,7 @@ function readItem(value: unknown): PacoteItem | null {
   if (textoBase !== null && !isString(textoBase)) return null;
   if (![anulado, dependeDeFigura, temSimboloIlegivel, incerto].every(isBoolean)) return null;
   const alternativas = readAlternativas(formato, value.alternativas);
-  if (alternativas === undefined) return null;
+  if (alternativas === undefined || !answerFitsOptions(formato, gabarito, alternativas)) return null;
 
   if (!Array.isArray(value.procedencias) || value.procedencias.length === 0) return null;
   const procedencias = value.procedencias.map(readProcedencia);

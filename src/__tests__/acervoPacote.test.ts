@@ -82,6 +82,19 @@ describe('Pacote do acervo (spec 12c §5.2)', () => {
     expect(result.pacote.invalidItems).toBe(2);
   });
 
+  it('gabarito fora das alternativas é inválido (toda resposta contaria como erro e desceria o domínio)', () => {
+    const result = parsePacote(
+      withChanges((p) => {
+        const itens = p.itens as Record<string, unknown>[];
+        itens[0].gabarito = 'A'; // Certo/Errado só aceita C ou E
+        itens[1].gabarito = 'E'; // múltipla escolha de A a D
+      })
+    );
+    if (!result.ok) throw new Error(result.message);
+    expect(result.pacote.itens.map((i) => i.id)).toEqual(['TESTE_24:c1:3', 'TESTE_24:c1:5']);
+    expect(result.pacote.invalidItems).toBe(3);
+  });
+
   it('procedência com o ano inteiro, como na tela', () => {
     const base = { banca: 'Cebraspe', concurso: 'ANATEL 24', ano: 2024, numero: 40 };
     expect(formatProcedencia(base, 0)).toBe('Cebraspe · ANATEL 2024 · item 40');
@@ -95,10 +108,11 @@ describe('Pacote do acervo (spec 12c §5.2)', () => {
     expect(formatProcedencia(base, 2)).toBe('Cebraspe · ANATEL 2024 · item 40 (e em mais 2 provas)');
   });
 
-  it.skipIf(!existsSync(REAL_PACOTE))('aceita o pacote real do minerador, sem itens inválidos', () => {
+  it.skipIf(!existsSync(REAL_PACOTE))('aceita o pacote real do minerador; só fica de fora item com gabarito fora das alternativas', () => {
     const result = parsePacote(readFileSync(REAL_PACOTE, 'utf8'));
     if (!result.ok) throw new Error(result.message);
-    expect(result.pacote.invalidItems).toBe(0);
+    // ITAIPU 23 item 29: gabarito E e alternativas de A a D (alternativa perdida na virada de página, defeito do minerador)
+    expect(result.pacote.invalidItems).toBeLessThanOrEqual(1);
     expect(result.pacote.itens.length).toBeGreaterThan(20000);
     expect(result.pacote.itens.filter((i) => i.assuntos.length > 0).length).toBeGreaterThan(500);
   });
