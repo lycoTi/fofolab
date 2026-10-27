@@ -10,13 +10,13 @@ import { AnswerOptions, isCertoErradoOptions, optionName } from '../answer-flow/
 import { ConfidencePicker } from '../answer-flow/ConfidencePicker';
 
 function formatAttemptBadge(summary: QuestionAttemptSummary): { label: string; tone: 'emerald' | 'amber' | 'rose' } {
-  if (summary.lastDiagnosis === 'FIRST_CONTACT') {
+  if (summary.isFirstContact) {
     return { label: 'Já respondida · 1º contato', tone: 'amber' };
   }
   if (!summary.lastIsCorrect) {
     return { label: 'Já respondida · Errou', tone: 'rose' };
   }
-  if (summary.lastConfidence === 'GUESS' || summary.lastDiagnosis === 'GUESSED_RIGHT') {
+  if (summary.lastConfidence === 'GUESS' || summary.lastDiagnosis === 'LUCKY_GUESS') {
     return { label: 'Já respondida · Chutou', tone: 'amber' };
   }
   return { label: 'Já respondida · Acertou', tone: 'emerald' };

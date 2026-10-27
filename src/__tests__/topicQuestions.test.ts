@@ -209,9 +209,8 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     // i1: respondeu errado no tópico A -> needsRetry = true
     ctx.db.recordQuestionDiagnosis({
       questionId: i1.id,
-      subjectId: ctx.subject.id,
       topicId: ctx.a.id,
-      selectedOptionLetter: 'E',
+      selectedOption: 'E',
       isCorrect: false,
       selfDiagnosis: 'BASE_GAP',
       confidence: 'THINK',
@@ -222,12 +221,11 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     // i2: acertou com certeza no tópico A -> needsRetry = false (mas no tópico B continua inédita!)
     ctx.db.recordQuestionDiagnosis({
       questionId: i2.id,
-      subjectId: ctx.subject.id,
       topicId: ctx.a.id,
-      selectedOptionLetter: 'C',
+      selectedOption: 'C',
       isCorrect: true,
       selfDiagnosis: 'MASTERED',
-      confidence: 'CERTAIN',
+      confidence: 'SURE',
       timeSpentSeconds: 10,
       usedAiReview: false,
     });

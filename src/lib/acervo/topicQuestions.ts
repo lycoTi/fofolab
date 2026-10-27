@@ -24,6 +24,7 @@ export interface QuestionAttemptSummary {
   lastConfidence: ReviewConfidence | null;
   lastDiagnosis: SelfDiagnosisType;
   lastAttemptAt: string;
+  isFirstContact?: boolean;
   /** Última tentativa foi erro, chute ou 1º contato: entra no filtro "Errei ou chutei". */
   needsRetry: boolean;
 }
@@ -175,6 +176,7 @@ function acervoQuestions(acervo: Database, topicIds: string[]): Question[] {
 interface AttemptRow {
   question_id: string;
   topic_id: string | null;
+  selected_option: string;
   is_correct: number;
   confidence: ReviewConfidence | null;
   self_diagnosis: SelfDiagnosisType;
@@ -186,7 +188,7 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
   const ids = [...new Set(questions.map((q) => q.id))];
   const rows = queryAll<AttemptRow>(
     getDb(),
-    `SELECT question_id, topic_id, is_correct, confidence, self_diagnosis, attempted_at
+    `SELECT question_id, topic_id, selected_option, is_correct, confidence, self_diagnosis, attempted_at
      FROM question_attempts
      WHERE question_id IN (${placeholders(ids.length)})
      ORDER BY attempted_at ASC, rowid ASC`,
@@ -197,17 +199,19 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
     const key = `${r.topic_id ?? ''}:${r.question_id}`;
     const prev = byKey.get(key);
     const lastIsCorrect = r.is_correct === 1;
+    const isFirstContact = r.selected_option === '';
     const needsRetry =
       !lastIsCorrect ||
+      isFirstContact ||
       r.confidence === 'GUESS' ||
-      r.self_diagnosis === 'FIRST_CONTACT' ||
-      r.self_diagnosis === 'GUESSED_RIGHT';
+      r.self_diagnosis === 'LUCKY_GUESS';
     byKey.set(key, {
       count: (prev?.count ?? 0) + 1,
       lastIsCorrect,
       lastConfidence: r.confidence,
       lastDiagnosis: r.self_diagnosis,
       lastAttemptAt: r.attempted_at,
+      isFirstContact,
       needsRetry,
     });
   }

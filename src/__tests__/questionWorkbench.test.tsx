@@ -318,7 +318,7 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
         attemptSummary: {
           count: 1,
           lastIsCorrect: true,
-          lastConfidence: 'CERTAIN' as const,
+          lastConfidence: 'SURE' as const,
           lastDiagnosis: 'MASTERED' as const,
           lastAttemptAt: '2026-10-25T12:00:00Z',
           needsRetry: false,
@@ -348,7 +348,7 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
             attemptSummary: {
               count: 1,
               lastIsCorrect: true,
-              lastConfidence: 'CERTAIN' as const,
+              lastConfidence: 'SURE' as const,
               lastDiagnosis: 'MASTERED' as const,
               lastAttemptAt: '2026-10-27T12:00:00Z',
               needsRetry: false,

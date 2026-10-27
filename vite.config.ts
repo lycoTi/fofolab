@@ -16,6 +16,11 @@ function fofolabAcervoStatic(): Plugin {
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         if (req.method !== 'GET' || !req.url?.startsWith('/__acervo/')) return next();
+        if (process.env.FOFOLAB_DISABLE_ACERVO_STATIC === '1') {
+          res.statusCode = 404;
+          res.end();
+          return;
+        }
         const match = SAFE_ACERVO_FILE.exec(req.url);
         if (!match) {
           res.statusCode = 404;

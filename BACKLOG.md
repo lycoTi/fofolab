@@ -6,7 +6,7 @@
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
 - **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
-- **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app pela importação de questões, ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. Próximo: brainstorm da aba Questões.
+- **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE] [Claude Code]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. **12d [DONE] [Antigravity]** (`docs/specs/12d-auto-sync-e-fila-questoes.md`): sincronização automática do acervo sem clique manual (`/__acervo/index.json` + pacotes por banca), fila inteligente na aba Questões (`Inéditas`, `Errei ou chutei`, `Todas`, ordenação `Certo/Errado` antes de `Múltipla escolha`, anuladas fora da contagem do bloco) e reta final flexível (migração **v13**).
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10), **FofoIA (11)** e Plano de estudo (13a/13b) — banco na migração **v11**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -346,9 +346,19 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   - o resumo não mostra quantos itens das matérias do plano não caem em tópico nenhum (19 de 109 no plano da CGU);
   - Web Worker na importação, se o pacote todo classificado travar a tela.
 
-  **Próximas (decisão do dono, 27/10):** brainstorm da aba Questões (filtros); conferir a ligação pela IA com a chave
-  real.
-  Depois: outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
+  **Próximas (decisão do dono, 27/10):**
+  [DONE] **12d [Antigravity] — sincronização automática do acervo, fila inteligente de questões e reta final flexível** (27/10/2026, spec `docs/specs/12d-auto-sync-e-fila-questoes.md`, plano `docs/superpowers/plans/2026-10-27-12d-auto-sync-e-fila-questoes.md`):
+  - **Sincronização automática (`Zero-Click Sync`):** qualquer comando do minerador que atualiza classificações (`classificar`, `conferir`, `desempatar`, `juntar`, `recalcular`, `pacote`) grava automaticamente `acervo/pacote/cebraspe.json`, `fofolab-acervo-cebraspe.json` e `acervo/pacote/index.json` (preservando outras bancas). O Vite serve `/__acervo/*.json` e o app sincroniza sozinho ao abrir ou trocar de plano quando `vocabVersion`/`itensComAssunto` sobem ou quando o plano ganha tópicos novos (`acervo_meta` guarda `with_subject`).
+  - **Fila inteligente na aba Questões (`QuestionWorkbench`):**
+    - Filtro de situação: `Inéditas (N)` (padrão), `Errei ou chutei (N)` e `Todas (N)`. Responder na aba de inéditas mantém a questão na sessão atual para ler a correção e conversar com a FofoIA.
+    - Filtro de formato: `Todos os formatos` (padrão, ordenando `Certo/Errado` antes de `Múltipla escolha`), `Certo/Errado` e `Múltipla escolha`.
+    - Questão já respondida exibe selo discreto (`Já respondida · Errou / Acertou / Chutou / 1º contato`) e abre destravada em `Errei ou chutei`.
+    - Questões anuladas (`is_annulled === 1`) não inflam a contagem de questões do bloco na coluna do roteiro e só aparecem em `Todas`.
+    - Esgotar as inéditas de um tópico mostra estado claro com atalhos para refazer erros/chutes, ver todas ou abrir as do grupo.
+  - **Reta final flexível (`final_stretch_allow_new`, migração v13):** na reta final, se os tópicos estudados de uma matéria já estiverem dominados e frescos (`mastery_score >= 75` e `R >= 0,85`), o planejador libera automaticamente tópicos inéditos da matéria; além disso, o estudante pode marcar `"Continuar avançando em tópicos novos na reta final"` em `Plano de estudo → Ajustar`.
+  - **Verificado:** 743 testes de unidade (82 arquivos), E2E no Edge (`e2e/acervo.spec.ts` sincronizando sozinho sem clique manual e testando os novos filtros) e `npm run build`.
+  - **Backlog futuro (distribuição para amigos):** buscar `index.json` e pacotes de acervo de uma URL remota (GitHub Releases / Cloudflare R2 / Object Storage) para atualizar o acervo dos usuários sem precisar gerar novo executável `.exe`.
+  Depois: conferir a ligação pela IA com a chave real; outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
   provas antigas.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
   (reduz prioridade), nunca escondido.

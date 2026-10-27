@@ -8,8 +8,8 @@ const linked = new Set<string>();
 const calls = {
   open: vi.fn(async () => ACERVO),
   view: vi.fn((input: { topicId: string; acervo: unknown }): QuestionsView => {
-    const own = [{ question: { id: `own-${input.topicId}` } as Question, dissection: null }];
-    const fromAcervo = input.acervo ? [{ question: { id: `acv-${input.topicId}` } as Question, dissection: null }] : [];
+    const own = [{ question: { id: `own-${input.topicId}` } as Question, dissection: null, attemptSummary: null }];
+    const fromAcervo = input.acervo ? [{ question: { id: `acv-${input.topicId}` } as Question, dissection: null, attemptSummary: null }] : [];
     return { items: [...own, ...fromAcervo], links: [], excluded: [], groupCode: null, acervoMissing: input.acervo === null && linked.has(input.topicId) };
   }),
 };
@@ -19,6 +19,7 @@ vi.mock('../lib/acervo/topicQuestions', () => ({
   scopeTopicIds: (input: { topicId: string }) => [input.topicId],
   hasActiveLinks: (ids: string[]) => ids.some((id) => linked.has(id)),
   getQuestionsView: (input: { topicId: string; acervo: unknown }) => calls.view(input),
+  countNonAnnulledQuestions: (items: { question: Question }[]) => items.filter((i) => i.question.is_annulled !== 1).length,
 }));
 
 const { useTopicQuestions, useTopicQuestionCount } = await import('../features/acervo/useTopicQuestions');

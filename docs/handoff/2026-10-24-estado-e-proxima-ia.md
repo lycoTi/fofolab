@@ -5,7 +5,11 @@
 > preparar um PC novo: stack `~/.agents`, Impeccable, `npm install`).
 
 ## 0. Atualizações de 25 a 27/10/2026 (leia primeiro)
-- **27/10 (fim do dia): 12c pronta.** O acervo da Cebraspe entra no app pela tela de importação de questões, opção
+- **27/10 (noite) [Antigravity]: 12d pronta (`docs/specs/12d-auto-sync-e-fila-questoes.md`).**
+  - **Zero-Click Sync:** os comandos do minerador (`classificar`, `conferir`, `desempatar`, `juntar`, `recalcular`, `pacote`) atualizam automaticamente `acervo/pacote/cebraspe.json` e `acervo/pacote/index.json` (preservando outras bancas). O Vite serve `/__acervo/*` (desligado nos testes E2E por `FOFOLAB_DISABLE_ACERVO_STATIC=1`, exceto quando o teste intercepta a rota) e `useAcervoAutoSync` sincroniza em segundo plano ao abrir o app ou trocar de plano.
+  - **Fila de questões:** `Inéditas (N)` por padrão, `Errei ou chutei (N)` (destravadas para tentar de novo) e `Todas (N)`; filtro de formato (`Todos os formatos`, `Certo/Errado`, `Múltipla escolha`) ordenando C/E antes de ME; selo `Já respondida · Acertou/Errou/Chutou/1º contato`; anuladas fora da contagem do bloco e das filas de estudo.
+  - **Reta final flexível (migração v13, `final_stretch_allow_new`):** libera tópicos inéditos automaticamente quando os estudados da matéria já estão dominados e frescos (`mastery >= 75` e `R >= 0,85`) ou quando o estudante marca `"Continuar avançando em tópicos novos na reta final"` em `Plano de estudo → Ajustar`.
+- **27/10 (fim do dia) [Claude Code]: 12c pronta.** O acervo da Cebraspe entra no app pela tela de importação de questões, opção
   "Acervo da Cebraspe (pacote do minerador)": escolher `acervo/pacote/fofolab-acervo-cebraspe.json`, que o comando
   `npm run minerar -- pacote` gera e que fica fora do git.
   - **Código:** `src/lib/acervo/` (pacote, banco do acervo, ligação, cópia ao usar, lista do tópico, importação),

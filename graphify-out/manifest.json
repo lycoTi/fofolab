@@ -1,8 +1,8 @@
 {
   "docs/specs/01-database-schema.sql": {
-    "mtime": 1793117397.2123916,
-    "seen": 1793117780.712373,
-    "ast_hash": "b64e65385cb4fa30a726689bed57bc56",
+    "mtime": 1793127706.1253538,
+    "seen": 1793129351.8004894,
+    "ast_hash": "7e5d1415936cb64f8f2d2daed15004b6",
     "semantic_hash": ""
   },
   "package.json": {
@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793123276.5935838,
-    "seen": 1793123315.5470738,
-    "ast_hash": "9aeb6e0c80dbd86ebeb091c87a52e3e0",
+    "mtime": 1793127806.6957922,
+    "seen": 1793129351.8103209,
+    "ast_hash": "e55b3521d72cd1f096e17edbdd198775",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "vite.config.ts": {
-    "mtime": 1792623160.032487,
-    "seen": 1792877783.4896061,
-    "ast_hash": "b3e051ad34b28978c89eca80016482d1",
+    "mtime": 1793128047.6802354,
+    "seen": 1793129351.928481,
+    "ast_hash": "75d03cea0ee7a9966484e0e844be03d8",
     "semantic_hash": ""
   },
   "src-tauri/Cargo.toml": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793124162.2026556,
-    "seen": 1793124206.2225356,
-    "ast_hash": "4632eaf34c73464a1bba865d98a0e334",
+    "mtime": 1793128834.913926,
+    "seen": 1793129351.9825907,
+    "ast_hash": "4ab1baeee35908d4c792151194dedd51",
     "semantic_hash": ""
   },
   "README.md": {
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "src/lib/database.ts": {
-    "mtime": 1793123427.4377935,
-    "seen": 1793123470.6758049,
-    "ast_hash": "a8c92ba19b0896928e5371a20e57e349",
+    "mtime": 1793127694.8184547,
+    "seen": 1793129351.8842676,
+    "ast_hash": "204cfc9ca9b5fa649f000d70c6074630",
     "semantic_hash": ""
   },
   "src/types/database.ts": {
-    "mtime": 1793117400.2661755,
-    "seen": 1793117780.7128506,
-    "ast_hash": "fa824954c57b5b922ebac93eaec0eec9",
+    "mtime": 1793127734.2126796,
+    "seen": 1793129351.8970232,
+    "ast_hash": "0e4f4a827fdbd7d7f5bf9c39a5b2e913",
     "semantic_hash": ""
   },
   "src/vite-env.d.ts": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "playwright.config.ts": {
-    "mtime": 1792879829.5762992,
-    "seen": 1792880309.0019705,
-    "ast_hash": "d27140387d69b62ed37933fccf181fd7",
+    "mtime": 1793128049.224063,
+    "seen": 1793129351.8066406,
+    "ast_hash": "5639b9d4a2ceee1408048811104513e5",
     "semantic_hash": ""
   },
   "src/__tests__/aiRouter.test.ts": {
@@ -294,15 +294,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/dailyPlannerAndExplainability.test.ts": {
-    "mtime": 1793037904.7960587,
-    "seen": 1793038012.6970894,
-    "ast_hash": "eee5be25d9ff1a8370f106d13e1fba76",
+    "mtime": 1793127809.8899095,
+    "seen": 1793129351.814863,
+    "ast_hash": "c1ec15fc71cab93688f53f1e832fdb94",
     "semantic_hash": ""
   },
   "src/__tests__/database.test.ts": {
-    "mtime": 1793120038.3872254,
-    "seen": 1793120254.8937988,
-    "ast_hash": "0390d21e202b8d0533a0f523fa46043e",
+    "mtime": 1793128361.380025,
+    "seen": 1793129351.816169,
+    "ast_hash": "f76f8c95fb7b7d02b152f622ccfdf098",
     "semantic_hash": ""
   },
   "src/__tests__/fixtures/schema-v1.sql": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/migrations.test.ts": {
-    "mtime": 1793117353.1178098,
-    "seen": 1793117780.7125041,
-    "ast_hash": "5df566c101a284b63fccddfa95256d55",
+    "mtime": 1793127863.0188184,
+    "seen": 1793129351.8267345,
+    "ast_hash": "3731c0b8e4d488299009f76d80139e5f",
     "semantic_hash": ""
   },
   "src/__tests__/notebookDraftAndLayout.test.tsx": {
@@ -402,9 +402,9 @@
     "semantic_hash": ""
   },
   "src/lib/dailyPlanner.ts": {
-    "mtime": 1793037962.8813035,
-    "seen": 1793038012.6973996,
-    "ast_hash": "fcb3019a91398877ff474b06be84d30a",
+    "mtime": 1793127764.0657835,
+    "seen": 1793129351.8838146,
+    "ast_hash": "05e3944d6d050c70f99b6c1d7d99be75",
     "semantic_hash": ""
   },
   "src/lib/diagnosis.ts": {
@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "src/lib/migrations.ts": {
-    "mtime": 1793117735.6277714,
-    "seen": 1793117780.7128227,
-    "ast_hash": "9b9c6a37edbaffb6331ab3d60307945c",
+    "mtime": 1793127679.0902524,
+    "seen": 1793129351.8922293,
+    "ast_hash": "cfc6833c95e17bd8e614bab9bfdbe70c",
     "semantic_hash": ""
   },
   "src/lib/questionImport.ts": {
@@ -882,9 +882,9 @@
     "semantic_hash": ""
   },
   "src/features/routine/useDailyRoutine.ts": {
-    "mtime": 1793035910.2557817,
-    "seen": 1793036064.554647,
-    "ast_hash": "00e4a2453045fa0388b95e7c00a72155",
+    "mtime": 1793127822.2295842,
+    "seen": 1793129351.87206,
+    "ast_hash": "90421de60b6b7c1d2ca81d0e40de66b6",
     "semantic_hash": ""
   },
   "src/features/routine/usePeek.ts": {
@@ -894,9 +894,9 @@
     "semantic_hash": ""
   },
   "src/lib/dailyRoutine.ts": {
-    "mtime": 1793035865.5241978,
-    "seen": 1793036064.554706,
-    "ast_hash": "5e82002ca7a3b4316747c5665bf1848e",
+    "mtime": 1793127820.8563068,
+    "seen": 1793129351.8842642,
+    "ast_hash": "2217587fcdaa34612a89011cfd9d164c",
     "semantic_hash": ""
   },
   "src/lib/recalibrationHint.ts": {
@@ -1644,9 +1644,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
-    "mtime": 1793123469.923693,
-    "seen": 1793123470.6754837,
-    "ast_hash": "b9f6434474678e9d8b6acb289739bb58",
+    "mtime": 1793128429.37633,
+    "seen": 1793129351.8302217,
+    "ast_hash": "4e5c61fcfb8308b7a9a6917216718896",
     "semantic_hash": ""
   },
   "src/features/answer-flow/AnswerCorrection.tsx": {
@@ -1710,9 +1710,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCard.tsx": {
-    "mtime": 1793120351.3354683,
-    "seen": 1793120657.8890908,
-    "ast_hash": "a13cf50f9287360c697a395b4cd1e02d",
+    "mtime": 1793128431.5309758,
+    "seen": 1793129351.8687706,
+    "ast_hash": "c30ac55c44cc92f4196fa0143b377fa1",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCorrection.tsx": {
@@ -1722,15 +1722,15 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionFilters.tsx": {
-    "mtime": 1793120448.558885,
-    "seen": 1793120657.8890948,
-    "ast_hash": "57a987ce1824d941a77f7ce343e4a195",
+    "mtime": 1793127386.8826826,
+    "seen": 1793129351.8692083,
+    "ast_hash": "3d071ab20b92f489079b5426e9a0fccd",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793123495.071028,
-    "seen": 1793123545.470576,
-    "ast_hash": "1b9ba101852eda59fa90f65e182611cd",
+    "mtime": 1793129315.1163747,
+    "seen": 1793129351.8692114,
+    "ast_hash": "9862688f44f8892f48059b9ababcdd4d",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
@@ -1782,9 +1782,9 @@
     "semantic_hash": ""
   },
   "docs/handoff/2026-10-24-estado-e-proxima-ia.md": {
-    "mtime": 1793124163.1028278,
-    "seen": 1793124206.2238595,
-    "ast_hash": "24a440c430c0a44b26dc3e93ac4940dc",
+    "mtime": 1793128836.5060258,
+    "seen": 1793129351.9841084,
+    "ast_hash": "36c9f15dab9269bfa46613074ff25832",
     "semantic_hash": ""
   },
   "src/__tests__/useFofoConversation.test.tsx": {
@@ -1992,9 +1992,9 @@
     "semantic_hash": ""
   },
   "tools/minerador/cli.ts": {
-    "mtime": 1793065771.4942257,
-    "seen": 1793065828.3969877,
-    "ast_hash": "5efb92675f45522222c13d0ecac345bd",
+    "mtime": 1793126895.9329464,
+    "seen": 1793129351.9233634,
+    "ast_hash": "a4a6359f9045a1936b00737e71c808a1",
     "semantic_hash": ""
   },
   "tools/minerador/report.ts": {
@@ -2107,7 +2107,7 @@
   },
   "acervo/cebraspe/DATAPREV_23.json": {
     "mtime": 1792908248.7806277,
-    "seen": 1793065525.3616984,
+    "seen": 1793124218.0161495,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2137,7 +2137,7 @@
   },
   "acervo/cebraspe/ITAIPU_23.json": {
     "mtime": 1792908263.606604,
-    "seen": 1793065525.3617144,
+    "seen": 1793124218.016165,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2167,7 +2167,7 @@
   },
   "acervo/cebraspe/PETROBRAS_21_NS.json": {
     "mtime": 1792908277.8241386,
-    "seen": 1793065525.3617358,
+    "seen": 1793124218.0161843,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2215,7 +2215,7 @@
   },
   "acervo/cebraspe/STJ_24.json": {
     "mtime": 1792908303.151949,
-    "seen": 1793065525.3617616,
+    "seen": 1793124218.0162072,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2233,7 +2233,7 @@
   },
   "acervo/cebraspe/TCE_AC_24.json": {
     "mtime": 1792908310.5254385,
-    "seen": 1793065525.361769,
+    "seen": 1793124218.0162144,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2275,13 +2275,13 @@
   },
   "acervo/cebraspe/TRF6_24.json": {
     "mtime": 1792908339.0687058,
-    "seen": 1793065525.361797,
+    "seen": 1793124218.0162425,
     "ast_hash": "",
     "semantic_hash": ""
   },
   "acervo/cebraspe/TRT10_24.json": {
     "mtime": 1792908341.9993775,
-    "seen": 1793065525.3617997,
+    "seen": 1793124218.0162446,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2383,7 +2383,7 @@
   },
   "acervo/cebraspe/TELEBRAS_25.json": {
     "mtime": 1792908335.0365052,
-    "seen": 1793065525.3617945,
+    "seen": 1793124218.01624,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2472,9 +2472,9 @@
     "semantic_hash": ""
   },
   "tools/minerador/__tests__/pacote.test.ts": {
-    "mtime": 1792944032.5073044,
-    "seen": 1792944040.6434772,
-    "ast_hash": "e9880b39d3c4fa93683271a798bd54db",
+    "mtime": 1793126836.6169004,
+    "seen": 1793129351.9130917,
+    "ast_hash": "a5ac7ca1a5882a699f566c3e9fbe7d95",
     "semantic_hash": ""
   },
   "tools/minerador/classificationStore.ts": {
@@ -2490,14 +2490,14 @@
     "semantic_hash": ""
   },
   "tools/minerador/pacote.ts": {
-    "mtime": 1792944062.4131334,
-    "seen": 1792944306.779567,
-    "ast_hash": "b0309e90418b0e352fbf337499d3c56f",
+    "mtime": 1793126891.1290607,
+    "seen": 1793129351.9238734,
+    "ast_hash": "3ae43a6d7b508c8fe697869286b8f2ba",
     "semantic_hash": ""
   },
   "acervo/vocabulario.json": {
     "mtime": 1793063433.59649,
-    "seen": 1793116282.581246,
+    "seen": 1793124218.016384,
     "ast_hash": "",
     "semantic_hash": ""
   },
@@ -2856,9 +2856,9 @@
     "semantic_hash": ""
   },
   "src/lib/weekForecast.ts": {
-    "mtime": 1793035865.5231965,
-    "seen": 1793036064.5547743,
-    "ast_hash": "c47b7d1d89ce9fdbd39a37e68c885007",
+    "mtime": 1793127799.1215303,
+    "seen": 1793129351.8965833,
+    "ast_hash": "8b0b3771ffdd5256dc7bd87025c3c706",
     "semantic_hash": ""
   },
   "src/__tests__/weekdayHoursEditor.test.tsx": {
@@ -2874,9 +2874,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/studyPlanView.test.tsx": {
-    "mtime": 1793036429.8684483,
-    "seen": 1793036577.387083,
-    "ast_hash": "278bc63090782fda3c60688eb892e878",
+    "mtime": 1793127501.2197714,
+    "seen": 1793129351.8337686,
+    "ast_hash": "851465a34a87380dad29ec08ccb46a87",
     "semantic_hash": ""
   },
   "src/__tests__/useWeekAvailability.test.tsx": {
@@ -2892,9 +2892,9 @@
     "semantic_hash": ""
   },
   "src/features/study-plan/StudyPlanView.tsx": {
-    "mtime": 1793036388.1873016,
-    "seen": 1793036577.387271,
-    "ast_hash": "f6b80dbde0ba34359dde0225ddfc0162",
+    "mtime": 1793127802.2204342,
+    "seen": 1793129351.875585,
+    "ast_hash": "73169ae9d16d396c45da48205ef98df4",
     "semantic_hash": ""
   },
   "src/features/study-plan/WeekView.tsx": {
@@ -3252,9 +3252,9 @@
     "semantic_hash": ""
   },
   "src/lib/acervo/acervoDb.ts": {
-    "mtime": 1793122842.6080916,
-    "seen": 1793122894.0485685,
-    "ast_hash": "a65793516f2468d2e1ba784a79ba905c",
+    "mtime": 1793127010.8354561,
+    "seen": 1793129351.8799384,
+    "ast_hash": "89a11ab393653db18c5950d69924cc2f",
     "semantic_hash": ""
   },
   "src/lib/acervo/acervoStore.ts": {
@@ -3282,9 +3282,9 @@
     "semantic_hash": ""
   },
   "src/lib/acervo/studentAcervo.ts": {
-    "mtime": 1793123102.4894032,
-    "seen": 1793123197.1025932,
-    "ast_hash": "ad5f65df5d3250638b80457fe71ad44f",
+    "mtime": 1793127012.6882348,
+    "seen": 1793129351.8819087,
+    "ast_hash": "2c2b7c605a14e871b39e4d87923de1a5",
     "semantic_hash": ""
   },
   "src/__tests__/importAcervo.test.ts": {
@@ -3300,27 +3300,27 @@
     "semantic_hash": ""
   },
   "src/__tests__/topicQuestions.test.ts": {
-    "mtime": 1793123134.9356594,
-    "seen": 1793123197.1023543,
-    "ast_hash": "eb927a45d4f0265c0d8b16655d5b7145",
+    "mtime": 1793128349.6883948,
+    "seen": 1793129351.83466,
+    "ast_hash": "22439713ab08291fae0b0d9fb177e44a",
     "semantic_hash": ""
   },
   "src/lib/acervo/topicQuestions.ts": {
-    "mtime": 1793123152.5027263,
-    "seen": 1793123197.102595,
-    "ast_hash": "096ca1003597457c2172257710413e51",
+    "mtime": 1793128433.057887,
+    "seen": 1793129351.881912,
+    "ast_hash": "63e2f425f461c758601d7c35ade47a6b",
     "semantic_hash": ""
   },
   "src/__tests__/useTopicQuestions.test.tsx": {
-    "mtime": 1793119122.7425528,
-    "seen": 1793120254.8939111,
-    "ast_hash": "78b60d36207aee3e9a3c18a034ec285c",
+    "mtime": 1793128359.504866,
+    "seen": 1793129351.837011,
+    "ast_hash": "a6b11777765b5be25b7af23942bbf156",
     "semantic_hash": ""
   },
   "src/features/acervo/useTopicQuestions.ts": {
-    "mtime": 1793119145.5826125,
-    "seen": 1793120254.8939443,
-    "ast_hash": "6f26741f966f7154f8d5edfe53f5a20f",
+    "mtime": 1793127173.0520487,
+    "seen": 1793129351.8439374,
+    "ast_hash": "3fcb1463b578e4cd38d04536fd596888",
     "semantic_hash": ""
   },
   "src/features/questions/AcervoLinkBar.tsx": {
@@ -3348,9 +3348,9 @@
     "semantic_hash": ""
   },
   "e2e/acervo.spec.ts": {
-    "mtime": 1793121269.7427409,
-    "seen": 1793121749.524551,
-    "ast_hash": "2b22cc6eb159ae64fb344d6be6210fa9",
+    "mtime": 1793128751.7835646,
+    "seen": 1793129351.8004947,
+    "ast_hash": "ab0881eff7d37d78c69e307e47c564b4",
     "semantic_hash": ""
   },
   "e2e/fixtures/acervo-pequeno.json": {
@@ -3363,6 +3363,36 @@
     "mtime": 1793121248.020942,
     "seen": 1793121749.524569,
     "ast_hash": "8fcbd98daf7a48d0fd21462af4f54ff2",
+    "semantic_hash": ""
+  },
+  "src/__tests__/acervoAutoSync.test.ts": {
+    "mtime": 1793128201.2380893,
+    "seen": 1793129351.810325,
+    "ast_hash": "a8aad1c4e6d45c33bd36b7e37e93a650",
+    "semantic_hash": ""
+  },
+  "src/features/acervo/useAcervoAutoSync.ts": {
+    "mtime": 1793128203.162334,
+    "seen": 1793129351.8439329,
+    "ast_hash": "0637f9dd502c41e2e1de236e77887c88",
+    "semantic_hash": ""
+  },
+  "src/lib/acervo/autoSync.ts": {
+    "mtime": 1793128206.325464,
+    "seen": 1793129351.8804677,
+    "ast_hash": "4429f8742b54c46635bb48f0606bfbb6",
+    "semantic_hash": ""
+  },
+  "docs/specs/12d-auto-sync-e-fila-questoes.md": {
+    "mtime": 1793128199.8396962,
+    "seen": 1793129351.9907012,
+    "ast_hash": "e15e2771936dbd19a3d41e5383e74eb3",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-27-12d-auto-sync-e-fila-questoes.md": {
+    "mtime": 1793128199.9555075,
+    "seen": 1793129351.9979706,
+    "ast_hash": "cb72ae2df86b583284524a604638430c",
     "semantic_hash": ""
   }
 }

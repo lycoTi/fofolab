@@ -30,6 +30,12 @@ export default defineConfig({
     reuseExistingServer: true,
     timeout: 120_000,
     // Os testes conferem o modo demonstração: a chave do .env do PC não pode entrar (vazio no ambiente vence o .env).
-    env: { VITE_FOFOLAB_AI_GATEWAY_URL: '', VITE_GROQ_API_KEY: '', VITE_GEMINI_API_KEY: '', VITE_DEEPSEEK_API_KEY: '' },
+    env: {
+      VITE_FOFOLAB_AI_GATEWAY_URL: '',
+      VITE_GROQ_API_KEY: '',
+      VITE_GEMINI_API_KEY: '',
+      VITE_DEEPSEEK_API_KEY: '',
+      FOFOLAB_DISABLE_ACERVO_STATIC: '1',
+    },
   },
 });

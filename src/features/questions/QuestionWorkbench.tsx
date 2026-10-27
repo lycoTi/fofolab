@@ -231,7 +231,11 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         )}
         {!emptyTopic && allSolvedInTopic && (
           <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
-            <p className="text-sm text-slate-200">Você já respondeu todas as questões inéditas deste tópico.</p>
+            <p className="text-sm text-slate-200">
+              {inTopic
+                ? 'Você já respondeu todas as questões inéditas deste tópico.'
+                : 'Você já respondeu todas as questões inéditas desta seleção.'}
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-2">
               {counts.retry > 0 && (
                 <button
@@ -249,7 +253,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
               >
                 {`Ver todas (${counts.all})`}
               </button>
-              {acervo?.view.groupCode && acervo.onShowGroup && (
+              {inTopic && acervo?.view.groupCode && acervo.onShowGroup && (
                 <button
                   type="button"
                   onClick={acervo.onShowGroup}

@@ -169,3 +169,4 @@ describe('Sincronização automática do acervo (spec 12d §3.1)', () => {
     expect(virtual.exam_board).toBe('FGV');
   });
 });
+

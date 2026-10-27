@@ -160,3 +160,4 @@
 - [ ] **Step 3: Rodar `npm test`, `npm run test:e2e` (2 rodadas) e `npm run build`**
 - [ ] **Step 4: Atualizar `BACKLOG.md`, `docs/handoff/2026-10-24-estado-e-proxima-ia.md` e rodar `graphify update .`**
 - [ ] **Step 5: Commit final da 12d**
+

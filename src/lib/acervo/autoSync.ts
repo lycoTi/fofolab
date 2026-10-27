@@ -156,3 +156,4 @@ export async function syncLocalAcervoIfNeeded(input: {
   writeSyncStamp(input.planId, stamp);
   return { synced: true, summary: result.summary };
 }
+

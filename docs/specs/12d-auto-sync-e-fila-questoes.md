@@ -72,3 +72,4 @@
 - **Unit (`QuestionWorkbench`):** filtro padrão mostra só inéditas e ordena C/E antes de Múltipla Escolha; responder não esconde a questão na hora; trocar para "Errei ou chutei" mostra as pendências com o selo da última tentativa e permite responder de novo; quando inéditas = 0 mas há respondidas, oferece refazer ou ver todas.
 - **Unit (`dailyPlanner`):** na reta final, tópico já dominado (`>= 75%`) e fresco (`R >= 0,85`) cede lugar a tópico inédito (ou quando o estudante permite inéditos na reta final).
 - **E2E (`e2e/acervo.spec.ts`):** sincronização automática sem clicar em importar e filtros de inéditas / refazer na aba Questões.
+
