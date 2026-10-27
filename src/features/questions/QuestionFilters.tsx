@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight, FileUp, Filter, Search } from 'lucide-react';
+import type { QuestionScope } from '../../lib/acervo/topicQuestions';
 
-export type QuestionScope = 'topic' | 'subject' | 'all';
+export type { QuestionScope };
 
 const select = 'px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 focus:border-orange-500 outline-none';
 
