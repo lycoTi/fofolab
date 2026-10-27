@@ -146,7 +146,32 @@ CREATE TABLE IF NOT EXISTS questions (
     preliminary_answer TEXT,               -- Gabarito preliminar
     final_answer TEXT NOT NULL,            -- Gabarito definitivo pós-recurso
     is_annulled INTEGER DEFAULT 0,         -- 1 se anulada pela banca pós-recurso
-    annulment_reason TEXT
+    annulment_reason TEXT,
+    -- [v12] Cópia de um item do acervo da Cebraspe (spec 12c §5.5): entra no 1º uso que grava algo
+    acervo_item_id TEXT,                   -- Id do item no acervo; NULL = questão própria (importada por texto/JSON)
+    source_label TEXT,                     -- Procedência: "Cebraspe · ANATEL 2024 · item 40"
+    acervo_uncertain INTEGER NOT NULL DEFAULT 0 -- 1 = classificação incerta (pesa metade no domínio)
+);
+-- [v12] Uma cópia por matéria: `subject_id` apaga em cascata, e o mesmo item pode estar em matérias de planos diferentes
+CREATE UNIQUE INDEX IF NOT EXISTS idx_questions_acervo_item ON questions(subject_id, acervo_item_id) WHERE acervo_item_id IS NOT NULL;
+
+-- [v12] Ligação tópico ↔ assunto do vocabulário do acervo (spec 12c §5.3). O acervo fica num banco à parte.
+CREATE TABLE IF NOT EXISTS acervo_links (
+    topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+    assunto_id TEXT NOT NULL,              -- Id do assunto no vocabulário (ex: "direito-administrativo>atos")
+    origin TEXT NOT NULL,                  -- 'NAME' (pelo nome) ou 'AI' (pela IA)
+    vocab_version INTEGER NOT NULL,        -- Versão do vocabulário usada na ligação
+    disabled INTEGER NOT NULL DEFAULT 0,   -- 1 = "Desligar este assunto" (não volta nas importações seguintes)
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (topic_id, assunto_id)
+);
+
+-- [v12] Itens do acervo tirados de um tópico ("Não é deste tópico"; desfazível)
+CREATE TABLE IF NOT EXISTS acervo_exclusions (
+    topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+    acervo_item_id TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (topic_id, acervo_item_id)
 );
 
 -- 9. Destrinchamentos da IA Persistidos (Cache Definitivo = Economia Total de Tokens)

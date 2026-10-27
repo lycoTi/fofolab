@@ -468,8 +468,8 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
     expect(db.localDateKey(new Date(2026, 9, 23, 0, 1))).toBe('2026-10-23');
   });
 
-  it('o banco está na versão do plano de estudo (horas por dia)', () => {
-    expect(LATEST_SCHEMA_VERSION).toBe(11);
+  it('o banco está na versão do acervo da Cebraspe (ligações tópico ↔ assunto)', () => {
+    expect(LATEST_SCHEMA_VERSION).toBe(12);
   });
 });
 

@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 11;
+export const LATEST_SCHEMA_VERSION = 12;
 
 export interface Migration {
   version: number;
@@ -174,6 +174,37 @@ export const MIGRATIONS: Migration[] = [
         date TEXT NOT NULL,
         minutes INTEGER NOT NULL,
         PRIMARY KEY (plan_id, date)
+      )`);
+    },
+  },
+  {
+    version: 12,
+    description: 'Acervo da Cebraspe no app (spec 12c): cópia de itens ao usar, ligações entre tópico e assunto e itens tirados',
+    up: (db) => {
+      // Idempotente; questões existentes ficam como próprias (acervo_item_id NULL)
+      const columns = db.exec('PRAGMA table_info(questions)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('acervo_item_id')) db.run('ALTER TABLE questions ADD COLUMN acervo_item_id TEXT');
+      if (!columns.includes('source_label')) db.run('ALTER TABLE questions ADD COLUMN source_label TEXT');
+      if (!columns.includes('acervo_uncertain')) {
+        db.run('ALTER TABLE questions ADD COLUMN acervo_uncertain INTEGER NOT NULL DEFAULT 0');
+      }
+      db.run(
+        'CREATE UNIQUE INDEX IF NOT EXISTS idx_questions_acervo_item ON questions(subject_id, acervo_item_id) WHERE acervo_item_id IS NOT NULL'
+      );
+      db.run(`CREATE TABLE IF NOT EXISTS acervo_links (
+        topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+        assunto_id TEXT NOT NULL,
+        origin TEXT NOT NULL,
+        vocab_version INTEGER NOT NULL,
+        disabled INTEGER NOT NULL DEFAULT 0,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (topic_id, assunto_id)
+      )`);
+      db.run(`CREATE TABLE IF NOT EXISTS acervo_exclusions (
+        topic_id TEXT NOT NULL REFERENCES topics(id) ON DELETE CASCADE,
+        acervo_item_id TEXT NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (topic_id, acervo_item_id)
       )`);
     },
   },

@@ -46,7 +46,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const result = prepareSchema(db, latestSchemaSql);
     expect(result.created).toBe(false);
     expect(result.previousVersion).toBe(1);
-    expect(result.appliedMigrations).toEqual([2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+    expect(result.appliedMigrations).toEqual([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     expect(getUserVersion(db)).toBe(LATEST_SCHEMA_VERSION);
     db.close();
   });
@@ -69,7 +69,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     db.run('PRAGMA user_version = 5;');
 
     const result = prepareSchema(db, latestSchemaSql);
-    expect(result.appliedMigrations).toEqual([6, 7, 8, 9, 10, 11]);
+    expect(result.appliedMigrations).toEqual([6, 7, 8, 9, 10, 11, 12]);
     const columns = db.exec('PRAGMA table_info(daily_plans)')[0].values.map((row) => row[1]);
     expect(columns).toContain('profile_key');
     expect(db.exec('SELECT COUNT(*) FROM daily_plans')[0].values[0][0]).toBe(1);
@@ -80,7 +80,7 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     const db = new SQL.Database();
     prepareSchema(db, latestSchemaSql);
     db.run('PRAGMA user_version = 5;');
-    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([6, 7, 8, 9, 10, 11]);
+    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([6, 7, 8, 9, 10, 11, 12]);
     db.close();
   });
 
@@ -118,6 +118,61 @@ describe('Versionamento do banco local (PRAGMA user_version + migrações)', () 
     expect(ids('SELECT id FROM topics')).toEqual(['t1']);
     expect(ids('SELECT topic_id FROM notebooks')).toEqual([null]);
     expect(db.exec('PRAGMA foreign_key_check')).toEqual([]);
+    db.close();
+  });
+
+  it('a v12 cria as ligações e as colunas do acervo num banco antigo com questões, sem perder nada', () => {
+    const db = new SQL.Database();
+    db.run(schemaV1Sql);
+    db.run("INSERT INTO study_plans (id, title) VALUES ('p1', 'Plano')");
+    db.run("INSERT INTO subjects (id, plan_id, name) VALUES ('s1', 'p1', 'Direito Administrativo')");
+    db.run("INSERT INTO topics (id, subject_id, title) VALUES ('t1', 's1', 'Atos administrativos')");
+    db.run(
+      `INSERT INTO questions (id, subject_id, topic_id, exam_board, exam_year, statement, options_json, final_answer)
+       VALUES ('q1', 's1', 't1', 'Cebraspe', 2024, 'Enunciado próprio', '["C) Certo","E) Errado"]', 'C')`
+    );
+
+    prepareSchema(db, latestSchemaSql);
+    db.run('PRAGMA foreign_keys = ON;');
+
+    const row = db.exec('SELECT statement, acervo_item_id, source_label, acervo_uncertain FROM questions')[0].values;
+    expect(row).toEqual([['Enunciado próprio', null, null, 0]]);
+    db.run("INSERT INTO acervo_links (topic_id, assunto_id, origin, vocab_version) VALUES ('t1', 'dir-adm>atos', 'NAME', 27)");
+    db.run("INSERT INTO acervo_exclusions (topic_id, acervo_item_id) VALUES ('t1', 'BCB_24:c1:40')");
+    expect(db.exec('SELECT disabled FROM acervo_links')[0].values).toEqual([[0]]);
+
+    // Apagar o tópico leva as ligações e as exclusões dele
+    db.run("DELETE FROM topics WHERE id = 't1'");
+    expect(db.exec('SELECT COUNT(*) FROM acervo_links')[0].values[0][0]).toBe(0);
+    expect(db.exec('SELECT COUNT(*) FROM acervo_exclusions')[0].values[0][0]).toBe(0);
+    db.close();
+  });
+
+  it('a cópia de um item do acervo é única por matéria (o mesmo item pode estar em matérias diferentes)', () => {
+    for (const viaMigration of [false, true]) {
+      const db = new SQL.Database();
+      if (viaMigration) db.run(schemaV1Sql);
+      prepareSchema(db, latestSchemaSql);
+      db.run("INSERT INTO study_plans (id, title) VALUES ('p1', 'Plano')");
+      db.run("INSERT INTO subjects (id, plan_id, name) VALUES ('s1', 'p1', 'A'), ('s2', 'p1', 'B')");
+      const insert = (id: string, subjectId: string) =>
+        db.run(
+          `INSERT INTO questions (id, subject_id, exam_board, exam_year, statement, options_json, final_answer, acervo_item_id)
+           VALUES (?, ?, 'Cebraspe', 2024, 'Item', '[]', 'C', 'BCB_24:c1:40')`,
+          [id, subjectId]
+        );
+      insert('acv:s1:BCB_24:c1:40', 's1');
+      insert('acv:s2:BCB_24:c1:40', 's2');
+      expect(() => insert('outra-copia', 's1')).toThrow(/UNIQUE/);
+      db.close();
+    }
+  });
+
+  it('a v12 não quebra um banco que já tem as colunas e as tabelas', () => {
+    const db = new SQL.Database();
+    prepareSchema(db, latestSchemaSql);
+    db.run('PRAGMA user_version = 11;');
+    expect(prepareSchema(db, latestSchemaSql).appliedMigrations).toEqual([12]);
     db.close();
   });
 

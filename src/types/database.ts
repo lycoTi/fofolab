@@ -146,6 +146,12 @@ export interface Question {
   final_answer: string;
   is_annulled: number; // 0 | 1
   annulment_reason: string | null;
+  /** [v12] Item do acervo da Cebraspe (null/ausente = questão própria). */
+  acervo_item_id?: string | null;
+  /** [v12] Procedência mostrada no cartão: "Cebraspe · ANATEL 2024 · item 40". */
+  source_label?: string | null;
+  /** [v12] 1 = classificação incerta (pesa metade no domínio). */
+  acervo_uncertain?: number;
 }
 
 // 9. ai_dissections
