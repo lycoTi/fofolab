@@ -523,6 +523,9 @@ export default function App() {
     fixedOutfit: fofoPrefs.fixedOutfit,
   });
   const fofoFocus = studyBlock.state.phase === 'FOCUS' && studyBlock.state.running;
+  // Pausa entre pomodoros ou apertada pelo estudante; a pausa automática da olhada (outro tópico aberto) não conta
+  const fofoResting =
+    studyBlock.state.phase === 'BREAK' || (studyBlock.state.phase === 'FOCUS' && !studyBlock.state.running && peek.kind === 'none');
 
   if (initError) {
     return (
@@ -1070,7 +1073,7 @@ export default function App() {
   };
 
   return (
-    <FofoOutfitProvider value={{ app: fofo.app, fofodoro: fofo.fofodoro, focus: fofoFocus }}>
+    <FofoOutfitProvider value={{ app: fofo.app, fofodoro: fofo.fofodoro, focus: fofoFocus, resting: fofoResting }}>
     <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
       {mode === 'student' && (

@@ -11,6 +11,8 @@ export interface FofoOutfits {
   fofodoro: OutfitId;
   /** Bloco de foco correndo: o Fofo só pisca, para não puxar o olho do estudo. */
   focus: boolean;
+  /** Pausa do FofoDoro (entre pomodoros ou apertada pelo estudante): o Fofo do cabeçalho cochila. */
+  resting?: boolean;
 }
 
 const OutfitContext = createContext<FofoOutfits>({ app: 'fofodeck', fofodoro: 'fofodeck', focus: false });
@@ -24,10 +26,14 @@ export function FofoOutfitProvider({ value, children }: { value: FofoOutfits; ch
 export function CurrentFofo({
   place = 'app',
   motion = 'auto',
+  sleepWhenResting = false,
+  pose,
   ...props
 }: {
   place?: 'app' | 'fofodoro';
   pose?: PoseId;
+  /** Só o do cabeçalho: na pausa, dorme (os outros continuam com a roupa). */
+  sleepWhenResting?: boolean;
   motion?: FofoMotion | 'auto';
   scale?: 1 | 2 | 4;
   decorative?: boolean;
@@ -36,7 +42,8 @@ export function CurrentFofo({
   const outfits = useContext(OutfitContext);
   let resolved: FofoMotion = motion === 'auto' ? 'full' : motion;
   if (motion === 'auto' && outfits.focus) resolved = 'blink';
-  return <FofoSprite outfit={outfits[place]} motion={resolved} {...props} />;
+  const resolvedPose = pose ?? (sleepWhenResting && outfits.resting ? 'dormindo' : undefined);
+  return <FofoSprite outfit={outfits[place]} pose={resolvedPose} motion={resolved} {...props} />;
 }
 
 const REFRESH_MS = 60_000;

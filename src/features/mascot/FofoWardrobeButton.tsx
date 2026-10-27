@@ -60,7 +60,7 @@ export function FofoWardrobeButton({
         onClick={() => setOpen((v) => !v)}
         className="fofo-hover block rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
       >
-        <CurrentFofo decorative />
+        <CurrentFofo decorative sleepWhenResting />
       </button>
 
       {open && (

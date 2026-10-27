@@ -38,6 +38,18 @@ describe('Roupa do Fofo no app', () => {
     expect(screen.getByRole('img').getAttribute('data-motion')).toBe('blink');
   });
 
+  it('em pausa (do FofoDoro ou apertada pelo estudante), o Fofo do cabeçalho cochila; os outros não', () => {
+    render(
+      <FofoOutfitProvider value={{ app: 'fazendeiro', fofodoro: 'fofodeck', focus: false, resting: true }}>
+        <CurrentFofo sleepWhenResting />
+        <CurrentFofo />
+      </FofoOutfitProvider>,
+    );
+    const [header, other] = screen.getAllByRole('img');
+    expect(header.getAttribute('data-pose')).toBe('dormindo');
+    expect(other.getAttribute('data-pose')).toBeNull();
+  });
+
   it('troca sozinha quando o relógio passa das 22:00', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(2026, 7, 12, 21, 59, 30));

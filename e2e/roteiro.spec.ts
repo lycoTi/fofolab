@@ -37,6 +37,8 @@ test('roteiro congelado: recarregar no mesmo dia mantém os blocos, e estudar n�
   await page.screenshot({ path: `${SCREENS}/09-roteiro-na-coluna.png` });
 });
 
+const headerFofo = (page: Page) => page.locator('header').getByRole('button', { name: /Guarda-roupa do Fofo/ }).locator('svg');
+
 test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Voltar ao bloco" retoma', async ({ page }) => {
   await page.clock.install();
   await openApp(page);
@@ -49,6 +51,8 @@ test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Volt
   await page.getByRole('button', { name: /^Abrir .* na bancada$/ }).filter({ hasNotText: subject }).first().click();
   await expect(column(page)).toContainText('fora do roteiro de hoje');
   await expect(page.getByRole('button', { name: 'Continuar bloco' })).toBeVisible();
+  // A pausa automática da olhada não faz o Fofo dormir
+  await expect(headerFofo(page)).not.toHaveAttribute('data-pose', 'dormindo');
 
   await page.clock.runFor(180_000);
   await expect(column(page)).toContainText('está esperando');
@@ -56,6 +60,12 @@ test('olhar outra matéria pausa o bloco, a dica aparece depois de 3 min e "Volt
   await column(page).getByRole('button', { name: 'Voltar ao bloco' }).click();
   await expect(page.getByRole('button', { name: 'Pausar bloco' })).toBeVisible();
   await expect(column(page)).not.toContainText('fora do roteiro');
+
+  // Pausa apertada pelo estudante: o Fofo do cabeçalho cochila; retomou, acorda
+  await page.getByRole('button', { name: 'Pausar bloco' }).click();
+  await expect(headerFofo(page)).toHaveAttribute('data-pose', 'dormindo');
+  await page.getByRole('button', { name: 'Continuar bloco' }).click();
+  await expect(headerFofo(page)).not.toHaveAttribute('data-pose', 'dormindo');
 });
 
 test('a barrinha do bloco anda com o tempo e o relógio do cabeçalho leva ao FofoDoro', async ({ page }) => {
