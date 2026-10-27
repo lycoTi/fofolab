@@ -123,6 +123,19 @@ describe('Peso do item incerto (spec 12c §5.6)', () => {
   });
 });
 
+describe('Arredondamento do peso metade (revisão independente da 12c)', () => {
+  it('metade de um erro ímpar arredonda para longe do zero: "Confundi" (−3) num item incerto desce 2, não 1', async () => {
+    const { db, acervo } = await open();
+    const { subject } = setupPlan(db);
+    const topic = db.createTopic({ subject_id: subject.id, code: '3', title: 'Poderes', mastery_score: 50 });
+    const uncertain = acervo.toVirtualQuestion(row('T:c1:9', { incerto: 1 }), subject.id, topic.id);
+    acervo.materializeQuestion(uncertain);
+    const wrong = db.recordQuestionDiagnosis({ questionId: uncertain.id, topicId: topic.id, selectedOption: 'E', isCorrect: false, selfDiagnosis: 'MISCONCEPTION' });
+    expect(wrong.deltaMastery).toBe(-2);
+    expect(wrong.updatedTopic?.mastery_score).toBe(48);
+  });
+});
+
 describe('Ligações e itens tirados (spec 12c §5.3 e §5.7)', () => {
   it('ligação desligada não volta ao salvar de novo e não é apagada quando o assunto some', async () => {
     const { db, acervo } = await open();

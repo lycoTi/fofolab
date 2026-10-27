@@ -1319,6 +1319,15 @@ function questionWeight(db: Database, questionId: string): number {
   return row?.u === 1 ? UNCERTAIN_ITEM_WEIGHT : 1;
 }
 
+/**
+ * Delta com o peso, inteiro e arredondado para longe do zero: com `Math.round` a metade de um erro ímpar subia
+ * (−1,5 → −1) e o erro no item incerto pesava menos que a metade.
+ */
+function weightedDelta(delta: number, weight: number): number {
+  const value = delta * weight;
+  return Math.sign(value) * Math.round(Math.abs(value));
+}
+
 /** Confiança da amostra que valia quando a tentativa foi gravada (tentativas do tópico até ela, inclusive). */
 function sampleConfidenceAtAttempt(db: Database, attempt: QuestionAttempt, topic: Topic): number {
   const upToHere =
@@ -1354,9 +1363,9 @@ export function updateAttemptDiagnosis(attemptId: string, diagnosis: SelfDiagnos
   // Desfaz o que foi aplicado de fato (perto de 0 ou 100 o delta foi cortado) e aplica o novo, cortado de novo
   const confidence = sampleConfidenceAtAttempt(db, attempt, topic);
   const weight = questionWeight(db, attempt.question_id);
-  const applied = attempt.mastery_delta ?? diagnosisDelta(attempt.self_diagnosis, confidence) * weight;
+  const applied = attempt.mastery_delta ?? weightedDelta(diagnosisDelta(attempt.self_diagnosis, confidence), weight);
   const base = topic.mastery_score - applied;
-  const next = Math.max(0, Math.min(100, Math.round(base + diagnosisDelta(diagnosis, confidence) * weight)));
+  const next = Math.max(0, Math.min(100, Math.round(base + weightedDelta(diagnosisDelta(diagnosis, confidence), weight))));
   db.run('UPDATE question_attempts SET self_diagnosis = ?, mastery_delta = ? WHERE id = ?', [diagnosis, next - base, attemptId]);
   const updatedTopic = updateTopic({ id: topic.id, mastery_score: next });
   void flushDatabase();
@@ -1415,7 +1424,7 @@ export function recordQuestionDiagnosis(params: {
   );
   const isColdStartDiscovery = sampleConfidencePercent < 55;
 
-  const deltaMastery = diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent) * questionWeight(db, params.questionId);
+  const deltaMastery = weightedDelta(diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent), questionWeight(db, params.questionId));
   // O que de fato entra no domínio (cortado em 0..100): guardado para a troca de diagnóstico desfazer exatamente isso
   const nextMastery = topic ? Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery))) : null;
   const appliedDelta = topic && nextMastery !== null ? nextMastery - topic.mastery_score : null;
