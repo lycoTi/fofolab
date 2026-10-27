@@ -130,13 +130,13 @@
         <tr data-sprite="anonovo"><td class="who"></td><td>De 31 de dezembro a 31 de janeiro</td><td>Data especial</td></tr>
         <tr data-sprite="carnaval"><td class="who"></td><td>Das 2 semanas antes do Carnaval até a Quarta-feira de Cinzas</td><td>A data muda todo ano; o app calcula pela Páscoa</td></tr>
         <tr data-sprite="junina"><td class="who"></td><td>Junho inteiro</td><td>Data especial</td></tr>
-        <tr data-sprite="madrugada"><td class="who"></td><td>Das 22:00 às 05:00, em todo o app</td><td>Quem estuda de madrugada encontra o Fofo de vela acesa</td></tr>
-        <tr data-sprite="fazendeiro"><td class="who"></td><td>Plano de estudo e Revisão do dia</td><td>Planta o ciclo e rega o que está murchando</td></tr>
-        <tr data-sprite="explorador"><td class="who"></td><td>Questões e Edital</td><td>Explora o mapa da prova, sala por sala</td></tr>
-        <tr data-sprite="fofodeck"><td class="who"></td><td>Início, FofoDoro e o resto</td><td>O de sempre, com o relógio do pomodoro</td></tr>
+        <tr data-sprite="madrugada"><td class="who"></td><td>Das 22:00 ao nascer do sol</td><td>Quem estuda de madrugada encontra o Fofo de vela acesa</td></tr>
+        <tr data-sprite="fazendeiro"><td class="who"></td><td>Do nascer ao pôr do sol</td><td>Planta o ciclo e rega o que está murchando</td></tr>
+        <tr data-sprite="explorador"><td class="who"></td><td>Do pôr do sol às 22:00</td><td>A lanterna acende quando escurece</td></tr>
+        <tr data-sprite="fofodeck"><td class="who"></td><td>No aviso do FofoDoro</td><td>O de sempre, com o relógio do pomodoro</td></tr>
       </tbody>
     </table>
-    <p class="anim">Nas configurações, "Roupa do Fofo": Automática (padrão) ou uma roupa fixa, que passa na frente de todas as regras.</p>
+    <p class="anim">Clicando no Fofo do cabeçalho: guarda-roupa com Automática (padrão) ou uma roupa fixa, que passa na frente de todas as regras, e o "Fui nomeado!". O nascer e o pôr do sol vêm do fuso do computador.</p>
   </section>
 
   <section class="dir" data-sprite="fofodeck" data-alt="1.2s">
@@ -266,6 +266,41 @@
     </div>
   </section>
 
+  <h2 class="group">Poses</h2>
+
+  <section class="dir" data-sprite="pensando" data-alt="0.6s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Pose 1</span><h2>Pensando</h2><span class="ref">enquanto a FofoIA responde</span></div>
+      <p class="idea"><strong>Pata no queixo e o balão enchendo de reticências.</strong> Aparece no lugar do ícone girando, enquanto a FofoIA escreve a resposta.</p>
+      <p class="anim">Animação: pisca e as reticências se enchem.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="dormindo" data-alt="1.6s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Pose 2</span><h2>Dormindo</h2><span class="ref">na pausa do FofoDoro</span></div>
+      <p class="idea"><strong>Olhos fechados e os Z subindo.</strong> Aparece no aviso do começo da pausa: é hora de descansar de verdade.</p>
+      <p class="anim">Animação: os Z sobem devagar.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
+  <section class="dir" data-sprite="comemorando" data-alt="0.7s">
+    <div class="stage" data-scale="8"></div>
+    <div class="info">
+      <div class="name"><span class="num">Pose 3</span><h2>Comemorando</h2><span class="ref">meta da semana cumprida</span></div>
+      <p class="idea"><strong>Troféu erguido, seguro pelas alças.</strong> Aparece no pé da coluna do roteiro quando o tempo estudado na semana alcança a meta.</p>
+      <p class="anim">Animação: o troféu sobe e desce e os brilhos trocam de lado.</p>
+      <div class="sizes"></div>
+      <div><p class="mock-label">No cabeçalho do app</p><div class="mock"></div></div>
+    </div>
+  </section>
+
   <footer class="next">
     <h3>Próximos passos</h3>
     <p>Refino o traço e faço as poses que têm função: pensando enquanto a FofoIA responde, dormindo no descanso do FofoDoro e comemorando a meta da semana. O ícone de 16 px da janela ganha um desenho próprio, mais simples.</p>
@@ -275,8 +310,8 @@
 
 <script>
   const SPRITES = /*SPRITES*/;
-  const NAMES = { fofodeck: 'Hamster do FofoDeck com fone e relógio', fazendeiro: 'Hamster fazendeiro', explorador: 'Hamster explorador', madrugada: 'Hamster estudante da madrugada', natal: 'Hamster de Natal com gorro, cachecol e presente', halloween: 'Hamster fantasiado de fantasma, com balde de abóbora', anonovo: 'Hamster de ano-novo com chapéu de festa e estrelinha', carnaval: 'Hamster de carnaval com máscara, colar de flores e pandeiro', junina: 'Hamster de festa junina com chapéu remendado, lenço xadrez e milho', prova: 'Hamster no dia da prova, com documento e caneta transparente', nomeado: 'Hamster nomeado, de terno, com o Diário Oficial' };
-  const SHORT = { fofodeck: 'Base', fazendeiro: 'Fazendeiro', explorador: 'Explorador', madrugada: 'Madrugada', natal: 'Natal', halloween: 'Halloween', anonovo: 'Ano-novo', carnaval: 'Carnaval', junina: 'Festa junina', prova: 'Dia da prova', nomeado: 'Nomeado' };
+  const NAMES = { fofodeck: 'Hamster do FofoDeck com fone e relógio', fazendeiro: 'Hamster fazendeiro', explorador: 'Hamster explorador', madrugada: 'Hamster estudante da madrugada', natal: 'Hamster de Natal com gorro, cachecol e presente', halloween: 'Hamster fantasiado de fantasma, com balde de abóbora', anonovo: 'Hamster de ano-novo com chapéu de festa e estrelinha', carnaval: 'Hamster de carnaval com máscara, colar de flores e pandeiro', junina: 'Hamster de festa junina com chapéu remendado, lenço xadrez e milho', prova: 'Hamster no dia da prova, com documento e caneta transparente', nomeado: 'Hamster nomeado, de terno, com o Diário Oficial', pensando: 'Hamster pensando, com balão de reticências', dormindo: 'Hamster dormindo', comemorando: 'Hamster comemorando com um troféu' };
+  const SHORT = { fofodeck: 'Base', fazendeiro: 'Fazendeiro', explorador: 'Explorador', madrugada: 'Madrugada', natal: 'Natal', halloween: 'Halloween', anonovo: 'Ano-novo', carnaval: 'Carnaval', junina: 'Festa junina', prova: 'Dia da prova', nomeado: 'Nomeado', pensando: 'Pensando', dormindo: 'Dormindo', comemorando: 'Comemorando' };
   const SIZES = [
     { scale: 4, use: 'telas vazias e meta cumprida' },
     { scale: 2, use: 'FofoIA e FofoDoro' },
