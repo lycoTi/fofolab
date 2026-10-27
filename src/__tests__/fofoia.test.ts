@@ -285,3 +285,33 @@ describe('Aula em partes e resposta cortada no teto de tamanho', () => {
     expect(trimCutReply('Frase completa. Outra cortada no me')).toBe('Frase completa.');
   });
 });
+
+describe('Aula e resumo sobre a conversa, não só sobre o tópico', () => {
+  const convCtx = buildFofoContext({ context: student, notebook: null, activeQuestion: null, prerequisites: [] });
+  const turn = (role: 'student' | 'tutor', content: string, i: number) => ({ id: String(i), role, content, createdAt: '' });
+  const pasted = `Questão: um broker baseado em log distribuído transfere o offset de leitura para os consumidores. ${'Contexto do enunciado. '.repeat(12)}`;
+  const longConversation = [
+    turn('student', pasted, 1),
+    turn('tutor', 'Certo: quem guarda o offset é o consumidor.', 2),
+    turn('student', 'e o barramento de serviços?', 3),
+    turn('tutor', 'Ele centraliza as transformações.', 4),
+    turn('student', 'e o commit em duas fases?', 5),
+    turn('tutor', 'É síncrono e lento para fluxo contínuo.', 6),
+    turn('student', 'entendi', 7),
+    turn('tutor', 'Combinado.', 8),
+  ];
+
+  it('a questão que o estudante colou vai junto mesmo depois de sair das últimas falas', () => {
+    expect(buildFofoPrompt('SUMMARY', convCtx, longConversation, 'Resumo')).toContain('transfere o offset de leitura para os consumidores');
+  });
+
+  it('aula e resumo são sobre a questão ou a dúvida da conversa, quando houver', () => {
+    for (const mode of ['LESSON', 'SUMMARY'] as const) {
+      expect(buildFofoPrompt(mode, convCtx, longConversation, 'x')).toMatch(/se a conversa tiver uma questão ou dúvida/i);
+    }
+  });
+
+  it('anunciou uma questão e não colou: a FofoIA pede em vez de inventar', () => {
+    expect(buildFofoPrompt('QUICK', convCtx, [], 'essa foi uma questão que fiz:')).toMatch(/ainda não mandou/i);
+  });
+});

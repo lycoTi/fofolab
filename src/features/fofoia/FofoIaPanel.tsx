@@ -80,10 +80,14 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     if (list) list.scrollTop = list.scrollHeight;
   }, [turns.length, loading]);
 
+  // Depois de conversar (uma questão colada, uma dúvida), aula e resumo são sobre isso, não o tópico genérico
+  const talked = turns.some((t) => t.role === 'student' && !t.smallTalk);
+  const subject = talked ? `o que conversamos (tópico ${topicLabel})` : topicLabel;
+
   const startLesson = (part?: number, guess = '', partTotal?: number) => {
     props.onWiden(LESSON_MIN_WIDTH);
     const palpite = guess.trim() ? ` Meu palpite antes da aula: ${guess.trim()}` : '';
-    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${topicLabel}.${palpite}`, 'LESSON', { part, partTotal });
+    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${subject}.${palpite}`, 'LESSON', { part, partTotal });
   };
   // Tópico nunca tentado: antes da primeira aula, o aquecimento (uma vez por tópico)
   const lesson = (part?: number, partTotal?: number) => {
@@ -144,7 +148,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             onResume={() => void resume(turn)}
             onAnotherHint={hint}
             onLesson={() => lesson()}
-            onSummary={() => void send(`Resumo de revisão de ${topicLabel}`, 'SUMMARY')}
+            onSummary={() => void send(talked ? `Resumo de revisão do que conversamos (tópico ${topicLabel}).` : `Resumo de revisão de ${topicLabel}`, 'SUMMARY')}
             onSaveSummary={props.onSaveSummary}
             onRetry={() => turn.retry && void send(turn.retry.message, turn.retry.requested, turn.retry.options)}
           />
@@ -167,7 +171,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         )}
         {loading && (
           <p className="flex items-center gap-1.5 text-[11px] text-slate-400">
-            <Loader2 size={12} className="animate-spin" />
+            <CurrentFofo pose="pensando" motion="full" decorative />
             A FofoIA está pensando…
           </p>
         )}

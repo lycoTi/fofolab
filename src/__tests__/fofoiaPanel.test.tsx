@@ -248,3 +248,26 @@ describe('Resposta cortada no teto de tamanho', () => {
     expect(onContinue).not.toHaveBeenCalled();
   });
 });
+
+describe('Aula completa e resumo depois de uma conversa', () => {
+  const press = async (name: string) => {
+    await act(async () => {
+      fireEvent.click(screen.getAllByRole('button', { name })[0]);
+    });
+  };
+
+  it('sem conversa, a aula é do tópico; depois de conversar, aula e resumo são sobre o que foi conversado', async () => {
+    const { unmount } = render(<FofoIaPanel {...props()} />);
+    await press('Aula completa');
+    expect(screen.getByText('Aula completa sobre 1.1 Microsserviços.')).toBeTruthy();
+    unmount();
+    localStorage.clear();
+
+    render(<FofoIaPanel {...props()} />);
+    await ask('Por que o broker de log distribuído deixa o offset com o consumidor?');
+    await press('Aula completa');
+    expect(screen.getByText('Aula completa sobre o que conversamos (tópico 1.1 Microsserviços).')).toBeTruthy();
+    await press('Salvar resumo de revisão');
+    expect(screen.getByText('Resumo de revisão do que conversamos (tópico 1.1 Microsserviços).')).toBeTruthy();
+  });
+});
