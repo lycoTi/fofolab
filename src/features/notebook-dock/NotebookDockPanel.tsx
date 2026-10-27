@@ -146,7 +146,7 @@ export function NotebookDockPanel({
           <div className="flex items-center justify-between gap-2">
             <div className="truncate">
               <h3 className="text-xs font-bold text-white truncate">
-                📓 {notebook?.title || `Caderno ${currentTopic?.code || ''} — ${currentTopic?.title || ''}`}
+                {notebook?.title || `Caderno ${currentTopic?.code || ''} — ${currentTopic?.title || ''}`}
               </h3>
               <div className="flex items-center gap-2">
                 <p className="text-[11px] text-slate-400 truncate">{currentSubject?.name || 'Disciplina'}</p>

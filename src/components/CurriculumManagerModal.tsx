@@ -15,6 +15,7 @@ import {
   X,
 } from 'lucide-react';
 import { BackupPanel } from './BackupPanel';
+import { StatusSquare } from './StatusSquare';
 import { getSampleSubtopicsForCalibration } from '../lib/cycleEngine';
 import type { BackupEntry } from '../lib/storage';
 import { parseSyllabusTopics } from '../lib/syllabusImport';
@@ -173,7 +174,8 @@ export function CurriculumManagerModal({
         <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
           <div>
             <h2 className="text-base font-bold text-white flex items-center gap-2">
-              🗂️ Organizar Edital, Disciplinas e Tópicos
+              <Layers size={16} className="text-orange-400" />
+              Organizar Edital, Disciplinas e Tópicos
             </h2>
             <p className="text-xs text-slate-400 mt-0.5">
               Plano ativo: <strong className="text-orange-300">{activePlan.title}</strong>
@@ -257,7 +259,7 @@ export function CurriculumManagerModal({
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               <div className="md:col-span-5 p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-orange-400">
-                  {editingPlanId ? '✏️ Editar Plano de Estudo' : '➕ Novo Plano / Concurso'}
+                  {editingPlanId ? 'Editar Plano de Estudo' : 'Novo Plano / Concurso'}
                 </h3>
 
                 <div className="space-y-2.5 text-xs">
@@ -446,8 +448,8 @@ export function CurriculumManagerModal({
               <div className="md:col-span-5 p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-orange-400">
                   {editingSubjectId
-                    ? '✏️ Editar Disciplina'
-                    : `➕ Nova Disciplina em ${activePlan.organ || activePlan.title}`}
+                    ? 'Editar Disciplina'
+                    : `Nova Disciplina em ${activePlan.organ || activePlan.title}`}
                 </h3>
 
                 <div className="space-y-2.5 text-xs">
@@ -491,7 +493,7 @@ export function CurriculumManagerModal({
                   {/* Preview de Subtópicos Reais para ajudar a calibrar Base e Afinidade */}
                   <div className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 space-y-1">
                     <div className="text-[10px] font-semibold text-orange-300">
-                      🔎 O que cai nesta matéria (use p/ calibrar Base e Afinidade):
+                      O que cai nesta matéria (use p/ calibrar Base e Afinidade):
                     </div>
                     <ul className="text-[11px] text-slate-400 list-disc pl-4 space-y-0.5">
                       {getSampleSubtopicsForCalibration(subjName || selectedSubject?.name || '').map(
@@ -648,8 +650,8 @@ export function CurriculumManagerModal({
               <div className="md:col-span-5 p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-3">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-orange-400">
                   {editingTopicId
-                    ? '✏️ Editar Tópico do Edital'
-                    : `➕ Novo Tópico em ${selectedSubject?.name || 'Disciplina'}`}
+                    ? 'Editar Tópico do Edital'
+                    : `Novo Tópico em ${selectedSubject?.name || 'Disciplina'}`}
                 </h3>
 
                 {!selectedSubject ? (
@@ -675,10 +677,10 @@ export function CurriculumManagerModal({
                           onChange={(e) => setTopicStatus(e.target.value as TopicStatus)}
                           className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white focus:border-orange-500 outline-none"
                         >
-                          <option value="PENDING">⚪ Pendente</option>
-                          <option value="STUDYING">🔵 Em Estudo</option>
-                          <option value="REVIEW">🟡 Em Revisão</option>
-                          <option value="MASTERED">🟢 Dominado</option>
+                          <option value="PENDING">Pendente</option>
+                          <option value="STUDYING">Em Estudo</option>
+                          <option value="REVIEW">Em Revisão</option>
+                          <option value="MASTERED">Dominado</option>
                         </select>
                       </div>
                     </div>
@@ -930,7 +932,12 @@ function SyllabusPasteBox({
               </button>
             )}
           </div>
-          {result && <p className="text-emerald-300">✅ {result}</p>}
+          {result && (
+            <p className="flex items-center gap-1.5 text-emerald-300">
+              <StatusSquare tone="emerald" />
+              {result}
+            </p>
+          )}
           {preview && (
             <div className="max-h-56 overflow-y-auto space-y-1 pr-1">
               {preview.length === 0 && (

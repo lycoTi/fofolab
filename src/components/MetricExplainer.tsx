@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Info, X } from 'lucide-react';
+import { Calculator, ChevronDown, ChevronUp, HelpCircle, Info, X } from 'lucide-react';
 import type { MetricExplanation } from '../lib/explainabilityEngine';
 
 interface MetricExplainerProps {
@@ -87,7 +87,7 @@ export function MetricExplainer({
                   className="w-full py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 font-semibold flex items-center justify-between transition"
                 >
                   <span className="flex items-center gap-1.5">
-                    <span>🔬</span> Ver cálculo e bastidores matemáticos
+                    <Calculator size={13} /> Ver cálculo e bastidores matemáticos
                   </span>
                   {showFormulaDetails ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </button>

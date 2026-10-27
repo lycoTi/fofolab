@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FileText, GraduationCap, HelpCircle, Flame, Layers, Network, PanelLeft, Sun, Wrench } from 'lucide-react';
+import { FileText, GraduationCap, HelpCircle, Flame, Layers, Link2, Network, PanelLeft, Sun, Wrench } from 'lucide-react';
 import { formatDuration } from './lib/timeFormat';
 import { useConfirmDialog } from './components/ConfirmDialog';
 import { CurriculumManagerModal, type CurriculumSection } from './components/CurriculumManagerModal';
@@ -1319,7 +1319,7 @@ export default function App() {
                     {activeTab === 'graph' && (
                       <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
                         <h3 className="text-sm font-bold text-white">
-                          🕸️ Conexões entre Tópicos e Pré-requisitos ({topicLinks.length})
+                          Conexões entre Tópicos e Pré-requisitos ({topicLinks.length})
                         </h3>
                         <p className="text-xs text-slate-400">
                           O mapa interativo, com criação de vínculos pela tela, ainda está em construção. Por enquanto,
@@ -1328,7 +1328,8 @@ export default function App() {
                         <div className="space-y-2 text-xs text-slate-300">
                           {topicLinks.map((lnk) => (
                             <div key={lnk.id} className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                              🔗 <strong>{lnk.relation_type}:</strong> {lnk.notes}
+                              <Link2 size={12} aria-hidden="true" className="mr-1.5 inline align-[-2px] text-slate-500" />
+                              <strong>{lnk.relation_type}:</strong> {lnk.notes}
                             </div>
                           ))}
                         </div>

@@ -61,7 +61,7 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   await page.goto('/');
   await expect(page.getByText('Calibrar Meu Roteiro de Estudos')).toBeVisible();
 
-  await page.getByText('🔥 Modo Pós-Edital (Edital Publicado)').click();
+  await page.getByText('Modo Pós-Edital (Edital Publicado)').click();
   await page.getByRole('button', { name: /Continuar/ }).click();
   await page.getByRole('button', { name: '02:00 nos dias de estudo' }).click();
   await page.getByRole('button', { name: /Continuar/ }).click();
@@ -69,7 +69,7 @@ test('primeiro acesso: o assistente grava horas e estratégia no plano e o Meu D
   // Autoavaliação: pular mantém o nível que já estava em cada matéria
   await expect(page.getByText('Quanto você já sabe de cada matéria?')).toBeVisible();
   await page.getByRole('button', { name: /Continuar/ }).click();
-  await expect(page.getByText('⚡ Alta Rentabilidade (Pós-Edital / Tempo Escasso)')).toBeVisible();
+  await expect(page.getByText('Alta Rentabilidade (Pós-Edital / Tempo Escasso)')).toBeVisible();
   await page.getByRole('button', { name: /Gerar Meu Roteiro de Hoje/ }).click();
 
   // O roteiro de hoje fica na coluna da bancada, refeito com o perfil recém-calibrado

@@ -33,7 +33,7 @@ export function describeBackupLabel(label: string): string {
 function describeStorage(kind: StorageKind | null): string {
   if (kind === 'tauri-file') return 'Num arquivo na pasta de dados do FofoLab neste computador.';
   if (kind === 'indexeddb') return 'No armazenamento interno deste navegador (versão de desenvolvimento).';
-  if (kind === 'memory') return '⚠️ Só nesta sessão — nada está sendo gravado. Faça um backup antes de fechar.';
+  if (kind === 'memory') return 'Só nesta sessão — nada está sendo gravado. Faça um backup antes de fechar.';
   return 'Carregando…';
 }
 

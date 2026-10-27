@@ -126,7 +126,7 @@ export function QuestionImportModal({
               onClick={() => setShowFormat((v) => !v)}
               className="w-full py-2 px-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 flex items-center justify-between"
             >
-              <span>📋 Ver formatos aceitos</span>
+              <span>Ver formatos aceitos</span>
               {showFormat ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
             </button>
             {showFormat && (

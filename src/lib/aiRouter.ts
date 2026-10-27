@@ -377,7 +377,7 @@ export async function callAiProviders(
 }
 
 const AI_UNAVAILABLE_REPLY =
-  '⚠️ Não consegui falar com a IA agora (sem internet, chave inválida ou limite do plano gratuito atingido). Tente de novo em instantes.';
+  'Não consegui falar com a IA agora (sem internet, chave inválida ou limite do plano gratuito atingido). Tente de novo em instantes.';
 
 /** Texto para quando o plano grátis pediu uma pausa (limite por minuto). */
 export function aiPauseReply(seconds: number): string {

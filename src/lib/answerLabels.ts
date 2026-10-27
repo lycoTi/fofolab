@@ -1,3 +1,4 @@
+import type { StatusTone } from '../components/StatusSquare';
 import type { ReviewConfidence, SelfDiagnosisType } from '../types/database';
 
 /**
@@ -11,10 +12,20 @@ export const CONFIDENCE_LABEL: Record<ReviewConfidence, string> = {
 };
 
 export const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
-  MASTERED: '🟢 Dominei',
-  DOUBT: '🟡 Acertei na dúvida',
-  LUCKY_GUESS: '🎲 Acertei no chute',
-  BASE_GAP: '🔴 Não sabia',
-  MISCONCEPTION: '🔀 Confundi com outra coisa',
-  BOARD_TRAP: '🟠 Pegadinha ou desatenção',
+  MASTERED: 'Dominei',
+  DOUBT: 'Acertei na dúvida',
+  LUCKY_GUESS: 'Acertei no chute',
+  BASE_GAP: 'Não sabia',
+  MISCONCEPTION: 'Confundi com outra coisa',
+  BOARD_TRAP: 'Pegadinha ou desatenção',
+};
+
+/** Cor do quadradinho ao lado de cada diagnóstico (no lugar dos antigos 🟢🟡🔴). */
+export const DIAGNOSIS_TONE: Record<SelfDiagnosisType, StatusTone> = {
+  MASTERED: 'emerald',
+  DOUBT: 'amber',
+  LUCKY_GUESS: 'amber',
+  BASE_GAP: 'rose',
+  MISCONCEPTION: 'rose',
+  BOARD_TRAP: 'orange',
 };

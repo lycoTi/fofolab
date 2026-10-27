@@ -1,4 +1,5 @@
-import { DIAGNOSIS_LABEL } from '../../lib/answerLabels';
+import { StatusSquare } from '../../components/StatusSquare';
+import { DIAGNOSIS_LABEL, DIAGNOSIS_TONE } from '../../lib/answerLabels';
 import { getAllowedDiagnoses } from '../../lib/diagnosis';
 import type { ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { chip, chipOff, chipOn } from './ConfidencePicker';
@@ -30,7 +31,8 @@ export function DiagnosisPicker({
       <p className="text-xs text-slate-400">{isCorrect ? 'Como foi?' : 'Por quê?'}</p>
       <div className="flex flex-wrap gap-1.5">
         {allowed.map((d) => (
-          <button key={d} type="button" aria-pressed={value === d} onClick={() => onChange(d)} className={`${chip} ${value === d ? chipOn : chipOff}`}>
+          <button key={d} type="button" aria-pressed={value === d} onClick={() => onChange(d)} className={`${chip} inline-flex items-center gap-1.5 ${value === d ? chipOn : chipOff}`}>
+            <StatusSquare tone={DIAGNOSIS_TONE[d]} />
             {DIAGNOSIS_LABEL[d]}
           </button>
         ))}

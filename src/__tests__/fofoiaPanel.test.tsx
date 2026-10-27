@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { FofoIaPanel, type FofoIaPanelProps } from '../features/fofoia/FofoIaPanel';
 import type { StudentContextSnapshot } from '../lib/aiRouter';
@@ -52,12 +52,15 @@ beforeEach(() => {
 });
 afterEach(() => vi.unstubAllEnvs());
 
+/** Selinho do jeito da resposta, dentro da conversa (os botões de baixo têm nomes iguais). */
+const badge = (text: string) => within(screen.getByRole('log', { name: 'Conversa com a FofoIA' })).getByText(text);
+
 describe('Painel da FofoIA (spec 11)', () => {
   it('responde com o selinho do jeito e o rótulo de exemplo; avisa que as anotações vão junto', async () => {
     const { container } = render(<FofoIaPanel {...props()} />);
     expect(screen.getByText('Suas anotações deste tópico vão junto com a pergunta para a IA.')).toBeTruthy();
     await ask('Qual a diferença entre orquestração e coreografia?');
-    expect(screen.getByText('🐹💡 Rápida')).toBeTruthy();
+    expect(badge('Rápida')).toBeTruthy();
     expect(screen.getAllByText('Exemplo simulado — a IA ainda não está configurada').length).toBeGreaterThan(0);
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
   });
@@ -66,7 +69,7 @@ describe('Painel da FofoIA (spec 11)', () => {
     const { container } = render(<FofoIaPanel {...props()} />);
     await ask('oi');
     expect(screen.getByText(/Estou aqui para estudar/)).toBeTruthy();
-    expect(container.textContent).not.toContain('🐹💡 Rápida');
+    expect(within(screen.getByRole('log', { name: 'Conversa com a FofoIA' })).queryByText('Rápida')).toBeNull();
     expect(container.textContent).not.toContain('Exemplo simulado');
     expect(screen.queryByRole('button', { name: 'Salvar resumo de revisão' })).toBeNull();
   });
@@ -87,7 +90,7 @@ describe('Painel da FofoIA (spec 11)', () => {
   it('pergunta de base vira "Do zero" e sugere a aula completa', async () => {
     render(<FofoIaPanel {...props()} />);
     await ask('o que é um microsserviço?');
-    expect(screen.getByText('🐹🌱 Do zero')).toBeTruthy();
+    expect(badge('Do zero')).toBeTruthy();
     expect(screen.getByText(/Parece que vale a aula completa sobre 1.1 Microsserviços/)).toBeTruthy();
   });
 
@@ -98,7 +101,7 @@ describe('Painel da FofoIA (spec 11)', () => {
       fireEvent.click(screen.getByRole('button', { name: 'Aula completa' }));
     });
     expect(p.onWiden).toHaveBeenCalledWith(560);
-    expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
+    expect(badge('Aula completa')).toBeTruthy();
     expect(screen.getByRole('button', { name: /Continuar \(Parte 2 de 2\)/ })).toBeTruthy();
   });
 
@@ -107,7 +110,7 @@ describe('Painel da FofoIA (spec 11)', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Pedir pista' }));
     });
-    expect(screen.getByText('🐹🔎 Pista')).toBeTruthy();
+    expect(badge('Pista')).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Outra pista' })).toBeTruthy();
   });
 
@@ -126,7 +129,7 @@ describe('Painel da FofoIA (spec 11)', () => {
     await act(async () => {
       fireEvent.click(screen.getAllByRole('button', { name: 'Salvar resumo de revisão' })[0]);
     });
-    expect(screen.getByText('🐹📝 Resumo')).toBeTruthy();
+    expect(badge('Resumo')).toBeTruthy();
     const save = screen.getByRole('button', { name: 'Salvar no caderno' }) as HTMLButtonElement;
     expect(save.disabled).toBe(true);
     expect(p.onSaveSummary).not.toHaveBeenCalled();
@@ -136,7 +139,7 @@ describe('Painel da FofoIA (spec 11)', () => {
     render(<FofoIaPanel {...props()} />);
     fireEvent.click(screen.getByRole('button', { name: 'Cai no meu edital?' }));
     await ask('microsserviços');
-    expect(screen.getByText('🐹🧭 Cai no meu edital?')).toBeTruthy();
+    expect(badge('Cai no meu edital?')).toBeTruthy();
     expect(screen.getByText(/1.1 Monolitos e microsserviços/)).toBeTruthy();
   });
 
@@ -167,7 +170,7 @@ describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {
     await act(async () => {
       fireEvent.click(screen.getByRole('button', { name: 'Ver a aula agora' }));
     });
-    expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
+    expect(badge('Aula completa')).toBeTruthy();
     expect(screen.getAllByText(/Meu palpite antes da aula: divide o sistema/).length).toBeGreaterThan(0);
     unmount();
 
@@ -194,7 +197,7 @@ describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {
     render(<FofoIaPanel {...props({ firstContact: false })} />);
     await clickLesson();
     expect(screen.queryByText(/Antes da aula/)).toBeNull();
-    expect(screen.getByText('🐹📚 Aula completa')).toBeTruthy();
+    expect(badge('Aula completa')).toBeTruthy();
   });
 });
 

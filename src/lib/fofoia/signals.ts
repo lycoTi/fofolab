@@ -8,12 +8,12 @@ export type FofoMode = 'QUICK' | 'FROM_ZERO' | 'LESSON' | 'SUMMARY' | 'EDITAL' |
 
 /** Selinho mostrado no topo de cada resposta. */
 export const MODE_BADGE: Record<FofoMode, string> = {
-  QUICK: '🐹💡 Rápida',
-  FROM_ZERO: '🐹🌱 Do zero',
-  LESSON: '🐹📚 Aula completa',
-  SUMMARY: '🐹📝 Resumo',
-  EDITAL: '🐹🧭 Cai no meu edital?',
-  HINT: '🐹🔎 Pista',
+  QUICK: 'Rápida',
+  FROM_ZERO: 'Do zero',
+  LESSON: 'Aula completa',
+  SUMMARY: 'Resumo',
+  EDITAL: 'Cai no meu edital?',
+  HINT: 'Pista',
 };
 
 /** Abaixo disso o tópico é tratado como "do zero" (linguagem simples, metáfora, pré-requisito). */

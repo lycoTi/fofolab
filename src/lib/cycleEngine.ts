@@ -642,7 +642,7 @@ export function calculateDynamicStudyCycle(params: {
     suggestions.push({
       id: 'sug-overload',
       type: 'OVERLOAD_WARNING',
-      title: '⚠️ Alerta de Diluição de Ciclo (Muitas Matérias Simultâneas)',
+      title: 'Alerta de Diluição de Ciclo (Muitas Matérias Simultâneas)',
       description: overloadMessage,
     });
   }
@@ -654,7 +654,7 @@ export function calculateDynamicStudyCycle(params: {
     suggestions.push({
       id: 'sug-prereq',
       type: 'PREREQUISITE_ALERT',
-      title: `🔗 Conexão Detectada: ${hotTopicWithPrereq.topic.code} ${hotTopicWithPrereq.topic.title}`,
+      title: `Conexão Detectada: ${hotTopicWithPrereq.topic.code} ${hotTopicWithPrereq.topic.title}`,
       description: `Este tópico está quente no Mapa de Calor (${hotTopicWithPrereq.heatScore}/10) e possui vínculo direto com: ${hotTopicWithPrereq.relatedPrerequisiteTitles.join(', ')}. Revisar o pré-requisito destrava os acertos aqui!`,
     });
   }
@@ -662,7 +662,7 @@ export function calculateDynamicStudyCycle(params: {
   suggestions.push({
     id: 'sug-reverse-study',
     type: 'REVERSE_STUDY_INFO',
-    title: '🛡️ Confiança Amostral Progressiva & Estudo Reverso',
+    title: 'Confiança Amostral Progressiva & Estudo Reverso',
     description:
       'Sua proficiência é ponderada pela maturidade da amostra de questões resolvidas e pela curva de esquecimento, sem nunca estourar seu limite de horas semanais.',
   });

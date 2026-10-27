@@ -80,10 +80,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Sprites do app gerados por `node tools/mascote/gen.cjs` em `fofoSprites.generated.ts` (tipado: falta de roupa não
   compila). Testes: `fofoWardrobe`, `fofoSprite`, `fofoOutfitContext` + E2E `e2e/fofo.spec.ts` (roupa por aba e
   Halloween em outubro); `npm test` (616), `test:e2e` (37) e `build` verdes. Nada novo é gravado no banco.
-  **Falta (parte 2):** trocar os outros emojis (🐹 em "Pedir pista"/"Aprofundar", sinais da FofoIA, Wizard, 🟢🟡🔴…)
-  por ícones/quadradinhos + teste de auditoria reprovando emoji em texto de interface; "Roupa do Fofo" nas
-  configurações e botão "fui nomeado" (precisam gravar: migração); poses (pensando, dormindo, comemorando); ícone de
-  16 px. Rodar brainstorming e plano antes da parte 2.
+  **Parte 2a feita (26/10/2026):** emojis de interface trocados — status por `StatusSquare` (quadradinho de pixel +
+  texto: diagnóstico, painel Admin, resultado de importação), ações por ícone (`Lightbulb` "Pedir pista",
+  `GraduationCap` "Aprofundar", `Calculator`, `Link2`, `Layers`), selinho da FofoIA só com o nome do jeito, Fofo no
+  Wizard; títulos sem emoji. Auditoria `src/__tests__/noEmojiInUi.test.ts` reprova emoji em texto de interface (exceções
+  de conteúdo listadas com o porquê). A lista da conversa da FofoIA virou `role="log"` ("Conversa com a FofoIA").
+  `npm test` (627), `test:e2e` (38) e `build` verdes.
+  **Falta (parte 2b):** "Roupa do Fofo" e botão "fui nomeado" (gravar), roupas por hora do dia (em discussão com o dono),
+  animação do Fofo fora dos avisos (em discussão), poses (pensando, dormindo, comemorando) e ícone de 16 px.
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):

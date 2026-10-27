@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Loader2, Sparkles } from 'lucide-react';
+import { GraduationCap, Loader2, Sparkles } from 'lucide-react';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { AnswerCorrection } from '../answer-flow/AnswerCorrection';
 import { DiagnosisPicker } from '../answer-flow/DiagnosisPicker';
@@ -79,7 +79,8 @@ export function QuestionCorrection(props: {
       <div className="flex flex-wrap items-center gap-2">
         {props.onDeepen && (
           <button type="button" onClick={props.onDeepen} className="flex items-center gap-1.5 rounded-lg border border-orange-500/40 px-3 py-1.5 text-xs font-semibold text-orange-200 hover:bg-orange-500/10">
-            🐹 Aprofundar com a FofoIA
+            <GraduationCap size={13} />
+            Aprofundar com a FofoIA
           </button>
         )}
         {props.onNextQuestion && (

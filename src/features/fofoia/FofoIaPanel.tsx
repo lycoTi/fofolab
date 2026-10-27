@@ -127,7 +127,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         </div>
       </div>
 
-      <div ref={listRef} className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
+      <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (
           <p className="rounded-xl border border-slate-800 bg-slate-950/70 p-3 text-xs leading-relaxed text-slate-300">
             {`Oi! Sou a FofoIA. Pergunte o que quiser sobre ${topicLabel}: eu explico rápido ou dou uma aula completa.`}

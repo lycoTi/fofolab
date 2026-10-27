@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ArrowRight, CheckCircle2, Compass, FileUp, Sparkles, Target, X } from 'lucide-react';
+import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import { parseWeekdayMinutes, type WeekdayMinutes } from '../../lib/availability';
 import { HoursStep } from './HoursStep';
 import type { SelfAssessmentInput, StudyMoment, StudyPlan, StudyStrategy } from '../../types/database';
@@ -133,9 +134,7 @@ export function OnboardingWizardModal({
         {/* Cabeçalho do Wizard */}
         <div className="flex items-center justify-between border-b border-slate-800 pb-3">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-xl shadow-lg shadow-orange-500/20">
-              🐹
-            </div>
+            <CurrentFofo motion="full" decorative />
             <div>
               <h2 className="text-sm font-bold text-white flex items-center gap-2">
                 <span>Calibrar Meu Roteiro de Estudos</span>
@@ -181,12 +180,12 @@ export function OnboardingWizardModal({
               {[
                 {
                   id: 'PRE_EDITAL' as const,
-                  title: '🛡️ Modo Pré-Edital (Recomendado)',
+                  title: 'Modo Pré-Edital (Recomendado)',
                   subtitle: 'Construção da base sólida nas matérias principais com antecedência, sem pressa nem sufoco.',
                 },
                 {
                   id: 'POS_EDITAL' as const,
-                  title: '🔥 Modo Pós-Edital (Edital Publicado)',
+                  title: 'Modo Pós-Edital (Edital Publicado)',
                   subtitle: 'Tiro curto e intensivo. Foco total em custo-benefício e descarte de tópicos com baixo retorno.',
                 },
               ].map((opt) => (
@@ -286,17 +285,17 @@ export function OnboardingWizardModal({
               {[
                 {
                   id: 'BASE_COMUM' as const,
-                  title: '🛡️ Garantir 100% da Base Comum',
+                  title: 'Garantir 100% da Base Comum',
                   desc: 'Foco prioritário em Português, Dir. Administrativo, Constitucional e Raciocínio Lógico (o feijão com arroz que garante aprovação).',
                 },
                 {
                   id: 'MAIS_COBRADOS' as const,
-                  title: '🎯 Atacar o que Mais Cai e Meus Pontos Fracos',
+                  title: 'Atacar o que Mais Cai e Meus Pontos Fracos',
                   desc: 'Foco em análise empírica de provas anteriores da banca, atacando os tópicos mais recorrentes.',
                 },
                 {
                   id: 'ALTO_PESO_CURTO' as const,
-                  title: '⚡ Alta Rentabilidade (Pós-Edital / Tempo Escasso)',
+                  title: 'Alta Rentabilidade (Pós-Edital / Tempo Escasso)',
                   desc: 'Dedicação quase exclusiva às disciplinas de maior peso. Descarta tópicos densos de baixo retorno na prova.',
                 },
               ].map((strat) => (
@@ -352,7 +351,7 @@ export function OnboardingWizardModal({
           >
             {step === TOTAL_STEPS ? (
               <>
-                <span>Gerar Meu Roteiro de Hoje 🚀</span>
+                <span>Gerar Meu Roteiro de Hoje</span>
               </>
             ) : (
               <>

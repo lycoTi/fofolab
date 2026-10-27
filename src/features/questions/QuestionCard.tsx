@@ -1,4 +1,4 @@
-import { Eye, Star } from 'lucide-react';
+import { Eye, Lightbulb, Star } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import type { QuestionComplexityProfile } from '../../lib/aiRouter';
 import { explainQuestionComplexity } from '../../lib/explainabilityEngine';
@@ -51,8 +51,9 @@ export function QuestionCard(props: {
       {!props.locked && (
         <div className="flex flex-wrap items-center gap-2 border-t border-slate-800 pt-3 text-xs">
           {props.onHint && (
-            <button type="button" onClick={props.onHint} className="rounded-lg border border-orange-500/30 px-3 py-1.5 font-medium text-orange-200 hover:bg-orange-500/10">
-              🐹 Pedir pista à FofoIA
+            <button type="button" onClick={props.onHint} className="flex items-center gap-1.5 rounded-lg border border-orange-500/30 px-3 py-1.5 font-medium text-orange-200 hover:bg-orange-500/10">
+              <Lightbulb size={13} />
+              Pedir pista à FofoIA
             </button>
           )}
           <button type="button" onClick={props.onFirstContact} className="flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300 hover:text-white">

@@ -1,4 +1,5 @@
 import { FolderGit2, ShieldAlert, Wrench } from 'lucide-react';
+import { StatusSquare } from '../../components/StatusSquare';
 import type { AdminBoardBlueprint, CareerTrack } from '../../types/database';
 
 interface AdminFactoryViewProps {
@@ -16,9 +17,9 @@ function getCatalogStatusClass(status: CareerTrack['catalog_status']): string {
 }
 
 function getCatalogStatusLabel(status: CareerTrack['catalog_status']): string {
-  if (status === 'CATALOGED') return '🟢 Catalogada';
-  if (status === 'PARTIAL') return '🟡 Parcial / Em Dossiê';
-  return '⚪ No Radar';
+  if (status === 'CATALOGED') return 'Catalogada';
+  if (status === 'PARTIAL') return 'Parcial / Em Dossiê';
+  return 'No Radar';
 }
 
 export function AdminFactoryView({ adminData }: AdminFactoryViewProps) {
@@ -47,7 +48,7 @@ export function AdminFactoryView({ adminData }: AdminFactoryViewProps) {
       </div>
 
       <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
-        ⚠️ Dados de exemplo: o catálogo de trilhas e a verificação automática das páginas das bancas ainda não
+        Dados de exemplo: o catálogo de trilhas e a verificação automática das páginas das bancas ainda não
         foram implementados — os status abaixo não vêm de uma checagem real.
       </div>
 
@@ -84,8 +85,9 @@ export function AdminFactoryView({ adminData }: AdminFactoryViewProps) {
                 className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex justify-between"
               >
                 <span>{bp.board_name}</span>
-                <span className="text-slate-400 font-semibold">
-                  {bp.health_status === 'OK' ? '🟢 Estrutura Íntegra (exemplo)' : '🔴 Mudança Detectada (exemplo)'}
+                <span className="flex items-center gap-1.5 text-slate-400 font-semibold">
+                  <StatusSquare tone={bp.health_status === 'OK' ? 'emerald' : 'rose'} />
+                  {bp.health_status === 'OK' ? 'Estrutura Íntegra (exemplo)' : 'Mudança Detectada (exemplo)'}
                 </span>
               </div>
             ))}

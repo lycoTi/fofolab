@@ -15,6 +15,8 @@ async function openQuestions(page: Page) {
 }
 
 const fofo = (page: Page) => page.getByRole('region', { name: 'FofoIA' });
+/** Selinho do jeito da resposta, dentro da conversa (os botões de baixo têm nomes iguais). */
+const badge = (page: Page, text: string) => fofo(page).getByRole('log', { name: 'Conversa com a FofoIA' }).getByText(text, { exact: true });
 const rightColumn = (page: Page) => page.getByRole('complementary', { name: 'FofoIA e Caderno' });
 
 test('questão: confiança antes, pista da FofoIA sem gabarito, depois diagnóstico deduzido e "Por quê?"', async ({ page }) => {
@@ -22,7 +24,7 @@ test('questão: confiança antes, pista da FofoIA sem gabarito, depois diagnóst
   await expect(page.getByRole('button', { name: /^A\)/ })).toHaveCount(0);
 
   await page.getByRole('button', { name: /Pedir pista à FofoIA/ }).click();
-  const hint = fofo(page).getByText('🐹🔎 Pista');
+  const hint = badge(page, 'Pista');
   await expect(hint).toBeVisible();
   await expect(fofo(page).getByText('Exemplo simulado — a IA ainda não está configurada').first()).toBeVisible();
   await expect(fofo(page)).not.toContainText('Gabarito');
@@ -80,19 +82,19 @@ test('aula completa alarga a coluna; resumo de exemplo não vai para o caderno; 
   await fofo(page).getByRole('button', { name: 'Aula completa' }).click();
   const warmup = fofo(page).getByRole('button', { name: 'Ver a aula agora' });
   if (await warmup.isVisible()) await warmup.click();
-  await expect(fofo(page).getByText('🐹📚 Aula completa')).toBeVisible();
+  await expect(badge(page, 'Aula completa')).toBeVisible();
   await expect.poll(async () => (await rightColumn(page).boundingBox())!.width).toBeGreaterThanOrEqual(560);
   await expect(fofo(page).getByRole('button', { name: /Continuar \(Parte 2 de 2\)/ })).toBeVisible();
 
   await fofo(page).getByRole('button', { name: 'Salvar resumo de revisão' }).first().click();
-  await expect(fofo(page).getByText('🐹📝 Resumo')).toBeVisible();
+  await expect(badge(page, 'Resumo')).toBeVisible();
   await expect(fofo(page).getByRole('button', { name: 'Salvar no caderno' })).toBeDisabled();
   await page.screenshot({ path: `${SCREENS}/41-fofoia-aula-e-resumo.png` });
 
   await fofo(page).getByRole('button', { name: 'Cai no meu edital?' }).click();
   await fofo(page).getByLabel('Pergunte à FofoIA').fill('auditoria');
   await fofo(page).getByRole('button', { name: 'Enviar pergunta' }).click();
-  await expect(fofo(page).getByText('🐹🧭 Cai no meu edital?')).toBeVisible();
+  await expect(badge(page, 'Cai no meu edital?')).toBeVisible();
   await expect(fofo(page).getByText(/^Sim: aparece em /)).toBeVisible();
 });
 

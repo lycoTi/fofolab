@@ -110,7 +110,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     fireEvent.click(screen.getByText(/Continuar/i));
 
     // Passo 5 -> Concluir
-    const finishBtn = screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i);
+    const finishBtn = screen.getByText(/Gerar Meu Roteiro de Hoje/i);
     fireEvent.click(finishBtn);
 
     expect(onComplete).toHaveBeenCalledTimes(1);
@@ -136,7 +136,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     fireEvent.click(screen.getByRole('button', { name: 'Dom' }));
     fireEvent.change(screen.getByLabelText('Tempo de sábado'), { target: { value: '300' } });
     for (let i = 0; i < 3; i += 1) fireEvent.click(screen.getByText(/Continuar/i));
-    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i));
+    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje/i));
     expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([120, 120, 120, 120, 120, 300, 0]);
   });
 
@@ -175,7 +175,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     fireEvent.click(screen.getByText(/Continuar/i));
     fireEvent.click(screen.getByRole('button', { name: '03:00 nos dias de estudo' }));
     for (let i = 0; i < 3; i += 1) fireEvent.click(screen.getByText(/Continuar/i));
-    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje 🚀/i));
+    fireEvent.click(screen.getByText(/Gerar Meu Roteiro de Hoje/i));
     expect(onComplete.mock.calls[0][0].weekdayMinutes).toEqual([180, 180, 180, 180, 180, 180, 0]);
   });
 
