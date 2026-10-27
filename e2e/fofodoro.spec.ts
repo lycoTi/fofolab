@@ -42,6 +42,8 @@ test('FofoDoro: prévia, pausa curta com aviso, espera o estudante e pausa longa
   // Fim do 1º foco: aviso acolhedor e pausa curta
   await advance(page, 20 * MIN);
   await expect(toast(page)).toContainText('Parabéns: 20 minutos de foco! Que tal 5 minutos de pausa?');
+  // Na pausa, o Fofo do aviso dorme
+  await expect(toast(page).locator('svg[data-pose="dormindo"]')).toHaveCount(1);
   await expect(fofodoro.getByRole('img', { name: /^Pausa:/ })).toBeVisible();
 
   // Fim da pausa: espera o estudante — o foco não volta sozinho, nem 10 minutos depois

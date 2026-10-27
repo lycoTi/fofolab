@@ -1533,7 +1533,12 @@ export default function App() {
       />
 
       {confirmDialog}
-      <Toast message={studyBlock.message} messageId={studyBlock.messageId} onClose={studyBlock.dismissMessage} />
+      <Toast
+        message={studyBlock.message}
+        messageId={studyBlock.messageId}
+        onClose={studyBlock.dismissMessage}
+        pose={studyBlock.state.phase === 'BREAK' ? 'dormindo' : undefined}
+      />
     </div>
     </FofoOutfitProvider>
   );

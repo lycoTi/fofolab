@@ -2,7 +2,8 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { FofoSprite } from '../features/mascot/FofoSprite';
 import { FofoWardrobeButton } from '../features/mascot/FofoWardrobeButton';
-import { FOFO_SPRITES } from '../features/mascot/fofoSprites.generated';
+import { FOFO_POSES, FOFO_SPRITES } from '../features/mascot/fofoSprites.generated';
+import { POSE_LABELS, type PoseId } from '../features/mascot/poses';
 import { OUTFIT_LABELS, type OutfitId } from '../features/mascot/wardrobe';
 
 describe('Fofo em pixel art', () => {
@@ -18,6 +19,16 @@ describe('Fofo em pixel art', () => {
       used.delete('.');
       expect([...used].filter((c) => !sprite.palette[c])).toEqual([]);
     }
+  });
+
+  it('as poses também têm desenho completo e aparecem com o nome da pose', () => {
+    for (const id of Object.keys(POSE_LABELS) as PoseId[]) {
+      const pose = FOFO_POSES[id];
+      expect(pose.A).toHaveLength(32);
+      expect(pose.B.every((row) => row.length === 32)).toBe(true);
+    }
+    render(<FofoSprite pose="pensando" />);
+    expect(screen.getByRole('img', { name: 'Fofo pensando' }).getAttribute('data-pose')).toBe('pensando');
   });
 
   it('aparece com o nome da roupa e no tamanho da escala inteira', () => {

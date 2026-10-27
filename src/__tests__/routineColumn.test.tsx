@@ -248,3 +248,13 @@ describe('tempo de hoje com bloco rodando (revisão independente da 13a)', () =>
     expect((screen.getByRole('button', { name: 'Mudar o tempo de hoje' }) as HTMLButtonElement).disabled).toBe(true);
   });
 });
+
+describe('Meta da semana cumprida', () => {
+  it('o Fofo comemora quando o estudado alcança a meta da semana; antes disso, não', () => {
+    const { container, rerender } = render(<RoutineColumn {...props({ weekStudiedMinutes: 839, weekTargetMinutes: 840 })} />);
+    expect(screen.queryByText('Meta da semana cumprida.')).toBeNull();
+    rerender(<RoutineColumn {...props({ weekStudiedMinutes: 840, weekTargetMinutes: 840 })} />);
+    expect(screen.getByText('Meta da semana cumprida.')).toBeTruthy();
+    expect(container.querySelector('svg[data-pose="comemorando"]')).not.toBeNull();
+  });
+});

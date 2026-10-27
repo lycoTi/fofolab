@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Coffee, Compass, Layers, Settings2 } from 'lucide-react';
 import { Collapse } from '../../components/Collapse';
 import { formatDuration } from '../../lib/timeFormat';
+import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import type { RoutineItem, TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
 import { PeekBanner, type PeekInfo } from './PeekBanner';
@@ -132,6 +133,13 @@ export function RoutineColumn(props: RoutineColumnProps) {
           </div>
         )}
         <p className="text-xs text-slate-400">{`Semana: ${formatDuration(props.weekStudiedMinutes)} de ${formatDuration(props.weekTargetMinutes)}`}</p>
+        {/* Marco real: o Fofo comemora (e, durante o foco, só pisca) */}
+        {props.weekTargetMinutes > 0 && props.weekStudiedMinutes >= props.weekTargetMinutes && (
+          <p className="flex items-center gap-2 text-xs font-medium text-emerald-300">
+            <CurrentFofo pose="comemorando" decorative />
+            Meta da semana cumprida.
+          </p>
+        )}
         <div className="flex flex-wrap items-center gap-4">
           <button type="button" onClick={props.onOpenCycle} className={footerLink}>
             <Layers size={13} />

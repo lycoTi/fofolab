@@ -128,3 +128,13 @@ describe('aviso para leitor de tela', () => {
     expect(region.textContent).toContain('Pausa concluída.');
   });
 });
+
+describe('Fofo no aviso do FofoDoro', () => {
+  it('na pausa o Fofo dorme; nos outros avisos é o Fofo do relógio', () => {
+    const { container, rerender } = render(<Toast message="Que tal 5 minutos de pausa?" messageId={1} onClose={() => {}} pose="dormindo" />);
+    expect(container.querySelector('svg[data-pose="dormindo"]')).not.toBeNull();
+    rerender(<Toast message="Pausa concluída." messageId={2} onClose={() => {}} />);
+    expect(container.querySelector('svg[data-pose]')).toBeNull();
+    expect(container.querySelector('svg.fofo-sprite')).not.toBeNull();
+  });
+});

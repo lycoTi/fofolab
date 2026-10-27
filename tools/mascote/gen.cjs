@@ -581,6 +581,80 @@ function grip(g, cx, cy, fingers, rx = 1.3, ry = 1.4) {
   return over(g, outline(paw));
 }
 
+// 12) Poses com função (regra de identidade): pensando (FofoIA respondendo), dormindo (pausa do FofoDoro) e
+// comemorando (meta da semana). Sempre o Fofo base, com fone.
+function thinking(frame) {
+  const body = hamsterBody();
+  const fur = clone(body);
+  let g = face(clone(body));
+  // Olhos olhando para cima, para o balão
+  px(g, [[11, 14], [12, 14], [19, 14], [20, 14], [11, 15], [12, 15], [19, 15], [20, 15]], 'f');
+  px(g, [[11, 13], [19, 13]], 'w');
+  px(g, [[12, 13], [11, 14], [12, 14], [20, 13], [19, 14], [20, 14]], 'e');
+  g = headphones(g, body);
+  // Pata no queixo, palma para o rosto
+  g = grip(g, 19.6, 20.2, [[18, 19]], 1.4, 1.2);
+  // Balão de pensamento com reticências que se enchem
+  const bubble = blank();
+  fillEl(bubble, 26.5, 3, 4.6, 2.6, 'W');
+  px(bubble, [[24, 8], [23, 9]], 'W');
+  const dots = frame === 'B' ? [[24, 3], [26, 3], [28, 3]] : [[24, 3], [26, 3]];
+  px(bubble, dots, 'e');
+  g = under(g, outline(bubble));
+  return { grid: g, fur };
+}
+
+function sleeping(frame) {
+  const body = hamsterBody();
+  const fur = clone(body);
+  let g = face(clone(body));
+  // Olhos fechados (o traço de baixo) e boquinha aberta de quem ressona
+  px(g, [[11, 14], [12, 14], [19, 14], [20, 14]], 'f');
+  px(g, [[11, 15], [12, 15], [19, 15], [20, 15]], 'e');
+  px(g, [[14, 17], [17, 17], [15, 18], [16, 18]], 'f');
+  px(g, [[15, 17], [16, 17]], 'm');
+  px(g, [[15, 18], [16, 18]], 'p');
+  g = headphones(g, body);
+  // "Z"s subindo (fonte 3×5), um grande e um pequeno; no quadro B sobem um pixel
+  const Z = ['###', '..#', '.#.', '#..', '###'];
+  const zs = blank();
+  const up = frame === 'B' ? 1 : 0;
+  Z.forEach((row, dy) => [...row].forEach((c, dx) => { if (c === '#') { px(zs, [[28 + dx, 1 + dy - up]], 'Z'); } }));
+  [['##.', '.#.', '.##']].forEach((small) => small.forEach((row, dy) => [...row].forEach((c, dx) => { if (c === '#') px(zs, [[24 + dx, 5 + dy - up]], 'z'); })));
+  g = under(g, zs);
+  return { grid: g, fur };
+}
+
+function celebrating(frame) {
+  const body = hamsterBody();
+  const fur = clone(body);
+  let g = face(clone(body));
+  // Olhos felizes (∩) e boca aberta
+  px(g, [[11, 14], [12, 14], [19, 14], [20, 14], [11, 15], [12, 15], [19, 15], [20, 15]], 'f');
+  px(g, [[11, 14], [12, 14], [10, 15], [13, 15], [19, 14], [20, 14], [18, 15], [21, 15]], 'e');
+  px(g, [[15, 17], [16, 17]], 'e');
+  g = headphones(g, body);
+  // Troféu erguido (sobe um pixel no quadro B), seguro pelas alças com as palmas para dentro
+  const lift = frame === 'B' ? 1 : 0;
+  const cup = blank();
+  fillRect(cup, 12, 20 - lift, 19, 20 - lift, 'Y');
+  fillEl(cup, 15.5, 21.5 - lift, 3.6, 2.6, 'Y');
+  fillRect(cup, 0, 25 - lift, 31, 31, '.');
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) if (cup[y][x] === 'Y' && x >= 17) cup[y][x] = 'D';
+  px(cup, [[11, 21 - lift], [11, 22 - lift], [20, 21 - lift], [20, 22 - lift]], 'D');
+  fillRect(cup, 15, 25 - lift, 16, 25 - lift, 'D');
+  fillRect(cup, 13, 26 - lift, 18, 26 - lift, 'D');
+  px(cup, [[13, 21 - lift]], 'W');
+  g = over(g, outline(cup));
+  g = grip(g, 9.6, 22 - lift, [[11, 21 - lift]], 1.3, 1.3);
+  g = grip(g, 22.4, 22 - lift, [[20, 21 - lift]], 1.3, 1.3);
+  const shine = blank();
+  if (frame === 'B') { px(shine, [[4, 5], [3, 6], [5, 6], [4, 7]], 'Y'); px(shine, [[27, 3], [26, 4], [28, 4], [27, 5]], 'W'); }
+  else { px(shine, [[27, 6], [26, 7], [28, 7], [27, 8]], 'Y'); px(shine, [[4, 2], [3, 3], [5, 3], [4, 4]], 'W'); }
+  g = under(g, shine);
+  return { grid: g, fur };
+}
+
 const base = {
   o: '#3a2116', f: '#e8893a', F: '#b45e28', h: '#f6b565', c: '#fbe7cb', C: '#e3c19a', p: '#ec8e8e',
   e: '#1b100b', w: '#ffffff', k: '#f1c2a8', m: '#5a2c1c', E: '#d2632b', b: '#f2876b',
@@ -599,18 +673,30 @@ const sprites = [
   { id: 'nomeado', build: appointed, palette: { ...base, N: '#2b3a5f', n: '#1a2440', W: '#f4f4f2', R: '#c0262d', r: '#8f1b21', y: '#fbc84a', v: '#7b8794', Y: '#fde047', D: '#f1ede4', d: '#cdc6b6' } },
   { id: 'madrugada', build: night, palette: { ...base, N: '#45437a', n: '#2e2c55', M: '#6764a6', y: '#e9b949', W: '#f1e8d0', V: '#d4c6a2', B: '#7d2f3e', v: '#55202b', A: '#efe6d2', a: '#c9bc9c', Y: '#fbc84a', Z: '#fff4c2', O: '#f97316', g: 'rgba(251,191,36,0.24)', q: 'rgba(251,191,36,0.10)' } },
 ];
-const out = sprites.map((s) => {
+const poseList = [
+  { id: 'pensando', build: thinking, palette: { ...base, W: '#f1f5f9' } },
+  // Dormindo já está de olhos fechados: não pisca
+  { id: 'dormindo', build: sleeping, noBlink: true, palette: { ...base, Z: '#bfdbfe', z: '#93c5fd' } },
+  // Olhos felizes (∩): piscar estragaria o desenho
+  { id: 'comemorando', build: celebrating, noBlink: true, palette: { ...base, Y: '#fbc84a', D: '#c99a2e', W: '#ffffff' } },
+];
+const render = (s) => {
   const a = s.build('A');
   const b = s.build('B');
-  return { id: s.id, palette: s.palette, A: a.grid.map((r) => r.join('')), B: b.grid.map((r) => r.join('')), closed: blinkOverlay(a.grid, a.fur, s.tallEyes).map((r) => r.join('')) };
-});
+  const closed = s.noBlink ? blank() : blinkOverlay(a.grid, a.fur, s.tallEyes);
+  return { id: s.id, palette: s.palette, A: a.grid.map((r) => r.join('')), B: b.grid.map((r) => r.join('')), closed: closed.map((r) => r.join('')) };
+};
+const out = sprites.map(render);
+const poseOut = poseList.map(render);
 const dir = __dirname;
-fs.writeFileSync(path.join(dir, 'sprites.json'), JSON.stringify(out));
+fs.writeFileSync(path.join(dir, 'sprites.json'), JSON.stringify([...out, ...poseOut]));
 // Cópia tipada para o app (src/ não importa tools/): o TypeScript reclama se faltar ou sobrar uma roupa
 const byId = Object.fromEntries(out.map(({ id, ...sprite }) => [id, sprite]));
+const posesById = Object.fromEntries(poseOut.map(({ id, ...sprite }) => [id, sprite]));
 fs.writeFileSync(
   path.join(dir, '../../src/features/mascot/fofoSprites.generated.ts'),
   `// Gerado por tools/mascote/gen.cjs (node tools/mascote/gen.cjs). Não edite à mão.
+import type { PoseId } from './poses';
 import type { OutfitId } from './wardrobe';
 
 export interface SpriteData {
@@ -621,6 +707,8 @@ export interface SpriteData {
 }
 
 export const FOFO_SPRITES: Record<OutfitId, SpriteData> = ${JSON.stringify(byId, null, 2)};
+
+export const FOFO_POSES: Record<PoseId, SpriteData> = ${JSON.stringify(posesById, null, 2)};
 `,
 );
 for (const s of out) { console.log('== ' + s.id); console.log(s.A.join('\n')); }

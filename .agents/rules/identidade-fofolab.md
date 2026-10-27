@@ -26,7 +26,8 @@ não a institucional; e existe uma zona com personalidade, onde mora o Fofo.
   outubro; Natal de 1º a 30/12; Ano-novo de 31/12 a 31/01; Carnaval das 2 semanas antes até a Quarta-feira de
   Cinzas (calculado pela Páscoa); Festa junina em junho; Dia da prova na data cadastrada; Nomeado até o estudante
   desligar ou cadastrar uma prova nova (concurso escada).
-- **Poses com função:** pensando (FofoIA respondendo), dormindo (pausa do FofoDoro), comemorando (marco real).
+- **Poses com função:** pensando (FofoIA respondendo), dormindo (aviso do começo da pausa do FofoDoro),
+  comemorando (meta da semana cumprida). O ícone de 16 px (favicon e app de desktop) sai de `tools/mascote/icon.cjs`.
 - **Movimento:** o Fofo se mexe o tempo todo, menos durante um bloco de foco do FofoDoro, quando só pisca
   (movimento na visão periférica puxa o olho da leitura). Passar o mouse num Fofo clicável faz ele se mexer.
   Respeita `prefers-reduced-motion` (parado). O resto da interface segue 150–250 ms, sem quadros.

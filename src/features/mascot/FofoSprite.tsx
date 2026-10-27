@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { FOFO_SPRITES } from './fofoSprites.generated';
+import { FOFO_POSES, FOFO_SPRITES } from './fofoSprites.generated';
+import { POSE_LABELS, type PoseId } from './poses';
 import { OUTFIT_LABELS, type OutfitId } from './wardrobe';
 
 /**
@@ -12,7 +13,9 @@ import { OUTFIT_LABELS, type OutfitId } from './wardrobe';
 export type FofoMotion = 'still' | 'blink' | 'full';
 
 interface FofoSpriteProps {
-  outfit: OutfitId;
+  outfit?: OutfitId;
+  /** Pose de um momento (pensando, dormindo, comemorando): ganha da roupa. */
+  pose?: PoseId;
   /** Escala inteira: 1 = 32 px, 2 = 64 px, 4 = 128 px. Escala quebrada borra o pixel. */
   scale?: 1 | 2 | 4;
   motion?: FofoMotion;
@@ -35,6 +38,8 @@ const FRAME_SECONDS: Record<OutfitId, number> = {
   prova: 1.4,
   nomeado: 0.9,
 };
+/** Reticências se enchendo depressa; Z subindo devagar; troféu pulando. */
+const POSE_FRAME_SECONDS: Record<PoseId, number> = { pensando: 0.6, dormindo: 1.6, comemorando: 0.7 };
 
 interface Run {
   x: number;
@@ -69,25 +74,27 @@ function Layer({ runs, className }: { runs: Run[]; className: string }) {
   );
 }
 
-export function FofoSprite({ outfit, scale = 1, motion = 'blink', decorative = false, className }: FofoSpriteProps) {
+export function FofoSprite({ outfit = 'fofodeck', pose, scale = 1, motion = 'blink', decorative = false, className }: FofoSpriteProps) {
   const layers = useMemo(() => {
-    const sprite = FOFO_SPRITES[outfit];
+    const sprite = pose ? FOFO_POSES[pose] : FOFO_SPRITES[outfit];
     return { a: toRuns(sprite.A, sprite.palette), b: toRuns(sprite.B, sprite.palette), closed: toRuns(sprite.closed, sprite.palette) };
-  }, [outfit]);
+  }, [outfit, pose]);
   const size = 32 * scale;
-  const label = OUTFIT_LABELS[outfit];
+  const label = pose ? POSE_LABELS[pose] : OUTFIT_LABELS[outfit];
+  const frameSeconds = pose ? POSE_FRAME_SECONDS[pose] : FRAME_SECONDS[outfit];
   const a11y = decorative ? { 'aria-hidden': true as const } : { role: 'img', 'aria-label': label };
 
   return (
     <svg
       {...a11y}
       data-motion={motion}
+      data-pose={pose}
       width={size}
       height={size}
       viewBox="0 0 32 32"
       shapeRendering="crispEdges"
       className={`fofo-sprite shrink-0 ${className ?? ''}`}
-      style={{ ['--fofo-frame' as string]: `${FRAME_SECONDS[outfit]}s` }}
+      style={{ ['--fofo-frame' as string]: `${frameSeconds}s` }}
     >
       {!decorative && <title>{label}</title>}
       <Layer runs={layers.a} className="fofo-fa" />

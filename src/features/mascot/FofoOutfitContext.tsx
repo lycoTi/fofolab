@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { FofoSprite, type FofoMotion } from './FofoSprite';
+import type { PoseId } from './poses';
 import { coordsForTimeZone, sunTimes } from './sun';
 import { pickOutfit, type OutfitId } from './wardrobe';
 
@@ -19,13 +20,14 @@ export function FofoOutfitProvider({ value, children }: { value: FofoOutfits; ch
   return <OutfitContext.Provider value={value}>{children}</OutfitContext.Provider>;
 }
 
-/** O Fofo com a roupa de agora. `auto` (padrão): se mexe, mas durante o foco só pisca. */
+/** O Fofo com a roupa de agora (ou numa pose de momento). `auto` (padrão): se mexe, mas durante o foco só pisca. */
 export function CurrentFofo({
   place = 'app',
   motion = 'auto',
   ...props
 }: {
   place?: 'app' | 'fofodoro';
+  pose?: PoseId;
   motion?: FofoMotion | 'auto';
   scale?: 1 | 2 | 4;
   decorative?: boolean;

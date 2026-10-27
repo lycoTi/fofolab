@@ -46,6 +46,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   `localStorage` deste computador). Testes: `aiRouter`, `fofoia`, `useFofoConversation`, `fofoiaPanel` + E2E do F5 em
   `e2e/fofoia.spec.ts`; `npm test` (626), `test:e2e` (38) e `build` verdes. Não verificado com a IA real: se o modelo
   respeita a parte de ~300 palavras (o corte agora é tratado de qualquer jeito).
+  **26/10/2026 (2º relato: "Aula completa" e "Resumo" ignoravam a conversa):** depois de conversar, os botões pedem
+  "Aula completa / Resumo de revisão do que conversamos (tópico X)"; o prompt da aula e do resumo trata da questão ou
+  dúvida da conversa (o tópico vira pano de fundo); o texto longo que o estudante colou (a questão) vai sempre junto,
+  mesmo depois de sair das 6 últimas falas; e se ele anunciar uma questão sem colar, a FofoIA pede em vez de inventar.
+  Testes em `fofoia.test.ts` e `fofoiaPanel.test.tsx`. Não verificado com a IA real.
 - [ ] Importar prova em PDF + gabarito (extração automática) → depois da 7b (o dono usa o TEC Concursos para questões).
 
 **Caderno, PDF & layout**
@@ -72,14 +77,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
-- [PARCIAL] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos em `tools/mascote/`, 11 roupas).
+- [DONE] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos em `tools/mascote/`, 11 roupas).
   **Parte 1 feita (26/10/2026):** guarda-roupa `src/features/mascot/wardrobe.ts` (roupa fixa > dia da prova > nomeado >
   data especial > madrugada > aba > base; Carnaval pela Páscoa), `FofoSprite` (SVG pixel a pixel; parado / só pisca /
   momento; "reduzir movimento" para tudo), roupa por contexto refeita a cada minuto (`FofoOutfitContext`). O Fofo
   aparece no cabeçalho (só pisca), no painel da FofoIA, no aviso do FofoDoro (se mexe) e nas telas de carregar/erro.
   Sprites do app gerados por `node tools/mascote/gen.cjs` em `fofoSprites.generated.ts` (tipado: falta de roupa não
   compila). Testes: `fofoWardrobe`, `fofoSprite`, `fofoOutfitContext` + E2E `e2e/fofo.spec.ts` (roupa por aba e
-  Halloween em outubro); `npm test` (616), `test:e2e` (37) e `build` verdes. Nada novo é gravado no banco.
+  Halloween em outubro); `npm test` (616), `test:e2e` (37) e `build` verdes. Nada novo é gravado no banco. Fechamento (parte 2c): `npm test` (642), `test:e2e` (41) e `build` verdes.
   **Parte 2a feita (26/10/2026):** emojis de interface trocados — status por `StatusSquare` (quadradinho de pixel +
   texto: diagnóstico, painel Admin, resultado de importação), ações por ícone (`Lightbulb` "Pedir pista",
   `GraduationCap` "Aprofundar", `Calculator`, `Link2`, `Layers`), selinho da FofoIA só com o nome do jeito, Fofo no
@@ -94,7 +99,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   vale para o plano e a data de prova de quando foi marcado. Testes `fofoWardrobe`, `fofoSprite`,
   `fofoOutfitContext` + E2E `e2e/fofo.spec.ts` (sol, Halloween, guarda-roupa e nomeado depois do F5);
   `npm test` (634), `test:e2e` (41) e `build` verdes.
-  **Falta (parte 2c):** poses (pensando, dormindo, comemorando) e ícone de 16 px.
+  **Parte 2c feita (26/10/2026):** poses `pensando` (no "A FofoIA está pensando…"), `dormindo` (aviso do começo da
+  pausa) e `comemorando` ("Meta da semana cumprida." no pé da coluna), com testes e o E2E do FofoDoro conferindo o
+  Fofo dormindo; ícone de 16 px desenhado à parte (`tools/mascote/icon.cjs` → favicon pixel a pixel e ícones do app
+  de desktop via `tauri icon`), com teste que barra imagem embutida no favicon. **Fofo no app: [DONE]** salvo o que
+  depende do app de desktop compilado (o ícone na barra de tarefas não foi visto num .exe).
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):
