@@ -1,4 +1,4 @@
-import { mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { readConcurso, readConcursoMeta } from './acervoStore';
 import { readClassificacao, type Concordancia } from './classificationStore';
@@ -16,6 +16,21 @@ export interface Pacote {
   vocabulario: Vocabulario;
   concursos: ConcursoMeta[];
   itens: (AcervoItem & { assuntos: AssuntoDoItem[]; incerto: boolean; concordancia: Concordancia | 'sem-classificacao' })[];
+}
+
+export interface PacoteIndexEntry {
+  id: string;
+  banca: string;
+  arquivo: string;
+  vocabVersion: number;
+  itensComAssunto: number;
+  atualizadoEm: string;
+}
+
+export interface PacoteIndex {
+  formato: 'fofolab-acervo-index';
+  versao: 1;
+  pacotes: PacoteIndexEntry[];
 }
 
 export function buildPacote(acervoDir: string): Pacote {
@@ -45,4 +60,46 @@ export function buildPacote(acervoDir: string): Pacote {
 export function writePacote(path: string, pacote: Pacote): void {
   mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, `${JSON.stringify(pacote)}\n`);
+}
+
+function readExistingIndex(indexPath: string): PacoteIndexEntry[] {
+  if (!existsSync(indexPath)) return [];
+  try {
+    const parsed = JSON.parse(readFileSync(indexPath, 'utf8')) as Partial<PacoteIndex>;
+    if (parsed.formato !== 'fofolab-acervo-index' || !Array.isArray(parsed.pacotes)) return [];
+    return parsed.pacotes;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Gera e grava o pacote da Cebraspe (`cebraspe.json` e `fofolab-acervo-cebraspe.json`) e atualiza `index.json`
+ * preservando pacotes de outras bancas (spec 12d §3.1).
+ */
+export function writePacoteAndIndex(acervoDir: string, now: Date = new Date()): { pacote: Pacote; entry: PacoteIndexEntry } {
+  const pacote = buildPacote(acervoDir);
+  const pacoteDir = join(acervoDir, 'pacote');
+  writePacote(join(pacoteDir, 'cebraspe.json'), pacote);
+  writePacote(join(pacoteDir, 'fofolab-acervo-cebraspe.json'), pacote);
+
+  const itensComAssunto = pacote.itens.filter((i) => i.assuntos.length > 0).length;
+  const entry: PacoteIndexEntry = {
+    id: 'cebraspe',
+    banca: 'Cebraspe',
+    arquivo: 'cebraspe.json',
+    vocabVersion: pacote.vocabulario.versao,
+    itensComAssunto,
+    atualizadoEm: now.toISOString(),
+  };
+
+  const indexPath = join(pacoteDir, 'index.json');
+  const others = readExistingIndex(indexPath).filter((p) => p.id !== entry.id);
+  const index: PacoteIndex = {
+    formato: 'fofolab-acervo-index',
+    versao: 1,
+    pacotes: [entry, ...others].sort((a, b) => a.id.localeCompare(b.id)),
+  };
+  writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
+  return { pacote, entry };
 }

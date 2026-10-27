@@ -6,7 +6,7 @@ import { createAgyProvider, createProvider, loadKeys, type AiProvider } from './
 import { eventDetailUrl, eventListUrl, fileUrl, isSafeIdentifier, parseEventDetail, parseEventList } from './cebraspeApi';
 import { CLASSIFY_SCHEMA } from './classifyPrompt';
 import { juntar, recalcularConsenso, runClassificacao, type Alvo, type ClassifyReport } from './classifyRun';
-import { buildPacote, writePacote } from './pacote';
+import { writePacoteAndIndex } from './pacote';
 import { createPoliteClient } from './politeClient';
 import { formatReport } from './report';
 import { runMinerador, safeFileName } from './runMinerador';
@@ -120,6 +120,10 @@ async function classify(args: string[], alvo: Alvo): Promise<number> {
   const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo, prioridade });
   console.log(formatClassifyReport(report, provider));
   console.log(`Tempo: ${Math.round((Date.now() - inicio) / 1000)} s com ${paralelo} lote(s) em paralelo.`);
+  if (report.classificados > 0) {
+    const { entry } = writePacoteAndIndex(ACERVO);
+    console.log(`Pacote atualizado: ${entry.itensComAssunto} itens com assunto, vocabulário v${entry.vocabVersion}.`);
+  }
   return 0;
 }
 
@@ -196,22 +200,27 @@ async function main(args: string[]): Promise<number> {
       return 1;
     }
     const r = juntar(ACERVO, de, para);
-    console.log(`Junção feita: vocabulário na versão ${r.versaoVocabulario}; ${r.itensAfetados} itens classificados trocaram de assunto.`);
+    const { entry } = writePacoteAndIndex(ACERVO);
+    console.log(
+      `Junção feita: vocabulário na versão ${r.versaoVocabulario}; ${r.itensAfetados} itens classificados trocaram de assunto (pacote atualizado: ${entry.itensComAssunto} com assunto).`
+    );
     return 0;
   }
 
   if (command === 'recalcular') {
     const t = recalcularConsenso(ACERVO);
-    console.log(`Consenso refeito: concordam ${t.concordam} · discordam ${t.discordam} · uma opinião ${t.umaOpiniao} · incertos ${t.incertos}.`);
+    const { entry } = writePacoteAndIndex(ACERVO);
+    console.log(
+      `Consenso refeito: concordam ${t.concordam} · discordam ${t.discordam} · uma opinião ${t.umaOpiniao} · incertos ${t.incertos} (pacote atualizado: ${entry.itensComAssunto} com assunto).`
+    );
     return 0;
   }
 
   if (command === 'pacote') {
-    const path = join(ACERVO, 'pacote', 'fofolab-acervo-cebraspe.json');
-    const pacote = buildPacote(ACERVO);
-    writePacote(path, pacote);
-    const classificados = pacote.itens.filter((i) => i.assuntos.length > 0).length;
-    console.log(`Pacote gravado em ${path}: ${pacote.itens.length} itens (${classificados} com assunto), vocabulário v${pacote.vocabulario.versao}.`);
+    const { pacote, entry } = writePacoteAndIndex(ACERVO);
+    console.log(
+      `Pacote gravado em ${join(ACERVO, 'pacote')}: ${pacote.itens.length} itens (${entry.itensComAssunto} com assunto), vocabulário v${entry.vocabVersion}.`
+    );
     return 0;
   }
 
