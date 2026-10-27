@@ -89,12 +89,17 @@ export function buildAcervoDb(SQL: SqlJsStatic, pacote: PacoteValido): { db: Dat
   }
   insertItem.free();
   insertLink.free();
+  db.run("INSERT INTO meta (key, value) VALUES ('with_subject', ?)", [String(stats.withSubject)]);
   db.run('COMMIT;');
   return { db, stats };
 }
 
 export function acervoVocabVersion(db: Database): number {
   return Number(queryOne<{ value: string }>(db, "SELECT value FROM meta WHERE key = 'vocab_version'")?.value ?? 0);
+}
+
+export function acervoWithSubjectCount(db: Database): number {
+  return Number(queryOne<{ value: string }>(db, "SELECT value FROM meta WHERE key = 'with_subject'")?.value ?? 0);
 }
 
 function toAssunto(row: { id: string; caminho_json: string; sinonimos_json: string }): PacoteAssunto {

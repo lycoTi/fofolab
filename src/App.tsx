@@ -39,7 +39,8 @@ import {
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
 import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
 import { AcervoImportPanel } from './features/acervo/AcervoImportPanel';
-import { ACERVO_LINK_MAX_TOKENS } from './lib/acervo/importAcervo';
+import { useAcervoAutoSync } from './features/acervo/useAcervoAutoSync';
+import { ACERVO_LINK_MAX_TOKENS, type LinkAi } from './lib/acervo/importAcervo';
 import { excludeItemFromTopic, materializeQuestion, restoreItemToTopic } from './lib/acervo/studentAcervo';
 import { disableLinkForTopic, type QuestionScope } from './lib/acervo/topicQuestions';
 import { AppHeader } from './features/workbench-shell/AppHeader';
@@ -307,7 +308,22 @@ export default function App() {
   useEffect(() => setLastDiagnosisMsg(null), [selectedSubjectId, selectedTopicId, questionScope]);
   // "Ver as do grupo" vale para o tópico em que foi pedido: outro tópico volta às questões dele
   useEffect(() => setQuestionScope((scope) => (scope === 'group' ? 'topic' : scope)), [selectedTopicId]);
-  const bumpQuestions = () => setQuestionsVersion((v) => v + 1);
+  const bumpQuestions = useCallback(() => setQuestionsVersion((v) => v + 1), []);
+  const linkAi = useMemo<LinkAi | null>(
+    () => (aiStatus.configured ? (prompt) => callAiProviders(prompt, { json: true, maxTokens: ACERVO_LINK_MAX_TOKENS }) : null),
+    [aiStatus.configured]
+  );
+  const totalPlanTopics = useMemo(
+    () => Object.values(topicsBySubject).reduce((acc, list) => acc + list.length, 0),
+    [topicsBySubject]
+  );
+  const acervoSyncNotice = useAcervoAutoSync({
+    ready: dbReady,
+    planId: activePlan?.id ?? '',
+    topicsCount: totalPlanTopics,
+    ai: linkAi,
+    onSynced: bumpQuestions,
+  });
   const acervoActions = {
     view: questionsView,
     onDisableLink: (assuntoId: string) => {
@@ -1484,7 +1500,7 @@ export default function App() {
         acervoPanel={
           <AcervoImportPanel
             planId={activePlan.id}
-            ai={aiStatus.configured ? (prompt) => callAiProviders(prompt, { json: true, maxTokens: ACERVO_LINK_MAX_TOKENS }) : null}
+            ai={linkAi}
             onImported={bumpQuestions}
           />
         }
@@ -1553,6 +1569,14 @@ export default function App() {
       />
 
       {confirmDialog}
+      {acervoSyncNotice && (
+        <div
+          role="status"
+          className="fixed bottom-4 left-4 z-40 rounded-xl border border-emerald-500/30 bg-slate-900/95 px-3.5 py-2 text-xs text-emerald-200 shadow-lg"
+        >
+          {acervoSyncNotice}
+        </div>
+      )}
       <Toast
         message={studyBlock.message}
         messageId={studyBlock.messageId}

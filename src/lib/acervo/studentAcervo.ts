@@ -14,11 +14,12 @@ export function acervoQuestionId(subjectId: string, itemId: string): string {
 }
 
 export function toVirtualQuestion(row: AcervoRow, subjectId: string, topicId: string): Question {
+  const board = row.source_label.split(' · ')[0]?.trim() || 'Cebraspe';
   return {
     id: acervoQuestionId(subjectId, row.id),
     subject_id: subjectId,
     topic_id: topicId,
-    exam_board: 'Cebraspe',
+    exam_board: board,
     exam_year: row.exam_year,
     organ: row.organ,
     statement: row.statement,
