@@ -38,6 +38,7 @@ export function StudyPlanView({
   onChangeThisWeek,
   onApplyRecommendedCycle,
   onChangeFinalStretch,
+  onChangeAllowNewInFinalStretch,
   onOpenSubject,
 }: {
   plan: StudyPlan;
@@ -57,6 +58,7 @@ export function StudyPlanView({
   onChangeThisWeek: (minutes: WeekdayMinutes | null) => void;
   onApplyRecommendedCycle: () => void;
   onChangeFinalStretch: (days: number) => void;
+  onChangeAllowNewInFinalStretch?: (allow: boolean) => void;
   onOpenSubject?: (subjectId: string) => void;
 }) {
   const weekMet = cycleData.allocations.length > 0 && cycleData.allocations.every((a) => a.remainingThisWeekMinutes <= 0);
@@ -112,6 +114,15 @@ export function StudyPlanView({
               ))}
             </select>
             dias antes da prova — só revisão e questões
+          </label>
+          <label className="flex cursor-pointer items-center gap-2 text-xs text-slate-300">
+            <input
+              type="checkbox"
+              checked={plan.final_stretch_allow_new === 1}
+              onChange={(e) => onChangeAllowNewInFinalStretch?.(e.target.checked)}
+              className="rounded border-slate-700 bg-slate-950 text-orange-500 focus:ring-orange-400"
+            />
+            Continuar avançando em tópicos novos na reta final
           </label>
           <div className="space-y-3 border-t border-slate-800 pt-4">
             {thisWeek === null ? (

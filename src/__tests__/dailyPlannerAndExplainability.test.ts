@@ -381,4 +381,54 @@ describe('Reta final: revisão independente da 13b (26/10)', () => {
     const next = planDailyBlocks({ cycleData, topicsBySubject: onlyContab, weeklyHoursTarget: 31.5, dayMinutesBudget: 60, finalStretch: true, excludeTopicIds: used });
     expect(next.blocks.some((b) => used.has(b.topic!.id))).toBe(false);
   });
+
+  it('quando os tópicos estudados da matéria já estão dominados e frescos (ou allowNewInFinalStretch = true), libera tópicos inéditos na reta final (spec 12d §3.3)', () => {
+    // 1. Tópicos estudados da matéria já dominados (mastery 90%) e estudados há poucas horas (frescos, R >= 0.85), mas há 1 inédito
+    const contabList = topicsBySubject['subj-cgu-contabilidade'];
+    const masteredAndUnseen: Record<string, Topic[]> = {
+      ...onlyContab,
+      'subj-cgu-contabilidade': contabList.map((t, i) =>
+        i === 0
+          ? { ...t, mastery_score: 90, status: 'MASTERED', last_studied_at: new Date(NOW.getTime() - 2 * 3600_000).toISOString() }
+          : { ...t, mastery_score: 0, status: 'PENDING', last_studied_at: null }
+      ),
+    };
+    const cycleMastered = calculateDynamicStudyCycle({
+      plan: cguPlan,
+      subjects: cguSubjects,
+      topicsBySubject: masteredAndUnseen,
+      attempts: [],
+      sessions: [],
+      topicLinks: SEED_TOPIC_LINKS,
+      now: NOW,
+    });
+    const planAuto = planDailyBlocks({
+      cycleData: cycleMastered,
+      topicsBySubject: masteredAndUnseen,
+      weeklyHoursTarget: 31.5,
+      dayMinutesBudget: 60,
+      finalStretch: true,
+    });
+    const contabBlock = planAuto.blocks.find((b) => b.subject.id === 'subj-cgu-contabilidade');
+    expect(contabBlock?.topic?.id).not.toBe(contabList[0].id);
+
+    // 2. Com allowNewInFinalStretch = true, segue o ciclo normal mesmo na reta final
+    const base = cycleFor(cguPlan);
+    const planAllowed = planDailyBlocks({
+      cycleData: base,
+      topicsBySubject,
+      weeklyHoursTarget: 31.5,
+      dayMinutesBudget: 180,
+      finalStretch: true,
+      allowNewInFinalStretch: true,
+    });
+    const planNormal = planDailyBlocks({
+      cycleData: base,
+      topicsBySubject,
+      weeklyHoursTarget: 31.5,
+      dayMinutesBudget: 180,
+      finalStretch: false,
+    });
+    expect(planAllowed.blocks.map((b) => b.topic?.id)).toEqual(planNormal.blocks.map((b) => b.topic?.id));
+  });
 });

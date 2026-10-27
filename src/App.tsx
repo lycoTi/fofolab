@@ -475,6 +475,7 @@ export default function App() {
       todayBlocks: routine.items.map((i) => i.block),
       reviewEnabled: activePlan.daily_review_enabled !== 0,
       stretchStartKey: stretchKey,
+      allowNewInFinalStretch: activePlan.final_stretch_allow_new === 1,
     });
     // O dia entra nas dependências: virar a meia-noite com o app aberto troca o "hoje" da semana
   }, [activePlan, cycleData, availability.weekStart, availability.todayKey, availability.pattern, availability.overrides, topicsBySubject, sessions, routine.items, stretchKey]);
@@ -1331,6 +1332,10 @@ export default function App() {
                         }}
                         onChangeFinalStretch={(days) => {
                           updateStudyPlan({ id: activePlan.id, final_stretch_days: days });
+                          refreshData(currentSubject?.id, currentTopic?.id);
+                        }}
+                        onChangeAllowNewInFinalStretch={(allow) => {
+                          updateStudyPlan({ id: activePlan.id, final_stretch_allow_new: allow ? 1 : 0 });
                           refreshData(currentSubject?.id, currentTopic?.id);
                         }}
                         onOpenSubject={openSubjectOnWorkbench}

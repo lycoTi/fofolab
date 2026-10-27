@@ -11,7 +11,7 @@ import type { Database } from 'sql.js';
  * Regra: toda mudança no contrato SQL precisa de uma migração aqui com o mesmo efeito
  * (o teste `migrations.test.ts` compara banco novo × banco v1 migrado).
  */
-export const LATEST_SCHEMA_VERSION = 12;
+export const LATEST_SCHEMA_VERSION = 13;
 
 export interface Migration {
   version: number;
@@ -206,6 +206,16 @@ export const MIGRATIONS: Migration[] = [
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY (topic_id, acervo_item_id)
       )`);
+    },
+  },
+  {
+    version: 13,
+    description: 'Reta final flexível (spec 12d §3.3): opção para continuar avançando em tópicos novos na reta final',
+    up: (db) => {
+      const columns = db.exec('PRAGMA table_info(study_plans)')[0]?.values.map((row) => String(row[1])) ?? [];
+      if (!columns.includes('final_stretch_allow_new')) {
+        db.run('ALTER TABLE study_plans ADD COLUMN final_stretch_allow_new INTEGER NOT NULL DEFAULT 0');
+      }
     },
   },
 ];

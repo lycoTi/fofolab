@@ -152,15 +152,37 @@ describe('Sua semana: cartão enxuto + detalhe do dia (opção A, 26/10)', () =>
   });
 });
 
-describe('Reta final no Ajustar (spec 13 §4.3)', () => {
-  it('o Ajustar mostra a reta final e muda pelo select', () => {
-    const v = view();
+describe('Reta final no Ajustar (spec 13 §4.3 e 12d §3.3)', () => {
+  it('o Ajustar mostra a reta final, muda pelo select e permite liberar tópicos inéditos na reta final', () => {
+    const onChangeAllowNewInFinalStretch = vi.fn();
+    const { cycleData, days, weekBudget } = build();
+    render(
+      <StudyPlanView
+        plan={plan}
+        cycleData={cycleData}
+        examParts={[]}
+        days={days}
+        weekBudget={weekBudget}
+        weekStart={MONDAY}
+        pattern={PATTERN}
+        thisWeek={null}
+        outlook={null}
+        subjects={subjects}
+        topicsBySubject={topicsBySubject}
+        onChangePattern={vi.fn()}
+        onChangeThisWeek={vi.fn()}
+        onApplyRecommendedCycle={vi.fn()}
+        onChangeFinalStretch={vi.fn()}
+        onChangeAllowNewInFinalStretch={onChangeAllowNewInFinalStretch}
+      />
+    );
     fireEvent.click(screen.getByText('Ajustar'));
     const select = screen.getByLabelText('Dias da reta final') as HTMLSelectElement;
     expect(select.value).toBe('14');
     expect([...select.options].map((o) => o.value)).toEqual(['7', '10', '14', '21']);
-    fireEvent.change(select, { target: { value: '21' } });
-    expect(v.onChangeFinalStretch).toHaveBeenCalledWith(21);
+    const checkbox = screen.getByRole('checkbox', { name: /Continuar avançando em tópicos novos na reta final/ });
+    fireEvent.click(checkbox);
+    expect(onChangeAllowNewInFinalStretch).toHaveBeenCalledWith(true);
   });
 });
 

@@ -45,7 +45,9 @@ CREATE TABLE IF NOT EXISTS study_plans (
     -- [v11] Plano de estudo (spec 13): minutos de cada dia, seg–dom, em JSON (0 = folga fixa; NULL = horas ÷ 7)
     weekday_minutes_json TEXT,
     -- [v11] Dias da reta final antes da prova (só revisão e questões)
-    final_stretch_days INTEGER NOT NULL DEFAULT 14
+    final_stretch_days INTEGER NOT NULL DEFAULT 14,
+    -- [v13] Liberar tópicos inéditos na reta final (spec 12d §3.3)
+    final_stretch_allow_new INTEGER NOT NULL DEFAULT 0
 );
 
 -- [v11] Exceções de horas por data: "hoje tenho menos tempo", "hoje não vou estudar" e semana atípica (spec 13 §4.1)

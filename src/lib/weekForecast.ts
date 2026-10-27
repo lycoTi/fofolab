@@ -60,6 +60,8 @@ export function forecastWeek(input: {
   reviewEnabled: boolean;
   /** Primeiro dia da reta final (spec 13 §4.3): a partir dele, só revisão. */
   stretchStartKey?: string | null;
+  /** Liberar tópicos novos na reta final (spec 12d §3.3). */
+  allowNewInFinalStretch?: boolean;
 }): DayForecast[] {
   const { weekStart, pattern, overrides, cycleData, topicsBySubject } = input;
   const todayKey = localDateKey(input.now);
@@ -128,6 +130,7 @@ export function forecastWeek(input: {
       weekReviewMinutes: dateKey === reviewDay ? reviewMinutes : 0,
       excludeTopicIds: usedTopics,
       finalStretch: input.stretchStartKey ? dateKey >= input.stretchStartKey : false,
+      allowNewInFinalStretch: input.allowNewInFinalStretch,
     });
     const blocks = plan.blocks.map((b) => ({ subjectId: b.subject.id, topicId: b.topic?.id ?? null, minutes: b.durationMinutes, kind: b.kind }));
     for (const b of blocks) {

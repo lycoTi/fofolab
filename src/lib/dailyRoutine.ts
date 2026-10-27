@@ -121,9 +121,10 @@ export function routineProfileKey(
     .sort()
     .join(',');
   const key = `${plan.weekly_hours_target}|${plan.strategy_mode ?? ''}|${subjectPart}|${topicPart}`;
-  if (dayMinutes === undefined) return finalStretch ? `${key}|reta` : key;
+  const stretchSuffix = finalStretch ? (plan.final_stretch_allow_new === 1 ? '|reta:novo' : '|reta') : '';
+  if (dayMinutes === undefined) return `${key}${stretchSuffix}`;
   // A Revisão da semana muda de dia quando a semana atípica troca o dia mais longo
   const withDay = weekReviewMinutes > 0 ? `${key}|dia:${dayMinutes}|rev:${weekReviewMinutes}` : `${key}|dia:${dayMinutes}`;
   // Reta final: o roteiro de hoje passa a ser só de revisão
-  return finalStretch ? `${withDay}|reta` : withDay;
+  return `${withDay}${stretchSuffix}`;
 }

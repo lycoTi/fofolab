@@ -45,6 +45,7 @@ export function useDailyRoutine(params: {
       dayMinutesBudget: dayMinutes,
       weekReviewMinutes,
       finalStretch,
+      allowNewInFinalStretch: plan.final_stretch_allow_new === 1,
     });
   }, [plan, cycleData, topicsBySubject, dayMinutes, weekReviewMinutes, finalStretch]);
 
@@ -95,6 +96,7 @@ export function useDailyRoutine(params: {
       weekReviewMinutes: reviewDone ? 0 : weekReviewMinutes,
       excludeTopicIds: keptTopics,
       finalStretch,
+      allowNewInFinalStretch: plan.final_stretch_allow_new === 1,
     });
     const blocks = [...kept, ...freezeDailyPlan(rest)].map((b, i) => ({ ...b, blockNumber: i + 1 }));
     saveDailyPlan(plan.id, dateKey, blocks, profileKey);

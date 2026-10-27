@@ -60,6 +60,17 @@ function describeReason(allocation: SubjectCycleAllocation, weekCompleted: boole
 /** Chance de lembrar hoje, `2^(−dias ÷ meia-vida)` — a mesma conta do motor e da Revisão do dia. */
 const recallOf = (h: TopicHeatItem) => Math.pow(2, -(h.daysSinceLastStudy ?? 0) / Math.max(1, h.memoryHalfLifeDays));
 
+const STRETCH_RECALL_THRESHOLD = 0.85;
+const STRETCH_MASTERY_THRESHOLD = 75;
+
+/** Tópico estudado que ainda precisa de revisão na reta final (lembrança abaixo de 85% ou domínio abaixo de 75%). */
+function needsStretchReview(h: TopicHeatItem): boolean {
+  return (
+    h.daysSinceLastStudy !== null &&
+    (recallOf(h) < STRETCH_RECALL_THRESHOLD || h.topic.mastery_score < STRETCH_MASTERY_THRESHOLD)
+  );
+}
+
 function stretchReason(heat: TopicHeatItem): string {
   const days = Math.round(heat.daysSinceLastStudy ?? 0);
   const label = `${heat.topic.code ?? ''} ${heat.topic.title}`.trim();
@@ -85,6 +96,8 @@ export function planDailyBlocks(params: {
   excludeTopicIds?: ReadonlySet<string>;
   /** Reta final (spec 13 §4.3): só tópicos já estudados, o mais frio primeiro — nada novo. */
   finalStretch?: boolean;
+  /** Liberar tópicos inéditos na reta final por escolha do estudante (spec 12d §3.3). */
+  allowNewInFinalStretch?: boolean;
 }): DailyPlan {
   const { cycleData, topicsBySubject, weeklyHoursTarget } = params;
   const { allocations, topicHeatmapRanking } = cycleData;
@@ -95,8 +108,9 @@ export function planDailyBlocks(params: {
   const pending = allocations.filter((a) => a.remainingThisWeekMinutes > 0);
   const weekCompleted = allocations.length > 0 && pending.length === 0;
   const byPriority = (a: SubjectCycleAllocation, b: SubjectCycleAllocation) => b.elasticScore - a.elasticScore;
-  // Reta final sem nenhum tópico estudado no plano inteiro: segue o roteiro normal (não deixa o dia vazio)
-  const stretch = params.finalStretch === true && coldestStudied(topicHeatmapRanking) !== null;
+  // Reta final sem nenhum tópico estudado no plano inteiro (ou com inéditos liberados): segue o roteiro normal
+  const stretch =
+    params.finalStretch === true && !params.allowNewInFinalStretch && coldestStudied(topicHeatmapRanking) !== null;
   const hasStudied = (subjectId: string) => topicHeatmapRanking.some((h) => h.topic.subject_id === subjectId && h.daysSinceLastStudy !== null);
   const ordered = weekCompleted
     ? [...allocations].sort(byPriority)
@@ -117,8 +131,19 @@ export function planDailyBlocks(params: {
   // 2. Blocos de estudo
   const pickTopic = (subjectId: string): { topic: Topic | null; heat: TopicHeatItem | undefined } => {
     if (stretch) {
-      // O mais frio que a semana ainda não revisou; sem outro, o mais frio de todos
       const ofSubject = topicHeatmapRanking.filter((h) => h.topic.subject_id === subjectId && !usedTopicIds.has(h.topic.id));
+      // 1. Tópicos estudados da matéria que ainda precisam de revisão (esfriando ou domínio < 75%)
+      const needingReview = ofSubject.filter(needsStretchReview);
+      if (needingReview.length > 0) {
+        const heat = coldestStudied(needingReview.filter((h) => !excluded.has(h.topic.id))) ?? coldestStudied(needingReview) ?? undefined;
+        return { topic: heat?.topic ?? null, heat };
+      }
+      // 2. Todos os estudados da matéria já estão dominados e frescos (spec 12d §3.3): libera inéditos da matéria
+      const unseen =
+        ofSubject.find((h) => h.daysSinceLastStudy === null && !excluded.has(h.topic.id)) ??
+        ofSubject.find((h) => h.daysSinceLastStudy === null);
+      if (unseen) return { topic: unseen.topic, heat: unseen };
+      // 3. Sem inéditos, revisa o mais frio mesmo já dominado
       const heat = coldestStudied(ofSubject.filter((h) => !excluded.has(h.topic.id))) ?? coldestStudied(ofSubject) ?? undefined;
       return { topic: heat?.topic ?? null, heat };
     }
@@ -149,7 +174,7 @@ export function planDailyBlocks(params: {
     allocation: b.allocation,
     durationMinutes: b.durationMinutes,
     costBenefitBadge: pickBadge(b.heat?.heatScore ?? null, b.allocation.elasticScore === topScore),
-    reasonText: stretch && b.heat ? stretchReason(b.heat) : describeReason(b.allocation, weekCompleted),
+    reasonText: stretch && b.heat && b.heat.daysSinceLastStudy !== null ? stretchReason(b.heat) : describeReason(b.allocation, weekCompleted),
     kind: 'STUDY',
   }));
 

@@ -53,6 +53,7 @@ export interface StudyPlan {
   productive_failure_hints?: number; // [v9] 0 | 1 (ausente = ligada)
   weekday_minutes_json?: string | null; // [v11] minutos seg–dom em JSON (0 = folga; ausente = horas ÷ 7)
   final_stretch_days?: number; // [v11] dias da reta final (padrão 14)
+  final_stretch_allow_new?: number; // [v13] 0 | 1 (ausente = 0)
 }
 
 // 2b. exam_parts [v4] — provas objetivas do edital
@@ -267,6 +268,8 @@ export interface UpdateStudyPlanInput extends Partial<CreateStudyPlanInput> {
   productive_failure_hints?: number;
   /** [v11] Dias da reta final (7 a 21). */
   final_stretch_days?: number;
+  /** [v13] Continuar avançando em tópicos novos na reta final (0 | 1). */
+  final_stretch_allow_new?: number;
 }
 
 export interface CreateSubjectInput {

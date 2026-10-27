@@ -790,7 +790,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
     `UPDATE study_plans
      SET title = ?, organ = ?, exam_board = ?, role_title = ?, exam_date = ?, weekly_hours_target = ?,
          strategy_mode = ?, study_moment = ?, daily_review_enabled = ?, productive_failure_hints = ?,
-         weekday_minutes_json = ?, final_stretch_days = ?
+         weekday_minutes_json = ?, final_stretch_days = ?, final_stretch_allow_new = ?
      WHERE id = ?`,
     [
       input.title ?? existing.title,
@@ -806,6 +806,7 @@ export function updateStudyPlan(input: UpdateStudyPlanInput): StudyPlan | null {
       weekdayJson,
       // Reta final entre 7 e 21 dias (spec 13 §4.3)
       Math.min(21, Math.max(7, Math.round(input.final_stretch_days ?? existing.final_stretch_days ?? 14))),
+      input.final_stretch_allow_new ?? existing.final_stretch_allow_new ?? 0,
       input.id,
     ]
   );
