@@ -273,7 +273,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
     (21–35), TRF6 24 ("item 203" fantasma).
   - Repetidos **entre concursos** ainda não se juntam (só dentro do mesmo concurso): fica para o pacote da 12b.
   **Segundo lote (decisão do dono):** provas de procurador e de servidor de MP e TJ (Direito Público, para P1/P2).
-  [PARCIAL] **12b — assuntos canônicos** (25/10/2026, plano `docs/superpowers/plans/2026-10-25-12b-assuntos-canonicos.md`):
+  [DONE] **12b — assuntos canônicos** (25–27/10/2026, plano `docs/superpowers/plans/2026-10-25-12b-assuntos-canonicos.md`):
   `npm run minerar -- semente | classificar | conferir | desempatar | juntar | recalcular | pacote`. Vocabulário
   (`acervo/vocabulario.json`, v14) nasce do edital da CGU + 6 editais de abertura do acervo (Português, Raciocínio
   Lógico, Direito, Contabilidade, Economia, TI): 3.917 assuntos em 92 matérias; a IA propõe assunto novo (aceito com
@@ -291,9 +291,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   estatais"). **Falta:** terminar a 1ª opinião (cota do Gemini ≈ 5 mil itens/semana → ~5 semanas; CGU primeiro);
   decidir a 2ª opinião (DeepSeek quando houver crédito, para conferir todos — decisão do dono; o Groq não serve para o
   acervo todo); `pacote` + 12c.
-  **26–27/10:** a DeepSeek (`deepseek-flash`) entrou na 1ª opinião, com teto de R$ 5 por dia (~200 itens por dia):
-  **630 itens** classificados (420 Gemini + 210 DeepSeek), 82 incertos, vocabulário **v27**; `pacote` gerado em
-  `acervo/pacote/` (fora do git; 619 itens com assunto, 548 seguros).
+  **26–27/10 [Antigravity]:** a DeepSeek (`deepseek-flash`) classificou o acervo inteiro em paralelo (com índice invertido em `tools/minerador/candidates.ts` que baixou o `queueOrder` de >60 s para 2,9 s em 27,5 mil itens): **25.928 itens com assunto** no vocabulário canônico (**v1573**), empacotados em `acervo/pacote/cebraspe.json` + `acervo/pacote/index.json` (sincronizados automaticamente pelo app ao abrir).
   [DONE] **12c — acervo da Cebraspe no app** (27/10/2026, spec `12c-acervo-no-app.md`, plano
   `docs/superpowers/plans/2026-10-27-12c-acervo-no-app.md`):
   - **Importar:** opção "Acervo da Cebraspe (pacote do minerador)" na importação de questões.
@@ -356,7 +354,12 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
     - Questões anuladas (`is_annulled === 1`) não inflam a contagem de questões do bloco na coluna do roteiro e só aparecem em `Todas`.
     - Esgotar as inéditas de um tópico mostra estado claro com atalhos para refazer erros/chutes, ver todas ou abrir as do grupo.
   - **Reta final flexível (`final_stretch_allow_new`, migração v13):** na reta final, se os tópicos estudados de uma matéria já estiverem dominados e frescos (`mastery_score >= 75` e `R >= 0,85`), o planejador libera automaticamente tópicos inéditos da matéria; além disso, o estudante pode marcar `"Continuar avançando em tópicos novos na reta final"` em `Plano de estudo → Ajustar`.
-  - **Verificado:** 743 testes de unidade (82 arquivos), E2E no Edge (`e2e/acervo.spec.ts` sincronizando sozinho sem clique manual e testando os novos filtros) e `npm run build`.
+  - **Refino da coluna do roteiro, FofoDoro, escopos e FofoIA (27/10 [Antigravity]):**
+    - **Coluna do roteiro (`RoutineBlockItem.tsx`, `TopicTree.tsx`, `FofoDoroPreview.tsx`):** o tópico-pai (`1 Problemas e requisitos · N subtópicos ▾`) passou a ser o único acordeão dos subtópicos (recolhido por padrão antes e durante o bloco), exibindo logo abaixo apenas o subtópico ativo do bloco sem repetir o filho dentro de si mesmo e sem caixa dentro de caixa na prévia do FofoDoro.
+    - **FofoDoro (`studyBlockMachine.ts`, `useStudyBlock.ts`):** removida a opção de 20 minutos (`FOCUS_OPTIONS = [25, 30, 50]`), migrando preferências salvas de 20 para 25 min.
+    - **Nomenclatura de escopo na aba Questões (`topicQuestions.ts`, `QuestionFilters.tsx`, `EmptyTopicQuestions.tsx`, `QuestionWorkbench.tsx`):** substituído `"Do grupo X"` / `"Ver as do grupo X"` por `"Tópico <código> · <título>"` / `"Ver do tópico <código> · <título>"`, com botão direto `"Ver toda a matéria"` quando o subtópico ou tópico-pai não têm questões.
+    - **FofoIA (`vite.config.ts`, `aiRouter.ts`):** ponte local `/__ai/agy` no Vite para a FofoIA usar Groq, DeepSeek e Antigravity CLI em cascata.
+  - **Verificado:** 743 testes de unidade (82 arquivos), E2E no Edge (`e2e/acervo.spec.ts`, `e2e/bancada.spec.ts`, `e2e/fofodoro.spec.ts`) e `npm run build`.
   - **Backlog futuro (distribuição para amigos):** buscar `index.json` e pacotes de acervo de uma URL remota (GitHub Releases / Cloudflare R2 / Object Storage) para atualizar o acervo dos usuários sem precisar gerar novo executável `.exe`.
   Depois: conferir a ligação pela IA com a chave real; outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
   provas antigas.

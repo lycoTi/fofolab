@@ -1,6 +1,3898 @@
 {
   "identificador": "BANCO_DO_NORDESTE_22",
   "itens": {
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-lake",
+              "confianca": 0.6
+            },
+            {
+              "id": "topicos-avancados>ciencia-de-dados>big-data>conceitos-de-data-lake",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 292
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-lake",
+          "confianca": 0.6
+        },
+        {
+          "id": "topicos-avancados>ciencia-de-dados>big-data>conceitos-de-data-lake",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>modelagem-de-banco-de-dados-fisico-logico-e-conceitual",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-de-gerenciamento-de-banco-de-dados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1082
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>modelagem-de-banco-de-dados-fisico-logico-e-conceitual",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-de-gerenciamento-de-banco-de-dados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+              "confianca": 0.7
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1414
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+          "confianca": 0.7
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1558
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-modelagem-dimensional",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1521
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-modelagem-dimensional",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 574
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>sql-linguagem-de-consulta-e-manipulacao-de-dados",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1218
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>sql-linguagem-de-consulta-e-manipulacao-de-dados",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>indices-planos-de-execucao-valores-nulos-e-duplicacoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.55
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 488
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>indices-planos-de-execucao-valores-nulos-e-duplicacoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.55
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            },
+            {
+              "id": "bancos-de-dados>conceito-de-transacoes-e-propriedades-acid",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1376
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>conceito-de-transacoes-e-propriedades-acid",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>governanca-de-dados-dama-dmbok-metas-e-requisitos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1172
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>governanca-de-dados-dama-dmbok-metas-e-requisitos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 468
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.6
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>orientacao-a-servico>iaas-infraestrutura-com-servico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 262
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.6
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>orientacao-a-servico>iaas-infraestrutura-com-servico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1395
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 555
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1427
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.8
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 607
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.8
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1551
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.9
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1079
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.9
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 66
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estruturas-de-dados-e-algoritmos>metodos-de-ordenacao-e-pesquisa",
+              "confianca": 0.85
+            },
+            {
+              "id": "conhecimentos-especificos>algoritmos-de-ordenacao-e-pesquisa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1351
+        }
+      },
+      "consenso": [
+        {
+          "id": "estruturas-de-dados-e-algoritmos>metodos-de-ordenacao-e-pesquisa",
+          "confianca": 0.85
+        },
+        {
+          "id": "conhecimentos-especificos>algoritmos-de-ordenacao-e-pesquisa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estruturas-de-dados-e-algoritmos>filas-pilhas-e-listas-conceitos-e-operacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1560
+        }
+      },
+      "consenso": [
+        {
+          "id": "estruturas-de-dados-e-algoritmos>filas-pilhas-e-listas-conceitos-e-operacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>capacidade-custos-e-infraestrutura-de-ia>dimensionamento-e-otimizacao-de-processamento-memoria-armazenamento-e-aceleradores",
+              "confianca": 0.2
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>sustentacao-de-solucoes-analiticas>requisitos-de-processamento-memoria-armazenamento-e-aceleradores",
+              "confianca": 0.2
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>representacao-de-dados-e-variaveis",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 501
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>representacao-de-dados-e-variaveis",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 629
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>avaliacao-de-expressoes-e-operadores-em-linguagens-de-programacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1558
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>avaliacao-de-expressoes-e-operadores-em-linguagens-de-programacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.55
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>linguagem-c-c",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1509
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>linguagem-c-c",
+          "confianca": 0.7
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 577
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1307
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1516
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 307
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 216
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>arquitetura-de-software-e-componentizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1181
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>arquitetura-de-software-e-componentizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>arquitetura-de-software-e-componentizacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>arquiteturas-em-camadas-servicos-e-microservicos",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1359
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>arquiteturas-em-camadas-servicos-e-microservicos",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>arquitetura-de-software-e-componentizacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>gestao-de-configuracao>versionamento-e-ciclo-de-vida-com-git",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1516
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>gestao-de-configuracao>versionamento-e-ciclo-de-vida-com-git",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>concorrencia-e-processamento>concorrencia-paralelismo-e-assincronia",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 391
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>monolitos-microsservicos-e-arquiteturas-orientadas-a-eventos",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>concorrencia-e-processamento>concorrencia-paralelismo-e-assincronia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>conceitos-fundamentais-de-gerenciamento-centralizado-de-configuracao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1447
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>conceitos-fundamentais-de-gerenciamento-centralizado-de-configuracao",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>observabilidade-automacao-scripting-operacao-em-ambiente-linux",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>observabilidade-automacao-scripting-operacao-em-ambiente-linux",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>integracao-continua-e-entrega-continua-ci-cd>conceitos-de-integracao-continua-e-processos-ageis-de-testes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1351
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>integracao-continua-e-entrega-continua-ci-cd>conceitos-de-integracao-continua-e-processos-ageis-de-testes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>devops-e-integracao-continua-github-actions",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>devops-e-integracao-continua",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>devops-e-integracao-continua-github-actions",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>devops-e-integracao-continua",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 306
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1515
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+              "confianca": 0.75
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>linguagens-de-programacao>javascript",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 375
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+          "confianca": 0.75
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>linguagens-de-programacao>javascript",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 429
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>desenvolvimento-orientado-por-comportamento-bdd-guiado-por-testes-tdd-e-guiado-por-testes-de-aceitacao-atdd",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 692
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>desenvolvimento-orientado-por-comportamento-bdd-guiado-por-testes-tdd-e-guiado-por-testes-de-aceitacao-atdd",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 692
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 669
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 663
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+              "confianca": 0.85
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+          "confianca": 0.85
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 719
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>gestao-de-produtos-e-governanca>scrum-e-kanban",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 732
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>gestao-de-produtos-e-governanca>scrum-e-kanban",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 74
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 252
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>qualidade>teste-de-integracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>qualidade-de-software>teste-de-integracao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 526
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>qualidade>teste-de-integracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>qualidade-de-software>teste-de-integracao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.4
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>testes-de-software",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 412
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>testes-de-software",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1354
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>html5-e-css3",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1355
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>html5-e-css3",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>html5",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 585
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>html5",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>low-code-e-no-code-software-development",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>conhecimento-e-uso-das-formas-contemporaneas-da-linguagem-inglesa",
+              "confianca": 0.2
+            }
+          ],
+          "versaoVocabulario": 614
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>low-code-e-no-code-software-development",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1510
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-da-informacao>mecanismos-de-seguranca>certificacao-digital-icp-brasil",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 915
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 898
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>conceitos-e-tecnologias-de-ia-aprendizado-de-maquina-deep-learning-chatbots",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 566
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>conceitos-e-tecnologias-de-ia-aprendizado-de-maquina-deep-learning-chatbots",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>automacao-de-processos-rpa",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 465
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>automacao-de-processos-rpa",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 623
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>escalonamento-atualizacao-e-recuperacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>escalonamento-de-processos-e-algoritmos-de-escalonamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 340
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>escalonamento-de-processos-e-algoritmos-de-escalonamento",
+          "confianca": 0.9
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>escalonamento-atualizacao-e-recuperacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+              "confianca": 0.9
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>bancos-documentais-chave-valor-e-vetoriais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 464
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+          "confianca": 0.9
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>bancos-documentais-chave-valor-e-vetoriais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.7
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1266
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.85
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>governanca>componentes-e-processos-do-modelo-itil-v4",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1181
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.85
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>governanca>componentes-e-processos-do-modelo-itil-v4",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.6
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1266
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>entrega-e-operacao>automacao-de-build-teste-e-implantacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1313
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>entrega-e-operacao>automacao-de-build-teste-e-implantacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>praticas-ferramentas-git-gitlab-e-conceitos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>integracao-continua-e-entrega-continua-ci-cd>fundamentos-e-principais-caracteristicas-deploy-automatizado-rollbacks-seguros-e-ambientes-configuraveis",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 629
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>praticas-ferramentas-git-gitlab-e-conceitos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>integracao-continua-e-entrega-continua-ci-cd>fundamentos-e-principais-caracteristicas-deploy-automatizado-rollbacks-seguros-e-ambientes-configuraveis",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>infraestrutura-como-codigo-e-automacao-da-infraestrutura-de-ti-ansible",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>praticas-ferramentas-git-gitlab-e-conceitos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>infraestrutura-como-codigo-e-automacao-da-infraestrutura-de-ti-ansible",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>praticas-ferramentas-git-gitlab-e-conceitos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 157
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+              "confianca": 0.6
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1534
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+          "confianca": 0.6
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.85
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>entrega-continua-cd-fundamentos-e-principais-caracteristicas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 155
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.85
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>entrega-continua-cd-fundamentos-e-principais-caracteristicas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 444
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>arquitetura-orientada-a-servicos-soa-e-mensageria",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1454
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>arquitetura-orientada-a-servicos-soa-e-mensageria",
+          "confianca": 0.85
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 179
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>comunicacao-e-consistencia>mensageria-eventos-e-persistencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 354
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>comunicacao-e-consistencia>mensageria-eventos-e-persistencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 561
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 354
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>filas-e-comunicacao-entre-servicos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>devsecops-principios-e-praticas-seguranca-de-containers-e-orquestradores-de-containers",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>seguranca-de-sistemas-e-aplicacoes-web-hardening-de-sistemas-linux-e-windows",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1419
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>devsecops-principios-e-praticas-seguranca-de-containers-e-orquestradores-de-containers",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>seguranca-de-sistemas-e-aplicacoes-web-hardening-de-sistemas-linux-e-windows",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sistemas-operacionais>processos-conceito-contexto-de-hardware-e-software-estados-e-pcb",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1544
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>processos-conceito-contexto-de-hardware-e-software-estados-e-pcb",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>migracao-e-modernizacao>transicao-entre-ambientes-locais-e-de-nuvem",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 201
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>migracao-e-modernizacao>transicao-entre-ambientes-locais-e-de-nuvem",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>containers>engine-docker",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1453
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>containers>engine-docker",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>containers>engine-docker",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1453
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>containers>engine-docker",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>containers>engine-docker",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1453
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>containers-docker-docker-compose-e-container-engines",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>containers>docker-docker-compose",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>containers>engine-docker",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>memoria-cache-mapeamento-e-substituicao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 424
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>memoria-cache-mapeamento-e-substituicao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>componentes-e-funcionamento-do-computador",
+              "confianca": 0.9
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>armazenamento-hdd-ssd-e-taxas-de-transferencia-de-dados",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1217
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>componentes-e-funcionamento-do-computador",
+          "confianca": 0.9
+        },
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>armazenamento-hdd-ssd-e-taxas-de-transferencia-de-dados",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-eletrica>microcomputadores>principais-componentes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 774
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-eletrica>microcomputadores>principais-componentes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>unidade-central-de-processamento-e-unidade-de-controle",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>componentes-e-funcionamento-do-computador",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1191
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>unidade-central-de-processamento-e-unidade-de-controle",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>componentes-e-funcionamento-do-computador",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>aritmetica-computacional-e-unidades-logicas-aritmeticas",
+              "confianca": 0.9
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>unidade-central-de-processamento-e-unidade-de-controle",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1191
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>aritmetica-computacional-e-unidades-logicas-aritmeticas",
+          "confianca": 0.9
+        },
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>unidade-central-de-processamento-e-unidade-de-controle",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>tolerancia-a-falhas-e-continuidade",
+              "confianca": 0.5
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+              "confianca": 0.4
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>paralelismo-multiprocessamento-e-tolerancia-a-falhas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 423
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>paralelismo-multiprocessamento-e-tolerancia-a-falhas",
+          "confianca": 0.8
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>tolerancia-a-falhas-e-continuidade",
+          "confianca": 0.5
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>processamento-distribuido>particionamento-paralelismo-movimentacao-de-dados-e-execucao-distribuida-de-transformacoes-e-juncoes",
+              "confianca": 0.55
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>pipeline-e-paralelismo-de-instrucoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 410
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>pipeline-e-paralelismo-de-instrucoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>processamento-distribuido>particionamento-paralelismo-movimentacao-de-dados-e-execucao-distribuida-de-transformacoes-e-juncoes",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>paralelismo-multiprocessamento-e-tolerancia-a-falhas",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1322
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>paralelismo-multiprocessamento-e-tolerancia-a-falhas",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 241
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 887
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 51
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 378
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>codigos-maliciosos-e-ameacas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>codigos-maliciosos-e-ameacas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>privacidade-e-seguranca-de-dados>retencao-descarte-e-protecao-de-copias-e-registros",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>privacidade-e-protecao-operacional>protecao-de-dados-pessoais-em-armazenamento-copias-registros-e-integracoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>copias-de-seguranca-de-ambientes-locais-nuvem-e-servicos-contratados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 176
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>privacidade-e-seguranca-de-dados>retencao-descarte-e-protecao-de-copias-e-registros",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>privacidade-e-protecao-operacional>protecao-de-dados-pessoais-em-armazenamento-copias-registros-e-integracoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>copias-de-seguranca-de-ambientes-locais-nuvem-e-servicos-contratados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1218
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 735
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>privacidade-e-protecao-operacional>minimizacao-segregacao-e-controle-de-acesso",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1452
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>privacidade-e-protecao-operacional>minimizacao-segregacao-e-controle-de-acesso",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1050
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.95
+            },
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1078
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.95
+        },
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>definicao-implantacao-e-gestao-de-politicas-de-seguranca-da-informacao-e-auditoria",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 464
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>definicao-implantacao-e-gestao-de-politicas-de-seguranca-da-informacao-e-auditoria",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>gerenciamento-de-redes-snmp-icmp-monitoramento-zabbix-prometheus-grafana",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1348
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>gerenciamento-de-redes-snmp-icmp-monitoramento-zabbix-prometheus-grafana",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1049
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 673
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-e-padroes-de-comunicacao-segura",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1049
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-e-padroes-de-comunicacao-segura",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-ipv4-e-ipv6-enderecamento-ip-ipv4-ipv6-voip",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>redes-e-comunicacao>modelos-tcp-ip-e-osi-ipv4-e-ipv6-dns-dhcp-roteamento-segmentacao-balanceamento-e-qualidade-de-servico",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 992
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-ipv4-e-ipv6-enderecamento-ip-ipv4-ipv6-voip",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>redes-e-comunicacao>modelos-tcp-ip-e-osi-ipv4-e-ipv6-dns-dhcp-roteamento-segmentacao-balanceamento-e-qualidade-de-servico",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1414
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1485
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 509
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 239
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>capacidade-desempenho-disponibilidade-e-protecao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1440
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>capacidade-desempenho-disponibilidade-e-protecao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1440
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1440
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>relacionais-e-nosql-oracle-ms-sql-server-postgresql-mariadb-mysql-elasticsearch-mongodb-opensearch",
+              "confianca": 0.9
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 510
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>relacionais-e-nosql-oracle-ms-sql-server-postgresql-mariadb-mysql-elasticsearch-mongodb-opensearch",
+          "confianca": 0.9
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+              "confianca": 0.8
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.7
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 431
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagem-de-consulta-de-dados-sql",
+          "confianca": 0.8
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.7
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+              "confianca": 0.75
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence",
+              "confianca": 0.35
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.25
+            }
+          ],
+          "versaoVocabulario": 977
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+              "confianca": 0.8
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>nocoes-de-administracao-de-dados-e-de-banco-de-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1498
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+          "confianca": 0.8
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>nocoes-de-administracao-de-dados-e-de-banco-de-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>banco-de-dados>fundamentos-e-tipos-niveis-de-abstracao-projeto-normalizacao-modelagem-fisica-e-logica",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1395
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.85
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>modelagem-relacional-normalizacao-e-integridade",
+              "confianca": 0.7
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>normalizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1106
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.85
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>modelagem-relacional-normalizacao-e-integridade",
+          "confianca": 0.7
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>normalizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>fundamentos-e-tipos-niveis-de-abstracao-projeto-normalizacao-modelagem-fisica-e-logica",
+              "confianca": 0.7
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>nocoes-de-administracao-de-dados-e-de-banco-de-dados",
+              "confianca": 0.6
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1091
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>fundamentos-e-tipos-niveis-de-abstracao-projeto-normalizacao-modelagem-fisica-e-logica",
+          "confianca": 0.7
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>nocoes-de-administracao-de-dados-e-de-banco-de-dados",
+          "confianca": 0.6
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1566
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.7
+            },
+            {
+              "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>programacao-para-analise>python-3-estruturas-de-dados-controle-de-fluxo-funcoes-modulos-arquivos-e-excecoes-leitura-analise-e-depuracao-de-rotinas-de-manipulacao-de-dados-organizacao-modular-testes-e-reprodutibilidade-de-analises",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1549
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.7
+        },
+        {
+          "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>programacao-para-analise>python-3-estruturas-de-dados-controle-de-fluxo-funcoes-modulos-arquivos-e-excecoes-leitura-analise-e-depuracao-de-rotinas-de-manipulacao-de-dados-organizacao-modular-testes-e-reprodutibilidade-de-analises",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 829
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 829
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>programacao-em-linguagem-de-scripts-shell-script-bash-power-shell-python",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.9
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>versionamento-gestao-de-configuracao-e-automacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1340
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.9
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>versionamento-gestao-de-configuracao-e-automacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerenciamento-de-portfolio-pmbok",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>gestao-de-projetos>conceitos-de-gestao-de-programas-e-de-gestao-de-portfolio-de-projetos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1280
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerenciamento-de-portfolio-pmbok",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>gestao-de-projetos>conceitos-de-gestao-de-programas-e-de-gestao-de-portfolio-de-projetos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_002_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+              "confianca": 0.8
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ferramentas-e-tecnicas-de-apoio-ao-gerenciamento-de-projetos>pmbok-7-edicao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1010
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ferramentas-e-tecnicas-de-apoio-ao-gerenciamento-de-projetos>pmbok-7-edicao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:1": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -34,6 +3926,151 @@
       ],
       "incerto": true,
       "concordancia": "discordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:15": {
       "opinioes": {
@@ -88,6 +4125,27 @@
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
@@ -151,6 +4209,27 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:20": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -175,6 +4254,874 @@
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-ortografia-oficial",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1308
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-ortografia-oficial",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1424
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1044
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1424
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1442
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.4
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1261
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1495
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1281
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1529
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1529
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1529
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1529
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>sistemas-de-numeracao-e-representacao-de-inteiros",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1488
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1525
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1143
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>experimento-deterministico-e-aleatorio",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>funcao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1362
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>experimento-deterministico-e-aleatorio",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>funcao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.85
+            },
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.8
+            },
+            {
+              "id": "raciocinio-logico>probabilidade",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.85
+        },
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.8
+        },
+        {
+          "id": "raciocinio-logico>probabilidade",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1149
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.7
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.7
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.75
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 618
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.75
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -213,6 +5160,93 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1296
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

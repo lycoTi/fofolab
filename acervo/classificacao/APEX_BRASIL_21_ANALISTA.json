@@ -1,6 +1,270 @@
 {
   "identificador": "APEX_BRASIL_21_ANALISTA",
   "itens": {
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>normas-de-eficacia-plena-contida-e-limitada",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>normas-de-eficacia-plena-contida-e-limitada",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>poder-judiciario>orgaos-do-poder-judiciario",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 126
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>poder-judiciario>orgaos-do-poder-judiciario",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 69
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 186
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1148
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>poder-judiciario>conselho-nacional-de-justica-cnj",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1039
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>poder-judiciario>conselho-nacional-de-justica-cnj",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1255
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>processo-administrativo-federal>lei-n-9-784-1999",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 63
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>processo-administrativo-federal>lei-n-9-784-1999",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 86
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>poderes-da-administracao-publica>vinculado-discricionario-hierarquico-disciplinar-e-regulamentar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 130
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>poderes-da-administracao-publica>vinculado-discricionario-hierarquico-disciplinar-e-regulamentar",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:51": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -38,6 +302,1447 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>entidades-paraestatais-e-terceiro-setor>servicos-sociais-autonomos-entidades-de-apoio-organizacoes-sociais-organizacoes-da-sociedade-civil-de-interesse-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 43
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>entidades-paraestatais-e-terceiro-setor>servicos-sociais-autonomos-entidades-de-apoio-organizacoes-sociais-organizacoes-da-sociedade-civil-de-interesse-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>atos-processuais-conceito-classificacao-forma-tempo-lugar-prazos>preclusao",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-civil>preclusao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1483
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>preclusao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-penal>atos-processuais-conceito-classificacao-forma-tempo-lugar-prazos>preclusao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>tutela-provisoria>tutela-de-urgencia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 123
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>tutela-provisoria>tutela-de-urgencia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>improcedencia-liminar-do-pedido",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 744
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>improcedencia-liminar-do-pedido",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>acao-rescisoria-e-coisa-julgada",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1336
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>acao-rescisoria-e-coisa-julgada",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-n-9-099-1995-e-suas-alteracoes-e-lei-n-10-259-2001-e-suas-alteracoes-juizados-especiais-civeis-e-criminais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1510
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-n-9-099-1995-e-suas-alteracoes-e-lei-n-10-259-2001-e-suas-alteracoes-juizados-especiais-civeis-e-criminais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>procedimento-sumarissimo-valor-da-causa-e-limites",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-do-trabalho>procedimento-sumarissimo-demandas-excluidas-e-partes",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-do-trabalho>procedimento-sumarissimo-provas-e-testemunhas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1194
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>procedimento-sumarissimo-valor-da-causa-e-limites",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-do-trabalho>procedimento-sumarissimo-demandas-excluidas-e-partes",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-do-trabalho>procedimento-sumarissimo-provas-e-testemunhas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>tutela-provisoria",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-civil>processos-nos-tribunais-e-meios-de-impugnacao-das-decisoes-judiciais",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-do-trabalho>processo-do-trabalho-recursos-e-impugnacao-de-decisoes-interlocutorias",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 924
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>processo-do-trabalho-recursos-e-impugnacao-de-decisoes-interlocutorias",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-civil>tutela-provisoria",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-civil>processos-nos-tribunais-e-meios-de-impugnacao-das-decisoes-judiciais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>execucao-trabalhista-e-embargos-a-execucao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1446
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>execucao-trabalhista-e-embargos-a-execucao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>tutela-provisoria",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1142
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "macroeconomia>modelos-de-determinacao-da-renda-em-economias-fechada-e-aberta",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-do-trabalho>dissidio-coletivo-e-clausulas-normativas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 375
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>dissidio-coletivo-e-clausulas-normativas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>beneficios-as-microempresas-e-empresas-de-pequeno-porte-em-licitacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1020
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>beneficios-as-microempresas-e-empresas-de-pequeno-porte-em-licitacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-comercial>empresario-e-atividade-empresarial",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1324
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>empresario-e-atividade-empresarial",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>combinacao-de-negocios-fusao-incorporacao-e-cisao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 684
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>combinacao-de-negocios-fusao-incorporacao-e-cisao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>pessoas-juridicas>desconsideracao-da-personalidade-juridica",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-comercial>responsabilidade-dos-socios-e-administradores>doutrina-da-desconsideracao-da-personalidade-juridica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1348
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>pessoas-juridicas>desconsideracao-da-personalidade-juridica",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-comercial>responsabilidade-dos-socios-e-administradores>doutrina-da-desconsideracao-da-personalidade-juridica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 670
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1497
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 999
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-internacional-privado>natureza-objeto-e-fontes-do-direito-internacional-privado",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1031
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-privado>natureza-objeto-e-fontes-do-direito-internacional-privado",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-internacional-privado>fundamentos-e-aplicacao-do-direito-estrangeiro",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 949
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-privado>fundamentos-e-aplicacao-do-direito-estrangeiro",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro>eficacia-da-lei-no-espaco",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1245
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro>eficacia-da-lei-no-espaco",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-internacional-publico>contratos-internacionais-e-incoterms",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 794
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-publico>contratos-internacionais-e-incoterms",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-comercial>contratos-de-empresas-nocoes-requisitos-classificacao-formacao-meios-de-provas-contratos-de-compra-e-venda-e-de-prestacao-de-servicos-contratos-de-conta-corrente-de-abertura-de-credito-de-alienacao-e-contrato-de-leasing",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>nocoes-gerais-de-direitos-autorais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 954
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>nocoes-gerais-de-direitos-autorais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>nocoes-gerais-de-direitos-autorais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 952
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>nocoes-gerais-de-direitos-autorais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1046
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>propriedade-industrial",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1480
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>propriedade-industrial",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 424
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 498
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 175
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 950
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 32
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp>regras-de-integridade-do-pcasp",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 290
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-conceitual-e-caracteristicas-qualitativas-da-informacao-contabil",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 148
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-conceitual-e-caracteristicas-qualitativas-da-informacao-contabil",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1150
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>instrumentos-financeiros",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 98
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>instrumentos-financeiros",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>receita-de-contrato-com-cliente-nbc-tg-47",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1080
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>receita-de-contrato-com-cliente-nbc-tg-47",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente",
+              "confianca": 0.6
+            },
+            {
+              "id": "contabilidade-geral>ativo-imobilizado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 889
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>ativo-imobilizado",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1323
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 71
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>analise-das-demonstracoes-contabeis-capital-de-giro",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 911
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-das-demonstracoes-contabeis-capital-de-giro",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>escrituracao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 823
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>escrituracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-valor-adicionado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1121
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-valor-adicionado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>combinacao-de-negocios-fusao-incorporacao-e-cisao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 675
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>combinacao-de-negocios-fusao-incorporacao-e-cisao",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>contabilizacao-de-investimentos-em-coligadas-e-controladas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 992
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>contabilizacao-de-investimentos-em-coligadas-e-controladas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1170
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>issqn-incidencia-e-nao-incidencia",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1279
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>issqn-incidencia-e-nao-incidencia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>retencao-e-recolhimento-de-tributos-incidentes-sobre-bens-e-servicos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 653
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>retencao-e-recolhimento-de-tributos-incidentes-sobre-bens-e-servicos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>tributacao>comparacao-entre-tributos-sobre-renda-patrimonio-e-consumo",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 664
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributacao-da-renda-e-da-contribuicao-social-lucro-real-lucro-presumido-e-simples-nacional",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1200
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>tributacao-da-renda-e-da-contribuicao-social-lucro-real-lucro-presumido-e-simples-nacional",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>carteira-de-trabalho-e-previdencia-social-ctps-anotacoes-pelo-empregador",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 230
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>carteira-de-trabalho-e-previdencia-social-ctps-anotacoes-pelo-empregador",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-e-horas-extras",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-do-trabalho>acordo-e-convencao-coletivos-e-duracao-do-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1191
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-e-horas-extras",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-do-trabalho>acordo-e-convencao-coletivos-e-duracao-do-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 469
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>rescisao-do-contrato-de-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1101
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>rescisao-do-contrato-de-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>ferias-e-abono-pecuniario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1253
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>ferias-e-abono-pecuniario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-fraudes-na-escrita-contabil",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.2
+            }
+          ],
+          "versaoVocabulario": 169
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-fraudes-na-escrita-contabil",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 164
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:70": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -54,6 +1759,765 @@
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>evidencia-e-conclusao>suficiencia-adequacao-e-confiabilidade-nocao-de-achado-e-de-limitacoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>evidencia-e-conclusao>suficiencia-adequacao-e-confiabilidade-nocao-de-achado-e-de-limitacoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.82
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 170
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.82
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>programa-de-prevencao-de-riscos-ambientais-ppra-e-riscos-ergonomicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>programa-de-prevencao-de-riscos-ambientais-ppra-e-riscos-ergonomicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 51
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 720
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 766
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+              "confianca": 0.9
+            },
+            {
+              "id": "matematica-financeira>juros-simples-e-compostos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 958
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+          "confianca": 0.9
+        },
+        {
+          "id": "matematica-financeira>juros-simples-e-compostos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>anuidades-juros-compostos-e-valor-acumulado",
+              "confianca": 0.9
+            },
+            {
+              "id": "matematica-financeira>juros-compostos-calculo-de-valor-presente-montante-e-series-de-pagamentos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1195
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>anuidades-juros-compostos-e-valor-acumulado",
+          "confianca": 0.9
+        },
+        {
+          "id": "matematica-financeira>juros-compostos-calculo-de-valor-presente-montante-e-series-de-pagamentos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>juros-simples-e-compostos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1003
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>juros-simples-e-compostos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_002_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>problemas-de-razao-proporcao-e-regra-de-tres",
+              "confianca": 0.85
+            },
+            {
+              "id": "matematica-financeira>regra-de-tres-simples-e-composta-proporcionalidades-e-porcentagens",
+              "confianca": 0.8
+            },
+            {
+              "id": "raciocinio-logico>regra-de-tres-e-proporcionalidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1431
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>problemas-de-razao-proporcao-e-regra-de-tres",
+          "confianca": 0.85
+        },
+        {
+          "id": "matematica-financeira>regra-de-tres-simples-e-composta-proporcionalidades-e-porcentagens",
+          "confianca": 0.8
+        },
+        {
+          "id": "raciocinio-logico>regra-de-tres-e-proporcionalidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-web-html5-e-responsividade",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>html5",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1515
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-web-html5-e-responsividade",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>html5",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-web-html5-e-responsividade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1521
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-web-html5-e-responsividade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>ferramentas-de-comunicacao-e-colaboracao-correio-eletronico-webmail-cliente-de-e-mail-aplicativos-de-comunicacao-microsoft-teams-google-meet",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 87
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>ferramentas-de-comunicacao-e-colaboracao-correio-eletronico-webmail-cliente-de-e-mail-aplicativos-de-comunicacao-microsoft-teams-google-meet",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 865
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>arquitetura-de-aplicacoes-e-servicos-para-ambiente-web>arquitetura-de-aplicacoes-web-tipos-caracteristicas-basicas-e-principais-fundamentos",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 788
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>arquitetura-de-aplicacoes-e-servicos-para-ambiente-web>arquitetura-de-aplicacoes-web-tipos-caracteristicas-basicas-e-principais-fundamentos",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 668
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1042
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>data-control-language-2-1-6-transaction-control-language",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>data-definition-language-data-manipulation-language-data-control-language-transaction-control-language",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1284
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>data-control-language-2-1-6-transaction-control-language",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>data-definition-language-data-manipulation-language-data-control-language-transaction-control-language",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.9
+            },
+            {
+              "id": "bancos-de-dados>normalizacao-e-formas-normais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 194
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "bancos-de-dados>normalizacao-e-formas-normais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>gestao-de-banco-de-dados>controle-de-acesso-usuario-calculo-volumetrico-replicacao-cluster-particionamento-e-esquemas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 313
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>gestao-de-banco-de-dados>controle-de-acesso-usuario-calculo-volumetrico-replicacao-cluster-particionamento-e-esquemas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+              "confianca": 0.95
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 91
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+          "confianca": 0.95
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>regressao-classificacao-agrupamento-reducao-de-dimensionalidade-e-deteccao-de-anomalias-regularizacao-ensembles-sobreajuste-e-subajuste-comparacao-com-solucoes-simples",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 803
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>regressao-classificacao-agrupamento-reducao-de-dimensionalidade-e-deteccao-de-anomalias-regularizacao-ensembles-sobreajuste-e-subajuste-comparacao-com-solucoes-simples",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-warehouse",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>banco-de-dados>data-warehousing",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 230
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-warehouse",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>banco-de-dados>data-warehousing",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1036
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 349
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>sistemas-de-deteccao-e-prevencao-de-intrusao-ids-ips",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>deteccao-de-intrusao-em-redes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1263
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>sistemas-de-deteccao-e-prevencao-de-intrusao-ids-ips",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>deteccao-de-intrusao-em-redes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio>normas-abnt-nbr-iso-iec-27005-2019-e",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>gerenciamento-de-riscos-de-ti-nbr-iso-iec-27005-2019-e-nist-rmf",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 919
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio>normas-abnt-nbr-iso-iec-27005-2019-e",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>gerenciamento-de-riscos-de-ti-nbr-iso-iec-27005-2019-e-nist-rmf",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -88,6 +2552,926 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 705
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>storage-san-nas-das-storage-objeto-s3",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1397
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+              "confianca": 0.5
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>discos-e-armazenamento-hot-swap",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1463
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>discos-e-armazenamento-hot-swap",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>infraestrutura>linguagens-de-script-ansible-terraform-shellscript",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1396
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>linguagens-de-script-shell-script-bash-windows-powershell-python",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>infraestrutura>linguagens-de-script-ansible-terraform-shellscript",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 798
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-ipv4-e-ipv6-enderecamento-ip-ipv4-ipv6-voip",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 584
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-ipv4-e-ipv6-enderecamento-ip-ipv4-ipv6-voip",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>arquitetura-tcp-ip-protocolos-segmentacao-enderecamento-ipv4-ipv6",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>servidores-web-e-de-aplicacao>wildfly-iis-apache-nginx",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 918
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>servidores-web-e-de-aplicacao>wildfly-iis-apache-nginx",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.4
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>backup-e-recuperacao-conceitos-fundamentais-tipos-de-copias-de-seguranca-principais-tecnologias-deduplicacao-recuperacao-de-desastres-e-continuidade-de-sistemas-e-servicos-de-ti",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1363
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1405
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-geral>gestao-de-projetos>escritorio-de-projetos-pmo",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>gerenciamento-de-projetos-de-tic>escritorio-de-projetos-pmo-e-gestao-de-portfolio-de-projetos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1050
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-geral>gestao-de-projetos>escritorio-de-projetos-pmo",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>gerenciamento-de-projetos-de-tic>escritorio-de-projetos-pmo-e-gestao-de-portfolio-de-projetos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 92
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1329
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>impactos-das-mudancas-e-das-falhas-sobre-a-continuidade-e-a-qualidade-dos-servicos",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>debito-tecnico-documentacao-modularidade-e-acoplamento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1179
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>impactos-das-mudancas-e-das-falhas-sobre-a-continuidade-e-a-qualidade-dos-servicos",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>debito-tecnico-documentacao-modularidade-e-acoplamento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>acessibilidade-e-barreiras-digitais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 770
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>acessibilidade-e-barreiras-digitais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 243
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>metodologias-ageis-e-scrum",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1400
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>metodologias-ageis-e-scrum",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1392
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>atos-normativos-do-me-slti-instrucao-normativa-n-1-2019",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1004
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>atos-normativos-do-me-slti-instrucao-normativa-n-1-2019",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 816
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 229
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_003_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+              "confianca": 0.55
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.4
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 131
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>tecnica-e-preco-instrucao-normativa-seges-mgi-n-2-de-7-de-fevereiro-de-2023",
+          "confianca": 0.55
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+          "confianca": 0.5
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>redacao-e-jornalismo>generos-e-formatos-de-textos-jornalisticos-newsletter-comunicados-informativos-materias-jornalisticas-linguagem-dos-veiculos-radio-televisao-web-impressos-cronicas-editoriais",
+              "confianca": 0.4
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.5
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.5
+        },
+        {
+          "id": "comunicacao>redacao-e-jornalismo>generos-e-formatos-de-textos-jornalisticos-newsletter-comunicados-informativos-materias-jornalisticas-linguagem-dos-veiculos-radio-televisao-web-impressos-cronicas-editoriais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>elaboracao-e-analise-de-projetos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>elaboracao-e-analise-de-projetos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-projetos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-projetos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-projetos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-projetos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-projetos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-projetos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerenciamento-do-cronograma-escopo-e-integracao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 653
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerenciamento-do-cronograma-escopo-e-integracao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>processo-administrativo>organizacao>tipos-de-departamentalizacao-caracteristicas-vantagens-e-desvantagens-de-cada-tipo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>processo-administrativo>organizacao>tipos-de-departamentalizacao-caracteristicas-vantagens-e-desvantagens-de-cada-tipo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 659
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 652
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>moral-etica-principios-e-valores",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>moral-etica-principios-e-valores",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 652
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "codigo-de-etica>abrangencia-e-aplicacao-do-codigo-de-etica-da-apex-brasil",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "codigo-de-etica>abrangencia-e-aplicacao-do-codigo-de-etica-da-apex-brasil",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:25": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -107,6 +3491,426 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-de-desenvolvimento-economico-no-brasil-industria-agropecuaria-servicos-turismo-pesca-e-aquicultura-mineracao-ciencia-tecnologia-e-inovacao",
+              "confianca": 0.4
+            },
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>aspectos-gerais-do-comportamento-recente-da-economia-brasileira-e-das-politicas-economicas-adotadas-pelos-ultimos-governos",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 653
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-de-desenvolvimento-economico-no-brasil-industria-agropecuaria-servicos-turismo-pesca-e-aquicultura-mineracao-ciencia-tecnologia-e-inovacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agencias-executivas-e-contrato-de-gestao-lei-n-10-668-2003",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agencias-executivas-e-contrato-de-gestao-lei-n-10-668-2003",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>composicao-do-conselho-deliberativo-de-agencia-apex-brasil",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>composicao-do-conselho-deliberativo-de-agencia-apex-brasil",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 653
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 652
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>nocoes-de-sistema-operacional-e-editores-de-texto-word",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 649
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>nocoes-de-sistema-operacional-e-editores-de-texto-word",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>microsoft-word-revisao-e-controle-de-alteracoes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 654
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>microsoft-word-revisao-e-controle-de-alteracoes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>acesso-a-distancia-a-computadores-transferencia-de-informacao-e-arquivos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>enderecamento-e-protocolos-de-redes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 651
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>enderecamento-e-protocolos-de-redes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "APEX_BRASIL_21_ANALISTA:582_APEX_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

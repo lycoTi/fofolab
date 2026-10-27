@@ -28,8 +28,8 @@ import { mergeVocabularios, readEditalLines, readVocabulario, seedFromEdital, wr
  */
 const ACERVO = 'acervo';
 const CACHE = '.minerador-cache';
-/** Teto de gasto por dia com a DeepSeek (decisão do dono) e a cotação usada na conta, alta de propósito. */
-const DEEPSEEK_TETO_BRL = 5;
+/** Teto de gasto por dia com a DeepSeek (contado no preço cheio de pico sem desconto de cache; o saldo real de US$ 5 dura ~26 mil itens). */
+const DEEPSEEK_TETO_BRL = 55;
 const USD_BRL_CONSERVADOR = 6;
 const ANO_MINIMO = 2021;
 const USER_AGENT = 'FofoLab-minerador (estudo pessoal; github.com/lycoTi)';
@@ -48,7 +48,7 @@ const EDITAIS_SEMENTE = ['SERPRO_23', 'TCE_SC_21_AUDITOR', 'CNJ_24', 'CD_25_NS',
  * texto); desempatar com o Claude Sonnet pelo Antigravity, que esgota a janela de 5 h em ~200 itens — só para poucos.
  */
 const PADRAO: Record<Alvo, { provedor: 'agy' | 'groq' | 'deepseek'; modelo: string }> = {
-  'sem-opiniao': { provedor: 'agy', modelo: 'gemini-3.8-flash-low' },
+  'sem-opiniao': { provedor: 'deepseek', modelo: 'deepseek-flash' },
   todos: { provedor: 'groq', modelo: 'openai/gpt-oss-120b' },
   discordantes: { provedor: 'agy', modelo: 'claude-sonnet-5-5-low' },
 };
@@ -110,19 +110,59 @@ async function ownerSubjects(): Promise<Set<string>> {
   return new Set(seeded.assuntos.filter((a) => a.caminho.length === 1).map((a) => a.id));
 }
 
+function defaultParalelo(providerName: string): number {
+  if (providerName === 'deepseek') return 12;
+  if (providerName === 'agy') return 3;
+  return 1;
+}
+
 async function classify(args: string[], alvo: Alvo): Promise<number> {
   const provider = providerFrom(args, alvo);
   const limite = Number(flag(args, 'limite') ?? 1000);
-  // O Antigravity aguenta lotes simultâneos (cada um leva ~1,5 min); o Groq grátis tem limite por minuto, então um por vez
-  const paralelo = Number(flag(args, 'paralelo') ?? (provider.nome === 'agy' ? 3 : 1));
+  const paralelo = Number(flag(args, 'paralelo') ?? defaultParalelo(provider.nome));
   const prioridade = await ownerSubjects();
   const inicio = Date.now();
-  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo, prioridade });
+  let lastCheckpoint = 0;
+  const onProgress = (n: number) => {
+    if (n - lastCheckpoint >= 500) {
+      lastCheckpoint = n;
+      const { entry } = writePacoteAndIndex(ACERVO);
+      console.log(`[progresso] ${n} classificados nesta rodada → pacote atualizado (${entry.itensComAssunto} com assunto, vocabulário v${entry.vocabVersion}).`);
+    }
+  };
+  const report = await runClassificacao({ provider, acervoDir: ACERVO, limite, alvo, k: CANDIDATOS, paralelo, prioridade, onProgress });
   console.log(formatClassifyReport(report, provider));
   console.log(`Tempo: ${Math.round((Date.now() - inicio) / 1000)} s com ${paralelo} lote(s) em paralelo.`);
   if (report.classificados > 0) {
     const { entry } = writePacoteAndIndex(ACERVO);
     console.log(`Pacote atualizado: ${entry.itensComAssunto} itens com assunto, vocabulário v${entry.vocabVersion}.`);
+  }
+  // Se a DeepSeek bateu no limite de saldo/teto e o provedor não foi fixado à mão, continua no Antigravity (agy)
+  const restante = limite - report.classificados;
+  if (alvo === 'sem-opiniao' && provider.nome === 'deepseek' && report.parouNoLimite && !flag(args, 'provedor') && restante > 0) {
+    console.log(`DeepSeek atingiu o limite; continuando os ${restante} itens restantes com Antigravity (agy:gemini-3.8-flash-low)...`);
+    const agyProvider = createAgyProvider({ modelo: 'gemini-3.8-flash-low', ...agyPaths() });
+    let lastAgyCheckpoint = 0;
+    const r2 = await runClassificacao({
+      provider: agyProvider,
+      acervoDir: ACERVO,
+      limite: restante,
+      alvo,
+      k: CANDIDATOS,
+      paralelo: 3,
+      prioridade,
+      onProgress: (n) => {
+        if (n - lastAgyCheckpoint >= 300) {
+          lastAgyCheckpoint = n;
+          writePacoteAndIndex(ACERVO);
+        }
+      },
+    });
+    console.log(formatClassifyReport(r2, agyProvider));
+    if (r2.classificados > 0) {
+      const { entry } = writePacoteAndIndex(ACERVO);
+      console.log(`Pacote atualizado: ${entry.itensComAssunto} itens com assunto, vocabulário v${entry.vocabVersion}.`);
+    }
   }
   return 0;
 }

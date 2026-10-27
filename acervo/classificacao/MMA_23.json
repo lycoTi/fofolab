@@ -1,0 +1,2365 @@
+{
+  "identificador": "MMA_23",
+  "itens": {
+    "MMA_23:929_MMA_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1393
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 96
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 96
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 96
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 96
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-sustentabilidade-ambiental-em-aquisicoes-instrucao-normativa-slti-mpog-n-01-de-19-de-janeiro-de-2010",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 991
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>sistema-nacional-de-unidades-de-conservacao-snuc",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biologia>biomas-brasileiros-vegetacao-fauna-e-flora",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1483
+        }
+      },
+      "consenso": [
+        {
+          "id": "biologia>biomas-brasileiros-vegetacao-fauna-e-flora",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biologia>biomas-brasileiros-e-impactos-ambientais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1359
+        }
+      },
+      "consenso": [
+        {
+          "id": "biologia>biomas-brasileiros-e-impactos-ambientais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geografia>biomas-e-dominios-morfoclimaticos-do-brasil",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1328
+        }
+      },
+      "consenso": [
+        {
+          "id": "geografia>biomas-e-dominios-morfoclimaticos-do-brasil",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>convencao-sobre-diversidade-biologica-cdb",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>convencao-sobre-diversidade-biologica-cdb",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1187
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-das-nacoes-unidas-e-inventario-de-emissoes-de-gases-de-efeito-estufa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1187
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-das-nacoes-unidas-e-inventario-de-emissoes-de-gases-de-efeito-estufa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 546
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-protocolo-de-quioto-e-acordo-de-paris",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+              "confianca": 0.7
+            },
+            {
+              "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 919
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+          "confianca": 0.7
+        },
+        {
+          "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-de-infraestrutura-no-brasil-transportes-telecomunicacoes-energia-recursos-hidricos-e-meio-ambiente",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 946
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 948
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>desenvolvimento-sustentavel-e-enfrentamento-das-mudancas-climaticas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 880
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 880
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-logistica-reversa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 767
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-logistica-reversa",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 425
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>resolucao-conama-n-401-2008-pilhas-e-baterias",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1480
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>resolucao-conama-n-401-2008-pilhas-e-baterias",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+              "confianca": 0.5
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-ambiental>poluicao-atmosferica-e-qualidade-do-ar",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1211
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>poluicao-atmosferica-e-qualidade-do-ar",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+          "confianca": 0.5
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-ambiental>poluicao-atmosferica-e-qualidade-do-ar",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1216
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>poluicao-atmosferica-e-qualidade-do-ar",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1240
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1065
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>resolucoes-conama-e-qualidade-do-solo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-residuos-solidos-lei-n-12-305-2010-principios-e-diretrizes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 507
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-residuos-solidos-lei-n-12-305-2010-principios-e-diretrizes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-principio-da-ecoeficiencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 293
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-principio-da-ecoeficiencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-residuos-solidos-lei-n-12-305-2010-principios-e-diretrizes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1157
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-residuos-solidos-lei-n-12-305-2010-principios-e-diretrizes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>saneamento-basico-lei-n-11-445-2007",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 812
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>saneamento-basico-lei-n-11-445-2007",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-ambiental>saneamento-basico-lei-n-11-445-2007-e-lei-n-14-026-2020",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>saneamento-basico-lei-n-11-445-2007-e-lei-n-14-026-2020",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>abordagens-orcamentarias-contemporaneas>agendas-transversais>orcamento-verde-green-budgeting",
+              "confianca": 0.55
+            },
+            {
+              "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1012
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>abordagens-orcamentarias-contemporaneas>agendas-transversais>orcamento-verde-green-budgeting",
+          "confianca": 0.55
+        },
+        {
+          "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1012
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>fontes-de-energia-renovaveis-e-nao-renovaveis-panorama-desafios-e-perspectivas",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>tributacao>imposto-sobre-valor-agregado-iva",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 887
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>tributacao>imposto-sobre-valor-agregado-iva",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 85
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>acesso-ao-patrimonio-genetico-e-conhecimento-tradicional-associado-lei-n-13-123-2015-e-decreto-n-8-772-2016",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>acesso-ao-patrimonio-genetico-e-conhecimento-tradicional-associado-lei-n-13-123-2015-e-decreto-n-8-772-2016",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1033
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-agrario>assistencia-tecnica-e-extensao-rural",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 201
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-agrario>assistencia-tecnica-e-extensao-rural",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 110
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.85
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1366
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1366
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>educacao-ambiental-e-conferencias-internacionais-de-meio-ambiente",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1475
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>educacao-ambiental-e-conferencias-internacionais-de-meio-ambiente",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+              "confianca": 0.8
+            },
+            {
+              "id": "pedagogia>fundamentos-da-educacao>bases-legais-da-educacao-nacional",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1436
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+          "confianca": 0.8
+        },
+        {
+          "id": "pedagogia>fundamentos-da-educacao>bases-legais-da-educacao-nacional",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-do-meio-ambiente",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1178
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-do-meio-ambiente",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "pedagogia>fundamentos-da-educacao>legislacao-aplicada-a-educacao-a-distancia",
+              "confianca": 0.8
+            },
+            {
+              "id": "pedagogia>educacao-a-distancia-materiais-didaticos-e-multimeios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1514
+        }
+      },
+      "consenso": [
+        {
+          "id": "pedagogia>fundamentos-da-educacao>legislacao-aplicada-a-educacao-a-distancia",
+          "confianca": 0.8
+        },
+        {
+          "id": "pedagogia>educacao-a-distancia-materiais-didaticos-e-multimeios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1475
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>educacao-ambiental-principios-basicos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>zoneamento-ambiental-e-ecologico-economico",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 458
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>zoneamento-ambiental-e-ecologico-economico",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>zoneamento-ambiental-e-ecologico-economico",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1486
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>zoneamento-ambiental-e-ecologico-economico",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sensoriamento-remoto-e-geoprocessamento>geoprocessamento-e-sistemas-de-informacao-geografica",
+              "confianca": 0.85
+            },
+            {
+              "id": "sensoriamento-remoto-e-geoprocessamento>sistemas-de-informacao-geografica-sig-conceitos-e-aplicacoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1486
+        }
+      },
+      "consenso": [
+        {
+          "id": "sensoriamento-remoto-e-geoprocessamento>geoprocessamento-e-sistemas-de-informacao-geografica",
+          "confianca": 0.85
+        },
+        {
+          "id": "sensoriamento-remoto-e-geoprocessamento>sistemas-de-informacao-geografica-sig-conceitos-e-aplicacoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sensoriamento-remoto-e-geoprocessamento>geoprocessamento-e-sistemas-de-informacao-geografica",
+              "confianca": 0.8
+            },
+            {
+              "id": "sensoriamento-remoto-e-geoprocessamento>sistemas-de-informacao-geografica-sig-conceitos-e-aplicacoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1486
+        }
+      },
+      "consenso": [
+        {
+          "id": "sensoriamento-remoto-e-geoprocessamento>geoprocessamento-e-sistemas-de-informacao-geografica",
+          "confianca": 0.8
+        },
+        {
+          "id": "sensoriamento-remoto-e-geoprocessamento>sistemas-de-informacao-geografica-sig-conceitos-e-aplicacoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 294
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1393
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 421
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>principios-e-iniciativas-ambientais-internacionais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>controle-social-e-cidadania",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1393
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>controle-social-e-cidadania",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 807
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 232
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 232
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 232
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 232
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1564
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>governanca-governabilidade-e-accountability-na-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 341
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>governanca-governabilidade-e-accountability-na-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+              "confianca": 0.55
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>creditos-ordinarios-e-adicionais",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>creditos-ordinarios-e-adicionais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1009
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+          "confianca": 0.55
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>creditos-ordinarios-e-adicionais",
+          "confianca": 0.5
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>creditos-ordinarios-e-adicionais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1326
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>mudancas-institucionais-conselhos-organizacoes-sociais-organizacao-da-sociedade-civil-de-interesse-publico-oscip-agencia-reguladora-agencia-executiva-consorcios-publicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 703
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>mudancas-institucionais-conselhos-organizacoes-sociais-organizacao-da-sociedade-civil-de-interesse-publico-oscip-agencia-reguladora-agencia-executiva-consorcios-publicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 69
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1518
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.4
+            },
+            {
+              "id": "analise-de-informacao>lei-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1301
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 756
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1524
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 972
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>meio-ambiente",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1307
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>meio-ambiente",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>indigenas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 590
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>indigenas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>ordem-economica-e-financeira>principios-gerais-da-atividade-economica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1085
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>ordem-economica-e-financeira>principios-gerais-da-atividade-economica",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-ambiental>politica-nacional-de-combate-a-desertificacao-e-mitigacao-dos-efeitos-da-seca",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 156
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-combate-a-desertificacao-e-mitigacao-dos-efeitos-da-seca",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-combate-a-desertificacao-e-mitigacao-dos-efeitos-da-seca",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 568
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-combate-a-desertificacao-e-mitigacao-dos-efeitos-da-seca",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.5
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 96
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.5
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 166
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 290
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 762
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>patrimonio-genetico-e-acesso-ao-conhecimento-tradicional-associado-lei-n-13-123-2015",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 541
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+              "confianca": 0.7
+            },
+            {
+              "id": "legislacao-especial>experimentacao-animal-lei-n-11-794-2008",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 143
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>experimentacao-animal-lei-n-11-794-2008",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-e-democracia-exercicio-da-cidadania",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-e-democracia-exercicio-da-cidadania",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+              "confianca": 0.85
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>impedimento-e-suspeicao-no-processo-administrativo-federal-nos-termos-dos-arts-18-a-21-da-lei-n-9-784-1999-comunicacao-e-abstencao-quando-exigidas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+          "confianca": 0.85
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>impedimento-e-suspeicao-no-processo-administrativo-federal-nos-termos-dos-arts-18-a-21-da-lei-n-9-784-1999-comunicacao-e-abstencao-quando-exigidas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 69
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 602
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1564
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 780
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MMA_23:929_MMA_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1186
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

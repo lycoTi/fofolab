@@ -124,12 +124,16 @@ function loadQueue(acervoDir: string, classifDir: string, alvo: Alvo, key: strin
 function batches(queue: Queued[], vocab: Vocabulario, provider: AiProvider, k: number): { entries: BatchEntry[]; owners: Queued[] }[] {
   const byId = new Map(vocab.assuntos.map((a) => [a.id, a]));
   const maxTokens = provider.nome === 'groq' ? MAX_PROMPT_TOKENS.groq : MAX_PROMPT_TOKENS.default;
+  const materias = materiasOf(vocab);
   const out: { entries: BatchEntry[]; owners: Queued[] }[] = [];
   let current: { entries: BatchEntry[]; owners: Queued[] } = { entries: [], owners: [] };
   for (const q of queue) {
     const candidatos = candidatesFor(q.item, vocab, k).map((c) => byId.get(c.id)).filter((a): a is Assunto => !!a);
     const entry = { item: q.item, candidatos };
-    const tooBig = current.entries.length > 0 && estimateTokens(buildBatchPrompt([...current.entries, entry], materiasOf(vocab))) > maxTokens;
+    const tooBig =
+      maxTokens < 20000 &&
+      current.entries.length > 0 &&
+      estimateTokens(buildBatchPrompt([...current.entries, entry], materias)) > maxTokens;
     if (current.entries.length >= provider.tamanhoLote || tooBig) {
       out.push(current);
       current = { entries: [], owners: [] };
@@ -154,6 +158,8 @@ export async function runClassificacao(opts: {
   paralelo?: number;
   /** Matérias (ids de 1º nível) que vão para o começo da fila — as do edital do dono. */
   prioridade?: ReadonlySet<string>;
+  /** Chamado após cada lote gravado com o total acumulado de itens classificados na rodada. */
+  onProgress?: (classificados: number) => void;
 }): Promise<ClassifyReport> {
   const vocabPath = join(opts.acervoDir, 'vocabulario.json');
   const classifDir = join(opts.acervoDir, 'classificacao');
@@ -225,6 +231,7 @@ export async function runClassificacao(opts: {
     }
     for (const concurso of touched) writeClassificacao(classifDir, classif.get(concurso)!);
     if (applied.aceitas.length > 0) writeVocabulario(vocabPath, vocab);
+    opts.onProgress?.(report.classificados);
   };
 
   const workers = Math.max(1, opts.paralelo ?? 1);

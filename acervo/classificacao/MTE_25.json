@@ -1,6 +1,35 @@
 {
   "identificador": "MTE_25",
   "itens": {
+    "MTE_25:070_MTE_CF_001_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:070_MTE_CF_001_01:10": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -33,6 +62,35 @@
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 948
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -75,6 +133,1644 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MTE_25:070_MTE_CF_001_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1059
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>principios-do-direito-do-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 867
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>principios-do-direito-do-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+              "confianca": 0.15
+            },
+            {
+              "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 950
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 879
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 165
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>auditoria-fiscal-do-trabalho-atribuicoes-e-competencias-lei-n-10-593-2002",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 222
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>auditoria-fiscal-do-trabalho-atribuicoes-e-competencias-lei-n-10-593-2002",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1070
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>modalidades-de-contrato-de-emprego",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1171
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>modalidades-de-contrato-de-emprego",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-rural",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 184
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-rural",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>remuneracao-e-salario",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>trabalho-domestico-empregado-domestico",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-domestico-empregado-domestico",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+          "confianca": 0.4
+        },
+        {
+          "id": "direito-do-trabalho>remuneracao-e-salario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-temporario",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 986
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-temporario",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estagio-supervisionado-lei-n-11-788-2008",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 736
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estagio-supervisionado-lei-n-11-788-2008",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-avulso-portuario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 293
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-avulso-portuario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>relacoes-entre-o-nivel-de-atividade-e-o-mercado-de-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 855
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>relacoes-entre-o-nivel-de-atividade-e-o-mercado-de-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 146
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>conceito-terminologia-estrutura-normativa-fundamentacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 995
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>conceito-terminologia-estrutura-normativa-fundamentacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>declaracao-universal-dos-direitos-humanos",
+              "confianca": 0.9
+            },
+            {
+              "id": "direitos-humanos>trabalho-analogo-ao-de-escravo-e-compromissos-internacionais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 63
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>declaracao-universal-dos-direitos-humanos",
+          "confianca": 0.9
+        },
+        {
+          "id": "direitos-humanos>trabalho-analogo-ao-de-escravo-e-compromissos-internacionais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 69
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>familia-crianca-adolescente-jovem-e-idoso",
+              "confianca": 0.85
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            },
+            {
+              "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 99
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>familia-crianca-adolescente-jovem-e-idoso",
+          "confianca": 0.85
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.7
+        },
+        {
+          "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>contratos-administrativos-de-obras-publicas>formalizacao-execucao-controle-inexecucao-revisao-e-rescisao",
+              "confianca": 0.1
+            },
+            {
+              "id": "direito-do-trabalho>contrato-de-aprendizagem",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 158
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-de-aprendizagem",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-e-duracao-do-trabalho-fundamentos-e-limites",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 47
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-e-duracao-do-trabalho-fundamentos-e-limites",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-horario-e-carga-horaria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1168
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-horario-e-carga-horaria",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-tempo-a-disposicao-sobreaviso-e-prontidao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 324
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-tempo-a-disposicao-sobreaviso-e-prontidao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-controle-de-ponto-teletrabalho-e-trabalho-em-domicilio",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 337
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-controle-de-ponto-teletrabalho-e-trabalho-em-domicilio",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-intervalos-interjornada-e-intrajornada",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 196
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-intervalos-interjornada-e-intrajornada",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1187
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+              "confianca": 0.5
+            },
+            {
+              "id": "direitos-humanos>normatividade-e-estrutura-dos-direitos-humanos-regras-e-principios",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1304
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>normatividade-e-estrutura-dos-direitos-humanos-regras-e-principios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>remuneracao-e-salario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 789
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>remuneracao-e-salario",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>remuneracao-e-salario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 50
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>remuneracao-e-salario",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>negociacao-coletiva-e-mediacao-trabalhista",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 737
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>negociacao-coletiva-e-mediacao-trabalhista",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>direito-coletivo-do-trabalho-e-direito-de-greve",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1033
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>direito-coletivo-do-trabalho-e-direito-de-greve",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>seguridade-social-conceito-principios-e-especies",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 730
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>seguridade-social-conceito-principios-e-especies",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>seguridade-social-e-regime-geral-de-previdencia-social",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 911
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>seguridade-social-e-regime-geral-de-previdencia-social",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>processo-e-julgamento-dos-crimes-de-responsabilidade-dos-funcionarios-publicos",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-penal>crimes-contra-a-administracao-publica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 237
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>crimes-contra-a-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-penal>processo-e-julgamento-dos-crimes-de-responsabilidade-dos-funcionarios-publicos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>doencas-ocupacionais-e-saude-do-trabalhador",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 472
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>doencas-ocupacionais-e-saude-do-trabalhador",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1147
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>afirmacao-historica-dos-direitos-humanos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1044
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>afirmacao-historica-dos-direitos-humanos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>legislacao-de-acidentes-de-trabalho-e-beneficios-previdenciarios",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 217
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>legislacao-de-acidentes-de-trabalho-e-beneficios-previdenciarios",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>legislacao-de-acidentes-de-trabalho-e-beneficios-previdenciarios",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1497
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>legislacao-de-acidentes-de-trabalho-e-beneficios-previdenciarios",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1215
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1201
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 427
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 862
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-operacional>gestao-da-seguranca-operacional-e-modelos-de-acidentes",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1326
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-operacional>gestao-da-seguranca-operacional-e-modelos-de-acidentes",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 840
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1170
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico-o-estado-oligarquico-e-patrimonial-o-estado-autoritario-e-burocratico-o-estado-do-bem-estar-o-estado-regulador",
+              "confianca": 0.5
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 156
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico-o-estado-oligarquico-e-patrimonial-o-estado-autoritario-e-burocratico-o-estado-do-bem-estar-o-estado-regulador",
+          "confianca": 0.5
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 211
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>acidentes-ampliados-e-convencao-174-da-oit",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 870
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>acidentes-ampliados-e-convencao-174-da-oit",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciencias-humanas>meio-ambiente-e-desenvolvimento-sustentavel",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 136
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-internacional-publico>organizacao-das-nacoes-unidas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1105
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-publico>organizacao-das-nacoes-unidas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:070_MTE_CF_001_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 765
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 65
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-avaliacao-ergonomica-preliminar-e-analise-ergonomica-do-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 81
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-avaliacao-ergonomica-preliminar-e-analise-ergonomica-do-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 241
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 66
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>fgts",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 512
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>fgts",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>fundo-de-amparo-ao-trabalhador-fat-e-seguro-desemprego",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 97
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>fundo-de-amparo-ao-trabalhador-fat-e-seguro-desemprego",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 701
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>riscos-fisicos-e-radiacoes-no-ambiente-de-trabalho",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>movimentacao-de-materiais-e-ergonomia",
+              "confianca": 0.4
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1391
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>riscos-fisicos-e-radiacoes-no-ambiente-de-trabalho",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>movimentacao-de-materiais-e-ergonomia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 264
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-18-construcao-civil",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1290
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-18-construcao-civil",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1218
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1218
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-e-seguranca-de-maquinas-nr-12",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 609
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-e-seguranca-de-maquinas-nr-12",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>seguranca-em-instalacoes-eletricas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 841
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>seguranca-em-instalacoes-eletricas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>acionamentos-eletricos",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>acionamentos-eletricos>motores-eletricos-de-inducao-e-diagramas-de-comando",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1347
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>acionamentos-eletricos",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-eletrica>instalacoes-eletricas-em-baixa-tensao>acionamentos-eletricos>motores-eletricos-de-inducao-e-diagramas-de-comando",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-18-capacitacao-e-treinamento-de-trabalhadores",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 241
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-18-capacitacao-e-treinamento-de-trabalhadores",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:071_MTE_CF_001_01:27": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -99,6 +1795,451 @@
         {
           "id": "engenharia-eletrica>circuitos-trifasicos-e-analise-de-faltas-em-sistemas-de-energia-eletrica>tensao-corrente-potencia-e-fator-de-potencia-em-circuitos-equilibrados-e-desequilibrados",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-no-trabalho-nrs-nr-10-seguranca-em-instalacoes-e-servicos-em-eletricidade",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 104
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-no-trabalho-nrs-nr-10-seguranca-em-instalacoes-e-servicos-em-eletricidade",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 103
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1430
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>exames-medicos-e-periodicos-ocupacionais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 615
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>exames-medicos-e-periodicos-ocupacionais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "psicologia>psicodinamica-do-trabalho-e-atuacao-de-equipes-multiprofissionais-em-saude-do-trabalhador",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 442
+        }
+      },
+      "consenso": [
+        {
+          "id": "psicologia>psicodinamica-do-trabalho-e-atuacao-de-equipes-multiprofissionais-em-saude-do-trabalhador",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+              "confianca": 0.6
+            },
+            {
+              "id": "psicologia>psicologia-organizacional-e-do-trabalho-estresse-ocupacional-e-saude-do-trabalhador",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-do-trabalho>assedio-moral-no-trabalho-e-poder-diretivo-do-empregador",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1217
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>assedio-moral-no-trabalho-e-poder-diretivo-do-empregador",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+          "confianca": 0.6
+        },
+        {
+          "id": "psicologia>psicologia-organizacional-e-do-trabalho-estresse-ocupacional-e-saude-do-trabalhador",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>principios-garantias-vedacoes-organizacao-e-competencias",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-do-trabalho>inspecao-do-trabalho-sindicato-e-ministerio-publico-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 111
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>inspecao-do-trabalho-sindicato-e-ministerio-publico-do-trabalho",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>principios-garantias-vedacoes-organizacao-e-competencias",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>relacoes-entre-o-nivel-de-atividade-e-o-mercado-de-trabalho>salarios-inflacao-e-desemprego",
+              "confianca": 0.65
+            },
+            {
+              "id": "econometria>economia-brasileira-recente>politica-de-valorizacao-do-salario-minimo",
+              "confianca": 0.55
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 28
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>relacoes-entre-o-nivel-de-atividade-e-o-mercado-de-trabalho>salarios-inflacao-e-desemprego",
+          "confianca": 0.65
+        },
+        {
+          "id": "econometria>economia-brasileira-recente>politica-de-valorizacao-do-salario-minimo",
+          "confianca": 0.55
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>organizacao-internacional-do-trabalho-e-normas-internacionais-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 383
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>organizacao-internacional-do-trabalho-e-normas-internacionais-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 215
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 965
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 908
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1161
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1101
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+              "confianca": 0.95
+            },
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 174
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+          "confianca": 0.95
+        },
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.9
+            },
+            {
+              "id": "arquitetura-e-urbanismo>obra-e-fiscalizacao>organizacao-e-projeto-do-canteiro-de-obras",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1170
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.9
+        },
+        {
+          "id": "arquitetura-e-urbanismo>obra-e-fiscalizacao>organizacao-e-projeto-do-canteiro-de-obras",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 823
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 193
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>andaimes-e-plataformas-de-trabalho-nr-18-nr-35",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 147
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>andaimes-e-plataformas-de-trabalho-nr-18-nr-35",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -133,6 +2274,361 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MTE_25:071_MTE_CF_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-nr-35-trabalho-em-altura",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 867
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-nr-35-trabalho-em-altura",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>trabalho-em-altura-e-equipamentos-de-protecao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1228
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>trabalho-em-altura-e-equipamentos-de-protecao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>materiais-combustiveis-e-inflamaveis",
+              "confianca": 0.55
+            },
+            {
+              "id": "engenharia-quimica>calculos-estequiometricos-e-combustao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1310
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>materiais-combustiveis-e-inflamaveis",
+          "confianca": 0.55
+        },
+        {
+          "id": "engenharia-quimica>calculos-estequiometricos-e-combustao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>instalacoes-sanitarias-e-de-conforto-nos-locais-de-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1049
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>instalacoes-sanitarias-e-de-conforto-nos-locais-de-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>espacos-confinados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 317
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>espacos-confinados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+              "confianca": 0.4
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-no-trabalho-nrs-nr-10-seguranca-em-instalacoes-e-servicos-em-eletricidade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1095
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-no-trabalho-nrs-nr-10-seguranca-em-instalacoes-e-servicos-em-eletricidade",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1012
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 135
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 845
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>toxicologia-ocupacional",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>higiene-ocupacional-e-agentes-quimicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1227
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>toxicologia-ocupacional",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>higiene-ocupacional-e-agentes-quimicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 92
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>toxicologia-ocupacional",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 587
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>toxicologia-ocupacional",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-sanitario>vigilancia-sanitaria-de-agrotoxicos-e-classificacao-toxicologica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1458
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-sanitario>vigilancia-sanitaria-de-agrotoxicos-e-classificacao-toxicologica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:071_MTE_CF_001_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1022
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>inspecao-do-trabalho-e-convencoes-da-oit",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 253
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>inspecao-do-trabalho-e-convencoes-da-oit",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:090_MTECF_001_01:10": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -157,6 +2653,27 @@
         {
           "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 137
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -199,6 +2716,1167 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MTE_25:090_MTECF_001_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.6
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 919
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.6
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>fontes-formais-do-direito-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 36
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>fontes-formais-do-direito-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>principios-do-direito-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 170
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>principios-do-direito-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>poderes-da-administracao-publica>vinculado-discricionario-hierarquico-disciplinar-e-regulamentar",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-do-trabalho>poderes-do-empregador",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 101
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>poderes-do-empregador",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 143
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-individual-de-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 200
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>pessoas-juridicas>responsabilidade-da-pessoa-juridica-e-dos-socios",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-do-trabalho>sucessao-de-empregadores-e-responsabilidade-trabalhista",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 34
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>sucessao-de-empregadores-e-responsabilidade-trabalhista",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-civil>pessoas-juridicas>responsabilidade-da-pessoa-juridica-e-dos-socios",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 751
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 783
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 845
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>relacoes-de-emprego-contrato-de-trabalho-e-jornada-clt",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 820
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>relacoes-de-emprego-contrato-de-trabalho-e-jornada-clt",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-rural",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 874
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-rural",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.7
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>trabalho-domestico-empregado-domestico",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1274
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-domestico-empregado-domestico",
+          "confianca": 0.85
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+          "confianca": 0.7
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-comercial>o-empresario-requisitos-necessarios-impedimentos-direitos-e-deveres-em-face-da-legislacao-vigente",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 869
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.55
+        },
+        {
+          "id": "direito-comercial>o-empresario-requisitos-necessarios-impedimentos-direitos-e-deveres-em-face-da-legislacao-vigente",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-especial>estagio-e-contrato-de-aprendizagem",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 888
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>estagio-e-contrato-de-aprendizagem",
+          "confianca": 0.85
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-avulso-portuario",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 134
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>trabalho-avulso-portuario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 753
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+          "confianca": 0.6
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>formacao-social-e-cidadania-no-brasil>herancas-da-escravidao-hierarquias-sociais-e-construcao-da-cidadania-transformacoes-nas-relacoes-entre-estado-e-sociedade-mecanismos-de-inclusao-e-exclusao-institucional",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 780
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>o-mercado-de-trabalho-e-as-condicoes-de-emprego-e-renda",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>declaracao-universal-dos-direitos-humanos",
+              "confianca": 0.7
+            },
+            {
+              "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1418
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>declaracao-universal-dos-direitos-humanos",
+          "confianca": 0.7
+        },
+        {
+          "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.6
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1015
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.6
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>aplicacao-da-lei-processual-no-tempo-no-espaco-e-em-relacao-as-pessoas>disposicoes-preliminares-do-codigo-de-processo-penal",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-penal>crimes-contra-a-organizacao-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 395
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>crimes-contra-a-organizacao-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>familia-crianca-adolescente-jovem-e-idoso",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.6
+            },
+            {
+              "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>familia-crianca-adolescente-jovem-e-idoso",
+          "confianca": 0.8
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.6
+        },
+        {
+          "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>contrato-de-aprendizagem",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 140
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-de-aprendizagem",
+          "confianca": 0.9
+        },
+        {
+          "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-horario-e-carga-horaria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 527
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-horario-e-carga-horaria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-e-horas-extras",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1062
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-e-horas-extras",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-e-regimes-de-turnos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1103
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-e-regimes-de-turnos",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-e-compensacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 461
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-e-compensacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+              "confianca": 0.2
+            },
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-controle-de-ponto-teletrabalho-e-trabalho-em-domicilio",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 154
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-controle-de-ponto-teletrabalho-e-trabalho-em-domicilio",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 373
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>conceito-terminologia-estrutura-normativa-fundamentacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1427
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>conceito-terminologia-estrutura-normativa-fundamentacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1076
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>remuneracao-e-salario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1076
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>remuneracao-e-salario",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>remuneracao-e-verbas-indenizatorias",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 633
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>remuneracao-e-verbas-indenizatorias",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>direito-coletivo-do-trabalho-evolucao-historica-e-sindicalismo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 186
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>direito-coletivo-do-trabalho-evolucao-historica-e-sindicalismo",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>servico-social-e-trabalho-coletivo",
+              "confianca": 0.35
+            },
+            {
+              "id": "direito-do-trabalho>sindicatos-e-instrumentos-coletivos-de-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 842
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>sindicatos-e-instrumentos-coletivos-de-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>seguridade-social-conceito-principios-e-organizacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 675
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>seguridade-social-conceito-principios-e-organizacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>seguridade-social-conceito-principios-e-organizacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 880
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>seguridade-social-conceito-principios-e-organizacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>crimes-contra-a-organizacao-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 87
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>crimes-contra-a-organizacao-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1224
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>resposta-a-incidentes>analise-de-causas-e-melhoria-dos-controles",
+              "confianca": 0.75
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>modelo-da-gravata-borboleta-bow-tie-na-analise-de-incidentes-e-riscos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1333
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>modelo-da-gravata-borboleta-bow-tie-na-analise-de-incidentes-e-riscos",
+          "confianca": 0.8
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>resposta-a-incidentes>analise-de-causas-e-melhoria-dos-controles",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>normas-de-eficacia-plena-contida-e-limitada",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1245
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>normas-de-eficacia-plena-contida-e-limitada",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>normas-de-eficacia-plena-contida-e-limitada",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>relacoes-entre-problema-publico-processo-de-trabalho-e-solucao-digital",
+              "confianca": 0.3
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>industria-4-0-e-tecnologias-aplicadas-a-sst",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 366
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>industria-4-0-e-tecnologias-aplicadas-a-sst",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 212
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+              "confianca": 0.45
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 987
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+          "confianca": 0.45
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+              "confianca": 0.5
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>distincao-entre-reducao-de-ocorrencias-e-reducao-da-deteccao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1301
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>epidemiologia-e-analise-de-acidentes-e-doencas-do-trabalho",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+              "confianca": 0.55
+            },
+            {
+              "id": "realidade-brasileira>dinamica-e-estrutura-demografica-do-brasil>impactos-nas-politicas-de-previdencia-assistencia-social-saude-e-educacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 774
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+          "confianca": 0.55
+        },
+        {
+          "id": "realidade-brasileira>dinamica-e-estrutura-demografica-do-brasil>impactos-nas-politicas-de-previdencia-assistencia-social-saude-e-educacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-nexo-causal-ler-dort",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 83
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-nexo-causal-ler-dort",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MTE_25:090_MTECF_001_01:56": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -218,6 +3896,210 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.6
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 749
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.6
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>estrategias-qualitativas-e-mistas>estudos-de-caso-entrevistas-grupos-focais-e-observacao-selecao-de-casos-e-participantes-perguntas-e-controle-de-inducao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 1189
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>fatores-causais-de-acidentes-e-eventos-ocupacionais-adversos",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 82
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>analise-de-acidentes-de-trabalho-e-abordagens-de-prevencao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>fundamentos-de-direito-publico>evolucao-do-estado-de-bem-estar-social-no-brasil-e-os-direitos-civis-politicos-e-sociais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 759
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>fundamentos-de-direito-publico>evolucao-do-estado-de-bem-estar-social-no-brasil-e-os-direitos-civis-politicos-e-sociais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-ocupacionais-e-hierarquia-de-controles",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1210
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-ocupacionais-e-hierarquia-de-controles",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+              "confianca": 0.6
+            },
+            {
+              "id": "direitos-humanos>sistema-internacional-de-protecao-dos-direitos-humanos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 302
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>sistema-internacional-de-protecao-dos-direitos-humanos",
+          "confianca": 0.8
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>declaracao-universal-dos-direitos-humanos",
+              "confianca": 0.3
+            },
+            {
+              "id": "direitos-humanos>a-posicao-hierarquica-dos-tratados-internacionais-de-direitos-humanos-em-face-da-constituicao-da-republica-do-brasil",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 759
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>a-posicao-hierarquica-dos-tratados-internacionais-de-direitos-humanos-em-face-da-constituicao-da-republica-do-brasil",
+          "confianca": 0.3
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MTE_25:090_MTECF_001_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+              "confianca": 0.55
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.6
+            },
+            {
+              "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1043
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.6
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-na-constituicao-federal>mecanismos-de-protecao-aos-direitos-humanos-na-constituicao-da-republica-do-brasil",
+          "confianca": 0.55
+        },
+        {
+          "id": "realidade-brasileira>trabalho>a-persistencia-do-trabalho-escravo-e-infantil",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

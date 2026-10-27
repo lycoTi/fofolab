@@ -1,6 +1,1179 @@
 {
   "identificador": "TST_23",
   "itens": {
+    "TST_23:918_TST_SERVIDOR_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pneumologia-rastreamento-e-diagnostico-precoce-do-cancer-de-pulmao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 88
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pneumologia-rastreamento-e-diagnostico-precoce-do-cancer-de-pulmao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>hipertensao-arterial-secundaria-investigacao-diagnostica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 363
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>hipertensao-arterial-secundaria-investigacao-diagnostica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>hipertensao-arterial-sistemica-e-terapeutica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 280
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>hipertensao-arterial-sistemica-e-terapeutica",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>avaliacao-cardiovascular-perioperatoria",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1162
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>avaliacao-cardiovascular-perioperatoria",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>cardiologia-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 884
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>cardiologia-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>asma-bronquica-diagnostico-e-tratamento",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 946
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>asma-bronquica-diagnostico-e-tratamento",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>urgencia-e-emergencia-clinica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 855
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>urgencia-e-emergencia-clinica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>urgencia-e-emergencia-clinica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 855
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>urgencia-e-emergencia-clinica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>cardiologia-cardiomiopatia-hipertrofica-e-prevencao-de-morte-subita",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 319
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>cardiologia-cardiomiopatia-hipertrofica-e-prevencao-de-morte-subita",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>cardiologia-insuficiencia-cardiaca-congestiva-e-avaliacao-de-cardiopatia-grave",
+              "confianca": 0.7
+            },
+            {
+              "id": "medicina>insuficiencia-cardiaca-classificacao-e-estagios",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1189
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>cardiologia-insuficiencia-cardiaca-congestiva-e-avaliacao-de-cardiopatia-grave",
+          "confianca": 0.7
+        },
+        {
+          "id": "medicina>insuficiencia-cardiaca-classificacao-e-estagios",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>gastroenterologia-e-hepatologia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 233
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>gastroenterologia-e-hepatologia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>gastroenterologia-e-doencas-hepaticas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 292
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>gastroenterologia-e-doencas-hepaticas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>hepatites-virais-e-doencas-hepaticas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 932
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>hepatites-virais-e-doencas-hepaticas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>urgencia-e-emergencia-clinica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 311
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>urgencia-e-emergencia-clinica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>alergia-e-imunologia-e-neurologia-clinica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 871
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>alergia-e-imunologia-e-neurologia-clinica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>doencas-renais-e-insuficiencia-renal-cronica",
+              "confianca": 0.95
+            },
+            {
+              "id": "medicina>doencas-renais-e-glomerulonefrites",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1189
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>doencas-renais-e-insuficiencia-renal-cronica",
+          "confianca": 0.95
+        },
+        {
+          "id": "medicina>doencas-renais-e-glomerulonefrites",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>nefrologia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 311
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>nefrologia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>endocrinologia-e-metabologia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 143
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>endocrinologia-e-metabologia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>endocrinologia-e-metabologia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 212
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>endocrinologia-e-metabologia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>endocrinologia-tireoide-suprarrenais-e-paratireoides",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 409
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>endocrinologia-tireoide-suprarrenais-e-paratireoides",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>reumatologia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1189
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>reumatologia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>reumatologia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1107
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>reumatologia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>reumatologia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 238
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>reumatologia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>reumatologia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 267
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>reumatologia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>hiv-aids-diagnostico-prevencao-e-tratamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 239
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>hiv-aids-diagnostico-prevencao-e-tratamento",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>avaliacao-cardiovascular-perioperatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 767
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>avaliacao-cardiovascular-perioperatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "saude-coletiva>saude-sexual-e-infeccoes-sexualmente-transmissiveis",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 55
+        }
+      },
+      "consenso": [
+        {
+          "id": "saude-coletiva>saude-sexual-e-infeccoes-sexualmente-transmissiveis",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>alergia-e-imunologia-anafilaxia-hipersensibilidade-e-tratamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 88
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>alergia-e-imunologia-anafilaxia-hipersensibilidade-e-tratamento",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>toxicologia-e-intoxicacoes-exogenas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 54
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>toxicologia-e-intoxicacoes-exogenas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "farmacia>mecanismos-de-acao-de-antibacterianos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 390
+        }
+      },
+      "consenso": [
+        {
+          "id": "farmacia>mecanismos-de-acao-de-antibacterianos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>dinamica-de-maquinas-rotativas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 311
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>dinamica-de-maquinas-rotativas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>mecanismos-cinematica-e-dinamica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1533
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>mecanismos-cinematica-e-dinamica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>mecanica-dos-fluidos-e-perda-de-carga",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 624
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>mecanica-dos-fluidos-e-perda-de-carga",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>segunda-lei-da-termodinamica-e-maquinas-termicas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 550
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>segunda-lei-da-termodinamica-e-maquinas-termicas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>transferencia-de-calor-e-trocadores-de-calor",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 916
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>transferencia-de-calor-e-trocadores-de-calor",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>tratamentos-termicos-e-superficiais-de-materiais-metalicos",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-materiais>tratamentos-termicos-dos-acos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1203
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>tratamentos-termicos-e-superficiais-de-materiais-metalicos",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-materiais>tratamentos-termicos-dos-acos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-producao>metrologia-e-verificacao-de-instrumentos-de-medicao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 755
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-producao>metrologia-e-verificacao-de-instrumentos-de-medicao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>fadiga-dos-materiais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 311
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>fadiga-dos-materiais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fisica>mecanica-dos-fluidos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 859
+        }
+      },
+      "consenso": [
+        {
+          "id": "fisica>mecanica-dos-fluidos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>maquinas-de-fluxo-bombas-em-serie-e-paralelo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 865
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>maquinas-de-fluxo-bombas-em-serie-e-paralelo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+              "confianca": 0.4
+            },
+            {
+              "id": "engenharia-mecanica>sistemas-hidraulicos-e-pneumaticos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 961
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>sistemas-hidraulicos-e-pneumaticos",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>maquinas-hidraulicas-bombas-e-turbinas",
+              "confianca": 0.7
+            },
+            {
+              "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1396
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>maquinas-hidraulicas-bombas-e-turbinas",
+          "confianca": 0.7
+        },
+        {
+          "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>termodinamica-e-ciclos-de-potencia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 615
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>termodinamica-e-ciclos-de-potencia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>maquinas-eletricas>principios-de-conversao-eletromecanica-de-energia",
+              "confianca": 0.35
+            },
+            {
+              "id": "engenharia-mecanica>motores-de-combustao-interna",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1067
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>motores-de-combustao-interna",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>refrigeracao-compressores-e-ciclos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1288
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>refrigeracao-compressores-e-ciclos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-urbanismo>projetos-de-arquitetura-para-edificios>conforto-ambiental>conforto-termico>ventilacao-e-exaustao",
+              "confianca": 0.85
+            },
+            {
+              "id": "arquitetura-e-urbanismo>projetos-de-arquitetura-para-edificios>conforto-ambiental>conforto-termico",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 743
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-urbanismo>projetos-de-arquitetura-para-edificios>conforto-ambiental>conforto-termico>ventilacao-e-exaustao",
+          "confianca": 0.85
+        },
+        {
+          "id": "arquitetura-e-urbanismo>projetos-de-arquitetura-para-edificios>conforto-ambiental>conforto-termico",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>manutencao-industrial-tipos-de-manutencao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 440
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>manutencao-industrial-tipos-de-manutencao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-producao>manutencao-industrial-e-confiabilidade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 733
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-producao>manutencao-industrial-e-confiabilidade",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>doencas-profissionais-e-doencas-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 176
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>doencas-profissionais-e-doencas-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-doencas-profissionais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 340
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-doencas-profissionais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 321
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>avaliacao-e-controle-de-riscos-ocupacionais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 53
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>avaliacao-e-controle-de-riscos-ocupacionais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 130
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TST_23:918_TST_SERVIDOR_002_01:54": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -17,6 +1190,169 @@
         {
           "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>seguranca-e-higiene-do-trabalho",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1219
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-nr20-inflamaveis-e-combustiveis",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1090
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-nr20-inflamaveis-e-combustiveis",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 50
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>cipa-comissao-interna-de-prevencao-de-acidentes-e-de-assedio-nr-5",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 36
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>cipa-comissao-interna-de-prevencao-de-acidentes-e-de-assedio-nr-5",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-e-condicoes-de-trabalho-em-teleatendimento-nr-17",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 254
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-e-condicoes-de-trabalho-em-teleatendimento-nr-17",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-e-condicoes-de-trabalho-em-teleatendimento-nr-17",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 217
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-e-condicoes-de-trabalho-em-teleatendimento-nr-17",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -109,6 +1445,69 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TST_23:918_TST_SERVIDOR_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>raciocinio-logico-envolvendo-problemas-aritmeticos-geometricos-e-matriciais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>raciocinio-logico-envolvendo-problemas-aritmeticos-geometricos-e-matriciais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TST_23:918_TST_SERVIDOR_CB1_01:18": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -142,6 +1541,64 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.75
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.75
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "TST_23:918_TST_SERVIDOR_CB1_01:21": {
       "opinioes": {
@@ -194,6 +1651,77 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "TST_23:918_TST_SERVIDOR_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 670
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 674
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>organizacao-e-competencias-da-justica-do-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 674
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>organizacao-e-competencias-da-justica-do-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TST_23:918_TST_SERVIDOR_CB1_01:26": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -210,6 +1738,246 @@
         {
           "id": "normas-institucionais>regimento-interno-do-tst",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-do-trabalho>processo-do-trabalho-sessoes-e-plenario-eletronico-do-tst",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 674
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>processo-do-trabalho-sessoes-e-plenario-eletronico-do-tst",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>dissidios-coletivos-e-negociacao-coletiva",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>dissidios-coletivos-e-negociacao-coletiva",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>recursos-trabalhistas-e-regimento-interno-do-tst",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>recursos-trabalhistas-e-regimento-interno-do-tst",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 666
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 678
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 678
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 678
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -239,6 +2007,790 @@
         {
           "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1148
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.4
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 764
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1029
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1326
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estrutura-logica-de-relacoes-arbitrarias-entre-pessoas-lugares-objetos-ou-eventos-ficticios-deducao-de-novas-informacoes-das-relacoes-fornecidas-e-avaliacao-das-condicoes-usadas-para-estabelecer-a-estrutura-daquelas-relacoes",
+              "confianca": 0.5
+            },
+            {
+              "id": "matematica-financeira>geometria-plana-areas-e-perimetros",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1348
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>geometria-plana-areas-e-perimetros",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estrutura-logica-de-relacoes-arbitrarias-entre-pessoas-lugares-objetos-ou-eventos-ficticios-deducao-de-novas-informacoes-das-relacoes-fornecidas-e-avaliacao-das-condicoes-usadas-para-estabelecer-a-estrutura-daquelas-relacoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 471
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.7
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1232
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+          "confianca": 0.8
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estrutura-logica-de-relacoes-arbitrarias-entre-pessoas-lugares-objetos-ou-eventos-ficticios-deducao-de-novas-informacoes-das-relacoes-fornecidas-e-avaliacao-das-condicoes-usadas-para-estabelecer-a-estrutura-daquelas-relacoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1101
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estrutura-logica-de-relacoes-arbitrarias-entre-pessoas-lugares-objetos-ou-eventos-ficticios-deducao-de-novas-informacoes-das-relacoes-fornecidas-e-avaliacao-das-condicoes-usadas-para-estabelecer-a-estrutura-daquelas-relacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.8
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1371
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.8
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-urbanismo>comunicacao-visual-no-edificio-e-na-cidade>detalhes-executivos-de-representacao-especificacao-e-cotas>abnt-nbr-9050-2020-acessibilidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 44
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-urbanismo>comunicacao-visual-no-edificio-e-na-cidade>detalhes-executivos-de-representacao-especificacao-e-cotas>abnt-nbr-9050-2020-acessibilidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 663
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-da-pessoa-com-deficiencia>insercao-laboral-da-pessoa-com-deficiencia-e-colocacao-seletiva",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 983
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>insercao-laboral-da-pessoa-com-deficiencia-e-colocacao-seletiva",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+              "confianca": 0.95
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+          "confianca": 0.95
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 992
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+          "confianca": 0.85
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>organizacao-e-competencia-do-tribunal-superior-do-trabalho",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1211
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>organizacao-e-competencia-do-tribunal-superior-do-trabalho",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 375
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>organizacao-e-competencias-da-justica-do-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 974
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>organizacao-e-competencias-da-justica-do-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processos-nos-tribunais-e-meios-de-impugnacao-das-decisoes-judiciais",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 153
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>processos-nos-tribunais-e-meios-de-impugnacao-das-decisoes-judiciais",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1330
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>recursos-trabalhistas-e-regimento-interno-do-tst",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 845
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>recursos-trabalhistas-e-regimento-interno-do-tst",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>poder-judiciario",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1428
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>poder-judiciario",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TST_23:918_TST_SERVIDOR_CB2_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

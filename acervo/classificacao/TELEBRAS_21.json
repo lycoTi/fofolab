@@ -1,6 +1,3683 @@
 {
   "identificador": "TELEBRAS_21",
   "itens": {
+    "TELEBRAS_21:657_TELEBRAS_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-comercial>responsabilidade-dos-socios-e-administradores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1423
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-comercial>responsabilidade-dos-socios-e-administradores",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>patrimonio-liquido>juros-sobre-o-capital-proprio",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1067
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>patrimonio-liquido>juros-sobre-o-capital-proprio",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1471
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>reorganizacao-e-reestruturacao-de-empresas-incorporacao-fusao-cisao-e-extincao-de-empresas-aspectos-contabeis-fiscais-legais-e-societarios-da-reestruturacao-social",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>registro-de-empresas",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-comercial>o-empresario-requisitos-necessarios-impedimentos-direitos-e-deveres-em-face-da-legislacao-vigente",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>conceitos-empresario-estabelecimento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>registro-de-empresas",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-comercial>o-empresario-requisitos-necessarios-impedimentos-direitos-e-deveres-em-face-da-legislacao-vigente",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>conceitos-empresario-estabelecimento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>conceitos-empresario-estabelecimento",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 741
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>conceitos-empresario-estabelecimento",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>falencia-e-recuperacao-judicial",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 955
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-civil>nocoes-gerais-de-direito-de-empresa>falencia-e-recuperacao-judicial",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-comercial>jurisprudencia-aplicada-dos-tribunais-superiores",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 963
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-comercial>jurisprudencia-aplicada-dos-tribunais-superiores",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 963
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>falencia-e-recuperacao-judicial-e-extrajudicial",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>direito-financeiro>o-direito-financeiro-na-constituicao-federal-de-1988",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1085
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>direito-financeiro>o-direito-financeiro-na-constituicao-federal-de-1988",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 71
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>ajuste-fiscal-e-limites-de-despesa-de-pessoal-na-cf-1988",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 734
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>ajuste-fiscal-e-limites-de-despesa-de-pessoal-na-cf-1988",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-com-pessoal>controle-da-despesa-total-com-pessoal",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 175
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-com-pessoal>controle-da-despesa-total-com-pessoal",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 753
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>disciplina-constitucional-dos-precatorios",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-financeiro>despesa-publica>disciplina-constitucional-dos-precatorios",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1048
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>disciplina-constitucional-dos-precatorios",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-financeiro>despesa-publica>disciplina-constitucional-dos-precatorios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 705
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>mandado-de-seguranca",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1118
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>mandado-de-seguranca",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>processo-judicial-tributario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1259
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>processo-judicial-tributario",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>processo-judicial-tributario",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-civil>execucao-fiscal-e-cobranca-judicial-da-divida-ativa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1475
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>processo-judicial-tributario",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-civil>execucao-fiscal-e-cobranca-judicial-da-divida-ativa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>principios-gerais",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 706
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>principios-gerais",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 819
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 819
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 818
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 172
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 981
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>estado-federal-brasileiro",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1255
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>estado-federal-brasileiro",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>organizacao-do-estado>intervencao-dos-estados-nos-municipios",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>territorios-5-8-intervencao-federal",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 876
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>organizacao-do-estado>intervencao-dos-estados-nos-municipios",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.55
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>territorios-5-8-intervencao-federal",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1521
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>poderes-da-administracao-publica>hierarquico-disciplinar-regulamentar-e-de-policia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>poderes-da-administracao-publica>hierarquico-disciplinar-regulamentar-e-de-policia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-administrativo>tombamento-e-deveres-de-conservacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1492
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>tombamento-e-deveres-de-conservacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.55
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 60
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.55
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1356
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>servicos-publicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 54
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>servicos-publicos",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 61
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-comercial>jurisprudencia-aplicada-dos-tribunais-superiores",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 91
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-comercial>jurisprudencia-aplicada-dos-tribunais-superiores",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>realizacao-de-pesquisa-de-precos-instrucao-normativa-seges-me-n-65-de-7-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 91
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>realizacao-de-pesquisa-de-precos-instrucao-normativa-seges-me-n-65-de-7-de-julho-de-2021-e-alteracoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>pessoas-juridicas>desconsideracao-da-personalidade-juridica",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-comercial>responsabilidade-dos-socios-e-administradores>doutrina-da-desconsideracao-da-personalidade-juridica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 835
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>pessoas-juridicas>desconsideracao-da-personalidade-juridica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-comercial>responsabilidade-dos-socios-e-administradores>doutrina-da-desconsideracao-da-personalidade-juridica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>pessoas-juridicas>fundacoes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1182
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>pessoas-juridicas>fundacoes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1189
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+              "confianca": 1
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+          "confianca": 1
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+              "confianca": 1
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>locacao-de-imoveis-urbanos-lei-n-8-245-1991",
+          "confianca": 1
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-consumidor>praticas-comerciais-oferta-publicidade-e-protecao-contratual",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-do-consumidor>principios-e-deveres-na-relacao-de-consumo",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-do-consumidor>saude-como-direito-do-consumidor-e-relacoes-contratuais-de-massa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1285
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-consumidor>praticas-comerciais-oferta-publicidade-e-protecao-contratual",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-do-consumidor>principios-e-deveres-na-relacao-de-consumo",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-do-consumidor>saude-como-direito-do-consumidor-e-relacoes-contratuais-de-massa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-consumidor>acoes-coletivas-de-defesa-do-consumidor",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 260
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-consumidor>acoes-coletivas-de-defesa-do-consumidor",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>economia-brasileira-recente>ampliacao-do-credito-ao-consumidor",
+              "confianca": 0.35
+            },
+            {
+              "id": "direito-do-consumidor>superendividamento-e-minimo-existencial-na-repactuacao-de-dividas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 884
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-consumidor>superendividamento-e-minimo-existencial-na-repactuacao-de-dividas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>supremacia-da-constituicao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1291
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-constitucional>aplicabilidade-das-normas-constitucionais>supremacia-da-constituicao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-civil>mandado-de-seguranca",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 893
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-civil>mandado-de-seguranca",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>sentenca-e-coisa-julgada",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 779
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>sentenca-e-coisa-julgada",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>acao-de-improbidade-administrativa",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1291
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>acao-de-improbidade-administrativa",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>contestacao-reconvencao-e-revelia",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-civil>sujeitos-do-processo>deveres-das-partes-e-procuradores",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 861
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>contestacao-reconvencao-e-revelia",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-civil>sujeitos-do-processo>deveres-das-partes-e-procuradores",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>atos-processuais>comunicacao-dos-atos-processuais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1014
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>atos-processuais>comunicacao-dos-atos-processuais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-civil>acao-de-consignacao-em-pagamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1014
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>acao-de-consignacao-em-pagamento",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-civil>poderes-deveres-e-responsabilidade-do-juiz",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>processo-de-conhecimento-e-do-cumprimento-de-sentenca>peticao-inicial",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-civil>poderes-deveres-e-responsabilidade-do-juiz",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-do-trabalho>insalubridade-e-adicional-de-insalubridade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>insalubridade-e-adicional-de-insalubridade",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>suspensao-e-interrupcao-do-contrato-de-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-sindical-e-aviso-previo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 834
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-sindical-e-aviso-previo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 835
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 835
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>ferias-proporcionais-em-caso-de-pedido-de-demissao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 835
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>ferias-proporcionais-em-caso-de-pedido-de-demissao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-do-trabalho>contrato-de-empreitada-e-responsabilidade-trabalhista-do-dono-da-obra",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 835
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>contrato-de-empreitada-e-responsabilidade-trabalhista-do-dono-da-obra",
+          "confianca": 0.85
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>processo-do-trabalho-excecao-de-incompetencia-territorial",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 264
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>processo-do-trabalho-excecao-de-incompetencia-territorial",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-consumidor>onus-da-prova-e-inversao-do-onus-da-prova",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1205
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-consumidor>onus-da-prova-e-inversao-do-onus-da-prova",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>recursos-no-processo-do-trabalho-recurso-de-revista-e-procedimento-sumarissimo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1217
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>recursos-no-processo-do-trabalho-recurso-de-revista-e-procedimento-sumarissimo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>revelia-e-confissao-no-processo-do-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1157
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>revelia-e-confissao-no-processo-do-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+              "confianca": 0.7
+            },
+            {
+              "id": "pericia-medica>atestado-medico-e-afastamento-do-trabalho",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1228
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>responsabilidade-civil-e-penal-do-engenheiro-de-seguranca-do-trabalho-e-insalubridade",
+          "confianca": 0.7
+        },
+        {
+          "id": "pericia-medica>atestado-medico-e-afastamento-do-trabalho",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-do-trabalho>sentenca-e-coisa-julgada-no-processo-do-trabalho",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1218
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-do-trabalho>sentenca-e-coisa-julgada-no-processo-do-trabalho",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1267
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>acao-rescisoria-e-mandado-de-seguranca-no-processo-do-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>software-defined-networking-sdn-vmware-nsx",
+              "confianca": 0.4
+            },
+            {
+              "id": "redes-de-computadores>protocolos-de-aplicacao-e-servicos-de-rede-dns-ntp",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1483
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>protocolos-de-aplicacao-e-servicos-de-rede-dns-ntp",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>software-defined-networking-sdn-vmware-nsx",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1541
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>gerenciamento-de-configuracao-de-servidores-aprovisionamento-orquestracao-e-automacao-de-infraestrutura-de-ti",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 598
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>protocolos-de-acesso-ao-meio-csma-cd-e-csma-ca",
+              "confianca": 0.3
+            },
+            {
+              "id": "redes-de-computadores>protocolos-de-aplicacao-e-servicos-de-rede-dns-ntp",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1184
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>protocolos-de-aplicacao-e-servicos-de-rede-dns-ntp",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>infraestrutura-de-rede-cabeamento-estruturado-vlans-qos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1446
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>infraestrutura-de-rede-cabeamento-estruturado-vlans-qos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1492
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 476
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1042
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+              "confianca": 0.5
+            },
+            {
+              "id": "estrategia-e-planejamento>gestao-de-projetos>processos-de-gerenciamento-de-projetos",
+              "confianca": 0.6
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-projetos>processos-de-gerenciamento-de-projetos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 901
+        }
+      },
+      "consenso": [
+        {
+          "id": "estrategia-e-planejamento>gestao-de-projetos>processos-de-gerenciamento-de-projetos",
+          "confianca": 0.6
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-projetos>processos-de-gerenciamento-de-projetos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1051
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1051
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.8
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 960
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.85
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>principais-frameworks-e-metodos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 960
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.85
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>principais-frameworks-e-metodos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>modelagem-de-processos-de-negocio-conceitos-basicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 960
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>modelagem-de-processos-de-negocio-conceitos-basicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio",
+              "confianca": 0.75
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>modelagem-de-processos-de-negocio-conceitos-basicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 960
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio",
+          "confianca": 0.75
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>modelagem-de-processos-de-negocio-conceitos-basicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 483
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1501
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 98
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 270
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>definicao-e-aplicacao-de-penalidades-e-sancoes-administrativas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1102
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>definicao-e-aplicacao-de-penalidades-e-sancoes-administrativas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>papel-do-fiscalizador-do-contrato",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 909
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>legislacao-aplicavel-a-contratacao-de-bens-e-servicos-de-ti-e-suas-alteracoes>elaboracao-e-fiscalizacao-de-contratos>papel-do-fiscalizador-do-contrato",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1285
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 370
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 691
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1256
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>ddd-domain-driven-design",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>design-de-software>ddd-domain-driven-design",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 703
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>ddd-domain-driven-design",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>design-de-software>ddd-domain-driven-design",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 937
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+              "confianca": 0.95
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 54
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+          "confianca": 0.95
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>verificacao-de-requisitos-funcionais-seguranca-desempenho-e-acessibilidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>testes-de-software",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1162
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>verificacao-de-requisitos-funcionais-seguranca-desempenho-e-acessibilidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>testes-de-software",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>construcao-de-servicos-rest-e-separacao-entre-apresentacao-regras-de-negocio-e-acesso-a-dados",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 948
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>construcao-de-servicos-rest-e-separacao-entre-apresentacao-regras-de-negocio-e-acesso-a-dados",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>gerencia-e-qualidade-de-software>padronizacao-qualidade-de-software-objetivos-da-qualidade-restricoes-e-atributos-de-qualidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>gerencia-e-qualidade-de-software",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1354
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>gerencia-e-qualidade-de-software>padronizacao-qualidade-de-software-objetivos-da-qualidade-restricoes-e-atributos-de-qualidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>gerencia-e-qualidade-de-software",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>linguagens-de-marcacao-e-interoperabilidade-de-sistemas-xml",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1419
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>linguagens-de-marcacao-e-interoperabilidade-de-sistemas-xml",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.4
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>uml-e-modelagem-de-sistemas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1122
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>uml-e-modelagem-de-sistemas",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.7
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>confiabilidade-e-observabilidade>capacidade-latencia-disponibilidade-e-tolerancia-a-falhas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 981
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>latencia-disponibilidade-capacidade-e-tolerancia-a-falhas",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.7
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>confiabilidade-e-observabilidade>capacidade-latencia-disponibilidade-e-tolerancia-a-falhas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1122
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1122
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.6
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>versionamento-gestao-de-configuracao-e-automacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1445
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.6
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>versionamento-gestao-de-configuracao-e-automacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1445
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1313
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>entrega-e-operacao>automacao-de-build-teste-e-implantacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1178
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>entrega-e-operacao>automacao-de-build-teste-e-implantacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+              "confianca": 0.5
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>segregacao-de-ambientes-e-protecao-de-credenciais",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-da-informacao>ameacas-e-vulnerabilidades-em-aplicacoes>armazenamento-inseguro-de-dados-criptografados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1445
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>infraestrutura-como-codigo>segregacao-de-ambientes-e-protecao-de-credenciais",
+          "confianca": 0.5
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>infraestrutura-como-codigo-iac>automacao-e-provisionamento-de-infraestrutura-com-ansible-terraform-puppet-e-jenkins",
+          "confianca": 0.5
+        },
+        {
+          "id": "seguranca-da-informacao>ameacas-e-vulnerabilidades-em-aplicacoes>armazenamento-inseguro-de-dados-criptografados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.9
+            },
+            {
+              "id": "bancos-de-dados>normalizacao-e-formas-normais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1284
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.9
+        },
+        {
+          "id": "bancos-de-dados>normalizacao-e-formas-normais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>processamento-distribuido>particionamento-paralelismo-movimentacao-de-dados-e-execucao-distribuida-de-transformacoes-e-juncoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1357
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>processamento-distribuido>particionamento-paralelismo-movimentacao-de-dados-e-execucao-distribuida-de-transformacoes-e-juncoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 554
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.85
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 732
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.85
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>sql-ansi",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>algebra-relacional-sql-ansi-e-linguagens-procedurais-embarcadas",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 353
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>sql-ansi",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>algebra-relacional-sql-ansi-e-linguagens-procedurais-embarcadas",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.7
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1127
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.7
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>fundamentos-e-conceitos-de-business-intelligence-etl-dashboards-e-solucoes-de-suporte-a-decisao",
+              "confianca": 0.9
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+              "confianca": 0.8
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 783
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>fundamentos-e-conceitos-de-business-intelligence-etl-dashboards-e-solucoes-de-suporte-a-decisao",
+          "confianca": 0.9
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+          "confianca": 0.8
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence",
+              "confianca": 0.8
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+              "confianca": 0.9
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 810
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+          "confianca": 0.9
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence",
+          "confianca": 0.8
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>fundamentos-e-conceitos-de-business-intelligence-etl-dashboards-e-solucoes-de-suporte-a-decisao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 918
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>fundamentos-e-conceitos-de-business-intelligence-etl-dashboards-e-solucoes-de-suporte-a-decisao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.7
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+              "confianca": 0.65
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1009
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.7
+        },
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+          "confianca": 0.65
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1409
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+              "confianca": 0.9
+            },
+            {
+              "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-em-tempo-real-real-time",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 791
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+          "confianca": 0.9
+        },
+        {
+          "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-em-tempo-real-real-time",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+              "confianca": 0.6
+            },
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.55
+            },
+            {
+              "id": "metodos-de-pesquisa>principios-e-metodos-da-pesquisa-quantitativa-e-qualitativa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 743
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>mapeamento-das-fontes-de-dados-tecnicas-para-coleta-de-dados",
+          "confianca": 0.6
+        },
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.55
+        },
+        {
+          "id": "metodos-de-pesquisa>principios-e-metodos-da-pesquisa-quantitativa-e-qualitativa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 828
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 705
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>definicao-implantacao-e-gestao-de-politicas-de-seguranca-da-informacao-e-auditoria",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 719
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>definicao-implantacao-e-gestao-de-politicas-de-seguranca-da-informacao-e-auditoria",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>tratamento-e-resposta-a-incidentes>plano-de-gestao-de-incidentes-ciberneticos-portaria-dsi-gsi-pr-n-120-de-21-dezembro-2022",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>protocolos-de-camada-de-aplicacao-e-protocolos-de-autenticacao-segura",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 183
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>tratamento-e-resposta-a-incidentes>plano-de-gestao-de-incidentes-ciberneticos-portaria-dsi-gsi-pr-n-120-de-21-dezembro-2022",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.5
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>protocolos-de-camada-de-aplicacao-e-protocolos-de-autenticacao-segura",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>mecanismos-de-seguranca>certificacao-digital-icp-brasil",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 868
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>mecanismos-de-seguranca>certificacao-digital-icp-brasil",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TELEBRAS_21:657_TELEBRAS_002_01:89": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -17,6 +3694,272 @@
         {
           "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>sistemas-de-deteccao-e-prevencao-de-intrusao-ids-ips",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>deteccao-de-intrusao-em-redes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1205
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>sistemas-de-deteccao-e-prevencao-de-intrusao-ids-ips",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>deteccao-de-intrusao-em-redes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>firewall-prevencao-de-intrusoes-waf-protecao-contra-negacao-de-servico-e-acesso-remoto-seguro",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 839
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>firewall-prevencao-de-intrusoes-waf-protecao-contra-negacao-de-servico-e-acesso-remoto-seguro",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1555
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 865
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.6
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1127
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.6
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>redes-virtuais-integracao-com-ambiente-local-elasticidade-escalabilidade-e-portabilidade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>servidores-de-aplicacao-e-servicos-web",
+              "confianca": 0.5
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 92
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>servidores-de-aplicacao-e-servicos-web",
+          "confianca": 0.5
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>orientacao-a-eventos-cliente-servidor-arquitetura-hexagonal-serverless-anti-padroes-arquiteturais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-mapreduce",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1459
+        }
+      },
+      "consenso": [
+        {
+          "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-mapreduce",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.8
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 987
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.8
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 350
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TELEBRAS_21:657_TELEBRAS_002_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1074
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.5
         }
       ],
       "incerto": false,

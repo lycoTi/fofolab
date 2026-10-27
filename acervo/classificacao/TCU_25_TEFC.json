@@ -1,6 +1,792 @@
 {
   "identificador": "TCU_25_TEFC",
   "itens": {
+    "TCU_25_TEFC:108_TCUTEFC_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-interno>sistema-de-controle-interno-e-subsistemas",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>tribunais-de-contas-competencias-e-controle-externo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1248
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>sistema-de-controle-interno-e-subsistemas",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>tribunais-de-contas-competencias-e-controle-externo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1350
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>atribuicoes-do-auditor-de-controle-interno",
+              "confianca": 0.5
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1183
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>atribuicoes-do-auditor-de-controle-interno",
+          "confianca": 0.5
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-interno>planejamento-anual-de-auditoria-e-normas-de-controle-interno-estadual",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>atribuicoes-do-auditor-de-controle-interno",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1184
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>planejamento-anual-de-auditoria-e-normas-de-controle-interno-estadual",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>atribuicoes-do-auditor-de-controle-interno",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-geral>processo-administrativo>controle>tipos-vantagens-e-desvantagens",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1141
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-geral>processo-administrativo>controle>tipos-vantagens-e-desvantagens",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 920
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1245
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.95
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>classificacao-do-controle-de-oficio-provocado-previo-concomitante-e-subsequente",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1198
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.95
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>classificacao-do-controle-de-oficio-provocado-previo-concomitante-e-subsequente",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 177
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-legislativo>comissoes-parlamentares-de-inquerito",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>comissoes-parlamentares-de-inquerito",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 659
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-legislativo>comissoes-parlamentares-de-inquerito",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>comissoes-parlamentares-de-inquerito",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-legislativo>congresso-nacional-suas-atribuicoes-e-competencias",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 50
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-legislativo>congresso-nacional-suas-atribuicoes-e-competencias",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 921
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>poder-judiciario",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1071
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>poder-judiciario",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-judiciario-disposicoes-gerais",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>decisao-administrativa>dever-de-fundamentacao-e-limites-ao-exercicio-do-poder-e-a-revisao-de-decisoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 507
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>decisao-administrativa>dever-de-fundamentacao-e-limites-ao-exercicio-do-poder-e-a-revisao-de-decisoes",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-judiciario-disposicoes-gerais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-judicial",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 966
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-judicial",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-administrativo>contencioso-administrativo-e-sistema-da-jurisdicao-una",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.85
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 174
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.85
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>conceitos-basicos>dimensoes-de-desempenho-economicidade-eficiencia-eficacia-efetividade-equidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>poder-judiciario>orgaos-do-poder-judiciario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 140
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-constitucional>poder-judiciario>orgaos-do-poder-judiciario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-da-atividade-financeira-do-estado-especies-e-sistemas",
+              "confianca": 0.8
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 134
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-da-atividade-financeira-do-estado-especies-e-sistemas",
+          "confianca": 0.8
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 928
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>modelos-de-administracao>burocracia-e-profissionalizacao-gestao-orientada-a-resultados-participacao-e-governanca-limites-e-contribuicoes-de-diferentes-modelos-na-realidade-brasileira",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1331
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>modelos-de-administracao>burocracia-e-profissionalizacao-gestao-orientada-a-resultados-participacao-e-governanca-limites-e-contribuicoes-de-diferentes-modelos-na-realidade-brasileira",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico-o-estado-oligarquico-e-patrimonial-o-estado-autoritario-e-burocratico-o-estado-do-bem-estar-o-estado-regulador>estado-oligarquico-e-patrimonial-estado-autoritario-e-burocratico-estado-do-bem-estar-estado-regulador",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>administracao-publica-do-modelo-racional-legal-ao-paradigma-pos-burocratico-o-estado-oligarquico-e-patrimonial-o-estado-autoritario-e-burocratico-o-estado-do-bem-estar-o-estado-regulador>estado-oligarquico-e-patrimonial-estado-autoritario-e-burocratico-estado-do-bem-estar-estado-regulador",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial",
+              "confianca": 0.75
+            },
+            {
+              "id": "estrategia-e-planejamento>ciclo-pdca",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>ciclo-pdca",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 918
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial",
+          "confianca": 0.75
+        },
+        {
+          "id": "estrategia-e-planejamento>ciclo-pdca",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>ciclo-pdca",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio>modelagem-de-processos-em-bpmn",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>arquitetura-corporativa-tecnicas-de-modelagem-de-processos-padrao-bpmn",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 868
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio>modelagem-de-processos-em-bpmn",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>arquitetura-corporativa-tecnicas-de-modelagem-de-processos-padrao-bpmn",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio>modelagem-de-processos-em-bpmn",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 921
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>modelagem-de-processos-de-negocio>modelagem-de-processos-em-bpmn",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCU_25_TEFC:108_TCUTEFC_001_01:59": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -33,6 +819,915 @@
         {
           "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1412
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1025
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1511
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.7
+            },
+            {
+              "id": "estrategia-e-planejamento>gestao-de-processos-organizacionais>cadeia-de-valor-de-organizacoes-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 447
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.7
+        },
+        {
+          "id": "estrategia-e-planejamento>gestao-de-processos-organizacionais>cadeia-de-valor-de-organizacoes-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 200
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>controle-social-e-cidadania",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>avaliacao-da-acao-governamental-e-apoio-ao-aprimoramento-da-gestao-da-governanca-dos-controles-e-dos-resultados-das-politicas-publicas-prevencao-deteccao-e-correcao-de-irregularidades",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1310
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>controle-social-e-cidadania",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-por-omissao-do-estado",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-civil-do-estado-no-direito-brasileiro>responsabilidade-por-omissao-do-estado",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 102
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-por-omissao-do-estado",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-civil-do-estado-no-direito-brasileiro>responsabilidade-por-omissao-do-estado",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 283
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 37
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 422
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>poderes-administrativos-disciplinar-de-policia-e-hierarquico",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 56
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>poderes-administrativos-disciplinar-de-policia-e-hierarquico",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 71
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 39
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-administrativo>poderes-administrativos-disciplinar-de-policia-e-hierarquico",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 56
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>poderes-administrativos-disciplinar-de-policia-e-hierarquico",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.75
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>legislacao-aplicavel-a-contratacao-de-obras-e-servicos-de-engenharia-lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes-lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.75
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>legislacao-aplicavel-a-contratacao-de-obras-e-servicos-de-engenharia-lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes-lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>maior-retorno-economico-instrucao-normativa-seges-me-n-96-de-23-de-dezembro-de-2022",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 858
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>principios",
+              "confianca": 0.8
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.6
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 505
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>principios",
+          "confianca": 0.8
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.6
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-14-133-2021-ambito-de-aplicacao-e-alienacao-de-bens",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 189
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-14-133-2021-ambito-de-aplicacao-e-alienacao-de-bens",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 65
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 125
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>regras-e-diretrizes-de-contratacao-de-servicos-instrucao-normativa-seges-mpdg-n-5-de-26-de-maio-de-2017-e-alteracoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>planejamento-e-selecao>necessidade-da-contratacao-estudos-e-especificacao-pesquisa-de-precos-competicao-e-criterios-de-selecao-riscos-de-direcionamento-e-de-restricao-indevida",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+              "confianca": 0.85
+            },
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 295
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+          "confianca": 0.85
+        },
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 957
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>acompanhamento-da-execucao-contratual",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>acompanhamento-da-execucao-contratual",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>papel-do-preposto-da-contratada",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1424
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>papel-do-preposto-da-contratada",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>papel-do-preposto-da-contratada",
+              "confianca": 0.85
+            },
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 287
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>papel-do-preposto-da-contratada",
+          "confianca": 0.85
+        },
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>papel-do-preposto-da-contratada",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>registro-e-notificacao-de-irregularidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>penalidades-e-sancoes-administrativas",
+              "confianca": 0.85
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 882
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>registro-e-notificacao-de-irregularidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>penalidades-e-sancoes-administrativas",
+          "confianca": 0.85
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>contratos-de-terceirizacao-cautelas-em-relacao-a-responsabilidade-trabalhista",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>registro-e-notificacao-de-irregularidades",
+              "confianca": 0.6
+            },
+            {
+              "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>registro-e-notificacao-de-irregularidades",
+              "confianca": 0.6
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>penalidades-e-sancoes-administrativas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>elaboracao-e-fiscalizacao-de-contratos>registro-e-notificacao-de-irregularidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>formalizacao-e-fiscalizacao-do-contrato>registro-e-notificacao-de-irregularidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>penalidades-e-sancoes-administrativas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 184
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 381
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1407
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>pre-empenho-empenho-liquidacao-e-pagamento-da-despesa",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -107,6 +1802,1256 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1536
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1326
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1386
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1263
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-coordenacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1443
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-coordenacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 647
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 654
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1176
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1176
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>meio-ambiente",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>consequencias-e-respostas-a-corrupcao>relacoes-entre-prevencao-deteccao-responsabilizacao-e-reparacao-controles-democraticos-participacao-e-capacidades-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 115
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>meio-ambiente",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>consequencias-e-respostas-a-corrupcao>relacoes-entre-prevencao-deteccao-responsabilizacao-e-reparacao-controles-democraticos-participacao-e-capacidades-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>clausulas-petreas",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 60
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>clausulas-petreas",
+          "confianca": 0.6
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>ordem-social",
+              "confianca": 0.8
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.6
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 200
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>ordem-social",
+          "confianca": 0.8
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.6
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 263
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>meio-ambiente",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 821
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>meio-ambiente",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-politicos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 910
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-politicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 912
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>clausulas-petreas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 912
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>clausulas-petreas",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>partidos-politicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 839
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>partidos-politicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 912
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-sociais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1011
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-sociais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1011
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1011
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>ameacas-vulnerabilidades-e-superficies-de-ataque",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>gerencia-de-riscos>ameaca-vulnerabilidade-e-impacto",
+              "confianca": 0.7
+            },
+            {
+              "id": "matematica-financeira>computacao-em-nuvens>armazenamento-de-dados-na-nuvem-cloud-storage",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 723
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>ameacas-vulnerabilidades-e-superficies-de-ataque",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>gerencia-de-riscos>ameaca-vulnerabilidade-e-impacto",
+          "confianca": 0.7
+        },
+        {
+          "id": "matematica-financeira>computacao-em-nuvens>armazenamento-de-dados-na-nuvem-cloud-storage",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.5
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 882
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+          "confianca": 0.8
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>topicos-especiais>jurisprudencia-do-tribunal-de-contas-da-uniao-acordao-n-2-037-2019-tcu-plenario-e-acordao-n-1-508-2020-tcu-plenario",
+              "confianca": 0.3
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 991
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 169
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+              "confianca": 0.8
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 929
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.5
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1117
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.5
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1210
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-do-tcu-e-competencias-dos-orgaos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 116
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1011
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>processo-no-tribunal-de-contas-e-medidas-cautelares",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 728
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.55
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.5
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>distincao-entre-avaliar-a-gestao-apurar-fatos-e-aplicar-sancoes-cooperacao-e-compartilhamento-licito-de-informacoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 179
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.55
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+          "confianca": 0.5
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>distincao-entre-avaliar-a-gestao-apurar-fatos-e-aplicar-sancoes-cooperacao-e-compartilhamento-licito-de-informacoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 363
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1299
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCU_25_TEFC:108_TCUTEFC_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 991
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
         }
       ],
       "incerto": false,

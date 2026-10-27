@@ -1,6 +1,241 @@
 {
   "identificador": "MPS_24",
   "itens": {
+    "MPS_24:049_MPS_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 953
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+              "confianca": 0.6
+            },
+            {
+              "id": "realidade-brasileira>desigualdades-regionais-e-indicadores-sociais>cobertura-e-atendimento-dos-servicos-publicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1049
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+          "confianca": 0.6
+        },
+        {
+          "id": "realidade-brasileira>desigualdades-regionais-e-indicadores-sociais>cobertura-e-atendimento-dos-servicos-publicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+              "confianca": 0.5
+            },
+            {
+              "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 321
+        }
+      },
+      "consenso": [
+        {
+          "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciencias-humanas>direitos-humanos-discriminacao-e-exclusao-social-com-atencao-aos-direitos-de-grupos-minoritarios-ou-vulneraveis-e-o-acesso-a-justica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 174
+        }
+      },
+      "consenso": [
+        {
+          "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+              "confianca": 0.9
+            },
+            {
+              "id": "saude-coletiva>redes-de-atencao-a-saude-ras",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "saude-coletiva>rede-de-atencao-psicossocial-e-saude-mental",
+          "confianca": 0.9
+        },
+        {
+          "id": "saude-coletiva>redes-de-atencao-a-saude-ras",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.6
+            },
+            {
+              "id": "saude-coletiva>rede-de-cuidados-a-pessoa-com-deficiencia-rcpcd-no-sus",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 992
+        }
+      },
+      "consenso": [
+        {
+          "id": "saude-coletiva>rede-de-cuidados-a-pessoa-com-deficiencia-rcpcd-no-sus",
+          "confianca": 0.85
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 767
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+          "confianca": 0.8
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1375
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 43
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPS_24:049_MPS_001_01:110": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -25,6 +260,2800 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "servico-social>assistencia-social-e-beneficio-de-prestacao-continuada-bpc",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "servico-social>assistencia-social-e-beneficio-de-prestacao-continuada-bpc",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-da-pessoa-com-deficiencia>avaliacao-biopsicossocial-da-deficiencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-da-pessoa-com-deficiencia>pericia-medica-e-caracterizacao-de-deficiencia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>avaliacao-biopsicossocial-da-deficiencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-da-pessoa-com-deficiencia>pericia-medica-e-caracterizacao-de-deficiencia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-da-pessoa-com-deficiencia>avaliacao-biopsicossocial-da-deficiencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 850
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>avaliacao-biopsicossocial-da-deficiencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>ordem-social>assistencia-social",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 795
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>direitos-das-pessoas-com-deficiencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>ordem-social>assistencia-social",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-constitucional>familia-crianca-adolescente-jovem-e-idoso",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 159
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1073
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-loas-conceito-de-pessoa-com-deficiencia",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>ordem-social>assistencia-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1007
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>ordem-social>assistencia-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 988
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-da-protecao-e-defesa-civil",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1146
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-da-protecao-e-defesa-civil",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-executivo",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-administrativo>decreto-n-10-593-2020-e-situacao-de-emergencia-ou-estado-de-calamidade-publica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 376
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>decreto-n-10-593-2020-e-situacao-de-emergencia-ou-estado-de-calamidade-publica",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-executivo",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-profissional-e-bioetica>etica-em-pesquisa-com-seres-humanos-e-codigo-de-etica-medica",
+              "confianca": 0.7
+            },
+            {
+              "id": "medicina>pericia-medica-e-conduta-medico-pericial",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1378
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-profissional-e-bioetica>etica-em-pesquisa-com-seres-humanos-e-codigo-de-etica-medica",
+          "confianca": 0.7
+        },
+        {
+          "id": "medicina>pericia-medica-e-conduta-medico-pericial",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pericia-medica-e-seguridade-social",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 197
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pericia-medica-e-seguridade-social",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pericia-medica-e-seguridade-social",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 197
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pericia-medica-e-seguridade-social",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "pericia-medica>conduta-pericial-em-medicina-previdenciaria",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1110
+        }
+      },
+      "consenso": [
+        {
+          "id": "pericia-medica>conduta-pericial-em-medicina-previdenciaria",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1033
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pericia-medica-e-isencao-tributaria-em-doencas-incapacitantes",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-previdenciario>contribuicao-previdenciaria-do-servidor-aposentado-e-isencao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1197
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pericia-medica-e-isencao-tributaria-em-doencas-incapacitantes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "pericia-medica>conduta-pericial-em-medicina-previdenciaria",
+              "confianca": 0.9
+            },
+            {
+              "id": "pericia-medica>atestado-medico-e-afastamento-do-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1214
+        }
+      },
+      "consenso": [
+        {
+          "id": "pericia-medica>conduta-pericial-em-medicina-previdenciaria",
+          "confianca": 0.9
+        },
+        {
+          "id": "pericia-medica>atestado-medico-e-afastamento-do-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>psiquiatria-e-conduta-medico-pericial",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 157
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psiquiatria-e-conduta-medico-pericial",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>cardiologia-insuficiencia-cardiaca-congestiva-e-avaliacao-de-cardiopatia-grave",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 144
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>cardiologia-insuficiencia-cardiaca-congestiva-e-avaliacao-de-cardiopatia-grave",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>clinica-medica-e-diagnostico-diferencial-psiquiatrico",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 550
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>clinica-medica-e-diagnostico-diferencial-psiquiatrico",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 558
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>psiquiatria-transtornos-de-ansiedade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 497
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psiquiatria-transtornos-de-ansiedade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 468
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 238
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-nexo-causal-ler-dort",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>doencas-profissionais-e-doencas-do-trabalho",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1198
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>doencas-ocupacionais-e-nexo-causal-ler-dort",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>doencas-profissionais-e-doencas-do-trabalho",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 486
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pericia-medica-e-nexo-causal",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 742
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pericia-medica-e-nexo-causal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 742
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>pericia-medica-e-nexo-causal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 742
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>pericia-medica-e-nexo-causal",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 742
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 652
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 742
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>relacoes-de-trabalho-e-atendimento>dignidade-diversidade-e-relacoes-de-poder-reconhecimento-e-prevencao-de-assedio-e-discriminacao-respeito-escuta-e-nao-retaliacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>prevencao-de-favorecimento-assedio-e-discriminacao-ambiente-seguro-e-nao-retaliacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>identificacao-de-riscos-e-praticas-de-retaliacao-medidas-preventivas-protetivas-e-reparadoras-e-competencias-para-sua-adocao",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 195
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>prevencao-de-favorecimento-assedio-e-discriminacao-ambiente-seguro-e-nao-retaliacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>identificacao-de-riscos-e-praticas-de-retaliacao-medidas-preventivas-protetivas-e-reparadoras-e-competencias-para-sua-adocao",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1179
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+          "confianca": 0.5
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1224
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>riscos-ocupacionais-e-medidas-de-controle-nos-ambientes-de-trabalho",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 482
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1213
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1213
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-acidente-do-trabalho",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-previdenciario>acidente-de-trabalho-doenca-profissional-e-doenca-do-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-do-trabalho>teletrabalho-e-trabalho-remoto",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 171
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>teletrabalho-e-trabalho-remoto",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-do-trabalho>estabilidade-provisoria-e-cipa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>biosseguranca-e-gerenciamento-de-residuos-de-servicos-de-saude",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 720
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>biosseguranca-e-gerenciamento-de-residuos-de-servicos-de-saude",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 720
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-camadas-de-controle",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 720
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-do-trabalho>trabalho-rural",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-e-ergonomia-no-trabalho",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1427
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-do-trabalho>trabalho-rural",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-do-trabalho>trabalho-rural",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1372
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-do-trabalho>trabalho-rural",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>carencia-e-beneficios-por-incapacidade",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 539
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>carencia-e-beneficios-por-incapacidade",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>regime-geral-de-previdencia-social-filiacao-segurados-e-custeio",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>regime-geral-de-previdencia-social-filiacao-segurados-e-custeio",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>qualidade-de-segurado-e-manutencao-da-qualidade-de-segurado",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 332
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>qualidade-de-segurado-e-manutencao-da-qualidade-de-segurado",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficios-do-rgps-e-acumulacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1203
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficios-do-rgps-e-acumulacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>carencia-e-beneficios-por-incapacidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1200
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>carencia-e-beneficios-por-incapacidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>beneficios-por-incapacidade-e-auxilio-doenca",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 264
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1255
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>nexo-tecnico-epidemiologico-previdenciario-e-beneficios-por-incapacidade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1195
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>beneficio-de-prestacao-continuada-bpc-loas",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>beneficios-previdenciarios-e-assistenciais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 991
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1230
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1088
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1442
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1327
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1076
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-coordenacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.5
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1120
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-coordenacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.5
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1442
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 653
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1246
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.85
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 660
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.85
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1124
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1063
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 865
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-e-deveres-individuais-e-coletivos",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 939
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1063
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>fundamentos-de-direito-publico>orcamento-e-politicas-publicas-minimo-existencial-reserva-do-possivel-e-os-direitos-fundamentais-sociais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1063
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>fundamentos-de-direito-publico>orcamento-e-politicas-publicas-minimo-existencial-reserva-do-possivel-e-os-direitos-fundamentais-sociais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+              "confianca": 0.85
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1294
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+          "confianca": 0.85
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>monitoramento-e-desenhos-de-avaliacao>avaliacoes-ex-ante-e-ex-post-de-desenho-implementacao-resultados-impacto-e-eficiencia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-constitucional>administracao-publica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1418
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>administracao-publica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-administrativo>principios-da-administracao-publica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1238
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>principios-da-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-administrativo>principios-da-administracao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>principios-da-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 161
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>provimento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>provimento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 704
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1234
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>responsabilidade-civil-do-estado-e-de-pessoas-juridicas-de-direito-privado-prestadoras-de-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-civil-do-estado-no-direito-brasileiro",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 92
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>responsabilidade-civil-do-estado-no-direito-brasileiro",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 898
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>agentes-publicos-conceitos-especies-cargo-emprego-e-funcao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 898
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>agentes-publicos-conceitos-especies-cargo-emprego-e-funcao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>analise-de-pedidos-e-recursos-de-acesso-a-informacao-aplicacao-articulada-da-lai-e-da-lgpd",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 352
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>analise-de-pedidos-e-recursos-de-acesso-a-informacao-aplicacao-articulada-da-lai-e-da-lgpd",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias>devido-processo-contraditorio-defesa-e-imparcialidade-finalidade-da-instrucao-e-da-prova",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>processo-e-garantias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>mecanismos-de-seguranca>garantia-de-integridade",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 267
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>mecanismos-de-seguranca>garantia-de-integridade",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-arquivologia>sistema-eletronico-de-informacoes",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 131
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-arquivologia>sistema-eletronico-de-informacoes",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.5
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-arquivologia>sistema-eletronico-de-informacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 434
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-arquivologia>sistema-eletronico-de-informacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1274
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1244
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reorganizacao-da-estrutura-de-oracoes-e-de-periodos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1327
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MPS_24:049_MPS_CG1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1386
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.55
         }
       ],
       "incerto": false,

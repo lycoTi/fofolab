@@ -1,6 +1,1107 @@
 {
   "identificador": "TCE_RJ_21_TECNICO",
   "itens": {
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 753
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 177
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.75
+            },
+            {
+              "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 344
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.75
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 291
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+              "confianca": 0.65
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-da-gestao-publica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 526
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-da-gestao-publica",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 66
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+              "confianca": 0.75
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>prestacao-e-tomada-de-contas",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1083
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+          "confianca": 0.75
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>prestacao-e-tomada-de-contas",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.7
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1096
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.7
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>controle-pelos-tribunais-de-contas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.7
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 124
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.7
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.7
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 607
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.7
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1516
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1397
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-comercial>responsabilidade-dos-socios-e-administradores",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1036
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>lei-n-8-429-1992-e-suas-alteracoes>atos-de-improbidade-administrativa",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-comercial>responsabilidade-dos-socios-e-administradores",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1308
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1543
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>improbidade-administrativa-atos-e-sancoes",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1024
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1021
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1021
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>topicos-especiais-de-contabilidade-aplicada-ao-setor-publico",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1466
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>topicos-especiais-de-contabilidade-aplicada-ao-setor-publico",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>realizacao-da-variacao-patrimonial",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 183
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>realizacao-da-variacao-patrimonial",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>regime-orcamentario-e-regime-contabil",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 991
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>regime-orcamentario-e-regime-contabil",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:121": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-patrimonial",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 768
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-patrimonial",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:122": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 855
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:123": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 655
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:124": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:125": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 688
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:126": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 657
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:127": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+              "confianca": 0.65
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 123
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+          "confianca": 0.65
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:128": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>passivo-exigivel",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 783
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>passivo-exigivel",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:129": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 779
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:130": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.55
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1067
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.55
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:131": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>receita-publica>conceito-etapas-estagios-e-categorias-economicas",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 182
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>receita-publica>conceito-etapas-estagios-e-categorias-economicas",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:132": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 59
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.5
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:133": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -28,6 +1129,979 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:134": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 405
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:135": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>divida-publica-e-operacao-de-credito",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 240
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>divida-publica-e-operacao-de-credito",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:136": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>abertura-e-reabertura-de-creditos-adicionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 782
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>abertura-e-reabertura-de-creditos-adicionais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:137": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-financeiro",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 945
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-financeiro",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:138": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1019
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:139": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1008
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:140": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 744
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:141": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 744
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:142": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-orcamentario",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 745
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-orcamentario",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:143": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-publico-conceitos-e-elementos-basicos-do-orcamento-publico-orcamento-tradicional-orcamento-de-base-zero-orcamentacao-por-desempenho-orcamento-programa-orcamento-participativo-orcamento-cidadao",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-papel-do-estado-e-a-atuacao-do-governo-nas-financas-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 508
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-publico-conceitos-e-elementos-basicos-do-orcamento-publico-orcamento-tradicional-orcamento-de-base-zero-orcamentacao-por-desempenho-orcamento-programa-orcamento-participativo-orcamento-cidadao",
+          "confianca": 0.95
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-papel-do-estado-e-a-atuacao-do-governo-nas-financas-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:144": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>processo-legislativo-orcamentario>lei-orcamentaria-anual-loa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1482
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>processo-legislativo-orcamentario>lei-orcamentaria-anual-loa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:145": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+              "confianca": 0.55
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>o-ciclo-das-politicas-publicas-construcao-de-agenda-formulacao-da-politica-e-processo-decisorio",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1362
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+          "confianca": 0.55
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>o-ciclo-das-politicas-publicas-construcao-de-agenda-formulacao-da-politica-e-processo-decisorio",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:146": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1103
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:147": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1325
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:148": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1306
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:149": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>ldo-anexos-de-metas-fiscais-e-riscos-fiscais-integracao-com-a-loa",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1217
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>ldo-anexos-de-metas-fiscais-e-riscos-fiscais-integracao-com-a-loa",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:150": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-de-diretrizes-orcamentarias-caracterizacao-conteudo-e-prazos",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>processo-legislativo-orcamentario>lei-de-diretrizes-orcamentarias-ldo",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-financeiro>direito-financeiro>o-direito-financeiro-na-constituicao-federal-de-1988",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 333
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-de-diretrizes-orcamentarias-caracterizacao-conteudo-e-prazos",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>processo-legislativo-orcamentario>lei-de-diretrizes-orcamentarias-ldo",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-financeiro>direito-financeiro>o-direito-financeiro-na-constituicao-federal-de-1988",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>ciclo-orcamentario",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 438
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>ciclo-orcamentario",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>ciclo-orcamentario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 854
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>ciclo-orcamentario",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 112
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+              "confianca": 0.85
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1065
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>plano-plurianual",
+          "confianca": 0.85
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>planejamento-na-constituicao-federal>plano-plurianual-caracterizacao-finalidade-estrutura-basica-prazos",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>regime-proprio-de-previdencia-social",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-financeiro>lei-de-diretrizes-orcamentarias-conteudo-e-avaliacao-atuarial",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1196
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>lei-de-diretrizes-orcamentarias-conteudo-e-avaliacao-atuarial",
+          "confianca": 0.85
+        },
+        {
+          "id": "atuaria>regime-proprio-de-previdencia-social",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>creditos-adicionais-autorizacao-legislativa-e-alteracoes-orcamentarias",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1257
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>creditos-adicionais-autorizacao-legislativa-e-alteracoes-orcamentarias",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>creditos-adicionais-suplementares-especiais-e-extraordinarios",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>creditos-ordinarios-e-adicionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1203
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>creditos-adicionais-suplementares-especiais-e-extraordinarios",
+          "confianca": 0.95
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>creditos-ordinarios-e-adicionais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 696
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 677
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>divida-ativa",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1240
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-tributario>divida-ativa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1301
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-publica>divida-ativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 35
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>acompanhamento-da-execucao",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 292
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>acompanhamento-da-execucao",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>descentralizacao-orcamentaria-e-financeira",
+              "confianca": 0.75
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 483
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>descentralizacao-orcamentaria-e-financeira",
+          "confianca": 0.75
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>estagios",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 785
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>estagios",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica>conceito-etapas-estagios-e-categorias-economicas",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 782
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:79": {
@@ -62,6 +2136,2160 @@
         {
           "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 670
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-com-pessoal>controle-da-despesa-total-com-pessoal",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-corrente-liquida",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 189
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-com-pessoal>controle-da-despesa-total-com-pessoal",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>receita-corrente-liquida",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>lei-de-responsabilidade-fiscal-receita-de-capital-e-destinacao-de-recursos",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-financeiro>lei-de-responsabilidade-fiscal-principios-e-objetivos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1449
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>lei-de-responsabilidade-fiscal-principios-e-objetivos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-financeiro>lei-de-responsabilidade-fiscal-receita-de-capital-e-destinacao-de-recursos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>programacao-orcamentaria-e-financeira-limites-de-empenho-e-pagamento-contingenciamento-e-bloqueio-no-escopo-do-programa",
+              "confianca": 0.75
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>resultados-primario-e-nominal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 37
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>programacao-orcamentaria-e-financeira-limites-de-empenho-e-pagamento-contingenciamento-e-bloqueio-no-escopo-do-programa",
+          "confianca": 0.75
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>resultados-primario-e-nominal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>despesa-publica",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 922
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>despesa-publica",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>principios-orcamentarios",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1304
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>principios-orcamentarios",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>proposta-orcamentaria-e-sua-integracao-com-ppa-e-ldo>as-interfaces-entre-ldo-loa-lei-n-4-320-1964-e-lei-complementar-n-101-de-4-de-maio-de-2000-lei-de-responsabilidade-fiscal",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao",
+              "confianca": 0.4
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 151
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>proposta-orcamentaria-e-sua-integracao-com-ppa-e-ldo>as-interfaces-entre-ldo-loa-lei-n-4-320-1964-e-lei-complementar-n-101-de-4-de-maio-de-2000-lei-de-responsabilidade-fiscal",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>lei-n-4-320-1964-e-suas-alteracoes",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>codigo-tributario-nacional>normas-gerais-de-direito-tributario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1512
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>lei-n-4-320-1964-e-suas-alteracoes",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-4-320-1964",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-tributario>codigo-tributario-nacional>normas-gerais-de-direito-tributario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>transferencias-voluntarias",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-financeiro>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal>transferencias-voluntarias",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>fonte-ou-destinacao-de-recursos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1142
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>transferencias-voluntarias",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-financeiro>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal>transferencias-voluntarias",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>fonte-ou-destinacao-de-recursos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>transferencias-voluntarias",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-financeiro>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal>transferencias-voluntarias",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>transferencias-constitucionais-legais-e-voluntarias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 559
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>transferencias-voluntarias",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-financeiro>lei-complementar-n-101-2000-e-suas-alteracoes-lei-de-responsabilidade-fiscal>transferencias-voluntarias",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>transferencias-constitucionais-legais-e-voluntarias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 131
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 756
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>conceito-tipos-e-formas-de-controle",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 222
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1401
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-interno-e-externo",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>controles-interno-e-externo-da-administracao-publica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.5
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 153
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.5
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>controle-parlamentar",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1523
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>controle-parlamentar",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-legislativo>congresso-nacional-suas-atribuicoes-e-competencias",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 727
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-legislativo>congresso-nacional-suas-atribuicoes-e-competencias",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 688
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 809
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 688
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>distincoes-entre-corrupcao-falha-de-gestao-conflito-de-interesses-e-ilicitos-especificos-relacoes-e-diferencas-entre-clientelismo-patronagem-nepotismo-e-captura",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>distincoes-entre-corrupcao-falha-de-gestao-conflito-de-interesses-e-ilicitos-especificos-relacoes-e-diferencas-entre-clientelismo-patronagem-nepotismo-e-captura",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>distincoes-entre-corrupcao-falha-de-gestao-conflito-de-interesses-e-ilicitos-especificos-relacoes-e-diferencas-entre-clientelismo-patronagem-nepotismo-e-captura",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>corrupcao-como-fenomeno-politico-e-social>distincoes-entre-corrupcao-falha-de-gestao-conflito-de-interesses-e-ilicitos-especificos-relacoes-e-diferencas-entre-clientelismo-patronagem-nepotismo-e-captura",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 809
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 72
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 33
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-527-2011-lei-de-acesso-a-informacao-capitulos-i-ii-iii-iv-e-v",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 72
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-12-527-2011-lei-de-acesso-a-informacao-capitulos-i-ii-iii-iv-e-v",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 33
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 72
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 72
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.9
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 72
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.9
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-indireta-e-funcional",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1272
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-indireta-e-funcional",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1213
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 740
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>poderes-administrativos-vinculado-e-discricionario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1272
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>poderes-administrativos-vinculado-e-discricionario",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>provimento-e-formas-de-investidura-em-cargo-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1233
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>provimento-e-formas-de-investidura-em-cargo-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 287
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 213
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-e-responsabilizacao-da-administracao>responsabilidade-civil-do-estado",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 287
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>reparacao-do-dano",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>principios-basicos-da-administracao>responsabilidade-civil-da-administracao>evolucao-doutrinaria-e-reparacao-do-dano",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 212
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>classificacao-e-origem-das-constituicoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1064
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>classificacao-e-origem-das-constituicoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1064
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1064
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.65
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 809
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.65
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 1064
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 863
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>organizacao-do-estado-organizacao-politico-administrativa-a-uniao-e-a-administracao-publica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 300
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>organizacao-do-estado-organizacao-politico-administrativa-a-uniao-e-a-administracao-publica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>disposicoes-constitucionais-aplicaveis",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1404
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>disposicoes-constitucionais-aplicaveis",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>remuneracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 877
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>remuneracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-executivo>presidente-da-republica",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-executivo>presidente-da-republica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-executivo>atribuicoes-e-responsabilidades-do-presidente-da-republica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>poder-legislativo>congresso-nacional-camara-dos-deputados-senado-federal-deputados-e-senadores",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>disposicoes-gerais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 283
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>disposicoes-gerais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>funcoes-essenciais-a-justica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 736
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>funcoes-essenciais-a-justica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 746
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 45
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>funcoes-essenciais-a-justica",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>efetividade-estabilidade-e-vitaliciedade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>funcoes-essenciais-a-justica",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>efetividade-estabilidade-e-vitaliciedade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>efetividade-estabilidade-e-vitaliciedade",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 531
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica>efetividade-estabilidade-e-vitaliciedade",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1336
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>processo-administrativo-disciplinar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1305
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>processo-administrativo-disciplinar",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1323
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+          "confianca": 0.55
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1169
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1169
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>competencia-originaria-dos-tribunais-de-justica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1169
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>competencia-originaria-dos-tribunais-de-justica",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>organizacao-do-estado>poder-legislativo>tribunal-de-contas-da-uniao-tcu",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1172
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 809
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+              "confianca": 0.7
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 974
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
+          "confianca": 0.7
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 785
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 722
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_RJ_21_TECNICO:680_TCERJTECNICO_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 809
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.65
         }
       ],
       "incerto": false,

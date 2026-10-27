@@ -1,6 +1,2968 @@
 {
   "identificador": "EMPREL_23",
   "itens": {
+    "EMPREL_23:863_EMPREL_001_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1404
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1228
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.7
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1149
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.7
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.95
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 684
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.95
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+              "confianca": 0.75
+            },
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1044
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+          "confianca": 0.75
+        },
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1245
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.7
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 568
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.7
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>modelagem-funcional-e-diagrama-entidade-relacionamento",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>banco-de-dados>modelagem-funcional-diagrama-entidade-relacionamento",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1334
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>modelagem-funcional-e-diagrama-entidade-relacionamento",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>banco-de-dados>modelagem-funcional-diagrama-entidade-relacionamento",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1375
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>conceitos-basicos-de-big-data-e-bancos-de-dados-distribuidos",
+              "confianca": 0.9
+            },
+            {
+              "id": "infraestrutura-em-tic>sistemas-de-gerenciamento-de-banco-de-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1006
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>conceitos-basicos-de-big-data-e-bancos-de-dados-distribuidos",
+          "confianca": 0.9
+        },
+        {
+          "id": "infraestrutura-em-tic>sistemas-de-gerenciamento-de-banco-de-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>transacoes-concorrencia-consistencia-e-evolucao-de-esquemas",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>transacoes-concorrencia-logs-replicacao-e-disponibilidade",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 105
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>transacoes-concorrencia-consistencia-e-evolucao-de-esquemas",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>transacoes-concorrencia-logs-replicacao-e-disponibilidade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>modelagem-de-dados-e-notacao-idef1x",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 518
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>modelagem-de-dados-e-notacao-idef1x",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1088
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>linguagem-sql-e-pl-sql-consultas-administracao-otimizacao-de-performance",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+              "confianca": 0.55
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 848
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+          "confianca": 0.55
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.8
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 551
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 753
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>conceito-de-bancos-de-dados-relacionais-e-nosql",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 251
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1078
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 932
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.92
+            },
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 456
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.92
+        },
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1181
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 657
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1404
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1228
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.7
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1149
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.7
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.95
+            },
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 684
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.95
+        },
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+              "confianca": 0.75
+            },
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1044
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+          "confianca": 0.75
+        },
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.7
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 568
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.7
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1186
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.75
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>protocolos-de-rede-e-dns",
+              "confianca": 0.5
+            },
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1290
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.75
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>protocolos-de-rede-e-dns",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>redes-e-comunicacao>modelos-tcp-ip-e-osi-ipv4-e-ipv6-dns-dhcp-roteamento-segmentacao-balanceamento-e-qualidade-de-servico",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1547
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>redes-e-comunicacao>modelos-tcp-ip-e-osi-ipv4-e-ipv6-dns-dhcp-roteamento-segmentacao-balanceamento-e-qualidade-de-servico",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>dns-tipos-de-registros-e-resolucao-de-nomes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1566
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>dns-tipos-de-registros-e-resolucao-de-nomes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>metodos-de-autenticacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>metodos-e-protocolos-de-autenticacao-e-comunicacao-segura",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 596
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>metodos-de-autenticacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>metodos-e-protocolos-de-autenticacao-e-comunicacao-segura",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>infraestrutura-de-rede-cabeamento-estruturado-vlans-qos",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.5
+            },
+            {
+              "id": "redes-de-computadores>enderecamento-ip-e-sub-redes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1503
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>enderecamento-ip-e-sub-redes",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>infraestrutura-de-rede-cabeamento-estruturado-vlans-qos",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1419
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.95
+            },
+            {
+              "id": "telecomunicacoes>fibras-opticas-e-transmissao-em-redes-de-acesso",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1317
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.95
+        },
+        {
+          "id": "telecomunicacoes>fibras-opticas-e-transmissao-em-redes-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 211
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+              "confianca": 0.5
+            },
+            {
+              "id": "redes-de-computadores>gerenciamento-de-redes-snmp-e-rmon",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1563
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>gerenciamento-de-redes-snmp-e-rmon",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 251
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1078
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.92
+            },
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 456
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.92
+        },
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1181
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_002_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 657
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 251
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1078
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 932
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 778
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.92
+            },
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 456
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.92
+        },
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1181
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>redes-sem-fio-padrao-ieee-802-11-wireless-lan-gerenciamento-de-redes-conceitos-fundamentos-protocolos-e-implantacao-snmp-rmon-mibs-nmss-agentes-ciscoview-ciscoworks-ethereal-e-mrtg",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 657
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1228
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>gerencia-de-memoria-alocacao-particionada-e-fragmentacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "sistemas-operacionais>gerenciamento-de-memoria-e-swap",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.7
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1149
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.7
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>processos-servicos-permissoes-usuarios-grupos-e-diretorios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 684
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1045
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>analise-de-impacto-redundancia-e-recuperacao-de-desastres",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1245
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 64
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>continuidade-e-recuperacao>objetivos-de-recuperacao-de-tempo-e-de-ponto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.7
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 568
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.7
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+              "confianca": 0.85
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.5
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 691
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+          "confianca": 0.85
+        },
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.5
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1137
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>arquitetura-de-datacenter>arquiteturas-e-tecnologias-tipicas-de-computacao-redes-armazenamento-seguranca-e-backup-replicacao-servicos-e-monitoramento",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 873
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>arquitetura-de-datacenter>arquiteturas-e-tecnologias-tipicas-de-computacao-redes-armazenamento-seguranca-e-backup-replicacao-servicos-e-monitoramento",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+              "confianca": 0.55
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 81
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+          "confianca": 0.55
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 852
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>modelos-e-arquitetura-de-nuvem>iaas-paas-e-saas",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "telecomunicacoes>redes-mpls-e-engenharia-de-trafego",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1217
+        }
+      },
+      "consenso": [
+        {
+          "id": "telecomunicacoes>redes-mpls-e-engenharia-de-trafego",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>redes-de-computadores-tipos-conceitos-protocolos-padroes-topologias-servicos-interconexao-e-principais-praticas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 974
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>ddos-dos-dns-spoofing",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 932
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_003_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+              "confianca": 0.75
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>ciclo-de-vida-e-mlops>pipelines-testes-e-integracao-e-entrega-continuas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 192
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+          "confianca": 0.75
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>ciclo-de-vida-e-mlops>pipelines-testes-e-integracao-e-entrega-continuas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1187
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 581
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.6
+            },
+            {
+              "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 590
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.6
+        },
+        {
+          "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1466
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1187
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>politicas-de-seguranca>politicas-de-senhas",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>metodos-de-autenticacao>autenticacao-multifator-baseada-em-biometria-por-token-e-certificados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1267
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>politicas-de-seguranca>politicas-de-senhas",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>metodos-de-autenticacao>autenticacao-multifator-baseada-em-biometria-por-token-e-certificados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1442
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>programacao-web-xml-e-marcacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>linguagens-de-programacao-e-estruturas-de-dados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1354
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>programacao-web-xml-e-marcacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>linguagens-de-programacao-e-estruturas-de-dados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>arquitetura-de-software-estruturas-e-visoes-arquiteturais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 365
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>arquitetura-de-software-estruturas-e-visoes-arquiteturais",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-orientada-a-servicos-soa-e-web-services-uddi-wsdl-soap",
+              "confianca": 0.5
+            },
+            {
+              "id": "tecnologia>linguagens-de-marcacao-e-formatos-de-dados-xml",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1546
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>linguagens-de-marcacao-e-formatos-de-dados-xml",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-orientada-a-servicos-soa-e-web-services-uddi-wsdl-soap",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>processos-e-metodologias-de-desenvolvimento-de-software",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 60
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>processos-e-metodologias-de-desenvolvimento-de-software",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>desenvolvimento-orientado-por-comportamento-bdd-guiado-por-testes-tdd-e-guiado-por-testes-de-aceitacao-atdd",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>desenvolvimento-orientado-por-comportamento-bdd-guiado-por-testes-tdd-e-guiado-por-testes-de-aceitacao-atdd",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 703
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 774
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 30
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>testes-de-software>testes-de-unidade-integracao-sistema-testes-automatizados-xunit-selenium-tdd",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 660
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+              "confianca": 0.95
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 30
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>encapsulamento-interfaces-heranca-e-polimorfismo",
+          "confianca": 0.95
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 132
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 986
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>metodos-e-protocolos-de-autenticacao-e-comunicacao-segura",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 755
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>protocolos-https-ssl-tls-http-2-grpc-e-websockets",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>metodos-e-protocolos-de-autenticacao-e-comunicacao-segura",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 893
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1237
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>funcoes-de-hash",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1365
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>funcoes-de-hash",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>avaliacao-de-impacto-a-protecao-de-dados-pessoais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 80
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>avaliacao-de-impacto-a-protecao-de-dados-pessoais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_004_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>ameacas-vulnerabilidades-e-superficies-de-ataque",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1080
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>ameacas-vulnerabilidades-e-superficies-de-ataque",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 59
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 706
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.95
+            },
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.95
+        },
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 56
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.95
+            },
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.95
+        },
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.95
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.95
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>progressao-aritmetica-e-soma-de-termos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 729
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>progressao-aritmetica-e-soma-de-termos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>probabilidade-basica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>probabilidade-basica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 36
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>gestao-e-fiscalizacao-de-contratos-administrativos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 724
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>gestao-e-fiscalizacao-de-contratos-administrativos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 793
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 751
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "EMPREL_23:863_EMPREL_CG1_01:21": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -34,6 +2996,899 @@
       ],
       "incerto": true,
       "concordancia": "discordam"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-lei-n-13-303-2016-regimes-de-execucao-de-obras-e-servicos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 725
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-lei-n-13-303-2016-regimes-de-execucao-de-obras-e-servicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 77
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>jornada-de-trabalho-intervalos-interjornada-e-intrajornada",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>jornada-de-trabalho-intervalos-interjornada-e-intrajornada",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>extincao-do-contrato-de-trabalho-e-aviso-previo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>extincao-do-contrato-de-trabalho-e-aviso-previo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 793
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 59
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 59
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 89
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 891
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 87
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 39
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 830
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.95
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1120
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.95
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+              "confianca": 0.8
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1129
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-do-processo-logico-que-a-partir-de-um-conjunto-de-hipoteses-conduz-de-forma-valida-a-conclusoes-determinadas",
+          "confianca": 0.8
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1326
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 631
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1020
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1460
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>bens-publicos-conceito-classificacao-e-regime-juridico",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1348
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>bens-publicos-conceito-classificacao-e-regime-juridico",
+          "confianca": 0.3
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 860
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 801
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>emprestimos-e-financiamentos-debentures-e-outros-titulos-de-divida",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 711
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>emprestimos-e-financiamentos-debentures-e-outros-titulos-de-divida",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>aplicacao-dos-valores-e-deveres-de-conduta-etica-da-cgu-a-situacoes-de-trabalho",
+              "confianca": 0.5
+            },
+            {
+              "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 264
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>aplicacao-dos-valores-e-deveres-de-conduta-etica-da-cgu-a-situacoes-de-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>tempo-de-servico-contagem-afastamentos-e-estabilidade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 449
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>tempo-de-servico-contagem-afastamentos-e-estabilidade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>teletrabalho-e-contrato-de-trabalho",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 495
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>teletrabalho-e-contrato-de-trabalho",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1294
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>portarias-da-presidencia-do-conselho-nacional-de-justica-104-2020-e-351-2023-e-suas-alteracoes",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1242
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>portarias-da-presidencia-do-conselho-nacional-de-justica-104-2020-e-351-2023-e-suas-alteracoes",
+          "confianca": 0.3
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 49
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 433
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1386
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1281
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>colocacao-dos-pronomes-atonos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1286
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1088
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "EMPREL_23:863_EMPREL_CG2_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1434
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     }
   }
 }

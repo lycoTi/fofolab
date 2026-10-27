@@ -1,6 +1,938 @@
 {
   "identificador": "SEFAZ_SE_25_AUDITOR",
   "itens": {
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 675
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 149
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.8
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 760
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 690
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 760
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 663
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 665
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>significacao-das-palavras",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 663
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:13D81AC8B5ACDFEC35512975C221E2FD388F5DC95D99BAD70248A386460A5E54:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geografia>hidrografia-e-clima-do-estado-de-sergipe",
+              "confianca": 0.6
+            },
+            {
+              "id": "geografia>geografia-do-brasil-e-regional",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1448
+        }
+      },
+      "consenso": [
+        {
+          "id": "geografia>geografia-do-brasil-e-regional",
+          "confianca": 0.7
+        },
+        {
+          "id": "geografia>hidrografia-e-clima-do-estado-de-sergipe",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-n-13-105-2015-e-suas-alteracoes-codigo-de-processo-civil",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1076
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-n-13-105-2015-e-suas-alteracoes-codigo-de-processo-civil",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.75
+            },
+            {
+              "id": "legislacao-tributaria-estadual>ipva-imunidades-e-isencoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 662
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>ipva-imunidades-e-isencoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processo-administrativo-tributario>processo-administrativo-tributario>determinacao-e-exigencia-do-credito-tributario",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 741
+        }
+      },
+      "consenso": [
+        {
+          "id": "processo-administrativo-tributario>processo-administrativo-tributario>determinacao-e-exigencia-do-credito-tributario",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1052
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>icms-base-de-calculo-aliquotas-e-incidencia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 744
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>icms-base-de-calculo-aliquotas-e-incidencia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>nocoes-sobre-politicas-sociais-no-brasil-educacao-cultura-saude-trabalho-e-renda-assistencia-social-saneamento-e-habitacao-seguranca-publica-e-direitos-humanos",
+              "confianca": 0.3
+            },
+            {
+              "id": "legislacao-tributaria-estadual>fundo-estadual-de-combate-a-pobreza-e-adicional-de-icms",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 866
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>fundo-estadual-de-combate-a-pobreza-e-adicional-de-icms",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>taxa-estadual-de-fiscalizacao-e-servicos-diversos-tfsd",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 111
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>taxa-estadual-de-fiscalizacao-e-servicos-diversos-tfsd",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>decreto-estadual-n-13-796-1998-e-suas-alteracoes",
+              "confianca": 0.7
+            },
+            {
+              "id": "legislacao-tributaria-estadual>programa-sergipano-de-desenvolvimento-industrial-psdi",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 163
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>programa-sergipano-de-desenvolvimento-industrial-psdi",
+          "confianca": 0.8
+        },
+        {
+          "id": "legislacao-tributaria-estadual>decreto-estadual-n-13-796-1998-e-suas-alteracoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 933
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>imposto-sobre-a-propriedade-de-veiculos-automotores-ipva",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>imposto-sobre-a-propriedade-de-veiculos-automotores-ipva",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 425
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 868
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1352
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1441
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 774
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 770
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 898
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>credito-publico>natureza-juridica-6-3controle-fiscalizacao-e-prestacao-de-contas",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-civil>medida-cautelar-fiscal-lei-n-8-397-1992",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 208
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>medida-cautelar-fiscal-lei-n-8-397-1992",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-financeiro>credito-publico>natureza-juridica-6-3controle-fiscalizacao-e-prestacao-de-contas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>transacao-resolutiva-de-litigio-tributario-lei-n-13-988-2020",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 732
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>transacao-resolutiva-de-litigio-tributario-lei-n-13-988-2020",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-civil>execucao-fiscal-e-cobranca-judicial-da-divida-ativa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 899
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>execucao-fiscal-e-cobranca-judicial-da-divida-ativa",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento>divida-ativa-de-natureza-tributaria-e-nao-tributaria",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>processo-judicial-tributario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 789
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>processo-judicial-tributario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 184
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-civil>prescricao-e-decadencia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1173
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-civil>prescricao-e-decadencia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 677
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>supremacia-da-constituicao-federal>controle-de-constitucionalidade>sistemas-de-controle-de-constitucionalidade-acao-direta-de-constitucionalidade-acao-declaratoria-de-constitucionalidade-arguicao-de-descumprimento-de-preceito-fundamental",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>atos-processuais>nulidades",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 865
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>atos-processuais>nulidades",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:100": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -25,6 +957,476 @@
         {
           "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 678
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1335
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 833
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>analise-de-dados>analise-exploratoria-de-dados>regras-de-associacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 112
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>analise-de-dados>analise-exploratoria-de-dados>regras-de-associacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 317
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.5
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-big-data",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 857
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-big-data",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>medidas-de-posicao-dispersao-e-assimetria-propriedades-da-media-e-da-variancia-numeros-indices",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>medidas-de-posicao-dispersao-e-assimetria-propriedades-da-media-e-da-variancia-numeros-indices",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>interpretacao-de-tabelas-graficos-proporcoes-taxas-e-medidas-descritivas-denominadores-qualidade-e-comparabilidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-analise-de-dados-quantitativos-estatistica-descritiva-e-analise-exploratoria-de-dados-graficos-diagramas-tabelas-medidas-descritivas-de-posicao-de-dispersao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1198
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>interpretacao-de-tabelas-graficos-proporcoes-taxas-e-medidas-descritivas-denominadores-qualidade-e-comparabilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-analise-de-dados-quantitativos-estatistica-descritiva-e-analise-exploratoria-de-dados-graficos-diagramas-tabelas-medidas-descritivas-de-posicao-de-dispersao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+              "confianca": 0.9
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 90
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+          "confianca": 0.9
+        },
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1383
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.85
+            },
+            {
+              "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1489
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.85
+        },
+        {
+          "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>estatistica-descritiva-distribuicao-de-frequencias-organizacao-de-dados-quadros-tabelas-graficos-e-outras-formas-de-apresentacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>visualizacao-de-dados>tipos-de-graficos-histograma-linha-barra-dispersao-box-plot",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1518
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>estatistica-descritiva-distribuicao-de-frequencias-organizacao-de-dados-quadros-tabelas-graficos-e-outras-formas-de-apresentacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>visualizacao-de-dados>tipos-de-graficos-histograma-linha-barra-dispersao-box-plot",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>probabilidade>principais-distribuicoes-discretas-bernoulli-binomial-geometrica-hipergeometrica-e-poisson",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>distribuicoes-condicionais-e-independencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 903
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>probabilidade>principais-distribuicoes-discretas-bernoulli-binomial-geometrica-hipergeometrica-e-poisson",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>distribuicoes-condicionais-e-independencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>funcao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 900
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>funcao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>amostras-aleatorias",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.5
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 877
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>amostras-aleatorias",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.5
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 128
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -80,6 +1482,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.8
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.8
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:120": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -96,6 +1535,366 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 126
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>transparencia-ativa-e-dados-abertos-qualidade-cobertura-atualizacao-e-risco-de-reidentificacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 67
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>transparencia-ativa-e-dados-abertos-qualidade-cobertura-atualizacao-e-risco-de-reidentificacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>ingestao-e-integracao>etl-e-elt-processamento-em-lote-e-fluxo-completo-e-incremental-apis-e-contratos-de-dados-formatos-csv-json-xml-e-parquet-interoperabilidade-semantica-e-tecnica-falhas-repeticao-de-processamento-e-consistencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 91
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>ingestao-e-integracao>etl-e-elt-processamento-em-lote-e-fluxo-completo-e-incremental-apis-e-contratos-de-dados-formatos-csv-json-xml-e-parquet-interoperabilidade-semantica-e-tecnica-falhas-repeticao-de-processamento-e-consistencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>preparacao-e-transformacao>valores-ausentes-inconsistencias-duplicacoes-outliers-e-desbalanceamento-transformacao-codificacao-normalizacao-e-padronizacao-engenharia-e-selecao-de-atributos-prevencao-de-vazamento-de-informacao-na-preparacao-dos-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>fundamentos-e-tipos-niveis-de-abstracao-projeto-normalizacao-modelagem-fisica-e-logica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 807
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>fundamentos-e-tipos-niveis-de-abstracao-projeto-normalizacao-modelagem-fisica-e-logica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 786
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 721
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 928
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>definicao-e-manipulacao-de-dados-controle-de-acesso-e-transacoes-filtros-juncoes-agregacoes-subconsultas-expressoes-de-tabela-comuns-e-funcoes-de-janela",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+              "confianca": 0.9
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>indices-planos-de-execucao-e-desempenho-valores-nulos-duplicacoes-e-erros-de-interpretacao-em-consultas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 45
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+          "confianca": 0.9
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>sql-e-consultas-analiticas>indices-planos-de-execucao-e-desempenho-valores-nulos-duplicacoes-e-erros-de-interpretacao-em-consultas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:624881901E6864718BBE688CD40C2860CE6B13F1EE789221EFF7404DDB66E40C:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 29
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1519
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>conjuntos-e-diagramas-de-venn",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1205
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxa-real-e-inflacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+              "confianca": 0.85
+            },
+            {
+              "id": "matematica-financeira>calculo-financeiro>custo-real-e-efetivo-das-operacoes-de-financiamento-emprestimo-e-investimento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 876
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>taxa-real-e-inflacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+          "confianca": 0.85
+        },
+        {
+          "id": "matematica-financeira>calculo-financeiro>custo-real-e-efetivo-das-operacoes-de-financiamento-emprestimo-e-investimento",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -162,6 +1961,35 @@
         {
           "id": "planejamento-e-orcamento-publico>orcamento>relatorios-resumidos-da-execucao-orcamentaria-de-avaliacao-do-cumprimento-das-metas-fiscais-e-de-gestao-fiscal-finalidade-estrutura-e-composicao",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 700
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -234,6 +2062,570 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 770
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>lei-complementar-n-118-2005-direito-tributario-ii-reforma-tributaria-emenda-constitucional-n-132-2023-e-lei-complementar-n-214-2025",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 654
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 759
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-credito-tributario-e-domicilio-tributario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 808
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>obrigacao-tributaria-credito-tributario-e-domicilio-tributario",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-tributario>administracao-tributaria-fiscalizacao-sigilo-fiscal-e-cooperacao-entre-entes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>administracao-tributaria-fiscalizacao-sigilo-fiscal-e-cooperacao-entre-entes",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 648
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>reforma-tributaria-ibs-e-cbs-lc-n-214-2025",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 731
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>reforma-tributaria-ibs-e-cbs-lc-n-214-2025",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 694
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>hipoteses-de-suspensao-da-exigibilidade-extincao-e-exclusao-do-credito-tributario",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>patrimonio-liquido>prejuizos-acumulados",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1174
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>patrimonio-liquido>prejuizos-acumulados",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>escrituracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1416
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>escrituracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 82
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>departamentalizacao>conceito-tratamento-contabil-forma-de-apropriacao-e-impacto-no-custo-do-produto",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 264
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>departamentalizacao>conceito-tratamento-contabil-forma-de-apropriacao-e-impacto-no-custo-do-produto",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados>custeio-direto-ou-custeio-variavel",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>tipos-de-custeio-conceitos-diferenciacoes-apropriacao-dos-custos-impactos-nos-resultados",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados>custeio-real-por-absorcao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados>custeio-direto-ou-custeio-variavel",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>tipos-de-custeio-conceitos-diferenciacoes-apropriacao-dos-custos-impactos-nos-resultados",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados>custeio-real-por-absorcao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>departamentalizacao>conceito-tratamento-contabil-forma-de-apropriacao-e-impacto-no-custo-do-produto",
+              "confianca": 1
+            }
+          ],
+          "versaoVocabulario": 854
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>departamentalizacao>conceito-tratamento-contabil-forma-de-apropriacao-e-impacto-no-custo-do-produto",
+          "confianca": 1
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>topicos-especiais-de-contabilidade-aplicada-ao-setor-publico>custos-no-setor-publico",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>apropriacao-dos-custos-a-producao>conceito-e-criterios-de-atribuicao-dos-custos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1309
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>topicos-especiais-de-contabilidade-aplicada-ao-setor-publico>custos-no-setor-publico",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>apropriacao-dos-custos-a-producao>conceito-e-criterios-de-atribuicao-dos-custos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+              "confianca": 0.4
+            },
+            {
+              "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+              "confianca": 0.6
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>aplicacao-dos-valores-e-deveres-de-conduta-etica-da-cgu-a-situacoes-de-trabalho",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 69
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>guia-lila-s-2023-cgu-orientacoes-para-prevencao-e-tratamento-ao-assedio-moral-e-sexual-e-a-discriminacao-no-governo-federal",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>agentes-administrativos>investidura-e-exercicio-da-funcao-publica",
+          "confianca": 0.4
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>aplicacao-dos-valores-e-deveres-de-conduta-etica-da-cgu-a-situacoes-de-trabalho",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 39
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-lei-de-improbidade-administrativa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>regimes-de-agentes-publicos-e-de-pessoas-juridicas-materialidade-autoria-quando-exigivel-nexo-enquadramento-e-elemento-subjetivo-conforme-o-regime-aplicavel",
+              "confianca": 0.7
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>aplicacao-dos-marcos-prescricionais-e-dos-criterios-de-dosimetria-fundamentacao-da-sancao-e-da-reparacao-do-dano-em-casos-concretos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 68
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>admissibilidade-prova-e-requisitos-da-responsabilizacao>regimes-de-agentes-publicos-e-de-pessoas-juridicas-materialidade-autoria-quando-exigivel-nexo-enquadramento-e-elemento-subjetivo-conforme-o-regime-aplicavel",
+          "confianca": 0.7
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>aplicacao-dos-marcos-prescricionais-e-dos-criterios-de-dosimetria-fundamentacao-da-sancao-e-da-reparacao-do-dano-em-casos-concretos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:45": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -266,6 +2658,301 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>responsabilizacao-em-nivel-introdutorio>finalidades-e-diferencas-entre-responsabilizacao-de-agentes-publicos-e-de-pessoas-juridicas-nocoes-de-admissibilidade-processo-disciplinar-processo-administrativo-de-responsabilizacao-e-acordo-de-leniencia",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>conceito-requisitos-atributos-classificacao-e-especies",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 99
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>conceito-requisitos-atributos-classificacao-e-especies",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>responsabilidade-civil-do-estado>causas-excludentes-e-atenuantes-da-responsabilidade-do-estado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 67
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>responsabilidade-civil-do-estado>causas-excludentes-e-atenuantes-da-responsabilidade-do-estado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>servicos-publicos>delegacao>concessao-permissao-e-autorizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 48
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>servicos-publicos>delegacao>concessao-permissao-e-autorizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 42
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 61
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 27
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-civil>sumulas-do-stf-e-do-stj>precedentes-e-julgados-vinculantes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 706
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-civil>sumulas-do-stf-e-do-stj>precedentes-e-julgados-vinculantes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 29
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>controle-da-constitucionalidade>acao-direta-de-inconstitucionalidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1107
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -304,6 +2991,484 @@
       ],
       "incerto": false,
       "concordancia": "concordam"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>poder-judiciario>conselho-nacional-de-justica-cnj",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 698
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>poder-judiciario>conselho-nacional-de-justica-cnj",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F2854956231D8B0D08CE9653228E4F7B27AE52B1F403F091B28D5B3619AC1718:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 39
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro>vigencia-aplicacao-obrigatoriedade-interpretacao-e-integracao-das-leis",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 774
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro>vigencia-aplicacao-obrigatoriedade-interpretacao-e-integracao-das-leis",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>tutela-e-curatela",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1265
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>tutela-e-curatela",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>crimes-contra-a-administracao-publica",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-penal>relacoes-jurisdicionais-com-autoridade-estrangeira",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 824
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>crimes-contra-a-administracao-publica",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-penal>relacoes-jurisdicionais-com-autoridade-estrangeira",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>prescricao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 48
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>prescricao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 49
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 33
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>fato-gerador-conceito-e-caracteristicas-essenciais",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-tributaria-estadual>decreto-estadual-n-13-796-1998-e-suas-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 107
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>fato-gerador-conceito-e-caracteristicas-essenciais",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.6
+        },
+        {
+          "id": "legislacao-tributaria-estadual>decreto-estadual-n-13-796-1998-e-suas-alteracoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>ipva-lei-estadual-n-7-655-2013-e-decreto-estadual-n-29-684-2014",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 727
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>ipva-lei-estadual-n-7-655-2013-e-decreto-estadual-n-29-684-2014",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 59
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1190
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>icms-local-da-operacao-e-estabelecimento-responsavel",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1212
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>icms-local-da-operacao-e-estabelecimento-responsavel",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 766
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 754
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 361
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>retencao-e-recolhimento-de-tributos-incidentes-sobre-bens-e-servicos",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 846
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>retencao-e-recolhimento-de-tributos-incidentes-sobre-bens-e-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>lei-estadual-n-6-967-1996-e-suas-alteracoes",
+              "confianca": 0.4
+            },
+            {
+              "id": "legislacao-tributaria-estadual>lei-estadual-n-6-968-1996-e-suas-alteracoes",
+              "confianca": 0.3
+            },
+            {
+              "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 870
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+          "confianca": 0.8
+        },
+        {
+          "id": "legislacao-tributaria-estadual>lei-estadual-n-6-967-1996-e-suas-alteracoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 663
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>obrigacao-tributaria-principal-e-acessoria-hipotese-de-incidencia-e-fato-gerador-da-obrigacao-tributaria-sujeicao-ativa-e-passiva-solidariedade-capacidade-tributaria-domicilio-tributario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
     },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:81": {
       "opinioes": {
@@ -398,6 +3563,43 @@
       "incerto": false,
       "concordancia": "concordam"
     },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.7
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 677
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.7
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:85": {
       "opinioes": {
         "agy:gemini-3.8-flash-low": {
@@ -414,6 +3616,64 @@
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 771
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-imobilizado",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>criterios-de-avaliacao-e-mensuracao-do-ativo-imobilizado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 922
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-imobilizado",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>criterios-de-avaliacao-e-mensuracao-do-ativo-imobilizado",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -489,6 +3749,43 @@
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-circulante>superavaliacao-na-formacao-dos-custos-de-estoque",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 645
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-no-ativo-circulante>superavaliacao-na-formacao-dos-custos-de-estoque",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

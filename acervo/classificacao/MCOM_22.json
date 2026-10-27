@@ -1,0 +1,1706 @@
+{
+  "identificador": "MCOM_22",
+  "itens": {
+    "MCOM_22:677_MCOM_CG1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 516
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1536
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>redes-de-computadores>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1167
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>redes-de-computadores>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>programas-de-navegacao-microsoft-edge-mozilla-firefox-google-chrome-e-similares",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.7
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1167
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.7
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>nocoes-de-sistema-operacional-ambiente-windows-10-e-11-e-msoffice-m365-word-excel-powerpoint-onedrive-sharepoint-e-teams",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1020
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>nocoes-de-sistema-operacional-ambiente-windows-10-e-11-e-msoffice-m365-word-excel-powerpoint-onedrive-sharepoint-e-teams",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>seguranca-de-sistemas-redes-de-computadores-e-infraestrutura-fisica-e-logica-conceitos-fundamentos-solucoes-principais-ataques-e-tecnicas-de-protecao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1065
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>seguranca-de-sistemas-redes-de-computadores-e-infraestrutura-fisica-e-logica-conceitos-fundamentos-solucoes-principais-ataques-e-tecnicas-de-protecao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-de-busca-e-otimizacao-de-mecanismos-de-busca-seo",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 922
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-de-busca-e-otimizacao-de-mecanismos-de-busca-seo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1112
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.55
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>orquestracao-de-containers-em-kubernetes>gerenciamento-de-recursos-seguranca-e-monitoramento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 855
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.55
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>orquestracao-de-containers-em-kubernetes>gerenciamento-de-recursos-seguranca-e-monitoramento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.9
+            },
+            {
+              "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 145
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.9
+        },
+        {
+          "id": "infraestrutura-em-tic>servicos-backup-restore-arquitetura-em-nuvem-saas-iaas-e-paas-virtualizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+              "confianca": 0.9
+            },
+            {
+              "id": "topicos-avancados>ciencia-de-dados>armazenamento-de-dados>armazenamento-orientado-a-objeto-object-store",
+              "confianca": 0.7
+            },
+            {
+              "id": "matematica-financeira>computacao-em-nuvens>armazenamento-de-dados-na-nuvem-cloud-storage",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 241
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>armazenamento-em-bloco-arquivo-e-objeto-local-e-em-nuvem",
+          "confianca": 0.9
+        },
+        {
+          "id": "topicos-avancados>ciencia-de-dados>armazenamento-de-dados>armazenamento-orientado-a-objeto-object-store",
+          "confianca": 0.7
+        },
+        {
+          "id": "matematica-financeira>computacao-em-nuvens>armazenamento-de-dados-na-nuvem-cloud-storage",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>backup-e-recuperacao-conceitos-fundamentais-tipos-de-copias-de-seguranca-principais-tecnologias-deduplicacao-recuperacao-de-desastres-e-continuidade-de-sistemas-e-servicos-de-ti",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 80
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>backup-e-recuperacao-conceitos-fundamentais-tipos-de-copias-de-seguranca-principais-tecnologias-deduplicacao-recuperacao-de-desastres-e-continuidade-de-sistemas-e-servicos-de-ti",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>continuidade-de-negocio-e-resposta-a-incidentes>recuperacao-de-desastres",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+              "confianca": 0.85
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+          "confianca": 0.85
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 684
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+              "confianca": 0.85
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>leis-de-de-morgan",
+              "confianca": 0.7
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 661
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>equivalencias",
+          "confianca": 0.85
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>leis-de-de-morgan",
+          "confianca": 0.7
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>logica-de-argumentacao-analogia-inferencias-deducoes-e-conclusoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>logica-de-argumentacao-analogia-inferencias-deducoes-e-conclusoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.7
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 679
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.7
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1545
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>logica-de-argumentacao-e-associacao-de-informacoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 425
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>compreensao-e-analise-da-logica-de-uma-situacao-utilizando-as-funcoes-intelectuais-raciocinio-verbal-raciocinio-matematico-raciocinio-sequencial-reconhecimento-de-padroes-orientacao-espacial-e-temporal-formacao-de-conceitos-discriminacao-de-elementos-compreensao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 425
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+              "confianca": 0.9
+            },
+            {
+              "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 757
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+          "confianca": 0.9
+        },
+        {
+          "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 933
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+              "confianca": 0.7
+            },
+            {
+              "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 810
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+          "confianca": 0.7
+        },
+        {
+          "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 933
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>a-questao-agraria>o-agronegocio-e-a-agricultura-familiar",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 933
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>cambio-reservas-e-relacoes-comerciais-e-financeiras-do-brasil-com-o-resto-do-mundo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 933
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>politica-externa-brasileira>papel-do-brasil-no-atual-cenario-internacional",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>cambio-reservas-e-relacoes-comerciais-e-financeiras-do-brasil-com-o-resto-do-mundo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.8
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 683
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1262
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1280
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 193
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 184
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 852
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>estrutura-organizacional-e-competencias-de-orgaos-publicos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1536
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>estrutura-organizacional-e-competencias-de-orgaos-publicos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1371
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1452
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>poder-executivo-atribuicoes-e-responsabilidade-do-presidente-da-republica-e-dos-ministros-de-estado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1298
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>acompanhamento-da-execucao",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 496
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>acompanhamento-da-execucao",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1281
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>concordancia-verbal-e-nominal",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1088
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1017
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>regencia-verbal-e-nominal",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.65
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 344
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.65
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1262
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>lei-n-8-429-1992-e-suas-alteracoes-improbidade-administrativa",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>improbidade-administrativa-lei-n-8-429-1992",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 184
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-acesso-a-informacao-lei-n-12-527-2011",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-federal-n-12-527-2011-e-suas-alteracoes-lei-de-acesso-a-informacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 650
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>itens-gramaticais-relevantes-para-compreensao-de-conteudos-semanticos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MCOM_22:677_MCOM_CG2_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 127
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

@@ -34,7 +34,16 @@ interface Indexed {
   parents: Set<string>;
 }
 
-const cache = new WeakMap<Vocabulario, { indexed: Indexed[]; idf: Map<string, number> }>();
+interface Posting {
+  idx: number;
+  leafWeight: number;
+  anyWeight: number;
+}
+
+const cache = new WeakMap<
+  Vocabulario,
+  { indexed: Indexed[]; idf: Map<string, number>; byWord: Map<string, Posting[]>; pistas: { marca: (text: string) => boolean; ids: string[] }[] }
+>();
 
 function index(vocab: Vocabulario) {
   const cached = cache.get(vocab);
@@ -47,7 +56,25 @@ function index(vocab: Vocabulario) {
   const df = new Map<string, number>();
   for (const { leaf, parents } of indexed) for (const w of new Set([...leaf, ...parents])) df.set(w, (df.get(w) ?? 0) + 1);
   const idf = new Map([...df.entries()].map(([w, n]) => [w, Math.log(1 + indexed.length / n)]));
-  const built = { indexed, idf };
+  const byWord = new Map<string, Posting[]>();
+  for (let idx = 0; idx < indexed.length; idx++) {
+    const { leaf, parents } = indexed[idx];
+    const all = new Set([...leaf, ...parents]);
+    for (const w of all) {
+      const weight = idf.get(w) ?? 0;
+      const list = byWord.get(w);
+      const posting: Posting = { idx, leafWeight: leaf.has(w) ? 2 * weight : weight, anyWeight: 0.25 * weight };
+      if (list) list.push(posting);
+      else byWord.set(w, [posting]);
+    }
+  }
+  const pistas = PISTAS.flatMap((pista) => {
+    const materia = vocab.assuntos.find((a) => a.caminho.length === 1 && pista.materia.test(a.caminho[0]));
+    if (!materia) return [];
+    const ids = vocab.assuntos.filter((a) => a.caminho.length === 2 && a.caminho[0] === materia.caminho[0]).map((a) => a.id);
+    return [{ marca: pista.marca, ids }];
+  });
+  const built = { indexed, idf, byWord, pistas };
   cache.set(vocab, built);
   return built;
 }
@@ -80,38 +107,63 @@ const PISTAS: { materia: RegExp; marca: (text: string) => boolean }[] = [
 const MAX_PISTA = 12;
 
 function cueCandidates(item: AcervoItem, vocab: Vocabulario): string[] {
+  const { pistas } = index(vocab);
   const text = itemText(item);
   const ids: string[] = [];
-  for (const pista of PISTAS) {
-    if (!pista.marca(text)) continue;
-    const materia = vocab.assuntos.find((a) => a.caminho.length === 1 && pista.materia.test(a.caminho[0]));
-    if (!materia) continue;
-    for (const a of vocab.assuntos) if (a.caminho.length === 2 && a.caminho[0] === materia.caminho[0]) ids.push(a.id);
+  for (const pista of pistas) {
+    if (pista.marca(text)) ids.push(...pista.ids);
   }
   return ids.slice(0, MAX_PISTA);
 }
 
-export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): { id: string; score: number }[] {
-  const { indexed, idf } = index(vocab);
+function scoreItem(item: AcervoItem, vocab: Vocabulario): { indexed: Indexed[]; scores: Float64Array; touched: number[] } {
+  const { indexed, byWord } = index(vocab);
   const words = keywords(itemText(item));
   // A matéria de origem é pista fraca: soma pouco, nunca decide sozinha
   const origin = keywords(item.materiaOrigem ?? '');
-  const scored = indexed.map(({ assunto, leaf, parents }) => {
-    let score = 0;
-    for (const w of words) {
-      if (leaf.has(w)) score += 2 * (idf.get(w) ?? 0);
-      else if (parents.has(w)) score += idf.get(w) ?? 0;
+  const scores = new Float64Array(indexed.length);
+  const touched: number[] = [];
+  for (const w of words) {
+    const postings = byWord.get(w);
+    if (!postings) continue;
+    for (const p of postings) {
+      if (scores[p.idx] === 0) touched.push(p.idx);
+      scores[p.idx] += p.leafWeight;
     }
-    if (score > 0) for (const w of origin) if (parents.has(w) || leaf.has(w)) score += 0.25 * (idf.get(w) ?? 0);
-    return { id: assunto.id, score };
-  });
-  const top = scored
-    .filter((c) => c.score > 0)
+  }
+  for (const w of origin) {
+    const postings = byWord.get(w);
+    if (!postings) continue;
+    for (const p of postings) {
+      if (scores[p.idx] > 0) scores[p.idx] += p.anyWeight;
+    }
+  }
+  return { indexed, scores, touched };
+}
+
+export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): { id: string; score: number }[] {
+  const { indexed, scores, touched } = scoreItem(item, vocab);
+  const top = touched
+    .map((idx) => ({ id: indexed[idx].assunto.id, score: scores[idx] }))
     .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
     .slice(0, k);
   const present = new Set(top.map((c) => c.id));
   const extras = cueCandidates(item, vocab).filter((id) => !present.has(id)).map((id) => ({ id, score: 0 }));
   return [...top, ...extras];
+}
+
+function bestCandidate(item: AcervoItem, vocab: Vocabulario): { id: string; score: number } | undefined {
+  const { indexed, scores, touched } = scoreItem(item, vocab);
+  let bestIdx = -1;
+  let bestScore = 0;
+  for (const idx of touched) {
+    const s = scores[idx];
+    if (s > bestScore || (s === bestScore && bestIdx >= 0 && indexed[idx].assunto.id.localeCompare(indexed[bestIdx].assunto.id) < 0)) {
+      bestScore = s;
+      bestIdx = idx;
+    }
+  }
+  return bestIdx >= 0 ? { id: indexed[bestIdx].assunto.id, score: bestScore } : undefined;
 }
 
 /**
@@ -120,7 +172,7 @@ export function candidatesFor(item: AcervoItem, vocab: Vocabulario, k: number): 
  * grupo, o que mais casa com o vocabulário.
  */
 export function queueOrder(items: AcervoItem[], vocab: Vocabulario, prioridade: ReadonlySet<string> = new Set()): AcervoItem[] {
-  const best = new Map(items.map((i) => [i.id, candidatesFor(i, vocab, 1)[0]]));
+  const best = new Map(items.map((i) => [i.id, bestCandidate(i, vocab)]));
   const score = (i: AcervoItem) => best.get(i.id)?.score ?? 0;
   const preferred = (i: AcervoItem) => {
     const top = best.get(i.id);

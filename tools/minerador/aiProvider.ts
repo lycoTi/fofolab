@@ -90,6 +90,9 @@ export function createProvider(opts: {
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${opts.chave}` },
           body: JSON.stringify(body(prompt, maxTokens)),
         });
+        if (response.status === 402) {
+          throw new LimiteDiario(86400, `${opts.nome} sem saldo suficiente (402)`);
+        }
         if (response.status === 429) {
           const wait = Number(response.headers.get('retry-after')) || 60;
           if (wait > SHORT_WAIT_SEC || attempt >= MAX_RETRIES) throw new LimiteDiario(wait, `${opts.nome} pediu ${wait} s`);
