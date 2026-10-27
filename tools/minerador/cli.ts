@@ -11,6 +11,7 @@ import { createPoliteClient } from './politeClient';
 import { formatReport } from './report';
 import { runMinerador, safeFileName } from './runMinerador';
 import { selectOpeningEdital } from './examFiles';
+import { createSpendLedger } from './spendLedger';
 import { mergeVocabularios, readEditalLines, readVocabulario, seedFromEdital, writeVocabulario } from './vocab';
 
 /**
@@ -27,6 +28,9 @@ import { mergeVocabularios, readEditalLines, readVocabulario, seedFromEdital, wr
  */
 const ACERVO = 'acervo';
 const CACHE = '.minerador-cache';
+/** Teto de gasto por dia com a DeepSeek (decisão do dono) e a cotação usada na conta, alta de propósito. */
+const DEEPSEEK_TETO_BRL = 5;
+const USD_BRL_CONSERVADOR = 6;
 const ANO_MINIMO = 2021;
 const USER_AGENT = 'FofoLab-minerador (estudo pessoal; github.com/lycoTi)';
 const EDITAL_PADRAO = join('e2e', 'fixtures', 'cgu-2026-affc-edital.pdf');
@@ -75,7 +79,13 @@ function providerFrom(args: string[], alvo: Alvo): AiProvider {
   const keys = loadKeys(process.env, ['.env.local', '.env']);
   const chave = keys[nome];
   if (!chave) throw new Error(`Falta a chave do ${nome} (VITE_${nome.toUpperCase()}_API_KEY no .env.local ou .env).`);
-  return createProvider({ nome, chave, modelo });
+  if (nome === 'groq') return createProvider({ nome, chave, modelo });
+  // DeepSeek é paga: teto por dia (R$ 5 por padrão) e dólar conservador (R$ 6), ajustáveis no ambiente
+  const tetoBrl = Number(process.env.MINERADOR_DEEPSEEK_TETO_BRL) || DEEPSEEK_TETO_BRL;
+  const usdBrl = Number(process.env.MINERADOR_USD_BRL) || USD_BRL_CONSERVADOR;
+  const ledger = createSpendLedger(join(CACHE, 'gasto-deepseek.json'), { usdBrl });
+  console.log(`DeepSeek: gasto de hoje R$ ${ledger.hoje().toFixed(2)} de R$ ${tetoBrl.toFixed(2)} (contado no preço de pico).`);
+  return createProvider({ nome, chave, modelo, gasto: { ledger, tetoBrl } });
 }
 
 function formatClassifyReport(r: ClassifyReport, provider: AiProvider): string {

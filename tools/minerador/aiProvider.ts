@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import type { SpendLedger } from './spendLedger';
 
 /**
  * Provedores de IA da ferramenta (fora do app, sem o roteador do Vite): `agy` (Antigravity CLI, login da conta Google —
@@ -55,6 +56,8 @@ export function createProvider(opts: {
   modelo?: string;
   fetchImpl?: typeof fetch;
   sleep?: (ms: number) => Promise<void>;
+  /** Provedor pago (DeepSeek): para ao bater o teto de reais do dia, contando pelo uso de cada resposta. */
+  gasto?: { ledger: SpendLedger; tetoBrl: number };
 }): AiProvider {
   const fetchImpl = opts.fetchImpl ?? fetch;
   const sleep = opts.sleep ?? defaultSleep;
@@ -77,6 +80,10 @@ export function createProvider(opts: {
     modelo,
     tamanhoLote: 10,
     async complete(prompt, maxTokens) {
+      const gasto = opts.gasto;
+      if (gasto && gasto.ledger.hoje() >= gasto.tetoBrl) {
+        throw new LimiteDiario(gasto.ledger.segundosAteAmanha(), `teto de R$ ${gasto.tetoBrl.toFixed(2)} por dia com a ${opts.nome}`);
+      }
       for (let attempt = 0; ; attempt += 1) {
         const response = await fetchImpl(url, {
           method: 'POST',
@@ -91,7 +98,12 @@ export function createProvider(opts: {
         }
         // Só o status: o corpo do erro pode ecoar dados do pedido
         if (!response.ok) throw new Error(`${opts.nome} respondeu ${response.status}`);
-        const data = (await response.json()) as { choices?: { message?: { content?: unknown } }[] };
+        const data = (await response.json()) as {
+          choices?: { message?: { content?: unknown } }[];
+          usage?: { prompt_tokens?: number; completion_tokens?: number };
+        };
+        // Conta antes de validar: resposta vazia também foi cobrada
+        if (gasto) gasto.ledger.somar(gasto.ledger.custo(data.usage));
         const text = data.choices?.[0]?.message?.content;
         if (typeof text !== 'string' || !text.trim()) throw new Error(`${opts.nome} respondeu vazio`);
         return text;

@@ -38,6 +38,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] IA sem chave = respostas marcadas "Exemplo simulado". Com chave: prompt com regras anti-alucinação e explicação guardada.
 - [DONE] IA real pelo **Groq** (grátis, `qwen/qwen3.8-27b`): tutor e explicação-base verificados no Edge contra a API real (~1-2 s). Ordem: gateway → Groq → Gemini → DeepSeek. Erros dos provedores aparecem no console.
 - [PARCIAL] FofoIA com IA real (ver a fatia 11 abaixo: teto de resposta corrigido; pista de Certo/Errado e Direito do `qwen` em aberto). Gemini exige crédito pré-pago; DeepSeek (`deepseek-flash`, sem modo de raciocínio) fica como reserva paga.
+  **26/10/2026:** crédito de US$ 5 na DeepSeek; chave no `.env` testada com uma chamada real (200, ~1,5 s, `deepseek-flash`).
+  **Minerador com teto de R$ 5 por dia na DeepSeek** (`tools/minerador/spendLedger.ts`): conta o custo pelo `usage` de
+  cada resposta no preço de pico (US$ 0,30/US$ 1,20 por milhão; fontes de terceiros, a página oficial não abriu) e dólar
+  a R$ 6; ao bater o teto, para com o limite diário e a fila continua no dia seguinte (`MINERADOR_DEEPSEEK_TETO_BRL`,
+  `MINERADOR_USD_BRL`). No app, a DeepSeek só entra quando o Groq falha e não tem teto diário (só o saldo pré-pago).
   **26/10/2026 (relato do dono, aula sobre service mesh cortada no meio):** o app agora lê o aviso de corte do provedor
   (`finish_reason: length` / `MAX_TOKENS`), mostra a resposta até a última frase completa e oferece **"Continuar de onde
   parou"** (manda o final já mostrado; o resto herda a parte da aula). Aula: uma parte por resposta (~300 palavras, 3 a 5
