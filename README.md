@@ -6,13 +6,14 @@ Aplicação desktop ultraleve (`.exe`), local-first e gratuita para estudo ativo
 
 ## 🧭 Para IAs (Antigravity, Claude, Cursor, Gemini)
 Antes de alterar qualquer código:
-1. Leia **[`BACKLOG.md`](./BACKLOG.md)** — estado **real** de cada área, definição de pronto e próximas fatias. (Claude Code: [`CLAUDE.md`](./CLAUDE.md) resume as regras.)
+1. Leia **[`docs/handoff/2026-10-24-estado-e-proxima-ia.md`](./docs/handoff/2026-10-24-estado-e-proxima-ia.md)** (onde paramos) e **[`BACKLOG.md`](./BACKLOG.md)** — estado **real** de cada área, definição de pronto e próximas fatias. (Claude Code: [`CLAUDE.md`](./CLAUDE.md) resume as regras; Antigravity: [`.agents/rules/`](./.agents/rules/).)
 2. Consulte apenas a especificação necessária dentro de **[`docs/specs/`](./docs/specs/)**:
-   - [`01-database-schema.sql`](./docs/specs/01-database-schema.sql) — Contrato do banco local (versão 2; mudanças exigem migração em `src/lib/migrations.ts`).
-   - [`02-ai-router-and-metrics.md`](./docs/specs/02-ai-router-and-metrics.md) — Roteador Gateway ➔ Gemini ➔ DeepSeek, modo demonstração e cálculo de Domínio sem viés.
+   - [`01-database-schema.sql`](./docs/specs/01-database-schema.sql) — Contrato do banco local (mudanças exigem migração em `src/lib/migrations.ts` e subir `LATEST_SCHEMA_VERSION`).
+   - [`02-ai-router-and-metrics.md`](./docs/specs/02-ai-router-and-metrics.md) — Roteador de IA (hoje: gateway ➔ Groq ➔ Gemini ➔ DeepSeek), modo demonstração e cálculo de Domínio sem viés.
    - [`03-admin-tracks-and-crawler.md`](./docs/specs/03-admin-tracks-and-crawler.md) — Modo Admin, Trilhas Prontas, Dossiês e Crawler (não implementado).
    - [`05-onboarding-wizard-and-daily-focus.md`](./docs/specs/05-onboarding-wizard-and-daily-focus.md) — Wizard, estratégias e "Meu Dia de Hoje".
    - [`06-importacao-e-persistencia.md`](./docs/specs/06-importacao-e-persistencia.md) — Onde os dados ficam, backups, migrações e formatos de importação.
+   - [`07`](./docs/specs/07-edital-ciclo-e-situacao.md) edital real e ciclo pela nota mínima • [`08`](./docs/specs/08-mapa-de-incidencia-das-bancas.md) mapa de incidência (rascunho) • [`09`](./docs/specs/09-bancada-roteiro-e-revisao.md) bancada, roteiro e Revisão do dia • [`10`](./docs/specs/10-fofodoro-e-resumo-do-dia.md) FofoDoro • [`11`](./docs/specs/11-fofoia.md) FofoIA • [`12`](./docs/specs/12-minerador-cebraspe.md) minerador da Cebraspe ([`12c`](./docs/specs/12c-acervo-no-app.md) acervo no app) • [`13`](./docs/specs/13-plano-de-estudo.md) plano de estudo.
 3. Decisões e diagnóstico: [`docs/reviews/`](./docs/reviews/). Regras dos agentes: [`.agents/rules/`](./.agents/rules/).
 4. Se a pasta `graphify-out/` existir, use `graphify query` antes de buscas amplas — e rode `graphify update .` depois de mudar código.
 

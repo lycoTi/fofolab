@@ -4,7 +4,11 @@
 > vive no repositório, não na memória da IA. Substitui `2026-10-22-continuar-no-outro-pc.md` (que segue válido para
 > preparar um PC novo: stack `~/.agents`, Impeccable, `npm install`).
 
-## 0. Atualização de 25/10/2026 (leia primeiro)
+## 0. Atualizações de 25 a 27/10/2026 (leia primeiro)
+- **27/10:** **spec 12c aprovada** (`docs/specs/12c-acervo-no-app.md`): acervo da Cebraspe no app, num banco à parte e só
+  leitura; a questão entra no banco do estudante no primeiro uso. Vem **antes** do brainstorm da aba Questões (o dono quer
+  usar as questões já). Próximo: plano (`writing-plans`) e TDD. 12b segue: 630 itens classificados, vocabulário v27, a
+  DeepSeek com teto de R$ 5 por dia. 13b e o Fofo no app prontos (BACKLOG).
 - **Spec 12 — minerador de provas da Cebraspe** (`docs/specs/12-minerador-cebraspe.md`) e entrega **12a** prontas:
   `tools/minerador/` (fora do app, `npm run minerar -- lote | rodar`), acervo com **29,9 mil itens** de 59 concursos (revisão independente corrigida) em
   `acervo/cebraspe/*.json` (no git, 32 MB); PDFs em `.minerador-cache/` (fora do git — no outro PC, `rodar` baixa de
@@ -23,8 +27,8 @@
 - **13b pronta (26/10):** "Dá tempo?" (pelo plano e pelo ritmo real), linha do tempo semana a semana e reta final
   ajustável (o roteiro vira só revisão) — `src/lib/examProjection.ts`, `ExamOutlookCard`, `WeekTimeline`. Próximo: 13c
   (mapa matéria × semana, sugestão de ajustar o padrão). A prova da CGU é em 13/12/2026.
-- **Depois:** **brainstorm da aba Questões** (filtros por procedência/ano/cargo/formato) → 12c (app importa e mostra no
-  plano). O dono estuda as questões no TEC até a prova; o app serve para organizar e priorizar.
+- **Depois (ordem mudou em 27/10):** 12c (app importa e mostra no plano) → **brainstorm da aba Questões** (filtros por
+  procedência/ano/cargo/formato). O dono estuda as questões no TEC até a prova; o app serve para organizar e priorizar.
 - **FofoIA (25/10):** "oi"/"valeu"/"ok" respondidos pelo app (`src/lib/fofoia/smallTalk.ts`), resposta nova surgindo
   por parágrafo (`RichText reveal`).
 - **Stack `~/.agents`** instalada neste PC (casa) e ligada ao Antigravity; plugin `zizi-skills` desligado no Claude.
@@ -94,8 +98,9 @@
    `fetch` no Groq, 61 s entre chamadas (limite por minuto), e apagar o arquivo depois (o `npm test` o pegaria).
 2. **FofoIA com a letra da lei** (spec 11 §8): brainstorm próprio sobre o repositório público `ctresb/leis` — trazer só
    as leis do edital, com link da fonte oficial, e mandar o artigo exato no prompt.
-3. **Topo da aba Ciclo junto com o cronograma** (BACKLOG): "Sua semana" com uma barrinha por dia.
-4. **Banco de questões a partir das provas oficiais** (épico; brainstorm antes) e depois o mapa de incidência (spec 08).
+3. ~~Topo da aba Ciclo junto com o cronograma~~ **feito na 13a** ("Sua semana" na aba Plano de estudo).
+4. **Banco de questões a partir das provas oficiais:** 12a pronta, 12b em andamento, **12c (app) é a próxima**; depois o
+   mapa de incidência (spec 08).
 5. **Checklist do app desktop** (Tauri nunca compilado) — BACKLOG.
 
 ## 6. Como o dono gosta de trabalhar

@@ -6,7 +6,8 @@
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
 - **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
-- **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10) e **FofoIA (11)** — banco na migração **v10**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
+- **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **Spec 12c aprovada** (`docs/specs/12c-acervo-no-app.md`): o acervo entra no app agora, antes do brainstorm da aba Questões. Próximo: plano e implementação da 12c.
+- **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10), **FofoIA (11)** e Plano de estudo (13a/13b) — banco na migração **v11**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
 
@@ -290,7 +291,11 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   estatais"). **Falta:** terminar a 1ª opinião (cota do Gemini ≈ 5 mil itens/semana → ~5 semanas; CGU primeiro);
   decidir a 2ª opinião (DeepSeek quando houver crédito, para conferir todos — decisão do dono; o Groq não serve para o
   acervo todo); `pacote` + 12c.
-  **Próximas:** terminar a 12b → brainstorm da aba Questões → 12c (app).
+  **26–27/10:** a DeepSeek (`deepseek-flash`) entrou na 1ª opinião, com teto de R$ 5 por dia (~200 itens por dia):
+  **630 itens** classificados (420 Gemini + 210 DeepSeek), 82 incertos, vocabulário **v27**; `pacote` gerado em
+  `acervo/pacote/` (fora do git; 619 itens com assunto, 548 seguros).
+  **Próximas (decisão do dono, 27/10):** 12c (app, spec `12c-acervo-no-app.md`; o app recebe pacotes novos enquanto a
+  12b continua) → brainstorm da aba Questões (filtros).
   Depois: outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
   provas antigas.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
