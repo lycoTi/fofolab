@@ -123,7 +123,8 @@ test('importa questão colada da prova, responde e o diagnóstico coerente fica 
   await page.getByRole('button', { name: /^1\.3 Amostragem em Auditoria/ }).click();
   await page.getByRole('button', { name: /Estudar este tópico/ }).click();
 
-  await page.getByRole('button', { name: 'Importar Questões' }).first().click();
+  const edital = await openCurriculum(page);
+  await edital.getByRole('button', { name: 'Importar Questões' }).click();
   await page.getByLabel('Texto das questões').fill(`1. (FGV/CGU/2025) [tópico 1.3] Enunciado E2E sobre amostragem em auditoria: qual afirmação está correta?
 A) A amostragem elimina o risco de detecção.
 B) A amostragem estatística permite medir o risco de amostragem.

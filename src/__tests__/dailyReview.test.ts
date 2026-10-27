@@ -186,6 +186,7 @@ describe('Revisão do dia: questão, ordem e progresso', () => {
 
   it('diagnóstico já marcado pela confiança e pelo acerto', () => {
     expect(deriveDiagnosis('SURE', true)).toBe('MASTERED');
+    expect(deriveDiagnosis('RECENT', true)).toBe('STUDYING');
     expect(deriveDiagnosis('THINK', true)).toBe('DOUBT');
     expect(deriveDiagnosis('GUESS', true)).toBe('LUCKY_GUESS');
     expect(deriveDiagnosis('SURE', false)).toBe('BASE_GAP');

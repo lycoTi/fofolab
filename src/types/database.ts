@@ -10,12 +10,12 @@ export type TopicRelationType = 'PREREQUISITE' | 'RELATED' | 'JURISPRUDENCE';
 /** Quem escreveu a explicação guardada. `EXAMPLE` = exemplo escrito à mão (seed), não gerado pela IA. */
 export type AiProviderUsed = 'GROQ_FREE' | 'GEMINI_FREE' | 'DEEPSEEK_FALLBACK' | 'GATEWAY' | 'EXAMPLE';
 /** [spec 11] `LUCKY_GUESS` = acertou no chute; `MISCONCEPTION` = errou porque confundiu com outra coisa. */
-export type SelfDiagnosisType = 'MASTERED' | 'DOUBT' | 'LUCKY_GUESS' | 'BOARD_TRAP' | 'BASE_GAP' | 'MISCONCEPTION';
+export type SelfDiagnosisType = 'MASTERED' | 'STUDYING' | 'DOUBT' | 'LUCKY_GUESS' | 'BOARD_TRAP' | 'BASE_GAP' | 'MISCONCEPTION';
 export type StudyStrategy = 'BASE_COMUM' | 'MAIS_COBRADOS' | 'ALTO_PESO_CURTO';
 export type StudyMoment = 'PRE_EDITAL' | 'POS_EDITAL';
 export type StudySessionType = 'PDF_READING' | 'QUESTIONS' | 'REVIEW' | 'POMODORO';
 /** [v8] Confiança marcada antes de responder na Revisão do dia. */
-export type ReviewConfidence = 'SURE' | 'THINK' | 'GUESS';
+export type ReviewConfidence = 'SURE' | 'RECENT' | 'THINK' | 'GUESS';
 /** [v8] Autoavaliação da pergunta aberta da Revisão do dia. */
 export type RecallRating = 'GOOD' | 'PARTIAL' | 'FORGOT';
 export type BlueprintHealthStatus = 'OK' | 'DRIFT_DETECTED';

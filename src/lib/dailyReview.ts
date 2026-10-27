@@ -142,6 +142,7 @@ export function reviewProgress(
 export function deriveDiagnosis(confidence: ReviewConfidence, isCorrect: boolean): SelfDiagnosisType {
   if (!isCorrect) return 'BASE_GAP';
   if (confidence === 'SURE') return 'MASTERED';
+  if (confidence === 'RECENT') return 'STUDYING';
   // Chute certo não é saber: quase não sobe o domínio e o tópico continua na fila (spec 11 §5.5)
   return confidence === 'GUESS' ? 'LUCKY_GUESS' : 'DOUBT';
 }

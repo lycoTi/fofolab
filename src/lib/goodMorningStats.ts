@@ -81,7 +81,7 @@ export function confidenceCalibration(
 ): { confidence: ReviewConfidence; label: string; answered: number; accuracyPercent: number }[] {
   const marked = attempts.filter((a) => a.confidence);
   if (marked.length < CALIBRATION_MIN_TOTAL) return [];
-  return (['SURE', 'THINK', 'GUESS'] as const).flatMap((confidence) => {
+  return (['SURE', 'RECENT', 'THINK', 'GUESS'] as const).flatMap((confidence) => {
     const level = marked.filter((a) => a.confidence === confidence);
     if (level.length < CALIBRATION_MIN_PER_LEVEL) return [];
     const correct = level.filter((a) => a.is_correct === 1).length;

@@ -4104,7 +4104,7 @@
       "file_type": "code",
       "norm_label": "getadmincatalogandblueprints()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2060"
+      "source_location": "L2061"
     },
     {
       "id": "src_lib_database_getdayoverrides",
@@ -4152,7 +4152,7 @@
       "file_type": "code",
       "norm_label": "getnotebooksbyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2037"
+      "source_location": "L2038"
     },
     {
       "id": "src_lib_database_getquestionlogs",
@@ -4164,7 +4164,7 @@
       "file_type": "code",
       "norm_label": "getquestionlogs()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1520"
+      "source_location": "L1521"
     },
     {
       "id": "src_lib_database_getrecallchecks",
@@ -4176,7 +4176,7 @@
       "file_type": "code",
       "norm_label": "getrecallchecks()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1747"
+      "source_location": "L1748"
     },
     {
       "id": "src_lib_database_getrecentattempts",
@@ -4188,7 +4188,7 @@
       "file_type": "code",
       "norm_label": "getrecentattempts()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2052"
+      "source_location": "L2053"
     },
     {
       "id": "src_lib_database_getstudysessions",
@@ -4200,7 +4200,7 @@
       "file_type": "code",
       "norm_label": "getstudysessions()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1646"
+      "source_location": "L1647"
     },
     {
       "id": "src_lib_database_getstudysessionssince",
@@ -4212,7 +4212,7 @@
       "file_type": "code",
       "norm_label": "getstudysessionssince()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1655"
+      "source_location": "L1656"
     },
     {
       "id": "src_lib_database_getsubjectsbyplan",
@@ -4236,7 +4236,7 @@
       "file_type": "code",
       "norm_label": "gettopicfirststudydates()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1782"
+      "source_location": "L1783"
     },
     {
       "id": "src_lib_database_gettopiclinks",
@@ -4248,7 +4248,7 @@
       "file_type": "code",
       "norm_label": "gettopiclinks()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2048"
+      "source_location": "L2049"
     },
     {
       "id": "src_lib_database_gettopicsbysubject",
@@ -4272,7 +4272,7 @@
       "file_type": "code",
       "norm_label": "importquestions()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1823"
+      "source_location": "L1824"
     },
     {
       "id": "src_lib_database_queryall",
@@ -5424,7 +5424,7 @@
       "file_type": "code",
       "norm_label": "formatattemptbadge()",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L12"
+      "source_location": "L11"
     },
     {
       "id": "src_features_questions_questioncard_questioncard",
@@ -5436,7 +5436,7 @@
       "file_type": "code",
       "norm_label": "questioncard()",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L30"
+      "source_location": "L29"
     },
     {
       "id": "src_features_questions_questionworkbench_iscertoerrado",
@@ -5748,7 +5748,7 @@
       "file_type": "code",
       "norm_label": "syllabuspastebox()",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L870"
+      "source_location": "L883"
     },
     {
       "id": "src_features_onboarding_wizard_hoursstep_hoursstep",
@@ -7500,7 +7500,7 @@
       "file_type": "code",
       "norm_label": "applyrecommendedcycleallocations()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1572"
+      "source_location": "L1573"
     },
     {
       "id": "src_lib_database_categoryforpart",
@@ -7524,7 +7524,7 @@
       "file_type": "code",
       "norm_label": "cleardailyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1692"
+      "source_location": "L1693"
     },
     {
       "id": "src_lib_database_countdependents",
@@ -7644,7 +7644,7 @@
       "file_type": "code",
       "norm_label": "getdailyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1668"
+      "source_location": "L1669"
     },
     {
       "id": "src_lib_database_getlastopenedpdf",
@@ -7656,7 +7656,7 @@
       "file_type": "code",
       "norm_label": "getlastopenedpdf()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1949"
+      "source_location": "L1950"
     },
     {
       "id": "src_lib_database_getpdfsourcefortopic",
@@ -7668,7 +7668,7 @@
       "file_type": "code",
       "norm_label": "getpdfsourcefortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1959"
+      "source_location": "L1960"
     },
     {
       "id": "src_lib_database_getstudyplans",
@@ -7692,7 +7692,7 @@
       "file_type": "code",
       "norm_label": "getstudytotals()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1795"
+      "source_location": "L1796"
     },
     {
       "id": "src_lib_database_importsyllabustopics",
@@ -7776,7 +7776,7 @@
       "file_type": "code",
       "norm_label": "recordquestionlog()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1488"
+      "source_location": "L1489"
     },
     {
       "id": "src_lib_database_resolvetopicstatus",
@@ -7800,7 +7800,7 @@
       "file_type": "code",
       "norm_label": "saveaidissection()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1880"
+      "source_location": "L1881"
     },
     {
       "id": "src_lib_database_savedailyplan",
@@ -7812,7 +7812,7 @@
       "file_type": "code",
       "norm_label": "savedailyplan()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1683"
+      "source_location": "L1684"
     },
     {
       "id": "src_lib_database_savepdfsourceprogress",
@@ -7824,7 +7824,7 @@
       "file_type": "code",
       "norm_label": "savepdfsourceprogress()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1975"
+      "source_location": "L1976"
     },
     {
       "id": "src_lib_database_saveselfassessment",
@@ -7872,7 +7872,7 @@
       "file_type": "code",
       "norm_label": "undoquestionlog()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1531"
+      "source_location": "L1532"
     },
     {
       "id": "src_lib_database_updatestudyplan",
@@ -8988,7 +8988,7 @@
       "file_type": "code",
       "norm_label": "getdailyreview()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1701"
+      "source_location": "L1702"
     },
     {
       "id": "src_lib_database_getnotebookfortopic",
@@ -9000,7 +9000,7 @@
       "file_type": "code",
       "norm_label": "getnotebookfortopic()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1910"
+      "source_location": "L1911"
     },
     {
       "id": "src_lib_database_getquestionwithdissection",
@@ -9012,7 +9012,7 @@
       "file_type": "code",
       "norm_label": "getquestionwithdissection()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1774"
+      "source_location": "L1775"
     },
     {
       "id": "src_lib_database_getreviewquestioncandidates",
@@ -9024,7 +9024,7 @@
       "file_type": "code",
       "norm_label": "getreviewquestioncandidates()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1758"
+      "source_location": "L1759"
     },
     {
       "id": "src_lib_database_recordrecallcheck",
@@ -9036,7 +9036,7 @@
       "file_type": "code",
       "norm_label": "recordrecallcheck()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1731"
+      "source_location": "L1732"
     },
     {
       "id": "src_lib_database_recordstudysession",
@@ -9048,7 +9048,7 @@
       "file_type": "code",
       "norm_label": "recordstudysession()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1592"
+      "source_location": "L1593"
     },
     {
       "id": "src_lib_database_savedailyreview",
@@ -9060,7 +9060,7 @@
       "file_type": "code",
       "norm_label": "savedailyreview()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1716"
+      "source_location": "L1717"
     },
     {
       "id": "src_lib_database_savetopicnotebook",
@@ -9072,7 +9072,7 @@
       "file_type": "code",
       "norm_label": "savetopicnotebook()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1918"
+      "source_location": "L1919"
     },
     {
       "id": "src_lib_database_skipdailyreview",
@@ -9084,7 +9084,7 @@
       "file_type": "code",
       "norm_label": "skipdailyreview()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1725"
+      "source_location": "L1726"
     },
     {
       "id": "src_tests_noemojiinui_test_iscomment",
@@ -9144,7 +9144,7 @@
       "file_type": "code",
       "norm_label": "curriculummanagermodal()",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L68"
+      "source_location": "L69"
     },
     {
       "id": "src_lib_syllabusimport_cleantitle",
@@ -11568,7 +11568,7 @@
       "file_type": "code",
       "norm_label": "questionweight()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1318"
+      "source_location": "L1319"
     },
     {
       "id": "src_lib_database_recordquestiondiagnosis",
@@ -11580,7 +11580,7 @@
       "file_type": "code",
       "norm_label": "recordquestiondiagnosis()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1376"
+      "source_location": "L1377"
     },
     {
       "id": "src_lib_database_sampleconfidenceatattempt",
@@ -11592,7 +11592,7 @@
       "file_type": "code",
       "norm_label": "sampleconfidenceatattempt()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1333"
+      "source_location": "L1334"
     },
     {
       "id": "src_lib_database_updateattemptdiagnosis",
@@ -11604,7 +11604,7 @@
       "file_type": "code",
       "norm_label": "updateattemptdiagnosis()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1348"
+      "source_location": "L1349"
     },
     {
       "id": "src_lib_database_weighteddelta",
@@ -11616,7 +11616,7 @@
       "file_type": "code",
       "norm_label": "weighteddelta()",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1327"
+      "source_location": "L1328"
     },
     {
       "id": "src_tests_database_test_bytesofv1database",
@@ -12108,7 +12108,7 @@
       "file_type": "code",
       "norm_label": "openreadertab()",
       "source_file": "e2e/bancada.spec.ts",
-      "source_location": "L211"
+      "source_location": "L212"
     },
     {
       "id": "e2e_bancada_spec_routinecolumn",
@@ -13236,7 +13236,7 @@
       "file_type": "code",
       "norm_label": "grouplabel()",
       "source_file": "src/features/questions/QuestionFilters.tsx",
-      "source_location": "L10"
+      "source_location": "L13"
     },
     {
       "id": "src_features_questions_questionfilters_questionfilters",
@@ -13248,7 +13248,7 @@
       "file_type": "code",
       "norm_label": "questionfilters()",
       "source_file": "src/features/questions/QuestionFilters.tsx",
-      "source_location": "L15"
+      "source_location": "L18"
     },
     {
       "id": "src_components_statussquare_statussquare",
@@ -26086,7 +26086,7 @@
       "file_type": "code",
       "norm_label": "test_pdf",
       "source_file": "e2e/bancada.spec.ts",
-      "source_location": "L209"
+      "source_location": "L210"
     },
     {
       "id": "docs_specs_07_edital_ciclo_e_situacao_10_depois_deste_projeto",
@@ -26399,7 +26399,7 @@
       "file_type": "code",
       "norm_label": "uncertain_item_weight",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1316"
+      "source_location": "L1317"
     },
     {
       "id": "src_tests_acervoautosync_test",
@@ -27422,7 +27422,7 @@
       "file_type": "code",
       "norm_label": "diagnosis_label",
       "source_file": "src/lib/answerLabels.ts",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "src_lib_answerlabels_diagnosis_tone",
@@ -27433,7 +27433,7 @@
       "file_type": "code",
       "norm_label": "diagnosis_tone",
       "source_file": "src/lib/answerLabels.ts",
-      "source_location": "L24"
+      "source_location": "L26"
     },
     {
       "id": "src_tests_answerflow_test",
@@ -35121,7 +35121,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L1533",
+      "source_location": "L1537",
       "weight": 1.0
     },
     {
@@ -35133,7 +35133,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L1545",
+      "source_location": "L1549",
       "weight": 1.0
     },
     {
@@ -35145,7 +35145,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L1549",
+      "source_location": "L1553",
       "weight": 1.0
     },
     {
@@ -35157,7 +35157,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L1556",
+      "source_location": "L1560",
       "weight": 1.0
     },
     {
@@ -35169,7 +35169,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/App.tsx",
-      "source_location": "L1560",
+      "source_location": "L1564",
       "weight": 1.0
     },
     {
@@ -36021,7 +36021,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L398",
+      "source_location": "L411",
       "weight": 1.0
     },
     {
@@ -36033,7 +36033,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L499",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -36045,7 +36045,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L765",
+      "source_location": "L778",
       "weight": 1.0
     },
     {
@@ -37989,7 +37989,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L45",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -38001,7 +38001,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L48",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -38013,7 +38013,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L61",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -38025,7 +38025,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L92",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -38037,7 +38037,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L92",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -38061,7 +38061,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/questions/QuestionFilters.tsx",
-      "source_location": "L47",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -42033,7 +42033,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1575",
+      "source_location": "L1576",
       "weight": 1.0
     },
     {
@@ -42045,7 +42045,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1585",
+      "source_location": "L1586",
       "weight": 1.0
     },
     {
@@ -42057,7 +42057,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1693",
+      "source_location": "L1694",
       "weight": 1.0
     },
     {
@@ -42069,7 +42069,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1694",
+      "source_location": "L1695",
       "weight": 1.0
     },
     {
@@ -42633,7 +42633,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2065",
+      "source_location": "L2066",
       "weight": 1.0
     },
     {
@@ -42645,7 +42645,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2066",
+      "source_location": "L2067",
       "weight": 1.0
     },
     {
@@ -42657,24 +42657,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2071",
+      "source_location": "L2072",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_getdailyplan",
       "target": "src_lib_database_queryone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L1669",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getdailyplan",
-      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42685,6 +42673,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_database_getdailyplan",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1671",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_database_getdailyreview",
       "target": "src_lib_database_queryone",
       "relation": "calls",
@@ -42693,7 +42693,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1702",
+      "source_location": "L1703",
       "weight": 1.0
     },
     {
@@ -42705,7 +42705,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1703",
+      "source_location": "L1704",
       "weight": 1.0
     },
     {
@@ -42765,7 +42765,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1950",
+      "source_location": "L1951",
       "weight": 1.0
     },
     {
@@ -42777,24 +42777,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1951",
+      "source_location": "L1952",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_getnotebookfortopic",
       "target": "src_lib_database_queryone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L1911",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getnotebookfortopic",
-      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42805,20 +42793,20 @@
       "weight": 1.0
     },
     {
-      "source": "src_lib_database_getnotebooksbyplan",
-      "target": "src_lib_database_queryall",
+      "source": "src_lib_database_getnotebookfortopic",
+      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2038",
+      "source_location": "L1913",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_getnotebooksbyplan",
-      "target": "src_lib_database_getdb",
+      "target": "src_lib_database_queryall",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42829,20 +42817,20 @@
       "weight": 1.0
     },
     {
-      "source": "src_lib_database_getpdfsourcefortopic",
-      "target": "src_lib_database_queryone",
+      "source": "src_lib_database_getnotebooksbyplan",
+      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1960",
+      "source_location": "L2040",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_getpdfsourcefortopic",
-      "target": "src_lib_database_getdb",
+      "target": "src_lib_database_queryone",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42853,6 +42841,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_database_getpdfsourcefortopic",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1962",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_database_getquestionlogs",
       "target": "src_lib_database_getdb",
       "relation": "calls",
@@ -42861,7 +42861,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1522",
+      "source_location": "L1523",
       "weight": 1.0
     },
     {
@@ -42873,7 +42873,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1522",
+      "source_location": "L1523",
       "weight": 1.0
     },
     {
@@ -42885,7 +42885,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1775",
+      "source_location": "L1776",
       "weight": 1.0
     },
     {
@@ -42897,7 +42897,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1776",
+      "source_location": "L1777",
       "weight": 1.0
     },
     {
@@ -42909,7 +42909,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1749",
+      "source_location": "L1750",
       "weight": 1.0
     },
     {
@@ -42921,24 +42921,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1749",
+      "source_location": "L1750",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_getrecentattempts",
       "target": "src_lib_database_queryall",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L2053",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_getrecentattempts",
-      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -42949,6 +42937,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_database_getrecentattempts",
+      "target": "src_lib_database_getdb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L2055",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_database_getreviewquestioncandidates",
       "target": "src_lib_database_queryall",
       "relation": "calls",
@@ -42957,7 +42957,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1761",
+      "source_location": "L1762",
       "weight": 1.0
     },
     {
@@ -42969,7 +42969,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1762",
+      "source_location": "L1763",
       "weight": 1.0
     },
     {
@@ -43005,7 +43005,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1647",
+      "source_location": "L1648",
       "weight": 1.0
     },
     {
@@ -43017,7 +43017,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1648",
+      "source_location": "L1649",
       "weight": 1.0
     },
     {
@@ -43029,7 +43029,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1656",
+      "source_location": "L1657",
       "weight": 1.0
     },
     {
@@ -43041,7 +43041,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1657",
+      "source_location": "L1658",
       "weight": 1.0
     },
     {
@@ -43053,7 +43053,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1796",
+      "source_location": "L1797",
       "weight": 1.0
     },
     {
@@ -43065,7 +43065,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1799",
+      "source_location": "L1800",
       "weight": 1.0
     },
     {
@@ -43077,7 +43077,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1809",
+      "source_location": "L1810",
       "weight": 1.0
     },
     {
@@ -43113,7 +43113,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1783",
+      "source_location": "L1784",
       "weight": 1.0
     },
     {
@@ -43125,7 +43125,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1784",
+      "source_location": "L1785",
       "weight": 1.0
     },
     {
@@ -43137,7 +43137,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2049",
+      "source_location": "L2050",
       "weight": 1.0
     },
     {
@@ -43149,7 +43149,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2049",
+      "source_location": "L2050",
       "weight": 1.0
     },
     {
@@ -43185,7 +43185,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1827",
+      "source_location": "L1828",
       "weight": 1.0
     },
     {
@@ -43197,7 +43197,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1829",
+      "source_location": "L1830",
       "weight": 1.0
     },
     {
@@ -43209,7 +43209,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1831",
+      "source_location": "L1832",
       "weight": 1.0
     },
     {
@@ -43221,7 +43221,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1846",
+      "source_location": "L1847",
       "weight": 1.0
     },
     {
@@ -43233,7 +43233,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1872",
+      "source_location": "L1873",
       "weight": 1.0
     },
     {
@@ -43689,7 +43689,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1319",
+      "source_location": "L1320",
       "weight": 1.0
     },
     {
@@ -43737,7 +43737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1396",
+      "source_location": "L1397",
       "weight": 1.0
     },
     {
@@ -43749,7 +43749,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1397",
+      "source_location": "L1398",
       "weight": 1.0
     },
     {
@@ -43761,24 +43761,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1398",
+      "source_location": "L1399",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_recordquestiondiagnosis",
       "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L1402",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_recordquestiondiagnosis",
-      "target": "src_lib_database_queryone",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43790,6 +43778,18 @@
     },
     {
       "source": "src_lib_database_recordquestiondiagnosis",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1404",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordquestiondiagnosis",
       "target": "src_lib_cycleengine_calculatesampleconfidencepercent",
       "relation": "calls",
       "_origin": "ast",
@@ -43797,7 +43797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1422",
+      "source_location": "L1423",
       "weight": 1.0
     },
     {
@@ -43809,7 +43809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1428",
+      "source_location": "L1429",
       "weight": 1.0
     },
     {
@@ -43821,7 +43821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1428",
+      "source_location": "L1429",
       "weight": 1.0
     },
     {
@@ -43833,7 +43833,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1428",
+      "source_location": "L1429",
       "weight": 1.0
     },
     {
@@ -43845,7 +43845,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1433",
+      "source_location": "L1434",
       "weight": 1.0
     },
     {
@@ -43857,7 +43857,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1457",
+      "source_location": "L1458",
       "weight": 1.0
     },
     {
@@ -43869,7 +43869,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1467",
+      "source_location": "L1468",
       "weight": 1.0
     },
     {
@@ -43881,24 +43881,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1495",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_recordquestionlog",
-      "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
       "source_location": "L1496",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_recordquestionlog",
-      "target": "src_lib_database_queryone",
+      "target": "src_lib_database_getdb",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43910,6 +43898,18 @@
     },
     {
       "source": "src_lib_database_recordquestionlog",
+      "target": "src_lib_database_queryone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1498",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordquestionlog",
       "target": "src_lib_questionlogs_blendmastery",
       "relation": "calls",
       "_origin": "ast",
@@ -43917,7 +43917,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1506",
+      "source_location": "L1507",
       "weight": 1.0
     },
     {
@@ -43929,7 +43929,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1508",
+      "source_location": "L1509",
       "weight": 1.0
     },
     {
@@ -43941,7 +43941,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1514",
+      "source_location": "L1515",
       "weight": 1.0
     },
     {
@@ -43953,24 +43953,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1516",
+      "source_location": "L1517",
       "weight": 1.0
     },
     {
       "source": "src_lib_database_recordrecallcheck",
       "target": "src_lib_database_getdb",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/lib/database.ts",
-      "source_location": "L1732",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_database_recordrecallcheck",
-      "target": "src_lib_ids_newid",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -43982,6 +43970,18 @@
     },
     {
       "source": "src_lib_database_recordrecallcheck",
+      "target": "src_lib_ids_newid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/database.ts",
+      "source_location": "L1734",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_database_recordrecallcheck",
       "target": "src_lib_database_flushdatabase",
       "relation": "calls",
       "_origin": "ast",
@@ -43989,7 +43989,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1743",
+      "source_location": "L1744",
       "weight": 1.0
     },
     {
@@ -44001,7 +44001,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1744",
+      "source_location": "L1745",
       "weight": 1.0
     },
     {
@@ -44013,7 +44013,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1600",
+      "source_location": "L1601",
       "weight": 1.0
     },
     {
@@ -44025,7 +44025,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1601",
+      "source_location": "L1602",
       "weight": 1.0
     },
     {
@@ -44037,7 +44037,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1622",
+      "source_location": "L1623",
       "weight": 1.0
     },
     {
@@ -44049,7 +44049,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1642",
+      "source_location": "L1643",
       "weight": 1.0
     },
     {
@@ -44397,7 +44397,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1335",
+      "source_location": "L1336",
       "weight": 1.0
     },
     {
@@ -44409,7 +44409,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1341",
+      "source_location": "L1342",
       "weight": 1.0
     },
     {
@@ -44421,7 +44421,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1886",
+      "source_location": "L1887",
       "weight": 1.0
     },
     {
@@ -44433,7 +44433,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1896",
+      "source_location": "L1897",
       "weight": 1.0
     },
     {
@@ -44445,7 +44445,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1904",
+      "source_location": "L1905",
       "weight": 1.0
     },
     {
@@ -44457,7 +44457,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1905",
+      "source_location": "L1906",
       "weight": 1.0
     },
     {
@@ -44469,7 +44469,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1684",
+      "source_location": "L1685",
       "weight": 1.0
     },
     {
@@ -44481,7 +44481,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1689",
+      "source_location": "L1690",
       "weight": 1.0
     },
     {
@@ -44493,7 +44493,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1717",
+      "source_location": "L1718",
       "weight": 1.0
     },
     {
@@ -44505,7 +44505,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1722",
+      "source_location": "L1723",
       "weight": 1.0
     },
     {
@@ -44517,7 +44517,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1986",
+      "source_location": "L1987",
       "weight": 1.0
     },
     {
@@ -44529,7 +44529,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1993",
+      "source_location": "L1994",
       "weight": 1.0
     },
     {
@@ -44541,7 +44541,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2023",
+      "source_location": "L2024",
       "weight": 1.0
     },
     {
@@ -44553,7 +44553,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L2027",
+      "source_location": "L2028",
       "weight": 1.0
     },
     {
@@ -44589,7 +44589,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1924",
+      "source_location": "L1925",
       "weight": 1.0
     },
     {
@@ -44601,7 +44601,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1925",
+      "source_location": "L1926",
       "weight": 1.0
     },
     {
@@ -44613,7 +44613,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1933",
+      "source_location": "L1934",
       "weight": 1.0
     },
     {
@@ -44625,7 +44625,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1934",
+      "source_location": "L1935",
       "weight": 1.0
     },
     {
@@ -44637,7 +44637,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1937",
+      "source_location": "L1938",
       "weight": 1.0
     },
     {
@@ -44757,7 +44757,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1726",
+      "source_location": "L1727",
       "weight": 1.0
     },
     {
@@ -44769,7 +44769,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1727",
+      "source_location": "L1728",
       "weight": 1.0
     },
     {
@@ -44805,7 +44805,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1532",
+      "source_location": "L1533",
       "weight": 1.0
     },
     {
@@ -44817,7 +44817,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1533",
+      "source_location": "L1534",
       "weight": 1.0
     },
     {
@@ -44829,7 +44829,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1563",
+      "source_location": "L1564",
       "weight": 1.0
     },
     {
@@ -44841,7 +44841,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1568",
+      "source_location": "L1569",
       "weight": 1.0
     },
     {
@@ -44853,7 +44853,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1349",
+      "source_location": "L1350",
       "weight": 1.0
     },
     {
@@ -44865,7 +44865,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1350",
+      "source_location": "L1351",
       "weight": 1.0
     },
     {
@@ -44877,7 +44877,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1353",
+      "source_location": "L1354",
       "weight": 1.0
     },
     {
@@ -44889,7 +44889,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1354",
+      "source_location": "L1355",
       "weight": 1.0
     },
     {
@@ -44901,7 +44901,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1354",
+      "source_location": "L1355",
       "weight": 1.0
     },
     {
@@ -44913,7 +44913,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1361",
+      "source_location": "L1362",
       "weight": 1.0
     },
     {
@@ -44925,7 +44925,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1365",
+      "source_location": "L1366",
       "weight": 1.0
     },
     {
@@ -44937,7 +44937,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1366",
+      "source_location": "L1367",
       "weight": 1.0
     },
     {
@@ -44949,7 +44949,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1367",
+      "source_location": "L1368",
       "weight": 1.0
     },
     {
@@ -44961,7 +44961,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1367",
+      "source_location": "L1368",
       "weight": 1.0
     },
     {
@@ -44973,7 +44973,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/database.ts",
-      "source_location": "L1371",
+      "source_location": "L1372",
       "weight": 1.0
     },
     {
@@ -60589,18 +60589,6 @@
     },
     {
       "source": "src_features_questions_questioncard",
-      "target": "src_features_answer_flow_confidencepicker_confidencepicker",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_questions_questioncard",
       "target": "src_components_metricexplainer_metricexplainer",
       "relation": "imports",
       "_origin": "ast",
@@ -60608,7 +60596,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L2",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -60620,7 +60608,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -60632,7 +60620,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L4",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -60644,7 +60632,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -60656,7 +60644,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -60668,7 +60656,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -60680,7 +60668,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -60692,7 +60680,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -60704,7 +60692,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -60716,12 +60704,24 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
       "source": "src_features_questions_questioncard",
       "target": "src_features_answer_flow_answeroptions_optionname",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/questions/QuestionCard.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_questions_questioncard",
+      "target": "src_features_answer_flow_confidencepicker_confidencepicker",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -77235,18 +77235,6 @@
     },
     {
       "source": "src_features_questions_questioncard",
-      "target": "src_features_answer_flow_confidencepicker",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_questions_questioncard",
       "target": "src_components_metricexplainer",
       "relation": "imports_from",
       "_origin": "ast",
@@ -77254,7 +77242,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L2",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -77266,7 +77254,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -77278,7 +77266,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L4",
+      "source_location": "L3",
       "type_only": true,
       "weight": 1.0
     },
@@ -77291,7 +77279,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "type_only": true,
       "weight": 1.0
     },
@@ -77304,7 +77292,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -77316,7 +77304,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -77328,13 +77316,25 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "type_only": true,
       "weight": 1.0
     },
     {
       "source": "src_features_questions_questioncard",
       "target": "src_features_answer_flow_answeroptions",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/features/questions/QuestionCard.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_questions_questioncard",
+      "target": "src_features_answer_flow_confidencepicker",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -91536,7 +91536,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "e2e/bancada.spec.ts",
-      "source_location": "L209",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -91547,7 +91547,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "e2e/bancada.spec.ts",
-      "source_location": "L211",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
@@ -92768,7 +92768,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L68",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -92779,7 +92779,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L870",
+      "source_location": "L883",
       "weight": 1.0
     },
     {
@@ -95364,7 +95364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -95375,7 +95375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/QuestionCard.tsx",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -95408,7 +95408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/QuestionFilters.tsx",
-      "source_location": "L10",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -95419,7 +95419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/QuestionFilters.tsx",
-      "source_location": "L15",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -98510,7 +98510,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/answerLabels.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -98521,7 +98521,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/answerLabels.ts",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -99577,7 +99577,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1316",
+      "source_location": "L1317",
       "weight": 1.0
     },
     {
@@ -99588,7 +99588,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1318",
+      "source_location": "L1319",
       "weight": 1.0
     },
     {
@@ -99599,7 +99599,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1327",
+      "source_location": "L1328",
       "weight": 1.0
     },
     {
@@ -99610,7 +99610,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1333",
+      "source_location": "L1334",
       "weight": 1.0
     },
     {
@@ -99621,7 +99621,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1348",
+      "source_location": "L1349",
       "weight": 1.0
     },
     {
@@ -99632,7 +99632,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1376",
+      "source_location": "L1377",
       "weight": 1.0
     },
     {
@@ -99665,7 +99665,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1488",
+      "source_location": "L1489",
       "weight": 1.0
     },
     {
@@ -99676,7 +99676,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1520",
+      "source_location": "L1521",
       "weight": 1.0
     },
     {
@@ -99698,7 +99698,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1531",
+      "source_location": "L1532",
       "weight": 1.0
     },
     {
@@ -99709,7 +99709,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1572",
+      "source_location": "L1573",
       "weight": 1.0
     },
     {
@@ -99731,7 +99731,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1592",
+      "source_location": "L1593",
       "weight": 1.0
     },
     {
@@ -99753,7 +99753,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1646",
+      "source_location": "L1647",
       "weight": 1.0
     },
     {
@@ -99764,7 +99764,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1655",
+      "source_location": "L1656",
       "weight": 1.0
     },
     {
@@ -99775,7 +99775,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1668",
+      "source_location": "L1669",
       "weight": 1.0
     },
     {
@@ -99786,7 +99786,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1683",
+      "source_location": "L1684",
       "weight": 1.0
     },
     {
@@ -99808,7 +99808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1692",
+      "source_location": "L1693",
       "weight": 1.0
     },
     {
@@ -99819,7 +99819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1701",
+      "source_location": "L1702",
       "weight": 1.0
     },
     {
@@ -99830,7 +99830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1716",
+      "source_location": "L1717",
       "weight": 1.0
     },
     {
@@ -99841,7 +99841,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1725",
+      "source_location": "L1726",
       "weight": 1.0
     },
     {
@@ -99852,7 +99852,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1731",
+      "source_location": "L1732",
       "weight": 1.0
     },
     {
@@ -99863,7 +99863,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1747",
+      "source_location": "L1748",
       "weight": 1.0
     },
     {
@@ -99874,7 +99874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1758",
+      "source_location": "L1759",
       "weight": 1.0
     },
     {
@@ -99885,7 +99885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1774",
+      "source_location": "L1775",
       "weight": 1.0
     },
     {
@@ -99896,7 +99896,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1782",
+      "source_location": "L1783",
       "weight": 1.0
     },
     {
@@ -99907,7 +99907,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1795",
+      "source_location": "L1796",
       "weight": 1.0
     },
     {
@@ -99929,7 +99929,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1823",
+      "source_location": "L1824",
       "weight": 1.0
     },
     {
@@ -99940,7 +99940,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1880",
+      "source_location": "L1881",
       "weight": 1.0
     },
     {
@@ -99951,7 +99951,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1910",
+      "source_location": "L1911",
       "weight": 1.0
     },
     {
@@ -99962,7 +99962,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1918",
+      "source_location": "L1919",
       "weight": 1.0
     },
     {
@@ -99984,7 +99984,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1949",
+      "source_location": "L1950",
       "weight": 1.0
     },
     {
@@ -99995,7 +99995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1959",
+      "source_location": "L1960",
       "weight": 1.0
     },
     {
@@ -100006,7 +100006,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L1975",
+      "source_location": "L1976",
       "weight": 1.0
     },
     {
@@ -100017,7 +100017,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L2037",
+      "source_location": "L2038",
       "weight": 1.0
     },
     {
@@ -100039,7 +100039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L2048",
+      "source_location": "L2049",
       "weight": 1.0
     },
     {
@@ -100050,7 +100050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L2052",
+      "source_location": "L2053",
       "weight": 1.0
     },
     {
@@ -100061,7 +100061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/database.ts",
-      "source_location": "L2060",
+      "source_location": "L2061",
       "weight": 1.0
     },
     {
@@ -112117,5 +112117,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d7dfbf03d0fb1be2898002029f0537abb48bc989"
+  "built_at_commit": "aee33987113a21c09be65473141e9d7b28d1b67b"
 }

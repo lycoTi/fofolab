@@ -7,12 +7,14 @@ import type { ReviewConfidence, SelfDiagnosisType } from '../types/database';
  */
 export const CONFIDENCE_LABEL: Record<ReviewConfidence, string> = {
   SURE: 'Sei',
+  RECENT: 'Vi há pouco',
   THINK: 'Acho que sei',
   GUESS: 'Vou chutar',
 };
 
 export const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
   MASTERED: 'Dominei',
+  STUDYING: 'Em fixação',
   DOUBT: 'Acertei na dúvida',
   LUCKY_GUESS: 'Acertei no chute',
   BASE_GAP: 'Não sabia',
@@ -23,6 +25,7 @@ export const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
 /** Cor do quadradinho ao lado de cada diagnóstico (no lugar dos antigos 🟢🟡🔴). */
 export const DIAGNOSIS_TONE: Record<SelfDiagnosisType, StatusTone> = {
   MASTERED: 'emerald',
+  STUDYING: 'emerald',
   DOUBT: 'amber',
   LUCKY_GUESS: 'amber',
   BASE_GAP: 'rose',

@@ -14,7 +14,7 @@ export type AnswerState =
 
 export function getAllowedDiagnoses(state: AnswerState): SelfDiagnosisType[] {
   if (state.kind === 'answered') {
-    return state.isCorrect ? ['MASTERED', 'DOUBT', 'LUCKY_GUESS'] : ['BASE_GAP', 'MISCONCEPTION', 'BOARD_TRAP'];
+    return state.isCorrect ? ['MASTERED', 'STUDYING', 'DOUBT', 'LUCKY_GUESS'] : ['BASE_GAP', 'MISCONCEPTION', 'BOARD_TRAP'];
   }
   if (state.kind === 'first-contact') return ['BASE_GAP'];
   return [];

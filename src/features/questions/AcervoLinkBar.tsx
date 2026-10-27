@@ -15,14 +15,18 @@ export function AcervoLinkBar(props: {
   if (links.length === 0 && excluded.length === 0 && !acervoMissing) return null;
 
   return (
-    <div className="space-y-2 border-b border-slate-800 pb-3 text-xs text-slate-400">
+    <div className="space-y-1.5 px-1 text-[11px] text-slate-400">
       {acervoMissing && (
         <p className="text-amber-200">O acervo da Cebraspe não está neste computador. Importe o pacote de novo em "Importar Questões".</p>
       )}
       {links.map((link) => (
-        <div key={link.assuntoId} className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span>Do acervo: {link.caminho.slice(1).join(' › ')}</span>
-          <button type="button" onClick={() => props.onDisableLink(link.assuntoId)} className="text-slate-500 underline-offset-2 hover:text-slate-200 hover:underline">
+        <div key={link.assuntoId} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+          <span className="truncate text-slate-400">Do acervo: {link.caminho.slice(1).join(' › ')}</span>
+          <button
+            type="button"
+            onClick={() => props.onDisableLink(link.assuntoId)}
+            className="text-slate-500 underline-offset-2 transition-colors hover:text-slate-200 hover:underline"
+          >
             Desligar este assunto
           </button>
         </div>
@@ -33,12 +37,12 @@ export function AcervoLinkBar(props: {
             type="button"
             aria-expanded={showExcluded}
             onClick={() => setShowExcluded((v) => !v)}
-            className="text-slate-500 underline-offset-2 hover:text-slate-200 hover:underline"
+            className="text-slate-500 underline-offset-2 transition-colors hover:text-slate-200 hover:underline"
           >
             Tirados deste tópico ({excluded.length})
           </button>
           {showExcluded && (
-            <ul className="mt-1.5 space-y-1">
+            <ul className="mt-1.5 space-y-1 pl-2">
               {excluded.map((item) => (
                 <li key={item.itemId} className="flex flex-wrap items-center gap-x-3">
                   <span>{item.sourceLabel}</span>

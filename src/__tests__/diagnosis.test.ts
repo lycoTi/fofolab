@@ -3,10 +3,12 @@ import { getAllowedDiagnoses, isDiagnosisAllowed, isFalseCertainty } from '../li
 import type { QuestionAttempt } from '../types/database';
 
 describe('Diagnóstico pela confiança (spec 11 §5.5)', () => {
-  it('acerto permite dominei, dúvida e chute; erro permite não sabia, confundi e pegadinha; 1º contato só lacuna', () => {
-    expect(getAllowedDiagnoses({ kind: 'answered', isCorrect: true })).toEqual(['MASTERED', 'DOUBT', 'LUCKY_GUESS']);
+  it('acerto permite dominei, em fixação, dúvida e chute; erro permite não sabia, confundi e pegadinha; 1º contato só lacuna', () => {
+    expect(getAllowedDiagnoses({ kind: 'answered', isCorrect: true })).toEqual(['MASTERED', 'STUDYING', 'DOUBT', 'LUCKY_GUESS']);
     expect(getAllowedDiagnoses({ kind: 'answered', isCorrect: false })).toEqual(['BASE_GAP', 'MISCONCEPTION', 'BOARD_TRAP']);
     expect(getAllowedDiagnoses({ kind: 'first-contact' })).toEqual(['BASE_GAP']);
+    expect(isDiagnosisAllowed({ answered: true, isCorrect: true }, 'STUDYING')).toBe(true);
+    expect(isDiagnosisAllowed({ answered: true, isCorrect: false }, 'STUDYING')).toBe(false);
     expect(isDiagnosisAllowed({ answered: true, isCorrect: false }, 'LUCKY_GUESS')).toBe(false);
     expect(isDiagnosisAllowed({ answered: true, isCorrect: true }, 'MISCONCEPTION')).toBe(false);
   });

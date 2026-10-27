@@ -388,7 +388,7 @@ export default function App() {
     const subjAlloc = cycleData.allocations.find((a) => a.subject.id === currentSubject.id);
     const topicHeat = cycleData.topicHeatmapRanking.find((h) => h.topic.id === currentTopic.id);
     const strongTopics = cycleData.topicHeatmapRanking
-      .filter((h) => h.topic.mastery_score >= 70)
+      .filter((h) => h.topic.mastery_score >= 75 && h.sampleConfidencePercent >= 55)
       .map((h) => `${h.topic.code} ${h.topic.title}`);
     const priorityWeakTopics = cycleData.topicHeatmapRanking.slice(0, 3).map((h) => `${h.topic.code} ${h.topic.title}`);
 
@@ -1516,6 +1516,10 @@ export default function App() {
         onImportEdital={() => {
           setCrudModalOpen(false);
           setEditalImportOpen(true);
+        }}
+        onImportQuestions={() => {
+          setCrudModalOpen(false);
+          setImportOpen(true);
         }}
         initialSection={crudInitialSection}
         plans={plans}

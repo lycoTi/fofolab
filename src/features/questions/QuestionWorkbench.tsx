@@ -200,7 +200,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       onComplexity={setComplexity}
       search={search}
       onSearch={setSearch}
-      onOpenImport={props.onOpenImport}
       position={{ index: safeIndex, total: filtered.length }}
       groupCode={props.acervo?.view.groupCode ?? null}
       onPrev={() => setIndex(Math.max(0, safeIndex - 1))}
@@ -284,7 +283,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
                 </button>
               </div>
             )}
-            {props.onOpenImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
           </div>
         )}
       </div>

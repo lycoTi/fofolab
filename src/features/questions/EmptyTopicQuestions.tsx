@@ -6,10 +6,10 @@ export function EmptyTopicQuestions(props: {
   groupCode: string | null;
   onShowGroup?: () => void;
   onShowSubject?: () => void;
-  canImport: boolean;
+  canImport?: boolean;
 }) {
   return (
-    <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+    <div className="space-y-3 rounded-xl border border-slate-800 bg-slate-900/60 p-8 text-center text-xs text-slate-400">
       <p className="text-sm text-slate-300">Ainda não há questões classificadas neste tópico.</p>
       {((props.groupCode && props.onShowGroup) || props.onShowSubject) && (
         <div className="flex flex-wrap items-center justify-center gap-2">
@@ -33,7 +33,6 @@ export function EmptyTopicQuestions(props: {
           )}
         </div>
       )}
-      {props.canImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
     </div>
   );
 }

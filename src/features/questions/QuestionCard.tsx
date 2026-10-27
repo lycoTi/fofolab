@@ -1,4 +1,3 @@
-import { Eye, Lightbulb, Star } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import { StatusSquare } from '../../components/StatusSquare';
 import type { QuestionAttemptSummary } from '../../lib/acervo/topicQuestions';
@@ -47,38 +46,40 @@ export function QuestionCard(props: {
   const origin = question.source_label ?? `${question.exam_board} (${question.exam_year})${question.organ ? ` • ${question.organ}` : ''}`;
   const badge = attemptSummary ? formatAttemptBadge(attemptSummary) : null;
   return (
-    <div className="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-      <div className="flex flex-wrap items-center gap-2 text-xs">
-        <span className="rounded-md border border-blue-500/30 bg-blue-500/15 px-2.5 py-1 font-semibold text-blue-300">{origin}</span>
-        <span className="flex items-center gap-1 rounded-md border border-slate-800 bg-slate-950 px-2.5 py-1 text-amber-300" title={complexity.summaryTip}>
-          <span className="flex items-center">
-            {Array.from({ length: complexity.stars }).map((_, i) => (
-              <Star key={i} size={11} className="fill-amber-400 text-amber-400" />
-            ))}
-          </span>
-          <span className="ml-1 text-[11px] text-slate-300">{complexity.levelLabel}</span>
+    <div className="space-y-4 rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 border-b border-slate-800/80 pb-3 text-xs">
+        <span className="font-mono text-[11px] font-medium text-slate-200">{origin}</span>
+        <span className="text-slate-700" aria-hidden="true">
+          ·
         </span>
-        <MetricExplainer explanation={explainQuestionComplexity(complexity, question.exam_board)} />
+        <span className="flex items-center gap-1 text-[11px] text-slate-400" title={complexity.summaryTip}>
+          <span>{complexity.levelLabel}</span>
+          <MetricExplainer explanation={explainQuestionComplexity(complexity, question.exam_board)} />
+        </span>
         {badge && (
-          <span className="flex items-center gap-1.5 text-slate-300">
+          <span className="flex items-center gap-1.5 text-[11px] text-slate-300">
             <StatusSquare tone={badge.tone} />
             {badge.label}
           </span>
         )}
         {question.acervo_uncertain === 1 && (
-          <span className="flex items-center gap-1.5 text-slate-300" title="Classificação ainda não confirmada: pesa metade no domínio.">
+          <span className="flex items-center gap-1.5 text-[11px] text-slate-300" title="Classificação ainda não confirmada: pesa metade no domínio.">
             <StatusSquare tone="amber" />
             Classificação incerta
           </span>
         )}
         {annulled && (
-          <span className="flex items-center gap-1.5 text-slate-300">
+          <span className="flex items-center gap-1.5 text-[11px] text-slate-300">
             <StatusSquare tone="slate" />
             Anulada pela banca
           </span>
         )}
         {props.onNotThisTopic && (
-          <button type="button" onClick={props.onNotThisTopic} className="ml-auto rounded-md px-2 py-1 text-slate-400 hover:text-slate-200">
+          <button
+            type="button"
+            onClick={props.onNotThisTopic}
+            className="ml-auto text-[11px] text-slate-400 transition-colors hover:text-slate-200"
+          >
             Não é deste tópico
           </button>
         )}
@@ -102,15 +103,21 @@ export function QuestionCard(props: {
       )}
 
       {!annulled && !props.locked && (
-        <div className="flex flex-wrap items-center gap-2 border-t border-slate-800 pt-3 text-xs">
+        <div className="flex flex-wrap items-center gap-2 border-t border-slate-800/80 pt-3 text-xs">
           {props.onHint && (
-            <button type="button" onClick={props.onHint} className="flex items-center gap-1.5 rounded-lg border border-orange-500/30 px-3 py-1.5 font-medium text-orange-200 hover:bg-orange-500/10">
-              <Lightbulb size={13} />
+            <button
+              type="button"
+              onClick={props.onHint}
+              className="rounded-lg border border-orange-500/30 px-3 py-1.5 font-medium text-orange-200 transition-colors hover:bg-orange-500/10"
+            >
               Pedir pista à FofoIA
             </button>
           )}
-          <button type="button" onClick={props.onFirstContact} className="flex items-center gap-1.5 rounded-lg border border-slate-700 px-3 py-1.5 text-slate-300 hover:text-white">
-            <Eye size={13} />
+          <button
+            type="button"
+            onClick={props.onFirstContact}
+            className="rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-1.5 text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
+          >
             Ver explicação antes de responder
           </button>
         </div>

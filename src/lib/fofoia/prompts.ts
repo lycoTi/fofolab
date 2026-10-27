@@ -25,13 +25,13 @@ const FOFO_RULES = `<regras>
 
 /** Aula e resumo partem do que foi conversado: o estudante pede depois de discutir uma questão, não para ouvir o tópico de novo. */
 const ABOUT_CONVERSATION =
-  'Assunto: se a conversa tiver uma questão ou dúvida específica do estudante, trate dela — o que ela cobra, os conceitos que a resolvem e, se houver alternativas, por que cada uma está certa ou errada —, ligada ao tópico do plano; sem conversa, trate do tópico.';
+  'Assunto: se a conversa tiver uma questão ou dúvida específica do estudante, trate exclusivamente dela — o que ela cobra, os conceitos que a resolvem e, se houver alternativas, por que cada uma está certa ou errada (não misture nem force relação com <topico_atual> ou <questao_ativa> se o estudante perguntou sobre outro assunto); sem conversa, trate do tópico.';
 
 const MODE_INSTRUCTIONS: Record<FofoMode, string> = {
   QUICK: `<jeito nome="Rápida">Resposta curta e direta, até ~120 palavras, com uma analogia ou exemplo prático. Termine com "Palavras-chave:" e no máximo 5 termos.</jeito>`,
   FROM_ZERO: `<jeito nome="Do zero">O estudante está começando ou se perdeu. Até ~250 palavras: só a ideia central, não o assunto inteiro. Comece com uma metáfora do cotidiano e com o porquê de aquilo importar. Linguagem simples. Se um dos &lt;pre_requisitos&gt; for necessário para entender, pergunte primeiro se ele quer vê-lo antes. Termine oferecendo um assunto relacionado ou perguntando se ficou claro.</jeito>`,
   LESSON: `<jeito nome="Aula completa">${ABOUT_CONVERSATION} Aula na ordem: 1) O essencial (2–3 linhas); 2) Explicação com exemplo concreto, ligado a um tópico que o estudante já domina quando possível; 3) Camadas — em Direito: letra da lei/normativo → jurisprudência dominante (STF/STJ/TCU) → como costuma ser cobrado; nas demais áreas: conceito → exemplo → como costuma ser cobrado; 4) Cuidados comuns em provas (se a questão ativa respondida tiver explicação guardada, use os padrões dela); 5) Uma ou duas perguntas para o estudante responder de cabeça. Comece pelo conceito básico. A aula vem sempre em partes, cada parte com até ~300 palavras (a aula inteira em 3 a 5 partes, até ~1.500 palavras). Escreva só uma parte por resposta: "Parte N de M" no topo e pare no fim dela, numa frase completa; o estudante pede a próxima.</jeito>`,
-  SUMMARY: `<jeito nome="Resumo">${ABOUT_CONVERSATION} Responda SOMENTE com estas 6 linhas, nada antes ou depois:
+  SUMMARY: `<jeito nome="Resumo">${ABOUT_CONVERSATION} Se já houver conversa em &lt;conversa_ate_aqui&gt;, resuma fielmente APENAS os conceitos explicados na conversa (ignore o nome do tópico entre parênteses no pedido se a conversa tratou de outro assunto). Responda SOMENTE com estas 6 linhas, nada antes ou depois:
 **‹emoji› ‹Título›**
 · **Palavras-chave:** até 5 termos separados por vírgula
 · **Conceito curto:** no máximo 2 frases

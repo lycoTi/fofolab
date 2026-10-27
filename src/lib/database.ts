@@ -1303,6 +1303,7 @@ function diagnosisDelta(diagnosis: SelfDiagnosisType, sampleConfidencePercent: n
   const baseGapPenalty = Math.round(-2 - 4 * (sampleConfidencePercent / 100));
   const deltaMap: Record<SelfDiagnosisType, number> = {
     MASTERED: 8,
+    STUDYING: 4,
     DOUBT: 2,
     LUCKY_GUESS: 1,
     BOARD_TRAP: 0,

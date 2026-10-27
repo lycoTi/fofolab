@@ -1,7 +1,7 @@
 import { CONFIDENCE_LABEL } from '../../lib/answerLabels';
 import type { ReviewConfidence } from '../../types/database';
 
-const ORDER: ReviewConfidence[] = ['SURE', 'THINK', 'GUESS'];
+const ORDER: ReviewConfidence[] = ['SURE', 'RECENT', 'THINK', 'GUESS'];
 
 export const chip = 'rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors duration-150';
 export const chipOn = 'border-orange-500 bg-orange-500/15 text-orange-100';

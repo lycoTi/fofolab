@@ -63,6 +63,7 @@ interface CurriculumManagerModalProps {
   onResetSeed: () => Promise<boolean>;
   /** Abre a importação do edital em PDF (cria um plano novo). */
   onImportEdital?: () => void;
+  onImportQuestions?: () => void;
 }
 
 export function CurriculumManagerModal({
@@ -92,6 +93,7 @@ export function CurriculumManagerModal({
   onRestoreBackup,
   onResetSeed,
   onImportEdital,
+  onImportQuestions,
 }: CurriculumManagerModalProps) {
   const [section, setSection] = useState<CurriculumSection>(initialSection);
 
@@ -198,6 +200,17 @@ export function CurriculumManagerModal({
               >
                 <FileUp size={13} />
                 Importar edital (PDF)
+              </button>
+            )}
+            {onImportQuestions && (
+              <button
+                type="button"
+                onClick={onImportQuestions}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-slate-200 flex items-center gap-1.5"
+                title="Importar questões coladas da prova ou pacote do acervo"
+              >
+                <FileUp size={13} className="text-orange-400" />
+                Importar Questões
               </button>
             )}
             <button
