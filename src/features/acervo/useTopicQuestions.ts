@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 import { openAcervo } from '../../lib/acervo/acervoStore';
-import { getQuestionsView, hasActiveLinks, scopeTopicIds, type QuestionScope, type QuestionsView } from '../../lib/acervo/topicQuestions';
+import {
+  countNonAnnulledQuestions,
+  getQuestionsView,
+  hasActiveLinks,
+  scopeTopicIds,
+  type QuestionScope,
+  type QuestionsView,
+} from '../../lib/acervo/topicQuestions';
 import type { Topic } from '../../types/database';
 
 const EMPTY: QuestionsView = { items: [], links: [], excluded: [], groupCode: null, acervoMissing: false };
@@ -48,7 +55,7 @@ export function useTopicQuestions(input: {
   return state;
 }
 
-/** Quantas questões o tópico do bloco tem (só as dele, sem recuo para o grupo — spec 12c §5.4). */
+/** Quantas questões o tópico do bloco tem (só as dele, sem recuo para o grupo e sem anuladas — spec 12c §5.4 / 12d §3.2). */
 export function useTopicQuestionCount(input: { ready: boolean; topic: Topic | null; version: number }): number {
   const view = useTopicQuestions({
     ready: input.ready && input.topic !== null,
@@ -58,5 +65,5 @@ export function useTopicQuestionCount(input: { ready: boolean; topic: Topic | nu
     scope: 'topic',
     version: input.version,
   });
-  return view.items.length;
+  return countNonAnnulledQuestions(view.items);
 }

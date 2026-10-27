@@ -193,4 +193,52 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     ctx.student.disableAcervoLink(ctx.b.id, 'x>licit');
     expect(ctx.view.hasActiveLinks(ids('group'))).toBe(false);
   });
+
+  it('resume as tentativas por tópico (inédita, precisa refazer por erro/chute, ou dominada) e conta só não anuladas para o bloco', async () => {
+    const ctx = await open();
+    const itemsBefore = viewOf(ctx, ctx.a.id).items;
+    expect(itemsBefore.every((i) => i.attemptSummary === null)).toBe(true);
+    // 4 itens no tópico A (1 própria + i1, i4 anulada, i2) -> 3 não anuladas
+    expect(ctx.view.countNonAnnulledQuestions(viewOf(ctx, ctx.a.id).items)).toBe(3);
+
+    const i1 = itemsBefore.find((i) => i.question.acervo_item_id === 'i1')!.question;
+    const i2 = itemsBefore.find((i) => i.question.acervo_item_id === 'i2')!.question;
+    ctx.student.materializeQuestion(i1);
+    ctx.student.materializeQuestion(i2);
+
+    // i1: respondeu errado no tópico A -> needsRetry = true
+    ctx.db.recordQuestionDiagnosis({
+      questionId: i1.id,
+      subjectId: ctx.subject.id,
+      topicId: ctx.a.id,
+      selectedOptionLetter: 'E',
+      isCorrect: false,
+      selfDiagnosis: 'BASE_GAP',
+      confidence: 'THINK',
+      timeSpentSeconds: 15,
+      usedAiReview: false,
+    });
+
+    // i2: acertou com certeza no tópico A -> needsRetry = false (mas no tópico B continua inédita!)
+    ctx.db.recordQuestionDiagnosis({
+      questionId: i2.id,
+      subjectId: ctx.subject.id,
+      topicId: ctx.a.id,
+      selectedOptionLetter: 'C',
+      isCorrect: true,
+      selfDiagnosis: 'MASTERED',
+      confidence: 'CERTAIN',
+      timeSpentSeconds: 10,
+      usedAiReview: false,
+    });
+
+    const vA = viewOf(ctx, ctx.a.id);
+    const sum1 = vA.items.find((i) => i.question.acervo_item_id === 'i1')!.attemptSummary;
+    const sum2 = vA.items.find((i) => i.question.acervo_item_id === 'i2')!.attemptSummary;
+    expect(sum1).toMatchObject({ count: 1, lastIsCorrect: false, lastDiagnosis: 'BASE_GAP', needsRetry: true });
+    expect(sum2).toMatchObject({ count: 1, lastIsCorrect: true, lastDiagnosis: 'MASTERED', needsRetry: false });
+
+    const vB = viewOf(ctx, ctx.b.id);
+    expect(vB.items.find((i) => i.question.acervo_item_id === 'i2')!.attemptSummary).toBeNull();
+  });
 });

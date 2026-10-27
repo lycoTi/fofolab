@@ -1,5 +1,5 @@
 import type { Database } from 'sql.js';
-import type { AiDissection, Question, Topic } from '../../types/database';
+import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType, Topic } from '../../types/database';
 import { getDb, queryAll, queryOne } from '../database';
 import { assuntoCaminhos, itemsByIds, itemsForAssuntos, type AcervoRow } from './acervoDb';
 import { openAcervo } from './acervoStore';
@@ -13,14 +13,29 @@ import {
 } from './studentAcervo';
 
 /**
- * Lista de questões da aba Questões (spec 12c §5.4): as próprias (importadas por texto/JSON) mais os itens do acervo
- * ligados aos tópicos do escopo. Substitui o recuo automático para o grupo e a matéria da 9b (decisão do dono): tópico
- * sem questões fica vazio, e o grupo só aparece quando o estudante pede ("Ver as do grupo").
+ * Lista de questões da aba Questões (spec 12c §5.4 e 12d §3.2): as próprias (importadas por texto/JSON) mais os itens do
+ * acervo ligados aos tópicos do escopo, com o resumo das tentativas já feitas naquele tópico.
  */
 export type QuestionScope = 'topic' | 'group' | 'subject' | 'all';
 
+export interface QuestionAttemptSummary {
+  count: number;
+  lastIsCorrect: boolean;
+  lastConfidence: ReviewConfidence | null;
+  lastDiagnosis: SelfDiagnosisType;
+  lastAttemptAt: string;
+  /** Última tentativa foi erro, chute ou 1º contato: entra no filtro "Errei ou chutei". */
+  needsRetry: boolean;
+}
+
+export interface QuestionsViewItem {
+  question: Question;
+  dissection: AiDissection | null;
+  attemptSummary: QuestionAttemptSummary | null;
+}
+
 export interface QuestionsView {
-  items: { question: Question; dissection: AiDissection | null }[];
+  items: QuestionsViewItem[];
   /** Ligações ativas do tópico, para a linha "Do acervo: …" (só no escopo do tópico). */
   links: { assuntoId: string; caminho: string[] }[];
   /** Itens tirados do tópico ("Não é deste tópico"), para devolver (só no escopo do tópico). */
@@ -157,7 +172,49 @@ function acervoQuestions(acervo: Database, topicIds: string[]): Question[] {
   });
 }
 
-function withDissections(questions: Question[]): QuestionsView['items'] {
+interface AttemptRow {
+  question_id: string;
+  topic_id: string | null;
+  is_correct: number;
+  confidence: ReviewConfidence | null;
+  self_diagnosis: SelfDiagnosisType;
+  attempted_at: string;
+}
+
+function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSummary> {
+  if (questions.length === 0) return new Map();
+  const ids = [...new Set(questions.map((q) => q.id))];
+  const rows = queryAll<AttemptRow>(
+    getDb(),
+    `SELECT question_id, topic_id, is_correct, confidence, self_diagnosis, attempted_at
+     FROM question_attempts
+     WHERE question_id IN (${placeholders(ids.length)})
+     ORDER BY attempted_at ASC, rowid ASC`,
+    ids
+  );
+  const byKey = new Map<string, QuestionAttemptSummary>();
+  for (const r of rows) {
+    const key = `${r.topic_id ?? ''}:${r.question_id}`;
+    const prev = byKey.get(key);
+    const lastIsCorrect = r.is_correct === 1;
+    const needsRetry =
+      !lastIsCorrect ||
+      r.confidence === 'GUESS' ||
+      r.self_diagnosis === 'FIRST_CONTACT' ||
+      r.self_diagnosis === 'GUESSED_RIGHT';
+    byKey.set(key, {
+      count: (prev?.count ?? 0) + 1,
+      lastIsCorrect,
+      lastConfidence: r.confidence,
+      lastDiagnosis: r.self_diagnosis,
+      lastAttemptAt: r.attempted_at,
+      needsRetry,
+    });
+  }
+  return byKey;
+}
+
+function withDissectionsAndAttempts(questions: Question[]): QuestionsView['items'] {
   const ids = questions.map((q) => q.id);
   const dissections = new Map(
     ids.length > 0
@@ -167,7 +224,17 @@ function withDissections(questions: Question[]): QuestionsView['items'] {
         ])
       : []
   );
-  return questions.map((question) => ({ question, dissection: dissections.get(question.id) ?? null }));
+  const summaries = summarizeAttempts(questions);
+  return questions.map((question) => ({
+    question,
+    dissection: dissections.get(question.id) ?? null,
+    attemptSummary: summaries.get(`${question.topic_id ?? ''}:${question.id}`) ?? null,
+  }));
+}
+
+/** Quantas questões não anuladas existem na lista (item anulado é só leitura e não entra na contagem do bloco). */
+export function countNonAnnulledQuestions(items: { question: Question }[]): number {
+  return items.filter((i) => i.question.is_annulled !== 1).length;
 }
 
 function groupCodeOf(topicId: string): string | null {
@@ -185,7 +252,7 @@ export function getQuestionsView(input: ScopeInput & { acervo: Database | null }
   const own = ownQuestions(input, topicIds);
   const fromAcervo = input.acervo ? acervoQuestions(input.acervo, topicIds) : [];
   const view: QuestionsView = {
-    items: withDissections([...own, ...fromAcervo]),
+    items: withDissectionsAndAttempts([...own, ...fromAcervo]),
     links: [],
     excluded: [],
     groupCode: groupCodeOf(input.topicId),
