@@ -1311,6 +1311,14 @@ function diagnosisDelta(diagnosis: SelfDiagnosisType, sampleConfidencePercent: n
   return deltaMap[diagnosis];
 }
 
+/** Item do acervo com classificação incerta pesa metade no domínio (spec 12c §5.6): talvez nem seja deste tópico. */
+export const UNCERTAIN_ITEM_WEIGHT = 0.5;
+
+function questionWeight(db: Database, questionId: string): number {
+  const row = queryOne<{ u: number | null }>(db, 'SELECT acervo_uncertain AS u FROM questions WHERE id = ?', [questionId]);
+  return row?.u === 1 ? UNCERTAIN_ITEM_WEIGHT : 1;
+}
+
 /** Confiança da amostra que valia quando a tentativa foi gravada (tentativas do tópico até ela, inclusive). */
 function sampleConfidenceAtAttempt(db: Database, attempt: QuestionAttempt, topic: Topic): number {
   const upToHere =
@@ -1345,9 +1353,10 @@ export function updateAttemptDiagnosis(attemptId: string, diagnosis: SelfDiagnos
   }
   // Desfaz o que foi aplicado de fato (perto de 0 ou 100 o delta foi cortado) e aplica o novo, cortado de novo
   const confidence = sampleConfidenceAtAttempt(db, attempt, topic);
-  const applied = attempt.mastery_delta ?? diagnosisDelta(attempt.self_diagnosis, confidence);
+  const weight = questionWeight(db, attempt.question_id);
+  const applied = attempt.mastery_delta ?? diagnosisDelta(attempt.self_diagnosis, confidence) * weight;
   const base = topic.mastery_score - applied;
-  const next = Math.max(0, Math.min(100, Math.round(base + diagnosisDelta(diagnosis, confidence))));
+  const next = Math.max(0, Math.min(100, Math.round(base + diagnosisDelta(diagnosis, confidence) * weight)));
   db.run('UPDATE question_attempts SET self_diagnosis = ?, mastery_delta = ? WHERE id = ?', [diagnosis, next - base, attemptId]);
   const updatedTopic = updateTopic({ id: topic.id, mastery_score: next });
   void flushDatabase();
@@ -1406,7 +1415,7 @@ export function recordQuestionDiagnosis(params: {
   );
   const isColdStartDiscovery = sampleConfidencePercent < 55;
 
-  const deltaMastery = diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent);
+  const deltaMastery = diagnosisDelta(params.selfDiagnosis, sampleConfidencePercent) * questionWeight(db, params.questionId);
   // O que de fato entra no domínio (cortado em 0..100): guardado para a troca de diagnóstico desfazer exatamente isso
   const nextMastery = topic ? Math.max(0, Math.min(100, Math.round(topic.mastery_score + deltaMastery))) : null;
   const appliedDelta = topic && nextMastery !== null ? nextMastery - topic.mastery_score : null;
@@ -1732,14 +1741,18 @@ export function getRecallChecks(sinceIso?: string): RecallCheck[] {
   return queryAll<RecallCheck>(getDb(), 'SELECT * FROM recall_checks ORDER BY checked_at');
 }
 
-/** Questões que podem entrar na revisão de cada tópico (sem anuladas), com a data da última tentativa. */
+/**
+ * Questões que podem entrar na revisão de cada tópico (sem anuladas e sem item do acervo tirado daquele tópico), com a
+ * data da última tentativa.
+ */
 export function getReviewQuestionCandidates(topicIds: string[]): Record<string, { questionId: string; lastAttemptAt: string | null }[]> {
   const result: Record<string, { questionId: string; lastAttemptAt: string | null }[]> = {};
   if (topicIds.length === 0) return result;
   const rows = queryAll<{ id: string; topic_id: string; last_at: string | null }>(
     getDb(),
     `SELECT q.id, q.topic_id, (SELECT MAX(a.attempted_at) FROM question_attempts a WHERE a.question_id = q.id) AS last_at
-     FROM questions q WHERE q.is_annulled = 0 AND q.topic_id IN (${topicIds.map(() => '?').join(', ')})`,
+     FROM questions q WHERE q.is_annulled = 0 AND q.topic_id IN (${topicIds.map(() => '?').join(', ')})
+       AND NOT EXISTS (SELECT 1 FROM acervo_exclusions e WHERE e.topic_id = q.topic_id AND e.acervo_item_id = q.acervo_item_id)`,
     topicIds
   );
   for (const row of rows) {
