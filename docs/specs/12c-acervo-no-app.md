@@ -1,7 +1,9 @@
 # Spec 12c — Acervo da Cebraspe no app
 
 > Parte da spec 12 (`12-minerador-cebraspe.md`, §6.5 e §7 item 3). Desenho de 26/10/2026, conversado com o dono.
-> Status: **aprovada pelo dono em 27/10/2026** (inclusive as decisões marcadas "decisão do Claude").
+> Status: **aprovada pelo dono em 27/10/2026** (inclusive as decisões marcadas "decisão do Claude"); **implementada em
+> 27/10/2026** (BACKLOG, 12c). Decisões do plano: cópia única **por matéria**; nos escopos amplos o item vai ao tópico
+> mais específico; desligar um assunto tira as cópias dele da Revisão do dia do tópico.
 
 ## 1. Intenção
 O minerador já produz `acervo/pacote/fofolab-acervo-cebraspe.json` (27.522 itens da Cebraspe; 619 com assunto

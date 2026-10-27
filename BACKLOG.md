@@ -6,7 +6,7 @@
 - **Objetivo imediato:** uso pessoal nos estudos da **CGU** e do **BACEN**; depois, compartilhar com família e amigos.
 - **Stack:** Tauri v2 + React 19 + TypeScript + Vite + Tailwind + Vitest + Playwright + sql.js (banco SQLite em memória, gravado em arquivo/IndexedDB).
 - **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
-- **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **Spec 12c aprovada** (`docs/specs/12c-acervo-no-app.md`): o acervo entra no app agora, antes do brainstorm da aba Questões. Próximo: plano e implementação da 12c.
+- **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app pela importação de questões, ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. Próximo: brainstorm da aba Questões.
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10), **FofoIA (11)** e Plano de estudo (13a/13b) — banco na migração **v11**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -294,8 +294,60 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   **26–27/10:** a DeepSeek (`deepseek-flash`) entrou na 1ª opinião, com teto de R$ 5 por dia (~200 itens por dia):
   **630 itens** classificados (420 Gemini + 210 DeepSeek), 82 incertos, vocabulário **v27**; `pacote` gerado em
   `acervo/pacote/` (fora do git; 619 itens com assunto, 548 seguros).
-  **Próximas (decisão do dono, 27/10):** 12c (app, spec `12c-acervo-no-app.md`; o app recebe pacotes novos enquanto a
-  12b continua) → brainstorm da aba Questões (filtros).
+  [DONE] **12c — acervo da Cebraspe no app** (27/10/2026, spec `12c-acervo-no-app.md`, plano
+  `docs/superpowers/plans/2026-10-27-12c-acervo-no-app.md`):
+  - **Importar:** opção "Acervo da Cebraspe (pacote do minerador)" na importação de questões.
+  - **Onde fica:** o pacote vira um banco à parte e só de leitura (IndexedDB próprio no navegador, `acervo.db` no
+    desktop), fora das cópias de segurança e aberto só quando um tópico com ligação aparece.
+  - **Cópia ao usar:** a questão entra no banco do estudante no primeiro uso que grava algo. Migração **v12**:
+    `acervo_links`, `acervo_exclusions` e colunas do acervo em `questions`, com uma cópia por matéria.
+  - **Ligação tópico ↔ assunto:**
+    - pelo nome: caminho inteiro, ou folha/sinônimo dentro da mesma matéria; nunca a raiz nem outra matéria;
+    - pelo que sobra, pela IA: até 15 candidatos locais, só ids da lista, confiança ≥ 0,7.
+  - **Na aba Questões:**
+    - tópico sem questões fica vazio, com "Ver as do grupo";
+    - "Desligar este assunto" e "Não é deste tópico";
+    - procedência no cartão;
+    - "Classificação incerta", que pesa metade no domínio;
+    - "Anulada pela banca", só para ler.
+  - **Reimportar:**
+    - atualiza gabarito, anulação e incerto sem tocar nas tentativas;
+    - faz cópia de segurança antes, e o gabarito trocado apaga a explicação guardada;
+    - recusa pacote mais antigo que o acervo do computador ou que o banco do estudante.
+
+  **Verificado:**
+  - unit (735), E2E 42 em duas rodadas (`e2e/acervo.spec.ts` com o edital real da CGU) e build;
+  - **pacote real (619 itens com assunto):**
+    - 273 de 275 tópicos da CGU ligados pelo nome, 75 com questões, 37 itens fora por figura ou fórmula;
+    - no Edge a importação leva 0,8 s (a tela fica parada no máximo 0,34 s), e as questões continuam depois do F5;
+  - **amostra conferida à mão:** a maioria certa; 2 duvidosas são erro da classificação (12b), não da ligação;
+  - **com o pacote todo classificado (simulado):** "Todo o plano" leva ~0,2 s e a importação 1,7 s no Node.
+
+  **Revisão independente (27/10), corrigida com teste:**
+  - nos escopos amplos o item caía no tópico pai, fora do calor e da revisão: agora vai à folha;
+  - a busca por assunto varria o acervo a cada tópico: agora usa o índice (~2,6 s → ~0,2 s);
+  - num PC sem acervo, um pacote mais antigo desfazia gabaritos: agora a versão das ligações também conta;
+  - questão desligada ou reclassificada continuava na Revisão do dia;
+  - o painel de importação travava em falha, e arquivo acima de 80 MB era lido inteiro;
+  - aparecia "não há questões" enquanto o acervo abria;
+  - gabarito fora das alternativas era aceito;
+  - metade de um erro ímpar arredondava para cima;
+  - o mesmo item ficava travado no segundo tópico;
+  - assunto desligado voltava pela IA via pai ou filho;
+  - duas importações podiam rodar ao mesmo tempo.
+
+  [A VERIFICAR] ligação pela IA com a IA real: só foi testada com IA simulada; no plano da CGU sobram 2 tópicos para ela.
+
+  **Ficou de fora (menor):**
+  - assunto inválido no pacote é descartado sem contar;
+  - correção de texto do minerador não chega à questão já usada (só gabarito, anulação e incerto);
+  - item anulado conta em "Questão N de M" e no bloco;
+  - o aviso de acervo ausente só aparece no escopo do tópico;
+  - o resumo não mostra quantos itens das matérias do plano não caem em tópico nenhum (19 de 109 no plano da CGU);
+  - Web Worker na importação, se o pacote todo classificado travar a tela.
+
+  **Próximas (decisão do dono, 27/10):** brainstorm da aba Questões (filtros); conferir a ligação pela IA com a chave
+  real.
   Depois: outras bancas (FGV…), radar de concursos (DOU/notícias), PDFs no Object Storage da Oracle se a banca apagar
   provas antigas.
 - **Épico — Guia / mapa de incidência** (spec `08`): depende do banco classificado. Tópico sem questão = baixa incidência
@@ -304,4 +356,4 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   ler a página salva com o app é processamento automatizado vedado pelo §18.8.1 dos Termos de Uso do TEC.
 - **Depois:** ferramentas do leitor (grifar, desenhar, atalho para o caderno, resumo ao fechar); tópicos relacionados entre matérias. (O formato por dias, preferido pela esposa do dono, entrou na 13a.)
 - **Leitura:** grifos em `highlights_json`; reabrir o último PDF sozinho no `.exe` (lá o caminho do arquivo é conhecido).
-- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~420 linhas) e `App.tsx` (~1440) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).
+- **Dívidas conhecidas:** `OnboardingWizardModal.tsx` (~420 linhas), `App.tsx` (~1470) e `QuestionImportModal.tsx` (~333) passam do teto de ~250 linhas; no mapa de calor, tópicos sem questões da mesma matéria empatam (a diferença aparece com dados de estudo/TEC); bundle ~515 kB; com 6 abas e os dois painéis abertos, os rótulos longos das abas quebram em 2 linhas (1440 px); histórico do copiloto não é salvo; acertar depois de ver a explicação ainda permite "Dominei" (fica registrado em `used_ai_review`).

@@ -5,6 +5,18 @@
 > preparar um PC novo: stack `~/.agents`, Impeccable, `npm install`).
 
 ## 0. Atualizações de 25 a 27/10/2026 (leia primeiro)
+- **27/10 (fim do dia): 12c pronta.** O acervo da Cebraspe entra no app pela tela de importação de questões, opção
+  "Acervo da Cebraspe (pacote do minerador)": escolher `acervo/pacote/fofolab-acervo-cebraspe.json`, que o comando
+  `npm run minerar -- pacote` gera e que fica fora do git.
+  - **Código:** `src/lib/acervo/` (pacote, banco do acervo, ligação, cópia ao usar, lista do tópico, importação),
+    `src/features/acervo/` e a aba Questões; banco na migração **v12**.
+  - **Detalhes e números:** no BACKLOG (12c).
+  - **Armadilha:** o acervo fica por computador (IndexedDB/`acervo.db`), mas o banco do estudante viaja na cópia de
+    segurança. No outro PC, importe o pacote de novo; um pacote mais antigo que as ligações do banco é recusado.
+  - **Armadilha no Vitest:** `beforeEach(() => mock.mockReset())` devolve o mock, e o Vitest o chama como limpeza.
+    Use chaves.
+  - **Próximo:** brainstorm da aba Questões (filtros: formato, não resolvidas, já errei, banca/ano) e conferir a
+    ligação pela IA com a chave real (no plano da CGU sobram 2 tópicos para ela).
 - **27/10:** **spec 12c aprovada** (`docs/specs/12c-acervo-no-app.md`): acervo da Cebraspe no app, num banco à parte e só
   leitura; a questão entra no banco do estudante no primeiro uso. Vem **antes** do brainstorm da aba Questões (o dono quer
   usar as questões já). Próximo: plano (`writing-plans`) e TDD. 12b segue: 630 itens classificados, vocabulário v27, a
