@@ -190,7 +190,8 @@ A prova é em 13/12/2026: a primeira entrega útil precisa chegar cedo.
 2. **12b — Assuntos canônicos:** semente pelo edital da CGU, classificação com IA (JSON validado, confiança), vigilância do
    vocabulário com versão, pacote para o app.
 3. **12c — App:** migração (itens com procedência, assuntos, ligações tópico↔assunto, versão do vocabulário), importação
-   do pacote, ligação por plano com IA, visão do plano, selinho e "não é deste assunto".
+   do pacote, ligação por plano com IA, visão do plano, selinho, "Desligar este assunto" e "Não é deste tópico"
+   (desenho em `12c-acervo-no-app.md`).
 4. **Depois:** brainstorm da aba Questões (filtros por procedência, ano, cargo, formato, dúvida) antes de mexer na tela.
 
 ## 8. Testes mínimos
