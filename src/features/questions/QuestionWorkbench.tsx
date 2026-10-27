@@ -227,7 +227,12 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           </p>
         )}
         {emptyTopic && !props.loading && (
-          <EmptyTopicQuestions groupCode={acervo?.view.groupCode ?? null} onShowGroup={acervo?.onShowGroup} canImport={Boolean(props.onOpenImport)} />
+          <EmptyTopicQuestions
+            groupCode={acervo?.view.groupCode ?? null}
+            onShowGroup={acervo?.onShowGroup}
+            onShowSubject={() => props.onChangeScopeFilter('subject')}
+            canImport={Boolean(props.onOpenImport)}
+          />
         )}
         {!emptyTopic && allSolvedInTopic && (
           <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
@@ -259,15 +264,26 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
                   onClick={acervo.onShowGroup}
                   className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
                 >
-                  {`Ver as do grupo ${acervo.view.groupCode}`}
+                  {`Ver do tópico ${acervo.view.groupCode}`}
                 </button>
               )}
             </div>
           </div>
         )}
         {!emptyTopic && !allSolvedInTopic && (
-          <div className="space-y-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+          <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
             <p>Nenhuma questão encontrada para o filtro selecionado. Experimente "Toda a matéria" ou "Todo o plano".</p>
+            {props.scopeFilter === 'group' && (
+              <div>
+                <button
+                  type="button"
+                  onClick={() => props.onChangeScopeFilter('subject')}
+                  className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+                >
+                  Ver toda a matéria
+                </button>
+              </div>
+            )}
             {props.onOpenImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
           </div>
         )}

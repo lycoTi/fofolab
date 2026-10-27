@@ -30,7 +30,7 @@ export function FofoDoroPreview({ controller, targetMinutes }: { controller: Stu
   const [showSettings, setShowSettings] = useState(false);
   const { state } = controller;
   return (
-    <div className="space-y-2 rounded-lg border border-slate-800 bg-slate-950/40 p-2.5 text-xs">
+    <div className="space-y-2 border-t border-slate-800/80 pt-2.5 text-xs">
       <p className="text-slate-200">{describePlan(state, targetMinutes)}</p>
       <div className="flex items-center justify-between gap-2">
         <BlockModePicker state={state} onChange={controller.setMode} compact />

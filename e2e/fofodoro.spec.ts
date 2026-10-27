@@ -28,11 +28,11 @@ test('FofoDoro: prévia, pausa curta com aviso, espera o estudante e pausa longa
   await page.clock.install();
   await openApp(page);
 
-  // Antes do play: pomodoros de 20 e pausa longa a cada 2, pelos ajustes; a prévia mostra o plano
-  await column(page).getByRole('radio', { name: '00:20' }).click();
+  // Antes do play: pomodoros de 25 e pausa longa a cada 2, pelos ajustes; a prévia mostra o plano
+  await column(page).getByRole('radio', { name: '00:25' }).click();
   await column(page).getByRole('button', { name: 'Ajustes do FofoDoro' }).click();
   await column(page).getByLabel('Pausa longa a cada').selectOption('2');
-  await expect(column(page).getByText(/pomodoros de 20 min \+ .*pausas? de 5 min \+ .*pausas? longas? de 20 min →/)).toBeVisible();
+  await expect(column(page).getByText(/pomodoros de 25 min \+ .*pausas? de 5 min \+ .*pausas? longas? de 20 min →/)).toBeVisible();
 
   await column(page).getByRole('button', { name: 'Iniciar bloco' }).click();
   const fofodoro = column(page).getByRole('group', { name: 'FofoDoro' });
@@ -40,8 +40,8 @@ test('FofoDoro: prévia, pausa curta com aviso, espera o estudante e pausa longa
   await page.screenshot({ path: `${SCREENS}/14-fofodoro-foco.png` });
 
   // Fim do 1º foco: aviso acolhedor e pausa curta
-  await advance(page, 20 * MIN);
-  await expect(toast(page)).toContainText('Parabéns: 20 minutos de foco! Que tal 5 minutos de pausa?');
+  await advance(page, 25 * MIN);
+  await expect(toast(page)).toContainText('Parabéns: 25 minutos de foco! Que tal 5 minutos de pausa?');
   // Na pausa, o Fofo do aviso dorme
   await expect(toast(page).locator('svg[data-pose="dormindo"]')).toHaveCount(1);
   await expect(fofodoro.getByRole('img', { name: /^Pausa:/ })).toBeVisible();
@@ -55,7 +55,7 @@ test('FofoDoro: prévia, pausa curta com aviso, espera o estudante e pausa longa
 
   // 2º pomodoro fecha o ciclo: pausa longa, com o aviso
   await fofodoro.getByRole('button', { name: 'Começar o próximo pomodoro' }).click();
-  await advance(page, 20 * MIN);
+  await advance(page, 25 * MIN);
   await expect(toast(page)).toContainText('2 pomodoros seguidos! Pausa longa de 20 minutos — você mereceu.');
   await expect(fofodoro.getByRole('img', { name: /^Pausa longa:/ })).toBeVisible();
 

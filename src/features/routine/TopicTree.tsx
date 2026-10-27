@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Eye } from 'lucide-react';
 import type { TopicGroup } from '../../lib/dailyRoutine';
 import type { Topic } from '../../types/database';
 
@@ -11,10 +10,9 @@ function label(topic: Topic): string {
 }
 
 /**
- * Árvore do grupo do bloco: o tópico "pai" é o título do bloco (fora daqui) e os tópicos dele, inclusive o do
- * bloco, ficam recuados no mesmo nível. O contorno do selecionado é por dentro (ring-inset): a animação de
- * altura esconde o que passa da caixa, e um contorno por fora apareceria cortado. O do bloco tem um ponto laranja; o selecionado ganha fundo, contorno e o olhinho — nunca fonte
- * ou recuo maiores, que fariam o texto em volta pular. Os itens extras abrem com a altura animada.
+ * Árvore de subtópicos subordinada ao tópico-pai do bloco.
+ * O contorno do selecionado é por dentro (ring-inset) para não ser cortado pela animação de altura.
+ * O subtópico do bloco tem o ponto laranja; o selecionado ganha contraste tipográfico e fundo discreto, sem ícones decorativos.
  */
 export function TopicTree({
   group,
@@ -54,7 +52,9 @@ export function TopicTree({
                   aria-current={selected ? 'true' : undefined}
                   aria-label={isBlock ? `${label(topic)} (tópico do bloco)` : label(topic)}
                   className={`flex w-full items-start gap-1.5 rounded-md px-1.5 py-1 text-left ring-1 ring-inset transition-colors duration-150 ${
-                    selected ? 'bg-slate-800 text-slate-100 ring-orange-400/60' : 'text-slate-400 ring-transparent hover:bg-slate-800/50 hover:text-slate-200'
+                    selected
+                      ? 'bg-slate-800/80 font-medium text-slate-100 ring-slate-700'
+                      : 'text-slate-400 ring-transparent hover:bg-slate-800/40 hover:text-slate-200'
                   }`}
                 >
                   <span
@@ -62,7 +62,6 @@ export function TopicTree({
                     title={isBlock ? 'Tópico do bloco' : undefined}
                   />
                   <span className="flex-1">{label(topic)}</span>
-                  {selected && <Eye size={12} className="mt-0.5 shrink-0 text-orange-300" aria-hidden="true" />}
                 </button>
               </div>
             </li>

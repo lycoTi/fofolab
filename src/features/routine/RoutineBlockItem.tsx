@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Check, ChevronDown, Play } from 'lucide-react';
 import { Collapse } from '../../components/Collapse';
 import { formatDuration } from '../../lib/timeFormat';
@@ -97,12 +97,21 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
   );
 }
 
-/** Conteúdo do bloco atual: progresso, tópicos, material, FofoDoro e o botão de começar. */
+/** Conteúdo do bloco atual: progresso, tópico-pai recolhível, subtópico ativo, material, FofoDoro e o botão de começar. */
 function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic | null; current: CurrentBlockExtras }) {
   const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial, fofodoro, preview } = current;
-  // Com grupo, o título é o tópico "pai" e o do bloco aparece só na árvore (senão pareceria pai de si mesmo)
   const hasTree = group.members.length > 1;
+  const [treeOpen, setTreeOpen] = useState(false);
+  const hasFofodoro = Boolean(fofodoro);
+
+  useEffect(() => {
+    if (hasFofodoro) setTreeOpen(false);
+  }, [hasFofodoro]);
+
   const progressPercent = Math.min(100, Math.round(((item.studiedMinutes + liveFocusMs / 60_000) / item.block.durationMinutes) * 100));
+  const focusedTopic = (hasTree ? group.members.find((m) => m.id === selectedTopicId) : null) ?? topic;
+  const parentTitle = group.parent ? topicLabel(group.parent) : 'Subtópicos do assunto';
+
   return (
     <div className="space-y-2.5 pt-2.5">
       <div
@@ -115,12 +124,49 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
       >
         <div className="h-full rounded-full bg-orange-500 transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progressPercent}%` }} />
       </div>
-      {hasTree && group.parent && (
-        <h3 className="text-sm font-medium leading-snug text-slate-100">
-          {group.parent.code && <span className="font-mono text-orange-300">{group.parent.code}</span>}
-          {group.parent.code && ' '}
-          <span>{group.parent.title}</span>
-        </h3>
+      {hasTree && (
+        <div className="space-y-1.5">
+          <h3 className="text-xs font-medium leading-snug text-slate-300">
+            <button
+              type="button"
+              onClick={() => setTreeOpen((v) => !v)}
+              aria-expanded={treeOpen}
+              aria-label={`Subtópicos de ${parentTitle}`}
+              className="flex w-full items-center gap-1.5 rounded-md py-0.5 text-left transition-colors duration-150 hover:text-white"
+            >
+              {group.parent?.code && <span className="font-mono text-orange-300">{group.parent.code}</span>}
+              <span className="flex-1 truncate">{group.parent?.title ?? parentTitle}</span>
+              <span className="shrink-0 font-normal text-[11px] text-slate-400">{`${group.members.length} subtópicos`}</span>
+              <ChevronDown
+                size={13}
+                className={`shrink-0 text-slate-400 transition-transform duration-200 motion-reduce:transition-none ${treeOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+          </h3>
+          <Collapse open={!treeOpen}>
+            {!treeOpen && focusedTopic && (
+              <button
+                type="button"
+                onClick={() => topic && onSelectTopic(topic.subject_id, topic.id)}
+                aria-label={
+                  focusedTopic.id === topic?.id
+                    ? `${topicLabel(focusedTopic)} (tópico do bloco)`
+                    : `Voltar ao tópico do bloco: ${topicLabel(topic)}`
+                }
+                className="flex w-full items-start gap-1.5 rounded-md border-l border-slate-700/80 pl-2 py-0.5 text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
+              >
+                <span
+                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${focusedTopic.id === topic?.id ? 'bg-orange-400' : 'bg-slate-500'}`}
+                  title={focusedTopic.id === topic?.id ? 'Tópico do bloco' : undefined}
+                />
+                <span className="flex-1">{topicLabel(focusedTopic)}</span>
+              </button>
+            )}
+          </Collapse>
+          <Collapse open={treeOpen}>
+            {treeOpen && <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />}
+          </Collapse>
+        </div>
       )}
       {!hasTree && topic && (
         <button
@@ -132,11 +178,6 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           {topic.code && <span className="mr-1 font-mono text-orange-300">{topic.code}</span>}
           <span>{topic.title}</span>
         </button>
-      )}
-      {hasTree && (
-        <BlockTopics collapsible={Boolean(fofodoro)} label={topicLabel(topic)}>
-          <TopicTree group={group} blockTopicId={topic?.id ?? null} selectedTopicId={selectedTopicId} onSelect={onSelectTopic} />
-        </BlockTopics>
       )}
       <div className="flex flex-wrap gap-1.5">
         <button type="button" className={materialButton} onClick={() => onOpenMaterial('pdf')}>
@@ -150,7 +191,7 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
         </button>
       </div>
       {/* Relógio e prévia trocam de lugar: quem entra espera quem sai, para não se sobreporem */}
-      <Collapse open={Boolean(fofodoro)} afterExit>
+      <Collapse open={hasFofodoro} afterExit>
         {fofodoro}
       </Collapse>
       <Collapse open={!blockRunning} afterExit>
@@ -166,31 +207,6 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           </button>
         </div>
       </Collapse>
-    </div>
-  );
-}
-
-/**
- * Com o FofoDoro rodando, a árvore de tópicos se recolhe numa linha (o relógio ganha o espaço); clicar abre de novo.
- * Sem FofoDoro, a árvore fica sempre aberta. A troca anima nos dois sentidos (dar play recolhe a árvore devagar).
- */
-function BlockTopics({ collapsible, label, children }: { collapsible: boolean; label: string; children: ReactNode }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div>
-      <Collapse open={collapsible}>
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={`Tópicos do bloco: ${label}`}
-          className="mb-1.5 flex w-full items-center gap-1 rounded-md text-left text-slate-300 transition-colors duration-150 hover:text-white"
-        >
-          <span className="truncate">{label}</span>
-          <ChevronDown size={13} className={`shrink-0 transition-transform duration-200 motion-reduce:transition-none ${open ? 'rotate-180' : ''}`} />
-        </button>
-      </Collapse>
-      <Collapse open={!collapsible || open}>{children}</Collapse>
     </div>
   );
 }

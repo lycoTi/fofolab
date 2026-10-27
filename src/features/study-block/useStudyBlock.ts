@@ -43,7 +43,7 @@ export function loadPomodoroPrefs(): PomodoroPrefs {
     const s = raw.settings ?? DEFAULT_POMODORO_SETTINGS;
     return {
       mode: raw.mode === 'LIVRE' ? 'LIVRE' : 'POMODORO',
-      focusMinutes: clamp(raw.focusMinutes, 10, 90, fallback.focusMinutes),
+      focusMinutes: clamp(raw.focusMinutes === 20 ? 25 : raw.focusMinutes, 10, 90, fallback.focusMinutes),
       settings: {
         shortBreakMinutes: s.shortBreakMinutes == null ? null : clamp(s.shortBreakMinutes, 3, 15, 5),
         longBreakMinutes: clamp(s.longBreakMinutes, 10, 30, DEFAULT_POMODORO_SETTINGS.longBreakMinutes),

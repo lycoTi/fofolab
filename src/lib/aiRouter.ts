@@ -359,13 +359,19 @@ export async function callAiProviders(
 
   const attempts: { provider: AiProviderUsed; call: () => Promise<ProviderOutcome> }[] = [];
   const gatewayUrl = readEnv('VITE_FOFOLAB_AI_GATEWAY_URL');
-  if (gatewayUrl) attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
+  const isLocalAgyBridge = gatewayUrl === '/__ai/agy';
+  if (gatewayUrl && !isLocalAgyBridge) {
+    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
+  }
   const groqKey = readEnv('VITE_GROQ_API_KEY');
   if (groqKey) attempts.push({ provider: 'GROQ_FREE', call: () => callGroq(groqKey, prompt, json, strong, maxTokens) });
   const geminiKey = readEnv('VITE_GEMINI_API_KEY');
   if (geminiKey) attempts.push({ provider: 'GEMINI_FREE', call: () => callGemini(geminiKey, prompt, json, strong) });
   const deepseekKey = readEnv('VITE_DEEPSEEK_API_KEY');
   if (deepseekKey) attempts.push({ provider: 'DEEPSEEK_FALLBACK', call: () => callDeepSeek(deepseekKey, prompt, json, maxTokens) });
+  if (gatewayUrl && isLocalAgyBridge) {
+    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
+  }
 
   let retryAfterSec: number | null = null;
   for (const attempt of attempts) {

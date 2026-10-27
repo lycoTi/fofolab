@@ -129,11 +129,11 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     });
   });
 
-  it('tópico sem questões fica vazio, com o código do grupo; nada de outro tópico aparece sozinho', async () => {
+  it('tópico sem questões fica vazio, com o código e título do tópico-pai; nada de outro tópico aparece sozinho', async () => {
     const ctx = await open();
     const v = viewOf(ctx, ctx.c.id);
     expect(v.items).toEqual([]);
-    expect(v.groupCode).toBe('1');
+    expect(v.groupCode).toBe('1 · Atos e licitações');
     expect(viewOf(ctx, ctx.d.id).groupCode).toBeNull();
   });
 

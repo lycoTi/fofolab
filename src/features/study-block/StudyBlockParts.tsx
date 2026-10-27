@@ -1,7 +1,7 @@
 import { formatDuration } from '../../lib/timeFormat';
 import { FOCUS_OPTIONS, type BlockMode, type BlockState } from './studyBlockMachine';
 
-/** Escolha do jeito de estudar o bloco: pomodoros de 20, 30 ou 50 min, ou relógio livre. */
+/** Escolha do jeito de estudar o bloco: pomodoros de 25, 30 ou 50 min, ou relógio livre. */
 export function BlockModePicker({
   state,
   onChange,

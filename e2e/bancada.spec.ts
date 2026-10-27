@@ -355,7 +355,10 @@ test('edital real em PDF vira o plano: cargo, prévia, autoavaliação e Meu Dia
   const firstBlock = routineColumn(page).getByText('Arquitetura e Integração de Sistemas').first();
   await expect(firstBlock).toBeVisible();
 
-  // Árvore do grupo: sem bloco rodando, abrir um tópico irmão é navegar à vontade (sem faixa de olhada)
+  // Árvore do grupo: sem bloco rodando, o tópico-pai abre os subtópicos e navegar num irmão é livre (sem faixa de olhada)
+  const parentAccordion = routineColumn(page).getByRole('button', { name: /^Subtópicos de / });
+  await expect(parentAccordion).toBeVisible();
+  await parentAccordion.click();
   const blockTopic = routineColumn(page).getByRole('button', { name: /\(tópico do bloco\)$/ });
   await expect(blockTopic).toBeVisible();
   const tree = routineColumn(page).getByRole('list', { name: 'Tópicos do grupo' });

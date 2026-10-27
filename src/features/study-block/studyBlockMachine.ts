@@ -10,7 +10,7 @@
 import { formatDuration } from '../../lib/timeFormat';
 
 export type BlockMode = 'POMODORO' | 'LIVRE';
-export const FOCUS_OPTIONS = [20, 25, 30, 50] as const;
+export const FOCUS_OPTIONS = [25, 30, 50] as const;
 const MINUTE_MS = 60_000;
 
 /** Ajustes do FofoDoro (spec 10 §3.2). shortBreakMinutes null = automática pelo tamanho do foco. */

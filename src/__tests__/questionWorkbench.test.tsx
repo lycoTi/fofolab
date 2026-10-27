@@ -169,7 +169,7 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     const acervo = acervoProps({ groupCode: '2.3' });
     renderWorkbench({ questions: [], scopeFilter: 'topic', acervo });
     expect(screen.getByText('Ainda não há questões classificadas neste tópico.')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Ver as do grupo 2.3' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Ver do tópico 2.3' }));
     expect(acervo.onShowGroup).toHaveBeenCalledTimes(1);
   });
 
@@ -182,13 +182,13 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
   it('tópico vazio sem grupo: sem o botão do grupo', () => {
     renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps() });
     expect(screen.getByText('Ainda não há questões classificadas neste tópico.')).toBeTruthy();
-    expect(screen.queryByRole('button', { name: /Ver as do grupo/ })).toBeNull();
+    expect(screen.queryByRole('button', { name: /Ver do tópico/ })).toBeNull();
   });
 
   it('o filtro mostra o grupo quando o tópico tem um, com os nomes novos do escopo', () => {
     renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps({ groupCode: '2.3' }) });
     const options = [...(screen.getByLabelText('Escopo das questões') as HTMLSelectElement).options].map((o) => o.textContent);
-    expect(options).toEqual(['Deste tópico', 'Do grupo 2.3', 'Toda a matéria', 'Todo o plano']);
+    expect(options).toEqual(['Deste tópico', 'Tópico 2.3', 'Toda a matéria', 'Todo o plano']);
   });
 
   it('item do acervo mostra a procedência e, se incerto, o selo', () => {

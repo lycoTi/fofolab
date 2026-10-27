@@ -67,10 +67,10 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   await expect(position(page)).toHaveText('Questão 1 de 2');
   await page.screenshot({ path: `${SCREENS}/20-acervo-respondido.png`, fullPage: true });
 
-  // 3. Tópico C: vazio, e "Ver as do grupo" traz as inéditas de A e B (2 inéditas; 3 em Todas)
+  // 3. Tópico C: vazio, e "Ver do tópico 1 · Arquiteturas de aplicações" traz as inéditas de A e B (2 inéditas; 3 em Todas)
   await openTopicQuestions(page, TOPIC_C);
   await expect(main).toContainText('Ainda não há questões classificadas neste tópico.');
-  await main.getByRole('button', { name: 'Ver as do grupo 1' }).click();
+  await main.getByRole('button', { name: 'Ver do tópico 1 · Arquiteturas de aplicações' }).click();
   await expect(position(page)).toHaveText('Questão 1 de 2');
   await main.getByLabel('Filtrar por situação').selectOption('ALL');
   await expect(position(page)).toHaveText('Questão 1 de 3');

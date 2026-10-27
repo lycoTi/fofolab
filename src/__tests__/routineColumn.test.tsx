@@ -56,7 +56,7 @@ describe('coluna do roteiro de hoje', () => {
     render(<RoutineColumn {...props()} />);
     expect(screen.getByText('Hoje · 02:50')).toBeTruthy();
     expect(screen.getByText('2.2.1 OWASP Top 10')).toBeTruthy();
-    expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ })).toBeTruthy();
     expect(screen.getByText(/Faltam 01:00 desta matéria na semana \(3\)/)).toBeTruthy();
     expect(screen.getByTestId('routine-item-1').className).toMatch(/opacity/);
     expect(screen.getByText(/Intervalo sugerido de 10 minutos/)).toBeTruthy();
@@ -81,6 +81,7 @@ describe('coluna do roteiro de hoje', () => {
     expect(p.onOpenMaterial).toHaveBeenNthCalledWith(1, 'pdf');
     expect(p.onOpenMaterial).toHaveBeenNthCalledWith(2, 'questions');
     expect(p.onOpenMaterial).toHaveBeenNthCalledWith(3, 'notes');
+    fireEvent.click(screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ }));
     fireEvent.click(screen.getByRole('button', { name: /2\.2\.3 JWT/ }));
     expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'jwt');
   });
@@ -118,19 +119,23 @@ describe('coluna do roteiro de hoje', () => {
     for (const term of FORBIDDEN_JARGON) expect(container.textContent).not.toContain(term);
   });
 
-  it('árvore: o grupo é a raiz e os tópicos ficam recuados; o do bloco é marcado e clicar nele volta ao bloco', () => {
+  it('árvore: o tópico-pai é o acordeão que abre os subtópicos; o do bloco é marcado e clicar nele volta ao bloco', () => {
     const p = props({ selectedTopicId: 'oauth' });
     render(<RoutineColumn {...p} />);
-    expect(screen.getByRole('heading', { name: '2.2 Segurança de aplicações' })).toBeTruthy();
+    const parentToggle = screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ });
+    expect(parentToggle.getAttribute('aria-expanded')).toBe('false');
+    fireEvent.click(parentToggle);
+    expect(parentToggle.getAttribute('aria-expanded')).toBe('true');
     expect(screen.queryByText('Outros tópicos do mesmo grupo')).toBeNull();
     expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ }).getAttribute('aria-current')).toBe('true');
     fireEvent.click(screen.getByRole('button', { name: /2\.2\.1 OWASP Top 10.*tópico do bloco/ }));
     expect(p.onSelectTopic).toHaveBeenCalledWith('s', 'owasp');
   });
 
-  it('o título do bloco é o grupo, e o tópico do bloco aparece uma vez só, dentro da árvore', () => {
+  it('por padrão a lista de irmãos fica recolhida sob o tópico-pai e o subtópico ativo aparece uma vez só', () => {
     render(<RoutineColumn {...props()} />);
-    expect(screen.getByRole('heading', { name: '2.2 Segurança de aplicações' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ })).toBeTruthy();
+    expect(screen.queryByRole('list', { name: 'Tópicos do grupo' })).toBeNull();
     expect(screen.getAllByText('2.2.1 OWASP Top 10')).toHaveLength(1);
   });
 
@@ -143,6 +148,7 @@ describe('coluna do roteiro de hoje', () => {
 
   it('o contorno do tópico selecionado é desenhado por dentro (não é cortado pela animação)', () => {
     render(<RoutineColumn {...props({ selectedTopicId: 'oauth' })} />);
+    fireEvent.click(screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ }));
     expect(screen.getByRole('button', { name: /2\.2\.2 OAuth 2\.0/ }).className).toContain('ring-inset');
   });
 
@@ -150,6 +156,7 @@ describe('coluna do roteiro de hoje', () => {
     const many = ['2.2.2', '2.2.3', '2.2.4', '2.2.5', '2.2.6', '2.2.7', '2.2.8'].map((code) => topic(`t${code}`, code, `Tópico ${code}`));
     const members = [...many.slice(0, 6), owasp, many[6]];
     render(<RoutineColumn {...props({ group: { parent: null, members }, selectedTopicId: 't2.2.8' })} />);
+    fireEvent.click(screen.getByRole('button', { name: /Subtópicos de Subtópicos do assunto/ }));
     expect(screen.getByRole('button', { name: /OWASP Top 10.*tópico do bloco/ })).toBeTruthy();
     expect(screen.getByRole('button', { name: /2\.2\.8/ }).getAttribute('aria-current')).toBe('true');
     expect(screen.queryByRole('button', { name: /2\.2\.7/ })).toBeNull();
@@ -166,12 +173,12 @@ describe('coluna do roteiro de hoje', () => {
 });
 
 describe('FofoDoro dentro do bloco atual', () => {
-  it('com o bloco rodando, o FofoDoro aparece no bloco atual e a árvore vira uma linha que abre', () => {
+  it('com o bloco rodando, o FofoDoro aparece no bloco atual e o tópico-pai abre a árvore de subtópicos', () => {
     render(<RoutineColumn {...props({ blockRunning: true, fofodoro: <div>relógio em anel</div> })} />);
     const current = screen.getByTestId('routine-item-2');
     expect(current.textContent).toContain('relógio em anel');
     expect(screen.queryByRole('list', { name: 'Tópicos do grupo' })).toBeNull();
-    fireEvent.click(screen.getByRole('button', { name: /Tópicos do bloco: 2\.2\.1 OWASP Top 10/ }));
+    fireEvent.click(screen.getByRole('button', { name: /Subtópicos de 2\.2 Segurança de aplicações/ }));
     expect(screen.getByRole('list', { name: 'Tópicos do grupo' })).toBeTruthy();
   });
 

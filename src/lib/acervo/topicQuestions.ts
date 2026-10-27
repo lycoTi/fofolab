@@ -248,7 +248,7 @@ function groupCodeOf(topicId: string): string | null {
     [topicId]
   );
   if (!parent) return null;
-  return parent.code ?? parent.title;
+  return [parent.code, parent.title].filter(Boolean).join(' · ');
 }
 
 export function getQuestionsView(input: ScopeInput & { acervo: Database | null }): QuestionsView {

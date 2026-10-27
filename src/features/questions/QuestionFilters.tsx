@@ -8,7 +8,7 @@ export type QuestionFormatFilter = 'ALL' | 'CE' | 'ME';
 const select = 'px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 focus:border-orange-500 outline-none';
 
 function groupLabel(groupCode: string | null): string {
-  return groupCode ? `Do grupo ${groupCode}` : 'Do grupo';
+  return groupCode ? `Tópico ${groupCode}` : 'Do mesmo tópico-pai';
 }
 
 /** Filtros (escopo, situação da fila, formato, banca, complexidade, busca) e navegação entre as questões filtradas. */
