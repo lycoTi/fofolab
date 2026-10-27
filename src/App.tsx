@@ -38,7 +38,7 @@ import {
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
 import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
-import { materializeQuestion } from './lib/acervo/studentAcervo';
+import { disableAcervoLink, excludeItemFromTopic, materializeQuestion, restoreItemToTopic } from './lib/acervo/studentAcervo';
 import type { QuestionScope } from './lib/acervo/topicQuestions';
 import { AppHeader } from './features/workbench-shell/AppHeader';
 import { summarizeExamParts } from './features/workbench-shell/headerSummary';
@@ -303,6 +303,26 @@ export default function App() {
   });
   const topicQuestions = questionsView.items;
   useEffect(() => setLastDiagnosisMsg(null), [selectedSubjectId, selectedTopicId, questionScope]);
+  // "Ver as do grupo" vale para o tópico em que foi pedido: outro tópico volta às questões dele
+  useEffect(() => setQuestionScope((scope) => (scope === 'group' ? 'topic' : scope)), [selectedTopicId]);
+  const bumpQuestions = () => setQuestionsVersion((v) => v + 1);
+  const acervoActions = {
+    view: questionsView,
+    onDisableLink: (assuntoId: string) => {
+      disableAcervoLink(selectedTopicId, assuntoId);
+      bumpQuestions();
+    },
+    onExcludeItem: (question: Question) => {
+      if (!question.acervo_item_id) return;
+      excludeItemFromTopic(selectedTopicId, question.acervo_item_id);
+      bumpQuestions();
+    },
+    onRestoreItem: (itemId: string) => {
+      restoreItemToTopic(selectedTopicId, itemId);
+      bumpQuestions();
+    },
+    onShowGroup: () => setQuestionScope('group'),
+  };
 
   // PDF do tópico (não depende do filtro de questões)
   useEffect(() => {
@@ -1252,6 +1272,7 @@ export default function App() {
                         questions={topicQuestions}
                         scopeFilter={questionScope}
                         onChangeScopeFilter={setQuestionScope}
+                        acervo={acervoActions}
                         onAnswer={handleAnswer}
                         onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}

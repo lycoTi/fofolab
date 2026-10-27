@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getQuestionComplexityProfile } from '../../lib/aiRouter';
 import { deriveDiagnosis } from '../../lib/dailyReview';
+import type { QuestionsView } from '../../lib/acervo/topicQuestions';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
+import { AcervoLinkBar } from './AcervoLinkBar';
+import { EmptyTopicQuestions } from './EmptyTopicQuestions';
 import { QuestionCard } from './QuestionCard';
 import { QuestionCorrection } from './QuestionCorrection';
 import { QuestionFilters, type QuestionScope } from './QuestionFilters';
@@ -34,8 +37,14 @@ export interface QuestionWorkbenchProps {
   onGenerateDissection?: (question: Question) => Promise<{ ok: boolean; message?: string }>;
   onOpenImport?: () => void;
   aiConfigured?: boolean;
-  /** Tópico sem questões próprias: diz de onde vieram as mostradas (grupo ou matéria). */
-  sourceLabel?: string | null;
+  /** Acervo da Cebraspe (spec 12c): de onde vêm os itens do tópico, o que foi tirado e o grupo, com as ações. */
+  acervo?: {
+    view: Pick<QuestionsView, 'links' | 'excluded' | 'groupCode' | 'acervoMissing'>;
+    onDisableLink: (assuntoId: string) => void;
+    onExcludeItem: (question: Question) => void;
+    onRestoreItem: (itemId: string) => void;
+    onShowGroup: () => void;
+  };
 }
 
 interface AttemptState {
@@ -131,29 +140,45 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       onSearch={setSearch}
       onOpenImport={props.onOpenImport}
       position={{ index: safeIndex, total: filtered.length }}
-      sourceLabel={props.sourceLabel}
+      groupCode={props.acervo?.view.groupCode ?? null}
       onPrev={() => setIndex(Math.max(0, safeIndex - 1))}
       onNext={() => setIndex(Math.min(filtered.length - 1, safeIndex + 1))}
     />
   );
 
+  const inTopic = props.scopeFilter === 'topic';
+  const acervo = props.acervo;
+  const linkBar = inTopic && acervo && (
+    <AcervoLinkBar view={acervo.view} onDisableLink={acervo.onDisableLink} onRestoreItem={acervo.onRestoreItem} />
+  );
+
   if (!active) {
+    // Tópico sem nenhuma questão (não só sem resultado para o filtro de banca/busca)
+    const emptyTopic = inTopic && questions.length === 0;
     return (
       <div className="space-y-4">
         {filters}
-        <div className="space-y-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
-          <p>Nenhuma questão encontrada para o filtro selecionado. Experimente "Toda a Disciplina" ou "Todo o Acervo".</p>
-          {props.onOpenImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
-        </div>
+        {linkBar}
+        {emptyTopic && (
+          <EmptyTopicQuestions groupCode={acervo?.view.groupCode ?? null} onShowGroup={acervo?.onShowGroup} canImport={Boolean(props.onOpenImport)} />
+        )}
+        {!emptyTopic && (
+          <div className="space-y-2 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+            <p>Nenhuma questão encontrada para o filtro selecionado. Experimente "Toda a matéria" ou "Todo o plano".</p>
+            {props.onOpenImport && <p>Ou traga as questões das suas provas em "Importar Questões".</p>}
+          </div>
+        )}
       </div>
     );
   }
 
   const isCorrect = current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase();
   const hasNext = safeIndex < filtered.length - 1;
+  const onNotThisTopic = inTopic && acervo && active.question.acervo_item_id ? () => acervo.onExcludeItem(active.question) : undefined;
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       {filters}
+      {linkBar}
       <QuestionCard
         question={active.question}
         complexity={active.complexity}
@@ -166,6 +191,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           record(key, current.confidence);
         }}
         onFirstContact={() => record(null, null)}
+        onNotThisTopic={onNotThisTopic}
         onHint={
           onAskFofoIa
             ? () => {

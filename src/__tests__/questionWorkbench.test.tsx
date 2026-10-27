@@ -139,3 +139,112 @@ describe('Aba Questões: confiança antes de responder (spec 11 §5.5)', () => {
     expect(screen.getByRole('button', { name: 'Próxima questão' })).toBeTruthy();
   });
 });
+
+describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)', () => {
+  const FORBIDDEN = ['SQLite', 'JSON', 'banco', 'Cache', 'IndexedDB', 'acervo_item', 'null', 'undefined', 'NaN'];
+  const EMOJI = /\p{Extended_Pictographic}/u;
+  const acervoItem: Question = {
+    ...SEED_QUESTIONS[2],
+    id: 'acv:s1:ANATEL_24:c1:40',
+    statement: 'A celebração de termo de ajustamento de conduta visa afastar discussão litigiosa.',
+    options_json: JSON.stringify(['C) Certo', 'E) Errado']),
+    final_answer: 'C',
+    exam_board: 'Cebraspe',
+    acervo_item_id: 'ANATEL_24:c1:40',
+    source_label: 'Cebraspe · ANATEL 2024 · item 40',
+    acervo_uncertain: 0,
+  };
+
+  function acervoProps(view: Partial<NonNullable<QuestionWorkbenchProps['acervo']>['view']> = {}) {
+    return {
+      view: { links: [], excluded: [], groupCode: null, acervoMissing: false, ...view },
+      onDisableLink: vi.fn(),
+      onExcludeItem: vi.fn(),
+      onRestoreItem: vi.fn(),
+      onShowGroup: vi.fn(),
+    };
+  }
+
+  it('tópico vazio: diz que não há questões classificadas e oferece as do grupo', () => {
+    const acervo = acervoProps({ groupCode: '2.3' });
+    renderWorkbench({ questions: [], scopeFilter: 'topic', acervo });
+    expect(screen.getByText('Ainda não há questões classificadas neste tópico.')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Ver as do grupo 2.3' }));
+    expect(acervo.onShowGroup).toHaveBeenCalledTimes(1);
+  });
+
+  it('tópico vazio sem grupo: sem o botão do grupo', () => {
+    renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps() });
+    expect(screen.getByText('Ainda não há questões classificadas neste tópico.')).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /Ver as do grupo/ })).toBeNull();
+  });
+
+  it('o filtro mostra o grupo quando o tópico tem um, com os nomes novos do escopo', () => {
+    renderWorkbench({ questions: [], scopeFilter: 'topic', acervo: acervoProps({ groupCode: '2.3' }) });
+    const options = [...(screen.getByLabelText('Escopo das questões') as HTMLSelectElement).options].map((o) => o.textContent);
+    expect(options).toEqual(['Deste tópico', 'Do grupo 2.3', 'Toda a matéria', 'Todo o plano']);
+  });
+
+  it('item do acervo mostra a procedência e, se incerto, o selo', () => {
+    renderWorkbench({ questions: [{ question: { ...acervoItem, acervo_uncertain: 1 }, dissection: null }], scopeFilter: 'topic', acervo: acervoProps() });
+    expect(screen.getByText('Cebraspe · ANATEL 2024 · item 40')).toBeTruthy();
+    expect(screen.getByText('Classificação incerta')).toBeTruthy();
+  });
+
+  it('anulada: só para ler, sem confiança, sem resposta e sem explicação antes', () => {
+    const annulled = { ...acervoItem, is_annulled: 1, final_answer: 'X' };
+    const { props } = renderWorkbench({ questions: [{ question: annulled, dissection: null }], scopeFilter: 'topic', acervo: acervoProps() });
+    expect(screen.getByText('Anulada pela banca')).toBeTruthy();
+    expect(screen.queryByRole('button', { name: 'Sei' })).toBeNull();
+    expect(screen.queryByRole('button', { name: /Ver explicação antes de responder/ })).toBeNull();
+    expect(screen.getByText('Certo')).toBeTruthy();
+    expect(props.onAnswer).not.toHaveBeenCalled();
+  });
+
+  it('"Não é deste tópico" tira o item do tópico', () => {
+    const acervo = acervoProps();
+    renderWorkbench({ questions: [{ question: acervoItem, dissection: null }], scopeFilter: 'topic', acervo });
+    fireEvent.click(screen.getByRole('button', { name: 'Não é deste tópico' }));
+    expect(acervo.onExcludeItem).toHaveBeenCalledWith(acervoItem);
+  });
+
+  it('questão própria não oferece "Não é deste tópico"', () => {
+    renderWorkbench({ questions: [first], scopeFilter: 'topic', acervo: acervoProps() });
+    expect(screen.queryByRole('button', { name: 'Não é deste tópico' })).toBeNull();
+  });
+
+  it('linha "Do acervo" com "Desligar este assunto"; tirados podem ser devolvidos', () => {
+    const acervo = acervoProps({
+      links: [{ assuntoId: 'direito-administrativo>licitacoes>lei-14-133', caminho: ['Direito Administrativo', 'Licitações', 'Lei 14.133'] }],
+      excluded: [{ itemId: 'TCU_25:c1:9', sourceLabel: 'Cebraspe · TCU 2025 · item 9' }],
+    });
+    renderWorkbench({ questions: [{ question: acervoItem, dissection: null }], scopeFilter: 'topic', acervo });
+    expect(screen.getByText('Do acervo: Licitações › Lei 14.133')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Desligar este assunto' }));
+    expect(acervo.onDisableLink).toHaveBeenCalledWith('direito-administrativo>licitacoes>lei-14-133');
+
+    expect(screen.queryByRole('button', { name: 'Devolver ao tópico' })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Tirados deste tópico (1)' }));
+    expect(screen.getByText('Cebraspe · TCU 2025 · item 9')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Devolver ao tópico' }));
+    expect(acervo.onRestoreItem).toHaveBeenCalledWith('TCU_25:c1:9');
+  });
+
+  it('acervo que não está neste computador: avisa como trazer de volta', () => {
+    renderWorkbench({ questions: [first], scopeFilter: 'topic', acervo: acervoProps({ acervoMissing: true }) });
+    expect(screen.getByText('O acervo da Cebraspe não está neste computador. Importe o pacote de novo em "Importar Questões".')).toBeTruthy();
+  });
+
+  it('sem termos técnicos e sem emoji nas telas do acervo', () => {
+    const acervo = acervoProps({
+      links: [{ assuntoId: 'x>y', caminho: ['X', 'Y'] }],
+      excluded: [{ itemId: 'i', sourceLabel: 'Cebraspe · TCU 2025 · item 9' }],
+      acervoMissing: true,
+      groupCode: '1',
+    });
+    const { container } = renderWorkbench({ questions: [{ question: { ...acervoItem, acervo_uncertain: 1 }, dissection: null }], scopeFilter: 'topic', acervo });
+    fireEvent.click(screen.getByRole('button', { name: 'Tirados deste tópico (1)' }));
+    for (const term of FORBIDDEN) expect(container.textContent).not.toContain(term);
+    expect(EMOJI.test(container.textContent ?? '')).toBe(false);
+  });
+});
