@@ -7305,16 +7305,16 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "desenvolvimento-de-sistemas>engenharia-de-software",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.7
             },
             {
               "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
               "confianca": 0.5
-            },
-            {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software",
-              "confianca": 0.8
             }
           ],
           "versaoVocabulario": 1018
@@ -7326,7 +7326,7 @@
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.7
         },
         {
@@ -7379,7 +7379,7 @@
               "confianca": 0.8
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.5
             }
           ],
@@ -7396,7 +7396,7 @@
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.5
         }
       ],
@@ -7445,7 +7445,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             },
             {
@@ -7458,7 +7458,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         },
         {

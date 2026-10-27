@@ -4388,7 +4388,7 @@
               "confianca": 0.85
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -4401,7 +4401,7 @@
           "confianca": 0.85
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],
@@ -4413,12 +4413,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.9
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.85
+              "confianca": 0.9
             },
             {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
@@ -4430,12 +4426,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.9
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.85
+          "confianca": 0.9
         },
         {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
@@ -4450,7 +4442,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.9
             },
             {
@@ -4463,7 +4455,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.9
         },
         {
@@ -4537,11 +4529,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.85
             },
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -4550,11 +4542,11 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.85
         },
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],

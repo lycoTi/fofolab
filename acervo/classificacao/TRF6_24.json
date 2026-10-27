@@ -5272,16 +5272,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.9
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.85
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos",
-              "confianca": 0.7
+              "confianca": 0.9
             }
           ],
           "versaoVocabulario": 280
@@ -5289,16 +5281,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.9
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.85
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos",
-          "confianca": 0.7
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -5309,12 +5293,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.7
-            },
-            {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 1351
@@ -5322,12 +5302,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.7
-        },
-        {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -9182,12 +9158,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.7
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.6
+              "confianca": 0.7
             }
           ],
           "versaoVocabulario": 392
@@ -9195,12 +9167,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.7
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.6
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -9215,7 +9183,7 @@
               "confianca": 0.9
             },
             {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.5
             }
           ],
@@ -9228,7 +9196,7 @@
           "confianca": 0.9
         },
         {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.5
         }
       ],
@@ -9323,7 +9291,7 @@
               "confianca": 0.9
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -9336,7 +9304,7 @@
           "confianca": 0.9
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],
@@ -16594,10 +16562,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 132
@@ -16607,10 +16571,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -45988,16 +45948,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.9
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.85
-            },
-            {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-              "confianca": 0.4
+              "confianca": 0.9
             }
           ],
           "versaoVocabulario": 202
@@ -46005,16 +45957,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.9
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.85
-        },
-        {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-          "confianca": 0.4
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -46025,16 +45969,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.85
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.8
-            },
-            {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-              "confianca": 0.7
             }
           ],
           "versaoVocabulario": 1346
@@ -46042,16 +45982,12 @@
       },
       "consenso": [
         {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.8
-        },
-        {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-          "confianca": 0.7
         }
       ],
       "incerto": false,

@@ -3488,7 +3488,7 @@
               "confianca": 0.9
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.85
             }
           ],
@@ -3501,7 +3501,7 @@
           "confianca": 0.9
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.85
         }
       ],
@@ -5867,16 +5867,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
-            },
-            {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
-              "confianca": 0.7
-            },
-            {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
-              "confianca": 0.5
             }
           ],
           "versaoVocabulario": 1364
@@ -5884,16 +5876,8 @@
       },
       "consenso": [
         {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
-        },
-        {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
-          "confianca": 0.7
-        },
-        {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -5904,16 +5888,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.9
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.8
-            },
-            {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.4
+              "confianca": 0.9
             }
           ],
           "versaoVocabulario": 550
@@ -5921,16 +5897,8 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.9
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.8
-        },
-        {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.4
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -5945,11 +5913,7 @@
               "confianca": 0.9
             },
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.85
-            },
-            {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.7
             }
           ],
@@ -5962,11 +5926,7 @@
           "confianca": 0.9
         },
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.85
-        },
-        {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         }
       ],
@@ -5978,11 +5938,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.8
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -5991,11 +5951,11 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],
@@ -6314,7 +6274,7 @@
               "confianca": 0.8
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.5
             }
           ],
@@ -6327,7 +6287,7 @@
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.5
         }
       ],
@@ -6339,7 +6299,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             },
             {
@@ -6352,7 +6312,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         },
         {
@@ -6368,7 +6328,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.7
             },
             {
@@ -6381,7 +6341,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.7
         },
         {
@@ -6998,11 +6958,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.7
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.7
             },
             {
@@ -7015,11 +6975,11 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.7
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         },
         {
@@ -11585,7 +11545,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.75
             },
             {
@@ -11598,7 +11558,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.75
         },
         {
@@ -11622,7 +11582,7 @@
               "confianca": 0.8
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.5
             }
           ],
@@ -11639,7 +11599,7 @@
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.5
         }
       ],
@@ -11651,7 +11611,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             },
             {
@@ -11668,7 +11628,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         },
         {
@@ -11717,11 +11677,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.95
             },
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.7
             },
             {
@@ -11734,11 +11694,11 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.95
         },
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         },
         {
@@ -11754,12 +11714,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
-              "confianca": 0.8
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.85
             },
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>gestao-de-backlog",
-              "confianca": 0.85
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
+              "confianca": 0.8
             }
           ],
           "versaoVocabulario": 1033
@@ -11767,11 +11727,11 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>gestao-de-backlog",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.8
         }
       ],
@@ -11783,7 +11743,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.9
             },
             {
@@ -11796,7 +11756,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.9
         },
         {

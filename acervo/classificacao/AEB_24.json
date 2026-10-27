@@ -1,0 +1,1220 @@
+{
+  "identificador": "AEB_24",
+  "itens": {
+    "AEB_24:051_AEB_24_001_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "conhecimentos-especificos>politica-nacional-de-desenvolvimento-das-atividades-espaciais-pndae",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "conhecimentos-especificos>politica-nacional-de-desenvolvimento-das-atividades-espaciais-pndae",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1629
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.6
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.6
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+              "confianca": 0.6
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>implementacao-gestao-e-coordenacao>arranjos-federativos-e-interorganizacionais-parcerias-capacidades-recursos-e-diferencas-territoriais-discricionariedade-na-linha-de-frente-e-barreiras-administrativas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+          "confianca": 0.6
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>implementacao-gestao-e-coordenacao>arranjos-federativos-e-interorganizacionais-parcerias-capacidades-recursos-e-diferencas-territoriais-discricionariedade-na-linha-de-frente-e-barreiras-administrativas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-internacional-publico>direito-espacial-responsabilidade-por-danos-causados-por-objetos-espaciais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1618
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-publico>direito-espacial-responsabilidade-por-danos-causados-por-objetos-espaciais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-internacional-publico>direito-do-espaco-e-responsabilidade-por-objetos-espaciais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1628
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-publico>direito-do-espaco-e-responsabilidade-por-objetos-espaciais",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1616
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-internacional-publico>tratados-internacionais-e-convencao-de-viena-sobre-direito-dos-tratados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-internacional-publico>tratados-internacionais-e-convencao-de-viena-sobre-direito-dos-tratados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>definicao-e-conceito-de-politica-publica-e-problema-publico",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1603
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>definicao-e-conceito-de-politica-publica-e-problema-publico",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1587
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>federalismo-e-capacidades-estatais>autonomia-coordenacao-e-cooperacao-federativa-capacidades-administrativas-e-politicas-burocracia-discricionariedade-e-implementacao-de-direitos",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>federalismo-e-descentralizacao-de-politicas-publicas-no-brasil-nocoes-de-organizacao-e-funcionamento-dos-sistemas-e-programas-nacionais-saude-sus-educacao-basica-fundeb-e-assistencia-social-suas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>federalismo-e-capacidades-estatais>autonomia-coordenacao-e-cooperacao-federativa-capacidades-administrativas-e-politicas-burocracia-discricionariedade-e-implementacao-de-direitos",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>federalismo-e-descentralizacao-de-politicas-publicas-no-brasil-nocoes-de-organizacao-e-funcionamento-dos-sistemas-e-programas-nacionais-saude-sus-educacao-basica-fundeb-e-assistencia-social-suas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-9-784-1999-e-suas-alteracoes-processo-administrativo",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+              "confianca": 0.5
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-9-784-de-29-de-janeiro-de-1999-disposicoes-gerais-direitos-e-deveres-do-administrado",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-9-784-1999-e-suas-alteracoes-processo-administrativo",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+          "confianca": 0.5
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-9-784-de-29-de-janeiro-de-1999-disposicoes-gerais-direitos-e-deveres-do-administrado",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-politicos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1669
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>direitos-politicos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>convergencias-e-diferencas-entre-a-gestao-publica-e-a-gestao-privada",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1605
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>convergencias-e-diferencas-entre-a-gestao-publica-e-a-gestao-privada",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>a-relacao-do-orcamento-com-as-politicas-fiscal-tributaria-e-cambial",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>a-relacao-do-orcamento-com-as-politicas-fiscal-tributaria-e-cambial",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>economia-e-financas-do-setor-publico>funcoes-alocativa-distributiva-e-estabilizadora-bens-publicos-externalidades-e-monopolios-naturais-financiamento-de-politicas-e-federalismo-fiscal",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>regra-de-ouro-e-regime-fiscal-sustentavel-lei-complementar-n-200-2023",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>regra-de-ouro-e-regime-fiscal-sustentavel-lei-complementar-n-200-2023",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>escritorio-de-projetos-pmo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>definicao-e-conceito-de-politica-publica-e-problema-publico",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1603
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>definicao-e-conceito-de-politica-publica-e-problema-publico",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>regra-de-ouro-e-regime-fiscal-sustentavel-lei-complementar-n-200-2023",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>regra-de-ouro-e-regime-fiscal-sustentavel-lei-complementar-n-200-2023",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+              "confianca": 0.75
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+          "confianca": 0.75
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1603
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-aeroespacial>segmentos-de-sistemas-espaciais-solo-espacial-e-lancamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-aeroespacial>segmentos-de-sistemas-espaciais-solo-espacial-e-lancamento",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+              "confianca": 0.7
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+          "confianca": 0.7
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-especial>lei-n-13-243-2016-estimulos-a-ciencia-tecnologia-e-inovacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+          "confianca": 0.6
+        },
+        {
+          "id": "legislacao-especial>lei-n-13-243-2016-estimulos-a-ciencia-tecnologia-e-inovacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1588
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1588
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

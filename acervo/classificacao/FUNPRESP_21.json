@@ -1,0 +1,2669 @@
+{
+  "identificador": "FUNPRESP_21",
+  "itens": {
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-geral>gestao-de-stakeholders",
+              "confianca": 0.85
+            },
+            {
+              "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1657
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-geral>gestao-de-stakeholders",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+              "confianca": 0.65
+            },
+            {
+              "id": "financas-pessoais>risco-e-retorno-e-modelos-de-aprecamento-de-ativos-capm-apt",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+          "confianca": 0.65
+        },
+        {
+          "id": "financas-pessoais>risco-e-retorno-e-modelos-de-aprecamento-de-ativos-capm-apt",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>abordagem-comportamental-na-governanca",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>abordagem-comportamental-na-governanca",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1657
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-previdenciario>fundos-de-pensao-e-previdencia-complementar",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1622
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>fundos-de-pensao-e-previdencia-complementar",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.85
+            },
+            {
+              "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.85
+        },
+        {
+          "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+              "confianca": 0.4
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-riscos-de-tic",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1622
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-riscos-de-tic",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021",
+              "confianca": 0.7
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021",
+              "confianca": 0.8
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1663
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021",
+          "confianca": 0.7
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.6
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.6
+        },
+        {
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-gestao-de-pessoas>os-processos-de-gestao-de-pessoas>modelagem-do-trabalho-descricao-e-analise-de-cargos-modelos-de-desenho-de-cargos-coleta-de-dados-sobre-cargos-2-2-recrutamento-e-selecao-de-pessoas-2-3-treinamento-e-desenvolvimento",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-geral>gestao-de-pessoas>objetivos-desafios-e-caracteristicas-da-gestao-de-pessoas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-gestao-de-pessoas>os-processos-de-gestao-de-pessoas>modelagem-do-trabalho-descricao-e-analise-de-cargos-modelos-de-desenho-de-cargos-coleta-de-dados-sobre-cargos-2-2-recrutamento-e-selecao-de-pessoas-2-3-treinamento-e-desenvolvimento",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-geral>gestao-de-pessoas>objetivos-desafios-e-caracteristicas-da-gestao-de-pessoas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-nas-organizacoes-publicas>o-ciclo-do-planejamento>analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.3
+            },
+            {
+              "id": "administracao-de-recursos-humanos>atuacao-estrategica-de-rh-e-business-partner",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1666
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-de-recursos-humanos>atuacao-estrategica-de-rh-e-business-partner",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>dado-informacao-conhecimento-e-inteligencia-dados-estruturados-e-nao-estruturados-dados-abertos-coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+              "confianca": 0.55
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.45
+            },
+            {
+              "id": "administracao-de-recursos-humanos>people-analytics-e-analise-de-dados-em-gestao-de-pessoas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1639
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-de-recursos-humanos>people-analytics-e-analise-de-dados-em-gestao-de-pessoas",
+          "confianca": 0.8
+        },
+        {
+          "id": "analise-de-informacao>dado-informacao-conhecimento-e-inteligencia-dados-estruturados-e-nao-estruturados-dados-abertos-coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+          "confianca": 0.55
+        },
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-de-recursos-humanos>modernizacao-e-novas-formas-de-organizacao-do-trabalho-em-rh",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1607
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-de-recursos-humanos>modernizacao-e-novas-formas-de-organizacao-do-trabalho-em-rh",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1665
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>seguridade-social-e-regime-geral-de-previdencia-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>seguridade-social-conceito-principios-e-especies",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>seguridade-social-e-regime-geral-de-previdencia-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>seguridade-social-conceito-principios-e-especies",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>servicos-publicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1616
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>servicos-publicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>agentes-publicos-conceitos-especies-cargo-emprego-e-funcao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>cargo-emprego-e-funcao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>agentes-publicos-conceitos-especies-cargo-emprego-e-funcao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>disposicoes-doutrinarias>cargo-emprego-e-funcao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>propriedade-intelectual-portabilidade-acesso-a-codigo-e-dados-dependencia-tecnologica-e-plano-de-saida",
+              "confianca": 0.55
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>propriedade-intelectual-portabilidade-acesso-a-dados-e-modelos-dependencia-tecnologica-e-plano-de-saida",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1655
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>propriedade-intelectual-portabilidade-acesso-a-codigo-e-dados-dependencia-tecnologica-e-plano-de-saida",
+          "confianca": 0.55
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-solucoes-de-dados-e-ia>contratacao-e-controle-de-solucoes>propriedade-intelectual-portabilidade-acesso-a-dados-e-modelos-dependencia-tecnologica-e-plano-de-saida",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+          "confianca": 0.75
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>administracao-financeira>planejamento-financeiro-de-curto-e-longo-prazo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1632
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>administracao-financeira>planejamento-financeiro-de-curto-e-longo-prazo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>topicos-especiais>riscos-envolvidos-e-formas-de-mitigacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>topicos-especiais>riscos-envolvidos-e-formas-de-mitigacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "mercado-financeiro-e-de-capitais>gestao-de-carteiras-e-diversificacao-de-riscos",
+              "confianca": 0.7
+            },
+            {
+              "id": "atuaria>fundos-de-oscilacao-de-riscos-e-gestao-de-riscos-atuariais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "mercado-financeiro-e-de-capitais>gestao-de-carteiras-e-diversificacao-de-riscos",
+          "confianca": 0.7
+        },
+        {
+          "id": "atuaria>fundos-de-oscilacao-de-riscos-e-gestao-de-riscos-atuariais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+          "confianca": 0.75
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>lei-de-lavagem-de-dinheiro-lei-n-9-613-1998-e-coaf",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-penal>lei-n-9-613-1998-e-suas-alteracoes-lavagem-de-dinheiro",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1610
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>lei-de-lavagem-de-dinheiro-lei-n-9-613-1998-e-coaf",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-penal>lei-n-9-613-1998-e-suas-alteracoes-lavagem-de-dinheiro",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>lei-de-lavagem-de-dinheiro-lei-n-9-613-1998-e-coaf",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-penal>lei-n-9-613-1998-e-suas-alteracoes-lavagem-de-dinheiro",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1626
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>lei-de-lavagem-de-dinheiro-lei-n-9-613-1998-e-coaf",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-penal>lei-n-9-613-1998-e-suas-alteracoes-lavagem-de-dinheiro",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-interno>sistema-de-controle-interno-sci-finalidades-e-metodologia-de-trabalho",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>sistema-de-controle-interno-sci-finalidades-e-metodologia-de-trabalho",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>prevencao-e-melhoria-institucional>distincao-entre-baixa-ocorrencia-e-baixa-deteccao-de-problemas-leitura-de-evidencias-simples-sobre-funcionamento-e-resultados-das-medidas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1605
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>prevencao-e-melhoria-institucional>distincao-entre-baixa-ocorrencia-e-baixa-deteccao-de-problemas-leitura-de-evidencias-simples-sobre-funcionamento-e-resultados-das-medidas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+              "confianca": 0.95
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>desenvolvimento-orientado-a-processos-workflow-modelagem-conceitual",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1648
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+          "confianca": 0.95
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>desenvolvimento-orientado-a-processos-workflow-modelagem-conceitual",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-interno>atividades-de-controle-suficiencia-e-limites-no-alcance-dos-objetivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>atividades-de-controle-suficiencia-e-limites-no-alcance-dos-objetivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0
+            },
+            {
+              "id": "controle-interno>estrutura-e-avaliacao-de-controles-internos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>estrutura-e-avaliacao-de-controles-internos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-geral>gestao-de-processos>nocoes-de-estatistica-aplicada-ao-controle-e-a-melhoria-de-processos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-geral>gestao-de-processos>nocoes-de-estatistica-aplicada-ao-controle-e-a-melhoria-de-processos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>gestao-por-competencias-abordagens-e-ferramentas-mapeamento-e-desenvolvimento-das-competencias",
+              "confianca": 0.4
+            },
+            {
+              "id": "administracao-geral>gestao-de-processos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>gestao-por-competencias-abordagens-e-ferramentas-mapeamento-e-desenvolvimento-das-competencias",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1632
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>contribuicao-da-auditoria-para-a-governanca-os-riscos-os-controles-e-os-resultados",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>exame-e-avaliacao-do-controle-interno",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>contribuicao-da-auditoria-para-a-governanca-os-riscos-os-controles-e-os-resultados",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>exame-e-avaliacao-do-controle-interno",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-riscos>apetite-ao-risco",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>prevencao-e-melhoria-institucional>distincao-entre-baixa-ocorrencia-e-baixa-deteccao-de-problemas-leitura-de-evidencias-simples-sobre-funcionamento-e-resultados-das-medidas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-riscos>apetite-ao-risco",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>prevencao-e-melhoria-institucional>distincao-entre-baixa-ocorrencia-e-baixa-deteccao-de-problemas-leitura-de-evidencias-simples-sobre-funcionamento-e-resultados-das-medidas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>comunicacao-e-acompanhamento>recomendacoes-relacionadas-a-causas-e-riscos-distincao-entre-plano-de-acao-implementacao-resultado-e-beneficio",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.85
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>apis-e-identidade>controle-de-acesso-e-segregacao-de-funcoes-nas-aplicacoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1609
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.85
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>apis-e-identidade>controle-de-acesso-e-segregacao-de-funcoes-nas-aplicacoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>integridade-como-responsabilidade-institucional>coerencia-entre-regras-e-praticas-ambiente-organizacional-e-incentivos-canais-de-orientacao-e-relato-papel-do-exemplo-da-confianca-e-da-prestacao-de-contas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>integridade-como-responsabilidade-institucional>coerencia-entre-regras-e-praticas-ambiente-organizacional-e-incentivos-canais-de-orientacao-e-relato-papel-do-exemplo-da-confianca-e-da-prestacao-de-contas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "mercado-financeiro-e-de-capitais>analise-de-credito-informacoes-garantias-e-risco-de-operacoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1636
+        }
+      },
+      "consenso": [
+        {
+          "id": "mercado-financeiro-e-de-capitais>analise-de-credito-informacoes-garantias-e-risco-de-operacoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceitos-tipos-de-riscos-e-identificacao-de-riscos-estrategicos-operacionais-financeiros-e-de-conformidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-conceito-de-risco-e-impacto-nos-objetivos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-interno>objetivos-e-categorias-de-controles-internos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1633
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-interno>objetivos-e-categorias-de-controles-internos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.4
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados",
+          "confianca": 0.7
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>servicos-de-rede-e-comandos-de-diagnostico-dns-cache-e-ipconfig",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>servicos-de-rede-e-comandos-de-diagnostico-dns-cache-e-ipconfig",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>gestao-de-banco-de-dados>controle-de-acesso-usuario-calculo-volumetrico-replicacao-cluster-particionamento-e-esquemas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1635
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>gestao-de-banco-de-dados>controle-de-acesso-usuario-calculo-volumetrico-replicacao-cluster-particionamento-e-esquemas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.55
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.55
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_005_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>teorias-da-comunicacao-e-sociedade-do-espetaculo",
+              "confianca": 0.6
+            },
+            {
+              "id": "comunicacao>comunicacao-visual-e-design-da-informacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>teorias-da-comunicacao-e-sociedade-do-espetaculo",
+          "confianca": 0.6
+        },
+        {
+          "id": "comunicacao>comunicacao-visual-e-design-da-informacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_005_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>marketing-promocional-e-promocao-institucional",
+              "confianca": 0.7
+            },
+            {
+              "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+              "confianca": 0.6
+            },
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>marketing-promocional-e-promocao-institucional",
+          "confianca": 0.7
+        },
+        {
+          "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+          "confianca": 0.6
+        },
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_005_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>assessoria-de-imprensa-sugestoes-de-pauta-releases-e-artigos",
+              "confianca": 0.9
+            },
+            {
+              "id": "comunicacao>redacao-e-jornalismo>tecnicas-produtos-servicos-e-conceitos-de-assessoria-de-imprensa",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>assessoria-de-imprensa-sugestoes-de-pauta-releases-e-artigos",
+          "confianca": 0.9
+        },
+        {
+          "id": "comunicacao>redacao-e-jornalismo>tecnicas-produtos-servicos-e-conceitos-de-assessoria-de-imprensa",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_005_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade>sustentabilidade-e-responsabilidade-social-na-administracao-publica",
+              "confianca": 0.5
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>coerencia-entre-objetivos-recursos-e-resultados-divulgados-compromissos-de-politicas-publicas-e-informacoes-da-carta-anual",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1598
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processos-participativos-de-gestao-publica-conselhos-de-gestao-orcamento-participativo-parceria-entre-governo-e-sociedade>sustentabilidade-e-responsabilidade-social-na-administracao-publica",
+          "confianca": 0.5
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>coerencia-entre-objetivos-recursos-e-resultados-divulgados-compromissos-de-politicas-publicas-e-informacoes-da-carta-anual",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_007_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-seguro>capitalizacao-e-protecao-patrimonial-mutualista",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>responsabilidade-tributaria-conceitos-responsabilidades-dos-sucessores-responsabilidade-de-terceiros-substituicao-tributaria-responsabilidades-por-infracoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-seguro>capitalizacao-e-protecao-patrimonial-mutualista",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-tributario>responsabilidade-tributaria-conceitos-responsabilidades-dos-sucessores-responsabilidade-de-terceiros-substituicao-tributaria-responsabilidades-por-infracoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_007_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>calculo-financeiro>custo-real-e-efetivo-das-operacoes-de-financiamento-emprestimo-e-investimento",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>administracao-financeira>planejamento-financeiro-de-curto-e-longo-prazo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>calculo-financeiro>custo-real-e-efetivo-das-operacoes-de-financiamento-emprestimo-e-investimento",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>administracao-financeira>planejamento-financeiro-de-curto-e-longo-prazo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_008_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>trabalho-temporario",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-do-trabalho>alteracao-do-contrato-de-trabalho-e-reducao-salarial",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1608
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>alteracao-do-contrato-de-trabalho-e-reducao-salarial",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-do-trabalho>trabalho-temporario",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>planejamento>criticas-aos-modelos-fechados-de-planejamento-estrategico-o-aprendizado-a-partir-de-dentro-ligado-a-pratica-baseado-na-comunidade-nao-hierarquico-e-suspeito-da-lideranca",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>planejamento>criticas-aos-modelos-fechados-de-planejamento-estrategico-o-aprendizado-a-partir-de-dentro-ligado-a-pratica-baseado-na-comunidade-nao-hierarquico-e-suspeito-da-lideranca",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1667
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>sql-e-desempenho>consultas-com-filtros-juncoes-agregacoes-subconsultas-e-expressoes-de-tabela-comuns",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+              "confianca": 0.7
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>gerenciamento-de-projetos-de-tic>pmbok-7-edicao-conceitos-grupos-de-processos-e-areas-de-conhecimento",
+          "confianca": 0.7
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>processos-do-pmbok-7-edicao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-de-infraestruturas-criticas",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1611
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>menor-privilegio-e-segregacao-de-funcoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1633
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>menor-privilegio-e-segregacao-de-funcoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>continuidade-de-negocio-e-recuperacao-de-desastres-de-seguranca-da-informacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>cobit-5-e-governanca-de-ti",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1652
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>cobit-5-e-governanca-de-ti",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>processos-e-metodologias-de-desenvolvimento-de-software",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>processos-de-desenvolvimento-de-software",
+              "confianca": 0.75
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>engenharia-de-software>modelos-de-software-entidades-e-relacionamentos-uml-principios-de-projeto-de-software-solid-padroes-de-projeto",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1672
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>processos-e-metodologias-de-desenvolvimento-de-software",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>processos-de-desenvolvimento-de-software",
+          "confianca": 0.75
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>engenharia-de-software>modelos-de-software-entidades-e-relacionamentos-uml-principios-de-projeto-de-software-solid-padroes-de-projeto",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>qualidade-de-software",
+              "confianca": 0.5
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1663
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.6
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>qualidade-de-software",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+              "confianca": 0.55
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1619
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+          "confianca": 0.55
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.6
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>analise-e-projeto",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.6
+        },
+        {
+          "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis>sprints-gestao-de-backlog-e-priorizacao",
+          "confianca": 0.5
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>analise-e-projeto",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1605
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1601
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1671
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+              "confianca": 0.55
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>usabilidade-prototipagem-e-desenho-responsivo",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+          "confianca": 0.55
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>construcao-de-servicos-rest-e-separacao-entre-apresentacao-regras-de-negocio-e-acesso-a-dados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>construcao-de-servicos-rest-e-separacao-entre-apresentacao-regras-de-negocio-e-acesso-a-dados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.7
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1660
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.7
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>programacao-para-analise>python-3-estruturas-de-dados-controle-de-fluxo-funcoes-modulos-arquivos-e-excecoes-leitura-analise-e-depuracao-de-rotinas-de-manipulacao-de-dados-organizacao-modular-testes-e-reprodutibilidade-de-analises",
+              "confianca": 0.4
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>programacao-para-analise>python-3-estruturas-de-dados-controle-de-fluxo-funcoes-modulos-arquivos-e-excecoes-leitura-analise-e-depuracao-de-rotinas-de-manipulacao-de-dados-organizacao-modular-testes-e-reprodutibilidade-de-analises",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>arquiteturas-de-servicos>balanceamento-servicos-gerenciados-processamento-orientado-a-eventos-e-serverless",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>fundamentos-da-computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-caracteristicas-e-principais-tecnologias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.4
+            },
+            {
+              "id": "lingua-portuguesa>sintaxe-funcoes-sintaticas-e-analise-gramatical",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>sintaxe-funcoes-sintaticas-e-analise-gramatical",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.7
+            },
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1625
+        }
+      },
+      "consenso": [
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.7
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>populacao-territorio-e-trabalho>transicao-demografica-envelhecimento-e-cuidado-desigualdades-regionais-urbanas-e-rurais-estrutura-produtiva-informalidade-e-mudancas-tecnologicas-no-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>ferramentas-de-comunicacao-e-colaboracao-correio-eletronico-webmail-cliente-de-e-mail-aplicativos-de-comunicacao-microsoft-teams-google-meet",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1620
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>ferramentas-de-comunicacao-e-colaboracao-correio-eletronico-webmail-cliente-de-e-mail-aplicativos-de-comunicacao-microsoft-teams-google-meet",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:8": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

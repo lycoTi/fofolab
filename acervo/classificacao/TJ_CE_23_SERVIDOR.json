@@ -1,0 +1,751 @@
+{
+  "identificador": "TJ_CE_23_SERVIDOR",
+  "itens": {
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.7
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>democracia-e-representacao>representacao-e-participacao-responsabilizacao-democratica-relacoes-entre-executivo-legislativo-e-judiciario-governabilidade-e-controles-reciprocos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.7
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>democracia-e-representacao>representacao-e-participacao-responsabilizacao-democratica-relacoes-entre-executivo-legislativo-e-judiciario-governabilidade-e-controles-reciprocos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+              "confianca": 0.95
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+          "confianca": 0.95
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>procedimento-legislativo>etapas-e-nocoes-basicas>comissoes-pareceres-deliberacao-votacao-sancao-e-veto",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>materias-legislativas>proposta-de-emenda-a-constituicao-pec",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>procedimento-legislativo>etapas-e-nocoes-basicas>comissoes-pareceres-deliberacao-votacao-sancao-e-veto",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>materias-legislativas>proposta-de-emenda-a-constituicao-pec",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>atos-administrativos-atributos-classificacao-e-especies-atos-vinculados-e-discricionarios",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>atos-administrativos-elementos-atributos-e-classificacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>atos-administrativos-atributos-classificacao-e-especies-atos-vinculados-e-discricionarios",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>atos-administrativos-elementos-atributos-e-classificacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>direitos-e-garantias-fundamentais>habeas-corpus-mandado-de-seguranca-mandado-de-injuncao-e-habeas-data",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>cooperacao-judiciaria-e-cartas-precatoria-rogatoria-e-de-ordem",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1663
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>cooperacao-judiciaria-e-cartas-precatoria-rogatoria-e-de-ordem",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>procedimentos>elementos-identificadores-da-relacao-processual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>procedimentos>elementos-identificadores-da-relacao-processual",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>tribunal-do-juri-desaforamento-do-julgamento",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>tribunal-do-juri-desaforamento-do-julgamento",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-constitucional>direitos-e-garantias-fundamentais",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>direitos-e-garantias-fundamentais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>atos-administrativos-atributos-classificacao-e-especies-atos-vinculados-e-discricionarios",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>atos-administrativos-elementos-atributos-e-classificacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>atos-administrativos-atributos-classificacao-e-especies-atos-vinculados-e-discricionarios",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>atos-administrativos-elementos-atributos-e-classificacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>administracao-direta-e-indireta-centralizada-e-descentralizada",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>nocoes-de-organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>nocoes-de-organizacao-administrativa>centralizacao-descentralizacao-concentracao-e-desconcentracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+              "confianca": 0.7
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos",
+          "confianca": 0.75
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>prorrogacao-do-prazo-de-vigencia-e-de-execucao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1660
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-processos-organizacionais>cadeia-de-valor-de-organizacoes-publicas",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-geral>processo-administrativo>organizacao>estrutura-organizacional",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1661
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>processo-administrativo>organizacao>estrutura-organizacional",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-processos-organizacionais>cadeia-de-valor-de-organizacoes-publicas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>processo-administrativo>organizacao>tipos-de-departamentalizacao-caracteristicas-vantagens-e-desvantagens-de-cada-tipo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1618
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>processo-administrativo>organizacao>tipos-de-departamentalizacao-caracteristicas-vantagens-e-desvantagens-de-cada-tipo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>interpretacao-de-tabelas-graficos-proporcoes-taxas-e-medidas-descritivas-denominadores-qualidade-e-comparabilidade",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>interpretacao-de-tabelas-graficos-proporcoes-taxas-e-medidas-descritivas-denominadores-qualidade-e-comparabilidade",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1626
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1658
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

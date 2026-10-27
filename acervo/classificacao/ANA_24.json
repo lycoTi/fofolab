@@ -1,0 +1,651 @@
+{
+  "identificador": "ANA_24",
+  "itens": {
+    "ANA_24:024_ANA_CF_001_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:024_ANA_CF_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agencias-executivas-e-contrato-de-gestao-lei-n-10-668-2003",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1648
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agencias-executivas-e-contrato-de-gestao-lei-n-10-668-2003",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:024_ANA_CF_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1629
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:024_ANA_CF_001_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:0CE54BE871E478A99D85AEE00C0566975103F0B9ED0564ABFEABF86AAA8CE15A:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>distincao-entre-apuracao-no-controle-interno-investigacao-correcional-e-processo-sancionador-acompanhamento-de-providencias-e-aprendizado-institucional",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>principios-basicos-da-administracao>enriquecimento-ilicito-e-uso-e-abuso-de-poder",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1607
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>distincao-entre-apuracao-no-controle-interno-investigacao-correcional-e-processo-sancionador-acompanhamento-de-providencias-e-aprendizado-institucional",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>principios-basicos-da-administracao>enriquecimento-ilicito-e-uso-e-abuso-de-poder",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:0CE54BE871E478A99D85AEE00C0566975103F0B9ED0564ABFEABF86AAA8CE15A:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agencias-reguladoras-processo-decisorio-e-controle-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agencias-reguladoras-governanca-e-plano-de-gestao-anual-lei-n-13-848-2019",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agencias-reguladoras-processo-decisorio-e-controle-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agencias-reguladoras-governanca-e-plano-de-gestao-anual-lei-n-13-848-2019",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "regulacao-de-servicos-publicos>processo-regulatorio-e-agencias-reguladoras",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>agencias-reguladoras-processo-decisorio-e-controle-social",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "regulacao-de-servicos-publicos>processo-regulatorio-e-agencias-reguladoras",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>agencias-reguladoras-processo-decisorio-e-controle-social",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.55
+            },
+            {
+              "id": "contabilidade-geral>contas-patrimoniais-e-de-resultado",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>contas-patrimoniais-e-de-resultado",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>contas-patrimoniais-e-de-resultado",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>contas-patrimoniais-e-de-resultado",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>escrituracao>sistema-de-partidas-dobradas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>escrituracao>sistema-de-partidas-dobradas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.6
+            },
+            {
+              "id": "contabilidade-geral>escrituracao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>escrituracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+          "confianca": 0.6
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.5
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>variacoes-patrimoniais>quantitativas-receita-e-despesa-sob-o-enfoque-patrimonial",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "regulacao-de-servicos-publicos>modelos-de-regulacao-economica-custo-de-servico-preco-teto-e-incentivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "regulacao-de-servicos-publicos>regulacao-assimetrica-de-mercados-relevantes",
+              "confianca": 0.6
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>mecanismos-de-reproducao-e-captura>assimetrias-de-poder-e-informacao-incentivos-e-oportunidades-relacoes-principal-agente-e-problemas-de-acao-coletiva-normas-sociais-tolerancia-organizacional-e-redes-de-favorecimento",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "regulacao-de-servicos-publicos>modelos-de-regulacao-economica-custo-de-servico-preco-teto-e-incentivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "regulacao-de-servicos-publicos>regulacao-assimetrica-de-mercados-relevantes",
+          "confianca": 0.6
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>mecanismos-de-reproducao-e-captura>assimetrias-de-poder-e-informacao-incentivos-e-oportunidades-relacoes-principal-agente-e-problemas-de-acao-coletiva-normas-sociais-tolerancia-organizacional-e-redes-de-favorecimento",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1628
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>probabilidade>lei-dos-grandes-numeros",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>leis-dos-grandes-numeros",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1656
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>probabilidade>lei-dos-grandes-numeros",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>leis-dos-grandes-numeros",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.4
+            },
+            {
+              "id": "tecnologia>estatistica-e-probabilidade-basicas>conceitos-basicos-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>estatistica-e-probabilidade-basicas>conceitos-basicos-de-probabilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>aprendizado-supervisionado-regressao-linear",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>aprendizado-supervisionado-regressao-linear",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biologia>ecologia-e-manejo-de-ecossistemas-aquaticos-continentais",
+              "confianca": 0.7
+            },
+            {
+              "id": "realidade-brasileira>infraestrutura-economica-e-social>saneamento-basico-nas-cidades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "biologia>ecologia-e-manejo-de-ecossistemas-aquaticos-continentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "realidade-brasileira>infraestrutura-economica-e-social>saneamento-basico-nas-cidades",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>saneamento-basico-regionalizacao-e-prestacao-dos-servicos",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>participacao-e-controle-social-conselhos-consultas-e-escuta-de-usuarios-representatividade-e-barreiras-a-participacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>saneamento-basico-regionalizacao-e-prestacao-dos-servicos",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>participacao-e-controle-social-conselhos-consultas-e-escuta-de-usuarios-representatividade-e-barreiras-a-participacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

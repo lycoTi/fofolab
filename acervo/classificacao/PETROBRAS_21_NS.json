@@ -5333,7 +5333,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             }
           ],
@@ -5342,7 +5342,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         }
       ],
@@ -6053,11 +6053,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>requisitos-e-experiencia-do-usuario",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
               "confianca": 0.7
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.7
             }
           ],
@@ -6066,11 +6066,11 @@
       },
       "consenso": [
         {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>requisitos-e-experiencia-do-usuario",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
           "confianca": 0.7
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         }
       ],
@@ -6082,7 +6082,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.8
             },
             {
@@ -6090,7 +6090,7 @@
               "confianca": 0.7
             },
             {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>requisitos-e-experiencia-do-usuario",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
               "confianca": 0.5
             }
           ],
@@ -6099,7 +6099,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.8
         },
         {
@@ -6107,7 +6107,7 @@
           "confianca": 0.7
         },
         {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>requisitos-e-experiencia-do-usuario",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
           "confianca": 0.5
         }
       ],
@@ -6119,16 +6119,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
-              "confianca": 0.6
-            },
-            {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
-              "confianca": 0.5
-            },
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
-              "confianca": 0.5
+              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 904
@@ -6136,16 +6128,8 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
-          "confianca": 0.6
-        },
-        {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
-          "confianca": 0.5
-        },
-        {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
-          "confianca": 0.5
+          "confianca": 0.6
         }
       ],
       "incerto": true,
@@ -6160,7 +6144,7 @@
               "confianca": 0.75
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.7
             },
             {
@@ -6177,7 +6161,7 @@
           "confianca": 0.75
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         },
         {
@@ -6193,11 +6177,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.7
             },
             {
@@ -6210,11 +6194,11 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.7
         },
         {
@@ -6507,7 +6491,7 @@
               "confianca": 0.95
             },
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.85
             }
           ],
@@ -6520,7 +6504,7 @@
           "confianca": 0.95
         },
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.85
         }
       ],
@@ -6891,10 +6875,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.95
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 491
@@ -6904,10 +6884,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.95
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -6917,10 +6893,6 @@
       "opinioes": {
         "deepseek:deepseek-flash": {
           "assuntos": [
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.7
-            },
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.8
@@ -6933,10 +6905,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.8
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -10908,7 +10876,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.9
             },
             {
@@ -10921,7 +10889,7 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.9
         },
         {
@@ -10937,16 +10905,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.85
             },
             {
               "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
               "confianca": 0.7
-            },
-            {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 347
@@ -10954,16 +10918,12 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
         },
         {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
           "confianca": 0.7
-        },
-        {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -11003,11 +10963,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.85
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.4
             }
           ],
@@ -11016,11 +10976,11 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.4
         }
       ],
@@ -11032,12 +10992,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
-              "confianca": 0.7
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.85
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-              "confianca": 0.85
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
+              "confianca": 0.7
             }
           ],
           "versaoVocabulario": 1090
@@ -11045,11 +11005,11 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.7
         }
       ],
@@ -11065,7 +11025,7 @@
               "confianca": 0.85
             },
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.4
             }
           ],
@@ -11078,7 +11038,7 @@
           "confianca": 0.85
         },
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.4
         }
       ],
@@ -11090,16 +11050,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             },
             {
               "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>verificacao-de-requisitos-funcionais-seguranca-desempenho-e-acessibilidade",
               "confianca": 0.6
-            },
-            {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
-              "confianca": 0.5
             }
           ],
           "versaoVocabulario": 1067
@@ -11107,16 +11063,12 @@
       },
       "consenso": [
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         },
         {
           "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>verificacao-de-requisitos-funcionais-seguranca-desempenho-e-acessibilidade",
           "confianca": 0.6
-        },
-        {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -11127,7 +11079,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.8
             },
             {
@@ -11140,7 +11092,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.8
         },
         {
@@ -11156,7 +11108,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.8
             },
             {
@@ -11173,7 +11125,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.8
         },
         {
@@ -11193,11 +11145,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.85
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.75
             }
           ],
@@ -11206,11 +11158,11 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.75
         }
       ],
@@ -11237,7 +11189,7 @@
               "confianca": 0.85
             },
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             }
           ],
@@ -11250,7 +11202,7 @@
           "confianca": 0.85
         },
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         }
       ],
@@ -11266,7 +11218,7 @@
               "confianca": 0.7
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.5
             },
             {
@@ -11283,7 +11235,7 @@
           "confianca": 0.7
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.5
         },
         {
@@ -11303,7 +11255,7 @@
               "confianca": 0.8
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.6
             }
           ],
@@ -11316,7 +11268,7 @@
           "confianca": 0.8
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.6
         }
       ],
@@ -11332,7 +11284,7 @@
               "confianca": 0.85
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.7
             },
             {
@@ -11349,7 +11301,7 @@
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.7
         },
         {
@@ -22138,7 +22090,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.95
             }
           ],
@@ -22147,7 +22099,7 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.95
         }
       ],
@@ -24920,10 +24872,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.7
             }
           ],
           "versaoVocabulario": 449
@@ -24933,10 +24881,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.7
         }
       ],
       "incerto": false,

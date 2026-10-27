@@ -1,0 +1,4431 @@
+{
+  "identificador": "TJ_PA_25_SERVIDOR",
+  "itens": {
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-gestao-de-pessoas>conceitos-importancia-relacao-com-os-outros-sistemas-de-organizacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1662
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>conceitos-importancia-relacao-com-os-outros-sistemas-de-organizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>principios-da-governanca-corporativa-responsabilidade-transparencia-equidade-e-accountability",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.75
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>processo-administrativo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1636
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>processo-administrativo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>calculo-derivadas-e-analise-de-funcoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>calculo-derivadas-e-analise-de-funcoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>controle-de-qualidade-e-estudos-de-equivalencia-farmaceutica",
+              "confianca": 0.5
+            },
+            {
+              "id": "medicina>psiquiatria-eletroconvulsoterapia-e-interacoes-medicamentosas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1609
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psiquiatria-eletroconvulsoterapia-e-interacoes-medicamentosas",
+          "confianca": 0.8
+        },
+        {
+          "id": "medicina>controle-de-qualidade-e-estudos-de-equivalencia-farmaceutica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1665
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>serventia-extrajudicial-modelos-anterior-e-posterior-a-constituicao-federal-de-1988>interinidade-requisitos-cumulacao-nepotismo-teto-constitucional",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-notarial-e-registral>conceitos-basicos-titular-de-cartorio-interino-tabeliaes-oficiais-de-registro-e-seus-prepostos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1611
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>serventia-extrajudicial-modelos-anterior-e-posterior-a-constituicao-federal-de-1988>interinidade-requisitos-cumulacao-nepotismo-teto-constitucional",
+          "confianca": 0.55
+        },
+        {
+          "id": "direito-notarial-e-registral>conceitos-basicos-titular-de-cartorio-interino-tabeliaes-oficiais-de-registro-e-seus-prepostos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:2DF32B284D7EA83F64088E4846E3569EAA7DB4486BB4B0CB28B36791657C6892:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>divida-flutuante-e-fundada",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-financeiro>divida-publica-conceito-evolucao-classificacao-disciplina-juridica-e-processamento",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:2DF32B284D7EA83F64088E4846E3569EAA7DB4486BB4B0CB28B36791657C6892:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "macroeconomia>taxa-de-cambio-e-paridade-do-poder-de-compra",
+              "confianca": 0.9
+            },
+            {
+              "id": "macroeconomia>principais-modelos-macroeconomicos>politica-anticiclica-de-curto-prazo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "macroeconomia>taxa-de-cambio-e-paridade-do-poder-de-compra",
+          "confianca": 0.9
+        },
+        {
+          "id": "macroeconomia>principais-modelos-macroeconomicos>politica-anticiclica-de-curto-prazo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:2DF32B284D7EA83F64088E4846E3569EAA7DB4486BB4B0CB28B36791657C6892:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>identidades-macroeconomicas-basicas>economia-internacional-e-comercio-exterior>globalizacao-e-organismos-multilaterais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>identidades-macroeconomicas-basicas>economia-internacional-e-comercio-exterior>globalizacao-e-organismos-multilaterais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:40772BA304EA6A6E351C619D42DF49D2660EC0646704EEB621B55A36CA5CB10C:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>hardware-portas-e-interfaces-de-conexao-usb",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>hardware-portas-e-interfaces-de-conexao-usb",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:40772BA304EA6A6E351C619D42DF49D2660EC0646704EEB621B55A36CA5CB10C:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>informatica-e-uso-de-planilhas-eletronicas-excel",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1622
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>informatica-e-uso-de-planilhas-eletronicas-excel",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:40772BA304EA6A6E351C619D42DF49D2660EC0646704EEB621B55A36CA5CB10C:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1658
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>conceitos-gerais-de-seguranca-e-governanca-digital>seguranca-da-informacao-procedimentos-de-copia-de-seguranca-backup-nocoes-de-virus-worms-e-pragas-virtuais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>implementacao-gestao-e-coordenacao>arranjos-federativos-e-interorganizacionais-parcerias-capacidades-recursos-e-diferencas-territoriais-discricionariedade-na-linha-de-frente-e-barreiras-administrativas",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>implementacao-gestao-e-coordenacao>arranjos-federativos-e-interorganizacionais-parcerias-capacidades-recursos-e-diferencas-territoriais-discricionariedade-na-linha-de-frente-e-barreiras-administrativas",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>planejamento-e-avaliacao-nas-politicas-publicas>analise-custo-beneficio-e-analise-custo-efetividade",
+              "confianca": 0.9
+            },
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>custo-efetividade-e-custo-beneficio-custo-de-oportunidade-e-sensibilidade-heterogeneidade-de-efeitos-equidade-e-impactos-territoriais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>planejamento-e-avaliacao-nas-politicas-publicas>analise-custo-beneficio-e-analise-custo-efetividade",
+          "confianca": 0.9
+        },
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>identificacao-causal-e-analise-economica>custo-efetividade-e-custo-beneficio-custo-de-oportunidade-e-sensibilidade-heterogeneidade-de-efeitos-equidade-e-impactos-territoriais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+              "confianca": 0.7
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>classificacao-programatica-da-despesa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros",
+          "confianca": 0.7
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>classificacao-programatica-da-despesa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-financeiro>lei-de-responsabilidade-fiscal-vinculacao-de-recursos-e-execucao-orcamentaria",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1604
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-financeiro>lei-de-responsabilidade-fiscal-vinculacao-de-recursos-e-execucao-orcamentaria",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-financeiro>receita-publica>conceito>ingresso-e-receitas",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-orcamento-publico-no-brasil>orcamento-anual",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>orcamento-na-constituicao-de-1988>lei-orcamentaria-anual-caracterizacao-conteudo-prazos-classificacoes",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1588
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>transparencia-ativa-dados-abertos-e-portal-da-transparencia-como-meios-de-acesso-e-controle-qualidade-atualizacao-cobertura-e-limites-da-informacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>desenvolvimento-e-treinamento-de-pessoal-levantamento-de-necessidades-programacao-execucao-e-avaliacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1648
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>desenvolvimento-e-treinamento-de-pessoal-levantamento-de-necessidades-programacao-execucao-e-avaliacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.95
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>caracteristicas-da-administracao-publica-e-clientelismo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.95
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>caracteristicas-da-administracao-publica-e-clientelismo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1625
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-accountability-e-transparencia-na-gestao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-geral>gestao-de-conflitos-e-negociacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-legitimidade>estado-governo-e-administracao-autoridade-legitimidade-e-poder-interesse-publico-pluralismo-e-conflitos-distributivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-geral>gestao-de-conflitos-e-negociacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1588
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>data-warehouse-data-mart-data-lake-e-lakehouse-produtos-de-dados-responsabilidade-por-dominios-autosservico-e-governanca-federada-em-data-mesh",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+              "confianca": 0.85
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+          "confianca": 0.85
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>funcoes-de-ativacao-e-perda-otimizacao-retropropagacao-e-regularizacao-em-nivel-conceitual-e-de-interpretacao-de-resultados",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais",
+              "confianca": 0.6
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>perceptron-e-redes-multicamadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>funcoes-de-ativacao-e-perda-otimizacao-retropropagacao-e-regularizacao-em-nivel-conceitual-e-de-interpretacao-de-resultados",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais",
+          "confianca": 0.6
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>perceptron-e-redes-multicamadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+              "confianca": 0.95
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+          "confianca": 0.95
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos",
+              "confianca": 0.7
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>capacidade-custos-e-infraestrutura-de-ia>limites-de-consumo-latencia-e-isolamento-de-cargas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos",
+          "confianca": 0.7
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>capacidade-custos-e-infraestrutura-de-ia>limites-de-consumo-latencia-e-isolamento-de-cargas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>capacidade-custos-e-infraestrutura-de-ia>dimensionamento-e-otimizacao-de-processamento-memoria-armazenamento-e-aceleradores",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>capacidade-custos-e-infraestrutura-de-ia>dimensionamento-e-otimizacao-de-processamento-memoria-armazenamento-e-aceleradores",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.5
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>recomendacoes-e-normativos-da-secretaria-de-governo-digital-e-do-gabinete-de-seguranca-institucional-para-implementacao-de-nuvens",
+              "confianca": 0.4
+            },
+            {
+              "id": "tecnologia>governanca-e-gestao-de-contratos-de-tic>resolucao-cnj-n-468-2022-e-o-guia-de-contratacoes-de-stic-do-poder-judiciario-e-suas-alteracoes",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.5
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>recomendacoes-e-normativos-da-secretaria-de-governo-digital-e-do-gabinete-de-seguranca-institucional-para-implementacao-de-nuvens",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>instrucao-normativa-da-presidencia-do-conselho-nacional-de-justica-n-86-2021",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-especial>instrucao-normativa-da-presidencia-do-conselho-nacional-de-justica-n-100-2024",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>instrucao-normativa-da-presidencia-do-conselho-nacional-de-justica-n-86-2021",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>estrategia-nacional-de-seguranca-cibernetica-do-poder-judiciario-ensec-pj",
+              "confianca": 0.9
+            },
+            {
+              "id": "legislacao-especial>portarias-da-presidencia-do-conselho-nacional-de-justica-252-2020-253-2020-131-2021-162-2021-172-2022-e-suas-alteracoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>estrategia-nacional-de-seguranca-cibernetica-do-poder-judiciario-ensec-pj",
+          "confianca": 0.9
+        },
+        {
+          "id": "legislacao-especial>portarias-da-presidencia-do-conselho-nacional-de-justica-252-2020-253-2020-131-2021-162-2021-172-2022-e-suas-alteracoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>estrategia-nacional-de-seguranca-cibernetica-do-poder-judiciario-ensec-pj",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>estrategia-nacional-de-seguranca-cibernetica-do-poder-judiciario-ensec-pj",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>norma-nbr-iso-iec-n-27001-2013-e-n-27002-2013",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>documentacao-de-apis-com-swagger-openapi",
+              "confianca": 0.5
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>microsoft-sql-server-mysql-e-postgresql",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>documentacao-de-apis-com-swagger-openapi",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>orquestracao-de-conteineres-kubernetes",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.85
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1639
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>orquestracao-de-conteineres-kubernetes",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.85
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1636
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>ferramentas-de-gestao-de-configuracao-versionamento-git-e-gitlab-ci-cd-gitlab-ci",
+              "confianca": 0.5
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>seguranca-de-informacao-e-desenvolvimento-de-software-seguro>seguranca-em-aplicacoes-web-e-mobile-gestao-de-identidades-e-acesso",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1618
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>seguranca-de-informacao-e-desenvolvimento-de-software-seguro>seguranca-em-aplicacoes-web-e-mobile-gestao-de-identidades-e-acesso",
+          "confianca": 0.5
+        },
+        {
+          "id": "tecnologia>ferramentas-de-gestao-de-configuracao-versionamento-git-e-gitlab-ci-cd-gitlab-ci",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>assinatura-digital-e-criptografia-em-transito-e-repouso",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>mecanismos-de-seguranca>assinatura-digital",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>assinatura-digital-e-criptografia-em-transito-e-repouso",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>mecanismos-de-seguranca>assinatura-digital",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.8
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.8
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.75
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.75
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>violacao-das-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>violacao-das-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>violacao-das-hipoteses",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>violacao-das-hipoteses",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+              "confianca": 0.75
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>analise-de-residuos",
+          "confianca": 0.75
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-multipla",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1620
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.95
+            },
+            {
+              "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.95
+        },
+        {
+          "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>estatistica-e-probabilidade-basicas>amostragem-vies-e-erro",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1623
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>estatistica-e-probabilidade-basicas>amostragem-vies-e-erro",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>amostras-aleatorias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>amostras-aleatorias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>medidas-de-assimetria-e-curtose",
+              "confianca": 0.85
+            },
+            {
+              "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>medidas-de-assimetria-e-curtose",
+          "confianca": 0.85
+        },
+        {
+          "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-de-dados>graficos-diagramas-tabelas-medidas-descritivas-posicao-dispersao-assimetria-e-curtose",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>estatistica-descritiva-medidas-de-posicao-dispersao-e-boxplot",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>exploracao-e-descricao>tipos-de-dados-e-variaveis-distribuicoes-de-frequencias-medidas-de-posicao-e-dispersao-exploracao-e-visualizacao-comparacao-de-grupos-e-periodos-identificacao-de-padroes-anomalias-e-limites-das-fontes",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>apuracao-delimitacao-dos-fatos-e-hipoteses-planejamento-de-diligencias-reuniao-e-preservacao-de-elementos-probatorios-analise-de-possiveis-prejuizos-e-comunicacao-as-instancias-competentes",
+              "confianca": 0.2
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>probabilidade-da-uniao-de-eventos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>probabilidade-da-uniao-de-eventos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>probabilidade-complementar",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>probabilidade-complementar",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>probabilidade-da-intersecao-e-eventos-independentes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>probabilidade-da-intersecao-e-eventos-independentes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>probabilidade-condicional",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>probabilidade-condicional",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>distribuicao-binomial-e-calculo-de-probabilidades",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>distribuicao-binomial-e-calculo-de-probabilidades",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-intervalar-intervalos-de-confianca-intervalos-de-credibilidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>pressupostos-incerteza-e-erros-de-inferencia-significancia-estatistica-e-relevancia-pratica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>inferencia-estatistica>nivel-de-significancia",
+              "confianca": 0.6
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>inferencia-estatistica>nivel-de-significancia",
+          "confianca": 0.6
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>inferencia-estatistica>intervalo-de-confianca-e-teste-de-hipoteses",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>associacao-predicao-e-causalidade-selecao-representatividade-e-explicacoes-alternativas-em-dados-administrativos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>testes-de-hipoteses-hipoteses-simples-e-compostas-niveis-de-significancia-e-potencia-de-um-teste-teste-t-de-student-teste-qui-quadrado",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>associacao-predicao-e-causalidade-selecao-representatividade-e-explicacoes-alternativas-em-dados-administrativos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>inferencia-sobre-os-parametros-do-modelo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>modelos-de-regressao-linear",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>probabilidade>principais-distribuicoes-continuas-uniforme-normal-exponencial-qui-quadrado-t-e-f",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>probabilidade>principais-distribuicoes-continuas-uniforme-normal-exponencial-qui-quadrado-t-e-f",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:8F3FC277D897F2859B22865BED211221D16B57F4629E2C8C9D405ECFB584A646:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>erro-quadratico-medio-e-propriedades-de-estimadores",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>modelo-de-regressao-linear>hipoteses-para-o-melhor-estimador-linear-nao-viesado",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>erro-quadratico-medio-e-propriedades-de-estimadores",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+              "confianca": 0.85
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>agentes-e-uso-seguro-de-ferramentas>protecao-contra-instrucoes-maliciosas-em-conteudo-externo-exposicao-de-dados-e-uso-indevido-de-ferramentas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>grandes-modelos-de-linguagem-e-ia-generativa",
+          "confianca": 0.85
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>agentes-e-uso-seguro-de-ferramentas>protecao-contra-instrucoes-maliciosas-em-conteudo-externo-exposicao-de-dados-e-uso-indevido-de-ferramentas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>prompts-recuperacao-de-informacao-para-geracao-de-respostas-e-ajuste-de-modelos",
+              "confianca": 0.85
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>avaliacao-de-respostas-fontes-alucinacoes-e-limitacoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>integracao-com-dados-e-ia>representacoes-vetoriais-busca-semantica-e-recuperacao-de-informacao-para-geracao-de-respostas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1588
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>prompts-recuperacao-de-informacao-para-geracao-de-respostas-e-ajuste-de-modelos",
+          "confianca": 0.85
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>avaliacao-de-respostas-fontes-alucinacoes-e-limitacoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>integracao-com-dados-e-ia>representacoes-vetoriais-busca-semantica-e-recuperacao-de-informacao-para-geracao-de-respostas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+              "confianca": 0.9
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>modelos-de-linguagem-e-llms",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1607
+        }
+      },
+      "consenso": [
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>redes-neurais>redes-convolucionais-recorrentes-e-transformers",
+          "confianca": 0.9
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>linguagem-natural-e-modelos-generativos>modelos-de-linguagem-e-llms",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>owasp-top-10-e-desenvolvimento-seguro",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>seguranca-de-aplicacoes>validacao-de-entradas-e-controles-de-acesso",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-seguro-de-aplicacoes>principais-frameworks-owasp-top-tem-samm",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>owasp-top-10-e-desenvolvimento-seguro",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>seguranca-de-aplicacoes>validacao-de-entradas-e-controles-de-acesso",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-seguro-de-aplicacoes>principais-frameworks-owasp-top-tem-samm",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>defesa-em-profundidade-zero-trust-e-segmentacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>menor-privilegio-e-segregacao-de-funcoes",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>seguranca-de-informacao-e-desenvolvimento-de-software-seguro",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>defesa-em-profundidade-zero-trust-e-segmentacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>menor-privilegio-e-segregacao-de-funcoes",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>seguranca-de-informacao-e-desenvolvimento-de-software-seguro",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-seguro-de-aplicacoes>principais-frameworks-owasp-top-tem-samm",
+              "confianca": 0.7
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>fundamentos-de-autenticacao-seguranca-de-codigo-conceitos-de-gestao-de-identidades-e-acesso-autenticacao-e-autorizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1621
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-seguro-de-aplicacoes>principais-frameworks-owasp-top-tem-samm",
+          "confianca": 0.7
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>fundamentos-de-autenticacao-seguranca-de-codigo-conceitos-de-gestao-de-identidades-e-acesso-autenticacao-e-autorizacao",
+          "confianca": 0.5
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>autenticacao-autorizacao-identidades-acessos-privilegiados-multiplos-fatores-e-autenticacao-unica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>desenvolvimento-seguro-de-software",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>desenvolvimento-seguro-de-software",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1611
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1611
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>containers>orquestracao-kubernetes-openshift",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>orquestracao-de-containers-em-kubernetes>implantacao-escalabilidade-volumes-e-otimizacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1635
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>containers>orquestracao-kubernetes-openshift",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>computacao-em-nuvem-orquestracao-de-servicos-e-automacao>orquestracao-de-containers-em-kubernetes>implantacao-escalabilidade-volumes-e-otimizacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>documentacao-de-apis-com-swagger-openapi",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>documentacao-de-apis-com-swagger-openapi",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>design-de-software>ddd-domain-driven-design",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>ddd-domain-driven-design",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>design-de-software>ddd-domain-driven-design",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais>ddd-domain-driven-design",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+              "confianca": 0.7
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+          "confianca": 0.7
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>apis-e-especificacao-openapi-swagger",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>json-e-formatos-de-intercambio-de-dados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>padroes-de-projeto-design-patterns-padroes-grasp-arquiteturas-em-camadas-baseada-em-servicos-microservicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>criptografia-algoritmos-simetricos-e-assimetricos-aes",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>criptografia-algoritmos-simetricos-e-assimetricos-aes",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>solid-e-clean-code",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>solid-e-clean-code",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>debito-tecnico-documentacao-modularidade-e-acoplamento",
+              "confianca": 0.7
+            },
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>solid-e-clean-code",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>manutencao-e-evolucao>debito-tecnico-documentacao-modularidade-e-acoplamento",
+          "confianca": 0.7
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>solid-e-clean-code",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-software-e-analise-estatica-de-codigo-sonarqube",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>qualidade>analise-estatica-de-codigo",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>analise-estatica-cobertura-e-revisao-de-codigo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1601
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-software-e-analise-estatica-de-codigo-sonarqube",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>qualidade>analise-estatica-de-codigo",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-e-qualidade>analise-estatica-cobertura-e-revisao-de-codigo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:9B3F6F15758D33E101716FCA3EE11406C294C02CE790170986B06030ED5606AA:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fisica>termodinamica-primeira-lei-processos-adiabaticos-e-energia-interna",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1626
+        }
+      },
+      "consenso": [
+        {
+          "id": "fisica>termodinamica-primeira-lei-processos-adiabaticos-e-energia-interna",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.9
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.9
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1609
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1595
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>entendimento-dos-tribunais-superiores-acerca-dos-institutos-de-direito-processual-penal",
+              "confianca": 0.25
+            },
+            {
+              "id": "direito-penal>imputabilidade-semi-imputabilidade-e-responsabilidade-penal",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1619
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>imputabilidade-semi-imputabilidade-e-responsabilidade-penal",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>imparcialidade-probidade-diligencia-e-respeito-autonomia-tecnica-e-responsabilidade-limites-da-obediencia-hierarquica-uso-adequado-de-informacao-e-recursos-publicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>direitos-e-deveres-dos-funcionarios-publicos-regimes-juridicos",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>deveres-profissionais>imparcialidade-probidade-diligencia-e-respeito-autonomia-tecnica-e-responsabilidade-limites-da-obediencia-hierarquica-uso-adequado-de-informacao-e-recursos-publicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>intervencao-do-estado-na-propriedade-desapropriacao-e-demais-modalidades",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>servidoes-administrativas-e-intervencao-do-estado-na-propriedade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1646
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>intervencao-do-estado-na-propriedade-desapropriacao-e-demais-modalidades",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>servidoes-administrativas-e-intervencao-do-estado-na-propriedade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>poder-constituinte>poder-constituinte-originario",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>classificacao-e-origem-das-constituicoes",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1628
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>classificacao-e-origem-das-constituicoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>poder-constituinte>poder-constituinte-originario",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+              "confianca": 0.7
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+          "confianca": 0.7
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>familia-e-sucessoes-guarda-compartilhada-poder-familiar-e-alimentos",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-civil>responsabilidade-civil",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>responsabilidade-civil",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-civil>familia-e-sucessoes-guarda-compartilhada-poder-familiar-e-alimentos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>familia-e-sucessoes-guarda-compartilhada-poder-familiar-e-alimentos",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-civil>direitos-reais-uso-usufruto-e-propriedade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1659
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>familia-e-sucessoes-guarda-compartilhada-poder-familiar-e-alimentos",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-civil>direitos-reais-uso-usufruto-e-propriedade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>audiencia-de-instrucao-e-julgamento-e-provas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1600
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>audiencia-de-instrucao-e-julgamento-e-provas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+              "confianca": 0.95
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+          "confianca": 0.95
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.6
+            },
+            {
+              "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.6
+        },
+        {
+          "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C9F8D295B931672227C93D2C75D28DC412FC4048D1F1B99E3DC9F0F51D58ACB0:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>malware-e-codigos-maliciosos",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>tratamento-e-resposta-a-incidentes>conceitos-fundamentos-tipos-e-melhores-praticas-de-equipes-de-tratamento-e-resposta-a-incidentes-de-seguranca-da-informacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1624
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>malware-e-codigos-maliciosos",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>tratamento-e-resposta-a-incidentes>conceitos-fundamentos-tipos-e-melhores-praticas-de-equipes-de-tratamento-e-resposta-a-incidentes-de-seguranca-da-informacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>redacao-e-jornalismo>processos-de-producao-da-noticia-conceitos-e-valores-noticia",
+              "confianca": 0.75
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inteligencia-artificial-conceitos-basicos-e-principais-aplicacoes-no-setor-publico",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>redacao-e-jornalismo>processos-de-producao-da-noticia-conceitos-e-valores-noticia",
+          "confianca": 0.75
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inteligencia-artificial-conceitos-basicos-e-principais-aplicacoes-no-setor-publico",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>comunicacao-social>comunicacao-publica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1633
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>comunicacao-social>comunicacao-publica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>assessoria-de-imprensa-sugestoes-de-pauta-releases-e-artigos",
+              "confianca": 0.85
+            },
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>assessoria-de-imprensa-sugestoes-de-pauta-releases-e-artigos",
+          "confianca": 0.85
+        },
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>redacao-e-jornalismo>tecnicas-produtos-servicos-e-conceitos-de-assessoria-de-imprensa",
+              "confianca": 0.8
+            },
+            {
+              "id": "comunicacao>comunicacao-social>comunicacao-organizacional-interna-integrada-endomarketing-gerenciamento-de-crise",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>redacao-e-jornalismo>tecnicas-produtos-servicos-e-conceitos-de-assessoria-de-imprensa",
+          "confianca": 0.8
+        },
+        {
+          "id": "comunicacao>comunicacao-social>comunicacao-organizacional-interna-integrada-endomarketing-gerenciamento-de-crise",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>organizacao-da-seguranca-da-informacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade>conceitos-basicos-de-tratamento-e-resposta-a-incidentes-de-seguranca",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1650
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>organizacao-da-seguranca-da-informacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>seguranca-da-informacao-e-comunicacoes-3-1-conceitos-basicos-de-disponibilidade-confidencialidade-autenticidade-e-integridade>conceitos-basicos-de-tratamento-e-resposta-a-incidentes-de-seguranca",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1672
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biblioteconomia>redes-e-sistemas-de-informacao-rvbi-e-cooperacao-bibliografica",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "biblioteconomia>redes-e-sistemas-de-informacao-rvbi-e-cooperacao-bibliografica",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biblioteconomia>redes-e-sistemas-de-informacao-rvbi-e-cooperacao-bibliografica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "biblioteconomia>redes-e-sistemas-de-informacao-rvbi-e-cooperacao-bibliografica",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-por-resultados-na-producao-de-servicos-publicos",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>gestao-por-resultados-na-producao-de-servicos-publicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-por-resultados-na-producao-de-servicos-publicos",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>gestao-por-resultados-na-producao-de-servicos-publicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>avaliacao-criterios-de-desempenho-e-conformidade-exame-de-evidencias-e-conclusoes-independentes-sobre-governanca-controles-e-resultados",
+              "confianca": 0.5
+            },
+            {
+              "id": "tecnologia>planejamento-estrategico-de-tic>indicadores-de-desempenho-de-tic-e-alinhamento-com-objetivos-organizacionais",
+              "confianca": 0.3
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>indicadores-de-desempenho-eficiencia-eficacia-e-efetividade",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1636
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>indicadores-de-desempenho-eficiencia-eficacia-e-efetividade",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>avaliacao-criterios-de-desempenho-e-conformidade-exame-de-evidencias-e-conclusoes-independentes-sobre-governanca-controles-e-resultados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>principios-de-governabilidade-e-governanca>intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governabilidade-e-governanca-intermediacao-de-interesses-clientelismo-corporativismo-e-neocorporativismo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-geral>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1618
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-geral>gestao-de-projetos>ciclo-de-vida-e-organizacao-do-projeto",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-complementar-n-131-2009-lei-da-transparencia",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>lei-complementar-n-131-2009-lei-da-transparencia",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+              "confianca": 0.5
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1595
+        }
+      },
+      "consenso": [
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>transparencia-ativa-e-passiva-finalidade-de-pedidos-e-recursos-publicidade-como-regra-e-motivacao-das-restricoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>regime-juridico-administrativo>principios-expressos-e-implicitos-da-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

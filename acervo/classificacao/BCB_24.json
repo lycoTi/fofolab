@@ -5094,7 +5094,7 @@
               "confianca": 0.9
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.5
             }
           ],
@@ -5107,7 +5107,7 @@
           "confianca": 0.9
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.5
         }
       ],
@@ -5338,11 +5338,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
-              "confianca": 0.9
-            },
-            {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
               "confianca": 0.9
             }
           ],
@@ -5351,11 +5347,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
-          "confianca": 0.9
-        },
-        {
-          "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
           "confianca": 0.9
         }
       ],

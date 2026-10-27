@@ -15284,12 +15284,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.45
-            },
-            {
               "id": "desenvolvimento-de-sistemas>jpa-e-persistencia-de-objetos",
               "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.45
             }
           ],
           "versaoVocabulario": 514
@@ -15301,7 +15301,7 @@
           "confianca": 0.8
         },
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.45
         }
       ],

@@ -1,5 +1,5 @@
 {
-  "versao": 1573,
+  "versao": 1682,
   "assuntos": [
     {
       "id": "administracao-de-recursos-humanos",
@@ -10,10 +10,73 @@
       "origem": "proposta"
     },
     {
+      "id": "administracao-de-recursos-humanos>atuacao-estrategica-de-rh-e-business-partner",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Atuação estratégica de RH e business partner"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>competencias-do-profissional-de-rh-e-planejamento-de-carreira",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Competências do profissional de RH e planejamento de carreira"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>consultoria-interna-de-rh-e-tendencias-em-gestao-de-pessoas",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Consultoria interna de RH e tendências em gestão de pessoas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>desenho-e-redesenho-de-cargos",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Desenho e redesenho de cargos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-de-recursos-humanos>dimensionamento-da-forca-de-trabalho",
       "caminho": [
         "Administração de Recursos Humanos",
         "Dimensionamento da Força de Trabalho"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>modernizacao-e-novas-formas-de-organizacao-do-trabalho-em-rh",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Modernização e novas formas de organização do trabalho em RH"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>people-analytics-e-analise-de-dados-em-gestao-de-pessoas",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "People Analytics e análise de dados em gestão de pessoas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-de-recursos-humanos>processos-de-gestao-de-pessoas-recompensar-e-manter-pessoas",
+      "caminho": [
+        "Administração de Recursos Humanos",
+        "Processos de gestão de pessoas: recompensar e manter pessoas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -160,6 +223,15 @@
       "caminho": [
         "Administração Geral",
         "Análise e mapeamento de processos de negócio"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-geral>arquitetura-de-marca",
+      "caminho": [
+        "Administração Geral",
+        "Arquitetura de marca"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -917,6 +989,15 @@
       "origem": "edital"
     },
     {
+      "id": "administracao-geral>governanca-corporativa-principios-praticas-e-finalidade",
+      "caminho": [
+        "Administração Geral",
+        "Governança corporativa: princípios, práticas e finalidade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-geral>governanca-e-estrategia",
       "caminho": [
         "Administração Geral",
@@ -1160,6 +1241,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "administracao-geral>orcamento-empresarial-e-planejamento-integrado",
+      "caminho": [
+        "Administração Geral",
+        "Orçamento empresarial e planejamento integrado"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "administracao-geral>organizacao-do-trabalho-e-divisao-do-trabalho",
@@ -2052,6 +2142,15 @@
       "origem": "edital"
     },
     {
+      "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>instrumentos-de-planejamento-ppa-ldo-e-loa-e-categorias-de-programacao",
+      "caminho": [
+        "Administração Orçamentária e Financeira e Orçamento Público",
+        "Instrumentos de planejamento: PPA, LDO e LOA e categorias de programação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>interfaces-entre-administracao-publica-e-privada-formas-de-colaboracao",
       "caminho": [
         "Administração Orçamentária e Financeira e Orçamento Público",
@@ -2860,6 +2959,24 @@
       "origem": "proposta"
     },
     {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-publica-comites-e-colegiados",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Governança pública: comitês e colegiados"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-publica-e-integridade",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Governança pública e integridade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governanca-publica-organizacional",
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
@@ -2873,6 +2990,15 @@
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
         "Governo digital e transformação digital"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>indicadores-de-desempenho-eficiencia-eficacia-e-efetividade",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Indicadores de desempenho: eficiência, eficácia e efetividade"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -3030,6 +3156,15 @@
       "origem": "edital"
     },
     {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>programa-de-gestao-e-teletrabalho-na-administracao-publica",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Programa de Gestão e teletrabalho na Administração Pública"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-publica-e-fundamentos-de-politicas-publicas>programa-nacional-de-desestatizacao",
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
@@ -3043,6 +3178,15 @@
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
         "Qualidade no atendimento ao usuário de serviços públicos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>redes-alternativas-de-producao-e-comercializacao-agroalimentar-e-inovacoes-sociais",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Redes alternativas de produção e comercialização agroalimentar e inovações sociais"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -3067,10 +3211,63 @@
       "origem": "edital"
     },
     {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>sistema-de-inovacao-modelos-de-helice-triplice-e-quadrupla",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Sistema de inovação: modelos de hélice tríplice e quádrupla"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-publica-e-fundamentos-de-politicas-publicas>teoria-da-regulacao-e-regulacao-responsiva",
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
         "Teoria da regulação e regulação responsiva"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia",
+      "caminho": [
+        "Agronomia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia>agroecologia-e-agroecossistemas",
+      "caminho": [
+        "Agronomia",
+        "Agroecologia e agroecossistemas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia>apicultura-e-meliponicultura",
+      "caminho": [
+        "Agronomia",
+        "Apicultura e meliponicultura"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia>olericultura-sistemas-de-producao-de-hortalicas-tuberosas",
+      "caminho": [
+        "Agronomia",
+        "Olericultura: sistemas de produção de hortaliças tuberosas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia>zoneamento-agricola-e-credito-rural",
+      "caminho": [
+        "Agronomia",
+        "Zoneamento agrícola e crédito rural"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -3233,6 +3430,15 @@
       "caminho": [
         "Análise de Informação",
         "Microsoft Word: revisão e controle de alterações"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
+      "caminho": [
+        "Análise de Informação",
+        "Mineração de dados e business intelligence"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -5644,6 +5850,15 @@
       "origem": "proposta"
     },
     {
+      "id": "artes>linguagem-cinematografica",
+      "caminho": [
+        "Artes",
+        "Linguagem cinematográfica"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "artes>movimentos-artisticos-e-linguagens-visuais",
       "caminho": [
         "Artes",
@@ -5665,6 +5880,24 @@
       "caminho": [
         "Atualidades",
         "Cenário internacional e conflitos geopolíticos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "atualidades>meio-ambiente-e-aquecimento-global",
+      "caminho": [
+        "Atualidades",
+        "Meio ambiente e aquecimento global"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "atualidades>meio-ambiente-e-mudancas-climaticas",
+      "caminho": [
+        "Atualidades",
+        "Meio ambiente e mudanças climáticas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -6071,34 +6304,12 @@
       "origem": "edital"
     },
     {
-      "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
-      "caminho": [
-        "Auditoria de Contratações, Transferências e Execução de Recursos",
-        "Engenharia de Software",
-        "Engenharia de Requisitos",
-        "Critérios de aceitação"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
       "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
       "caminho": [
         "Auditoria de Contratações, Transferências e Execução de Recursos",
         "Engenharia de Software",
         "Engenharia de Requisitos",
         "Histórias do usuário"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>requisitos-e-experiencia-do-usuario",
-      "caminho": [
-        "Auditoria de Contratações, Transferências e Execução de Recursos",
-        "Engenharia de Software",
-        "Engenharia de Requisitos",
-        "Requisitos e experiência do usuário"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -7384,6 +7595,15 @@
       "origem": "edital"
     },
     {
+      "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>cobit-5-e-governanca-de-ti",
+      "caminho": [
+        "Auditoria Governamental, Compliance, Gestão de Risco e Governança",
+        "COBIT 5 e governança de TI"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>compliance-aplicada-a-gestao-publica",
       "caminho": [
         "Auditoria Governamental, Compliance, Gestão de Risco e Governança",
@@ -7614,6 +7834,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
+      "caminho": [
+        "Auditoria Governamental, Compliance, Gestão de Risco e Governança",
+        "Gestão de riscos: técnicas de análise (árvore de eventos e árvore de falhas)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-qualitativa-e-quantitativa-iso-31-000",
@@ -8259,6 +8488,15 @@
       "origem": "proposta"
     },
     {
+      "id": "bancos-de-dados>controle-centralizado-e-integridade-de-dados",
+      "caminho": [
+        "Bancos de Dados",
+        "Controle centralizado e integridade de dados"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "bancos-de-dados>linguagem-sql-consultas-e-comandos",
       "caminho": [
         "Bancos de Dados",
@@ -8442,6 +8680,15 @@
       "caminho": [
         "Biblioteconomia",
         "Bibliografia: conceito e classificação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "biblioteconomia>biblioteca-digital-e-eletronica",
+      "caminho": [
+        "Biblioteconomia",
+        "Biblioteca digital e eletrônica"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -8950,6 +9197,15 @@
       "origem": "proposta"
     },
     {
+      "id": "biologia>ambiencia-bem-estar-e-comportamento-animal",
+      "caminho": [
+        "Biologia",
+        "Ambiência, bem-estar e comportamento animal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "biologia>anatomia-e-fisiologia-humana",
       "caminho": [
         "Biologia",
@@ -9121,6 +9377,15 @@
       "origem": "proposta"
     },
     {
+      "id": "biologia>coleta-e-herborizacao-de-material-botanico",
+      "caminho": [
+        "Biologia",
+        "Coleta e herborização de material botânico"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "biologia>cultivo-de-celulas-e-tecidos",
       "caminho": [
         "Biologia",
@@ -9247,10 +9512,28 @@
       "origem": "proposta"
     },
     {
+      "id": "biologia>evolucao-e-coevolucao-de-insetos-e-plantas",
+      "caminho": [
+        "Biologia",
+        "Evolução e coevolução de insetos e plantas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "biologia>fitogeografia-e-formacoes-vegetais",
       "caminho": [
         "Biologia",
         "Fitogeografia e Formações Vegetais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "biologia>fitopatologia-e-controle-de-doencas-de-plantas",
+      "caminho": [
+        "Biologia",
+        "Fitopatologia e Controle de Doenças de Plantas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -9296,6 +9579,15 @@
       "caminho": [
         "Biologia",
         "Genética toxicológica e ensaio do cometa"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "biologia>genomica-e-anotacao-funcional",
+      "caminho": [
+        "Biologia",
+        "Genômica e anotação funcional"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -11563,10 +11855,28 @@
       "origem": "edital"
     },
     {
+      "id": "comunicacao>argumentacao-e-comunicacao-organizacional",
+      "caminho": [
+        "Comunicação",
+        "Argumentação e comunicação organizacional"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "comunicacao>assessoria-de-imprensa-sugestoes-de-pauta-releases-e-artigos",
       "caminho": [
         "Comunicação",
         "Assessoria de imprensa: sugestões de pauta, releases e artigos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>audio-microfones-e-equipamentos-de-captacao-de-som",
+      "caminho": [
+        "Comunicação",
+        "Áudio, microfones e equipamentos de captação de som"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -11621,6 +11931,15 @@
       "caminho": [
         "Comunicação",
         "Comunicação organizacional e estratégica"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>comunicacao-organizacional-e-informal",
+      "caminho": [
+        "Comunicação",
+        "Comunicação organizacional e informal"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -11863,6 +12182,24 @@
       "origem": "proposta"
     },
     {
+      "id": "comunicacao>linguagem-cinematografica-e-audiovisual",
+      "caminho": [
+        "Comunicação",
+        "Linguagem cinematográfica e audiovisual"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>linguagem-cinematografica-e-roteiro",
+      "caminho": [
+        "Comunicação",
+        "Linguagem cinematográfica e roteiro"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "comunicacao>linguagem-e-tecnica-fotografica",
       "caminho": [
         "Comunicação",
@@ -12065,6 +12402,24 @@
       "caminho": [
         "Comunicação",
         "Protocolo e cerimonial: precedência e normas diplomáticas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>publicidade-e-novas-tecnologias",
+      "caminho": [
+        "Comunicação",
+        "Publicidade e novas tecnologias"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>publicidade-e-propaganda-conceitos-e-finalidades",
+      "caminho": [
+        "Comunicação",
+        "Publicidade e propaganda: conceitos e finalidades"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -12350,6 +12705,15 @@
       "origem": "proposta"
     },
     {
+      "id": "conhecimentos-especificos>anatomia-e-identificacao-de-madeiras",
+      "caminho": [
+        "Conhecimentos Específicos",
+        "Anatomia e identificação de madeiras"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "conhecimentos-especificos>armamento-municao-e-tiro",
       "caminho": [
         "Conhecimentos Específicos",
@@ -12593,6 +12957,24 @@
       "origem": "proposta"
     },
     {
+      "id": "conhecimentos-especificos>politica-nacional-de-desenvolvimento-das-atividades-espaciais-pndae",
+      "caminho": [
+        "Conhecimentos Específicos",
+        "Política Nacional de Desenvolvimento das Atividades Espaciais (PNDAE)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "conhecimentos-especificos>produtos-de-abelhas-normas-higienico-sanitarias-e-tecnologicas-do-mapa",
+      "caminho": [
+        "Conhecimentos Específicos",
+        "Produtos de abelhas: normas higiênico-sanitárias e tecnológicas do MAPA"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "conhecimentos-especificos>proteomica-e-aplicacoes-biomedicas",
       "caminho": [
         "Conhecimentos Específicos",
@@ -12633,6 +13015,15 @@
       "caminho": [
         "Conhecimentos Específicos",
         "Química orgânica: reações de compostos carbonilados e cianoidrinas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "conhecimentos-especificos>sanidade-apicola-e-controle-de-pragas-de-abelhas",
+      "caminho": [
+        "Conhecimentos Específicos",
+        "Sanidade Apícola e Controle de Pragas de Abelhas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -12794,6 +13185,15 @@
       "caminho": [
         "Contabilidade Avançada e Contabilidade de Custos",
         "Avaliação de ativos (valuation)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "contabilidade-avancada-e-contabilidade-de-custos>beneficios-a-empregados",
+      "caminho": [
+        "Contabilidade Avançada e Contabilidade de Custos",
+        "Benefícios a empregados"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -13240,6 +13640,24 @@
       "caminho": [
         "Contabilidade Geral",
         "Ativos não financeiros mantidos para venda"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "contabilidade-geral>balancete-de-verificacao",
+      "caminho": [
+        "Contabilidade Geral",
+        "Balancete de verificação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "contabilidade-geral>capitalizacao-de-custos-de-emprestimos",
+      "caminho": [
+        "Contabilidade Geral",
+        "Capitalização de custos de empréstimos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -13877,6 +14295,15 @@
       "origem": "proposta"
     },
     {
+      "id": "contabilidade-geral>finalidade-e-usuarios-da-contabilidade",
+      "caminho": [
+        "Contabilidade Geral",
+        "Finalidade e usuários da contabilidade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "contabilidade-geral>folha-de-pagamento-e-encargos-sociais",
       "caminho": [
         "Contabilidade Geral",
@@ -14017,6 +14444,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "contabilidade-geral>metodo-da-equivalencia-patrimonial",
+      "caminho": [
+        "Contabilidade Geral",
+        "Método da equivalência patrimonial"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "contabilidade-geral>nocoes-sobre-origem-e-aplicacao-de-recursos",
@@ -14730,6 +15166,15 @@
       "origem": "proposta"
     },
     {
+      "id": "controle-interno>estrutura-e-avaliacao-de-controles-internos",
+      "caminho": [
+        "Controle Interno",
+        "Estrutura e avaliação de controles internos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "controle-interno>monitoramento-de-controles-internos",
       "caminho": [
         "Controle Interno",
@@ -15028,6 +15473,15 @@
       "origem": "proposta"
     },
     {
+      "id": "desenvolvimento-de-sistemas>devops-e-ci-cd-integracao-e-entrega-continuas",
+      "caminho": [
+        "Desenvolvimento de Sistemas",
+        "DevOps e CI/CD: integração e entrega contínuas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "desenvolvimento-de-sistemas>devops-e-integracao-continua-github-actions",
       "caminho": [
         "Desenvolvimento de Sistemas",
@@ -15060,16 +15514,6 @@
         "Desenvolvimento de Sistemas",
         "Engenharia de software",
         "Modelos de software (entidades e relacionamentos, UML), princípios de projeto de software (SOLID, padrões de projeto)"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-      "caminho": [
-        "Desenvolvimento de Sistemas",
-        "Engenharia de software",
-        "Processos de software, engenharia de requisitos, gestão de projetos e produtos de software"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -15299,6 +15743,15 @@
       "caminho": [
         "Desenvolvimento de Sistemas",
         "MPS.BR: níveis de maturidade e processos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "desenvolvimento-de-sistemas>persistencia-de-dados-em-dispositivos-moveis-e-sqlite",
+      "caminho": [
+        "Desenvolvimento de Sistemas",
+        "Persistência de dados em dispositivos móveis e SQLite"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -16241,6 +16694,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-administrativo>analise-de-impacto-regulatorio-e-boas-praticas-regulatorias",
+      "caminho": [
+        "Direito Administrativo",
+        "Análise de Impacto Regulatório e boas práticas regulatórias"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-administrativo>arbitragem-clausula-compromissoria-compromisso-arbitral-e-medidas-cautelares",
       "caminho": [
         "Direito Administrativo",
@@ -16347,6 +16809,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-administrativo>atos-administrativos-atributos-extincao-e-anulacao",
+      "caminho": [
+        "Direito Administrativo",
+        "Atos administrativos: atributos, extinção e anulação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-administrativo>atos-administrativos-conceito-requisitos-atributos-classificacao-extincao-e-nulidade",
       "caminho": [
         "Direito Administrativo",
@@ -16423,6 +16894,15 @@
       "caminho": [
         "Direito Administrativo",
         "Bens públicos: conceito, classificação e regime jurídico"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-administrativo>bens-publicos-uso-de-bem-publico-por-particular",
+      "caminho": [
+        "Direito Administrativo",
+        "Bens públicos: uso de bem público por particular"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -18448,6 +18928,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-ambiental>mineracao-regime-de-exploracao-e-codigo-de-mineracao",
+      "caminho": [
+        "Direito Ambiental",
+        "Mineração: regime de exploração e Código de Mineração"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-ambiental>mudanca-do-clima-convencao-quadro-das-nacoes-unidas-e-inventario-de-emissoes-de-gases-de-efeito-estufa",
       "caminho": [
         "Direito Ambiental",
@@ -18479,6 +18968,15 @@
       "caminho": [
         "Direito Ambiental",
         "Mudança do clima e mecanismos de desenvolvimento limpo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-ambiental>mudancas-no-uso-do-solo-desmatamento-e-biodiversidade",
+      "caminho": [
+        "Direito Ambiental",
+        "Mudanças no uso do solo, desmatamento e biodiversidade"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -19385,6 +19883,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-civil>cooperacao-judiciaria-e-cartas-precatoria-rogatoria-e-de-ordem",
+      "caminho": [
+        "Direito Civil",
+        "Cooperação judiciária e cartas precatória, rogatória e de ordem"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-civil>defensoria-publica",
       "caminho": [
         "Direito Civil",
@@ -19959,6 +20466,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-civil>obrigacoes-modalidades-e-classificacao",
+      "caminho": [
+        "Direito Civil",
+        "Obrigações: modalidades e classificação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-civil>pericia-judicial",
@@ -21564,6 +22080,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-constitucional>defensoria-publica-funcoes-institucionais-e-assistencia-juridica-gratuita",
+      "caminho": [
+        "Direito Constitucional",
+        "Defensoria Pública: funções institucionais e assistência jurídica gratuita"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-constitucional>defesa-do-estado-e-das-instituicoes-democraticas",
       "caminho": [
         "Direito Constitucional",
@@ -21577,6 +22102,15 @@
       "caminho": [
         "Direito Constitucional",
         "Direito sindical e organização sindical"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-constitucional>direitos-de-nacionalidade-perda-e-reaquisicao-da-nacionalidade-brasileira",
+      "caminho": [
+        "Direito Constitucional",
+        "Direitos de nacionalidade: perda e reaquisição da nacionalidade brasileira"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -22741,6 +23275,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-constitucional>tecnica-legislativa-lc-95-1998",
+      "caminho": [
+        "Direito Constitucional",
+        "Técnica Legislativa (LC 95/1998)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-da-crianca-e-do-adolescente",
       "caminho": [
         "Direito da Criança e do Adolescente"
@@ -23562,6 +24105,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-do-trabalho>alteracao-do-contrato-de-trabalho-e-reducao-salarial",
+      "caminho": [
+        "Direito do Trabalho",
+        "Alteração do contrato de trabalho e redução salarial"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-do-trabalho>assedio-moral-no-trabalho-e-poder-diretivo-do-empregador",
       "caminho": [
         "Direito do Trabalho",
@@ -24151,6 +24703,15 @@
       "caminho": [
         "Direito do Trabalho",
         "Recursos trabalhistas e Regimento Interno do TST"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-do-trabalho>relacao-anual-de-informacoes-sociais-rais",
+      "caminho": [
+        "Direito do Trabalho",
+        "Relação Anual de Informações Sociais (RAIS)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -24810,6 +25371,24 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-internacional-publico>direito-do-espaco-e-responsabilidade-por-objetos-espaciais",
+      "caminho": [
+        "Direito Internacional Público",
+        "Direito do espaço e responsabilidade por objetos espaciais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-internacional-publico>direito-espacial-responsabilidade-por-danos-causados-por-objetos-espaciais",
+      "caminho": [
+        "Direito Internacional Público",
+        "Direito Espacial: responsabilidade por danos causados por objetos espaciais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-internacional-publico>fontes-do-direito-internacional-e-incorporacao-de-tratados-ao-direito-interno",
       "caminho": [
         "Direito Internacional Público",
@@ -25016,6 +25595,23 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-minerario",
+      "caminho": [
+        "Direito Minerário"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-minerario>regime-de-concessao-de-lavra-e-desmembramento",
+      "caminho": [
+        "Direito Minerário",
+        "Regime de concessão de lavra e desmembramento"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-notarial-e-registral",
       "caminho": [
         "Direito Notarial e Registral"
@@ -25058,6 +25654,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+      "caminho": [
+        "Direito Notarial e Registral",
+        "Prestação de contas das serventias: receitas e despesas dedutíveis"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-notarial-e-registral>serventia-extrajudicial-modelos-anterior-e-posterior-a-constituicao-federal-de-1988",
@@ -25810,6 +26415,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-penal>imputabilidade-semi-imputabilidade-e-responsabilidade-penal",
+      "caminho": [
+        "Direito Penal",
+        "Imputabilidade, semi-imputabilidade e responsabilidade penal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-penal>juiz-ministerio-publico-acusado-defensor-assistentes-e-auxiliares-da-justica-atos-de-terceiros",
       "caminho": [
         "Direito Penal",
@@ -26469,6 +27083,15 @@
       "origem": "edital"
     },
     {
+      "id": "direito-penal>tribunal-do-juri-desaforamento-do-julgamento",
+      "caminho": [
+        "Direito Penal",
+        "Tribunal do júri: desaforamento do julgamento"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-previdenciario",
       "caminho": [
         "Direito Previdenciário"
@@ -26670,6 +27293,15 @@
       "caminho": [
         "Direito Previdenciário",
         "Fator Acidentário de Prevenção (FAP): métricas e cálculo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-previdenciario>fundos-de-pensao-e-previdencia-complementar",
+      "caminho": [
+        "Direito Previdenciário",
+        "Fundos de Pensão e Previdência Complementar"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -32238,6 +32870,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-agricola>agricultura-de-precisao",
+      "caminho": [
+        "Engenharia Agrícola",
+        "Agricultura de precisão"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-agricola>agrometeorologia-evapotranspiracao",
       "caminho": [
         "Engenharia Agrícola",
@@ -32418,9 +33059,36 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-agricola>sistemas-integrados-de-producao-agropecuaria-ilpf",
+      "caminho": [
+        "Engenharia Agrícola",
+        "Sistemas integrados de produção agropecuária (ILPF)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-ambiental",
       "caminho": [
         "Engenharia Ambiental"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-ambiental>avaliacao-de-ciclo-de-vida",
+      "caminho": [
+        "Engenharia Ambiental",
+        "Avaliação de ciclo de vida"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-ambiental>contaminacao-e-remediacao-de-aquiferos-subterraneos",
+      "caminho": [
+        "Engenharia Ambiental",
+        "Contaminação e remediação de aquíferos subterrâneos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -32475,6 +33143,15 @@
       "caminho": [
         "Engenharia Ambiental",
         "Resíduos sólidos e logística reversa"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-ambiental>sistemas-de-gestao-ambiental-iso-14001",
+      "caminho": [
+        "Engenharia Ambiental",
+        "Sistemas de gestão ambiental (ISO 14001)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -32554,6 +33231,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "engenharia-arquitetura-e-governanca-de-dados>dados-espaciais-modelos-raster-e-vetorial",
+      "caminho": [
+        "Engenharia, Arquitetura e Governança de Dados",
+        "Dados espaciais: modelos raster e vetorial"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "engenharia-arquitetura-e-governanca-de-dados>geoprocessamento-e-georreferenciamento",
@@ -32986,6 +33672,15 @@
       "caminho": [
         "Engenharia Civil",
         "Barragens: projeto e execução (drenagem interna)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-civil>bim-e-interoperabilidade-ifc",
+      "caminho": [
+        "Engenharia Civil",
+        "BIM e interoperabilidade (IFC)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -33619,6 +34314,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-de-agrimensura-ou-geodesia>cartografia-e-projecoes",
+      "caminho": [
+        "Engenharia de Agrimensura ou Geodésia",
+        "Cartografia e projeções"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-de-agrimensura-ou-geodesia>historia-da-cartografia-e-fundamentos-teoricos-e-metodologicos",
       "caminho": [
         "Engenharia de Agrimensura ou Geodésia",
@@ -34207,22 +34911,13 @@
       "origem": "proposta"
     },
     {
-      "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+      "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao-ifpug",
       "caminho": [
         "Engenharia de Software e Programação",
-        "Análise de Pontos de Função"
+        "Análise de pontos de função (IFPUG)"
       ],
       "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Análise de requisitos funcionais e não funcionais"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
+      "origem": "proposta"
     },
     {
       "id": "engenharia-de-software-e-programacao>analise-e-modelagem-uml",
@@ -34356,59 +35051,19 @@
       "origem": "edital"
     },
     {
-      "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Engenharia de requisitos"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>gestao-de-backlog",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Engenharia de requisitos",
-        "Gestão de backlog"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>gestao-de-divida-tecnica",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Engenharia de requisitos",
-        "Gestão de Dívida Técnica"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Engenharia de requisitos",
-        "Produto mínimo viável (MVP)"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Engenharia de requisitos",
-        "Técnicas de priorização, de estimativas (Análise de Pontos de Função, Story Points)"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
       "id": "engenharia-de-software-e-programacao>gerencia-de-configuracao-e-release-de-software",
       "caminho": [
         "Engenharia de Software e Programação",
         "Gerência de configuração e release de software"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-de-software-e-programacao>gerenciamento-de-configuracao-e-ambientes",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Gerenciamento de configuração e ambientes"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -34437,15 +35092,6 @@
         "Engenharia de Software e Programação",
         "Gestão de configuração",
         "DevOps, modelo de versionamento, merge, branch, pipeline, CI/CD e database migration"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-      "caminho": [
-        "Engenharia de Software e Programação",
-        "Implementação: orientação a objetos, estrutura de dados e algoritmos"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -34652,6 +35298,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-de-software-e-programacao>modelos-de-processo-de-software-cascata-incremental-agil",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Modelos de processo de software (cascata, incremental, ágil)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-de-software-e-programacao>monitoracao-e-observabilidade",
       "caminho": [
         "Engenharia de Software e Programação",
@@ -34703,7 +35358,11 @@
         "Problemas e requisitos",
         "Desenho centrado nas pessoas"
       ],
-      "sinonimos": [],
+      "sinonimos": [
+        "Design de interface e de experiência do usuário, responsividade, usabilidade e acessibilidade, prototipação, testes A/B",
+        "Experiência do usuário (UX) e design de interação",
+        "Design thinking e inovação"
+      ],
       "origem": "edital"
     },
     {
@@ -34713,7 +35372,11 @@
         "Problemas e requisitos",
         "Necessidades de usuários"
       ],
-      "sinonimos": [],
+      "sinonimos": [
+        "Requisitos e experiência do usuário",
+        "Técnicas de UX: personas e empatia com usuários",
+        "Gestão de Produtos e Roadmap"
+      ],
       "origem": "edital"
     },
     {
@@ -34733,7 +35396,14 @@
         "Problemas e requisitos",
         "Requisitos funcionais e não funcionais"
       ],
-      "sinonimos": [],
+      "sinonimos": [
+        "Análise de requisitos funcionais e não funcionais",
+        "Técnicas de elicitação de requisitos funcionais e não-funcionais",
+        "Processos de software, engenharia de requisitos, gestão de projetos e produtos de software",
+        "Especificação de requisitos",
+        "Técnicas de validação de requisitos",
+        "Engenharia de requisitos"
+      ],
       "origem": "edital"
     },
     {
@@ -34743,8 +35413,21 @@
         "Problemas e requisitos",
         "Restrições e critérios de aceitação"
       ],
-      "sinonimos": [],
+      "sinonimos": [
+        "Engenharia de Requisitos: requisitos, histórias do usuário, critérios de aceitação, prototipação",
+        "Análise de Pontos de Função",
+        "Critérios de aceitação"
+      ],
       "origem": "edital"
+    },
+    {
+      "id": "engenharia-de-software-e-programacao>processos-de-desenvolvimento-de-software-rup-fases-e-disciplinas",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Processos de desenvolvimento de software (RUP, fases e disciplinas)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "engenharia-de-software-e-programacao>processos-e-metodologias-de-desenvolvimento-de-software",
@@ -34801,7 +35484,9 @@
         "Programação e correção",
         "Estruturas de dados, algoritmos e pseudocódigo"
       ],
-      "sinonimos": [],
+      "sinonimos": [
+        "Implementação: orientação a objetos, estrutura de dados e algoritmos"
+      ],
       "origem": "edital"
     },
     {
@@ -34957,6 +35642,15 @@
       "caminho": [
         "Engenharia de Software e Programação",
         "Reuso de software e engenharia de componentes"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-de-software-e-programacao>sistemas-embarcados-desenvolvimento-de-software-restricoes-de-hardware-e-energia",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Sistemas embarcados: desenvolvimento de software, restrições de hardware e energia"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -36319,6 +37013,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-eletrica>sistemas-de-iluminacao-de-emergencia-e-prescricoes-normativas",
+      "caminho": [
+        "Engenharia Elétrica",
+        "Sistemas de iluminação de emergência e prescrições normativas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-eletrica>sistemas-de-medicao-e-metrologia",
       "caminho": [
         "Engenharia Elétrica",
@@ -36708,6 +37411,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-florestal>plantio-e-semeadura-de-especies-florestais",
+      "caminho": [
+        "Engenharia Florestal",
+        "Plantio e semeadura de espécies florestais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-florestal>recuperacao-de-areas-degradadas-e-revegetacao",
       "caminho": [
         "Engenharia Florestal",
@@ -36959,6 +37671,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+      "caminho": [
+        "Engenharia Mecânica",
+        "Gerenciamento da integridade de dutos e gasodutos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-mecanica>instrumentacao-e-sensores-de-pressao",
       "caminho": [
         "Engenharia Mecânica",
@@ -37188,6 +37909,15 @@
       "caminho": [
         "Engenharia Mecânica",
         "Motores de combustão interna"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-mecanica>processos-de-fabricacao-e-usinagem",
+      "caminho": [
+        "Engenharia Mecânica",
+        "Processos de fabricação e usinagem"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -37690,6 +38420,15 @@
       "caminho": [
         "Engenharia Química",
         "Operações unitárias: destilação e diagramas de fases"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "engenharia-quimica>quimica-analitica-e-instrumental",
+      "caminho": [
+        "Engenharia Química",
+        "Química Analítica e Instrumental"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -38334,10 +39073,28 @@
       "origem": "proposta"
     },
     {
+      "id": "estatistica-programacao-e-analise-de-dados>convergencia-de-variaveis-aleatorias-e-lei-dos-grandes-numeros",
+      "caminho": [
+        "Estatística, Programação e Análise de Dados",
+        "Convergência de variáveis aleatórias e lei dos grandes números"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "estatistica-programacao-e-analise-de-dados>dados-faltantes-e-metodos-de-imputacao-mar-mice",
       "caminho": [
         "Estatística, Programação e Análise de Dados",
         "Dados faltantes e métodos de imputação (MAR, MICE)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "estatistica-programacao-e-analise-de-dados>distribuicoes-amostrais-e-distribuicao-t-de-student",
+      "caminho": [
+        "Estatística, Programação e Análise de Dados",
+        "Distribuições amostrais e distribuição t de Student"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -41009,6 +41766,15 @@
       "origem": "proposta"
     },
     {
+      "id": "fisica>acustica-e-niveis-sonoros-decibel",
+      "caminho": [
+        "Física",
+        "Acústica e níveis sonoros: decibel"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "fisica>analise-dimensional-e-grandezas-fisicas",
       "caminho": [
         "Física",
@@ -41516,6 +42282,42 @@
       "caminho": [
         "Fonoaudiologia",
         "Audiologia e Avaliação Audiológica"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "fonoaudiologia>audiologia-e-desenvolvimento-do-comportamento-auditivo",
+      "caminho": [
+        "Fonoaudiologia",
+        "Audiologia e desenvolvimento do comportamento auditivo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "fonoaudiologia>disturbios-da-linguagem-e-da-fala",
+      "caminho": [
+        "Fonoaudiologia",
+        "Distúrbios da linguagem e da fala"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "fonoaudiologia>motricidade-orofacial-e-alteracoes-orofaciais",
+      "caminho": [
+        "Fonoaudiologia",
+        "Motricidade orofacial e alterações orofaciais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "fonoaudiologia>motricidade-orofacial-e-degluticao",
+      "caminho": [
+        "Fonoaudiologia",
+        "Motricidade orofacial e deglutição"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -43076,6 +43878,15 @@
       "origem": "proposta"
     },
     {
+      "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+      "caminho": [
+        "Geologia",
+        "Cartografia de riscos geológicos e segurança na mineração"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "geologia>genese-morfologia-e-classificacao-de-solos",
       "caminho": [
         "Geologia",
@@ -43408,6 +44219,23 @@
       "origem": "proposta"
     },
     {
+      "id": "gestao-de-inovacao",
+      "caminho": [
+        "Gestão de Inovação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "gestao-de-inovacao>niveis-de-prontidao-tecnologica-e-gestao-de-projetos-de-inovacao",
+      "caminho": [
+        "Gestão de Inovação",
+        "Níveis de prontidão tecnológica e gestão de projetos de inovação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "governanca-e-gestao-de-projetos",
       "caminho": [
         "Governança e Gestão de Projetos"
@@ -43448,36 +44276,6 @@
         "Governança e Gestão de Projetos",
         "Engenharia de Requisitos",
         "Conceitos básicos"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
-      "caminho": [
-        "Governança e Gestão de Projetos",
-        "Engenharia de Requisitos",
-        "Especificação de requisitos"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-elicitacao-de-requisitos-funcionais-e-nao-funcionais",
-      "caminho": [
-        "Governança e Gestão de Projetos",
-        "Engenharia de Requisitos",
-        "Técnicas de elicitação de requisitos funcionais e não-funcionais"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>tecnicas-de-validacao-de-requisitos",
-      "caminho": [
-        "Governança e Gestão de Projetos",
-        "Engenharia de Requisitos",
-        "Técnicas de validação de requisitos"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -43654,6 +44452,15 @@
       "caminho": [
         "Governança e Gestão de Projetos",
         "Gestão de projetos e gestão operacional"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "governanca-e-gestao-de-projetos>gestao-de-riscos-em-projetos",
+      "caminho": [
+        "Governança e Gestão de Projetos",
+        "Gestão de riscos em projetos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -44502,6 +45309,15 @@
       "caminho": [
         "Governança, Estratégia e Gestão",
         "Mapeamento e melhoria de processos de negócio (BPI)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+      "caminho": [
+        "Governança, Estratégia e Gestão",
+        "Teoria da agência e conflitos de interesse"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -45956,6 +46772,15 @@
       "origem": "proposta"
     },
     {
+      "id": "legislacao-especial>tecnica-legislativa-lc-n-95-1998",
+      "caminho": [
+        "Legislação Especial",
+        "Técnica legislativa (LC nº 95/1998)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "legislacao-especial>transporte-rodoviario-de-passageiros-fretamento-turistico-e-continuo",
       "caminho": [
         "Legislação Especial",
@@ -46825,6 +47650,15 @@
       "origem": "edital"
     },
     {
+      "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+      "caminho": [
+        "Língua Portuguesa",
+        "Correspondência oficial e redação oficial"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
       "caminho": [
         "Língua Portuguesa",
@@ -47046,10 +47880,28 @@
       "origem": "edital"
     },
     {
+      "id": "lingua-portuguesa>sintaxe-funcoes-sintaticas-e-analise-gramatical",
+      "caminho": [
+        "Língua Portuguesa",
+        "Sintaxe: funções sintáticas e análise gramatical"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "lingua-portuguesa>sintaxe-sujeito-e-concordancia",
       "caminho": [
         "Língua Portuguesa",
         "Sintaxe: sujeito e concordância"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "lingua-portuguesa>tecnica-legislativa-e-redacao-de-atos-normativos",
+      "caminho": [
+        "Língua Portuguesa",
+        "Técnica legislativa e redação de atos normativos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -49814,6 +50666,15 @@
       "origem": "proposta"
     },
     {
+      "id": "medicina>medicina-veterinaria-legal",
+      "caminho": [
+        "Medicina",
+        "Medicina veterinária legal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "medicina>nefrologia",
       "caminho": [
         "Medicina",
@@ -50391,6 +51252,15 @@
       "origem": "proposta"
     },
     {
+      "id": "medicina>psiquiatria-eletroconvulsoterapia-e-interacoes-medicamentosas",
+      "caminho": [
+        "Medicina",
+        "Psiquiatria: eletroconvulsoterapia e interações medicamentosas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "medicina>psiquiatria-hospitalar-e-manejo-da-agitacao-psicomotora",
       "caminho": [
         "Medicina",
@@ -50848,6 +51718,15 @@
       "origem": "proposta"
     },
     {
+      "id": "meteorologia>caracteristicas-e-estrutura-da-atmosfera-terrestre",
+      "caminho": [
+        "Meteorologia",
+        "Características e estrutura da atmosfera terrestre"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "meteorologia>instrumentos-e-equipamentos-meteorologicos",
       "caminho": [
         "Meteorologia",
@@ -50872,6 +51751,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "metodos-de-pesquisa>filosofia-da-ciencia-falsificabilidade-e-verificabilidade",
+      "caminho": [
+        "Métodos de Pesquisa",
+        "Filosofia da ciência: falsificabilidade e verificabilidade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "metodos-de-pesquisa>planejamento-da-pesquisa-cientifica",
@@ -50935,6 +51823,15 @@
       "origem": "proposta"
     },
     {
+      "id": "metrologia-normalizacao-e-qualidade>gestao-da-qualidade-em-laboratorios",
+      "caminho": [
+        "Metrologia, Normalização e Qualidade",
+        "Gestão da qualidade em laboratórios"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "metrologia-normalizacao-e-qualidade>indicadores-de-desempenho-e-normas-abnt-nbr-iso",
       "caminho": [
         "Metrologia, Normalização e Qualidade",
@@ -50966,6 +51863,15 @@
       "caminho": [
         "Metrologia, Normalização e Qualidade",
         "SINMETRO, CONMETRO e INMETRO: estrutura e atribuições"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "metrologia-normalizacao-e-qualidade>sistemas-de-gestao-da-qualidade-e-normas-iso-iso-17025-iso-9001-iso-20387",
+      "caminho": [
+        "Metrologia, Normalização e Qualidade",
+        "Sistemas de gestão da qualidade e normas ISO (ISO 17025, ISO 9001, ISO 20387)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -51619,6 +52525,15 @@
       "origem": "edital"
     },
     {
+      "id": "nocoes-de-arquivologia>arquivo-corrente-intermediario-e-permanente-centros-de-documentacao",
+      "caminho": [
+        "Noções de Arquivologia",
+        "Arquivo corrente, intermediário e permanente; centros de documentação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "nocoes-de-arquivologia>arquivos-privados-e-documentos-historicos",
       "caminho": [
         "Noções de Arquivologia",
@@ -52189,6 +53104,15 @@
       "origem": "proposta"
     },
     {
+      "id": "nocoes-de-estatistica-probabilidade>probabilidade-e-analise-combinatoria",
+      "caminho": [
+        "Noções de Estatística/Probabilidade",
+        "Probabilidade e análise combinatória"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "nocoes-de-estatistica-probabilidade>probabilidade-operacoes-com-eventos-e-axiomas",
       "caminho": [
         "Noções de Estatística/Probabilidade",
@@ -52691,6 +53615,15 @@
       "origem": "proposta"
     },
     {
+      "id": "normas-institucionais>estatuto-e-regimento-geral-da-universidade-de-brasilia",
+      "caminho": [
+        "Normas Institucionais",
+        "Estatuto e Regimento Geral da Universidade de Brasília"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "normas-institucionais>instrucoes-normativas-do-conselho-nacional-de-justica-93-2023-94-2023-97-2023-e-suas-alteracoes",
       "caminho": [
         "Normas Institucionais",
@@ -52780,10 +53713,64 @@
       "origem": "proposta"
     },
     {
+      "id": "nutricao>controle-de-qualidade-em-unidades-de-alimentacao-e-nutricao",
+      "caminho": [
+        "Nutrição",
+        "Controle de qualidade em unidades de alimentação e nutrição"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>fatores-de-correcao-e-coccao-no-planejamento-de-refeicoes",
+      "caminho": [
+        "Nutrição",
+        "Fatores de Correção e Cocção no Planejamento de Refeições"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "nutricao>nutricao-e-dietetica-fibras-alimentares",
       "caminho": [
         "Nutrição",
         "Nutrição e dietética: fibras alimentares"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>proteinas-e-aminoacidos",
+      "caminho": [
+        "Nutrição",
+        "Proteínas e aminoácidos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>tecnica-dietetica-e-planejamento-de-cardapios",
+      "caminho": [
+        "Nutrição",
+        "Técnica Dietética e Planejamento de Cardápios"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>tecnicas-dieteticas-e-metodos-de-coccao",
+      "caminho": [
+        "Nutrição",
+        "Técnicas dietéticas e métodos de cocção"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>tipos-e-padroes-de-cardapio",
+      "caminho": [
+        "Nutrição",
+        "Tipos e Padrões de Cardápio"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -57849,17 +58836,6 @@
       "origem": "edital"
     },
     {
-      "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
-      "caminho": [
-        "Processos de Desenvolvimento e Sustentação de Software",
-        "Desenvolvimento",
-        "Desenvolvimento frontend web",
-        "Design de interface e de experiência do usuário, responsividade, usabilidade e acessibilidade, prototipação, testes A/B"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
       "id": "processos-de-desenvolvimento-e-sustentacao-de-software>desenvolvimento>desenvolvimento-frontend-web>frameworks-bootstrap-e-vuejs",
       "caminho": [
         "Processos de Desenvolvimento e Sustentação de Software",
@@ -58168,16 +59144,6 @@
         "Processos de Desenvolvimento e Sustentação de Software",
         "Engenharia de Software",
         "Desenvolvimento orientado por comportamento (BDD), guiado por testes (TDD) e guiado por testes de aceitação (ATDD)"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
-      "caminho": [
-        "Processos de Desenvolvimento e Sustentação de Software",
-        "Engenharia de Software",
-        "Engenharia de Requisitos: requisitos, histórias do usuário, critérios de aceitação, prototipação"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -59704,6 +60670,15 @@
       "origem": "proposta"
     },
     {
+      "id": "redes-de-computadores>protocolos-de-diretorio-e-servicos-de-rede-ldap",
+      "caminho": [
+        "Redes de Computadores",
+        "Protocolos de diretório e serviços de rede (LDAP)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "redes-de-computadores>protocolos-de-gerenciamento-de-rede-snmp",
       "caminho": [
         "Redes de Computadores",
@@ -59726,6 +60701,15 @@
       "caminho": [
         "Redes de Computadores",
         "Serviços de rede e comandos de diagnóstico (DNS, cache e ipconfig)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "redes-de-computadores>servidores-web-e-aplicacoes-dinamicas",
+      "caminho": [
+        "Redes de Computadores",
+        "Servidores web e aplicações dinâmicas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -60393,6 +61377,15 @@
       "caminho": [
         "Regulação de Serviços Públicos",
         "Regulação por incentivos e revisão tarifária"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "regulacao-de-servicos-publicos>regulacao-responsiva-e-enforcement",
+      "caminho": [
+        "Regulação de Serviços Públicos",
+        "Regulação responsiva e enforcement"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -61736,6 +62729,15 @@
       "origem": "proposta"
     },
     {
+      "id": "seguranca-da-informacao>gestao-de-riscos-de-ti-analise-e-avaliacao-de-riscos",
+      "caminho": [
+        "Segurança da Informação",
+        "Gestão de riscos de TI: análise e avaliação de riscos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
       "caminho": [
         "Segurança da Informação",
@@ -62033,6 +63035,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "seguranca-da-informacao>principios-de-seguranca-da-informacao-confidencialidade-integridade-e-disponibilidade",
+      "caminho": [
+        "Segurança da Informação",
+        "Princípios de segurança da informação: confidencialidade, integridade e disponibilidade"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "seguranca-da-informacao>protocolos-de-autenticacao-e-autorizacao",
@@ -62753,6 +63764,15 @@
       "caminho": [
         "Segurança e Saúde no Trabalho",
         "Ergonomia e psicopatologias do trabalho"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-e-saude-no-trabalho>ergonomia-ergonomia-cognitiva-e-diretrizes-ergonomicas",
+      "caminho": [
+        "Segurança e Saúde no Trabalho",
+        "Ergonomia: ergonomia cognitiva e diretrizes ergonômicas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -63763,6 +64783,15 @@
       "origem": "proposta"
     },
     {
+      "id": "sensoriamento-remoto-e-geoprocessamento>aerofotogrametria-e-vants-ortomosaico-pontos-de-controle-e-acuracia",
+      "caminho": [
+        "Sensoriamento Remoto e Geoprocessamento",
+        "Aerofotogrametria e VANTs: ortomosaico, pontos de controle e acurácia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "sensoriamento-remoto-e-geoprocessamento>analise-e-classificacao-de-imagens-de-satelite-para-mapeamento-de-uso-e-cobertura-do-solo",
       "caminho": [
         "Sensoriamento Remoto e Geoprocessamento",
@@ -63790,10 +64819,28 @@
       "origem": "proposta"
     },
     {
+      "id": "sensoriamento-remoto-e-geoprocessamento>estruturas-de-dados-espaciais-e-geoprocessamento",
+      "caminho": [
+        "Sensoriamento Remoto e Geoprocessamento",
+        "Estruturas de dados espaciais e geoprocessamento"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "sensoriamento-remoto-e-geoprocessamento>fundamentos-de-sensoriamento-remoto",
       "caminho": [
         "Sensoriamento Remoto e Geoprocessamento",
         "Fundamentos de sensoriamento remoto"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "sensoriamento-remoto-e-geoprocessamento>geoprocessamento-dados-raster-e-resolucao-espacial",
+      "caminho": [
+        "Sensoriamento Remoto e Geoprocessamento",
+        "Geoprocessamento: dados raster e resolução espacial"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -64470,6 +65517,15 @@
       "origem": "proposta"
     },
     {
+      "id": "sistemas-operacionais>z-os-e-mainframe-recursos-do-sistema-operacional",
+      "caminho": [
+        "Sistemas Operacionais",
+        "z/OS e mainframe: recursos do sistema operacional"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento",
       "caminho": [
         "Sociedade Brasileira, Desigualdades, Diversidade e Desenvolvimento"
@@ -64789,6 +65845,15 @@
       "origem": "proposta"
     },
     {
+      "id": "sustentabilidade-e-responsabilidade-social>praticas-esg-corporativas-e-responsabilidade-ambiental-e-social",
+      "caminho": [
+        "Sustentabilidade e Responsabilidade Social",
+        "Práticas ESG corporativas e responsabilidade ambiental e social"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "sustentabilidade-e-responsabilidade-social>sistema-de-gestao-ambiental-e-avaliacao-do-ciclo-de-vida-iso-14001-14040-14044",
       "caminho": [
         "Sustentabilidade e Responsabilidade Social",
@@ -64829,6 +65894,15 @@
       "caminho": [
         "Sustentabilidade e Responsabilidade Social",
         "Transição energética e matriz energética brasileira"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "sustentabilidade-e-responsabilidade-social>tripe-da-sustentabilidade-e-gestao-de-processos-sustentaveis",
+      "caminho": [
+        "Sustentabilidade e Responsabilidade Social",
+        "Tripé da sustentabilidade e gestão de processos sustentáveis"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -65899,6 +66973,15 @@
       "origem": "proposta"
     },
     {
+      "id": "tecnologia>ecossistemas-de-inovacao",
+      "caminho": [
+        "Tecnologia",
+        "Ecossistemas de inovação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "tecnologia>edicao-de-documentos-e-formatos-de-arquivo-word-pdf",
       "caminho": [
         "Tecnologia",
@@ -66201,6 +67284,15 @@
       "origem": "proposta"
     },
     {
+      "id": "tecnologia>gestao-de-servicos-de-ti-itil-e-catalogo-de-servicos",
+      "caminho": [
+        "Tecnologia",
+        "Gestão de serviços de TI (ITIL) e catálogo de serviços"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "tecnologia>gestao-e-governanca-na-administracao-publica",
       "caminho": [
         "Tecnologia",
@@ -66383,6 +67475,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "tecnologia>hardware-portas-e-interfaces-de-conexao-usb",
+      "caminho": [
+        "Tecnologia",
+        "Hardware: portas e interfaces de conexão (USB)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "tecnologia>help-desk-e-suporte-tecnico",
@@ -66850,6 +67951,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "tecnologia>manufatura-aditiva-e-impressao-3d",
+      "caminho": [
+        "Tecnologia",
+        "Manufatura aditiva e impressão 3D"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "tecnologia>metrologia-e-instrumentos-de-medicao-relogio-comparador",
@@ -67352,6 +68462,15 @@
       "origem": "proposta"
     },
     {
+      "id": "tecnologia>sistemas-de-webconferencia-e-comunicacao-unificada",
+      "caminho": [
+        "Tecnologia",
+        "Sistemas de webconferência e comunicação unificada"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "tecnologia>sistemas-estruturantes-da-administracao-publica-federal",
       "caminho": [
         "Tecnologia",
@@ -67385,6 +68504,15 @@
       "caminho": [
         "Tecnologia",
         "Sistemas globais de navegação por satélite (GNSS)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "tecnologia>soa-e-web-services",
+      "caminho": [
+        "Tecnologia",
+        "SOA e Web Services"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -67481,16 +68609,6 @@
       "caminho": [
         "Tecnologia",
         "Tecnologias e práticas frontend web: HTML, CSS, Ajax, frameworks (Bootstrap, Angular, VueJS e React)"
-      ],
-      "sinonimos": [],
-      "origem": "edital"
-    },
-    {
-      "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react>design-de-interface-e-de-experiencia-do-usuario-responsividade-usabilidade-e-acessibilidade-prototipacao-testes-a-b",
-      "caminho": [
-        "Tecnologia",
-        "Tecnologias e práticas frontend web: HTML, CSS, Ajax, frameworks (Bootstrap, Angular, VueJS e React)",
-        "Design de interface e de experiência do usuário, responsividade, usabilidade e acessibilidade, prototipação, testes A/B"
       ],
       "sinonimos": [],
       "origem": "edital"
@@ -67787,6 +68905,15 @@
       "caminho": [
         "Telecomunicações",
         "Processos estocásticos e sinais de comunicação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "telecomunicacoes>propagacao-de-ondas-e-sistemas-sem-fio",
+      "caminho": [
+        "Telecomunicações",
+        "Propagação de ondas e sistemas sem fio"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -68637,6 +69764,122 @@
       "caminho": [
         "Vigilância Sanitária",
         "Regulação sanitária e farmacopeia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia",
+      "caminho": [
+        "Zootecnia"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>anatomia-e-fisiologia-digestoria-dos-animais-de-producao",
+      "caminho": [
+        "Zootecnia",
+        "Anatomia e fisiologia digestória dos animais de produção"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>apicultura-e-meliponicultura",
+      "caminho": [
+        "Zootecnia",
+        "Apicultura e meliponicultura"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>apicultura-sanidade-e-controle-de-patogenos",
+      "caminho": [
+        "Zootecnia",
+        "Apicultura: sanidade e controle de patógenos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>aquicultura-e-sistemas-de-producao-aquicola",
+      "caminho": [
+        "Zootecnia",
+        "Aquicultura e sistemas de produção aquícola"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>aquicultura-sistemas-de-producao-e-mitilicultura",
+      "caminho": [
+        "Zootecnia",
+        "Aquicultura: sistemas de produção e mitilicultura"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>aquicultura-sistemas-de-recirculacao-e-reuso-de-agua",
+      "caminho": [
+        "Zootecnia",
+        "Aquicultura: sistemas de recirculação e reúso de água"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>bem-estar-animal-e-ambiencia-em-sistemas-de-producao-animal",
+      "caminho": [
+        "Zootecnia",
+        "Bem-estar animal e ambiência em sistemas de produção animal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>manejo-e-bem-estar-de-bovinos",
+      "caminho": [
+        "Zootecnia",
+        "Manejo e bem-estar de bovinos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>nutricao-e-formulacao-de-dietas-para-bovinos",
+      "caminho": [
+        "Zootecnia",
+        "Nutrição e formulação de dietas para bovinos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>produtos-apicolas-qualidade-e-avaliacao-do-mel",
+      "caminho": [
+        "Zootecnia",
+        "Produtos apícolas: qualidade e avaliação do mel"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>sistemas-de-integracao-pecuaria-floresta",
+      "caminho": [
+        "Zootecnia",
+        "Sistemas de integração pecuária-floresta"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>sistemas-integrados-de-producao-agropecuaria",
+      "caminho": [
+        "Zootecnia",
+        "Sistemas integrados de produção agropecuária"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -79880,6 +81123,729 @@
         "novo assunto: Metrologia, Normalização e Qualidade › Leitura e interpretação de instrumentos de medição (paquímetro)",
         "novo assunto: Odontologia › Lesões não cariosas: erosão dentária",
         "novo assunto: Engenharia Elétrica › Motores elétricos: corrente de partida e relação IP/IN"
+      ]
+    },
+    {
+      "versao": 1574,
+      "mudancas": [
+        "junção: Engenharia de Software e Programação › Análise de requisitos funcionais e não funcionais → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1575,
+      "mudancas": [
+        "junção: Governança e Gestão de Projetos › Engenharia de Requisitos › Técnicas de elicitação de requisitos funcionais e não-funcionais → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1576,
+      "mudancas": [
+        "junção: Desenvolvimento de Sistemas › Engenharia de software › Processos de software, engenharia de requisitos, gestão de projetos e produtos de software → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1577,
+      "mudancas": [
+        "junção: Governança e Gestão de Projetos › Engenharia de Requisitos › Especificação de requisitos → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1578,
+      "mudancas": [
+        "junção: Governança e Gestão de Projetos › Engenharia de Requisitos › Técnicas de validação de requisitos → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1579,
+      "mudancas": [
+        "junção: Engenharia de Software e Programação › Engenharia de requisitos → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1580,
+      "mudancas": [
+        "junção: Processos de Desenvolvimento e Sustentação de Software › Engenharia de Software › Engenharia de Requisitos: requisitos, histórias do usuário, critérios de aceitação, prototipação → Engenharia de Software e Programação › Problemas e requisitos › Restrições e critérios de aceitação"
+      ]
+    },
+    {
+      "versao": 1581,
+      "mudancas": [
+        "junção: Engenharia de Software e Programação › Análise de Pontos de Função → Engenharia de Software e Programação › Problemas e requisitos › Restrições e critérios de aceitação"
+      ]
+    },
+    {
+      "versao": 1582,
+      "mudancas": [
+        "junção: Auditoria de Contratações, Transferências e Execução de Recursos › Engenharia de Software › Engenharia de Requisitos › Critérios de aceitação → Engenharia de Software e Programação › Problemas e requisitos › Restrições e critérios de aceitação"
+      ]
+    },
+    {
+      "versao": 1583,
+      "mudancas": [
+        "junção: Auditoria de Contratações, Transferências e Execução de Recursos › Engenharia de Software › Engenharia de Requisitos › Requisitos e experiência do usuário → Engenharia de Software e Programação › Problemas e requisitos › Necessidades de usuários"
+      ]
+    },
+    {
+      "versao": 1584,
+      "mudancas": [
+        "junção: Processos de Desenvolvimento e Sustentação de Software › Desenvolvimento › Desenvolvimento frontend web › Design de interface e de experiência do usuário, responsividade, usabilidade e acessibilidade, prototipação, testes A/B → Engenharia de Software e Programação › Problemas e requisitos › Desenho centrado nas pessoas"
+      ]
+    },
+    {
+      "versao": 1585,
+      "mudancas": [
+        "junção: Tecnologia › Tecnologias e práticas frontend web: HTML, CSS, Ajax, frameworks (Bootstrap, Angular, VueJS e React) › Design de interface e de experiência do usuário, responsividade, usabilidade e acessibilidade, prototipação, testes A/B → Engenharia de Software e Programação › Problemas e requisitos › Desenho centrado nas pessoas"
+      ]
+    },
+    {
+      "versao": 1586,
+      "mudancas": [
+        "junção: Engenharia de Software e Programação › Implementação: orientação a objetos, estrutura de dados e algoritmos → Engenharia de Software e Programação › Programação e correção › Estruturas de dados, algoritmos e pseudocódigo"
+      ]
+    },
+    {
+      "versao": 1587,
+      "mudancas": [
+        "novo assunto: Tecnologia › Manufatura aditiva e impressão 3D"
+      ]
+    },
+    {
+      "versao": 1588,
+      "mudancas": [
+        "novo assunto: Análise de Informação › Mineração de dados e business intelligence"
+      ]
+    },
+    {
+      "versao": 1589,
+      "mudancas": [
+        "novo assunto: Direito Administrativo › Análise de Impacto Regulatório e boas práticas regulatórias"
+      ]
+    },
+    {
+      "versao": 1590,
+      "mudancas": [
+        "novo assunto: Língua Portuguesa › Sintaxe: funções sintáticas e análise gramatical",
+        "novo assunto: Comunicação › Argumentação e comunicação organizacional"
+      ]
+    },
+    {
+      "versao": 1591,
+      "mudancas": [
+        "novo assunto: Governança, Estratégia e Gestão › Design thinking e inovação",
+        "novo assunto: Controle Interno › Estrutura e avaliação de controles internos"
+      ]
+    },
+    {
+      "versao": 1592,
+      "mudancas": [
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Governança pública e integridade",
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Governança pública: comitês e colegiados"
+      ]
+    },
+    {
+      "versao": 1593,
+      "mudancas": [
+        "novo assunto: Direito Ambiental › Mineração: regime de exploração e Código de Mineração"
+      ]
+    },
+    {
+      "versao": 1594,
+      "mudancas": [
+        "novo assunto: Comunicação › Publicidade e novas tecnologias"
+      ]
+    },
+    {
+      "versao": 1595,
+      "mudancas": [
+        "novo assunto: Desenvolvimento de Sistemas › Persistência de dados em dispositivos móveis e SQLite"
+      ]
+    },
+    {
+      "versao": 1596,
+      "mudancas": [
+        "novo assunto: Conhecimentos Específicos › Política Nacional de Desenvolvimento das Atividades Espaciais (PNDAE)"
+      ]
+    },
+    {
+      "versao": 1597,
+      "mudancas": [
+        "novo assunto: Administração Geral › Arquitetura de marca"
+      ]
+    },
+    {
+      "versao": 1598,
+      "mudancas": [
+        "novo assunto: Direito Administrativo › Bens públicos: uso de bem público por particular"
+      ]
+    },
+    {
+      "versao": 1599,
+      "mudancas": [
+        "novo assunto: Regulação de Serviços Públicos › Regulação responsiva e enforcement"
+      ]
+    },
+    {
+      "versao": 1600,
+      "mudancas": [
+        "novo assunto: Governança, Estratégia e Gestão › Gestão de Produtos e Roadmap"
+      ]
+    },
+    {
+      "versao": 1601,
+      "mudancas": [
+        "novo assunto: Engenharia Mecânica › Gerenciamento da integridade de dutos e gasodutos",
+        "novo assunto: Engenharia de Software e Programação › Engenharia de requisitos"
+      ]
+    },
+    {
+      "versao": 1602,
+      "mudancas": [
+        "novo assunto: Contabilidade Geral › Balancete de verificação"
+      ]
+    },
+    {
+      "versao": 1603,
+      "mudancas": [
+        "novo assunto: Direito Constitucional › Defensoria Pública: funções institucionais e assistência jurídica gratuita"
+      ]
+    },
+    {
+      "versao": 1604,
+      "mudancas": [
+        "novo assunto: Administração de Recursos Humanos › Desenho e redesenho de cargos"
+      ]
+    },
+    {
+      "versao": 1605,
+      "mudancas": [
+        "novo assunto: Direito Ambiental › Mudanças no uso do solo, desmatamento e biodiversidade"
+      ]
+    },
+    {
+      "versao": 1606,
+      "mudancas": [
+        "novo assunto: Direito Minerário",
+        "novo assunto: Direito Minerário › Regime de concessão de lavra e desmembramento"
+      ]
+    },
+    {
+      "versao": 1607,
+      "mudancas": [
+        "novo assunto: Administração de Recursos Humanos › Modernização e novas formas de organização do trabalho em RH"
+      ]
+    },
+    {
+      "versao": 1608,
+      "mudancas": [
+        "novo assunto: Direito do Trabalho › Alteração do contrato de trabalho e redução salarial"
+      ]
+    },
+    {
+      "versao": 1609,
+      "mudancas": [
+        "novo assunto: Medicina › Psiquiatria: eletroconvulsoterapia e interações medicamentosas"
+      ]
+    },
+    {
+      "versao": 1610,
+      "mudancas": [
+        "novo assunto: Biblioteconomia › Biblioteca digital e eletrônica",
+        "novo assunto: Biologia › Genômica e anotação funcional"
+      ]
+    },
+    {
+      "versao": 1611,
+      "mudancas": [
+        "novo assunto: Engenharia de Software e Programação › Análise de pontos de função (IFPUG)"
+      ]
+    },
+    {
+      "versao": 1612,
+      "mudancas": [
+        "novo assunto: Governança e Gestão de Projetos › Gestão de riscos em projetos"
+      ]
+    },
+    {
+      "versao": 1613,
+      "mudancas": [
+        "novo assunto: Governança, Estratégia e Gestão › Teoria da agência e conflitos de interesse"
+      ]
+    },
+    {
+      "versao": 1614,
+      "mudancas": [
+        "novo assunto: Língua Portuguesa › Técnica legislativa e redação de atos normativos"
+      ]
+    },
+    {
+      "versao": 1615,
+      "mudancas": [
+        "novo assunto: Administração Orçamentária e Financeira e Orçamento Público › Instrumentos de planejamento: PPA, LDO e LOA e categorias de programação"
+      ]
+    },
+    {
+      "versao": 1616,
+      "mudancas": [
+        "novo assunto: Engenharia Ambiental › Avaliação de ciclo de vida"
+      ]
+    },
+    {
+      "versao": 1617,
+      "mudancas": [
+        "novo assunto: Comunicação › Áudio, microfones e equipamentos de captação de som",
+        "novo assunto: Atualidades › Meio ambiente e aquecimento global"
+      ]
+    },
+    {
+      "versao": 1618,
+      "mudancas": [
+        "novo assunto: Conhecimentos Específicos › Sanidade Apícola e Controle de Pragas de Abelhas",
+        "novo assunto: Direito Internacional Público › Direito Espacial: responsabilidade por danos causados por objetos espaciais"
+      ]
+    },
+    {
+      "versao": 1619,
+      "mudancas": [
+        "novo assunto: Direito Penal › Imputabilidade, semi-imputabilidade e responsabilidade penal"
+      ]
+    },
+    {
+      "versao": 1620,
+      "mudancas": [
+        "novo assunto: Geologia › Cartografia de riscos geológicos e segurança na mineração",
+        "novo assunto: Direito do Trabalho › Relação Anual de Informações Sociais (RAIS)",
+        "novo assunto: Estatística, Programação e Análise de Dados › Distribuições amostrais e distribuição t de Student",
+        "novo assunto: Estatística, Programação e Análise de Dados › Convergência de variáveis aleatórias e lei dos grandes números"
+      ]
+    },
+    {
+      "versao": 1621,
+      "mudancas": [
+        "novo assunto: Bancos de Dados › Controle centralizado e integridade de dados",
+        "novo assunto: Contabilidade Geral › Finalidade e usuários da contabilidade"
+      ]
+    },
+    {
+      "versao": 1622,
+      "mudancas": [
+        "novo assunto: Direito Previdenciário › Fundos de Pensão e Previdência Complementar",
+        "novo assunto: Direito Administrativo › Atos administrativos: atributos, extinção e anulação"
+      ]
+    },
+    {
+      "versao": 1623,
+      "mudancas": [
+        "novo assunto: Engenharia Agrícola › Sistemas integrados de produção agropecuária (ILPF)",
+        "novo assunto: Comunicação › Comunicação organizacional e informal"
+      ]
+    },
+    {
+      "versao": 1624,
+      "mudancas": [
+        "novo assunto: Direito Notarial e Registral › Prestação de contas das serventias: receitas e despesas dedutíveis",
+        "novo assunto: Segurança da Informação › Gestão de riscos de TI: análise e avaliação de riscos"
+      ]
+    },
+    {
+      "versao": 1625,
+      "mudancas": [
+        "novo assunto: Administração de Recursos Humanos › Consultoria interna de RH e tendências em gestão de pessoas"
+      ]
+    },
+    {
+      "versao": 1626,
+      "mudancas": [
+        "novo assunto: Sensoriamento Remoto e Geoprocessamento › Estruturas de dados espaciais e geoprocessamento",
+        "novo assunto: Biologia › Ambiência, bem-estar e comportamento animal"
+      ]
+    },
+    {
+      "versao": 1627,
+      "mudancas": [
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Sistema de inovação: modelos de hélice tríplice e quádrupla",
+        "novo assunto: Direito Penal › Tribunal do júri: desaforamento do julgamento"
+      ]
+    },
+    {
+      "versao": 1628,
+      "mudancas": [
+        "novo assunto: Direito Internacional Público › Direito do espaço e responsabilidade por objetos espaciais",
+        "novo assunto: Administração de Recursos Humanos › Competências do profissional de RH e planejamento de carreira"
+      ]
+    },
+    {
+      "versao": 1629,
+      "mudancas": [
+        "novo assunto: Legislação Especial › Técnica legislativa (LC nº 95/1998)"
+      ]
+    },
+    {
+      "versao": 1630,
+      "mudancas": [
+        "novo assunto: Engenharia de Software e Programação › Modelos de processo de software (cascata, incremental, ágil)"
+      ]
+    },
+    {
+      "versao": 1631,
+      "mudancas": [
+        "novo assunto: Engenharia Ambiental › Sistemas de gestão ambiental (ISO 14001)"
+      ]
+    },
+    {
+      "versao": 1632,
+      "mudancas": [
+        "novo assunto: Conhecimentos Específicos › Anatomia e identificação de madeiras"
+      ]
+    },
+    {
+      "versao": 1633,
+      "mudancas": [
+        "novo assunto: Engenharia Química › Química Analítica e Instrumental"
+      ]
+    },
+    {
+      "versao": 1634,
+      "mudancas": [
+        "novo assunto: Fonoaudiologia › Distúrbios da linguagem e da fala",
+        "novo assunto: Telecomunicações › Propagação de ondas e sistemas sem fio"
+      ]
+    },
+    {
+      "versao": 1635,
+      "mudancas": [
+        "novo assunto: Sustentabilidade e Responsabilidade Social › Tripé da sustentabilidade e gestão de processos sustentáveis"
+      ]
+    },
+    {
+      "versao": 1636,
+      "mudancas": [
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Indicadores de desempenho: eficiência, eficácia e efetividade",
+        "novo assunto: Normas Institucionais › Estatuto e Regimento Geral da Universidade de Brasília",
+        "novo assunto: Comunicação › Publicidade e propaganda: conceitos e finalidades"
+      ]
+    },
+    {
+      "versao": 1637,
+      "mudancas": [
+        "novo assunto: Metrologia, Normalização e Qualidade › Gestão da qualidade em laboratórios",
+        "novo assunto: Tecnologia › SOA e Web Services",
+        "novo assunto: Direito Constitucional › Técnica Legislativa (LC 95/1998)"
+      ]
+    },
+    {
+      "versao": 1638,
+      "mudancas": [
+        "novo assunto: Fonoaudiologia › Motricidade orofacial e alterações orofaciais",
+        "novo assunto: Fonoaudiologia › Audiologia e desenvolvimento do comportamento auditivo"
+      ]
+    },
+    {
+      "versao": 1639,
+      "mudancas": [
+        "novo assunto: Administração de Recursos Humanos › People Analytics e análise de dados em gestão de pessoas",
+        "novo assunto: Segurança da Informação › Princípios de segurança da informação: confidencialidade, integridade e disponibilidade",
+        "novo assunto: Zootecnia",
+        "novo assunto: Zootecnia › Bem-estar animal e ambiência em sistemas de produção animal",
+        "novo assunto: Sensoriamento Remoto e Geoprocessamento › Aerofotogrametria e VANTs: ortomosaico, pontos de controle e acurácia"
+      ]
+    },
+    {
+      "versao": 1640,
+      "mudancas": [
+        "novo assunto: Sustentabilidade e Responsabilidade Social › Práticas ESG corporativas e responsabilidade ambiental e social",
+        "novo assunto: Metrologia, Normalização e Qualidade › Sistemas de gestão da qualidade e normas ISO (ISO 17025, ISO 9001, ISO 20387)"
+      ]
+    },
+    {
+      "versao": 1641,
+      "mudancas": [
+        "novo assunto: Administração Geral › Orçamento empresarial e planejamento integrado"
+      ]
+    },
+    {
+      "versao": 1642,
+      "mudancas": [
+        "novo assunto: Administração Geral › Governança corporativa: princípios, práticas e finalidade"
+      ]
+    },
+    {
+      "versao": 1643,
+      "mudancas": [
+        "novo assunto: Nutrição › Proteínas e aminoácidos"
+      ]
+    },
+    {
+      "versao": 1644,
+      "mudancas": [
+        "novo assunto: Medicina › Medicina veterinária legal"
+      ]
+    },
+    {
+      "versao": 1645,
+      "mudancas": [
+        "novo assunto: Contabilidade Avançada e Contabilidade de Custos › Benefícios a empregados"
+      ]
+    },
+    {
+      "versao": 1646,
+      "mudancas": [
+        "novo assunto: Contabilidade Geral › Capitalização de custos de empréstimos"
+      ]
+    },
+    {
+      "versao": 1647,
+      "mudancas": [
+        "novo assunto: Tecnologia › Sistemas de webconferência e comunicação unificada",
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Redes alternativas de produção e comercialização agroalimentar e inovações sociais",
+        "novo assunto: Zootecnia › Aquicultura: sistemas de recirculação e reúso de água"
+      ]
+    },
+    {
+      "versao": 1648,
+      "mudancas": [
+        "novo assunto: Engenharia de Software e Programação › Sistemas embarcados: desenvolvimento de software, restrições de hardware e energia"
+      ]
+    },
+    {
+      "versao": 1649,
+      "mudancas": [
+        "novo assunto: Zootecnia › Manejo e bem-estar de bovinos"
+      ]
+    },
+    {
+      "versao": 1650,
+      "mudancas": [
+        "novo assunto: Zootecnia › Aquicultura: sistemas de produção e mitilicultura",
+        "novo assunto: Direito Constitucional › Direitos de nacionalidade: perda e reaquisição da nacionalidade brasileira"
+      ]
+    },
+    {
+      "versao": 1651,
+      "mudancas": [
+        "novo assunto: Artes › Linguagem cinematográfica",
+        "novo assunto: Engenharia de Agrimensura ou Geodésia › Cartografia e projeções"
+      ]
+    },
+    {
+      "versao": 1652,
+      "mudancas": [
+        "novo assunto: Auditoria Governamental, Compliance, Gestão de Risco e Governança › COBIT 5 e governança de TI"
+      ]
+    },
+    {
+      "versao": 1653,
+      "mudancas": [
+        "novo assunto: Gestão de Inovação",
+        "novo assunto: Gestão de Inovação › Níveis de prontidão tecnológica e gestão de projetos de inovação",
+        "novo assunto: Desenvolvimento de Sistemas › DevOps e CI/CD: integração e entrega contínuas",
+        "novo assunto: Atualidades › Meio ambiente e mudanças climáticas",
+        "novo assunto: Tecnologia › Gestão de serviços de TI (ITIL) e catálogo de serviços"
+      ]
+    },
+    {
+      "versao": 1654,
+      "mudancas": [
+        "novo assunto: Contabilidade Geral › Método da equivalência patrimonial",
+        "novo assunto: Língua Portuguesa › Correspondência oficial e redação oficial"
+      ]
+    },
+    {
+      "versao": 1655,
+      "mudancas": [
+        "novo assunto: Meteorologia › Características e estrutura da atmosfera terrestre"
+      ]
+    },
+    {
+      "versao": 1656,
+      "mudancas": [
+        "novo assunto: Redes de Computadores › Protocolos de diretório e serviços de rede (LDAP)",
+        "novo assunto: Biologia › Coleta e herborização de material botânico"
+      ]
+    },
+    {
+      "versao": 1657,
+      "mudancas": [
+        "novo assunto: Nutrição › Técnicas dietéticas e métodos de cocção"
+      ]
+    },
+    {
+      "versao": 1658,
+      "mudancas": [
+        "novo assunto: Nutrição › Técnica Dietética e Planejamento de Cardápios",
+        "novo assunto: Nutrição › Fatores de Correção e Cocção no Planejamento de Refeições",
+        "novo assunto: Nutrição › Tipos e Padrões de Cardápio",
+        "novo assunto: Biologia › Fitopatologia e Controle de Doenças de Plantas"
+      ]
+    },
+    {
+      "versao": 1659,
+      "mudancas": [
+        "novo assunto: Sistemas Operacionais › z/OS e mainframe: recursos do sistema operacional",
+        "novo assunto: Conhecimentos Específicos › Produtos de abelhas: normas higiênico-sanitárias e tecnológicas do MAPA"
+      ]
+    },
+    {
+      "versao": 1660,
+      "mudancas": [
+        "novo assunto: Engenharia de Software e Programação › Gerenciamento de configuração e ambientes",
+        "novo assunto: Redes de Computadores › Servidores web e aplicações dinâmicas",
+        "novo assunto: Zootecnia › Anatomia e fisiologia digestória dos animais de produção"
+      ]
+    },
+    {
+      "versao": 1661,
+      "mudancas": [
+        "novo assunto: Direito Civil › Obrigações: modalidades e classificação",
+        "novo assunto: Zootecnia › Apicultura: sanidade e controle de patógenos"
+      ]
+    },
+    {
+      "versao": 1662,
+      "mudancas": [
+        "novo assunto: Nutrição › Controle de qualidade em unidades de alimentação e nutrição",
+        "novo assunto: Engenharia Elétrica › Sistemas de iluminação de emergência e prescrições normativas",
+        "novo assunto: Agronomia",
+        "novo assunto: Agronomia › Agroecologia e agroecossistemas",
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Programa de Gestão e teletrabalho na Administração Pública"
+      ]
+    },
+    {
+      "versao": 1663,
+      "mudancas": [
+        "novo assunto: Segurança e Saúde no Trabalho › Ergonomia: ergonomia cognitiva e diretrizes ergonômicas",
+        "novo assunto: Engenharia Ambiental › Contaminação e remediação de aquíferos subterrâneos",
+        "novo assunto: Direito Civil › Cooperação judiciária e cartas precatória, rogatória e de ordem"
+      ]
+    },
+    {
+      "versao": 1664,
+      "mudancas": [
+        "novo assunto: Engenharia Mecânica › Processos de fabricação e usinagem",
+        "novo assunto: Fonoaudiologia › Motricidade orofacial e deglutição"
+      ]
+    },
+    {
+      "versao": 1665,
+      "mudancas": [
+        "novo assunto: Zootecnia › Apicultura e meliponicultura"
+      ]
+    },
+    {
+      "versao": 1666,
+      "mudancas": [
+        "novo assunto: Tecnologia › Ecossistemas de inovação",
+        "novo assunto: Administração de Recursos Humanos › Atuação estratégica de RH e business partner",
+        "novo assunto: Engenharia, Arquitetura e Governança de Dados › Dados espaciais: modelos raster e vetorial"
+      ]
+    },
+    {
+      "versao": 1667,
+      "mudancas": [
+        "novo assunto: Noções de Arquivologia › Arquivo corrente, intermediário e permanente; centros de documentação"
+      ]
+    },
+    {
+      "versao": 1668,
+      "mudancas": [
+        "novo assunto: Zootecnia › Sistemas de integração pecuária-floresta"
+      ]
+    },
+    {
+      "versao": 1669,
+      "mudancas": [
+        "novo assunto: Engenharia Agrícola › Agricultura de precisão",
+        "novo assunto: Zootecnia › Produtos apícolas: qualidade e avaliação do mel"
+      ]
+    },
+    {
+      "versao": 1670,
+      "mudancas": [
+        "novo assunto: Métodos de Pesquisa › Filosofia da ciência: falsificabilidade e verificabilidade",
+        "novo assunto: Agronomia › Olericultura: sistemas de produção de hortaliças tuberosas"
+      ]
+    },
+    {
+      "versao": 1671,
+      "mudancas": [
+        "novo assunto: Auditoria Governamental, Compliance, Gestão de Risco e Governança › Gestão de riscos: técnicas de análise (árvore de eventos e árvore de falhas)"
+      ]
+    },
+    {
+      "versao": 1672,
+      "mudancas": [
+        "novo assunto: Noções de Estatística/Probabilidade › Probabilidade e análise combinatória"
+      ]
+    },
+    {
+      "versao": 1673,
+      "mudancas": [
+        "novo assunto: Zootecnia › Sistemas integrados de produção agropecuária"
+      ]
+    },
+    {
+      "versao": 1674,
+      "mudancas": [
+        "novo assunto: Agronomia › Apicultura e meliponicultura",
+        "novo assunto: Física › Acústica e níveis sonoros: decibel",
+        "novo assunto: Comunicação › Linguagem cinematográfica e roteiro",
+        "novo assunto: Biologia › Evolução e coevolução de insetos e plantas"
+      ]
+    },
+    {
+      "versao": 1675,
+      "mudancas": [
+        "novo assunto: Interação Humano-Computador › Experiência do usuário (UX) e design de interação",
+        "novo assunto: Engenharia de Software e Programação › Processos de desenvolvimento de software (RUP, fases e disciplinas)",
+        "novo assunto: Comunicação › Linguagem cinematográfica e audiovisual",
+        "novo assunto: Agronomia › Zoneamento agrícola e crédito rural",
+        "novo assunto: Interação Humano-Computador › Técnicas de UX: personas e empatia com usuários",
+        "novo assunto: Zootecnia › Aquicultura e sistemas de produção aquícola"
+      ]
+    },
+    {
+      "versao": 1676,
+      "mudancas": [
+        "novo assunto: Sensoriamento Remoto e Geoprocessamento › Geoprocessamento: dados raster e resolução espacial",
+        "novo assunto: Tecnologia › Hardware: portas e interfaces de conexão (USB)",
+        "novo assunto: Zootecnia › Nutrição e formulação de dietas para bovinos",
+        "novo assunto: Engenharia Civil › BIM e interoperabilidade (IFC)",
+        "novo assunto: Engenharia Florestal › Plantio e semeadura de espécies florestais"
+      ]
+    },
+    {
+      "versao": 1677,
+      "mudancas": [
+        "novo assunto: Administração de Recursos Humanos › Processos de gestão de pessoas: recompensar e manter pessoas"
+      ]
+    },
+    {
+      "versao": 1678,
+      "mudancas": [
+        "junção: Interação Humano-Computador › Técnicas de UX: personas e empatia com usuários → Engenharia de Software e Programação › Problemas e requisitos › Necessidades de usuários"
+      ]
+    },
+    {
+      "versao": 1679,
+      "mudancas": [
+        "junção: Interação Humano-Computador › Experiência do usuário (UX) e design de interação → Engenharia de Software e Programação › Problemas e requisitos › Desenho centrado nas pessoas"
+      ]
+    },
+    {
+      "versao": 1680,
+      "mudancas": [
+        "junção: Governança, Estratégia e Gestão › Design thinking e inovação → Engenharia de Software e Programação › Problemas e requisitos › Desenho centrado nas pessoas"
+      ]
+    },
+    {
+      "versao": 1681,
+      "mudancas": [
+        "junção: Governança, Estratégia e Gestão › Gestão de Produtos e Roadmap → Engenharia de Software e Programação › Problemas e requisitos › Necessidades de usuários"
+      ]
+    },
+    {
+      "versao": 1682,
+      "mudancas": [
+        "junção: Engenharia de Software e Programação › Engenharia de requisitos → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
       ]
     }
   ]

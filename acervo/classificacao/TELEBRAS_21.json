@@ -2527,7 +2527,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.5
             }
           ],
@@ -2536,7 +2536,7 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.5
         }
       ],
@@ -2580,16 +2580,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.85
-            },
-            {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-              "confianca": 0.7
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-              "confianca": 0.5
             }
           ],
           "versaoVocabulario": 1256
@@ -2597,16 +2589,8 @@
       },
       "consenso": [
         {
-          "id": "governanca-e-gestao-de-projetos>engenharia-de-requisitos>especificacao-de-requisitos",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.85
-        },
-        {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
-          "confianca": 0.7
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>analise-de-requisitos-funcionais-e-nao-funcionais",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2679,7 +2663,7 @@
               "confianca": 0.95
             },
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.7
             }
           ],
@@ -2692,7 +2676,7 @@
           "confianca": 0.95
         },
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.7
         }
       ],

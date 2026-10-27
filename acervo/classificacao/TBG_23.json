@@ -1,0 +1,3615 @@
+{
+  "identificador": "TBG_23",
+  "itens": {
+    "TBG_23:888_TBG_001_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>acordo-de-leniencia-requisitos-colaboracao-efeitos-obrigacoes-de-integridade-e-limites",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>acordo-de-leniencia-requisitos-colaboracao-efeitos-obrigacoes-de-integridade-e-limites",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>compliance-conceitos-programas-de-integridade-e-treinamentos",
+              "confianca": 0.85
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-estrutura-e-integracao-organizacional",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>compliance-conceitos-programas-de-integridade-e-treinamentos",
+          "confianca": 0.85
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-estrutura-e-integracao-organizacional",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>analise-economico-financeira>indicadores-de-endividamento",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>analise-economico-financeira>indicadores-de-estrutura-de-capitais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-economico-financeira>indicadores-de-endividamento",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>analise-economico-financeira>indicadores-de-estrutura-de-capitais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>analise-economico-financeira",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1644
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-economico-financeira",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>documentacao-de-auditoria-e-papeis-de-trabalho",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1654
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>documentacao-de-auditoria-e-papeis-de-trabalho",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>universo-selecao-e-priorizacao-risco-de-auditoria-objetivos-escopo-criterios-e-questoes-matriz-de-planejamento-programa-de-trabalho-e-desenho-de-evidencias",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>relacao-entre-perguntas-de-auditoria-e-de-avaliacao-de-politicas-respeitadas-suas-finalidades-e-seus-desenhos",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>planejamento-tecnico-do-trabalho>relacao-entre-perguntas-de-auditoria-e-de-avaliacao-de-politicas-respeitadas-suas-finalidades-e-seus-desenhos",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>testes-de-observancia",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>testes-de-observancia",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1670
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>materialidades-risco-e-relevancia",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.5
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1606
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>materialidades-risco-e-relevancia",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.5
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>testes-substantivos",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>testes-substantivos",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-interno>conceitos-objetivos-e-estrutura-do-controle-interno",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-fraudes-e-erros-na-escrita-fiscal",
+              "confianca": 0.9
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1636
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-fraudes-e-erros-na-escrita-fiscal",
+          "confianca": 0.9
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>populacao-e-amostra",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>responsabilidade-do-auditor-quanto-a-fraude-e-erro",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1617
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>populacao-e-amostra",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>responsabilidade-do-auditor-quanto-a-fraude-e-erro",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>comunicacao-monitoramento-e-qualidade>construcao-de-relatorios-e-recomendacoes-sustentados-por-evidencias-avaliacao-de-solucoes-alternativas-testes-de-implementacao-e-resultado-beneficios-e-monitoramento",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-coso",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-interno>coso-definicao-e-componentes-do-controle-interno",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-coso",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-interno>coso-definicao-e-componentes-do-controle-interno",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-coso",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>coso-erm-comunicacao-e-reporte-de-riscos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1648
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>gestao-de-riscos-coso",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>coso-erm-comunicacao-e-reporte-de-riscos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1669
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.8
+            },
+            {
+              "id": "controle-interno>coso-relacao-entre-objetivos-e-componentes-do-controle-interno",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1656
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.8
+        },
+        {
+          "id": "controle-interno>coso-relacao-entre-objetivos-e-componentes-do-controle-interno",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>distincao-entre-indicadores-de-percepcao-experiencia-denuncias-deteccao-e-sancoes-na-analise-da-corrupcao-subnotificacao-e-limites-de-inferencia-sobre-sua-ocorrencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>distincao-entre-indicadores-de-percepcao-experiencia-denuncias-deteccao-e-sancoes-na-analise-da-corrupcao-subnotificacao-e-limites-de-inferencia-sobre-sua-ocorrencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>achados-documentacao-e-revisao>criterio-condicao-causas-e-efeitos-suficiencia-e-adequacao-da-evidencia-papeis-de-trabalho-trilha-de-revisao-e-supervisao-contradita-tecnica-e-exame-de-evidencias-divergentes-indicios-de-fraude-e-aprofundamento-compativel-com-o-mandato",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>responsabilidade-do-auditor-quanto-a-fraude-e-erro",
+              "confianca": 0.8
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1668
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>responsabilidade-do-auditor-quanto-a-fraude-e-erro",
+          "confianca": 0.8
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+              "confianca": 0.75
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1644
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-publica>finalidades-dos-programas-e-medidas-de-integridade-compromisso-da-lideranca-orientacao-etica-identificacao-de-riscos-canais-de-relato-e-acompanhamento-de-acoes",
+          "confianca": 0.75
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+              "confianca": 0.75
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1612
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>analise-de-conflitos-de-interesses-impedimentos-favorecimento-e-exercicio-de-atividade-privada-medidas-de-prevencao-orientacao-e-tratamento",
+          "confianca": 0.75
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>identificacao-de-interesses-privados-em-conflito-com-a-funcao-publica-e-medidas-de-prevencao-consulta-e-encaminhamento-nos-termos-dos-arts-3-a-5-8-e-10-da-lei-n-12-813-2013",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1633
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>diagnostico-de-riscos-e-avaliacao-da-existencia-implementacao-e-efetividade-de-programas-de-integridade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>salvaguardas-da-identidade-do-denunciante-desde-o-recebimento-do-relato-pseudonimizacao-acesso-por-necessidade-de-conhecer-rastreabilidade-e-condicoes-legais-de-compartilhamento-ou-revelacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>ouvidoria-e-protecao-das-pessoas>protecao-da-identidade-e-prevencao-de-retaliacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1618
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>integridade-privada>finalidades-dos-programas-de-integridade-e-sua-relacao-com-o-poder-publico-compromisso-da-direcao-registros-confiaveis-controles-diligencia-proporcional-sobre-terceiros-canais-de-relato-e-remediacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>protecao-do-denunciante-e-tratamento-seguro-dos-relatos>salvaguardas-da-identidade-do-denunciante-desde-o-recebimento-do-relato-pseudonimizacao-acesso-por-necessidade-de-conhecer-rastreabilidade-e-condicoes-legais-de-compartilhamento-ou-revelacao",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>ouvidoria-e-protecao-das-pessoas>protecao-da-identidade-e-prevencao-de-retaliacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>supervisao-e-controle-de-qualidade",
+              "confianca": 0.5
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>internet",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>internet",
+          "confianca": 0.5
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>supervisao-e-controle-de-qualidade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1616
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>tecnicas-de-avaliacao-do-valor-justo",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>diferenca-entre-dados-pessoais-e-dados-pessoais-sensiveis-nocoes-de-tarjamento-anonimizacao-e-risco-de-reidentificacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>diferenca-entre-dados-pessoais-e-dados-pessoais-sensiveis-nocoes-de-tarjamento-anonimizacao-e-risco-de-reidentificacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.6
+            },
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.6
+        },
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1666
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+              "confianca": 0.8
+            },
+            {
+              "id": "controle-interno>planejamento-anual-de-auditoria-e-normas-de-controle-interno-estadual",
+              "confianca": 0.6
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>proposito-servicos-e-papeis>avaliacao-e-consultoria-como-servicos-de-auditoria-interna-governamental-apuracao-de-atos-e-fatos-com-indicios-de-ilegalidade-ou-irregularidade-na-utilizacao-de-recursos-publicos-federais-como-competencia-do-sistema-de-controle-interno",
+          "confianca": 0.8
+        },
+        {
+          "id": "controle-interno>planejamento-anual-de-auditoria-e-normas-de-controle-interno-estadual",
+          "confianca": 0.6
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>finalidades-do-controle-interno-externo-e-social-insercao-institucional-da-cgu-no-poder-executivo-federal",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>empresas-estatais-e-lei-n-13-303-2016",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1602
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>empresas-estatais-e-lei-n-13-303-2016",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>finalidade-publica-sustentabilidade-economico-financeira-e-prestacao-de-contas-conflitos-de-interesses-e-controles",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>estrutura-conceitual-e-criterios-de-reconhecimento-e-mensuracao-de-ativos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-conceitual-para-elaboracao-e-divulgacao-de-relatorio-contabil-financeiro",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>estrutura-conceitual-e-criterios-de-reconhecimento-e-mensuracao-de-ativos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>conteudo-integral-da-disciplina-contabilidade-geral-e-ainda-criterios-de-avaliacao-e-baixas-das-contas-do-ativo-investimentos-imobilizado-e-intangivel",
+              "confianca": 0
+            },
+            {
+              "id": "contabilidade-geral>estrutura-conceitual-e-criterios-de-reconhecimento-e-mensuracao-de-ativos",
+              "confianca": 0
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>conteudo-integral-da-disciplina-contabilidade-geral-e-ainda-criterios-de-avaliacao-e-baixas-das-contas-do-ativo-investimentos-imobilizado-e-intangivel",
+          "confianca": 0
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>ativos-intangiveis>aspectos-conceituais-definicao-reconhecimento-e-mensuracao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>ativos-intangiveis>aspectos-conceituais-definicao-reconhecimento-e-mensuracao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>licencas-e-afastamentos-do-empregado",
+              "confianca": 0.6
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>beneficios-a-empregados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1645
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>beneficios-a-empregados",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-do-trabalho>licencas-e-afastamentos-do-empregado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>capitalizacao-de-custos-de-emprestimos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1646
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>capitalizacao-de-custos-de-emprestimos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>capitalizacao-de-custos-de-emprestimos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1646
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>capitalizacao-de-custos-de-emprestimos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-na-escrita-fiscal-digital-efd-e-nota-fiscal-eletronica-nfe",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1646
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>auditoria-na-escrita-fiscal-digital-efd-e-nota-fiscal-eletronica-nfe",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>orcamento-empresarial-e-planejamento-integrado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>orcamento-empresarial-e-planejamento-integrado",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.6
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-de-fluxos-de-caixa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1661
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+          "confianca": 0.6
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-de-fluxos-de-caixa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>tipos-de-custeio-conceitos-diferenciacoes-apropriacao-dos-custos-impactos-nos-resultados",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>conceitos-gerais-e-terminologia-aplicavel-a-contabilidade-de-custos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>tipos-de-custeio-conceitos-diferenciacoes-apropriacao-dos-custos-impactos-nos-resultados",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>conceitos-gerais-e-terminologia-aplicavel-a-contabilidade-de-custos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>valuation-e-fluxo-de-caixa-descontado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1627
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>valuation-e-fluxo-de-caixa-descontado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>valuation-e-fluxo-de-caixa-descontado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>valuation-e-fluxo-de-caixa-descontado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-de-investimentos-payback",
+              "confianca": 0.95
+            },
+            {
+              "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-de-investimentos-payback",
+          "confianca": 0.95
+        },
+        {
+          "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-de-investimentos-payback",
+              "confianca": 0.95
+            },
+            {
+              "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1613
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-de-investimentos-payback",
+          "confianca": 0.95
+        },
+        {
+          "id": "matematica-financeira>taxa-minima-de-atratividade-e-indicadores-de-investimento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>aplicacoes-java-com-spring-framework-e-spring-boot-organizacao-de-componentes-inversao-de-controle-e-injecao-de-dependencias",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1607
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>arquiteturas-de-aplicacoes>aplicacoes-java-com-spring-framework-e-spring-boot-organizacao-de-componentes-inversao-de-controle-e-injecao-de-dependencias",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>persistencia-em-java-com-jpa-mapeamento-de-entidades-e-relacionamentos-ciclo-de-vida-das-entidades-contexto-de-persistencia-consultas-e-transacoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1615
+        }
+      },
+      "consenso": [
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>modelagem-e-persistencia>persistencia-em-java-com-jpa-mapeamento-de-entidades-e-relacionamentos-ciclo-de-vida-das-entidades-contexto-de-persistencia-consultas-e-transacoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>algoritmos-e-logica-de-programacao-funcoes-e-blocos-de-comandos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1665
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>algoritmos-e-logica-de-programacao-funcoes-e-blocos-de-comandos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>algoritmos-e-logica-de-programacao-funcoes-e-blocos-de-comandos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1665
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>algoritmos-e-logica-de-programacao-funcoes-e-blocos-de-comandos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1666
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1666
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1666
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-seguranca-em-pipelines-sast-dast-e-devsecops",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>testes-e-analise-de-seguranca-de-aplicacoes-sast-dast-iast",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>tecnicas-de-desenvolvimento-seguro",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-seguranca-em-pipelines-sast-dast-e-devsecops",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>testes-e-analise-de-seguranca-de-aplicacoes-sast-dast-iast",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>tecnicas-de-desenvolvimento-seguro",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.85
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.85
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+              "confianca": 0.85
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1657
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>isolamento-persistencia-redes-e-recursos",
+          "confianca": 0.85
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1664
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>conteinerizacao-de-aplicacoes-e-devops",
+          "confianca": 0.8
+        },
+        {
+          "id": "arquitetura-e-integracao-de-sistemas>confiabilidade-das-aplicacoes>conteineres-servicos-de-nuvem-e-processamento-serverless-como-ambientes-de-implantacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+              "confianca": 0.9
+            },
+            {
+              "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres",
+          "confianca": 0.9
+        },
+        {
+          "id": "computacao-em-nuvem-virtualizacao-e-automacao>virtualizacao-e-conteineres>maquinas-virtuais-conteineres-e-orquestracao",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>virtualizacao-e-conteineres-vmware-docker-containerd-kubernetes-conceitos-de-conteineres-e-orquestracao-de-conteineres",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>validacao-com-usuarios-e-prevencao-de-erros-no-uso-dos-servicos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1675
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>validacao-com-usuarios-e-prevencao-de-erros-no-uso-dos-servicos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-software-e-estrategias-de-teste",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1645
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>testes-de-software-e-estrategias-de-teste",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1600
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1630
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1652
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1675
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1675
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "regulacao-de-servicos-publicos>fiscalizacao-e-regulacao-de-servicos-de-transporte-terrestre",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1669
+        }
+      },
+      "consenso": [
+        {
+          "id": "regulacao-de-servicos-publicos>fiscalizacao-e-regulacao-de-servicos-de-transporte-terrestre",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_005_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>processo-administrativo>processo-de-planejamento>processo-decisorio",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>processo-administrativo>processo-de-planejamento>processo-decisorio",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_006_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-geral>marketing-segmentacao-de-mercado-e-comportamento-do-consumidor",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1664
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>marketing-segmentacao-de-mercado-e-comportamento-do-consumidor",
+          "confianca": 0.7
+        },
+        {
+          "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_006_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>marketing-digital-e-seo",
+              "confianca": 0.95
+            },
+            {
+              "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1648
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>marketing-digital-e-seo",
+          "confianca": 0.95
+        },
+        {
+          "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_006_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>teorias-da-comunicacao-e-sociedade-do-espetaculo",
+              "confianca": 0.85
+            },
+            {
+              "id": "ciencias-humanas>o-seculo-xx-urbanizacao-da-sociedade-e-a-cultura-de-massas",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>teorias-da-comunicacao-e-sociedade-do-espetaculo",
+          "confianca": 0.85
+        },
+        {
+          "id": "ciencias-humanas>o-seculo-xx-urbanizacao-da-sociedade-e-a-cultura-de-massas",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_006_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.7
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>democratizacao-do-conhecimento-e-exclusao-digital",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1651
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.7
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>democratizacao-do-conhecimento-e-exclusao-digital",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_006_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_007_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "meteorologia>caracteristicas-e-estrutura-da-atmosfera-terrestre",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1655
+        }
+      },
+      "consenso": [
+        {
+          "id": "meteorologia>caracteristicas-e-estrutura-da-atmosfera-terrestre",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_008_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1641
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_008_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>atos-administrativos-poder-de-policia-e-atributos",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>atos-administrativos-poder-de-policia-e-atributos",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>poderes-administrativos>poder-hierarquico-poder-disciplinar-poder-regulamentar-e-poder-de-policia",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+              "confianca": 0.95
+            },
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1597
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+          "confianca": 0.95
+        },
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1671
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:50": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1661
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>riscos-e-controles-essenciais>risco-causa-consequencia-e-controle-prevencao-e-deteccao-proporcionalidade-dos-controles-segregacao-de-funcoes-e-risco-residual",
+          "confianca": 0.8
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>organizacao-do-trabalho-e-trabalhos-sob-condicoes-especiais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1657
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>organizacao-do-trabalho-e-trabalhos-sob-condicoes-especiais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-ambiental>sistemas-de-gestao-ambiental-iso-14001",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1631
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-ambiental>sistemas-de-gestao-ambiental-iso-14001",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-ergonomia-cognitiva-e-diretrizes-ergonomicas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1663
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-ergonomia-cognitiva-e-diretrizes-ergonomicas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>movimentacao-de-materiais-e-ergonomia",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-producao>ergonomia-e-postos-de-trabalho-informatizados",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1670
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>movimentacao-de-materiais-e-ergonomia",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-producao>ergonomia-e-postos-de-trabalho-informatizados",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>ergonomia-e-adaptacao-das-condicoes-de-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1659
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_013_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+              "confianca": 0.4
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_014_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1601
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>produtos-quimicos-rotulagem-e-nr-26",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1659
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>produtos-quimicos-rotulagem-e-nr-26",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-de-seguranca-do-trabalho>aerodispersoides",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1649
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-de-seguranca-do-trabalho>aerodispersoides",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fisica>acustica-e-niveis-sonoros-decibel",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "fisica>acustica-e-niveis-sonoros-decibel",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-seguranca-contra-incendio",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-civil>seguranca-contra-incendio-e-panico-em-edificacoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1676
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-seguranca-contra-incendio",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-civil>seguranca-contra-incendio-e-panico-em-edificacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>analise-de-riscos-e-metodologias-de-identificacao-de-perigos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1592
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>analise-de-riscos-e-metodologias-de-identificacao-de-perigos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-pgr-nr-01",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-nr-1-pgr",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1614
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-pgr-nr-01",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gestao-de-riscos-ocupacionais-e-nr-1-pgr",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_021_01:40": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+              "confianca": 0.55
+            },
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+          "confianca": 0.55
+        },
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+          "confianca": 0.45
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_021_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1643
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_021_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1653
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>circuitos-analogicos-e-dispositivos-eletronicos",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-eletrica>eletromagnetismo>conversao-analogica-digital-e-digital-analogica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_022_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_022_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1620
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-operacional>regulamentacao-tecnica-de-seguranca-operacional-de-instalacoes-maritimas-de-petroleo-e-gas",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1638
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1638
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1638
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1642
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:30": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1674
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1586
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0
+            }
+          ],
+          "versaoVocabulario": 1591
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1672
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1673
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-das-classes-de-palavras",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1599
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1596
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1594
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1593
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1590
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1587
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>funcao-exponencial-e-logaritmos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1649
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>funcao-exponencial-e-logaritmos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>analise-combinatoria-e-contagem",
+              "confianca": 0.85
+            },
+            {
+              "id": "raciocinio-logico>analise-combinatoria",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1669
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>analise-combinatoria-e-contagem",
+          "confianca": 0.85
+        },
+        {
+          "id": "raciocinio-logico>analise-combinatoria",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>linguagem-simples-e-comunicacao-juridica",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>linguagem-simples-e-comunicacao-juridica",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1589
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    }
+  }
+}

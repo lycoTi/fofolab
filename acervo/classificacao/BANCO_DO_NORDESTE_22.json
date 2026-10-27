@@ -562,10 +562,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 66
@@ -575,10 +571,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -670,10 +662,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.5
             }
           ],
           "versaoVocabulario": 629
@@ -683,10 +671,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -749,10 +733,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 577
@@ -762,10 +742,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -798,7 +774,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.75
             }
           ],
@@ -807,7 +783,7 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.75
         }
       ],
@@ -821,10 +797,6 @@
             {
               "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
               "confianca": 0.9
-            },
-            {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.5
             }
           ],
           "versaoVocabulario": 216
@@ -834,10 +806,6 @@
         {
           "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.9
-        },
-        {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -1237,7 +1205,7 @@
               "confianca": 0.8
             },
             {
-              "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -1250,7 +1218,7 @@
           "confianca": 0.8
         },
         {
-          "id": "desenvolvimento-de-sistemas>engenharia-de-software>processos-de-software-engenharia-de-requisitos-gestao-de-projetos-e-produtos-de-software",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],
@@ -1262,7 +1230,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.9
             }
           ],
@@ -1271,7 +1239,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.9
         }
       ],
@@ -1283,12 +1251,8 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.9
-            },
-            {
-              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
-              "confianca": 0.7
             },
             {
               "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
@@ -1300,12 +1264,8 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.9
-        },
-        {
-          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>criterios-de-aceitacao",
-          "confianca": 0.7
         },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>engenharia-de-software>engenharia-de-requisitos>historias-do-usuario",
@@ -1320,7 +1280,7 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.9
             },
             {
@@ -1333,7 +1293,7 @@
       },
       "consenso": [
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.9
         },
         {
@@ -1353,7 +1313,7 @@
               "confianca": 0.85
             },
             {
-              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.6
             }
           ],
@@ -1366,7 +1326,7 @@
           "confianca": 0.85
         },
         {
-          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>engenharia-de-requisitos-requisitos-historias-do-usuario-criterios-de-aceitacao-prototipacao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.6
         }
       ],
@@ -1382,7 +1342,7 @@
               "confianca": 0.85
             },
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.8
             }
           ],
@@ -1395,7 +1355,7 @@
           "confianca": 0.85
         },
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>produto-minimo-viavel-mvp",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.8
         }
       ],
@@ -1436,11 +1396,11 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
               "confianca": 0.9
             },
             {
-              "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
               "confianca": 0.6
             }
           ],
@@ -1449,11 +1409,11 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>analise-de-pontos-de-funcao",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>restricoes-e-criterios-de-aceitacao",
           "confianca": 0.9
         },
         {
-          "id": "engenharia-de-software-e-programacao>engenharia-de-requisitos>tecnicas-de-priorizacao-de-estimativas-analise-de-pontos-de-funcao-story-points",
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
           "confianca": 0.6
         }
       ],
@@ -1544,12 +1504,12 @@
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
-              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
-              "confianca": 0.6
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
+              "confianca": 0.7
             },
             {
-              "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
-              "confianca": 0.7
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.6
             }
           ],
           "versaoVocabulario": 1354
@@ -1557,7 +1517,7 @@
       },
       "consenso": [
         {
-          "id": "engenharia-de-software-e-programacao>implementacao-orientacao-a-objetos-estrutura-de-dados-e-algoritmos",
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>estruturas-de-dados-algoritmos-e-pseudocodigo",
           "confianca": 0.7
         },
         {
