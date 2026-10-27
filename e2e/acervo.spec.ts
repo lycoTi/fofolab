@@ -72,6 +72,7 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   await expect(main).toContainText('Ainda não há questões classificadas neste tópico.');
   await main.getByRole('button', { name: 'Ver do tópico 1 · Arquiteturas de aplicações' }).click();
   await expect(position(page)).toHaveText('Questão 1 de 2');
+  await main.getByRole('button', { name: 'Filtros e busca' }).click();
   await main.getByLabel('Filtrar por situação').selectOption('ALL');
   await expect(position(page)).toHaveText('Questão 1 de 3');
   await main.getByLabel('Filtrar por situação').selectOption('UNSOLVED');
@@ -89,6 +90,7 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   // 5. Tópico A: ao voltar, Inéditas mostra só o item 2 (1 de 1) e Todas mostra os 2 com selo "Já respondida"; desligar esvazia o tópico
   await openTopicQuestions(page, TOPIC_A);
   await expect(position(page)).toHaveText('Questão 1 de 1');
+  await main.getByRole('button', { name: 'Filtros e busca' }).click();
   await main.getByLabel('Filtrar por situação').selectOption('ALL');
   await expect(position(page)).toHaveText('Questão 1 de 2');
   await expect(main).toContainText('Já respondida · Acertou');

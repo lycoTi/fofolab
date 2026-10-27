@@ -7,14 +7,14 @@ import type { ReviewConfidence, SelfDiagnosisType } from '../types/database';
  */
 export const CONFIDENCE_LABEL: Record<ReviewConfidence, string> = {
   SURE: 'Sei',
-  RECENT: 'Vi há pouco',
+  RECENT: 'Estou estudando',
   THINK: 'Acho que sei',
   GUESS: 'Vou chutar',
 };
 
 export const DIAGNOSIS_LABEL: Record<SelfDiagnosisType, string> = {
   MASTERED: 'Dominei',
-  STUDYING: 'Em fixação',
+  STUDYING: 'Pegando o jeito',
   DOUBT: 'Acertei na dúvida',
   LUCKY_GUESS: 'Acertei no chute',
   BASE_GAP: 'Não sabia',

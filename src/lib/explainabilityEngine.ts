@@ -250,7 +250,7 @@ export function explainQuestionComplexity(
   ];
 
   return {
-    title: `Como calculamos ${profile.stars} estrelas para esta questão?`,
+    title: `Como calculamos a dificuldade (${profile.levelLabel}) desta questão?`,
     humanSummary,
     bulletPoints,
     formulaDetails: {

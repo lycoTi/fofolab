@@ -6,11 +6,11 @@ import { DiagnosisPicker } from '../features/answer-flow/DiagnosisPicker';
 const FORBIDDEN_JARGON = ['SURE', 'RECENT', 'GUESS', 'STUDYING', 'LUCKY_GUESS', 'MISCONCEPTION', 'BASE_GAP', 'null', 'undefined'];
 
 describe('Confiança antes de responder', () => {
-  it('quatro opções: Sei, Vi há pouco, Acho que sei, Vou chutar', () => {
+  it('quatro opções: Sei, Estou estudando, Acho que sei, Vou chutar', () => {
     const onChange = vi.fn();
     render(<ConfidencePicker value={null} onChange={onChange} />);
     expect(screen.getByText('Antes de responder: quão seguro você está?')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Vi há pouco' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Estou estudando' }));
     expect(onChange).toHaveBeenCalledWith('RECENT');
     fireEvent.click(screen.getByRole('button', { name: 'Vou chutar' }));
     expect(onChange).toHaveBeenCalledWith('GUESS');
@@ -20,10 +20,10 @@ describe('Confiança antes de responder', () => {
 });
 
 describe('Diagnóstico depois de responder', () => {
-  it('acerto: o deduzido vem marcado e dá para trocar entre Dominei, Em fixação, Acertei na dúvida e Acertei no chute', () => {
+  it('acerto: o deduzido vem marcado e dá para trocar entre Dominei, Pegando o jeito, Acertei na dúvida e Acertei no chute', () => {
     const onChange = vi.fn();
     render(<DiagnosisPicker isCorrect confidence="RECENT" value="STUDYING" onChange={onChange} />);
-    expect(screen.getByRole('button', { name: /Em fixação/ }).getAttribute('aria-pressed')).toBe('true');
+    expect(screen.getByRole('button', { name: /Pegando o jeito/ }).getAttribute('aria-pressed')).toBe('true');
     fireEvent.click(screen.getByRole('button', { name: /Acertei na dúvida/ }));
     expect(onChange).toHaveBeenCalledWith('DOUBT');
     expect(screen.getByRole('button', { name: /Dominei/ })).toBeTruthy();

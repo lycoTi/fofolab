@@ -52,7 +52,7 @@ describe('Explicabilidade sob Demanda, Onboarding Wizard e Modo Meu Dia de Hoje'
     expect(heatExplanation.humanSummary).toContain(cycleData.topicHeatmapRanking[0].topic.title);
 
     const compExplanation = explainQuestionComplexity(
-      { stars: 4, levelLabel: 'Densa / Estudo de Caso', topicCount: 2, linguisticLoad: 'Alta', summaryTip: 'Dica' },
+      { stars: 4, levelLabel: 'Difícil', topicCount: 2, linguisticLoad: 'Alta', summaryTip: 'Dica' },
       'FGV'
     );
     expect(compExplanation.humanSummary).toContain('4/5 estrelas');

@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793129519.267044,
-    "seen": 1793134833.7164562,
-    "ast_hash": "e55b3521d72cd1f096e17edbdd198775",
+    "mtime": 1793139722.5457768,
+    "seen": 1793140211.0803385,
+    "ast_hash": "1beca2c91181a8a9ef83cf12dc5b15ee",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -42,8 +42,8 @@
     "semantic_hash": ""
   },
   "vite.config.ts": {
-    "mtime": 1793134305.4283483,
-    "seen": 1793134833.9098456,
+    "mtime": 1793135400.8183053,
+    "seen": 1793140211.2073665,
     "ast_hash": "36fb733e0727d98f0e0633a79611186f",
     "semantic_hash": ""
   },
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793134673.2106688,
-    "seen": 1793134833.9874985,
-    "ast_hash": "0b7f904ab7549f7df94d6eb188bf3cdd",
+    "mtime": 1793135396.5258226,
+    "seen": 1793140211.2642844,
+    "ast_hash": "18be25815a0593a4c867504e0a3fb75f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "src/components/CurriculumManagerModal.tsx": {
-    "mtime": 1793061579.9695523,
-    "seen": 1793062745.845283,
-    "ast_hash": "0619b9056da68da6324f472caba07fe3",
+    "mtime": 1793139724.5591037,
+    "seen": 1793140211.1104474,
+    "ast_hash": "cf886d1ee5e064ddbcc77e6041e450eb",
     "semantic_hash": ""
   },
   "src/data/initialSeed.ts": {
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "src/lib/database.ts": {
-    "mtime": 1793129522.8333938,
-    "seen": 1793134833.841626,
-    "ast_hash": "204cfc9ca9b5fa649f000d70c6074630",
+    "mtime": 1793138370.7113144,
+    "seen": 1793140211.1631563,
+    "ast_hash": "85e1b299a5a4d6ccbf5227fb8471c0db",
     "semantic_hash": ""
   },
   "src/types/database.ts": {
-    "mtime": 1793129523.371493,
-    "seen": 1793134833.8727372,
-    "ast_hash": "0e4f4a827fdbd7d7f5bf9c39a5b2e913",
+    "mtime": 1793139729.6014614,
+    "seen": 1793140211.177154,
+    "ast_hash": "a60f0884a346657120ce5f152842f15e",
     "semantic_hash": ""
   },
   "src/vite-env.d.ts": {
@@ -264,8 +264,8 @@
     "semantic_hash": ""
   },
   "src/lib/aiRouter.ts": {
-    "mtime": 1793134307.8164256,
-    "seen": 1793134833.8366368,
+    "mtime": 1793135399.2907317,
+    "seen": 1793140211.1613495,
     "ast_hash": "c9d860627480b34d892215a038c87c9e",
     "semantic_hash": ""
   },
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "e2e/bancada.spec.ts": {
-    "mtime": 1793134208.49805,
-    "seen": 1793134833.7025971,
-    "ast_hash": "8dc34620246c80c4bae69db67de01bea",
+    "mtime": 1793139722.1012216,
+    "seen": 1793140211.0710516,
+    "ast_hash": "5d9794faec813ed7a70ee2f9b62e6cdf",
     "semantic_hash": ""
   },
   "playwright.config.ts": {
@@ -408,9 +408,9 @@
     "semantic_hash": ""
   },
   "src/lib/diagnosis.ts": {
-    "mtime": 1792871023.9007912,
-    "seen": 1792877783.489555,
-    "ast_hash": "0a4c7db2031d13fdfa3110ef32502a2f",
+    "mtime": 1793139728.4225059,
+    "seen": 1793140211.1631594,
+    "ast_hash": "59ef2f6a0143431f86c215b3fa713a2a",
     "semantic_hash": ""
   },
   "src/lib/explainabilityEngine.ts": {
@@ -660,20 +660,20 @@
     "semantic_hash": ""
   },
   "src/features/study-block/StudyBlockParts.tsx": {
-    "mtime": 1793133424.52576,
-    "seen": 1793134833.818201,
+    "mtime": 1793135398.5539474,
+    "seen": 1793140211.1498618,
     "ast_hash": "deb5d1479c62427a03ae42ea2f4e0d5b",
     "semantic_hash": ""
   },
   "src/features/study-block/studyBlockMachine.ts": {
-    "mtime": 1793133441.7754393,
-    "seen": 1793134833.8182049,
+    "mtime": 1793135398.7486284,
+    "seen": 1793140211.1498652,
     "ast_hash": "ab75d7658e6580e452eb2dd533e25906",
     "semantic_hash": ""
   },
   "src/features/study-block/useStudyBlock.ts": {
-    "mtime": 1793133443.520434,
-    "seen": 1793134833.818208,
+    "mtime": 1793135398.9945295,
+    "seen": 1793140211.1498675,
     "ast_hash": "e133eac1a2ae5afca2dfcf760558965f",
     "semantic_hash": ""
   },
@@ -858,8 +858,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/routineColumn.test.tsx": {
-    "mtime": 1793134205.4992616,
-    "seen": 1793134833.7423368,
+    "mtime": 1793135397.5077648,
+    "seen": 1793140211.100078,
     "ast_hash": "a74680a27649b743fd75d913c2164cc3",
     "semantic_hash": ""
   },
@@ -870,8 +870,8 @@
     "semantic_hash": ""
   },
   "src/features/routine/RoutineBlockItem.tsx": {
-    "mtime": 1793134124.08991,
-    "seen": 1793134833.8160753,
+    "mtime": 1793135398.3097408,
+    "seen": 1793140211.1467757,
     "ast_hash": "93f01f0a54f5221a10bbad2a316aacff",
     "semantic_hash": ""
   },
@@ -912,8 +912,8 @@
     "semantic_hash": ""
   },
   "src/features/routine/TopicTree.tsx": {
-    "mtime": 1793133964.8272183,
-    "seen": 1793134833.8171105,
+    "mtime": 1793135398.456643,
+    "seen": 1793140211.1481836,
     "ast_hash": "d9fc0f7316c1ff32519bc71f9c1d3e2e",
     "semantic_hash": ""
   },
@@ -1404,8 +1404,8 @@
     "semantic_hash": ""
   },
   "e2e/fofodoro.spec.ts": {
-    "mtime": 1793133429.5948107,
-    "seen": 1793134833.7047744,
+    "mtime": 1793135397.2260246,
+    "seen": 1793140211.0724573,
     "ast_hash": "15460bb2dd61ccd29070644298b5738b",
     "semantic_hash": ""
   },
@@ -1422,8 +1422,8 @@
     "semantic_hash": ""
   },
   "src/features/fofodoro/FofoDoroPreview.tsx": {
-    "mtime": 1793133962.8945875,
-    "seen": 1793134833.770403,
+    "mtime": 1793135397.8569174,
+    "seen": 1793140211.119218,
     "ast_hash": "659d3ecf996ea41797befac306fc0fe2",
     "semantic_hash": ""
   },
@@ -1482,9 +1482,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/dailyReview.test.ts": {
-    "mtime": 1792871023.8285534,
-    "seen": 1792877783.4893515,
-    "ast_hash": "79d05ef6907a1028dd28f4820e071b8e",
+    "mtime": 1793139724.0355582,
+    "seen": 1793140211.0851948,
+    "ast_hash": "8da5244501f88669e5572e2a9201dbca",
     "semantic_hash": ""
   },
   "src/__tests__/dailyReviewCard.test.tsx": {
@@ -1548,9 +1548,9 @@
     "semantic_hash": ""
   },
   "src/lib/dailyReview.ts": {
-    "mtime": 1792871023.8977087,
-    "seen": 1792877783.48955,
-    "ast_hash": "42ef3f7eb6d7492a5ee23dc2adbff37c",
+    "mtime": 1793139728.152465,
+    "seen": 1793140211.162692,
+    "ast_hash": "d9a62ab4fddefd6ac2614249cdc41410",
     "semantic_hash": ""
   },
   "src/lib/goodMorning.ts": {
@@ -1596,9 +1596,9 @@
     "semantic_hash": ""
   },
   "src/lib/goodMorningStats.ts": {
-    "mtime": 1792871023.9087148,
-    "seen": 1792877783.4895768,
-    "ast_hash": "5d0546bb4172c8c2e835e27f07c203c0",
+    "mtime": 1793139728.8595247,
+    "seen": 1793140211.169594,
+    "ast_hash": "05c75785555552498fa2417ba9c2e258",
     "semantic_hash": ""
   },
   "docs/specs/11-fofoia.md": {
@@ -1620,15 +1620,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/answerFlow.test.tsx": {
-    "mtime": 1792871023.8270278,
-    "seen": 1792877783.4893425,
-    "ast_hash": "493316f3b3222fd0f1cb2d8c737698f3",
+    "mtime": 1793139723.0650196,
+    "seen": 1793140211.0830028,
+    "ast_hash": "bb00017552d85a60c132fe93f53ad3b8",
     "semantic_hash": ""
   },
   "src/__tests__/diagnosis.test.ts": {
-    "mtime": 1792871023.8331456,
-    "seen": 1792877783.4893596,
-    "ast_hash": "79838ae8707665b5158a7e204adc601a",
+    "mtime": 1793139724.1981957,
+    "seen": 1793140211.0865884,
+    "ast_hash": "98197526c78f0f4a5d8f89c6210755dc",
     "semantic_hash": ""
   },
   "src/__tests__/fofoia.test.ts": {
@@ -1644,8 +1644,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
-    "mtime": 1793134220.7404156,
-    "seen": 1793134833.74139,
+    "mtime": 1793135397.3569431,
+    "seen": 1793140211.0991712,
     "ast_hash": "af73f76d4d2127c9c57cbbb48d43bb56",
     "semantic_hash": ""
   },
@@ -1662,9 +1662,9 @@
     "semantic_hash": ""
   },
   "src/features/answer-flow/ConfidencePicker.tsx": {
-    "mtime": 1792871023.850096,
-    "seen": 1792877783.4894402,
-    "ast_hash": "14713e8374ce9f5e27ce9469015af781",
+    "mtime": 1793139725.015275,
+    "seen": 1793140211.115659,
+    "ast_hash": "7ff7845a6891045339bd60de40abd4f2",
     "semantic_hash": ""
   },
   "src/features/answer-flow/DiagnosisPicker.tsx": {
@@ -1710,9 +1710,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCard.tsx": {
-    "mtime": 1793129521.0318487,
-    "seen": 1793134833.8135755,
-    "ast_hash": "c30ac55c44cc92f4196fa0143b377fa1",
+    "mtime": 1793139726.3935404,
+    "seen": 1793140211.1454313,
+    "ast_hash": "e186e8c2a0b13397d35830c01b1313ef",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCorrection.tsx": {
@@ -1722,21 +1722,21 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionFilters.tsx": {
-    "mtime": 1793134047.9902582,
-    "seen": 1793134833.8140414,
-    "ast_hash": "6549d42be10707befac74fd348fd3128",
+    "mtime": 1793139726.570342,
+    "seen": 1793140211.1458707,
+    "ast_hash": "bc1db3b2691d52f3b6243d02150c7d4b",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793134052.6893466,
-    "seen": 1793134833.814045,
-    "ast_hash": "9f6ff86660dc0fdc3cf7b7be6c624a2d",
+    "mtime": 1793139726.8845954,
+    "seen": 1793140211.145873,
+    "ast_hash": "b56fc4d8489ee79efa55b9b22c246719",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
-    "mtime": 1793061531.4759421,
-    "seen": 1793062745.8454742,
-    "ast_hash": "a01049acb39976e221947ea77000004a",
+    "mtime": 1793139727.6408432,
+    "seen": 1793140211.1613526,
+    "ast_hash": "c45247dbd48d8c75baec40fcec9a9e2f",
     "semantic_hash": ""
   },
   "src/lib/fofoia/ask.ts": {
@@ -1764,9 +1764,9 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/prompts.ts": {
-    "mtime": 1793064160.397117,
-    "seen": 1793065130.7638137,
-    "ast_hash": "c080d4fa55abdace6c99eaa3237d7ff7",
+    "mtime": 1793139728.5975254,
+    "seen": 1793140211.1671834,
+    "ast_hash": "3abad0b0360938be225e01e97b41f37a",
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
@@ -1782,9 +1782,9 @@
     "semantic_hash": ""
   },
   "docs/handoff/2026-10-24-estado-e-proxima-ia.md": {
-    "mtime": 1793134676.817024,
-    "seen": 1793134833.9905334,
-    "ast_hash": "cb9688fbcee147cae1c8b869e4470eff",
+    "mtime": 1793135058.3030913,
+    "seen": 1793140211.2658427,
+    "ast_hash": "fadcdf8db3ca2dad379887809df7a84c",
     "semantic_hash": ""
   },
   "src/__tests__/useFofoConversation.test.tsx": {
@@ -1992,8 +1992,8 @@
     "semantic_hash": ""
   },
   "tools/minerador/cli.ts": {
-    "mtime": 1793134453.945041,
-    "seen": 1793134833.89927,
+    "mtime": 1793135400.5619304,
+    "seen": 1793140211.198353,
     "ast_hash": "4a476b61282d5f4f1c1b22abded41e7f",
     "semantic_hash": ""
   },
@@ -2292,15 +2292,15 @@
     "semantic_hash": ""
   },
   "acervo/lote.json": {
-    "mtime": 1792903998.8555093,
-    "seen": 1792905400.8267846,
-    "ast_hash": "be684ce21ee5eb6b5de173b8a420ebc2",
+    "mtime": 1793139519.0683515,
+    "seen": 1793140211.0704575,
+    "ast_hash": "bc3ff0f7143ab8ade09524d6583c6cc8",
     "semantic_hash": ""
   },
   "acervo/quarentena.json": {
-    "mtime": 1792908343.7119575,
-    "seen": 1792908739.9418852,
-    "ast_hash": "fe6d7c429ccf3217e184ee7468d6a1a4",
+    "mtime": 1793139519.06536,
+    "seen": 1793140211.0704596,
+    "ast_hash": "82a7ab09325e8cb76bdaf91f169a4d37",
     "semantic_hash": ""
   },
   "tools/minerador/__fixtures__/893_DATAPREV_CG1_01.PDF": {
@@ -2436,8 +2436,8 @@
     "semantic_hash": ""
   },
   "tools/minerador/candidates.ts": {
-    "mtime": 1793133719.174939,
-    "seen": 1793134833.896972,
+    "mtime": 1793135399.5552678,
+    "seen": 1793140211.1968982,
     "ast_hash": "6415dff2034dc8d5802697d74dd125c4",
     "semantic_hash": ""
   },
@@ -2484,8 +2484,8 @@
     "semantic_hash": ""
   },
   "tools/minerador/classifyRun.ts": {
-    "mtime": 1793133811.3224592,
-    "seen": 1793134833.8992653,
+    "mtime": 1793135399.8042088,
+    "seen": 1793140211.1983492,
     "ast_hash": "3661c2653d146253f3c625661a72a333",
     "semantic_hash": ""
   },
@@ -2502,69 +2502,69 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/BANCO_DO_NORDESTE_22.json": {
-    "mtime": 1793134819.5900762,
-    "seen": 1793134833.700125,
-    "ast_hash": "ead906aa275a1f3ebcf56ed20b8a3da8",
+    "mtime": 1793139926.92942,
+    "seen": 1793140211.0703194,
+    "ast_hash": "5fe88cd7616e842a3a858217fe6b107e",
     "semantic_hash": ""
   },
   "acervo/classificacao/CD_25_NS.json": {
-    "mtime": 1793134828.5625966,
-    "seen": 1793134833.700136,
-    "ast_hash": "326a35054368aae5c59cc85b4eddc6c6",
+    "mtime": 1793139926.9806674,
+    "seen": 1793140211.070336,
+    "ast_hash": "cb50a06034787a7b94c79be90e7e9667",
     "semantic_hash": ""
   },
   "acervo/classificacao/CNJ_24.json": {
-    "mtime": 1793134828.6344485,
-    "seen": 1793134833.700141,
-    "ast_hash": "b8a710b7dbc3d0408438c3acc96573d4",
+    "mtime": 1793139927.0092418,
+    "seen": 1793140211.0703413,
+    "ast_hash": "027b4292e7346c49381670d7adff3556",
     "semantic_hash": ""
   },
   "acervo/classificacao/CNMP_23.json": {
-    "mtime": 1793134827.330969,
-    "seen": 1793134833.7001436,
-    "ast_hash": "e6551b5ff8197c81a5c9fb916ddf0bfb",
+    "mtime": 1793139927.0302958,
+    "seen": 1793140211.0703442,
+    "ast_hash": "4235767d439b36567a5e3b30d36d5c73",
     "semantic_hash": ""
   },
   "acervo/classificacao/INFRASA_26_ANALISTA.json": {
-    "mtime": 1793134830.253101,
-    "seen": 1793134833.70016,
-    "ast_hash": "7a86b40e20244e39c4014942ebbfd6f7",
+    "mtime": 1793139927.195822,
+    "seen": 1793140211.0703719,
+    "ast_hash": "9c1f47aad98c3f58c7fbaed0ddf856f3",
     "semantic_hash": ""
   },
   "acervo/classificacao/ITAIPU_23.json": {
-    "mtime": 1793134830.1603415,
-    "seen": 1793134833.700166,
-    "ast_hash": "17d105cfe8b8e22f25db7f23dc0cbb26",
+    "mtime": 1793139927.242959,
+    "seen": 1793140211.0703764,
+    "ast_hash": "62c08f28965423e49c9a903d5d7273cc",
     "semantic_hash": ""
   },
   "acervo/classificacao/MPO_24.json": {
-    "mtime": 1793134829.78088,
-    "seen": 1793134833.700179,
-    "ast_hash": "ce4032ddd109310cadbc47e4259a2171",
+    "mtime": 1793139927.2775655,
+    "seen": 1793140211.070392,
+    "ast_hash": "3b62ccad960b530b01b3d021efd2b041",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEFAZ_AC_23.json": {
-    "mtime": 1793134808.0894604,
-    "seen": 1793134833.7001913,
-    "ast_hash": "a36e7e502dbc58b465d9d2b88ec6bdd1",
+    "mtime": 1793139927.3231654,
+    "seen": 1793140211.0704012,
+    "ast_hash": "9ffd53112a1cb8bca62b0929d5e4be75",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEFAZ_RN_25_AUDITOR.json": {
-    "mtime": 1793134829.1967752,
-    "seen": 1793134833.700194,
-    "ast_hash": "faa201139b4e95ad5d5c992801faff19",
+    "mtime": 1793139927.328682,
+    "seen": 1793140211.070403,
+    "ast_hash": "d32e8c62a98e8e576a1f263ef9e57a86",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEFAZ_SE_25_AUDITOR.json": {
-    "mtime": 1793134816.7605395,
-    "seen": 1793134833.7001994,
-    "ast_hash": "11c593b26d10188c164c4e42e6f2e691",
+    "mtime": 1793139927.353716,
+    "seen": 1793140211.0704076,
+    "ast_hash": "213e2a62db5bcd19d67e8e5ae9331c84",
     "semantic_hash": ""
   },
   "acervo/classificacao/STM_25.json": {
-    "mtime": 1793134825.6015666,
-    "seen": 1793134833.7002118,
-    "ast_hash": "a0d75d6f3c2fbc6b72d3a63e15ecd211",
+    "mtime": 1793139927.5431416,
+    "seen": 1793140211.0704195,
+    "ast_hash": "4d5b3c039ade4d018447a99c0aec6653",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_AC_24.json": {
@@ -2574,15 +2574,15 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_MG_25.json": {
-    "mtime": 1793134827.998544,
-    "seen": 1793134833.700217,
-    "ast_hash": "a5fac2718f35bb59700cb7105b127378",
+    "mtime": 1793139927.616385,
+    "seen": 1793140211.0704265,
+    "ast_hash": "5a6de072b58e9d47e4a07461f6f0c9b1",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_PR_24_AUDITOR.json": {
-    "mtime": 1793134816.0330193,
-    "seen": 1793134833.7002218,
-    "ast_hash": "daae8d45664e1ca60c008bc4d57bbc5a",
+    "mtime": 1793139927.6279333,
+    "seen": 1793140211.070431,
+    "ast_hash": "58b7ed8de07983d7ff7961a8a4c64f46",
     "semantic_hash": ""
   },
   "acervo/classificacao/TRF6_24.json": {
@@ -2592,63 +2592,63 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/TRT10_24.json": {
-    "mtime": 1793134829.0214496,
-    "seen": 1793134833.7002428,
-    "ast_hash": "0863cf704465ec9cbd630655248f2ee0",
+    "mtime": 1793139927.7702818,
+    "seen": 1793140211.0704525,
+    "ast_hash": "55071cc4fd3a8d6a7687fcde2a627cbc",
     "semantic_hash": ""
   },
   "acervo/classificacao/TST_23.json": {
-    "mtime": 1793134785.6562514,
-    "seen": 1793134833.7002447,
-    "ast_hash": "924cb461981ead1088e08f3ed0396885",
+    "mtime": 1793139927.7743113,
+    "seen": 1793140211.0704548,
+    "ast_hash": "90ad89432e7341d4ad1b226de5dad3ee",
     "semantic_hash": ""
   },
   "acervo/classificacao/ANTT_23.json": {
-    "mtime": 1793134828.698219,
-    "seen": 1793134833.7001145,
-    "ast_hash": "9c3fce1c96e6cad4ff1523e15edd8f53",
+    "mtime": 1793139926.9146178,
+    "seen": 1793140211.0703113,
+    "ast_hash": "fb4736f0963731e454c8bbded8e5c11a",
     "semantic_hash": ""
   },
   "acervo/classificacao/CAPES_23.json": {
-    "mtime": 1793134830.2260122,
-    "seen": 1793134833.7001333,
-    "ast_hash": "874cbcaf55b97fd8836a0d8d5f00503f",
+    "mtime": 1793139926.972128,
+    "seen": 1793140211.0703328,
+    "ast_hash": "4e78bca59754857544396504dab6a1a7",
     "semantic_hash": ""
   },
   "acervo/classificacao/CNPQ_23.json": {
-    "mtime": 1793134830.2160113,
-    "seen": 1793134833.700146,
-    "ast_hash": "2459b051d28e3bf91f29a0d8b6110afa",
+    "mtime": 1793139927.0559573,
+    "seen": 1793140211.0703466,
+    "ast_hash": "d4c1c0a4f0fa6b94ea0dd3b88abd9d71",
     "semantic_hash": ""
   },
   "acervo/classificacao/EMPREL_23.json": {
-    "mtime": 1793134829.136221,
-    "seen": 1793134833.7001512,
-    "ast_hash": "f4985dc45f4f348d24b1c7013623c057",
+    "mtime": 1793139927.127605,
+    "seen": 1793140211.0703552,
+    "ast_hash": "825ee96b2f7142a9a953378018092f22",
     "semantic_hash": ""
   },
   "acervo/classificacao/FINEP_23.json": {
-    "mtime": 1793134816.735988,
-    "seen": 1793134833.7001538,
-    "ast_hash": "2e7e3d251db6826147781602b5a2b89a",
+    "mtime": 1793139927.1356082,
+    "seen": 1793140211.0703576,
+    "ast_hash": "8dab1c055e1aad4417eaf2295a8d7a1c",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEPLAD_DF_22_AUDITOR.json": {
-    "mtime": 1793134756.1442866,
-    "seen": 1793134833.7002044,
+    "mtime": 1793139927.3808055,
+    "seen": 1793140211.0704129,
     "ast_hash": "9400f4b6cbdb71d70fac0d3502f8983f",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEPLAG_CE_24.json": {
-    "mtime": 1793134819.062692,
-    "seen": 1793134833.7002065,
-    "ast_hash": "97de866b455d2ac521b2eb4356d0796a",
+    "mtime": 1793139927.3878112,
+    "seen": 1793140211.070415,
+    "ast_hash": "825c0d526663b102ac93712dc64494c5",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_RS_25.json": {
-    "mtime": 1793134823.3846707,
-    "seen": 1793134833.7002323,
-    "ast_hash": "a96c77da93162ad35b9de1bb74532242",
+    "mtime": 1793139927.6600416,
+    "seen": 1793140211.0704405,
+    "ast_hash": "5e9e914ea8ed755730e9cb50d61f71b8",
     "semantic_hash": ""
   },
   "acervo/classificacao/TELEBRAS_25.json": {
@@ -2664,39 +2664,39 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/ANATEL_24.json": {
-    "mtime": 1793134829.1917453,
-    "seen": 1793134833.7001052,
-    "ast_hash": "fbeebf33228f4d81f0c642439e06ae6c",
+    "mtime": 1793139926.8476312,
+    "seen": 1793140211.0702972,
+    "ast_hash": "0e5990d9d3f57d813eb404bf02b2baa4",
     "semantic_hash": ""
   },
   "acervo/classificacao/ANEEL_25_CF.json": {
-    "mtime": 1793134821.0655522,
-    "seen": 1793134833.7001085,
-    "ast_hash": "f6625c7a4ce644270034a2cf5fb9e032",
+    "mtime": 1793139926.8616712,
+    "seen": 1793140211.070303,
+    "ast_hash": "9ab5153151f371dacf6bc08d6a05c69f",
     "semantic_hash": ""
   },
   "acervo/classificacao/ANS_25_CF.json": {
-    "mtime": 1793134811.5467432,
-    "seen": 1793134833.7001114,
-    "ast_hash": "2ea3dbe6e4e5a97b7842ffedb9dccdae",
+    "mtime": 1793139926.8762407,
+    "seen": 1793140211.0703084,
+    "ast_hash": "ba6ea699c0c7f761f7908031eff2498d",
     "semantic_hash": ""
   },
   "acervo/classificacao/APEX_BRASIL_21_ANALISTA.json": {
-    "mtime": 1793134826.7478697,
-    "seen": 1793134833.7001216,
-    "ast_hash": "19c876705d54a725ef1a9d742f0a4298",
+    "mtime": 1793139926.9232254,
+    "seen": 1793140211.0703166,
+    "ast_hash": "70de184dd6293bdd5d01ede101c18b50",
     "semantic_hash": ""
   },
   "acervo/classificacao/BCB_24.json": {
-    "mtime": 1793134818.3526146,
-    "seen": 1793134833.700128,
-    "ast_hash": "4f395d1f61b93f796e3c516c6184499e",
+    "mtime": 1793139926.954059,
+    "seen": 1793140211.0703268,
+    "ast_hash": "5dd49865ca2c015eca405944d45834cd",
     "semantic_hash": ""
   },
   "acervo/classificacao/CTI_23.json": {
-    "mtime": 1793134830.238059,
-    "seen": 1793134833.700149,
-    "ast_hash": "97f60266b26cd89b2baafaea96c63d6c",
+    "mtime": 1793139927.0745313,
+    "seen": 1793140211.0703511,
+    "ast_hash": "3776aad7d87652fb00b826352c5bf813",
     "semantic_hash": ""
   },
   "acervo/classificacao/DATAPREV_23.json": {
@@ -2706,51 +2706,51 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/INPI_23.json": {
-    "mtime": 1793134829.8255315,
-    "seen": 1793134833.700163,
-    "ast_hash": "cb4467968321b6d5ae92a78316b2cf7f",
+    "mtime": 1793139927.218864,
+    "seen": 1793140211.0703743,
+    "ast_hash": "0d669ab1ff949558572e4f2a57a42fe4",
     "semantic_hash": ""
   },
   "acervo/classificacao/MEC_23.json": {
-    "mtime": 1793134823.3374012,
-    "seen": 1793134833.7001715,
-    "ast_hash": "e72f001c9694803118d2b1d2796e629f",
+    "mtime": 1793139927.2514699,
+    "seen": 1793140211.0703814,
+    "ast_hash": "3f834b0aa09c2609836e443c6253deb8",
     "semantic_hash": ""
   },
   "acervo/classificacao/MME_23.json": {
-    "mtime": 1793134733.4700706,
-    "seen": 1793134833.700177,
-    "ast_hash": "15634faa015a32da68bf510ec22c2e21",
+    "mtime": 1793139927.2569926,
+    "seen": 1793140211.0703866,
+    "ast_hash": "410a753a91d62a090a64d342cf2ef4d4",
     "semantic_hash": ""
   },
   "acervo/classificacao/MTE_25.json": {
-    "mtime": 1793134822.073678,
-    "seen": 1793134833.7001848,
-    "ast_hash": "70c86d9661f4d1304532714381d206e9",
+    "mtime": 1793139927.2850711,
+    "seen": 1793140211.070397,
+    "ast_hash": "35e01e910514d0644dd967961ee9f289",
     "semantic_hash": ""
   },
   "acervo/classificacao/SECONT_ES_22.json": {
-    "mtime": 1793134829.8395772,
-    "seen": 1793134833.7001884,
-    "ast_hash": "a055553097b676007dfe171256873945",
+    "mtime": 1793139927.317646,
+    "seen": 1793140211.070399,
+    "ast_hash": "7ffbe4b06a204dea768369170d34c44c",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEFAZ_SE_21_AUDITOR.json": {
-    "mtime": 1793134829.144997,
-    "seen": 1793134833.7001965,
-    "ast_hash": "dd3adbff9367d89d598b7951233b3a49",
+    "mtime": 1793139927.3447158,
+    "seen": 1793140211.0704055,
+    "ast_hash": "b58f6d46316b793be6fc7dd5ea04ad3d",
     "semantic_hash": ""
   },
   "acervo/classificacao/SEFIN_FORTALEZA_CE_23.json": {
-    "mtime": 1793134830.2718217,
-    "seen": 1793134833.700202,
-    "ast_hash": "949550cb15562209cb93d46d55ee399e",
+    "mtime": 1793139927.375764,
+    "seen": 1793140211.0704103,
+    "ast_hash": "c69b674f33cd44bcd77a6e13776172a9",
     "semantic_hash": ""
   },
   "acervo/classificacao/SERPRO_23.json": {
-    "mtime": 1793134826.685586,
-    "seen": 1793134833.7002094,
-    "ast_hash": "aa0a9086f74a72cdda808474a87ea1ab",
+    "mtime": 1793139927.3923273,
+    "seen": 1793140211.0704174,
+    "ast_hash": "016636637c2c5be47149a58027419b63",
     "semantic_hash": ""
   },
   "acervo/classificacao/STJ_24.json": {
@@ -2760,51 +2760,51 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/SUSEP_25.json": {
-    "mtime": 1793134819.5296273,
-    "seen": 1793134833.7002144,
-    "ast_hash": "dc389ddaa438b3625220970175642899",
+    "mtime": 1793139927.5541506,
+    "seen": 1793140211.070422,
+    "ast_hash": "c3dc29f8e3fe526608ec935b0b0b0f77",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_PB_22_AUDITOR.json": {
-    "mtime": 1793134823.7070754,
-    "seen": 1793134833.7002194,
-    "ast_hash": "d265ee9f4164d28dd47fc2c70406672f",
+    "mtime": 1793139927.621908,
+    "seen": 1793140211.0704288,
+    "ast_hash": "d1b5006b1d2e307d30fc812b44ca46c8",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_RJ_21_TECNICO.json": {
-    "mtime": 1793134829.0880167,
-    "seen": 1793134833.700227,
-    "ast_hash": "235abc8e362c99f94337c5d7011c5514",
+    "mtime": 1793139927.6359973,
+    "seen": 1793140211.070436,
+    "ast_hash": "c41aa8c1142f94aa55cf0304add5c331",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_SC_21_AUDITOR.json": {
-    "mtime": 1793134830.2798207,
-    "seen": 1793134833.7002347,
-    "ast_hash": "b6e7b9b9b5fd820665e8135c620d4ad1",
+    "mtime": 1793139927.6680424,
+    "seen": 1793140211.0704424,
+    "ast_hash": "e97c10e3d8b921ea3abdc6d3411d4d5c",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCU_25_TEFC.json": {
-    "mtime": 1793134813.656885,
-    "seen": 1793134833.7002373,
-    "ast_hash": "0442b8c43eed3da8f406c1853dc453a6",
+    "mtime": 1793139927.670548,
+    "seen": 1793140211.0704443,
+    "ast_hash": "41571ff8c58db3ade7b2a7d3f0c59096",
     "semantic_hash": ""
   },
   "acervo/classificacao/ANVISA_24.json": {
-    "mtime": 1793134820.4876373,
-    "seen": 1793134833.7001185,
-    "ast_hash": "31b589a71f63efffadd54e1f22844daa",
+    "mtime": 1793139926.9198747,
+    "seen": 1793140211.070314,
+    "ast_hash": "5a86cd93c475b9d266e14ba36c82848c",
     "semantic_hash": ""
   },
   "acervo/classificacao/BDMG_24.json": {
-    "mtime": 1793134823.0080266,
-    "seen": 1793134833.7001307,
-    "ast_hash": "af83848efa4bac09fcb2b5f0912e380a",
+    "mtime": 1793139926.965094,
+    "seen": 1793140211.0703297,
+    "ast_hash": "2de6cc90d441c3da70837c9655da6d92",
     "semantic_hash": ""
   },
   "acervo/classificacao/CGE_RJ_23.json": {
-    "mtime": 1793134766.249516,
-    "seen": 1793134833.7001383,
-    "ast_hash": "5e8437c29ddadd92c189f83f11a283c8",
+    "mtime": 1793139926.98367,
+    "seen": 1793140211.0703387,
+    "ast_hash": "106501a9e6ca84c3cb756b36484d0a60",
     "semantic_hash": ""
   },
   "acervo/classificacao/PETROBRAS_21_NS.json": {
@@ -2814,9 +2814,9 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/TELEBRAS_21.json": {
-    "mtime": 1793134823.0795503,
-    "seen": 1793134833.70024,
-    "ast_hash": "4e9d5d2b08c50b84abc193217c880ad0",
+    "mtime": 1793139927.674085,
+    "seen": 1793140211.0704465,
+    "ast_hash": "68db4b0d419df1d206daffde11e561b4",
     "semantic_hash": ""
   },
   "docs/specs/13-plano-de-estudo.md": {
@@ -3144,21 +3144,21 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/FNDE_24_PSS_ANALISTA.json": {
-    "mtime": 1793134745.685086,
-    "seen": 1793134833.700157,
-    "ast_hash": "4f13da53dd17fd451b107e7f25fadaa0",
+    "mtime": 1793139927.141123,
+    "seen": 1793140211.0703597,
+    "ast_hash": "fdf85f713453fca91aff920b38e2b38a",
     "semantic_hash": ""
   },
   "acervo/classificacao/MPS_24.json": {
-    "mtime": 1793134813.401153,
-    "seen": 1793134833.7001822,
+    "mtime": 1793139927.2805638,
+    "seen": 1793140211.0703943,
     "ast_hash": "48425bffc21b7212f904781473fcf094",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_RJ_22_PROCURADOR.json": {
-    "mtime": 1793134823.369153,
-    "seen": 1793134833.7002296,
-    "ast_hash": "fed7baad77363724bf51383723fc0509",
+    "mtime": 1793139927.6505084,
+    "seen": 1793140211.0704384,
+    "ast_hash": "7a4c550ed893e2ce3e3eaf026111747a",
     "semantic_hash": ""
   },
   "src/features/mascot/FofoWardrobeButton.tsx": {
@@ -3300,14 +3300,14 @@
     "semantic_hash": ""
   },
   "src/__tests__/topicQuestions.test.ts": {
-    "mtime": 1793134213.3014956,
-    "seen": 1793134833.7467668,
+    "mtime": 1793135397.665151,
+    "seen": 1793140211.1041844,
     "ast_hash": "d69700fb2ba56ed94a4dc82c111f8de3",
     "semantic_hash": ""
   },
   "src/lib/acervo/topicQuestions.ts": {
-    "mtime": 1793134046.2542284,
-    "seen": 1793134833.8366332,
+    "mtime": 1793135399.1290376,
+    "seen": 1793140211.161346,
     "ast_hash": "439a4e412b7f05d580ac60a6c0c69706",
     "semantic_hash": ""
   },
@@ -3324,15 +3324,15 @@
     "semantic_hash": ""
   },
   "src/features/questions/AcervoLinkBar.tsx": {
-    "mtime": 1793120352.4749937,
-    "seen": 1793120657.8890865,
-    "ast_hash": "257dab5cdd9962a2c23bb7b653652fda",
+    "mtime": 1793139725.3715272,
+    "seen": 1793140211.1454244,
+    "ast_hash": "580777730a284c3df1e36ba7cbadb30a",
     "semantic_hash": ""
   },
   "src/features/questions/EmptyTopicQuestions.tsx": {
-    "mtime": 1793134050.7286737,
-    "seen": 1793134833.8135707,
-    "ast_hash": "bf295b7fbf0743ecf92af30155b3e835",
+    "mtime": 1793139726.206079,
+    "seen": 1793140211.1454282,
+    "ast_hash": "58779164fb52906741e2c6a077c52657",
     "semantic_hash": ""
   },
   "src/__tests__/acervoImportPanel.test.tsx": {
@@ -3348,8 +3348,8 @@
     "semantic_hash": ""
   },
   "e2e/acervo.spec.ts": {
-    "mtime": 1793134211.0271347,
-    "seen": 1793134833.7025938,
+    "mtime": 1793135396.822037,
+    "seen": 1793140211.0710485,
     "ast_hash": "78c824ae46d23d3a22fc3d83a46d11f4",
     "semantic_hash": ""
   },
@@ -3396,27 +3396,195 @@
     "semantic_hash": ""
   },
   "acervo/classificacao/ANAC_23.json": {
-    "mtime": 1793134828.0055442,
-    "seen": 1793134833.7000988,
-    "ast_hash": "991b10a1048136b3b5ff7a27742f74b2",
+    "mtime": 1793139926.830615,
+    "seen": 1793140211.0702937,
+    "ast_hash": "1920cfcd5ef6fe5f2f3e297e5dfbb14d",
     "semantic_hash": ""
   },
   "acervo/classificacao/MCOM_22.json": {
-    "mtime": 1793134818.5724204,
-    "seen": 1793134833.7001681,
-    "ast_hash": "2563d38b03dfcbe4ddb464ac64fd5d1d",
+    "mtime": 1793139927.2479572,
+    "seen": 1793140211.0703788,
+    "ast_hash": "d2aa29c9d3ab36bef0636fe0d4efefbf",
     "semantic_hash": ""
   },
   "acervo/classificacao/MMA_23.json": {
-    "mtime": 1793134807.5257814,
-    "seen": 1793134833.700174,
-    "ast_hash": "aff6ecae54abdc66800d982da1460b84",
+    "mtime": 1793139927.253978,
+    "seen": 1793140211.070384,
+    "ast_hash": "697385e4eefbc0dafe96c4923053c41f",
     "semantic_hash": ""
   },
   "acervo/classificacao/TCE_RJ_21_ANALISTA.json": {
-    "mtime": 1793134822.6333847,
-    "seen": 1793134833.7002242,
-    "ast_hash": "3213e7aa5f673c01b3110f436f7b7106",
+    "mtime": 1793139927.6324677,
+    "seen": 1793140211.0704339,
+    "ast_hash": "b121d39d6e19e086fc7b6e7a46e1b68f",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/AEB_24.json": {
+    "mtime": 1793139715.1934657,
+    "seen": 1793140211.0448577,
+    "ast_hash": "256b53cb554528a3737d3c13d4c40e6c",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/ANA_24.json": {
+    "mtime": 1793139715.2092817,
+    "seen": 1793140211.045906,
+    "ast_hash": "c1564db565b51886067e6ff488d0002c",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/BANRISUL_22.json": {
+    "mtime": 1793139715.2801676,
+    "seen": 1793140211.0487697,
+    "ast_hash": "dfcabb4cc4a0377da679c3e32dc2a4f6",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/BANRISUL_25.json": {
+    "mtime": 1793139715.2926013,
+    "seen": 1793140211.0487728,
+    "ast_hash": "563693be0310445085305d4d567f6e41",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/CODEVASF_24.json": {
+    "mtime": 1793139715.3187268,
+    "seen": 1793140211.05281,
+    "ast_hash": "5db8965a7541c1cd3e363882505dd0bd",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/FUB_22.json": {
+    "mtime": 1793139715.6303089,
+    "seen": 1793140211.0555947,
+    "ast_hash": "87d7bda7a47adb0f856c3158a9f7d3f4",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/FUB_25.json": {
+    "mtime": 1793139715.6787453,
+    "seen": 1793140211.0555978,
+    "ast_hash": "89e8736f6d6ae0f5d7f6be59976276de",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/FUNPRESP_21.json": {
+    "mtime": 1793139715.7042422,
+    "seen": 1793140211.0556002,
+    "ast_hash": "1797a705cbfa01cda67a847314dd38bb",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/FUNPRESP_24_EXE.json": {
+    "mtime": 1793139715.7347221,
+    "seen": 1793140211.055603,
+    "ast_hash": "5d7033abbc4ca791823476ba874bf0cf",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/MPC_SC_22_SERVIDOR.json": {
+    "mtime": 1793139715.7421563,
+    "seen": 1793140211.0584047,
+    "ast_hash": "703905cf0648d53da9c862c27a4eb234",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/TBG_23.json": {
+    "mtime": 1793139715.7971935,
+    "seen": 1793140211.0650756,
+    "ast_hash": "5b5c577900fcb200d560fbadbaa5b633",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/TJ_CE_23_SERVIDOR.json": {
+    "mtime": 1793139715.8019476,
+    "seen": 1793140211.0696778,
+    "ast_hash": "0a7f5e5b075d1494e7e7e3943e7feb1b",
+    "semantic_hash": ""
+  },
+  "acervo/cebraspe/TJ_PA_25_SERVIDOR.json": {
+    "mtime": 1793139715.855813,
+    "seen": 1793140211.0696814,
+    "ast_hash": "b6b14c93a53d35138b359f408b8dd357",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/AEB_24.json": {
+    "mtime": 1793139926.822501,
+    "seen": 1793140211.0702884,
+    "ast_hash": "e4690ccb2ed599067c055b9f797ebbe9",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/ANA_24.json": {
+    "mtime": 1793139926.852141,
+    "seen": 1793140211.0702996,
+    "ast_hash": "4a29ac6083d076dcac0f1aa7727bed0c",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/ANM_24.json": {
+    "mtime": 1793139926.8697078,
+    "seen": 1793140211.0703056,
+    "ast_hash": "0ac2e279563daf364ffc6c422b4a98b4",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/BANRISUL_22.json": {
+    "mtime": 1793139926.9333975,
+    "seen": 1793140211.0703216,
+    "ast_hash": "36b92ed8da379d8efa104a97bc950102",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/BANRISUL_25.json": {
+    "mtime": 1793139926.9415462,
+    "seen": 1793140211.0703242,
+    "ast_hash": "cb9c29ea9fddba0ec5d64f9569c43add",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/CODEVASF_24.json": {
+    "mtime": 1793139927.0634818,
+    "seen": 1793140211.0703485,
+    "ast_hash": "fa8ef151be2f5d4fd6a87a47ad3a62c3",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/EMBRAPA_24.json": {
+    "mtime": 1793139927.1225877,
+    "seen": 1793140211.0703528,
+    "ast_hash": "978d310dd7cc840c607ff00e299b62c2",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/FUB_22.json": {
+    "mtime": 1793139927.1472108,
+    "seen": 1793140211.0703619,
+    "ast_hash": "ad97eea779786acc550b8bd4d59da2ee",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/FUB_25.json": {
+    "mtime": 1793139927.1712494,
+    "seen": 1793140211.070364,
+    "ast_hash": "4696e6d70fbc31030b0fa3c33139f70c",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/FUNPRESP_21.json": {
+    "mtime": 1793139927.175274,
+    "seen": 1793140211.0703661,
+    "ast_hash": "1d10fb70459f0ecebe6baa1dc6b0af5c",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/FUNPRESP_24_EXE.json": {
+    "mtime": 1793139927.1842964,
+    "seen": 1793140211.0703688,
+    "ast_hash": "85431a13f927676149ec19cc2fe0d244",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/MPC_SC_22_SERVIDOR.json": {
+    "mtime": 1793139927.268036,
+    "seen": 1793140211.070389,
+    "ast_hash": "6f448ba27eb731a2f2137d193ea53fb0",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/TBG_23.json": {
+    "mtime": 1793139927.5686872,
+    "seen": 1793140211.0704243,
+    "ast_hash": "799d25bd4eff1079ad551c4e9effa346",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/TJ_CE_23_SERVIDOR.json": {
+    "mtime": 1793139927.7030506,
+    "seen": 1793140211.0704484,
+    "ast_hash": "97466237f7fd4a30bf8624307661d906",
+    "semantic_hash": ""
+  },
+  "acervo/classificacao/TJ_PA_25_SERVIDOR.json": {
+    "mtime": 1793139927.7075753,
+    "seen": 1793140211.0704505,
+    "ast_hash": "6f5c4502e4defd26328d3b855163f939",
     "semantic_hash": ""
   }
 }

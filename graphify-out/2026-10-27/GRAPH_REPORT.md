@@ -1,7 +1,7 @@
 # Graph Report - fofolab  (2026-10-27)
 
 ## Corpus Check
-- 539 files · ~5,035,489 words
+- 569 files · ~6,248,368 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d7dfbf03`
+- Built from commit: `aee33987`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

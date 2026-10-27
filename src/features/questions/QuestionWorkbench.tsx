@@ -184,6 +184,13 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     if (current.attemptId) props.onChangeDiagnosis(current.attemptId, diagnosis);
   };
 
+  const pagination = {
+    index: safeIndex,
+    total: filtered.length,
+    onPrev: () => setIndex(Math.max(0, safeIndex - 1)),
+    onNext: () => setIndex(Math.min(filtered.length - 1, safeIndex + 1)),
+  };
+
   const filters = (
     <QuestionFilters
       scope={props.scopeFilter}
@@ -200,10 +207,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       onComplexity={setComplexity}
       search={search}
       onSearch={setSearch}
-      position={{ index: safeIndex, total: filtered.length }}
       groupCode={props.acervo?.view.groupCode ?? null}
-      onPrev={() => setIndex(Math.max(0, safeIndex - 1))}
-      onNext={() => setIndex(Math.min(filtered.length - 1, safeIndex + 1))}
     />
   );
 
@@ -303,6 +307,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
+        position={pagination}
         onConfidence={(confidence) => setCurrent({ ...current, confidence })}
         onPick={(key) => {
           if (!current.confidence || answered) return;
@@ -333,6 +338,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           onGenerateDissection={props.onGenerateDissection}
           onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}
           onNextQuestion={hasNext ? () => setIndex(safeIndex + 1) : undefined}
+          position={pagination}
         />
       )}
     </div>

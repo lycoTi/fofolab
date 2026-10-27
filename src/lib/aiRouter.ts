@@ -33,7 +33,7 @@ export interface ChatTurn {
 
 export interface QuestionComplexityProfile {
   stars: 1 | 2 | 3 | 4 | 5;
-  levelLabel: 'Direta' | 'Intermediária' | 'Densa / Estudo de Caso';
+  levelLabel: 'Fácil' | 'Média' | 'Difícil';
   topicCount: number;
   linguisticLoad: 'Baixa' | 'Média' | 'Alta';
   summaryTip: string;
@@ -107,9 +107,9 @@ function resolveLinguisticLoad(charLength: number): 'Baixa' | 'Média' | 'Alta' 
 }
 
 function resolveComplexityLabel(stars: 1 | 2 | 3 | 4 | 5): QuestionComplexityProfile['levelLabel'] {
-  if (stars >= 4) return 'Densa / Estudo de Caso';
-  if (stars === 3) return 'Intermediária';
-  return 'Direta';
+  if (stars >= 4) return 'Difícil';
+  if (stars === 3) return 'Média';
+  return 'Fácil';
 }
 
 function resolveSummaryTip(linguisticLoad: 'Baixa' | 'Média' | 'Alta', topicCount: number): string {

@@ -95,7 +95,7 @@ describe('Bancada de Questões, Copiloto IA Contextual, Docks & Auditoria de UI 
     const profile = getQuestionComplexityProfile(sampleBundles[0].question, sampleBundles[0].dissection);
     expect(profile.stars).toBeGreaterThanOrEqual(1);
     expect(profile.stars).toBeLessThanOrEqual(5);
-    expect(['Direta', 'Intermediária', 'Densa / Estudo de Caso']).toContain(profile.levelLabel);
+    expect(['Fácil', 'Média', 'Difícil']).toContain(profile.levelLabel);
     expect(profile.statementLength).toBe(sampleBundles[0].question.statement.length);
   });
 
