@@ -2,7 +2,8 @@
 
 As skills globais vêm da stack `~/.agents` (originais instaladas + regras autorais em `~/.agents/AGENTS.md`).
 Este arquivo diz como elas se aplicam aqui.
-A skill `education-learning-science` é local (`.agents/skills/`).
+As skills de ciência da aprendizagem são locais (`.agents/skills/`, originais do GarethManning, lock em `skills-lock.json`).
+Algumas só abrem pelo comando (`/individual-spacing-algorithm-explainer`); a IA lê o `SKILL.md` direto quando precisar.
 
 ## Testes (test-driven-development, tdd-suite, playwright-best-practices)
 - Unitários e de integração ficam juntos em `src/__tests__/` (`cycleEngine.ts`, `aiRouter.ts`, complexidade, proteção de
