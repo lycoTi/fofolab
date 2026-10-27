@@ -16,17 +16,20 @@ não a institucional; e existe uma zona com personalidade, onde mora o Fofo.
   Sem imagem gerada por IA, foto, 3D ou outro estilo misturado.
 - Escala só inteira e sem suavização: 32 px no cabeçalho, 64 px na FofoIA e no FofoDoro, 128 px em tela vazia
   e conquista. O ícone de 16 px tem desenho próprio.
-- **Guarda-roupa:** a roupa sai de uma função pura com teste (data, hora, aba, roupa fixa → roupa). Ordem:
-  roupa fixa nas configurações > marco do concurso (dia da prova, nomeado) > data especial > madrugada
-  (22:00–05:00) > aba (Plano de estudo e Revisão do dia = fazendeiro; Questões e Edital = explorador) > base.
+- **Guarda-roupa:** a roupa sai de uma função pura com teste (`src/features/mascot/wardrobe.ts`). Ordem: roupa fixa
+  (clicar no Fofo do cabeçalho) > marco do concurso (dia da prova, nomeado) > data especial > hora do dia, pelo sol do
+  fuso do computador: fazendeiro do nascer ao pôr do sol, explorador do pôr do sol às 22:00, madrugada das 22:00 ao
+  nascer do sol. No FofoDoro, no lugar da hora do dia, o Fofo do relógio (base). Roupa fixa e nomeado ficam neste
+  computador (preferência); o nomeado vale para o plano e a data de prova de quando foi marcado.
   Roupa nova = sprite + regra + teste.
 - **Calendário (cerca de um mês por festa, para as roupas de momento aparecerem no resto do ano):** Halloween em
   outubro; Natal de 1º a 30/12; Ano-novo de 31/12 a 31/01; Carnaval das 2 semanas antes até a Quarta-feira de
   Cinzas (calculado pela Páscoa); Festa junina em junho; Dia da prova na data cadastrada; Nomeado até o estudante
   desligar ou cadastrar uma prova nova (concurso escada).
 - **Poses com função:** pensando (FofoIA respondendo), dormindo (pausa do FofoDoro), comemorando (marco real).
-- **Movimento:** em tela de estudo o Fofo fica parado (no máximo pisca); anima só em momento (pausa, conquista,
-  resposta chegando). Respeita `prefers-reduced-motion`. O resto da interface segue 150–250 ms, sem quadros.
+- **Movimento:** o Fofo se mexe o tempo todo, menos durante um bloco de foco do FofoDoro, quando só pisca
+  (movimento na visão periférica puxa o olho da leitura). Passar o mouse num Fofo clicável faz ele se mexer.
+  Respeita `prefers-reduced-motion` (parado). O resto da interface segue 150–250 ms, sem quadros.
 
 ## Voz do Fofo
 - Fala só na zona do Fofo, em frase curta, de adulto para adulto: acolhe e aponta o próximo passo.

@@ -11,7 +11,9 @@ import { AdminFactoryView } from './features/admin-factory/AdminFactoryView';
 import { FofoIaPanel } from './features/fofoia/FofoIaPanel';
 import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { FofoSprite } from './features/mascot/FofoSprite';
-import { CurrentFofo, FofoOutfitProvider, useFofoOutfit } from './features/mascot/FofoOutfitContext';
+import { FofoOutfitProvider, useFofoOutfit } from './features/mascot/FofoOutfitContext';
+import { FofoWardrobeButton } from './features/mascot/FofoWardrobeButton';
+import { useFofoPrefs } from './features/mascot/useFofoPrefs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
 import { useExamOutlook } from './features/study-plan/useExamOutlook';
@@ -513,8 +515,14 @@ export default function App() {
     },
   });
 
-  // Roupa do Fofo para a aba, a hora e a data de agora (regra em .agents/rules/identidade-fofolab.md)
-  const fofoOutfit = useFofoOutfit(activeTab, activePlan?.exam_date ? [activePlan.exam_date] : []);
+  // Roupa do Fofo pela hora do dia, festas, marcos e guarda-roupa (regra em .agents/rules/identidade-fofolab.md)
+  const fofoPrefs = useFofoPrefs(activePlan);
+  const fofo = useFofoOutfit({
+    examDates: activePlan?.exam_date ? [activePlan.exam_date] : [],
+    appointed: fofoPrefs.appointed,
+    fixedOutfit: fofoPrefs.fixedOutfit,
+  });
+  const fofoFocus = studyBlock.state.phase === 'FOCUS' && studyBlock.state.running;
 
   if (initError) {
     return (
@@ -533,7 +541,7 @@ export default function App() {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-slate-950 text-slate-200">
         <div className="flex items-center gap-3 text-sm">
-          <FofoSprite outfit={fofoOutfit} motion="full" decorative />
+          <FofoSprite outfit={fofo.app} motion="full" decorative />
           <span>Carregando sua bancada de estudos...</span>
         </div>
       </div>
@@ -1062,13 +1070,22 @@ export default function App() {
   };
 
   return (
-    <FofoOutfitProvider outfit={fofoOutfit}>
+    <FofoOutfitProvider value={{ app: fofo.app, fofodoro: fofo.fofodoro, focus: fofoFocus }}>
     <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
       {mode === 'student' && (
         <AppHeader
           hidden={readerExpanded}
-          mascot={<CurrentFofo />}
+          mascot={
+            <FofoWardrobeButton
+              outfit={fofo.app}
+              automatic={fofo.automatic}
+              fixedOutfit={fofoPrefs.fixedOutfit}
+              appointed={fofoPrefs.appointed}
+              onChooseOutfit={fofoPrefs.setFixedOutfit}
+              onAppointedChange={fofoPrefs.setAppointed}
+            />
+          }
           planLabel={`[${activePlan.organ || 'Geral'}] ${activePlan.title}`}
           daysUntilExam={cycleData.daysUntilExam}
           examParts={summarizeExamParts(cycleData.allocations, examParts)}

@@ -86,8 +86,15 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   Wizard; títulos sem emoji. Auditoria `src/__tests__/noEmojiInUi.test.ts` reprova emoji em texto de interface (exceções
   de conteúdo listadas com o porquê). A lista da conversa da FofoIA virou `role="log"` ("Conversa com a FofoIA").
   `npm test` (627), `test:e2e` (38) e `build` verdes.
-  **Falta (parte 2b):** "Roupa do Fofo" e botão "fui nomeado" (gravar), roupas por hora do dia (em discussão com o dono),
-  animação do Fofo fora dos avisos (em discussão), poses (pensando, dormindo, comemorando) e ícone de 16 px.
+  **Parte 2b feita (26/10/2026, decisões do dono):** roupas pela hora do dia e pelo sol do fuso do computador
+  (`sun.ts`, cidade de referência por fuso; fazendeiro de dia, explorador do pôr do sol às 22:00, madrugada até o
+  nascer do sol; fuso desconhecido = 06:00–18:00); Fofo do relógio no FofoDoro; o Fofo se mexe o tempo todo e só
+  pisca durante um bloco de foco (hover anima); clicar no Fofo do cabeçalho abre o **guarda-roupa** (Automática ou
+  roupa fixa) e o **"Fui nomeado!"** — guardados neste computador (`useFofoPrefs`, sem mudar o banco); o nomeado
+  vale para o plano e a data de prova de quando foi marcado. Testes `fofoWardrobe`, `fofoSprite`,
+  `fofoOutfitContext` + E2E `e2e/fofo.spec.ts` (sol, Halloween, guarda-roupa e nomeado depois do F5);
+  `npm test` (634), `test:e2e` (41) e `build` verdes.
+  **Falta (parte 2c):** poses (pensando, dormindo, comemorando) e ícone de 16 px.
 - **5.6 — IA real:** feito com Groq (ver acima). Falta: copiloto com IA real; gateway próprio antes de distribuir o `.exe` (chaves `VITE_*` vão dentro do app).
 - **6 — Mapa de conceitos & pacotes:** grafo de tópicos/pré-requisitos; decidir o formato do pacote (o backup completo já existe; para amigos, um pacote só de conteúdo, sem progresso pessoal).
 - [DONE] **7b — registro rápido de questões feitas fora do app** (23/10/2026, plano `docs/superpowers/plans/2026-10-22-7b-registro-rapido-tec.md`):

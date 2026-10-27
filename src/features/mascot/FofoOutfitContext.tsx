@@ -1,28 +1,65 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { FofoSprite, type FofoMotion } from './FofoSprite';
+import { coordsForTimeZone, sunTimes } from './sun';
 import { pickOutfit, type OutfitId } from './wardrobe';
 
-const OutfitContext = createContext<OutfitId>('fofodeck');
-
-/** O App escolhe a roupa uma vez; cabeçalho, FofoIA e avisos leem daqui sem receber a roupa por props. */
-export function FofoOutfitProvider({ outfit, children }: { outfit: OutfitId; children: ReactNode }) {
-  return <OutfitContext.Provider value={outfit}>{children}</OutfitContext.Provider>;
+export interface FofoOutfits {
+  /** Roupa no app (cabeçalho, FofoIA, Wizard). */
+  app: OutfitId;
+  /** Roupa no FofoDoro (o Fofo do relógio, salvo festa, marco ou roupa fixa). */
+  fofodoro: OutfitId;
+  /** Bloco de foco correndo: o Fofo só pisca, para não puxar o olho do estudo. */
+  focus: boolean;
 }
 
-/** O Fofo com a roupa de agora. */
-export function CurrentFofo(props: { scale?: 1 | 2 | 4; motion?: FofoMotion; decorative?: boolean; className?: string }) {
-  const outfit = useContext(OutfitContext);
-  return <FofoSprite outfit={outfit} {...props} />;
+const OutfitContext = createContext<FofoOutfits>({ app: 'fofodeck', fofodoro: 'fofodeck', focus: false });
+
+/** O App escolhe as roupas uma vez; cabeçalho, FofoIA e avisos leem daqui sem receber a roupa por props. */
+export function FofoOutfitProvider({ value, children }: { value: FofoOutfits; children: ReactNode }) {
+  return <OutfitContext.Provider value={value}>{children}</OutfitContext.Provider>;
+}
+
+/** O Fofo com a roupa de agora. `auto` (padrão): se mexe, mas durante o foco só pisca. */
+export function CurrentFofo({
+  place = 'app',
+  motion = 'auto',
+  ...props
+}: {
+  place?: 'app' | 'fofodoro';
+  motion?: FofoMotion | 'auto';
+  scale?: 1 | 2 | 4;
+  decorative?: boolean;
+  className?: string;
+}) {
+  const outfits = useContext(OutfitContext);
+  let resolved: FofoMotion = motion === 'auto' ? 'full' : motion;
+  if (motion === 'auto' && outfits.focus) resolved = 'blink';
+  return <FofoSprite outfit={outfits[place]} motion={resolved} {...props} />;
 }
 
 const REFRESH_MS = 60_000;
 
-/** Roupa para a aba aberta, refeita a cada minuto: passar das 22:00 ou virar o mês troca sem mudar de aba. */
-export function useFofoOutfit(tab: string, examDates: string[]): OutfitId {
+/** Nascer e pôr do sol de hoje pelo fuso do computador (sem pedir localização). */
+function todaysSun(now: Date) {
+  const coords = coordsForTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone);
+  if (!coords) return null;
+  return sunTimes(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12), coords.lat, coords.lon);
+}
+
+/**
+ * Roupas de agora, refeitas a cada minuto: passar do pôr do sol, das 22:00 ou virar o mês troca sozinho.
+ * `automatic` é a que valeria sem roupa fixa (mostrada no guarda-roupa como "Automática").
+ */
+export function useFofoOutfit(input: { examDates: string[]; appointed?: boolean; fixedOutfit?: OutfitId | null }) {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), REFRESH_MS);
     return () => window.clearInterval(timer);
   }, []);
-  return pickOutfit({ now, tab, examDates });
+  const base = { now, examDates: input.examDates, appointed: input.appointed, sun: todaysSun(now) };
+  return {
+    app: pickOutfit({ ...base, fixedOutfit: input.fixedOutfit }),
+    fofodoro: pickOutfit({ ...base, fixedOutfit: input.fixedOutfit, place: 'fofodoro' }),
+    automatic: pickOutfit(base),
+  };
 }

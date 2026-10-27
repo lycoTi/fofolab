@@ -280,21 +280,30 @@ body.fofolab-resizing {
     opacity: 0;
   }
 }
-.fofo-fa {
-  animation: fofo-frame-a var(--fofo-frame, 1s) step-end infinite;
-}
-.fofo-fb {
-  opacity: 0;
-  animation: fofo-frame-b var(--fofo-frame, 1s) step-end infinite;
-}
+/* O SVG traz os três quadros; aqui decide o que anima: data-motion="full" troca os quadros, "blink" só pisca,
+   "still" fica parado. Num Fofo clicável (.fofo-hover), passar o mouse ou focar pelo teclado faz ele se mexer. */
+.fofo-fb,
 .fofo-blink {
   opacity: 0;
+}
+.fofo-sprite[data-motion='full'] .fofo-fa,
+.fofo-hover:hover .fofo-fa,
+.fofo-hover:focus-visible .fofo-fa {
+  animation: fofo-frame-a var(--fofo-frame, 1s) step-end infinite;
+}
+.fofo-sprite[data-motion='full'] .fofo-fb,
+.fofo-hover:hover .fofo-fb,
+.fofo-hover:focus-visible .fofo-fb {
+  animation: fofo-frame-b var(--fofo-frame, 1s) step-end infinite;
+}
+.fofo-sprite[data-motion='full'] .fofo-blink,
+.fofo-sprite[data-motion='blink'] .fofo-blink {
   animation: fofo-blink 4.8s step-end infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .fofo-fa,
-  .fofo-fb,
-  .fofo-blink {
-    animation: none;
+  .fofo-sprite .fofo-fa,
+  .fofo-sprite .fofo-fb,
+  .fofo-sprite .fofo-blink {
+    animation: none !important;
   }
 }

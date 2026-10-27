@@ -3,10 +3,11 @@ import { FOFO_SPRITES } from './fofoSprites.generated';
 import { OUTFIT_LABELS, type OutfitId } from './wardrobe';
 
 /**
- * - still: parado (tela de erro, lugares onde nada deve se mexer);
- * - blink: só pisca de vez em quando (cabeçalho e painéis que ficam ao lado do estudo);
- * - full: alterna os quadros da roupa e pisca (momentos: aviso do FofoDoro, carregando).
- * Quem pediu menos movimento no sistema vê o Fofo parado em todos (CSS em index.css).
+ * - still: parado (tela de erro);
+ * - blink: só pisca de vez em quando (durante um bloco de foco, para não puxar o olho do estudo);
+ * - full: alterna os quadros da roupa e pisca.
+ * Os três quadros estão sempre no SVG; o CSS (index.css) anima conforme `data-motion`, e passar o mouse num Fofo
+ * clicável (`.fofo-hover`) faz ele se mexer. Quem pediu menos movimento no sistema vê o Fofo parado.
  */
 export type FofoMotion = 'still' | 'blink' | 'full';
 
@@ -58,7 +59,7 @@ function toRuns(grid: string[], palette: Record<string, string>): Run[] {
   return runs;
 }
 
-function Layer({ runs, className }: { runs: Run[]; className?: string }) {
+function Layer({ runs, className }: { runs: Run[]; className: string }) {
   return (
     <g className={className}>
       {runs.map((r) => (
@@ -80,6 +81,7 @@ export function FofoSprite({ outfit, scale = 1, motion = 'blink', decorative = f
   return (
     <svg
       {...a11y}
+      data-motion={motion}
       width={size}
       height={size}
       viewBox="0 0 32 32"
@@ -88,9 +90,9 @@ export function FofoSprite({ outfit, scale = 1, motion = 'blink', decorative = f
       style={{ ['--fofo-frame' as string]: `${FRAME_SECONDS[outfit]}s` }}
     >
       {!decorative && <title>{label}</title>}
-      <Layer runs={layers.a} className={motion === 'full' ? 'fofo-fa' : undefined} />
-      {motion === 'full' && <Layer runs={layers.b} className="fofo-fb" />}
-      {motion !== 'still' && <Layer runs={layers.closed} className="fofo-blink" />}
+      <Layer runs={layers.a} className="fofo-fa" />
+      <Layer runs={layers.b} className="fofo-fb" />
+      <Layer runs={layers.closed} className="fofo-blink" />
     </svg>
   );
 }

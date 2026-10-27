@@ -8,10 +8,10 @@ Como e onde ele aparece (zonas, voz, ordem e calendário das roupas): `.agents/r
 ## Roupas
 | id | Roupa | Quando |
 |---|---|---|
-| `fofodeck` | Base (fone e relógio "25") | Início, FofoDoro e o resto |
-| `fazendeiro` | Fazendeiro | Plano de estudo e Revisão do dia |
-| `explorador` | Explorador | Questões e Edital |
-| `madrugada` | Estudante da madrugada | 22:00 às 05:00 |
+| `fofodeck` | Base (fone e relógio "25") | FofoDoro (aviso do fim do foco e da pausa) |
+| `fazendeiro` | Fazendeiro | do nascer ao pôr do sol |
+| `explorador` | Explorador | do pôr do sol às 22:00 |
+| `madrugada` | Estudante da madrugada | das 22:00 ao nascer do sol |
 | `halloween` | Fantasminha de lençol | outubro |
 | `natal` | Natal (o do FofoDeck de Natal) | 1º a 30/12 |
 | `anonovo` | Ano-novo | 31/12 a 31/01 |

@@ -1,8 +1,10 @@
 import { localDateKey } from '../../lib/timeFormat';
+import type { SunTimes } from './sun';
 
 /**
  * Guarda-roupa do Fofo (regra em `.agents/rules/identidade-fofolab.md`): qual roupa ele veste agora.
- * Ordem: roupa fixa > dia da prova > nomeado > data especial > madrugada > aba > base.
+ * Ordem: roupa fixa > dia da prova > nomeado > data especial > hora do dia (fazendeiro de dia, explorador do pôr do sol
+ * às 22:00, madrugada até o nascer do sol). No FofoDoro, no lugar da hora do dia, o Fofo do relógio.
  */
 export type OutfitId =
   | 'fofodeck'
@@ -34,21 +36,33 @@ export const OUTFIT_LABELS: Record<OutfitId, string> = {
 
 export interface OutfitInput {
   now: Date;
-  /** Aba aberta na bancada ('today', 'questions', 'cycle'...). */
-  tab: string;
   /** Datas das provas cadastradas, 'YYYY-MM-DD'. */
   examDates: string[];
+  /** Nascer e pôr do sol de hoje; null = fuso desconhecido (vale 06:00–18:00). */
+  sun?: SunTimes | null;
   /** Marcado pelo estudante; fica até ele desligar ou cadastrar uma prova nova. */
   appointed?: boolean;
-  /** Roupa escolhida nas configurações; null ou ausente = automática. */
+  /** Roupa escolhida no guarda-roupa; null ou ausente = automática. */
   fixedOutfit?: OutfitId | null;
+  /** FofoDoro: o Fofo do relógio, no lugar da roupa da hora do dia. */
+  place?: 'app' | 'fofodoro';
 }
 
-/** Plano de estudo planta e rega; Questões explora o mapa da prova. As outras abas usam a base. */
-const TAB_OUTFITS: Record<string, OutfitId> = {
-  cycle: 'fazendeiro',
-  questions: 'explorador',
-};
+/** Fazendeiro enquanto há sol; explorador com a lanterna ao anoitecer; madrugada das 22:00 ao nascer do sol. */
+const LATE_NIGHT_HOUR = 22;
+
+function sunOrDefault(now: Date, sun: SunTimes | null | undefined): SunTimes {
+  if (sun) return sun;
+  const day = (hour: number) => new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, 0);
+  return { sunrise: day(6), sunset: day(18) };
+}
+
+function timeOfDayOutfit(now: Date, sun: SunTimes | null | undefined): OutfitId {
+  const { sunrise, sunset } = sunOrDefault(now, sun);
+  if (now.getHours() >= LATE_NIGHT_HOUR || now < sunrise) return 'madrugada';
+  if (now < sunset) return 'fazendeiro';
+  return 'explorador';
+}
 
 function addDays(year: number, monthIndex: number, day: number, delta: number): string {
   return localDateKey(new Date(year, monthIndex, day + delta));
@@ -98,11 +112,6 @@ function specialDateOutfit(now: Date): OutfitId | null {
   return null;
 }
 
-function isLateNight(now: Date): boolean {
-  const hour = now.getHours();
-  return hour >= 22 || hour < 5;
-}
-
 export function pickOutfit(input: OutfitInput): OutfitId {
   if (input.fixedOutfit) return input.fixedOutfit;
   const today = localDateKey(input.now);
@@ -110,6 +119,6 @@ export function pickOutfit(input: OutfitInput): OutfitId {
   if (input.appointed) return 'nomeado';
   const special = specialDateOutfit(input.now);
   if (special) return special;
-  if (isLateNight(input.now)) return 'madrugada';
-  return TAB_OUTFITS[input.tab] ?? 'fofodeck';
+  if (input.place === 'fofodoro') return 'fofodeck';
+  return timeOfDayOutfit(input.now, input.sun);
 }

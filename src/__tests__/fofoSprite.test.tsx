@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { FofoSprite } from '../features/mascot/FofoSprite';
+import { FofoWardrobeButton } from '../features/mascot/FofoWardrobeButton';
 import { FOFO_SPRITES } from '../features/mascot/fofoSprites.generated';
 import { OUTFIT_LABELS, type OutfitId } from '../features/mascot/wardrobe';
 
@@ -27,25 +28,52 @@ describe('Fofo em pixel art', () => {
     expect(img.getAttribute('shape-rendering')).toBe('crispEdges');
   });
 
-  it('parado não anima; piscando só pisca; em momento alterna os quadros e pisca', () => {
-    const { container, rerender } = render(<FofoSprite outfit="fofodeck" motion="still" />);
-    expect(container.querySelector('.fofo-fb')).toBeNull();
-    expect(container.querySelector('.fofo-blink')).toBeNull();
-    expect(container.querySelector('.fofo-fa')).toBeNull();
-
-    rerender(<FofoSprite outfit="fofodeck" motion="blink" />);
-    expect(container.querySelector('.fofo-blink')).not.toBeNull();
-    expect(container.querySelector('.fofo-fb')).toBeNull();
-
+  it('o movimento (parado, só pisca, se mexe) fica marcado para o CSS animar os quadros', () => {
+    const { rerender } = render(<FofoSprite outfit="fofodeck" motion="still" />);
+    expect(screen.getByRole('img').getAttribute('data-motion')).toBe('still');
     rerender(<FofoSprite outfit="fofodeck" motion="full" />);
-    expect(container.querySelector('.fofo-fa')).not.toBeNull();
-    expect(container.querySelector('.fofo-fb')).not.toBeNull();
-    expect(container.querySelector('.fofo-blink')).not.toBeNull();
+    expect(screen.getByRole('img').getAttribute('data-motion')).toBe('full');
   });
 
   it('ao lado de um texto que já diz o que é, fica escondido do leitor de tela', () => {
     const { container } = render(<FofoSprite outfit="fofodeck" decorative />);
     expect(screen.queryByRole('img')).toBeNull();
     expect(container.querySelector('svg')?.getAttribute('aria-hidden')).toBe('true');
+  });
+});
+
+describe('Guarda-roupa ao clicar no Fofo', () => {
+  function setup(over: Partial<Parameters<typeof FofoWardrobeButton>[0]> = {}) {
+    const props = {
+      outfit: 'fazendeiro' as OutfitId,
+      automatic: 'fazendeiro' as OutfitId,
+      fixedOutfit: null,
+      appointed: false,
+      onChooseOutfit: vi.fn(),
+      onAppointedChange: vi.fn(),
+      ...over,
+    };
+    render(<FofoWardrobeButton {...props} />);
+    return props;
+  }
+
+  it('abre o guarda-roupa, escolhe uma roupa fixa ou volta para a automática, e fecha com Esc', () => {
+    const props = setup();
+    fireEvent.click(screen.getByRole('button', { name: /Guarda-roupa do Fofo/ }));
+    const dialog = screen.getByRole('dialog', { name: 'Guarda-roupa do Fofo' });
+    expect(dialog).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Fofo de Natal' }));
+    expect(props.onChooseOutfit).toHaveBeenCalledWith('natal');
+    fireEvent.click(screen.getByRole('button', { name: /Automática/ }));
+    expect(props.onChooseOutfit).toHaveBeenLastCalledWith(null);
+    fireEvent.keyDown(dialog, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('"Fui nomeado!" marca; marcado, oferece desfazer', () => {
+    const props = setup();
+    fireEvent.click(screen.getByRole('button', { name: /Guarda-roupa do Fofo/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Fui nomeado!' }));
+    expect(props.onAppointedChange).toHaveBeenCalledWith(true);
   });
 });
