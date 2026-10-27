@@ -1,7 +1,16 @@
 // @vitest-environment node
 import { readFileSync } from 'node:fs';
 import { describe, expect, it, vi } from 'vitest';
-import { assuntoIdFromCaminho, cleanSubjectName, linkByName, normalizeName, topicCaminho } from '../lib/acervo/linking';
+import {
+  aiCandidates,
+  assuntoIdFromCaminho,
+  buildLinkPrompt,
+  cleanSubjectName,
+  linkByName,
+  normalizeName,
+  parseLinkResponse,
+  topicCaminho,
+} from '../lib/acervo/linking';
 import type { PacoteAssunto } from '../lib/acervo/pacote';
 import { createEditalDraft, draftToPlanInput } from '../features/edital-import/editalDraft';
 import { parseEdital } from '../lib/editalParser';
@@ -98,4 +107,58 @@ describe('Ligação de tópico a assunto pelo nome (spec 12c §5.3, 1º passo)',
     expect(results.length).toBeGreaterThan(150);
     expect(linked / results.length).toBeGreaterThanOrEqual(0.95);
   }, 60_000);
+});
+
+describe('Ligação pela IA só para quem sobrou (spec 12c §5.3, 2º passo)', () => {
+  const LICITACOES = ['Direito Administrativo', 'Licitações'];
+  const vocab: PacoteAssunto[] = [
+    assunto(['Direito Administrativo']),
+    assunto(LICITACOES),
+    assunto([...LICITACOES, 'Contratação direta: dispensa e inexigibilidade']),
+    assunto([...LICITACOES, 'Modalidades de licitação']),
+    assunto([...LICITACOES, 'Lei 14.133 e o planejamento das contratações']),
+    assunto(['Direito Administrativo', 'Atos administrativos']),
+    assunto(['Auditoria Governamental']),
+    assunto(['Auditoria Governamental', 'Contratações públicas auditadas pelo controle']),
+    ...Array.from({ length: 20 }, (_, i) => assunto(['Tecnologia da Informação', `Assunto sem relação ${i}`])),
+  ];
+
+  it('candidatos pelas palavras do caminho do tópico, sem raiz, até 15', () => {
+    const caminho = ['Direito Administrativo', 'Lei 14.133', 'Contratações diretas'];
+    const candidates = aiCandidates(caminho, vocab);
+    const ids = candidates.map((c) => c.id);
+    expect(ids).toContain(assuntoIdFromCaminho([...LICITACOES, 'Contratação direta: dispensa e inexigibilidade']));
+    expect(ids[0]).toBe(assuntoIdFromCaminho([...LICITACOES, 'Contratação direta: dispensa e inexigibilidade']));
+    expect(candidates.every((c) => c.caminho.length >= 2)).toBe(true);
+    expect(ids.some((id) => id.startsWith('tecnologia'))).toBe(false);
+    expect(aiCandidates(caminho, vocab, 2)).toHaveLength(2);
+  });
+
+  it('o prompt traz os ids dos candidatos, a regra de não inventar e o formato da resposta', () => {
+    const candidates = aiCandidates(['Direito Administrativo', 'Lei 14.133', 'Contratações diretas'], vocab);
+    const prompt = buildLinkPrompt(['Direito Administrativo', 'Lei 14.133', 'Contratações diretas'], candidates);
+    for (const c of candidates) expect(prompt).toContain(c.id);
+    expect(prompt).toContain('Direito Administrativo › Lei 14.133 › Contratações diretas');
+    expect(prompt).toMatch(/não invente/i);
+    expect(prompt).toContain('{"assuntos":[{"id":"…","confianca":0.0}]}');
+  });
+
+  const ids = new Set(['a', 'b', 'c', 'd']);
+
+  it('aceita só ids da lista, com confiança de 0,7 para cima, no máximo 3', () => {
+    expect(parseLinkResponse('{"assuntos":[{"id":"a","confianca":0.9},{"id":"inventado","confianca":0.99}]}', ids)).toEqual(['a']);
+    expect(parseLinkResponse('{"assuntos":[{"id":"a","confianca":0.65},{"id":"b","confianca":0.7}]}', ids)).toEqual(['b']);
+    expect(
+      parseLinkResponse(
+        '```json\n{"assuntos":[{"id":"a","confianca":0.8},{"id":"b","confianca":0.95},{"id":"c","confianca":0.9},{"id":"d","confianca":0.75}]}\n```',
+        ids
+      )
+    ).toEqual(['b', 'c', 'a']);
+  });
+
+  it('lista vazia = nenhum serve; texto sem JSON = ilegível', () => {
+    expect(parseLinkResponse('{"assuntos":[]}', ids)).toEqual([]);
+    expect(parseLinkResponse('Não encontrei nenhum assunto adequado.', ids)).toBeNull();
+    expect(parseLinkResponse('{"outra":1}', ids)).toBeNull();
+  });
 });
