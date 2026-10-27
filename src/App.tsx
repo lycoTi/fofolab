@@ -37,6 +37,9 @@ import {
   type OnboardingProfile,
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
+import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
+import { materializeQuestion } from './lib/acervo/studentAcervo';
+import type { QuestionScope } from './lib/acervo/topicQuestions';
 import { AppHeader } from './features/workbench-shell/AppHeader';
 import { summarizeExamParts } from './features/workbench-shell/headerSummary';
 import { RightDock, rightDockRail, useRightDockTab, type RightDockTab } from './features/workbench-shell/RightDock';
@@ -66,12 +69,9 @@ import {
   getExamPartsByPlan,
   getNotebooksByPlan,
   getPdfSourceForTopic,
-  getQuestionsForTopicOrSubject,
-  getTopicQuestionsWithFallback,
   getQuestionLogs,
   recordQuestionLog,
   undoQuestionLog,
-  type QuestionFallback,
   getRecallChecks,
   getRecentAttempts,
   getStudyPlans,
@@ -194,14 +194,12 @@ export default function App() {
   const [allNotebooks, setAllNotebooks] = useState<Notebook[]>([]);
 
   // Entidades do tópico atual
-  const [questionScope, setQuestionScope] = useState<'topic' | 'subject' | 'all'>('topic');
-  const [topicQuestions, setTopicQuestions] = useState<{ question: Question; dissection: AiDissection | null }[]>([]);
+  const [questionScope, setQuestionScope] = useState<QuestionScope>('topic');
   const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
   // Questão na tela da aba Questões (a FofoIA só recebe o gabarito depois de respondida)
   const [activeQuestion, setActiveQuestion] = useState<{ question: Question; answered: boolean } | null>(null);
   // Pedido da aba Questões para a FofoIA ("Aprofundar", "Pedir pista"); o id faz cada pedido ser atendido uma vez
   const [fofoRequest, setFofoRequest] = useState<{ id: number; kind: 'deepen' | 'hint' } | null>(null);
-  const [questionFallback, setQuestionFallback] = useState<QuestionFallback>(null);
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
   const [pdfFile, setPdfFile] = useState<{ url: string; name: string; sourceId: string } | null>(null);
   const pdfUrlRef = useRef<string | null>(null);
@@ -294,20 +292,17 @@ export default function App() {
       });
   }, []);
 
-  // Questões do tópico (recarrega ao trocar tópico, filtro ou após importar/gerar explicação)
-  useEffect(() => {
-    if (!dbReady || !selectedSubjectId) return;
-    if (questionScope === 'topic') {
-      // Tópico sem questões próprias: mostra as do grupo (ou da matéria) e diz de onde vieram
-      const { items, fallback } = getTopicQuestionsWithFallback(selectedTopicId, selectedSubjectId);
-      setTopicQuestions(items);
-      setQuestionFallback(fallback);
-    } else {
-      setTopicQuestions(getQuestionsForTopicOrSubject(selectedTopicId, selectedSubjectId, questionScope));
-      setQuestionFallback(null);
-    }
-    setLastDiagnosisMsg(null);
-  }, [dbReady, selectedSubjectId, selectedTopicId, questionScope, questionsVersion, dataVersion]);
+  // Questões do tópico: próprias + acervo da Cebraspe (spec 12c); recarrega ao trocar tópico, filtro ou após gravar
+  const questionsView = useTopicQuestions({
+    ready: dbReady,
+    planId: activePlan?.id ?? '',
+    subjectId: selectedSubjectId,
+    topicId: selectedTopicId,
+    scope: questionScope,
+    version: questionsVersion + dataVersion,
+  });
+  const topicQuestions = questionsView.items;
+  useEffect(() => setLastDiagnosisMsg(null), [selectedSubjectId, selectedTopicId, questionScope]);
 
   // PDF do tópico (não depende do filtro de questões)
   useEffect(() => {
@@ -457,11 +452,8 @@ export default function App() {
     if (blockPhase === 'FOCUS') setLogInvite(null);
   }, [blockPhase, finishedTopicId]);
 
-  // Quantas questões o bloco tem (com recuo para o grupo) — memorizado: o relógio redesenha a tela a cada 0,5 s
-  const routineQuestionCount = useMemo(() => {
-    if (!dbReady || !routineBlockTopic) return 0;
-    return getTopicQuestionsWithFallback(routineBlockTopic.id, routineBlockTopic.subject_id).items.length;
-  }, [dbReady, routineBlockTopic, questionsVersion, dataVersion]);
+  // Quantas questões o tópico do bloco tem (só as dele: sem recuo para o grupo — spec 12c §5.4)
+  const routineQuestionCount = useTopicQuestionCount({ ready: dbReady, topic: routineBlockTopic, version: questionsVersion + dataVersion });
 
   // O bloco atual mudou (abriu o app, terminou um bloco, recalibrou): a bancada vai para o tópico dele
   // dataVersion entra na chave: restaurar backup/exemplo leva a seleção ao primeiro tópico, e ela precisa voltar ao bloco
@@ -587,6 +579,7 @@ export default function App() {
     const targetTopicId = question.topic_id || currentTopic?.id;
     if (!targetTopicId) return null;
     try {
+      materializeQuestion(question);
       const { attemptId, updatedTopic, sampleConfidencePercent } = recordQuestionDiagnosis({
         questionId: question.id,
         topicId: targetTopicId,
@@ -622,6 +615,7 @@ export default function App() {
   const handleGenerateDissection = async (question: Question) => {
     const result = await generateQuestionDissection(question);
     if (result.status === 'ok') {
+      materializeQuestion(question);
       saveAiDissection({
         questionId: question.id,
         provider: result.provider,
@@ -1050,12 +1044,6 @@ export default function App() {
 
   const recalibration = recalibrationHint(cycleData.allocations, cycleData.topicHeatmapRanking);
 
-  const questionSourceLabel = (() => {
-    if (!questionFallback) return null;
-    if (questionFallback.kind === 'group') return `Questões do grupo ${questionFallback.code}`;
-    return 'Questões de toda a matéria';
-  })();
-
   const toggleReaderMaximized = () => {
     if (readerMaximized && document.fullscreenElement) void document.exitFullscreen();
     setReaderMaximized((v) => !v);
@@ -1263,10 +1251,7 @@ export default function App() {
                       <QuestionWorkbench
                         questions={topicQuestions}
                         scopeFilter={questionScope}
-                        onChangeScopeFilter={(scope) => {
-                          // O grupo só entra com a lista nova do acervo (useTopicQuestions)
-                          if (scope !== 'group') setQuestionScope(scope);
-                        }}
+                        onChangeScopeFilter={setQuestionScope}
                         onAnswer={handleAnswer}
                         onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}
@@ -1279,7 +1264,6 @@ export default function App() {
                         onGenerateDissection={handleGenerateDissection}
                         onOpenImport={() => setImportOpen(true)}
                         aiConfigured={aiStatus.configured}
-                        sourceLabel={questionSourceLabel}
                       />
                     )}
 

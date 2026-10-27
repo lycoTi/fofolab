@@ -321,9 +321,11 @@ describe('Importação de questões, tópicos e explicações', () => {
     expect(again.inserted).toBe(0);
     expect(again.skippedDuplicates).toBe(2);
 
-    const imported = db.getQuestionsForTopicOrSubject('', 'subj-cgu-auditoria', 'subject');
-    const certoErrado = imported.find((q) => q.question.final_answer === 'E');
-    expect(JSON.parse(certoErrado!.question.options_json)).toEqual(['C) Certo', 'E) Errado']);
+    const imported = db.queryAll<{ final_answer: string; options_json: string }>(db.getDb(), 'SELECT * FROM questions WHERE subject_id = ?', [
+      'subj-cgu-auditoria',
+    ]);
+    const certoErrado = imported.find((q) => q.final_answer === 'E');
+    expect(JSON.parse(certoErrado!.options_json)).toEqual(['C) Certo', 'E) Errado']);
   });
 
   it('importa tópicos do edital ligando subtópicos ao tópico pai', async () => {
@@ -473,40 +475,6 @@ describe('Roteiro do dia congelado (docs/specs/09)', () => {
   });
 });
 
-describe('Questões do bloco com recuo para o grupo (docs/specs/09)', () => {
-  const q = (statement: string, topicId: string | null) => ({
-    statement,
-    options: ['C) Certo', 'E) Errado'],
-    finalAnswer: 'C',
-    examBoard: 'Cebraspe',
-    examYear: 2024,
-    organ: 'CGU',
-    topicId,
-  });
-
-  it('tópico sem questões mostra as do grupo; sem grupo, as da matéria', async () => {
-    const { db } = await openDatabase();
-    const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
-    const group = db.createTopic({ subject_id: subjectId, code: '9.2', title: 'Segurança' });
-    const owasp = db.createTopic({ subject_id: subjectId, parent_id: group.id, code: '9.2.1', title: 'OWASP' });
-    const jwt = db.createTopic({ subject_id: subjectId, parent_id: group.id, code: '9.2.2', title: 'JWT' });
-    const lonely = db.createTopic({ subject_id: subjectId, code: '9.9', title: 'Sozinho' });
-    db.importQuestions(subjectId, [q('Item sobre JWT na prova.', jwt.id)]);
-
-    const own = db.getTopicQuestionsWithFallback(jwt.id, subjectId);
-    expect(own.items).toHaveLength(1);
-    expect(own.fallback).toBeNull();
-
-    const fromGroup = db.getTopicQuestionsWithFallback(owasp.id, subjectId);
-    expect(fromGroup.items.map((i) => i.question.topic_id)).toEqual([jwt.id]);
-    expect(fromGroup.fallback).toEqual({ kind: 'group', code: '9.2' });
-
-    const fromSubject = db.getTopicQuestionsWithFallback(lonely.id, subjectId);
-    expect(fromSubject.fallback).toEqual({ kind: 'subject' });
-    expect(fromSubject.items.length).toBeGreaterThan(0);
-  });
-});
-
 describe('Registro rápido de questões feitas fora do app (docs/specs/07 §5.4)', () => {
   it('gravar muda domínio, status, data de estudo e domínio da matéria; desfazer volta só o último', async () => {
     const { db } = await openDatabase();
@@ -609,8 +577,7 @@ describe('Revisão do dia (docs/specs/09 §5.3, migração v8)', () => {
     const { db } = await openDatabase();
     const subjectId = db.getSubjectsByPlan(db.getActiveStudyPlan()!.id)[0].id;
     const topic = db.createTopic({ subject_id: subjectId, code: '7.7', title: 'Revisão', mastery_score: 40 });
-    db.importQuestions(subjectId, statements.map((s) => certoErrado(s, topic.id)));
-    const questionIds = db.getQuestionsForTopicOrSubject(topic.id, subjectId).map((i) => i.question.id);
+    const questionIds = db.importQuestions(subjectId, statements.map((s) => certoErrado(s, topic.id))).insertedIds;
     return { db, subjectId, topic, questionIds };
   }
 
