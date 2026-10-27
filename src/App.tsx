@@ -1263,7 +1263,10 @@ export default function App() {
                       <QuestionWorkbench
                         questions={topicQuestions}
                         scopeFilter={questionScope}
-                        onChangeScopeFilter={setQuestionScope}
+                        onChangeScopeFilter={(scope) => {
+                          // O grupo só entra com a lista nova do acervo (useTopicQuestions)
+                          if (scope !== 'group') setQuestionScope(scope);
+                        }}
                         onAnswer={handleAnswer}
                         onChangeDiagnosis={handleChangeDiagnosis}
                         lastDiagnosisFeedback={lastDiagnosisMsg}
