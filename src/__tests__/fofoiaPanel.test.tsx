@@ -189,6 +189,8 @@ describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {
     await clickLesson();
     expect(screen.queryByText(/Antes da aula/)).toBeNull();
     unmount();
+    // Outro dia de estudo: a conversa guardada do primeiro painel já não volta
+    localStorage.clear();
     render(<FofoIaPanel {...props({ firstContact: false })} />);
     await clickLesson();
     expect(screen.queryByText(/Antes da aula/)).toBeNull();
@@ -215,5 +217,31 @@ describe('Pedidos e trocas de tópico', () => {
     expect(screen.getByText(/Antes da aula/)).toBeTruthy();
     rerender(<FofoIaPanel {...props({ firstContact: true, topicKey: 't2', topicLabel: '3.2 SQL' })} />);
     expect(screen.queryByText(/Antes da aula/)).toBeNull();
+  });
+});
+
+describe('Resposta cortada no teto de tamanho', () => {
+  it('mostra "Continuar de onde parou" no lugar do "Continuar (Parte...)" e pede o resto pelo botão', async () => {
+    const { FofoMessage } = await import('../features/fofoia/FofoMessage');
+    const onResume = vi.fn();
+    const onContinue = vi.fn();
+    render(
+      <FofoMessage
+        turn={{ id: 't', role: 'tutor', content: 'Parte 1 de 3\n\nO mesh externaliza políticas.', mode: 'LESSON', part: { n: 1, total: 3 }, cut: true }}
+        topicLabel="1.1 Microsserviços"
+        aiConfigured
+        onContinue={onContinue}
+        onResume={onResume}
+        onAnotherHint={() => {}}
+        onLesson={() => {}}
+        onSummary={() => {}}
+        onSaveSummary={() => {}}
+        onRetry={() => {}}
+      />
+    );
+    expect(screen.queryByRole('button', { name: /Continuar \(Parte/ })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Continuar de onde parou' }));
+    expect(onResume).toHaveBeenCalledOnce();
+    expect(onContinue).not.toHaveBeenCalled();
   });
 });

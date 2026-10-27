@@ -13,6 +13,7 @@ export function FofoMessage({
   topicLabel,
   aiConfigured,
   onContinue,
+  onResume,
   onAnotherHint,
   onLesson,
   onSummary,
@@ -25,7 +26,10 @@ export function FofoMessage({
   reveal?: boolean;
   topicLabel: string;
   aiConfigured: boolean;
-  onContinue: (part: number) => void;
+  /** Próxima parte da aula e o total anunciado (vai no pedido, para a IA não renumerar). */
+  onContinue: (part: number, total: number) => void;
+  /** Resposta cortada no teto de tamanho: pede o resto. */
+  onResume: () => void;
   onAnotherHint: () => void;
   onLesson: () => void;
   onSummary: () => void;
@@ -77,8 +81,13 @@ export function FofoMessage({
         </p>
       )}
       <div style={after.style} className={`${after.className} flex flex-wrap gap-1.5`}>
-        {part && part.n < part.total && (
-          <button type="button" onClick={() => onContinue(part.n + 1)} className={action}>
+        {turn.cut && (
+          <button type="button" onClick={onResume} className={action}>
+            Continuar de onde parou
+          </button>
+        )}
+        {!turn.cut && part && part.n < part.total && (
+          <button type="button" onClick={() => onContinue(part.n + 1, part.total)} className={action}>
             {`Continuar (Parte ${part.n + 1} de ${part.total})`}
           </button>
         )}

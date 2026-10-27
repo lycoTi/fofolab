@@ -25,7 +25,7 @@ const FOFO_RULES = `<regras>
 const MODE_INSTRUCTIONS: Record<FofoMode, string> = {
   QUICK: `<jeito nome="Rápida">Resposta curta e direta, até ~120 palavras, com uma analogia ou exemplo prático. Termine com "Palavras-chave:" e no máximo 5 termos.</jeito>`,
   FROM_ZERO: `<jeito nome="Do zero">O estudante está começando ou se perdeu. Até ~250 palavras: só a ideia central, não o assunto inteiro. Comece com uma metáfora do cotidiano e com o porquê de aquilo importar. Linguagem simples. Se um dos &lt;pre_requisitos&gt; for necessário para entender, pergunte primeiro se ele quer vê-lo antes. Termine oferecendo um assunto relacionado ou perguntando se ficou claro.</jeito>`,
-  LESSON: `<jeito nome="Aula completa">Aula na ordem: 1) O essencial (2–3 linhas); 2) Explicação com exemplo concreto, ligado a um tópico que o estudante já domina quando possível; 3) Camadas — em Direito: letra da lei/normativo → jurisprudência dominante (STF/STJ/TCU) → como costuma ser cobrado; nas demais áreas: conceito → exemplo → como costuma ser cobrado; 4) Cuidados comuns em provas (se a questão ativa respondida tiver explicação guardada, use os padrões dela); 5) Uma ou duas perguntas para o estudante responder de cabeça. Comece pelo conceito básico. A aula vem sempre em partes, cada parte com até ~400 palavras (a aula inteira em 2 a 4 partes, até ~1.600 palavras): escreva "Parte N de M" no topo e pare no fim da parte, numa frase completa.</jeito>`,
+  LESSON: `<jeito nome="Aula completa">Aula na ordem: 1) O essencial (2–3 linhas); 2) Explicação com exemplo concreto, ligado a um tópico que o estudante já domina quando possível; 3) Camadas — em Direito: letra da lei/normativo → jurisprudência dominante (STF/STJ/TCU) → como costuma ser cobrado; nas demais áreas: conceito → exemplo → como costuma ser cobrado; 4) Cuidados comuns em provas (se a questão ativa respondida tiver explicação guardada, use os padrões dela); 5) Uma ou duas perguntas para o estudante responder de cabeça. Comece pelo conceito básico. A aula vem sempre em partes, cada parte com até ~300 palavras (a aula inteira em 3 a 5 partes, até ~1.500 palavras). Escreva só uma parte por resposta: "Parte N de M" no topo e pare no fim dela, numa frase completa; o estudante pede a próxima.</jeito>`,
   SUMMARY: `<jeito nome="Resumo">Responda SOMENTE com estas 6 linhas, nada antes ou depois:
 **‹emoji› ‹Título›**
 · **Palavras-chave:** até 5 termos separados por vírgula
@@ -53,14 +53,32 @@ function editalXml(candidates: EditalCandidate[] | undefined): string {
   return `<topicos_candidatos>\n${rows.join('\n')}\n</topicos_candidatos>`;
 }
 
+export interface FofoPromptExtra {
+  editalCandidates?: EditalCandidate[];
+  /** Próxima parte da aula pedida e o total que a Parte 1 anunciou (o modelo tendia a renumerar e repetir). */
+  part?: number;
+  partTotal?: number;
+  /** Final do que já foi mostrado de uma resposta cortada no teto de tamanho. */
+  resumeAfter?: string;
+}
+
+function continuationXml(extra: FofoPromptExtra): string {
+  if (extra.resumeAfter) {
+    return `<continuacao>Sua resposta anterior passou do tamanho e foi cortada logo depois de: "${escapeXml(extra.resumeAfter)}". Continue exatamente dali, sem repetir nada do que já foi mostrado e sem título de parte novo.</continuacao>`;
+  }
+  if (!extra.part) return '';
+  const total = extra.partTotal ? ` de ${extra.partTotal}` : '';
+  return `<continuacao>Escreva só a Parte ${extra.part}${total} da aula, mantendo esse total. Não repita o que as partes anteriores, no histórico, já explicaram.</continuacao>`;
+}
+
 export function buildFofoPrompt(
   mode: FofoMode,
   ctx: FofoContext,
   conversation: ChatTurn[],
   message: string,
-  extra: { editalCandidates?: EditalCandidate[]; part?: number } = {}
+  extra: FofoPromptExtra = {}
 ): string {
-  const partLine = extra.part ? `<continuacao>Continue a aula a partir da Parte ${extra.part}.</continuacao>` : '';
+  const partLine = continuationXml(extra);
   return `${buildStudentContextXml(ctx.student)}
 <caderno_do_topico>${escapeXml(ctx.notebookExcerpt ?? 'sem anotações ainda')}</caderno_do_topico>
 <pre_requisitos>${escapeXml(ctx.prerequisites.join(' | ') || 'nenhum cadastrado')}</pre_requisitos>

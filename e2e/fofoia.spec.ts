@@ -95,3 +95,16 @@ test('aula completa alarga a coluna; resumo de exemplo não vai para o caderno; 
   await expect(fofo(page).getByText('🐹🧭 Cai no meu edital?')).toBeVisible();
   await expect(fofo(page).getByText(/^Sim: aparece em /)).toBeVisible();
 });
+
+test('a conversa com a FofoIA volta depois de recarregar a página (F5)', async ({ page }) => {
+  await page.addInitScript(() => window.localStorage.setItem('fofolab_onboarding_completed_v1', 'true'));
+  await page.goto('/');
+  const input = fofo(page).getByPlaceholder(/Pergunte sobre o tópico/);
+  await input.fill('o que é service mesh?');
+  await input.press('Enter');
+  await expect(fofo(page).getByText('Exemplo simulado — a IA ainda não está configurada').first()).toBeVisible();
+
+  await page.reload();
+  await expect(fofo(page).getByText('o que é service mesh?')).toBeVisible();
+  await expect(fofo(page).getByText('Exemplo simulado — a IA ainda não está configurada').first()).toBeVisible();
+});

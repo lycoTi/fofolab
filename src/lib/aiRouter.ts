@@ -19,6 +19,8 @@ export interface AiReply {
   simulated: boolean;
   /** A IA estava configurada mas não respondeu (rede, chave, limite). */
   failed?: boolean;
+  /** A IA bateu no teto de tamanho: o texto vai até a última frase completa e dá para pedir o resto. */
+  cut?: boolean;
 }
 
 export interface ChatTurn {
@@ -232,11 +234,12 @@ const RATE_LIMIT_FALLBACK_SECONDS = 60;
 const FOREIGN_SCRIPT = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]+/gu;
 
 /** Falha de um provedor; `retryAfterSec` só quando ele pediu uma pausa (limite por minuto). */
-type ProviderOutcome = { ok: true; text: string } | { ok: false; retryAfterSec: number | null };
+// `truncated`: o provedor parou no teto de tamanho (`maxTokens`), não no fim da resposta
+type ProviderOutcome = { ok: true; text: string; truncated: boolean } | { ok: false; retryAfterSec: number | null };
 type FetchOutcome = { ok: true; data: unknown } | { ok: false; retryAfterSec: number | null };
 
 export type AiCallResult =
-  | { ok: true; text: string; provider: AiProviderUsed }
+  | { ok: true; text: string; provider: AiProviderUsed; truncated: boolean }
   | { ok: false; retryAfterSec: number | null };
 
 function readRetryAfter(response: Response): number {
@@ -262,10 +265,11 @@ async function fetchJson(url: string, init: RequestInit): Promise<FetchOutcome> 
   }
 }
 
-function textOutcome(outcome: FetchOutcome, pick: (data: unknown) => unknown): ProviderOutcome {
+function textOutcome(outcome: FetchOutcome, pick: (data: unknown) => unknown, wasCut: (data: unknown) => boolean = () => false): ProviderOutcome {
   if (!outcome.ok) return outcome;
   const text = pick(outcome.data);
-  return typeof text === 'string' && text.trim() ? { ok: true, text } : { ok: false, retryAfterSec: null };
+  if (typeof text !== 'string' || !text.trim()) return { ok: false, retryAfterSec: null };
+  return { ok: true, text, truncated: wasCut(outcome.data) };
 }
 
 async function callGateway(url: string, prompt: string, json: boolean, maxTokens: number): Promise<ProviderOutcome> {
@@ -274,7 +278,11 @@ async function callGateway(url: string, prompt: string, json: boolean, maxTokens
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt, json, maxTokens }),
   });
-  return textOutcome(outcome, (data) => (data as { reply?: unknown } | null)?.reply);
+  return textOutcome(
+    outcome,
+    (data) => (data as { reply?: unknown } | null)?.reply,
+    (data) => (data as { truncated?: unknown } | null)?.truncated === true
+  );
 }
 
 // Sem teto no Gemini: os modelos Flash gastam o `maxOutputTokens` também "pensando" e voltariam vazios; o tamanho fica
@@ -294,7 +302,8 @@ async function callGemini(apiKey: string, prompt: string, json: boolean, strong:
   );
   return textOutcome(
     outcome,
-    (data) => (data as { candidates?: { content?: { parts?: { text?: unknown }[] } }[] } | null)?.candidates?.[0]?.content?.parts?.[0]?.text
+    (data) => (data as { candidates?: { content?: { parts?: { text?: unknown }[] } }[] } | null)?.candidates?.[0]?.content?.parts?.[0]?.text,
+    (data) => (data as { candidates?: { finishReason?: unknown }[] } | null)?.candidates?.[0]?.finishReason === 'MAX_TOKENS'
   );
 }
 
@@ -317,7 +326,11 @@ async function callOpenAiCompatible(
       ...(json ? { response_format: { type: 'json_object' } } : {}),
     }),
   });
-  return textOutcome(outcome, (data) => (data as { choices?: { message?: { content?: unknown } }[] } | null)?.choices?.[0]?.message?.content);
+  return textOutcome(
+    outcome,
+    (data) => (data as { choices?: { message?: { content?: unknown } }[] } | null)?.choices?.[0]?.message?.content,
+    (data) => (data as { choices?: { finish_reason?: unknown }[] } | null)?.choices?.[0]?.finish_reason === 'length'
+  );
 }
 
 function callGroq(apiKey: string, prompt: string, json: boolean, strong: boolean, maxTokens: number): Promise<ProviderOutcome> {
@@ -357,7 +370,7 @@ export async function callAiProviders(
   let retryAfterSec: number | null = null;
   for (const attempt of attempts) {
     const outcome = await attempt.call();
-    if (outcome.ok) return { ok: true, text: outcome.text.replace(FOREIGN_SCRIPT, ''), provider: attempt.provider };
+    if (outcome.ok) return { ok: true, text: outcome.text.replace(FOREIGN_SCRIPT, ''), provider: attempt.provider, truncated: outcome.truncated };
     if (outcome.retryAfterSec !== null) retryAfterSec = Math.min(retryAfterSec ?? outcome.retryAfterSec, outcome.retryAfterSec);
   }
   return { ok: false, retryAfterSec };

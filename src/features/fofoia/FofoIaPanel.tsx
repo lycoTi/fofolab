@@ -56,7 +56,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     activeQuestion: activeQuestion ? { question: activeQuestion.question, answered: activeQuestion.answered, dissection: activeQuestion.dissection } : null,
     prerequisites: props.prerequisites,
   });
-  const { turns, loading, send } = useFofoConversation({
+  const { turns, loading, send, resume } = useFofoConversation({
     topicKey: props.topicKey,
     topicLabel,
     ctx,
@@ -80,18 +80,18 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     if (list) list.scrollTop = list.scrollHeight;
   }, [turns.length, loading]);
 
-  const startLesson = (part?: number, guess = '') => {
+  const startLesson = (part?: number, guess = '', partTotal?: number) => {
     props.onWiden(LESSON_MIN_WIDTH);
     const palpite = guess.trim() ? ` Meu palpite antes da aula: ${guess.trim()}` : '';
-    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${topicLabel}.${palpite}`, 'LESSON', part);
+    void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${topicLabel}.${palpite}`, 'LESSON', { part, partTotal });
   };
   // Tópico nunca tentado: antes da primeira aula, o aquecimento (uma vez por tópico)
-  const lesson = (part?: number) => {
+  const lesson = (part?: number, partTotal?: number) => {
     if (!part && props.warmupEnabled && props.firstContact && !warmupSeen(props.topicKey)) {
       setWarmup(true);
       return;
     }
-    startLesson(part);
+    startLesson(part, '', partTotal);
   };
   const hint = () => void send('Me dá uma pista?', 'HINT');
 
@@ -140,12 +140,13 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             reveal={index === turns.length - 1 && turn.role === 'tutor'}
             topicLabel={topicLabel}
             aiConfigured={props.aiConfigured}
-            onContinue={(part) => lesson(part)}
+            onContinue={(part, total) => lesson(part, total)}
+            onResume={() => void resume(turn)}
             onAnotherHint={hint}
             onLesson={() => lesson()}
             onSummary={() => void send(`Resumo de revisão de ${topicLabel}`, 'SUMMARY')}
             onSaveSummary={props.onSaveSummary}
-            onRetry={() => turn.retry && void send(turn.retry.message, turn.retry.requested, turn.retry.part)}
+            onRetry={() => turn.retry && void send(turn.retry.message, turn.retry.requested, turn.retry.options)}
           />
         ))}
         {warmup && (

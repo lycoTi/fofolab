@@ -38,6 +38,14 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 - [DONE] IA sem chave = respostas marcadas "Exemplo simulado". Com chave: prompt com regras anti-alucinação e explicação guardada.
 - [DONE] IA real pelo **Groq** (grátis, `qwen/qwen3.8-27b`): tutor e explicação-base verificados no Edge contra a API real (~1-2 s). Ordem: gateway → Groq → Gemini → DeepSeek. Erros dos provedores aparecem no console.
 - [PARCIAL] FofoIA com IA real (ver a fatia 11 abaixo: teto de resposta corrigido; pista de Certo/Errado e Direito do `qwen` em aberto). Gemini exige crédito pré-pago; DeepSeek (`deepseek-flash`, sem modo de raciocínio) fica como reserva paga.
+  **26/10/2026 (relato do dono, aula sobre service mesh cortada no meio):** o app agora lê o aviso de corte do provedor
+  (`finish_reason: length` / `MAX_TOKENS`), mostra a resposta até a última frase completa e oferece **"Continuar de onde
+  parou"** (manda o final já mostrado; o resto herda a parte da aula). Aula: uma parte por resposta (~300 palavras, 3 a 5
+  partes) e o "Continuar" leva o total anunciado e proíbe repetir (antes vinha "Parte 3 de 4" e conteúdo repetido).
+  **Conversa sobrevive ao F5 e a fechar/abrir o app por 20 minutos** (desde a última fala, só no mesmo tópico; fica no
+  `localStorage` deste computador). Testes: `aiRouter`, `fofoia`, `useFofoConversation`, `fofoiaPanel` + E2E do F5 em
+  `e2e/fofoia.spec.ts`; `npm test` (626), `test:e2e` (38) e `build` verdes. Não verificado com a IA real: se o modelo
+  respeita a parte de ~300 palavras (o corte agora é tratado de qualquer jeito).
 - [ ] Importar prova em PDF + gabarito (extração automática) → depois da 7b (o dono usa o TEC Concursos para questões).
 
 **Caderno, PDF & layout**

@@ -168,3 +168,35 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     });
   });
 });
+
+describe('Resposta cortada no teto de tamanho', () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+    vi.unstubAllGlobals();
+  });
+
+  const cutText = 'Serverless e microsserviços coexistem.\n\nCamadas de conhecimento\n\n1. Conceito – Entender as';
+
+  it('Groq avisando "length": a FofoIA mostra só até a última frase completa e marca que dá para continuar', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: cutText }, finish_reason: 'length' }] }), { status: 200 })));
+    const reply = await ask('LESSON');
+    expect(reply.cut).toBe(true);
+    expect(reply.reply).toBe('Serverless e microsserviços coexistem.');
+  });
+
+  it('Gemini avisando MAX_TOKENS também conta como cortada; resposta completa não', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GEMINI_API_KEY', 'chave-gemini');
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: cutText }] }, finishReason: 'MAX_TOKENS' }] }), { status: 200 })));
+    expect((await ask('QUICK')).cut).toBe(true);
+
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'Completa.' }, finish_reason: 'stop' }] }), { status: 200 })));
+    vi.stubEnv('VITE_GEMINI_API_KEY', '');
+    vi.stubEnv('VITE_GROQ_API_KEY', 'chave-groq');
+    const whole = await ask('QUICK');
+    expect(whole.cut).toBeUndefined();
+    expect(whole.reply).toBe('Completa.');
+  });
+});

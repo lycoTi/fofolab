@@ -9,6 +9,7 @@ import { smallTalkReply } from '../lib/fofoia/smallTalk';
 import { buildFofoPrompt } from '../lib/fofoia/prompts';
 import { chooseMode, isBasicQuestion, shouldSuggestLesson, type ModeSignals } from '../lib/fofoia/signals';
 import { formatSummaryForNotebook, parseSummary } from '../lib/fofoia/summary';
+import { trimCutReply } from '../lib/fofoia/cut';
 import type { StudentContextSnapshot } from '../lib/aiRouter';
 import type { Question, Topic } from '../types/database';
 
@@ -260,5 +261,27 @@ describe('Cumprimento e agradecimento: do próprio app, sem IA', () => {
     for (const msg of ['oi, o que é microsserviço?', 'Bom dia, me explica orquestração', 'não entendi', 'certo?', 'obrigado, mas e a coreografia?', '']) {
       expect(smallTalkReply(msg, opts), msg).toBeNull();
     }
+  });
+});
+
+describe('Aula em partes e resposta cortada no teto de tamanho', () => {
+  const lessonCtx = buildFofoContext({ context: student, notebook: null, activeQuestion: null, prerequisites: [] });
+
+  it('pede uma parte só por resposta e, ao continuar, fixa o total e proíbe repetir', () => {
+    expect(buildFofoPrompt('LESSON', lessonCtx, [], 'aula')).toMatch(/só uma parte por resposta/i);
+    const next = buildFofoPrompt('LESSON', lessonCtx, [], 'continue', { part: 2, partTotal: 3 });
+    expect(next).toContain('Parte 2 de 3');
+    expect(next).toMatch(/não repita/i);
+  });
+
+  it('continuar de onde parou manda o final do que já foi mostrado', () => {
+    const prompt = buildFofoPrompt('QUICK', lessonCtx, [], 'Continue de onde parou.', { resumeAfter: 'o mesh externaliza políticas transversais.' });
+    expect(prompt).toContain('o mesh externaliza políticas transversais.');
+    expect(prompt).toMatch(/continue exatamente/i);
+  });
+
+  it('tira a linha cortada e os títulos que ficaram sem conteúdo; sem quebra de linha, corta na última frase', () => {
+    expect(trimCutReply('Coexistem.\n\nCamadas de conhecimento\n\n1. Conceito – Entender as')).toBe('Coexistem.');
+    expect(trimCutReply('Frase completa. Outra cortada no me')).toBe('Frase completa.');
   });
 });

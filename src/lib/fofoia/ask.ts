@@ -1,8 +1,9 @@
 import { aiPauseReply, callAiProviders, getAiStatus, type AiReply, type ChatTurn } from '../aiRouter';
 import type { FofoContext } from './context';
+import { trimCutReply } from './cut';
 import { demoFofoReply } from './demo';
 import type { EditalCandidate } from './editalMatch';
-import { buildFofoPrompt } from './prompts';
+import { buildFofoPrompt, type FofoPromptExtra } from './prompts';
 import type { FofoMode } from './signals';
 import { isTrueFalseQuestion, trueFalseHint } from './trueFalseHint';
 
@@ -32,7 +33,7 @@ export async function askFofoIa(input: {
   ctx: FofoContext;
   conversation: ChatTurn[];
   message: string;
-  extra?: { editalCandidates?: EditalCandidate[]; part?: number; hintsGiven?: number };
+  extra?: FofoPromptExtra & { hintsGiven?: number };
 }): Promise<AiReply> {
   const { mode, ctx, conversation, message, extra } = input;
   const active = ctx.activeQuestion;
@@ -51,5 +52,6 @@ export async function askFofoIa(input: {
     const reply = result.retryAfterSec === null ? FOFO_UNAVAILABLE_REPLY : aiPauseReply(result.retryAfterSec);
     return { reply, provider: 'OFFLINE_DEMO', simulated: false, failed: true };
   }
+  if (result.truncated) return { reply: trimCutReply(result.text), provider: result.provider, simulated: false, cut: true };
   return { reply: result.text, provider: result.provider, simulated: false };
 }
