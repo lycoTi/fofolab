@@ -1,0 +1,129 @@
+{
+  "formato": "fofolab-acervo",
+  "versao": 1,
+  "vocabulario": {
+    "versao": 5,
+    "assuntos": [
+      { "id": "direito-administrativo", "caminho": ["Direito Administrativo"], "sinonimos": [], "origem": "edital" },
+      {
+        "id": "direito-administrativo>atos-administrativos",
+        "caminho": ["Direito Administrativo", "Atos administrativos"],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "direito-administrativo>atos-administrativos>atributos",
+        "caminho": ["Direito Administrativo", "Atos administrativos", "Atributos"],
+        "sinonimos": [],
+        "origem": "edital"
+      },
+      {
+        "id": "direito-administrativo>atos-normativos",
+        "caminho": ["Direito Administrativo", "Atos normativos"],
+        "sinonimos": [],
+        "origem": "proposta"
+      },
+      {
+        "id": "direito-administrativo>licitacoes",
+        "caminho": ["Direito Administrativo", "Licitações"],
+        "sinonimos": ["Licitações e contratos"],
+        "origem": "edital"
+      }
+    ],
+    "historico": [{ "versao": 5, "mudancas": ["fixture de teste"] }]
+  },
+  "concursos": [{ "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "areas": [] }],
+  "itens": [
+    {
+      "id": "TESTE_24:c1:1",
+      "formato": "CERTO_ERRADO",
+      "textoBase": null,
+      "enunciado": "Item de teste: a presunção de legitimidade é atributo do ato administrativo.",
+      "alternativas": null,
+      "gabarito": "C",
+      "anulado": false,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "procedencias": [
+        { "banca": "Cebraspe", "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "prova": "P1", "caderno": "c1", "numero": 1 }
+      ],
+      "assuntos": [{ "id": "direito-administrativo>atos-administrativos>atributos", "confianca": 0.9 }],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    {
+      "id": "TESTE_24:c1:2",
+      "formato": "MULTIPLA_ESCOLHA",
+      "textoBase": "Texto de apoio do item de teste.",
+      "enunciado": "Item de teste: o decreto regulamentar é exemplo de ato",
+      "alternativas": ["A) ordinatório.", "B) normativo.", "C) negocial.", "D) punitivo."],
+      "gabarito": "B",
+      "anulado": false,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "procedencias": [
+        { "banca": "Cebraspe", "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "prova": "P1", "caderno": "c1", "numero": 2 },
+        { "banca": "Cebraspe", "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "prova": "P1", "caderno": "c2", "numero": 12 }
+      ],
+      "assuntos": [{ "id": "direito-administrativo>atos-normativos", "confianca": 0.62 }],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    {
+      "id": "TESTE_24:c1:3",
+      "formato": "CERTO_ERRADO",
+      "textoBase": null,
+      "enunciado": "Item de teste: a figura mostra o fluxo da licitação.",
+      "alternativas": null,
+      "gabarito": "E",
+      "anulado": false,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
+      "temCodigo": false,
+      "dependeDeFigura": true,
+      "temSimboloIlegivel": false,
+      "procedencias": [
+        { "banca": "Cebraspe", "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "prova": "P1", "caderno": "c1", "numero": 3 }
+      ],
+      "assuntos": [{ "id": "direito-administrativo>licitacoes", "confianca": 0.8 }],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    {
+      "id": "TESTE_24:c1:4",
+      "formato": "CERTO_ERRADO",
+      "textoBase": null,
+      "enunciado": "Item de teste sem procedência (inválido).",
+      "alternativas": null,
+      "gabarito": "C",
+      "anulado": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "assuntos": [{ "id": "direito-administrativo>licitacoes", "confianca": 0.9 }],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    {
+      "id": "TESTE_24:c1:5",
+      "formato": "CERTO_ERRADO",
+      "textoBase": null,
+      "enunciado": "Item de teste ainda sem classificação.",
+      "alternativas": null,
+      "gabarito": "E",
+      "anulado": false,
+      "materiaOrigem": "CONHECIMENTOS ESPECÍFICOS",
+      "temCodigo": false,
+      "dependeDeFigura": false,
+      "temSimboloIlegivel": false,
+      "procedencias": [
+        { "banca": "Cebraspe", "identificador": "TESTE_24", "concurso": "TESTE 24", "ano": 2024, "prova": "P1", "caderno": "c1", "numero": 5 }
+      ],
+      "assuntos": [],
+      "incerto": true,
+      "concordancia": "sem-classificacao"
+    }
+  ]
+}
