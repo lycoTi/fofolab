@@ -214,6 +214,17 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     expect(acervo.onExcludeItem).toHaveBeenCalledWith(acervoItem);
   });
 
+  it('o mesmo item em dois tópicos: respondido em A, continua aberto em B', () => {
+    const inA = { ...acervoItem, topic_id: 'tA' };
+    const { props, rerender } = renderWorkbench({ questions: [{ question: inA, dissection: null }], scopeFilter: 'topic', acervo: acervoProps() });
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Certo' }));
+    expect(screen.queryByRole('button', { name: 'Sei' })).toBeNull();
+
+    rerender(<QuestionWorkbench {...props} questions={[{ question: { ...acervoItem, topic_id: 'tB' }, dissection: null }]} />);
+    expect(screen.getByRole('button', { name: 'Sei' })).toBeTruthy();
+  });
+
   it('questão própria não oferece "Não é deste tópico"', () => {
     renderWorkbench({ questions: [first], scopeFilter: 'topic', acervo: acervoProps() });
     expect(screen.queryByRole('button', { name: 'Não é deste tópico' })).toBeNull();

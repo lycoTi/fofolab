@@ -87,7 +87,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
 
   const safeIndex = filtered.length > 0 ? Math.min(index, filtered.length - 1) : 0;
   const active = filtered[safeIndex] ?? null;
-  const activeId = active?.question.id;
+  // A tentativa é por tópico: o mesmo item do acervo em dois tópicos se responde em cada um (spec 12c §5.5)
+  const activeId = active ? `${active.question.topic_id ?? ''}:${active.question.id}` : undefined;
   const current = (activeId && attempts[activeId]) || FRESH;
   const answered = current.picked !== null || current.firstContact;
   const setCurrent = (next: AttemptState) => {
