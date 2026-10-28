@@ -1,6 +1,35 @@
 {
   "identificador": "FUNPRESP_21",
   "itens": {
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>compras-no-setor-privado-e-custos-de-transacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>compras-no-setor-privado-e-custos-de-transacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_001_01:106": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -108,6 +137,35 @@
         {
           "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+              "confianca": 0.95
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+          "confianca": 0.95
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -326,6 +384,64 @@
         },
         {
           "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1694
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>decreto-n-7-892-2013-e-suas-alteracoes-sistema-de-registro-de-precos",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.85
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
+          "confianca": 0.85
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
           "confianca": 0.6
         }
       ],
@@ -997,6 +1113,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+              "confianca": 0.55
+            },
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>avaliacao-da-acao-governamental-e-apoio-ao-aprimoramento-da-gestao-da-governanca-dos-controles-e-dos-resultados-das-politicas-publicas-prevencao-deteccao-e-correcao-de-irregularidades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>avaliacao-da-acao-governamental-e-apoio-ao-aprimoramento-da-gestao-da-governanca-dos-controles-e-dos-resultados-das-politicas-publicas-prevencao-deteccao-e-correcao-de-irregularidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_003_01:54": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1449,6 +1594,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-riscos-financeiros-e-risco-de-liquidez",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-riscos-financeiros-e-risco-de-liquidez",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_003_01:91": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1652,6 +1818,35 @@
         {
           "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.7
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.45
+            }
+          ],
+          "versaoVocabulario": 1684
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.7
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.45
         }
       ],
       "incerto": false,
@@ -1868,6 +2063,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_009_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>previdencia-complementar-planos-de-beneficios-e-regimes-de-capitalizacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>previdencia-complementar-planos-de-beneficios-e-regimes-de-capitalizacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_010_01:104": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1926,6 +2150,109 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_010_01:118": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1945,6 +2272,43 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.6
+            },
+            {
+              "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+              "confianca": 0.5
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.5
+        },
+        {
+          "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "FUNPRESP_21:648_FUNPRESP_EXE_010_01:53": {
@@ -2663,6 +3027,43 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     }
   }

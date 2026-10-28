@@ -68,6 +68,7 @@ export function QuestionFilters(props: {
   onSearch: (search: string) => void;
   groupCode: string | null;
   defaultExpanded?: boolean;
+  linkBar?: React.ReactNode;
 }) {
   const [expanded, setExpanded] = useState(props.defaultExpanded ?? false);
 
@@ -193,6 +194,12 @@ export function QuestionFilters(props: {
               <option value="Difícil">Difícil</option>
             </select>
           </div>
+
+          {props.linkBar && (
+            <div className="border-t border-slate-800/60 pt-2 text-[11px] text-slate-400">
+              {props.linkBar}
+            </div>
+          )}
         </div>
       </div>
     );

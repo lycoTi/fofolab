@@ -176,7 +176,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       timeSpentSeconds: Math.round((Date.now() - shownAt.current) / 1000),
       usedAiReview: usedAi.current || picked === null,
     });
-    setCurrent({ confidence, picked, firstContact: picked === null, attemptId: saved?.attemptId ?? null, diagnosis });
+    // O diagnóstico visual começa desmarcado (null) para o estudante avaliar conscientemente sem viés
+    setCurrent({ confidence, picked, firstContact: picked === null, attemptId: saved?.attemptId ?? null, diagnosis: null });
   };
 
   const changeDiagnosis = (diagnosis: SelfDiagnosisType) => {
@@ -190,6 +191,12 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     onPrev: () => setIndex(Math.max(0, safeIndex - 1)),
     onNext: () => setIndex(Math.min(filtered.length - 1, safeIndex + 1)),
   };
+
+  const inTopic = props.scopeFilter === 'topic';
+  const acervo = props.acervo;
+  const linkBar = inTopic && acervo && (
+    <AcervoLinkBar view={acervo.view} onDisableLink={acervo.onDisableLink} onRestoreItem={acervo.onRestoreItem} />
+  );
 
   const filters = (
     <QuestionFilters
@@ -208,13 +215,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       search={search}
       onSearch={setSearch}
       groupCode={props.acervo?.view.groupCode ?? null}
+      linkBar={linkBar}
     />
-  );
-
-  const inTopic = props.scopeFilter === 'topic';
-  const acervo = props.acervo;
-  const linkBar = inTopic && acervo && (
-    <AcervoLinkBar view={acervo.view} onDisableLink={acervo.onDisableLink} onRestoreItem={acervo.onRestoreItem} />
   );
 
   if (!active) {
@@ -223,7 +225,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     return (
       <div className="space-y-4">
         {filters}
-        {linkBar}
         {emptyTopic && props.loading && (
           <p className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
             Carregando as questões do acervo…
@@ -299,7 +300,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       {filters}
-      {linkBar}
       <QuestionCard
         question={active.question}
         complexity={active.complexity}
@@ -324,7 +324,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
             : undefined
         }
       />
-      {answered && current.diagnosis && (
+      {answered && (
         <QuestionCorrection
           question={active.question}
           dissection={active.dissection}

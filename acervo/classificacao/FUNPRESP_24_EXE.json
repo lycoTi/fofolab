@@ -207,6 +207,56 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:59": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -231,6 +281,43 @@
         {
           "id": "direito-administrativo>lei-das-estatais-lei-n-13-303-2016",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>empresas-estatais-e-lei-n-13-303-2016",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.7
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>empresas-estatais-e-lei-n-13-303-2016",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.7
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -288,6 +375,35 @@
         },
         {
           "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-13-303-2016-e-suas-alteracoes-lei-das-estatais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>registro-de-precos-e-decreto-n-11-462-2023",
+              "confianca": 0.95
+            },
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais>decreto-n-11-462-2023",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>registro-de-precos-e-decreto-n-11-462-2023",
+          "confianca": 0.95
+        },
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais>decreto-n-11-462-2023",
           "confianca": 0.8
         }
       ],
@@ -567,6 +683,39 @@
         {
           "id": "nocoes-de-gestao-de-pessoas>conceitos-importancia-relacao-com-os-outros-sistemas-de-organizacao",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_001_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.4
+            },
+            {
+              "id": "administracao-de-recursos-humanos>consultoria-interna-de-rh-e-tendencias-em-gestao-de-pessoas",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -926,6 +1075,43 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_002_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>previdencia-complementar-planos-de-beneficios-superavit-reservas-e-equacionamento-resolucao-cnpc-n-30-2018",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.5
+            },
+            {
+              "id": "legislacao-especial>regulacao-de-seguros-resseguros-e-previdencia-complementar",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>previdencia-complementar-planos-de-beneficios-superavit-reservas-e-equacionamento-resolucao-cnpc-n-30-2018",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.5
+        },
+        {
+          "id": "legislacao-especial>regulacao-de-seguros-resseguros-e-previdencia-complementar",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_002_01:61": {
@@ -1393,6 +1579,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_004_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+              "confianca": 0.85
+            },
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>marketing-digital-e-engajamento-em-canais-web",
+          "confianca": 0.85
+        },
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_004_01:63": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1853,6 +2068,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governo-digital-e-transformacao-digital",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>servicos-e-transformacao-digital",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>governo-digital-e-transformacao-digital",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>servicos-e-transformacao-digital",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:111": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2127,6 +2371,172 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>visualizacao-de-dados>tipos-de-graficos-histograma-linha-barra-dispersao-box-plot",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>visualizacao-de-dados>tipos-de-graficos-histograma-linha-barra-dispersao-box-plot",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>intraempreendedorismo-e-inovacao-organizacional",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>intraempreendedorismo-e-inovacao-organizacional",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_008_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>tecnicas-de-trabalho-em-grupo-e-geracao-de-ideias",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>tecnicas-de-trabalho-em-grupo-e-geracao-de-ideias",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_009_01:101": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2327,6 +2737,64 @@
         },
         {
           "id": "operacao-governanca-e-gestao-de-servicos-digitais>contratacoes-e-gestao-de-fornecedores>necessidade-estudo-tecnico-preliminar-e-termo-de-referencia",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_009_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_009_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>nbr-iso-iec-familia-27001-2022-e-nbr-isso-iec-27002-2022",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
           "confianca": 0.8
         }
       ],
@@ -2958,6 +3426,154 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_010_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_010_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_010_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>arquitetura-de-banco-de-dados-relacional-postgresql-oracle-sqlserver-nao-relacional-orientado-a-documento-chave-valor-grafo-colunar-time-series",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_010_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>banco-de-dados>sistemas-gerenciadores-de-banco-de-dados-sgbds-relacionais-postgresql-microsoft-sql-server-mysql-e-nao-relacionais-nosql",
+          "confianca": 0.8
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>plataformas-de-bancos-de-dados>bancos-relacionais-documentais-chave-valor-cache-e-busca-textual",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_010_01:119": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3448,6 +4064,109 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>ativos-intangiveis",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>ativos-intangiveis",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ajuste-a-valor-presente-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-151-2009-e-suas-alteracoes-ii-contabilidade-de-custos",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente>calculo-e-contabilizacao-de-contas-ativas-e-passivas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ajuste-a-valor-presente-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-151-2009-e-suas-alteracoes-ii-contabilidade-de-custos",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>ajuste-a-valor-presente>calculo-e-contabilizacao-de-contas-ativas-e-passivas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>ativo-imobilizado",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>criterios-de-avaliacao-e-mensuracao-do-ativo-imobilizado",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>ativo-imobilizado",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>criterios-de-avaliacao-e-mensuracao-do-ativo-imobilizado",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:63": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3530,6 +4249,167 @@
         {
           "id": "contabilidade-geral>provisoes-conceito-e-reconhecimento",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>ativo-imobilizado>depreciacao-exaustao-e-amortizacao",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.6
+            },
+            {
+              "id": "atuaria>previdencia-complementar-fechada-e-migracao-de-planos-de-beneficios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.6
+        },
+        {
+          "id": "atuaria>previdencia-complementar-fechada-e-migracao-de-planos-de-beneficios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>avaliacao-atuarial-de-planos-de-beneficios-valor-atual-das-contribuicoes-futuras-provisoes-e-bases-tecnicas",
+              "confianca": 0.7
+            },
+            {
+              "id": "atuaria>reservas-matematicas-e-provisoes-atuariais-em-previdencia-complementar",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>avaliacao-atuarial-de-planos-de-beneficios-valor-atual-das-contribuicoes-futuras-provisoes-e-bases-tecnicas",
+          "confianca": 0.7
+        },
+        {
+          "id": "atuaria>reservas-matematicas-e-provisoes-atuariais-em-previdencia-complementar",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.5
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.5
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_011_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+              "confianca": 0.97
+            },
+            {
+              "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>provisoes-passivos-contingentes-e-ativos-contingentes",
+          "confianca": 0.97
+        },
+        {
+          "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -4274,6 +5154,93 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_CB1_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-dos-servidores-publicos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-dos-servidores-publicos",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_CB1_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_24_EXE:040_FUNPRESPEXE_CB1_01:55": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+              "confianca": 0.93
+            },
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1694
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+          "confianca": 0.93
+        },
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     }
   }

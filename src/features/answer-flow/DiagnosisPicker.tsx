@@ -16,7 +16,7 @@ export function DiagnosisPicker({
 }: {
   isCorrect: boolean;
   confidence: ReviewConfidence | null;
-  value: SelfDiagnosisType;
+  value: SelfDiagnosisType | null;
   onChange: (diagnosis: SelfDiagnosisType) => void;
 }) {
   const allowed = getAllowedDiagnoses({ kind: 'answered', isCorrect });

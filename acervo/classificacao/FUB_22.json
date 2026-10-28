@@ -250,6 +250,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_004_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biblioteconomia>servico-de-referencia-e-atendimento-ao-usuario",
+              "confianca": 0.95
+            },
+            {
+              "id": "biblioteconomia>administracao-e-marketing-de-unidades-de-informacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "biblioteconomia>servico-de-referencia-e-atendimento-ao-usuario",
+          "confianca": 0.95
+        },
+        {
+          "id": "biblioteconomia>administracao-e-marketing-de-unidades-de-informacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_004_01:93": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -480,6 +509,43 @@
         {
           "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>suprimento-de-fundos",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_005_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-financeiro",
+              "confianca": 0.75
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-orcamentario",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-financeiro>creditos-adicionais-autorizacao-legislativa-e-alteracoes-orcamentarias",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-financeiro",
+          "confianca": 0.75
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>balanco-orcamentario",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-financeiro>creditos-adicionais-autorizacao-legislativa-e-alteracoes-orcamentarias",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -720,6 +786,183 @@
         {
           "id": "matematica-financeira>algebra-linear-e-sistemas-lineares",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.8
+            },
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.8
+        },
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-enderecamento-e-fecho",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-enderecamento-e-fecho",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.75
+            },
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.75
+        },
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -1253,6 +1496,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_015_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>avaliacao-de-desempenho-caracteristicas-e-metodos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>avaliacao-de-desempenho-caracteristicas-e-metodos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_015_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_015_01:99": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1443,6 +1773,167 @@
         {
           "id": "seguranca-da-informacao>gestao-de-riscos-de-ti-analise-e-avaliacao-de-riscos",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_016_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_016_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-de-sistemas-de-informacao>protocolo-http-ssl-dns-balanceamento-de-carga-escalabilidade-e-tolerancia-a-falhas-em-sistemas-web",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_016_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.95
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.95
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_016_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_016_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>alta-disponibilidade-alta-disponibilidade-clusterizacao-e-escalabilidade-de-servidores-e-servicos-balanceamento-de-carga-proxy-reverso",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>praticas-de-backup-e-recuperacao-de-desastres-replicacao-balanceamento-de-carga-e-failover",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -1850,6 +2341,35 @@
         {
           "id": "direito-constitucional>processo-legislativo-orcamentario>plano-plurianual-ppa",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019>planejamento-da-contratacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>licitacao-na-modalidade-pregao-eletronico-decreto-n-10-024-de-20-de-setembro-de-2019>planejamento-da-contratacao",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -2287,6 +2807,106 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_017_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>custo-das-mercadorias-e-dos-produtos-vendidos-e-dos-servicos-prestados",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>receitas-de-vendas-de-produtos-e-servicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>receitas-de-vendas-de-produtos-e-servicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>contabilizacao-de-vendas-compras-devolucoes-abatimentos-despesas-e-receitas-operacionais-e-outras-receitas-e-despesas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_017_01:88": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2316,6 +2936,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_017_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+              "confianca": 0.4
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.5
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_017_01:90": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2339,6 +2996,72 @@
         },
         {
           "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.4
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_017_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
+              "confianca": 0.4
+            },
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>calculo-e-contabilizacao-de-contas-ativas-e-passivas",
+              "confianca": 0.4
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>calculo-e-contabilizacao-de-contas-ativas-e-passivas",
+          "confianca": 0.4
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-societaria-de-empresas-estatais>leitura-de-balanco-patrimonial-demonstracao-do-resultado-e-notas-explicativas-relacoes-entre-posicao-patrimonial-desempenho-e-caixa",
           "confianca": 0.4
         }
       ],
@@ -2731,6 +3454,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_CB2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_CB2_01:11": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2797,6 +3541,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_22:678_FUB_CB2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_22:678_FUB_CB2_01:23": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2832,6 +3605,35 @@
         {
           "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_22:678_FUB_CB2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.4
         }
       ],
       "incerto": false,

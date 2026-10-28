@@ -199,6 +199,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_001_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>tipos-de-ataques-ciberneticos-ransomware-malware",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>eavesdropping-ransomware-phishing",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_001_01:91": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -394,6 +423,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_002_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_002_01:114": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -431,6 +489,35 @@
         {
           "id": "administracao-publica-e-fundamentos-de-politicas-publicas>inovacao-aberta-e-modelos-de-inovacao",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>sistema-de-inovacao-modelos-de-helice-triplice-e-quadrupla",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>ecossistemas-de-inovacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>sistema-de-inovacao-modelos-de-helice-triplice-e-quadrupla",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>ecossistemas-de-inovacao",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -526,6 +613,27 @@
         {
           "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>sistema-de-inovacao-modelos-de-helice-triplice-e-quadrupla",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>sistema-de-inovacao-modelos-de-helice-triplice-e-quadrupla",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
@@ -800,6 +908,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_002_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-projetos>design-thinking",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>analise-de-negocios-e-processos>transformacao-digital-governo-eletronico-cidadania-digital-design-thinking",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>desenho-centrado-nas-pessoas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_002_01:86": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -898,6 +1043,43 @@
         {
           "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario>validacao-com-usuarios-e-prevencao-de-erros-no-uso-dos-servicos",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+              "confianca": 0.75
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+          "confianca": 0.75
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -1487,6 +1669,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>modelos-de-processo-de-software-cascata-incremental-agil",
+              "confianca": 0.97
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gerenciamento-do-ciclo-de-vida-de-software",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1684
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>modelos-de-processo-de-software-cascata-incremental-agil",
+          "confianca": 0.97
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gerenciamento-do-ciclo-de-vida-de-software",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:73": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1788,6 +1999,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>tecnologias-e-praticas-frontend-web-html-css-ajax-frameworks-bootstrap-angular-vuejs-e-react",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:96": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2063,6 +2295,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_004_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_004_01:120": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2248,6 +2509,140 @@
         {
           "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>beneficios-as-microempresas-e-empresas-de-pequeno-porte-em-licitacoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>tratamento-diferenciado-a-microempresas-e-empresas-de-pequeno-porte-lc-123-2006",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>beneficios-as-microempresas-e-empresas-de-pequeno-porte-em-licitacoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>tratamento-diferenciado-a-microempresas-e-empresas-de-pequeno-porte-lc-123-2006",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
@@ -3681,6 +4076,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_006_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>storage-area-network-san-zoneamento-e-conectividade",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>storage-area-network-san-zoneamento-e-conectividade",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>datacenter>arquiteturas-e-interfaces-de-rede-e-comunicacoes-de-armazenamento-san-nas-raid-virtualizacao-de-servidores-e-servicos-conceitos-administracao-e-gerenciamento-e-principais-tecnologias-vmware",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_006_01:51": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3929,6 +4353,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_007_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+              "confianca": 0.9
+            },
+            {
+              "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-em-lote-batch",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>sistemas-operacionais-fundamentos-gestao-de-processos-gestao-de-memoria-gestao-de-entrada-e-saida-instalacao-configuracao-e-administracao-de-sistemas-operacionais-windows-server-2012-e-2016-e-redhat-entrerprise-linux-versoes-5-6-e-7",
+          "confianca": 0.9
+        },
+        {
+          "id": "topicos-avancados>ciencia-de-dados>processamento-de-dados>processamento-em-lote-batch",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_007_01:106": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4032,6 +4485,35 @@
         {
           "id": "sistemas-operacionais>z-os-e-mainframe-recursos-do-sistema-operacional",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_007_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>escolhas-de-arquitetura-conforme-requisitos-das-cargas-de-trabalho",
+              "confianca": 0.4
+            },
+            {
+              "id": "sistemas-operacionais>memoria-virtual-e-multiprogramacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "sistemas-operacionais>memoria-virtual-e-multiprogramacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>escolhas-de-arquitetura-conforme-requisitos-das-cargas-de-trabalho",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -4175,6 +4657,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_007_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.6
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.6
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>criptografia-protecao-de-dados-sistemas-simetricos-e-assimetricos-infraestrutura-de-chaves-publicas-conceitos-e-aplicacoes",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "BANRISUL_22:726_BANRISUL_007_01:84": {
@@ -4342,6 +4853,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_CB1_01:3": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4408,6 +4940,35 @@
         {
           "id": "raciocinio-logico>analise-combinatoria",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>violencia-domestica-e-familiar-contra-a-mulher-lei-maria-da-penha",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-penal>lei-maria-da-penha-e-violencia-domestica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>violencia-domestica-e-familiar-contra-a-mulher-lei-maria-da-penha",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-penal>lei-maria-da-penha-e-violencia-domestica",
+          "confianca": 0.5
         }
       ],
       "incerto": false,

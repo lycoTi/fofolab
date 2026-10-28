@@ -1,25 +1,25 @@
 # Graph Report - fofolab  (2026-10-27)
 
 ## Corpus Check
-- 569 files · ~6,248,368 words
+- 569 files · ~6,249,272 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2899 nodes · 6630 edges · 243 communities (145 shown, 84 thin omitted)
+- 2903 nodes · 6639 edges · 237 communities (139 shown, 84 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 47 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `aee33987`
+- Built from commit: `93eaa1ba`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Estado do projeto e instruções para a próxima IA — 24/10/2026
 - compilerOptions
-- questionWorkbenchAndRouter.test.tsx
+- studyBlockMachine.ts
 - useFofoConversation.ts
-- topicQuestions.ts
+- Question
 - App.tsx
 - tauri.conf.json
 - dailyReview.ts
@@ -27,13 +27,13 @@
 - Database
 - 🐹🧪 FofoLab — Bancada Inteligente de Estudos
 - devDependencies
-- getDb
+- topicQuestions.ts
 - formatDuration
 - acervo/pacote.ts
 - prompts.ts
-- linking.ts
+- importAcervo.ts
 - gen.cjs
-- Topic
+- useDailyReview.test.tsx
 - useFofoConversation.test.tsx
 - roteiro.spec.ts
 - aiRouter.ts
@@ -84,7 +84,7 @@
 - Review Focus
 - editalParser.ts
 - registro-externo.spec.ts
-- EditalImportModal.tsx
+- QuestionWorkbench.tsx
 - React Best Practices
 - Sections
 - 🧭 Spec 05 — Onboarding Wizard, Visão "Meu Dia de Hoje" & Explicabilidade sob Demanda
@@ -196,41 +196,41 @@
 - QuestionCard.tsx
 - Spec 12d — Sincronização automática do acervo, fila da aba Questões e Reta Final flexível
 - Tipos (`tools/minerador/types.ts`)
-- examOutlookCard.test.tsx
+- examProjection.ts
 - DailyReviewCard.tsx
 - jsdom
 - Tipos (em `vocab.ts` e `classificationStore.ts`)
 - tsx
 - vite
 - Review Focus
-- types/database.ts
+- StudyPlan
 - Fofo — o mascote em pixel art
 - autoSync.ts
 - zoom.cjs
 - types.ts
-- pdfDocument.ts
+- goodMorningStats.ts
 - acervo.spec.ts
 - build.cjs
 - thumb.cjs
-- QuestionAttempt
-- importAcervo.ts
-- App
-- dailyRoutine.test.ts
-- useFofoIaInputs.test.tsx
+- types/database.ts
+- acervoImportPanel.test.tsx
+- getDb
+- Topic
+- FofoMessage.tsx
 - mobile.cjs
 - shot.cjs
 - RoutineColumn.tsx
 - cycleEngine.ts
 - Identidade do FofoLab: anti-IA com personalidade
-- editalCycle.test.ts
+- SelfDiagnosisType
 - useDailyReview.ts
 - noEmojiInUi.test.ts
-- syllabusImport.ts
+- answerKey.ts
 - GoodMorningView.tsx
 - PdfReaderStage.tsx
-- examProjection.ts
+- localDateKey
 - icon.cjs
-- goodMorning.ts
+- AdminFactoryView.tsx
 - classifyPrompt.ts
 - migrations.ts
 - candidates.ts
@@ -238,12 +238,6 @@
 - classificationStore.ts
 - pdfLines.ts
 - acervo/acervoStore.ts
-- DatabaseStorage
-- examOutlook.test.ts
-- politeClient.ts
-- recordQuestionDiagnosis
-- database.test.ts
-- importAcervo.test.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `getDb()` - 86 edges
@@ -262,17 +256,17 @@
   tools/minerador/vocab.ts → src/lib/editalParser.ts
 - `readEditalLines()` --calls--> `textItemsToLines()`  [EXTRACTED]
   tools/minerador/vocab.ts → src/lib/pdfText.ts
-- `miniPacote()` --calls--> `parsePacote()`  [EXTRACTED]
-  src/__tests__/acervoDb.test.ts → src/lib/acervo/pacote.ts
-- `outlook()` --calls--> `examOutlook`  [EXTRACTED]
-  src/__tests__/examOutlook.test.ts → src/lib/examProjection.ts
 - `CycleGroup` --references--> `SubjectCycleAllocation`  [EXTRACTED]
   src/features/cycle/cycleGroups.ts → src/lib/cycleEngine.ts
+- `CalibrationLine` --references--> `ReviewConfidence`  [EXTRACTED]
+  src/features/good-morning/CalibrationCard.tsx → src/types/database.ts
+- `calculateDynamicStudyCycle()` --indirect_call--> `isFalseCertainty()`  [INFERRED]
+  src/lib/cycleEngine.ts → src/lib/diagnosis.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (243 total, 84 thin omitted)
+## Communities (237 total, 84 thin omitted)
 
 ### Community 0 - "Estado do projeto e instruções para a próxima IA — 24/10/2026"
 Cohesion: 0.20
@@ -282,29 +276,29 @@ Nodes (9): 0. Atualizações de 25 a 27/10/2026 (leia primeiro), 1. Onde o proje
 Cohesion: 0.09
 Nodes (22): DOM, DOM.Iterable, ES2022, src, tools, compilerOptions, allowImportingTsExtensions, isolatedModules (+14 more)
 
-### Community 2 - "questionWorkbenchAndRouter.test.tsx"
+### Community 2 - "studyBlockMachine.ts"
 Cohesion: 0.06
-Nodes (70): FofoDoro(), nextStepText(), phaseLabel(), progressText(), ringTime(), ringTone(), describePlan(), FofoDoroPreview() (+62 more)
+Nodes (71): FofoDoro(), nextStepText(), phaseLabel(), progressText(), ringTime(), ringTone(), describePlan(), FofoDoroPreview() (+63 more)
 
 ### Community 3 - "useFofoConversation.ts"
-Cohesion: 0.10
-Nodes (32): BaseSignals, FOFO_CONVERSATION_KEY, FofoTurn, isQuestionOpen(), loadSavedTurns(), nextId(), SendOptions, useFofoConversation() (+24 more)
+Cohesion: 0.09
+Nodes (35): BaseSignals, FOFO_CONVERSATION_KEY, FofoTurn, isQuestionOpen(), loadSavedTurns(), nextId(), SendOptions, useFofoConversation() (+27 more)
 
-### Community 4 - "topicQuestions.ts"
-Cohesion: 0.13
-Nodes (29): FofoActiveQuestion, CalibrationLine, AcervoLinkBar(), EmptyTopicQuestions(), prerequisitesOf(), QuestionCorrection(), groupLabel(), QuestionFilters() (+21 more)
+### Community 4 - "Question"
+Cohesion: 0.10
+Nodes (17): FofoActiveQuestion, topicLabel(), QuestionWorkbenchProps, QuestionsViewItem, bundles, context, questionB, saved (+9 more)
 
 ### Community 5 - "App.tsx"
-Cohesion: 0.08
-Nodes (33): AppMode, DeletableKind, DELETE_LABELS, WorkbenchTab, ConfirmOptions, useConfirmDialog(), AdminFactoryView(), AdminFactoryViewProps (+25 more)
+Cohesion: 0.06
+Nodes (55): App(), AppMode, DeletableKind, DELETE_LABELS, describeDependents(), localDateStamp(), WorkbenchTab, ConfirmOptions (+47 more)
 
 ### Community 6 - "tauri.conf.json"
 Cohesion: 0.08
 Nodes (24): icons/128x128@2x.png, icons/128x128.png, icons/32x32.png, icons/icon.icns, icons/icon.ico, debugApplicationIdSuffix, app, security (+16 more)
 
 ### Community 9 - "dailyReview.ts"
-Cohesion: 0.11
-Nodes (18): SEED_AI_DISSECTIONS, SEED_QUESTIONS, itemKey(), QuestionWorkbench(), chooseReviewQuestion(), COOLING_RECALL_BELOW, daysSinceLatest(), deriveDiagnosis() (+10 more)
+Cohesion: 0.21
+Nodes (12): chooseReviewQuestion(), COOLING_RECALL_BELOW, daysSinceLatest(), interleaveBySubject(), QuestionCandidate, REVIEW_LAST_DAY_MAX, REVIEW_LOOKBACK_DAYS, REVIEW_MAX_ITEMS (+4 more)
 
 ### Community 11 - "Database"
 Cohesion: 0.12
@@ -318,33 +312,33 @@ Nodes (10): 1. Ferramentas Base, 2. Ferramentas de Contexto & Automação (Opcio
 Cohesion: 0.11
 Nodes (19): autoprefixer, fake-indexeddb, devDependencies, autoprefixer, fake-indexeddb, tailwindcss, @tauri-apps/cli, @testing-library/react (+11 more)
 
-### Community 14 - "getDb"
-Cohesion: 0.09
-Nodes (51): EMPTY, useTopicQuestionCount(), useTopicQuestions(), useExamOutlook(), AcervoLink, acervoQuestionId(), detachUncoveredCopies(), disableAcervoLink() (+43 more)
+### Community 14 - "topicQuestions.ts"
+Cohesion: 0.14
+Nodes (34): EMPTY, useTopicQuestionCount(), useTopicQuestions(), AcervoLinkBar(), AcervoLink, acervoQuestionId(), detachUncoveredCopies(), disableAcervoLink() (+26 more)
 
 ### Community 15 - "formatDuration"
-Cohesion: 0.11
-Nodes (26): DayCard(), REVIEW_COLOR, statusLine(), capitalize(), DayDetail(), dayBefore(), ExamOutlookCard(), explanation() (+18 more)
+Cohesion: 0.15
+Nodes (21): CurriculumManagerModal(), DayCard(), REVIEW_COLOR, statusLine(), capitalize(), DayDetail(), dayBefore(), ExamOutlookCard() (+13 more)
 
 ### Community 16 - "acervo/pacote.ts"
-Cohesion: 0.22
-Nodes (17): ANNULLED_ANSWER, answerFitsOptions(), isBoolean(), isNumber(), isObject(), isString(), isStringArray(), Json (+9 more)
+Cohesion: 0.18
+Nodes (21): itemValues(), ANNULLED_ANSWER, answerFitsOptions(), concursoComAno(), formatProcedencia(), isBoolean(), isNumber(), isObject() (+13 more)
 
 ### Community 17 - "prompts.ts"
-Cohesion: 0.36
-Nodes (11): buildStudentContextXml(), ChatTurn, escapeXml(), activeQuestionXml(), buildFofoPrompt(), continuationXml(), CONVERSATION_TURNS_SENT, conversationXml() (+3 more)
+Cohesion: 0.28
+Nodes (14): buildDissectionPrompt(), buildQuestionXml(), buildStudentContextXml(), escapeXml(), activeQuestionXml(), EditalCandidate, buildFofoPrompt(), continuationXml() (+6 more)
 
-### Community 19 - "linking.ts"
-Cohesion: 0.14
-Nodes (22): PendingTopic, assuntoIdFromCaminho(), cleanSubjectName(), indexCache, keywordCache, KeywordIndex, keywords(), linkByName() (+14 more)
+### Community 19 - "importAcervo.ts"
+Cohesion: 0.11
+Nodes (35): buildAcervoDb(), openAcervo(), ACERVO_LINK_MAX_TOKENS, askAi(), candidatesFor(), ImportInput, PendingTopic, planTopics() (+27 more)
 
 ### Community 20 - "gen.cjs"
 Cohesion: 0.21
 Nodes (43): appointed(), base, blank(), blinkOverlay(), burst(), byId, carnival(), celebrating() (+35 more)
 
-### Community 21 - "Topic"
-Cohesion: 0.08
-Nodes (39): GoodMorningViewProps, NotebookDockPanelProps, DraftOwner, NOTEBOOK_AUTOSAVE_MS, NotebookDraftStatus, notebookTitle(), SubjectCycleAllocation, TopicHeatItem (+31 more)
+### Community 21 - "useDailyReview.test.tsx"
+Cohesion: 0.29
+Nodes (6): calls, cold, heatOf(), reviews, setup(), subject
 
 ### Community 22 - "useFofoConversation.test.tsx"
 Cohesion: 0.40
@@ -355,16 +349,16 @@ Cohesion: 0.47
 Nodes (3): column(), currentSubject(), items()
 
 ### Community 24 - "aiRouter.ts"
-Cohesion: 0.11
-Nodes (31): AiResponder, AiStatus, buildDissectionPrompt(), buildQuestionXml(), callAiProviders(), callDeepSeek(), callGateway(), callGemini() (+23 more)
+Cohesion: 0.13
+Nodes (26): AiResponder, AiStatus, callAiProviders(), callDeepSeek(), callGateway(), callGemini(), callGroq(), callOpenAiCompatible() (+18 more)
 
 ### Community 25 - "Spec 12c — Acervo da Cebraspe no app"
 Cohesion: 0.11
 Nodes (17): 1. Intenção, 2. Objetivos, não objetivos e anti-objetivos, 3. Restrições, 4. Abordagens consideradas (escolhida: B, pelo dono), 5.1 Acervo separado, 5.2 Importar o pacote, 5.3 Ligação tópico ↔ assunto (por plano), 5.4 Questões do tópico (+9 more)
 
 ### Community 26 - "FofoIaPanel.tsx"
-Cohesion: 0.11
-Nodes (21): renderInline(), REVEAL_STEP_MS, REVEAL_TOTAL_MS, revealDelayMs(), RichText(), FofoIaPanel(), FofoIaPanelProps, LESSON_MIN_WIDTH (+13 more)
+Cohesion: 0.17
+Nodes (12): FofoIaPanel(), FofoIaPanelProps, LESSON_MIN_WIDTH, markWarmupSeen(), readSeen(), warmupSeen(), WarmupInvite(), buildFofoContext() (+4 more)
 
 ### Community 27 - "01-database-schema.sql"
 Cohesion: 0.22
@@ -395,12 +389,12 @@ Cohesion: 0.12
 Nodes (16): 10. Depois deste projeto, 1. Por que agora, 2. Objetivos, não objetivos e anti-objetivos, 3. O edital real (fonte de verdade para testes), 4. Ponto de partida do dono (para semear a autoavaliação e validar o ciclo), 5.1 Importar o edital, 5.2 Autoavaliação no Wizard, 5.3 Ciclo pela nota mínima (+8 more)
 
 ### Community 34 - "acervoDb.ts"
-Cohesion: 0.10
-Nodes (24): AcervoRow, assuntoCaminhos(), buildAcervoDb(), itemsByIds(), itemsForAssuntos(), itemsForAssuntosQuery(), itemValues(), placeholders() (+16 more)
+Cohesion: 0.08
+Nodes (24): AcervoRow, assuntoCaminhos(), itemsByIds(), placeholders(), readAcervoVocab(), toAssunto(), TRUE_FALSE_OPTIONS, PacoteItem (+16 more)
 
 ### Community 35 - "lib/database.ts"
-Cohesion: 0.10
-Nodes (41): createFreshDatabase(), createSafetyBackup(), describeStorageError(), EDITAL_SUBJECT_COLORS, enableForeignKeys(), exportBytes(), exportDatabaseBinary(), initDatabase() (+33 more)
+Cohesion: 0.08
+Nodes (48): SEED_ADMIN_BLUEPRINTS, SEED_CAREER_TRACKS, scaleWeekdayMinutes(), categoryForPart(), createFreshDatabase(), createPlanFromEdital(), createSafetyBackup(), describeStorageError() (+40 more)
 
 ### Community 36 - "5. Re-render Optimization"
 Cohesion: 0.12
@@ -411,20 +405,20 @@ Cohesion: 0.12
 Nodes (15): 1.1. O que havia sido validado positivamente, 1.2. Os 5 Gargalos Identificados na Avaliação v1, Alerta de Segurança em `VITE_DEEPSEEK_API_KEY` + Limpeza de Ternários Aninhados, 🧠 Auditoria de Sócio — Comparativo v1 (Pré-Skills) vs. v2 (Pós-Skills), Da "Regra das 3 Questões" para Saturação Contínua BM25 + Regressão de Meia-Vida (Duolingo HLR), De "God Component" (`App.tsx` com 781 linhas) para Bancada Dupla (Split View) Componentizada, De Prompt Genérico para "Eliminação Contrastiva + Regra de Abstenção", 🚀 Mudança 1 (Lente: `education-learning-science` — Kapur, 2016 & Kornell, 2009) (+7 more)
 
 ### Community 38 - "questionImport.ts"
-Cohesion: 0.15
-Nodes (25): IMPORT_TEXT_EXAMPLE, ImportMode, MODE_SUBTITLE, QuestionImportModal(), QuestionImportModalProps, BOARD_ALIASES, canonicalBoardName(), excerptOf() (+17 more)
+Cohesion: 0.16
+Nodes (23): IMPORT_TEXT_EXAMPLE, ImportMode, MODE_SUBTITLE, QuestionImportModal(), BOARD_ALIASES, canonicalBoardName(), excerptOf(), findOptionBlockStart() (+15 more)
 
 ### Community 39 - "fofoia.test.ts"
-Cohesion: 0.16
-Nodes (20): aiPauseReply(), askFofoIa(), FOFO_UNAVAILABLE_REPLY, isStrongMode(), MODE_MAX_TOKENS, FofoContext, NOTEBOOK_CONTEXT_CHARS, trimCutReply() (+12 more)
+Cohesion: 0.14
+Nodes (20): aiPauseReply(), generateQuestionDissection(), getAiStatus(), GROQ_FREE_OUTPUT_TOKENS_PER_MINUTE, parseDissectionResponse(), StudentContextSnapshot, askFofoIa(), FOFO_UNAVAILABLE_REPLY (+12 more)
 
 ### Community 40 - "README.md"
 Cohesion: 0.17
 Nodes (8): 1. Roteador de IA Transparente (Zero Config + Grounding Anti-Alucinação), 2. Política de PDFs Locais (Estratégia / Gran Cursos — Direitos Autorais), 3. Estudo Reverso & Motor de Pontuação estilo Elasticsearch (`Relevance Score`), 🤖 Roteador IA, Estudo Reverso, Score estilo Elasticsearch & Anti-Alucinação, 1. Catálogo de Trilhas de Estudos Prontas, 2. Matriz de Complexidade e Catalogação Cross-Trilhas das Questões, 3. Verificador de Blueprint das Bancas (DOM Drift Detection), 🛠️ Modo Administrador ("A Fábrica"): Trilhas, Complexidade de Questões e Crawler
 
 ### Community 41 - "DiagnosisPicker.tsx"
-Cohesion: 0.21
-Nodes (12): StatusSquare(), StatusTone, TONE_BG, chip, chipOff, chipOn, ORDER, DiagnosisPicker() (+4 more)
+Cohesion: 0.20
+Nodes (13): StatusSquare(), StatusTone, TONE_BG, chip, chipOff, chipOn, ConfidencePicker(), ORDER (+5 more)
 
 ### Community 42 - "Cognitive Load Analyser"
 Cohesion: 0.13
@@ -455,8 +449,8 @@ Cohesion: 0.12
 Nodes (27): MetricExplainer(), MetricExplainerProps, byMinutes(), CATEGORY_TITLES, CycleGroup, formatPoints(), groupAllocations(), CycleSubjectRow() (+19 more)
 
 ### Community 50 - "cli.ts"
-Cohesion: 0.08
-Nodes (32): createAgyProvider(), createProvider(), DEFAULT_AGY, defaultRunner(), HTTP, LimiteDiario, loadKeys(), Runner (+24 more)
+Cohesion: 0.09
+Nodes (28): AiProvider, createAgyProvider(), createProvider(), DEFAULT_AGY, defaultRunner(), HTTP, LimiteDiario, loadKeys() (+20 more)
 
 ### Community 51 - "Individual Spacing Algorithm Explainer"
 Cohesion: 0.14
@@ -476,7 +470,7 @@ Nodes (13): Actionable Patterns, Data Interpretation: Year 10 GCSE Geography Moc
 
 ### Community 56 - "minerador/acervoStore.ts"
 Cohesion: 0.13
-Nodes (26): normalizeStatement(), ACERVO_VERSAO, buildLote(), byOrigin(), concursoPath(), firstOrigin(), LOTE_PALAVRAS_PADRAO, mergeDuplicates() (+18 more)
+Nodes (27): normalizeStatement(), ACERVO_VERSAO, buildLote(), byOrigin(), concursoPath(), firstOrigin(), LOTE_PALAVRAS_PADRAO, mergeDuplicates() (+19 more)
 
 ### Community 57 - "Spaced Practice Schedule Builder"
 Cohesion: 0.15
@@ -487,8 +481,8 @@ Cohesion: 0.15
 Nodes (12): Evidence Foundation, Example Output, Input Schema, Known Limitations, Prompt, Recommended Strategies (Ranked by Evidence), Strategies to STOP Using (and Why), Student Guide (+4 more)
 
 ### Community 59 - "storage.ts"
-Cohesion: 0.23
-Nodes (10): createDefaultStorage(), createIndexedDbStorage(), createTauriFileStorage(), isTauriRuntime(), makeBackupId(), MAX_BACKUPS, parseBackupId(), promisifyRequest() (+2 more)
+Cohesion: 0.08
+Nodes (21): InitDatabaseOptions, createDefaultStorage(), createIndexedDbStorage(), createTauriFileStorage(), DatabaseStorage, LEGACY_LOCALSTORAGE_KEY, makeBackupId(), MAX_BACKUPS (+13 more)
 
 ### Community 60 - "schema-v1.sql"
 Cohesion: 0.36
@@ -539,16 +533,16 @@ Cohesion: 0.18
 Nodes (10): 9c — Revisão do dia e tela "Bom dia": Implementation Plan, Decisões do construtor (dentro do que a spec deixou), Global Constraints, Review Focus, Task 1: Banco v8, Task 2: Autoavaliações na meia-vida, Task 3: Seleção, progresso e diagnóstico (puros), Task 4: Linha de ânimo e situação (puros) (+2 more)
 
 ### Community 72 - "editalParser.ts"
-Cohesion: 0.19
-Nodes (20): ACRONYMS, EditalExamPart, EditalRole, findBoard(), findContent(), findExamDate(), findFee(), findMinTotal() (+12 more)
+Cohesion: 0.06
+Nodes (56): CurriculumManagerModalProps, CurriculumSection, createEditalDraft(), draftToPlanInput(), draftWeights(), EditalDraft, roleNeedsChoice(), EditalImportModal() (+48 more)
 
 ### Community 73 - "registro-externo.spec.ts"
 Cohesion: 0.47
 Nodes (3): column(), finishBlockAndOpenInvite(), register()
 
-### Community 74 - "EditalImportModal.tsx"
-Cohesion: 0.24
-Nodes (13): createEditalDraft(), draftToPlanInput(), draftWeights(), EditalDraft, roleNeedsChoice(), EditalImportModal(), ImportState, EditalPreview() (+5 more)
+### Community 74 - "QuestionWorkbench.tsx"
+Cohesion: 0.22
+Nodes (13): EmptyTopicQuestions(), formatLabel(), groupLabel(), QuestionFilters(), QuestionFormatFilter, QuestionStatusFilter, scopeLabel(), statusLabel() (+5 more)
 
 ### Community 75 - "React Best Practices"
 Cohesion: 0.20
@@ -571,8 +565,8 @@ Cohesion: 0.20
 Nodes (9): 1. A ideia, nas palavras do dono, 2. Por que vale (hipótese a validar), 3. Conceitos (rascunho), 4. De onde vêm os dados, 5. Como aparece para o estudante (rascunho), 6. Não objetivos (por enquanto), 7. Perguntas abertas (roteiro do brainstorm), 8. Dependências (+1 more)
 
 ### Community 80 - "examFiles.ts"
-Cohesion: 0.27
-Nodes (16): baseName(), bestKey(), descriptionTail(), isCombined(), isDefinitiveKey(), isExamRelated(), isJustification(), isObjectiveExam() (+8 more)
+Cohesion: 0.17
+Nodes (20): baseName(), bestKey(), descriptionTail(), isCombined(), isDefinitiveKey(), isExamRelated(), isJustification(), isObjectiveExam() (+12 more)
 
 ### Community 81 - "Review Focus"
 Cohesion: 0.22
@@ -592,7 +586,7 @@ Nodes (10): scripts, build, dev, minerar, preview, tauri:build, tauri:dev, test 
 
 ### Community 85 - "FofoOutfitContext.tsx"
 Cohesion: 0.08
-Nodes (45): Toast(), CurrentFofo(), FofoOutfitProvider(), FofoOutfits, OutfitContext, todaysSun(), useFofoOutfit(), FofoMotion (+37 more)
+Nodes (44): Toast(), CurrentFofo(), FofoOutfitProvider(), FofoOutfits, OutfitContext, todaysSun(), FofoMotion, FofoSprite() (+36 more)
 
 ### Community 86 - "⛏️ Spec 12 — Minerador de provas da Cebraspe e acervo por assunto"
 Cohesion: 0.12
@@ -608,7 +602,7 @@ Nodes (8): 1. Onde os estudos ficam, 2. Quando grava (`src/lib/database.ts`), 3.
 
 ### Community 89 - "classifyRun.ts"
 Cohesion: 0.17
-Nodes (22): AiProvider, candidatesFor(), queueOrder(), filePath(), readClassificacao(), writeClassificacao(), buildBatchPrompt(), estimateTokens() (+14 more)
+Nodes (24): candidatesFor(), queueOrder(), filePath(), readClassificacao(), writeClassificacao(), buildBatchPrompt(), estimateTokens(), batches() (+16 more)
 
 ### Community 90 - "Confidence Calibration Check"
 Cohesion: 0.29
@@ -643,8 +637,8 @@ Cohesion: 0.40
 Nodes (4): 1. Preparar o PC (uma vez), 2. Onde paramos, 3. Mensagem para colar na IA (Claude Code ou Antigravity), Continuar no outro PC — 22/10/2026
 
 ### Community 99 - "fixtures.ts"
-Cohesion: 0.13
-Nodes (25): GabaritoInvalido, isValidNumberRow(), MARKS, marksRow(), numericTokens(), parseAnswerKey(), tokensOf(), LETTERS (+17 more)
+Cohesion: 0.29
+Nodes (10): ANATEL_002_PROVA, ANATEL_003_PROVA, DATAPREV_CG1_GABARITO, DATAPREV_CG1_PROVA, fixtureBytes(), fixtureLines(), SERPRO_PROVA, STM_CG1_GABARITO (+2 more)
 
 ### Community 100 - "🧭 Spec 13 — Plano de estudo: a semana dia a dia e o caminho até a prova"
 Cohesion: 0.14
@@ -659,12 +653,12 @@ Cohesion: 0.50
 Nodes (3): File-System Paths, Import Paths, Prefer Statically Analyzable Paths
 
 ### Community 177 - "runMinerador.ts"
-Cohesion: 0.18
-Nodes (14): eventDetailUrl(), fileUrl(), isSafeIdentifier(), PoliteClient, emptyReport(), RunReport, extractExam(), fetchFile() (+6 more)
+Cohesion: 0.13
+Nodes (17): createPoliteClient(), request(), FalhaDeRede, PDF_MAGIC, PoliteClient, emptyReport(), formatReport(), RunReport (+9 more)
 
 ### Community 178 - "vocab.ts"
-Cohesion: 0.27
-Nodes (18): EDITAL, applyProposals(), assuntoId(), canonicalPath(), cleanSubjectName(), deepMatch(), jaccard(), juntarAssunto() (+10 more)
+Cohesion: 0.20
+Nodes (21): EDITAL, EDITAL, applyProposals(), assuntoId(), canonicalPath(), cleanSubjectName(), deepMatch(), jaccard() (+13 more)
 
 ### Community 180 - "saveStatus.ts"
 Cohesion: 0.17
@@ -675,8 +669,8 @@ Cohesion: 0.12
 Nodes (15): 12c — Acervo da Cebraspe no app Implementation Plan, Global Constraints, Review Focus, Task 10: Tela: procedência, incerto, anulada, ligações e itens tirados, Task 11: Importar o acervo pela tela de importação, Task 12: E2E, pacote real e fechamento, Task 1: Migração v12 + contrato SQL + tipos, Task 2: Ler e validar o pacote (puro) (+7 more)
 
 ### Community 187 - "QuestionCard.tsx"
-Cohesion: 0.24
-Nodes (16): AnswerCorrection(), AnswerOptions(), isCertoErradoOptions(), optionName(), ConfidencePicker(), ReviewQuestion(), formatAttemptBadge(), QuestionCard() (+8 more)
+Cohesion: 0.25
+Nodes (15): AnswerCorrection(), AnswerOptions(), isCertoErradoOptions(), optionName(), ReviewQuestion(), complexityStyle(), formatAttemptBadge(), QuestionCard() (+7 more)
 
 ### Community 188 - "Spec 12d — Sincronização automática do acervo, fila da aba Questões e Reta Final flexível"
 Cohesion: 0.22
@@ -686,13 +680,13 @@ Nodes (8): 1. Intenção, 2. Objetivos, não objetivos e anti-objetivos, 3.1 Man
 Cohesion: 0.12
 Nodes (15): 12a — Minerador da Cebraspe até o acervo cru — Implementation Plan, Estrutura de arquivos, Global Constraints, Review Focus, Task 10: Rodada real e registro, Task 1: Base da ferramenta + leitura da API, Task 2: Cliente educado com cache, Task 3: Escolha e pareamento dos arquivos (+7 more)
 
-### Community 190 - "examOutlookCard.test.tsx"
-Cohesion: 0.21
-Nodes (9): newTopicsText(), PHASE, shortDate(), WeekTimeline(), ProjectedWeek, WeekPhase, WeekSlot, base (+1 more)
+### Community 190 - "examProjection.ts"
+Cohesion: 0.07
+Nodes (35): useExamOutlook(), newTopicsText(), PHASE, shortDate(), WeekTimeline(), CycleCalculationResult, getDayOverrides(), coverageNow() (+27 more)
 
 ### Community 191 - "DailyReviewCard.tsx"
-Cohesion: 0.21
-Nodes (14): DailyReviewCard(), DailyReviewCardProps, REASON, RATINGS, ReviewOpenPrompt(), ReviewQuestionResult, CurrentReview, cardProps() (+6 more)
+Cohesion: 0.23
+Nodes (13): DailyReviewCard(), DailyReviewCardProps, REASON, RATINGS, ReviewOpenPrompt(), CurrentReview, cardProps(), certoErrado (+5 more)
 
 ### Community 193 - "Tipos (em `vocab.ts` e `classificationStore.ts`)"
 Cohesion: 0.14
@@ -702,9 +696,9 @@ Nodes (13): 12b — Assuntos canônicos do acervo (classificação com IA) — I
 Cohesion: 0.14
 Nodes (13): 13a — Horas por dia e "Sua semana" Implementation Plan, Global Constraints, Review Focus, Task 10: E2E, documentação e verificação final, Task 1: Banco — padrão de horas, reta final e exceções por data (migração v11), Task 2: Disponibilidade — minutos do dia e da semana (módulo puro), Task 3: Motor do ciclo recebe o orçamento da semana corrente, Task 4: Planejador do dia — orçamento do dia, teto de 02:00 e Revisão da semana (+5 more)
 
-### Community 197 - "types/database.ts"
-Cohesion: 0.08
-Nodes (32): CurriculumManagerModalProps, CurriculumSection, HoursStep(), ONBOARDING_COMPLETED_KEY, OnboardingProfile, OnboardingWizardModal(), OnboardingWizardModalProps, profileFromPlan() (+24 more)
+### Community 197 - "StudyPlan"
+Cohesion: 0.16
+Nodes (15): ONBOARDING_COMPLETED_KEY, OnboardingProfile, OnboardingWizardModal(), OnboardingWizardModalProps, profileFromPlan(), STRATEGY_FOR_MOMENT, initialSelfAssessment(), KNOWLEDGE_LEVELS (+7 more)
 
 ### Community 198 - "Fofo — o mascote em pixel art"
 Cohesion: 0.29
@@ -719,12 +713,12 @@ Cohesion: 0.33
 Nodes (4): all, fs, ids, path
 
 ### Community 201 - "types.ts"
-Cohesion: 0.13
-Nodes (18): assembleExam(), CHOICE_MARKS, continuesCode(), dependsOnFigure(), detectCode(), formatLabel(), hasIllegibleSymbols(), looksLikeCode() (+10 more)
+Cohesion: 0.15
+Nodes (22): assembleExam(), CHOICE_MARKS, continuesCode(), dependsOnFigure(), detectCode(), formatLabel(), hasIllegibleSymbols(), looksLikeCode() (+14 more)
 
-### Community 202 - "pdfDocument.ts"
-Cohesion: 0.32
-Nodes (9): extractPdfLines(), loadPdfDocument(), loadPdfJs(), PageSize, readPageSizes(), renderPdfPage(), PageJumpRequest, PdfDocumentViewer() (+1 more)
+### Community 202 - "goodMorningStats.ts"
+Cohesion: 0.30
+Nodes (10): confidenceCalibration(), dayLevel(), dayStart(), editalProgress(), pace(), plural(), studyCalendar(), iso() (+2 more)
 
 ### Community 203 - "acervo.spec.ts"
 Cohesion: 0.33
@@ -738,85 +732,85 @@ Nodes (3): fs, html, path
 Cohesion: 0.50
 Nodes (3): { chromium }, fs, path
 
-### Community 206 - "QuestionAttempt"
-Cohesion: 0.52
-Nodes (5): AnswerState, getAllowedDiagnoses(), isDiagnosisAllowed(), isFalseCertainty(), QuestionAttempt
+### Community 206 - "types/database.ts"
+Cohesion: 0.18
+Nodes (13): AnswerState, getAllowedDiagnoses(), isDiagnosisAllowed(), isFalseCertainty(), BlueprintHealthStatus, CareerSphere, CatalogStatus, QuestionAttempt (+5 more)
 
-### Community 207 - "importAcervo.ts"
-Cohesion: 0.17
-Nodes (14): ACERVO_LINK_MAX_TOKENS, AcervoImportResult, askAi(), candidatesFor(), ImportInput, planTopics(), runImport(), touchesDisabled() (+6 more)
+### Community 207 - "acervoImportPanel.test.tsx"
+Cohesion: 0.33
+Nodes (4): AcervoImportResult, FORBIDDEN, ImportInput, importMock
 
-### Community 209 - "App"
-Cohesion: 0.09
-Nodes (46): RFC-4122, App(), describeDependents(), localDateStamp(), useFofoPrefs(), usePeek(), routineGroup(), applyRecommendedCycleAllocations() (+38 more)
+### Community 209 - "getDb"
+Cohesion: 0.12
+Nodes (42): RFC-4122, newestLinkVocabVersion(), saveAcervoLinks(), clearDailyPlan(), createStudyPlan(), createSubject(), createTopic(), deleteStudyPlan() (+34 more)
 
-### Community 210 - "dailyRoutine.test.ts"
-Cohesion: 0.08
-Nodes (30): startOfDayIso(), useDailyRoutine(), DailyPlan, buildRoutine(), freezeDailyPlan(), pickExtraBlock(), RoutineItem, routineProfileKey() (+22 more)
+### Community 210 - "Topic"
+Cohesion: 0.05
+Nodes (62): GoodMorningViewProps, QuestionImportModalProps, startOfDayIso(), useDailyRoutine(), SubjectCycleAllocation, TopicHeatItem, BlockInput, coldestStudied() (+54 more)
 
-### Community 211 - "useFofoIaInputs.test.tsx"
-Cohesion: 0.25
-Nodes (6): context, questionB, saved, subject, topicA, topicB
+### Community 211 - "FofoMessage.tsx"
+Cohesion: 0.33
+Nodes (8): renderInline(), REVEAL_STEP_MS, REVEAL_TOTAL_MS, revealDelayMs(), RichText(), FofoMessage(), MODE_BADGE, formatSummaryForNotebook()
 
 ### Community 214 - "RoutineColumn.tsx"
 Cohesion: 0.07
-Nodes (35): Collapse(), PeekBanner(), PeekInfo, label(), QuestionLogPanel(), QuestionLogPanelProps, BlockHeader(), CurrentBlockExtras (+27 more)
+Nodes (33): Collapse(), PeekBanner(), PeekInfo, label(), QuestionLogPanel(), QuestionLogPanelProps, BlockHeader(), CurrentBlockExtras (+25 more)
 
 ### Community 215 - "cycleEngine.ts"
-Cohesion: 0.05
-Nodes (56): ResizeHandle(), ResizeHandleProps, useResizableWidth(), SEED_ADMIN_BLUEPRINTS, SEED_CAREER_TRACKS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_STUDY_PLANS (+48 more)
+Cohesion: 0.07
+Nodes (52): SEED_AI_DISSECTIONS, SEED_NOTEBOOKS, SEED_PDF_SOURCES, SEED_QUESTIONS, SEED_STUDY_PLANS, SEED_SUBJECTS, SEED_TOPIC_LINKS, SEED_TOPICS (+44 more)
 
 ### Community 216 - "Identidade do FofoLab: anti-IA com personalidade"
 Cohesion: 0.29
 Nodes (6): Duas zonas, Identidade do FofoLab: anti-IA com personalidade, O Fofo, Proibido (além da lista da `ux-ui-clean`), Toques de pixel fora do Fofo (só quando carregam informação), Voz do Fofo
 
-### Community 217 - "editalCycle.test.ts"
-Cohesion: 0.24
-Nodes (6): PdfTextItem, textItemsToLines(), ENGENHARIA_TOPIC_LEVELS, plan, SUBJECT_LEVELS, loadFixturePdfLines()
+### Community 217 - "SelfDiagnosisType"
+Cohesion: 0.33
+Nodes (9): ReviewQuestionResult, prerequisitesOf(), QuestionCorrection(), AnswerSubmission, AttemptState, AttemptRow, QuestionAttemptSummary, ReviewConfidence (+1 more)
 
 ### Community 218 - "useDailyReview.ts"
-Cohesion: 0.22
-Nodes (18): useFofoIaInputs(), reviewMinutes(), studiedDatesByTopic(), topicLabel(), useDailyReview(), useNotebookDraft(), reviewProgress(), closeDatabase() (+10 more)
+Cohesion: 0.21
+Nodes (18): GoodMorningView(), reviewMinutes(), studiedDatesByTopic(), topicLabel(), useDailyReview(), useNotebookDraft(), reviewProgress(), closeDatabase() (+10 more)
 
-### Community 220 - "syllabusImport.ts"
-Cohesion: 0.53
-Nodes (5): CurriculumManagerModal(), cleanTitle(), looksLikeHeader(), parseSyllabusTopics(), splitNumberedSegments()
+### Community 220 - "answerKey.ts"
+Cohesion: 0.38
+Nodes (7): GabaritoInvalido, isValidNumberRow(), MARKS, marksRow(), numericTokens(), parseAnswerKey(), tokensOf()
 
 ### Community 221 - "GoodMorningView.tsx"
-Cohesion: 0.11
-Nodes (27): CalibrationCard(), GoodMorningView(), resumeTargets(), topicLabel(), ResumeCard(), ResumeCardProps, ResumeTarget, EditalProgressSummary (+19 more)
+Cohesion: 0.08
+Nodes (32): CalibrationCard(), CalibrationLine, resumeTargets(), topicLabel(), ResumeCard(), ResumeCardProps, ResumeTarget, EditalProgressSummary (+24 more)
 
 ### Community 222 - "PdfReaderStage.tsx"
-Cohesion: 0.21
-Nodes (14): NotebookDockPanel(), emptyStateMessage(), PdfProgressUpdate, PdfReaderStage(), ZOOM_STEPS, PdfFilePicker(), PdfPageNavigation, PdfReaderToolbar() (+6 more)
+Cohesion: 0.12
+Nodes (23): NotebookDockPanel(), NotebookDockPanelProps, DraftOwner, NOTEBOOK_AUTOSAVE_MS, NotebookDraftStatus, notebookTitle(), emptyStateMessage(), PdfProgressUpdate (+15 more)
 
-### Community 223 - "examProjection.ts"
-Cohesion: 0.11
-Nodes (42): NO_TIME, useWeekAvailability(), evenSplit(), minutesForDay(), parseDateKey(), parseWeekdayMinutes(), scaleWeekdayMinutes(), weekBudgetMinutes() (+34 more)
+### Community 223 - "localDateKey"
+Cohesion: 0.12
+Nodes (32): HoursStep(), NO_TIME, useWeekAvailability(), capitalize(), QUICK_TIMES, TIME_OPTIONS, WeekdayHoursEditor(), evenSplit() (+24 more)
 
 ### Community 227 - "icon.cjs"
 Cohesion: 0.13
 Nodes (11): { chromium }, fillEl(), fs, g, head, inEl(), palette, path (+3 more)
 
-### Community 228 - "goodMorning.ts"
-Cohesion: 0.18
-Nodes (15): behindWarning(), dayMonth(), daysLine(), EXAM_BEHIND_GAP_POINTS, examSituation(), findBehindPart(), listStarted(), moodLine() (+7 more)
+### Community 228 - "AdminFactoryView.tsx"
+Cohesion: 0.48
+Nodes (6): AdminFactoryView(), AdminFactoryViewProps, getCatalogStatusClass(), getCatalogStatusLabel(), AdminBoardBlueprint, CareerTrack
 
 ### Community 229 - "classifyPrompt.ts"
-Cohesion: 0.18
-Nodes (14): batchCodes(), BatchEntry, BatchResult, clamp(), CLASSIFY_SCHEMA, extractJson(), itemBlock(), parseBatchResponse() (+6 more)
+Cohesion: 0.20
+Nodes (13): batchCodes(), BatchEntry, BatchResult, clamp(), CLASSIFY_SCHEMA, extractJson(), itemBlock(), parseBatchResponse() (+5 more)
 
 ### Community 230 - "migrations.ts"
 Cohesion: 0.21
 Nodes (11): detectSchemaVersion(), getUserVersion(), LATEST_SCHEMA_VERSION, Migration, MIGRATIONS, prepareSchema(), SchemaPreparationResult, SchemaTooNewError (+3 more)
 
 ### Community 231 - "candidates.ts"
-Cohesion: 0.20
-Nodes (13): bestCandidate(), cache, cueCandidates(), index(), Indexed, itemText(), keywords(), PISTAS (+5 more)
+Cohesion: 0.27
+Nodes (11): bestCandidate(), cache, cueCandidates(), index(), Indexed, itemText(), keywords(), PISTAS (+3 more)
 
 ### Community 232 - "cebraspeApi.ts"
-Cohesion: 0.30
-Nodes (11): asObject(), eventListUrl(), FormatoCebraspeMudou, Json, nullableArray(), parseEvent(), parseEventDetail(), parseEventList() (+3 more)
+Cohesion: 0.25
+Nodes (14): asObject(), eventDetailUrl(), eventListUrl(), fileUrl(), FormatoCebraspeMudou, isSafeIdentifier(), Json, nullableArray() (+6 more)
 
 ### Community 233 - "classificationStore.ts"
 Cohesion: 0.22
@@ -827,32 +821,8 @@ Cohesion: 0.23
 Nodes (14): assignColumns(), columnMargin(), continuationChecker(), joinPieces(), markMargins(), mostCommon(), pageLines(), pageModeChecker() (+6 more)
 
 ### Community 236 - "acervo/acervoStore.ts"
-Cohesion: 0.27
-Nodes (9): AcervoStorage, createDefaultAcervoStorage(), createIndexedDbAcervoStorage(), createTauriAcervoStorage(), currentStorage(), openAcervo(), promisify(), replaceAcervo() (+1 more)
-
-### Community 237 - "DatabaseStorage"
-Cohesion: 0.15
-Nodes (6): InitDatabaseOptions, DatabaseStorage, MemoryStorage, DatabaseModule, openDatabase(), sqlJsConfig
-
-### Community 238 - "examOutlook.test.ts"
-Cohesion: 0.18
-Nodes (10): cycleData, daily(), NOW, outlook(), parts, plan, session(), subjectA (+2 more)
-
-### Community 239 - "politeClient.ts"
-Cohesion: 0.29
-Nodes (5): createPoliteClient(), request(), FalhaDeRede, PDF_MAGIC, setup()
-
-### Community 240 - "recordQuestionDiagnosis"
-Cohesion: 0.33
-Nodes (8): describeAnswer(), diagnosisDelta(), InconsistentDiagnosisError, questionWeight(), recordQuestionDiagnosis(), sampleConfidenceAtAttempt(), updateAttemptDiagnosis(), weightedDelta()
-
-### Community 241 - "database.test.ts"
-Cohesion: 0.25
-Nodes (6): LEGACY_LOCALSTORAGE_KEY, DatabaseModule, openDatabase(), SaveStatusModule, sqlJsConfig, topicWithQuestions()
-
-### Community 242 - "importAcervo.test.ts"
-Cohesion: 0.25
-Nodes (3): AiCallResult, CONCEITOS, MINI
+Cohesion: 0.16
+Nodes (12): itemsForAssuntos(), itemsForAssuntosQuery(), AcervoStorage, createDefaultAcervoStorage(), createIndexedDbAcervoStorage(), createMemoryAcervoStorage(), createTauriAcervoStorage(), currentStorage() (+4 more)
 
 ## Knowledge Gaps
 - **1021 isolated node(s):** `admin_board_blueprints`, `ACERVO_PEQUENO`, `TEST_PDF`, `name`, `private` (+1016 more)
@@ -862,17 +832,17 @@ Nodes (3): AiCallResult, CONCEITOS, MINI
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topic` connect `Topic` to `questionWorkbenchAndRouter.test.tsx`, `topicQuestions.ts`, `App.tsx`, `dailyReview.ts`, `getDb`, `formatDuration`, `linking.ts`, `FofoIaPanel.tsx`, `lib/database.ts`, `questionImport.ts`, `fofoia.test.ts`, `explainabilityEngine.ts`, `examOutlookCard.test.tsx`, `types/database.ts`, `importAcervo.ts`, `dailyRoutine.test.ts`, `useFofoIaInputs.test.tsx`, `RoutineColumn.tsx`, `cycleEngine.ts`, `editalCycle.test.ts`, `useDailyReview.ts`, `GoodMorningView.tsx`, `PdfReaderStage.tsx`, `examProjection.ts`, `goodMorning.ts`, `examOutlook.test.ts`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
-- **Why does `normalizeStatement()` connect `minerador/acervoStore.ts` to `questionImport.ts`, `App`, `lib/database.ts`, `getDb`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `formatDuration()` connect `formatDuration` to `questionWorkbenchAndRouter.test.tsx`, `goodMorning.ts`, `types/database.ts`, `App.tsx`, `App`, `explainabilityEngine.ts`, `Topic`, `RoutineColumn.tsx`, `cycleEngine.ts`, `aiRouter.ts`, `syllabusImport.ts`, `GoodMorningView.tsx`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `Topic` connect `Topic` to `studyBlockMachine.ts`, `useFofoConversation.ts`, `Question`, `App.tsx`, `dailyReview.ts`, `topicQuestions.ts`, `formatDuration`, `importAcervo.ts`, `useDailyReview.test.tsx`, `FofoIaPanel.tsx`, `lib/database.ts`, `questionImport.ts`, `fofoia.test.ts`, `explainabilityEngine.ts`, `examProjection.ts`, `StudyPlan`, `editalParser.ts`, `goodMorningStats.ts`, `types/database.ts`, `RoutineColumn.tsx`, `cycleEngine.ts`, `useDailyReview.ts`, `GoodMorningView.tsx`, `PdfReaderStage.tsx`, `localDateKey`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+- **Why does `formatDuration()` connect `formatDuration` to `studyBlockMachine.ts`, `App.tsx`, `editalParser.ts`, `explainabilityEngine.ts`, `Topic`, `RoutineColumn.tsx`, `cycleEngine.ts`, `aiRouter.ts`, `GoodMorningView.tsx`, `localDateKey`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `normalizeStatement()` connect `minerador/acervoStore.ts` to `getDb`, `lib/database.ts`, `questionImport.ts`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `admin_board_blueprints`, `ACERVO_PEQUENO`, `TEST_PDF` to the rest of the system?**
   _1021 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
-- **Should `questionWorkbenchAndRouter.test.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.061213579256883185 - nodes in this community are weakly interconnected._
+- **Should `studyBlockMachine.ts` be split into smaller, more focused modules?**
+  _Cohesion score 0.05903866248693835 - nodes in this community are weakly interconnected._
 - **Should `useFofoConversation.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.1006006006006006 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09390243902439024 - nodes in this community are weakly interconnected._

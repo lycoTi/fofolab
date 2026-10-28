@@ -130,15 +130,9 @@ export async function syncLocalAcervoIfNeeded(input: {
 
   const maxVocab = Math.max(...index.pacotes.map((p) => p.vocabVersion));
   const totalWithSubject = index.pacotes.reduce((acc, p) => acc + p.itensComAssunto, 0);
-  const stamp = `v${maxVocab}:n${totalWithSubject}:ai${input.ai ? 1 : 0}:${planTopicsSignature(input.planId)}`;
+  const stamp = `v${maxVocab}:n${totalWithSubject}:${planTopicsSignature(input.planId)}`;
 
-  const existingDb = await openAcervo();
-  if (
-    existingDb &&
-    acervoVocabVersion(existingDb) === maxVocab &&
-    acervoWithSubjectCount(existingDb) === totalWithSubject &&
-    readSyncStamp(input.planId) === stamp
-  ) {
+  if (readSyncStamp(input.planId) === stamp) {
     return { synced: false };
   }
 

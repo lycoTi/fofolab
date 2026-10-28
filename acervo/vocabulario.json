@@ -1,5 +1,5 @@
 {
-  "versao": 1682,
+  "versao": 1694,
   "assuntos": [
     {
       "id": "administracao-de-recursos-humanos",
@@ -892,6 +892,15 @@
       "caminho": [
         "Administração Geral",
         "Gestão de Riscos e Análise de Modos de Falha (FMEA)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "administracao-geral>gestao-de-riscos-financeiros-e-risco-de-liquidez",
+      "caminho": [
+        "Administração Geral",
+        "Gestão de riscos financeiros e risco de liquidez"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -4577,6 +4586,15 @@
       "caminho": [
         "Arquitetura e Organização de Computadores",
         "Evolução e desempenho de microprocessadores (Lei de Moore)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "arquitetura-e-organizacao-de-computadores>firmware-e-dispositivos-de-hardware",
+      "caminho": [
+        "Arquitetura e Organização de Computadores",
+        "Firmware e dispositivos de hardware"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -9404,6 +9422,15 @@
       "origem": "proposta"
     },
     {
+      "id": "biologia>ecologia-de-florestas-tropicais-e-resiliencia",
+      "caminho": [
+        "Biologia",
+        "Ecologia de florestas tropicais e resiliência"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "biologia>ecologia-de-populacoes-e-fatores-dependentes-da-densidade",
       "caminho": [
         "Biologia",
@@ -12393,6 +12420,15 @@
       "caminho": [
         "Comunicação",
         "Produção Audiovisual e Edição de Vídeo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "comunicacao>producao-editorial-e-projeto-grafico",
+      "caminho": [
+        "Comunicação",
+        "Produção editorial e projeto gráfico"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -18011,6 +18047,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-administrativo>regulacao-e-estrategia-nacional-de-melhoria-regulatoria",
+      "caminho": [
+        "Direito Administrativo",
+        "Regulação e Estratégia Nacional de Melhoria Regulatória"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-administrativo>regulacao-e-fiscalizacao-do-transporte-terrestre-antt",
       "caminho": [
         "Direito Administrativo",
@@ -22371,6 +22416,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "direito-constitucional>liberdade-religiosa-e-laicidade-do-estado",
+      "caminho": [
+        "Direito Constitucional",
+        "Liberdade religiosa e laicidade do Estado"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "direito-constitucional>materias-legislativas",
@@ -28224,6 +28278,15 @@
       "caminho": [
         "Direito Tributário",
         "IRPJ e CSLL: apuração pelo lucro real e compensação de prejuízos fiscais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-tributario>iss-local-de-incidencia-e-regras-da-lc-116-2003",
+      "caminho": [
+        "Direito Tributário",
+        "ISS: local de incidência e regras da LC 116/2003"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -39850,6 +39913,15 @@
       "origem": "proposta"
     },
     {
+      "id": "etica-no-servico-publico>codigo-de-etica-dos-servidores-do-tjpa-resolucao-tjpa-n-14-2016",
+      "caminho": [
+        "Ética no Serviço Público",
+        "Código de Ética dos Servidores do TJPA (Resolução TJPA n.º 14/2016)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
       "caminho": [
         "Ética no Serviço Público",
@@ -43927,6 +43999,15 @@
       "caminho": [
         "Geologia",
         "Geologia do Petróleo e Exploração de Hidrocarbonetos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "geologia>geologia-economica-e-recursos-minerais",
+      "caminho": [
+        "Geologia",
+        "Geologia Econômica e Recursos Minerais"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -51252,6 +51333,15 @@
       "origem": "proposta"
     },
     {
+      "id": "medicina>psiquiatria-eletroconvulsoterapia-e-contraindicacoes",
+      "caminho": [
+        "Medicina",
+        "Psiquiatria: eletroconvulsoterapia e contraindicações"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "medicina>psiquiatria-eletroconvulsoterapia-e-interacoes-medicamentosas",
       "caminho": [
         "Medicina",
@@ -53735,6 +53825,15 @@
       "caminho": [
         "Nutrição",
         "Nutrição e dietética: fibras alimentares"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "nutricao>programa-nacional-de-alimentacao-escolar-pnae",
+      "caminho": [
+        "Nutrição",
+        "Programa Nacional de Alimentação Escolar (PNAE)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -65490,6 +65589,15 @@
       "origem": "proposta"
     },
     {
+      "id": "sistemas-operacionais>memoria-virtual-e-multiprogramacao",
+      "caminho": [
+        "Sistemas Operacionais",
+        "Memória virtual e multiprogramação"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "sistemas-operacionais>processos-conceito-contexto-de-hardware-e-software-estados-e-pcb",
       "caminho": [
         "Sistemas Operacionais",
@@ -69844,6 +69952,15 @@
       "caminho": [
         "Zootecnia",
         "Manejo e bem-estar de bovinos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>melhoramento-genetico-animal-e-indices-de-selecao",
+      "caminho": [
+        "Zootecnia",
+        "Melhoramento genético animal e índices de seleção"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -81846,6 +81963,79 @@
       "versao": 1682,
       "mudancas": [
         "junção: Engenharia de Software e Programação › Engenharia de requisitos → Engenharia de Software e Programação › Problemas e requisitos › Requisitos funcionais e não funcionais"
+      ]
+    },
+    {
+      "versao": 1683,
+      "mudancas": [
+        "novo assunto: Geologia › Geologia Econômica e Recursos Minerais"
+      ]
+    },
+    {
+      "versao": 1684,
+      "mudancas": [
+        "novo assunto: Nutrição › Programa Nacional de Alimentação Escolar (PNAE)",
+        "novo assunto: Biologia › Ecologia de florestas tropicais e resiliência"
+      ]
+    },
+    {
+      "versao": 1685,
+      "mudancas": [
+        "novo assunto: Arquitetura e Organização de Computadores › Firmware e dispositivos de hardware"
+      ]
+    },
+    {
+      "versao": 1686,
+      "mudancas": [
+        "novo assunto: Sistemas Operacionais › Memória virtual e multiprogramação"
+      ]
+    },
+    {
+      "versao": 1687,
+      "mudancas": [
+        "novo assunto: Zootecnia › Melhoramento genético animal e índices de seleção"
+      ]
+    },
+    {
+      "versao": 1688,
+      "mudancas": [
+        "novo assunto: Direito Administrativo › Regulação e Estratégia Nacional de Melhoria Regulatória"
+      ]
+    },
+    {
+      "versao": 1689,
+      "mudancas": [
+        "novo assunto: Ética no Serviço Público › Código de Ética dos Servidores do TJPA (Resolução TJPA n.º 14/2016)"
+      ]
+    },
+    {
+      "versao": 1690,
+      "mudancas": [
+        "novo assunto: Administração Geral › Gestão de riscos financeiros e risco de liquidez"
+      ]
+    },
+    {
+      "versao": 1691,
+      "mudancas": [
+        "novo assunto: Medicina › Psiquiatria: eletroconvulsoterapia e contraindicações"
+      ]
+    },
+    {
+      "versao": 1692,
+      "mudancas": [
+        "novo assunto: Direito Constitucional › Liberdade religiosa e laicidade do Estado"
+      ]
+    },
+    {
+      "versao": 1693,
+      "mudancas": [
+        "novo assunto: Direito Tributário › ISS: local de incidência e regras da LC 116/2003"
+      ]
+    },
+    {
+      "versao": 1694,
+      "mudancas": [
+        "novo assunto: Comunicação › Produção editorial e projeto gráfico"
       ]
     }
   ]

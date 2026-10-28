@@ -88,6 +88,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-constitucional>liberdade-religiosa-e-laicidade-do-estado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>liberdade-religiosa-e-laicidade-do-estado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:28": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -112,6 +170,43 @@
         {
           "id": "direito-constitucional>materias-legislativas>proposta-de-emenda-a-constituicao-pec",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -228,6 +323,35 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>autarquias-e-entidades-da-administracao-indireta",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>autarquias-e-entidades-da-administracao-indireta",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -357,6 +481,138 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-constitucional>liberdade-religiosa-e-laicidade-do-estado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>liberdade-religiosa-e-laicidade-do-estado",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:26": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>procedimento-legislativo>etapas-e-nocoes-basicas>comissoes-pareceres-deliberacao-votacao-sancao-e-veto",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>materias-legislativas>proposta-de-emenda-a-constituicao-pec",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>materias-legislativas>iniciativa-legislativa-presidencia-da-republica-congresso-nacional-tribunais-e-cidadaos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>procedimento-legislativo>etapas-e-nocoes-basicas>comissoes-pareceres-deliberacao-votacao-sancao-e-veto",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>materias-legislativas>proposta-de-emenda-a-constituicao-pec",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>materias-legislativas>iniciativa-legislativa-presidencia-da-republica-congresso-nacional-tribunais-e-cidadaos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>poder-judiciario>orgaos-do-poder-judiciario>organizacao-e-competencias-conselho-nacional-de-justica",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>ministerio-publico>conselho-nacional-do-ministerio-publico",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-constitucional>funcoes-essenciais-a-justica>advocacia-e-defensoria-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:30": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -447,6 +703,35 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>autarquias-e-entidades-da-administracao-indireta",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>autarquias-e-entidades-da-administracao-indireta",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -597,6 +882,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>planejamento-estrategico>o-ciclo-do-planejamento-analise-do-ambiente-objetivos-estrategicos-missao-visao-valores",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:53": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -666,6 +972,35 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>microsoft-office-e-aplicativos-de-produtividade",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>nocoes-de-sistema-operacional-ambiente-windows-10-e-11-e-msoffice-m365-word-excel-powerpoint-onedrive-sharepoint-e-teams",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>microsoft-office-e-aplicativos-de-produtividade",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>nocoes-de-sistema-operacional-ambiente-windows-10-e-11-e-msoffice-m365-word-excel-powerpoint-onedrive-sharepoint-e-teams",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:16": {

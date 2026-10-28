@@ -75,6 +75,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial>principais-teoricos-e-suas-contribuicoes-para-a-gestao-da-qualidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial>principais-teoricos-e-suas-contribuicoes-para-a-gestao-da-qualidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_001_01:72": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -191,6 +212,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_002_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>nocoes-de-legislacao-ambiental-resolucao-conama-n-237-1997-licenciamento-ambiental-licenca-previa-licenca-de-instalacao-e-licenca-de-operacao-resolucao-conama-n-001-1986-e-suas-alteracoes-estudo-de-impacto-ambiental-e-relatorio-de-impacto-ambiental-lei-n-9-605-1998-e-suas-alteracoes-crimes-contra-o-meio-ambiente",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_002_01:79": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -257,6 +299,122 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_003_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>conceitos-e-fundamentos-de-dados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+              "confianca": 0.7
+            },
+            {
+              "id": "ciencia-de-dados>dados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>dados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>conceitos-e-fundamentos-de-dados>coleta-tratamento-armazenamento-integracao-e-recuperacao-de-dados",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_003_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_003_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>acesso-a-informacao>distincao-conceitual-entre-informacao-classificada-sigilos-previstos-em-lei-informacao-pessoal-e-documento-preparatorio-acesso-parcial-e-comunicacao-clara-da-decisao",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_003_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>seguranca-de-aplicacoes>registros-preservacao-de-evidencias-e-tratamento-de-falhas-de-seguranca-inclusive-em-integracoes-com-ia",
+              "confianca": 0.4
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>seguranca-de-aplicacoes>registros-preservacao-de-evidencias-e-tratamento-de-falhas-de-seguranca-inclusive-em-integracoes-com-ia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_003_01:117": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -312,24 +470,25 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.8
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.7
-        },
-        {
           "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
-          "confianca": 0.5
+          "confianca": 0.7
         }
       ],
       "incerto": false,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "FUB_25:088_FUB_003_01:65": {
       "opinioes": {
@@ -349,24 +508,25 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
-          "confianca": 0.9
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-          "confianca": 0.65
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.6
+          "confianca": 0.93
         }
       ],
       "incerto": false,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "FUB_25:088_FUB_003_01:66": {
       "opinioes": {
@@ -386,20 +546,71 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.85
+          "confianca": 0.88
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "FUB_25:088_FUB_005_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_005_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>icms-local-da-operacao-e-estabelecimento-responsavel",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>iss-local-de-incidencia-e-regras-da-lc-116-2003",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>iss-local-de-incidencia-e-regras-da-lc-116-2003",
+          "confianca": 0.9
         },
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "id": "direito-tributario>icms-local-da-operacao-e-estabelecimento-responsavel",
           "confianca": 0.6
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -423,24 +634,25 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
-          "confianca": 0.8
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.7
-        },
-        {
           "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>fixacao-da-despesa-e-empenho-liquidacao-e-pagamento",
-          "confianca": 0.5
+          "confianca": 0.7
         }
       ],
       "incerto": false,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "FUB_25:088_FUB_005_01:85": {
       "opinioes": {
@@ -460,24 +672,25 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico>demonstracao-das-variacoes-patrimoniais",
           "confianca": 0.9
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
-          "confianca": 0.65
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.6
         }
       ],
       "incerto": false,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "FUB_25:088_FUB_005_01:86": {
       "opinioes": {
@@ -497,20 +710,116 @@
             }
           ],
           "versaoVocabulario": 1589
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>leitura-dos-balancos-orcamentario-financeiro-e-patrimonial-e-da-demonstracao-das-variacoes-patrimoniais-com-notas-explicativas-pertinentes-conciliacao-e-identificacao-de-inconsistencias-relevantes-para-o-controle",
-          "confianca": 0.85
-        },
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "concordam"
+    },
+    "FUB_25:088_FUB_005_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
           "confianca": 0.6
         },
         {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
           "confianca": 0.5
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_005_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_005_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -587,6 +896,64 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_008_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>circuitos-digitais-e-portas-logicas-cmos",
+              "confianca": 0.6
+            },
+            {
+              "id": "eletronica-digital>algebra-booleana-e-circuitos-logicos",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-eletrica>microeletronica-e-projeto-de-circuitos-integrados-cmos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>circuitos-digitais-e-portas-logicas-cmos",
+          "confianca": 0.6
+        },
+        {
+          "id": "eletronica-digital>algebra-booleana-e-circuitos-logicos",
+          "confianca": 0.5
+        },
+        {
+          "id": "engenharia-eletrica>microeletronica-e-projeto-de-circuitos-integrados-cmos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_008_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-eletrica>principios-de-ciencias-dos-materiais>caracteristicas-e-propriedades-dos-materiais-condutores-isolantes-e-magneticos",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-eletrica>principios-de-ciencias-dos-materiais>caracteristicas-e-propriedades-dos-materiais-condutores-isolantes-e-magneticos",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_011_01:91": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -610,6 +977,64 @@
         },
         {
           "id": "comunicacao>redacao-e-jornalismo>generos-e-formatos-de-textos-jornalisticos-newsletter-comunicados-informativos-materias-jornalisticas-linguagem-dos-veiculos-radio-televisao-web-impressos-cronicas-editoriais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_013_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+              "confianca": 0.85
+            },
+            {
+              "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+          "confianca": 0.85
+        },
+        {
+          "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_013_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+              "confianca": 0.9
+            },
+            {
+              "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+          "confianca": 0.9
+        },
+        {
+          "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
           "confianca": 0.6
         }
       ],
@@ -736,6 +1161,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_013_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+              "confianca": 0.9
+            },
+            {
+              "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>processamento-e-codificacao-de-video",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>edicao-de-video-e-audio-adobe-premiere-pro-e-after-effects",
+          "confianca": 0.9
+        },
+        {
+          "id": "comunicacao>producao-audiovisual-e-edicao-de-video",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>processamento-e-codificacao-de-video",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_014_01:104": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -752,6 +1214,80 @@
         {
           "id": "redes-sistemas-e-plataformas-de-dados>protocolos-de-transporte-tcp-e-udp",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_014_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.8
+            },
+            {
+              "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+              "confianca": 0.5
+            },
+            {
+              "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.8
+        },
+        {
+          "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+          "confianca": 0.5
+        },
+        {
+          "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_014_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "telecomunicacoes>sistemas-de-comunicacao-taxa-de-transmissao-banda-passante-e-modulacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "telecomunicacoes>sistemas-de-comunicacao-e-modulacao-ofdm-qam-e-espectro-de-potencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "telecomunicacoes>receptor-otimo-filtro-casado-e-canal-awgn",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "telecomunicacoes>sistemas-de-comunicacao-taxa-de-transmissao-banda-passante-e-modulacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "telecomunicacoes>sistemas-de-comunicacao-e-modulacao-ofdm-qam-e-espectro-de-potencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "telecomunicacoes>receptor-otimo-filtro-casado-e-canal-awgn",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -789,6 +1325,43 @@
         {
           "id": "engenharia-eletrica>sistemas-de-comunicacao-conceitos-elementos-antenas-e-propagacao",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_014_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "telecomunicacoes>modulacao-e-multiplexacao-de-sinais",
+              "confianca": 0.9
+            },
+            {
+              "id": "telecomunicacoes>sistemas-de-comunicacao-taxa-de-transmissao-banda-passante-e-modulacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "telecomunicacoes>modulacao-de-sinais-e-espectro-de-frequencias",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1689
+        }
+      },
+      "consenso": [
+        {
+          "id": "telecomunicacoes>modulacao-e-multiplexacao-de-sinais",
+          "confianca": 0.9
+        },
+        {
+          "id": "telecomunicacoes>sistemas-de-comunicacao-taxa-de-transmissao-banda-passante-e-modulacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "telecomunicacoes>modulacao-de-sinais-e-espectro-de-frequencias",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -931,6 +1504,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_015_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_015_01:115": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -955,6 +1586,93 @@
         {
           "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "comunicacao>redacao-e-jornalismo>acessibilidade-e-linguagem-simples-em-conteudos-e-ferramentas-de-comunicacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "comunicacao>redacao-e-jornalismo>acessibilidade-e-linguagem-simples-em-conteudos-e-ferramentas-de-comunicacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -1053,6 +1771,159 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>questoes-gerais-de-licitacao>lei-de-licitacoes-lei-n-14-133-de-1-de-abril-de-2021>contratacao-direta-processo-inexigibilidade-e-dispensa-de-licitacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>registro-de-precos-e-decreto-n-11-462-2023",
+              "confianca": 0.9
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>registro-de-precos-e-decreto-n-11-462-2023",
+          "confianca": 0.9
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>obrigatoriedade-dispensa-inexigibilidade-e-vedacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "FUB_25:088_FUB_015_01:61": {
@@ -1258,6 +2129,68 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_015_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-gestao-de-pessoas>conceitos-importancia-relacao-com-os-outros-sistemas-de-organizacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-geral>nocoes-de-administracao-1-1-fundamentos-e-evolucao-da-administracao-abordagem-sistemica>fundamentos-teorias-e-escolas-da-administracao-e-seu-impacto-na-gestao-de-pessoas",
+              "confianca": 0.6
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 1684
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>nocoes-de-administracao-1-1-fundamentos-e-evolucao-da-administracao-abordagem-sistemica>fundamentos-teorias-e-escolas-da-administracao-e-seu-impacto-na-gestao-de-pessoas",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>conceitos-importancia-relacao-com-os-outros-sistemas-de-organizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>comportamento-humano-no-trabalho-satisfacao-e-comprometimento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_015_01:79": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1316,6 +2249,109 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_015_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+              "confianca": 0.4
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>aspectos-comportamentais-da-organizacao-lideranca-motivacao-comunicacao-e-desempenho",
+          "confianca": 0.4
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_015_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.8
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>gestao-por-competencias-abordagens-e-ferramentas-mapeamento-e-desenvolvimento-das-competencias",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>gestao-por-competencias-abordagens-e-ferramentas-mapeamento-e-desenvolvimento-das-competencias",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-gestao-de-pessoas>o-individuo-e-o-contexto-organizacional-variaveis-individuais-grupais-e-organizacionais>equipes-e-grupos-de-trabalho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_015_01:91": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1368,6 +2404,68 @@
         },
         {
           "id": "nocoes-de-recursos-materiais>administracao-de-materiais-e-controle-patrimonial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_017_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>resistencia-dos-materiais-e-analise-de-esforcos-em-vigas-cortante-e-momento-fletor",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>resistencia-dos-materiais-e-analise-de-esforcos-em-vigas-cortante-e-momento-fletor",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_017_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-materiais>propriedades-mecanicas-dos-materiais-elasticidade-modulo-de-young-e-deformacao",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-mecanica>tratamentos-termicos-e-superficiais-de-materiais-metalicos",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-de-materiais>estrutura-e-propriedades-dos-materiais-transformacoes-de-fase-e-tratamentos-termicos",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>tratamentos-termicos-e-superficiais-de-materiais-metalicos",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-de-materiais>estrutura-e-propriedades-dos-materiais-transformacoes-de-fase-e-tratamentos-termicos",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-de-materiais>propriedades-mecanicas-dos-materiais-elasticidade-modulo-de-young-e-deformacao",
           "confianca": 0.6
         }
       ],
@@ -1730,6 +2828,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_018_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>arquitetura-orientada-a-servicos-soa-e-web-services-uddi-wsdl-soap",
+              "confianca": 0.9
+            },
+            {
+              "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>arquitetura-orientada-a-servicos-soa-e-web-services-uddi-wsdl-soap",
+          "confianca": 0.9
+        },
+        {
+          "id": "persistencia-integracao-e-protecao-de-dados>fluxos-e-interoperabilidade>apis-contratos-e-formatos-csv-json-xml-e-parquet",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_018_01:86": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1791,6 +2918,27 @@
         {
           "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>desenvolvimento-orientado-por-comportamento-bdd-guiado-por-testes-tdd-e-guiado-por-testes-de-aceitacao-atdd",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_018_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>modelos-de-processo-de-software-cascata-incremental-agil",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>modelos-de-processo-de-software-cascata-incremental-agil",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
@@ -1975,6 +3123,117 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_019_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.75
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-abrangente",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.75
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-abrangente",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_019_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-de-lucros-ou-prejuizos-acumulados",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_019_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>politicas-contabeis-mudanca-de-estimativas-retificacao-de-erros-e-eventos-subsequentes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-das-mutacoes-do-patrimonio-liquido",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>politicas-contabeis-mudanca-de-estimativas-retificacao-de-erros-e-eventos-subsequentes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_019_01:110": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1999,6 +3258,35 @@
         {
           "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_019_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+              "confianca": 0.95
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+          "confianca": 0.95
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -2311,6 +3599,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_CB1_01:2": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2330,6 +3639,143 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB1_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-lei-n-14-133-2021",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-lei-n-14-133-2021",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB1_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-administrativo>processo-administrativo-federal",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>processo-administrativo-federal",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB1_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "FUB_25:088_FUB_CB1_01:26": {
@@ -2601,6 +4047,114 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_CB2_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB2_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB2_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_CB2_01:26": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2660,6 +4214,35 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "FUB_25:088_FUB_CB2_01:30": {
@@ -2854,6 +4437,151 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUB_25:088_FUB_CB3_01:21": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>impedimento-e-suspeicao-no-processo-administrativo-federal-nos-termos-dos-arts-18-a-21-da-lei-n-9-784-1999-comunicacao-e-abstencao-quando-exigidas",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-administrativo>processo-administrativo-federal",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>processo-administrativo-federal",
+          "confianca": 0.85
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>conflitos-de-interesses-e-imparcialidade>impedimento-e-suspeicao-no-processo-administrativo-federal-nos-termos-dos-arts-18-a-21-da-lei-n-9-784-1999-comunicacao-e-abstencao-quando-exigidas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB3_01:22": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB3_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB3_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>lei-n-8-429-1992-disposicoes-gerais-e-atos-de-improbidade-administrativa",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>improbidade-administrativa-lei-federal-n-14-230-2021",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB3_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.7
+        },
+        {
+          "id": "etica-no-setor-publico>lei-n-8-112-de-11-de-dezembro-de-1990-e-alteracoes-regime-disciplinar-deveres-proibicoes-acumulacao-responsabilidades-e-penalidades",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUB_25:088_FUB_CB3_01:28": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2966,6 +4694,35 @@
         {
           "id": "nocoes-de-arquivologia>sistema-eletronico-de-informacoes",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUB_25:088_FUB_CB3_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>organizacao-politico-administrativa-do-estado>estado-federal-brasileiro-uniao-estados-distrito-federal-municipios-e-territorios",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988>principios-fundamentais",
+          "confianca": 0.7
         }
       ],
       "incerto": false,

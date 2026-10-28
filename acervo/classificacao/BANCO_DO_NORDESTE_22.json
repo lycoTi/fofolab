@@ -4179,16 +4179,29 @@
             }
           ],
           "versaoVocabulario": 647
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.45
+        },
+        {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.8
+          "confianca": 0.4
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:20": {
       "opinioes": {
@@ -4473,16 +4486,29 @@
             }
           ],
           "versaoVocabulario": 647
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.45
+        },
+        {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.85
+          "confianca": 0.43
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:30": {
       "opinioes": {
@@ -4728,16 +4754,29 @@
             }
           ],
           "versaoVocabulario": 647
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.45
+        },
+        {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.8
+          "confianca": 0.4
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:40": {
       "opinioes": {
@@ -5043,20 +5082,29 @@
             }
           ],
           "versaoVocabulario": 647
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.7
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.45
         },
         {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.6
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.35
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:50": {
       "opinioes": {
@@ -5131,16 +5179,29 @@
             }
           ],
           "versaoVocabulario": 648
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.9
+          "confianca": 0.45
+        },
+        {
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+          "confianca": 0.4
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:8": {
       "opinioes": {

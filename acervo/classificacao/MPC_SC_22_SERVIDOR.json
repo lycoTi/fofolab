@@ -1,6 +1,93 @@
 {
   "identificador": "MPC_SC_22_SERVIDOR",
   "itens": {
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_001_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+              "confianca": 0.85
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+          "confianca": 0.85
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos>informacao-classificada-sigilos-legais-informacao-pessoal-e-documentos-preparatorios-acesso-parcial-motivacao-e-revisao-de-restricoes",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_001_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-saneamento-de-debito",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-saneamento-de-debito",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_001_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>processo-de-controle-externo-e-recursos-nos-tribunais-de-contas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>processo-de-controle-externo-e-recursos-nos-tribunais-de-contas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_001_01:118": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -476,6 +563,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-rpps",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-rpps",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:101": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -536,6 +652,43 @@
         },
         {
           "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.8
+            },
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>criptografia-algoritmos-simetricos-e-assimetricos-aes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.8
+        },
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>criptografia-algoritmos-simetricos-e-assimetricos-aes",
           "confianca": 0.6
         }
       ],
@@ -835,6 +988,175 @@
         {
           "id": "planejamento-e-orcamento-publico>orcamento>receita-publica-conceito-classificacoes-estagios-tributos-contribuicoes-sociais",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.8
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.8
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>restos-a-pagar",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:75": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-modelagem-dimensional",
+              "confianca": 0.8
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-modelagem-dimensional",
+          "confianca": 0.8
+        },
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_002_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>linguagem-sql-consultas-e-comandos",
+              "confianca": 0.9
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>linguagem-sql-consultas-e-comandos",
+          "confianca": 0.9
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -1608,6 +1930,151 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.6
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>tribunais-de-contas-decisoes-e-titulo-executivo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.6
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>tribunais-de-contas-decisoes-e-titulo-executivo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+              "confianca": 0.85
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+          "confianca": 0.85
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>resolucao-n-tc-06-2001-regimento-interno-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina>natureza-competencia-jurisdicao-e-organizacao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina>natureza-competencia-jurisdicao-e-organizacao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina>natureza-competencia-jurisdicao-e-organizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina>natureza-competencia-jurisdicao-e-organizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:74": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1835,6 +2302,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_004_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>ministerio-publico-junto-ao-tribunal-de-contas-funcao-autonomia-e-normas-aplicaveis",
+              "confianca": 0.6
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+              "confianca": 0.5
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "controle-externo-da-administracao-publica>ministerio-publico-junto-ao-tribunal-de-contas-funcao-autonomia-e-normas-aplicaveis",
+          "confianca": 0.6
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>regimento-interno-de-tribunal-de-contas-e-competencias-do-ministerio-publico-especial",
+          "confianca": 0.5
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:1": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2054,6 +2558,175 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "lingua-portuguesa>reconhecimento-de-tipos-e-generos-textuais",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-administrativo>provimento-e-formas-de-investidura-em-cargo-publico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-administrativo>provimento-e-formas-de-investidura-em-cargo-publico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:40": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2099,6 +2772,43 @@
         {
           "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+              "confianca": 0.55
+            },
+            {
+              "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>redacao-oficial-conforme-o-manual-de-redacao-oficial-da-presidencia-da-republica-uso-da-norma-culta-da-linguagem-clareza-e-precisao-objetividade-concisao-coesao-e-coerencia-impessoalidade-formalidade-e-padronizacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "comunicacao>comunicacao-social>normas-de-comunicacao-do-poder-executivo-federal-conforme-manual-de-redacao-da-presidencia-da-republica-atualizado",
+          "confianca": 0.55
+        },
+        {
+          "id": "lingua-portuguesa>correspondencia-oficial-e-redacao-oficial",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2215,6 +2925,56 @@
         {
           "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB2_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "MPC_SC_22_SERVIDOR:727_MPC_SC_SERVIDOR_CB2_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+              "confianca": 1
+            },
+            {
+              "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-6-745-1985-estatuto-dos-servidores-do-estado-de-santa-catarina",
+          "confianca": 1
+        },
+        {
+          "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+          "confianca": 0.9
         }
       ],
       "incerto": false,

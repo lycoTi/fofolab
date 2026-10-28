@@ -1,6 +1,147 @@
 {
   "identificador": "TJ_PA_25_SERVIDOR",
   "itens": {
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.9
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1689
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.9
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.5
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+              "confianca": 0.4
+            },
+            {
+              "id": "etica-no-servico-publico>codigo-de-etica-dos-servidores-do-tjpa-resolucao-tjpa-n-14-2016",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1689
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>codigo-de-etica-dos-servidores-do-tjpa-resolucao-tjpa-n-14-2016",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.5
+        },
+        {
+          "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.4
+            },
+            {
+              "id": "etica-publica-e-responsabilidade-profissional>fundamentos-da-etica-publica>interesse-publico-dignidade-justica-e-responsabilidade-relacoes-entre-deveres-consequencias-e-virtudes-profissionais-conflitos-entre-valores-em-decisoes-publicas",
+              "confianca": 0.3
+            },
+            {
+              "id": "etica-no-servico-publico>codigo-de-etica-dos-servidores-do-tjpa-resolucao-tjpa-n-14-2016",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1689
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>codigo-de-etica-dos-servidores-do-tjpa-resolucao-tjpa-n-14-2016",
+          "confianca": 0.8
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:25": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -59,6 +200,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.8
+            },
+            {
+              "id": "estrategia-e-planejamento>planejamento-estrategico>balanced-scorecard",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.8
+        },
+        {
+          "id": "estrategia-e-planejamento>planejamento-estrategico>balanced-scorecard",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:33": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -88,6 +287,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>regime-juridico-dos-servidores-publicos-estaduais-provimento-posse-e-exercicio",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:42": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -109,6 +337,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:47": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -125,6 +411,98 @@
         {
           "id": "matematica-financeira>calculo-derivadas-e-analise-de-funcoes",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:02D7D3F415481FBDD3691235CA3FCCE9FD64CF975305872DCA5D156C0DC1E436:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>experimento-deterministico-e-aleatorio",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>experimento-deterministico-e-aleatorio",
+          "confianca": 0.9
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "psicologia>transtornos-de-personalidade",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1684
+        }
+      },
+      "consenso": [
+        {
+          "id": "psicologia>transtornos-de-personalidade",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>psicofarmacologia",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psicofarmacologia",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>psicofarmacologia",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psicofarmacologia",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -159,6 +537,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "medicina>psiquiatria-eletroconvulsoterapia-e-contraindicacoes",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "medicina>psiquiatria-eletroconvulsoterapia-e-contraindicacoes",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:093E51E5506148F0368D4C69C55AA4C98332A8CFFB325F9CA5E2FAAB46002EEC:85": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -168,6 +567,167 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:0E516F30F38692A87923D9942214F5507DEFE162DF6CE819FEE9DB20BEAA3C45:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>gemeos-digitais",
+              "confianca": 0.85
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>gemeos-digitais",
+          "confianca": 0.85
+        },
+        {
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:0E516F30F38692A87923D9942214F5507DEFE162DF6CE819FEE9DB20BEAA3C45:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>calculo-dos-encargos-sociais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>calculo-dos-encargos-sociais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:0E516F30F38692A87923D9942214F5507DEFE162DF6CE819FEE9DB20BEAA3C45:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>calculo-dos-encargos-sociais",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>calculo-dos-encargos-sociais",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:1160A981A34637337E146044D23BDF1E36F3E26FBD533017AE18E2FF4D774E00:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-civil>resistencia-dos-materiais-e-analise-de-esforcos-em-vigas-cortante-e-momento-fletor",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-civil>resistencia-dos-materiais-e-analise-de-esforcos-em-vigas-cortante-e-momento-fletor",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:1160A981A34637337E146044D23BDF1E36F3E26FBD533017AE18E2FF4D774E00:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>sinapi-e-custos-da-construcao-civil",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.6
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>composicao-analitica-de-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>sinapi-e-custos-da-construcao-civil",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.6
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>composicao-analitica-de-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:70": {
@@ -193,6 +753,93 @@
         },
         {
           "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-notarial-e-registral>serventia-extrajudicial-modelos-anterior-e-posterior-a-constituicao-federal-de-1988>interinidade-requisitos-cumulacao-nepotismo-teto-constitucional",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-notarial-e-registral>serventia-extrajudicial-modelos-anterior-e-posterior-a-constituicao-federal-de-1988>interinidade-requisitos-cumulacao-nepotismo-teto-constitucional",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-notarial-e-registral>conceitos-basicos-titular-de-cartorio-interino-tabeliaes-oficiais-de-registro-e-seus-prepostos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-notarial-e-registral>conceitos-basicos-titular-de-cartorio-interino-tabeliaes-oficiais-de-registro-e-seus-prepostos",
           "confianca": 0.6
         }
       ],
@@ -252,6 +899,43 @@
         {
           "id": "direito-notarial-e-registral>servicos-notariais-e-de-registros",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:284634C4D0BDDDC0B0D5275BD3F1B1F43FAF801F3330ECC9C4B9DA6057E95DB9:96": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>conceito-de-receita-e-regime-de-competencia",
+              "confianca": 0.55
+            },
+            {
+              "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-notarial-e-registral>prestacao-de-contas-das-serventias-receitas-e-despesas-dedutiveis",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>conceito-de-receita-e-regime-de-competencia",
+          "confianca": 0.55
+        },
+        {
+          "id": "direito-notarial-e-registral>arrecadacao-emolumentos-fundos-de-renda-minima-e-de-custeio-de-atos-gratuitos-lei-n-10-169-2000",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -352,6 +1036,35 @@
         {
           "id": "econometria>identidades-macroeconomicas-basicas>economia-internacional-e-comercio-exterior>globalizacao-e-organismos-multilaterais",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:40772BA304EA6A6E351C619D42DF49D2660EC0646704EEB621B55A36CA5CB10C:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>resolucoes-do-conselho-nacional-de-justica-296-2019-325-2020-395-2021-e-suas-alteracoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>avaliacao-e-aperfeicoamento-da-integridade-publica-e-privada>prevencao-de-assedio-e-discriminacao-como-dimensao-da-integridade-organizacional",
+          "confianca": 0.65
         }
       ],
       "incerto": false,
@@ -581,6 +1294,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-administracao-orcamentaria-e-financeira>programacao-execucao-e-controle-de-recursos-orcamentarios-e-financeiros>controle-e-pagamento-de-restos-a-pagar-e-de-despesas-de-exercicios-anteriores",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:117": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -647,6 +1397,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:74": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -705,6 +1484,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>participacao-atores-sociais-e-controle-social",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo>participacao-atores-sociais-e-controle-social",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:87": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -729,6 +1537,43 @@
         {
           "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>desenvolvimento-e-treinamento-de-pessoal-levantamento-de-necessidades-programacao-execucao-e-avaliacao",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+              "confianca": 0.75
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1694
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+          "confianca": 0.75
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -882,6 +1727,35 @@
         {
           "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:490BE7C0113E3A76B3012EED150E0EF98555239FB4C4D91A8C834361D3AA17C3:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>contratos-administrativos-de-obras-publicas>formalizacao-execucao-controle-inexecucao-revisao-e-rescisao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>execucao-inexecucao-revisao-e-rescisao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>contratos-administrativos-de-obras-publicas>formalizacao-execucao-controle-inexecucao-revisao-e-rescisao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>execucao-inexecucao-revisao-e-rescisao",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -1127,6 +2001,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>resolucao-cnj-n-522-2023-moreq-jus-modelo-de-requisitos-para-sistemas-de-gestao-de-processos-e-documentos",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>resolucao-cnj-n-522-2023-moreq-jus-modelo-de-requisitos-para-sistemas-de-gestao-de-processos-e-documentos",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:52": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1317,6 +2220,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:80": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1333,6 +2265,56 @@
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>infraestrutura-de-ti>computacao-em-nuvem-modelos-de-implementacao-fundamentos-arquiteturas-e-tecnologias",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:74B82550FDF43960DCCACFC9A9E23443D47460AED41749058FB3A27504372EDD:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-de-seguranca-da-informacao-nbr-iso-iec-27005-tipos-de-controles",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -3151,6 +4133,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "normas-institucionais>resolucao-cnj-n-522-2023-moreq-jus-modelo-de-requisitos-para-sistemas-de-gestao-de-processos-e-documentos",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "normas-institucionais>resolucao-cnj-n-522-2023-moreq-jus-modelo-de-requisitos-para-sistemas-de-gestao-de-processos-e-documentos",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>requisitos-funcionais-e-nao-funcionais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:67": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3204,6 +4215,43 @@
         {
           "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:974BCB3ECE2FC89963D9FB7F28413DE2FD7947B199629C0C2D3DFADFB003C520:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>devops-e-ci-cd-integracao-e-entrega-continuas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>gestao-de-configuracao>devops-modelo-de-versionamento-merge-branch-pipeline-ci-cd-e-database-migration",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>devops-e-ci-cd-integracao-e-entrega-continuas",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -3536,6 +4584,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>aplicacao-da-pena-e-substituicao-da-pena-privativa-de-liberdade",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-penal>penas-e-conversao-da-pena",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>aplicacao-da-pena-e-substituicao-da-pena-privativa-de-liberdade",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-penal>penas-e-conversao-da-pena",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>aplicacao-da-pena-e-substituicao-da-pena-privativa-de-liberdade",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-penal>penas-e-conversao-da-pena",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>aplicacao-da-pena-e-substituicao-da-pena-privativa-de-liberdade",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-penal>penas-e-conversao-da-pena",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:51": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3631,6 +4737,35 @@
         {
           "id": "direito-civil>lei-de-introducao-as-normas-do-direito-brasileiro",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:A1C4E9910233E9BD6F90DFF306B891A9189AF2D084816143803EC684136FBEF6:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -3777,6 +4912,80 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>materias-legislativas>projeto-de-lei-ordinaria-complementar-e-delegada",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-constitucional>materias-legislativas>medida-provisoria",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>organizacao-politico-administrativa>uniao-estados-distrito-federal-e-municipios",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>materias-legislativas>projeto-de-lei-ordinaria-complementar-e-delegada",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-constitucional>materias-legislativas>medida-provisoria",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias>limitacoes-do-poder-de-tributar",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>limitacoes-do-poder-de-tributar",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:80": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3851,6 +5060,143 @@
         {
           "id": "direito-civil>audiencia-de-instrucao-e-julgamento-e-provas",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C15F414E0E91EF109220A73BDF53B232C4466F64770A91E715C56DCB94131F41:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1692
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-civil>incidente-de-resolucao-de-demandas-repetitivas-irdr-e-arguicao-de-inconstitucionalidade",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.85
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.85
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>restos-a-pagar",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:C33359706B200ADF5E273573A7BAE4D9CDEE9D7EE6E9286E7011F07D35C16D48:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>despesas-de-exercicios-anteriores",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>despesas-de-exercicios-anteriores",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -4059,6 +5405,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+              "confianca": 0.85
+            },
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>lei-geral-de-protecao-de-dados-pessoais-lgpd-lei-n-13-709-de-14-de-agosto-de-2018-disposicoes-gerais-tratamento-de-dados-pessoais-direitos-do-titular-tratamento-de-dados-pessoais-pelo-poder-publico-e-seguranca-e-boas-praticas",
+          "confianca": 0.85
+        },
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>transparencia-e-protecao-de-dados>compatibilizacao-entre-acesso-a-informacao-e-protecao-de-dados-pessoais-finalidade-necessidade-e-salvaguardas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:CE33335C31890FFF003B611D990EF14136BB79660D76207992ABB22195616700:69": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4112,6 +5487,64 @@
         {
           "id": "comunicacao>comunicacao-social>comunicacao-organizacional-interna-integrada-endomarketing-gerenciamento-de-crise",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E12A9D602EF5537DCE56A90D81DF389C2B6C007AACF001499A12F69C86114E2C:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-da-pessoa-com-deficiencia>lei-brasileira-de-inclusao-e-protecao-dos-direitos-da-pessoa-com-transtorno-do-espectro-autista",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-da-pessoa-com-deficiencia>lei-brasileira-de-inclusao-e-protecao-dos-direitos-da-pessoa-com-transtorno-do-espectro-autista",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:E12A9D602EF5537DCE56A90D81DF389C2B6C007AACF001499A12F69C86114E2C:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-da-pessoa-com-deficiencia>lei-brasileira-de-inclusao-e-protecao-dos-direitos-da-pessoa-com-transtorno-do-espectro-autista",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-da-pessoa-com-deficiencia>pessoa-com-transtorno-do-espectro-autista-lei-n-12-764-2012",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-da-pessoa-com-deficiencia>lei-brasileira-de-inclusao-e-protecao-dos-direitos-da-pessoa-com-transtorno-do-espectro-autista",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -4209,6 +5642,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais",
+              "confianca": 0.7
+            },
+            {
+              "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+              "confianca": 0.6
+            },
+            {
+              "id": "biblioteconomia>servico-de-referencia-e-atendimento-ao-usuario",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais",
+          "confianca": 0.7
+        },
+        {
+          "id": "biblioteconomia>servico-de-referencia-e-atendimento-ao-usuario",
+          "confianca": 0.6
+        },
+        {
+          "id": "comunicacao>midias-sociais-e-plataformas-digitais>ferramentas-e-estrategias-de-comunicacao-em-midias-e-redes-sociais-planejamento-de-campanhas-e-divulgacoes-em-midias-sociais-metricas-de-midias-sociais-impacto-das-midias-sociais-tecnicas-de-redacao-para-midias-e-redes-sociais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_PA_25_SERVIDOR:E417E757205201589E8B532580208FA2743A03FE466AE1E369DD3557075CC62E:66": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4218,6 +5688,167 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.9
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.9
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesas-de-exercicios-anteriores",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>despesa-publica-conceito-classificacoes-e-estagios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>evolucao-da-administracao-publica-no-brasil-apos-1930-reformas-administrativas-a-nova-gestao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>evolucao-da-administracao-publica-no-brasil-pos-1930-reformas-administrativas-e-desafios-contemporaneos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>participacao-e-controle-social-conselhos-consultas-e-escuta-de-usuarios-representatividade-e-barreiras-a-participacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+              "confianca": 0.6
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>democracia-e-representacao>representacao-e-participacao-responsabilizacao-democratica-relacoes-entre-executivo-legislativo-e-judiciario-governabilidade-e-controles-reciprocos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-transparencia-ouvidoria-e-participacao-social>participacao-e-melhoria-de-servicos>participacao-e-controle-social-conselhos-consultas-e-escuta-de-usuarios-representatividade-e-barreiras-a-participacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social",
+          "confianca": 0.6
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>democracia-e-representacao>representacao-e-participacao-responsabilizacao-democratica-relacoes-entre-executivo-legislativo-e-judiciario-governabilidade-e-controles-reciprocos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governo-eletronico-transparencia-da-administracao-publica-controle-social-e-cidadania-accountability",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governo-eletronico-transparencia-da-administracao-publica-controle-social-e-cidadania-accountability",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>controle-da-administracao-publica>controle-exercido-pela-administracao-publica",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>governanca-governabilidade-e-accountability-na-administracao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governo-eletronico-transparencia-da-administracao-publica-controle-social-e-cidadania-accountability",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>evolucao-da-administracao-1-1-principais-abordagens-da-administracao-classica-ate-contingencial>governanca-governabilidade-e-accountability-na-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>governo-eletronico-transparencia-da-administracao-publica-controle-social-e-cidadania-accountability",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:56": {
@@ -4244,6 +5875,93 @@
         {
           "id": "administracao-publica-e-fundamentos-de-politicas-publicas>gestao-por-resultados-na-producao-de-servicos-publicos",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas>problema-publico-agenda-e-formulacao-instrumentos-de-acao-estatal-implementacao-monitoramento-e-avaliacao-intersetorialidade-e-atores-governamentais-e-sociais",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>federalismo-e-descentralizacao-de-politicas-publicas-no-brasil-nocoes-de-organizacao-e-funcionamento-dos-sistemas-e-programas-nacionais-saude-sus-educacao-basica-fundeb-e-assistencia-social-suas",
+              "confianca": 0.7
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>federalismo-e-descentralizacao-de-politicas-publicas-no-brasil-nocoes-de-organizacao-e-funcionamento-dos-sistemas-e-programas-nacionais-saude-sus-educacao-basica-fundeb-e-assistencia-social-suas",
+          "confianca": 0.7
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>politicas-publicas-no-estado-brasileiro-contemporaneo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -4277,6 +5995,27 @@
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>avaliacao-consultoria-e-apuracao>avaliacao-criterios-de-desempenho-e-conformidade-exame-de-evidencias-e-conclusoes-independentes-sobre-governanca-controles-e-resultados",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_PA_25_SERVIDOR:F96B6B45965253393F2C47C57456063F699B3F2FC9EF9757369A4C559FB50181:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-reformas-administrativas-e-a-redefinicao-do-papel-do-estado-reforma-do-servico-civil-merito-flexibilidade-e-responsabilizacao-e-reforma-do-aparelho-do-estado",
+          "confianca": 0.95
         }
       ],
       "incerto": false,

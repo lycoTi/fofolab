@@ -24,7 +24,7 @@ export function QuestionCorrection(props: {
   isCorrect: boolean;
   firstContact: boolean;
   confidence: ReviewConfidence | null;
-  diagnosis: SelfDiagnosisType;
+  diagnosis: SelfDiagnosisType | null;
   onDiagnosis: (diagnosis: SelfDiagnosisType) => void;
   feedback: string | null;
   aiConfigured: boolean;

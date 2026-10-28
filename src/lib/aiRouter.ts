@@ -144,9 +144,10 @@ export function getQuestionComplexityProfile(
   const charLength = question.statement.length;
   const linguisticLoad = resolveLinguisticLoad(charLength);
 
+  // Complexidade intrínseca da questão: estável e independente de já ter gerado explicação
   let score = 2;
-  if (charLength > 250) score += 1;
-  if (topicCount >= 2) score += 1;
+  if (charLength > 140) score += 1;
+  if (charLength > 320) score += 1;
   if (question.exam_board.toUpperCase() === 'FGV' && charLength > 200) score += 1;
 
   const stars = Math.max(1, Math.min(5, score)) as 1 | 2 | 3 | 4 | 5;

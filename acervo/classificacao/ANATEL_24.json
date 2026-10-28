@@ -5455,20 +5455,29 @@
             }
           ],
           "versaoVocabulario": 1162
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
-          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
-          "confianca": 0.85
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+          "confianca": 0.43
         },
         {
-          "id": "nocoes-de-estatistica-probabilidade>teorema-de-bayes",
-          "confianca": 0.6
+          "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+          "confianca": 0.43
         }
       ],
-      "incerto": false,
-      "concordancia": "uma-opiniao"
+      "incerto": true,
+      "concordancia": "discordam"
     },
     "ANATEL_24:961_ANATEL_002_01:88": {
       "opinioes": {
@@ -5484,20 +5493,29 @@
             }
           ],
           "versaoVocabulario": 1133
+        },
+        "groq:openai/gpt-oss-120b": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+              "confianca": 0.8
+            },
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
         }
       },
       "consenso": [
         {
           "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
-          "confianca": 0.6
-        },
-        {
-          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados",
-          "confianca": 0.5
+          "confianca": 0.55
         }
       ],
       "incerto": true,
-      "concordancia": "uma-opiniao"
+      "concordancia": "concordam"
     },
     "ANATEL_24:961_ANATEL_002_01:89": {
       "opinioes": {

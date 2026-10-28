@@ -85,6 +85,7 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   await expect(main).toContainText('Cebraspe · TESTE 2023 · item 2');
   await main.getByRole('button', { name: 'Não é deste tópico' }).click();
   await expect(position(page)).toHaveText('Questão 1 de 1');
+  await main.getByRole('button', { name: 'Filtros e busca' }).click();
   await expect(main.getByRole('button', { name: 'Tirados deste tópico (1)' })).toBeVisible();
 
   // 5. Tópico A: ao voltar, Inéditas mostra só o item 2 (1 de 1) e Todas mostra os 2 com selo "Já respondida"; desligar esvazia o tópico
@@ -108,6 +109,7 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   await openTopicQuestions(page, TOPIC_B);
   await expect(position(page)).toHaveText('Questão 1 de 1');
   await expect(main).toContainText('Cebraspe · TESTE 2024 · item 3');
+  await main.getByRole('button', { name: 'Filtros e busca' }).click();
   await expect(main.getByRole('button', { name: 'Tirados deste tópico (1)' })).toBeVisible();
   await page.screenshot({ path: `${SCREENS}/21-acervo-depois-de-recarregar.png`, fullPage: true });
 });

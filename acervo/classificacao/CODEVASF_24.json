@@ -473,6 +473,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_001_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_001_01:86": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -671,6 +700,48 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_001_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+              "confianca": 0.97
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>orcamento-e-planejamento>ppa-ldo-e-loa-em-aplicacao-elaboracao-emendas-discussao-e-aprovacao-do-orcamento-classificacoes-relevantes-creditos-e-alteracoes-vinculacoes-e-metas",
+          "confianca": 0.97
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_002_01:53": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -856,6 +927,72 @@
         },
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+              "confianca": 0.9
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1682
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>despesa-publica>restos-a-pagar",
+          "confianca": 0.9
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>inscricao-cancelamento-e-execucao-de-restos-a-pagar",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
           "confianca": 0.5
         }
       ],
@@ -1263,6 +1400,204 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_002_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-tributario>imposto-de-renda-pessoa-juridica-lucro-real-presumido-e-arbitrado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-tributario>imposto-de-renda-pessoa-juridica-lucro-real-presumido-e-arbitrado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>equilibrio-de-mercado>equilibrio-sob-concorrencia-perfeita-preco-de-equilibrio-e-quantidade-transacionada",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>producao-de-longo-prazo-versus-producao-de-curto-prazo-produto-medio-e-produtividade-marginal",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>equilibrio-de-mercado>equilibrio-sob-concorrencia-perfeita-preco-de-equilibrio-e-quantidade-transacionada",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+          "confianca": 0.5
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>producao-de-longo-prazo-versus-producao-de-curto-prazo-produto-medio-e-produtividade-marginal",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-custo-total-custo-medio-e-custo-marginal",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>producao-de-longo-prazo-versus-producao-de-curto-prazo-produto-medio-e-produtividade-marginal",
+              "confianca": 0.55
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-custo-total-custo-medio-e-custo-marginal",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>producao-de-longo-prazo-versus-producao-de-curto-prazo-produto-medio-e-produtividade-marginal",
+          "confianca": 0.55
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>lei-dos-rendimentos-decrescentes-e-rendimentos-de-escala",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>estado-regulador-e-produtor>lei-dos-rendimentos-decrescentes-e-rendimentos-de-escala",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-oferta>funcao-de-producao>lei-dos-rendimentos-decrescentes-e-rendimentos-de-escala",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>estado-regulador-e-produtor>lei-dos-rendimentos-decrescentes-e-rendimentos-de-escala",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-demanda>curva-de-demanda",
+              "confianca": 0.7
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>teoria-da-demanda>curva-de-demanda",
+          "confianca": 0.7
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_003_01:67": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1295,6 +1630,59 @@
         {
           "id": "econometria>identidades-macroeconomicas-basicas>contabilidade-social>principais-agregados-macroeconomicos",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>identidades-macroeconomicas-basicas>teoria-keynesiana>oferta-e-demanda-agregadas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>identidades-macroeconomicas-basicas>teoria-keynesiana>oferta-e-demanda-agregadas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>identidades-macroeconomicas-basicas>teoria-keynesiana>oferta-e-demanda-agregadas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>identidades-macroeconomicas-basicas>teoria-keynesiana>oferta-e-demanda-agregadas",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -1411,6 +1799,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_003_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>identidades-macroeconomicas-basicas>inflacao>inflacao-inercial",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>principais-caracteristicas-e-os-resultados-dos-planos-de-estabilizacao-a-partir-da-decada-de-80-do-seculo-xx",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>identidades-macroeconomicas-basicas>inflacao>inflacao-inercial",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>principais-caracteristicas-e-os-resultados-dos-planos-de-estabilizacao-a-partir-da-decada-de-80-do-seculo-xx",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_003_01:96": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1498,6 +1915,130 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>obras-de-defesa-contra-inundacao-e-de-macrodrenagem-reservatorios-de-cheias-bacias-de-acumulacao-alargamento-de-calhas-fluviais-canalizacao-de-cursos-d-agua-reflorestamento-da-bacia-hidrografica",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-civil>saneamento-basico-e-drenagem-urbana",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>obras-de-saneamento>obras-de-defesa-contra-inundacao-e-de-macrodrenagem-reservatorios-de-cheias-bacias-de-acumulacao-alargamento-de-calhas-fluviais-canalizacao-de-cursos-d-agua-reflorestamento-da-bacia-hidrografica",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-civil>saneamento-basico-e-drenagem-urbana",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>analise-orcamentaria>sistema-de-custos-rodoviarios-do-dnit-sicro-metodologia-e-conceitos-produtividade-e-equipamentos",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-rodoviarias>especificacoes-de-servicos>principais-equipamentos-utilizados",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>analise-orcamentaria>sistema-de-custos-rodoviarios-do-dnit-sicro-metodologia-e-conceitos-produtividade-e-equipamentos",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-rodoviarias>especificacoes-de-servicos>principais-equipamentos-utilizados",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>construcao>organizacao-do-canteiro-de-obras",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>cronograma-fisico-financeiro",
+              "confianca": 0.6
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>planejamento-de-projetos-de-instalacoes-e-controle-de-prazos-e-cronograma",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>construcao>organizacao-do-canteiro-de-obras",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>cronograma-fisico-financeiro",
+          "confianca": 0.6
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>planejamento-de-projetos-de-instalacoes-e-controle-de-prazos-e-cronograma",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>analise-orcamentaria>sistema-de-custos-rodoviarios-do-dnit-sicro-metodologia-e-conceitos-produtividade-e-equipamentos",
+              "confianca": 0.7
+            },
+            {
+              "id": "obras-rodoviarias>construcao>organizacao-do-canteiro-de-obras",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>analise-orcamentaria>sistema-de-custos-rodoviarios-do-dnit-sicro-metodologia-e-conceitos-produtividade-e-equipamentos",
+          "confianca": 0.7
+        },
+        {
+          "id": "obras-rodoviarias>construcao>organizacao-do-canteiro-de-obras",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:59": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1536,6 +2077,35 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>bdi-beneficio-bonificacao-e-despesas-indiretas",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>bdi-beneficio-bonificacao-e-despesas-indiretas",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "CODEVASF_24:989_CODEVASF_004_01:65": {
@@ -1588,6 +2158,101 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>controle-de-qualidade-de-materiais-cimento-agregados-aditivos-concreto-usinado-aco-madeira-materiais-ceramicos-vidro-etc-controle-de-qualidade-na-execucao-de-obras-e-servicos",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>controle-de-qualidade-de-materiais-cimento-agregados-aditivos-concreto-usinado-aco-madeira-materiais-ceramicos-vidro-etc-controle-de-qualidade-na-execucao-de-obras-e-servicos",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-materiais>propriedades-mecanicas-e-aplicacao-de-acos-e-materiais-metalicos",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-materiais>propriedades-mecanicas-e-aplicacao-de-acos-e-materiais-metalicos",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.6
+            },
+            {
+              "id": "obras-de-edificacoes>projeto-de-estruturas-de-concreto-armado",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-nbr-6118",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>projeto-de-estruturas-de-concreto-armado",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-nbr-6118",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:78": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1612,6 +2277,43 @@
         {
           "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-interpretacao-de-documentacao-tecnica",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+              "confianca": 0.7
+            },
+            {
+              "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+              "confianca": 0.5
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-interpretacao-de-documentacao-tecnica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+          "confianca": 0.7
+        },
+        {
+          "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+          "confianca": 0.5
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-interpretacao-de-documentacao-tecnica",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -1646,6 +2348,151 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:88": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+              "confianca": 0.6
+            },
+            {
+              "id": "obras-hidricas>aproveitamento-hidreletrico",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+          "confianca": 0.6
+        },
+        {
+          "id": "obras-hidricas>aproveitamento-hidreletrico",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>principais-estruturas-hidraulicas-barragens-soleiras-orgaos-extravasores-tomadas-d-agua-canais-condutos-sob-pressao-tuneis-bueiros-tipos-finalidade-secoes-tipicas-pre-dimensionamento-aspectos-construtivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>coleta-e-tratamento-de-esgoto-ete-s-lagoas-de-estabilizacao-fossas-septicas",
+              "confianca": 0.93
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>hidricas-abastecimento-de-agua-coleta-e-tratamento-de-esgoto-operacao-e-manutencao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>obras-de-saneamento>coleta-e-tratamento-de-esgoto-ete-s-lagoas-de-estabilizacao-fossas-septicas",
+          "confianca": 0.93
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>hidricas-abastecimento-de-agua-coleta-e-tratamento-de-esgoto-operacao-e-manutencao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+              "confianca": 0.93
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>hidricas-abastecimento-de-agua-coleta-e-tratamento-de-esgoto-operacao-e-manutencao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>obras-de-saneamento>abastecimento-d-agua-captacao-aducao-tratamento-eta-s-recalque-reservacao-distribuicao",
+          "confianca": 0.93
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>hidricas-abastecimento-de-agua-coleta-e-tratamento-de-esgoto-operacao-e-manutencao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_006_01:105": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1670,6 +2517,175 @@
         {
           "id": "engenharia-de-producao>engenharia-de-metodos-e-processos-produtivos",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>reajuste-contratual-e-aplicacao-de-indices",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>reajuste-contratual-e-aplicacao-de-indices",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+              "confianca": 0.75
+            },
+            {
+              "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+          "confianca": 0.85
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>execucao-contratual>medicao-entrega-e-aceitacao-fiscalizacao-pagamento-alteracoes-e-reequilibrio-evidencias-sobre-quantidade-qualidade-e-preco-continuidade-de-servicos-e-resposta-a-falhas",
+          "confianca": 0.75
+        },
+        {
+          "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+              "confianca": 0.7
+            },
+            {
+              "id": "arquitetura-e-urbanismo>obra-e-fiscalizacao>acompanhamento-e-fiscalizacao-de-obras-e-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+          "confianca": 0.7
+        },
+        {
+          "id": "arquitetura-e-urbanismo>obra-e-fiscalizacao>acompanhamento-e-fiscalizacao-de-obras-e-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:116": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+              "confianca": 0.75
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>legislacao-aplicavel-a-contratacao-de-obras-e-servicos-de-engenharia-lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes-lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1693
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>fiscalizacao-de-obras-e-servicos>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-e-reequilibrio-economico-financeiro",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-de-edificacoes>fiscalizacao>acompanhamento-da-aplicacao-de-recursos-medicoes-calculos-de-reajustamento-mudanca-de-data-base-emissao-de-fatura-etc-analise-e-interpretacao-de-documentacao-tecnica-editais-contratos-administrativos-alteracoes-contratuais-cadernos-de-encargos-projetos-diario-de-obras-etc",
+          "confianca": 0.75
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>legislacao-aplicavel-a-contratacao-de-obras-e-servicos-de-engenharia-lei-n-8-666-1993-e-suas-alteracoes-e-lei-n-14-133-2021-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes-lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "zootecnia>aquicultura-sistemas-de-recirculacao-e-reuso-de-agua",
+              "confianca": 0.9
+            },
+            {
+              "id": "zootecnia>aquicultura-e-sistemas-de-producao-aquicola",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "zootecnia>aquicultura-sistemas-de-recirculacao-e-reuso-de-agua",
+          "confianca": 0.9
+        },
+        {
+          "id": "zootecnia>aquicultura-e-sistemas-de-producao-aquicola",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -1720,6 +2736,35 @@
         {
           "id": "biologia>ecologia-e-manejo-de-ecossistemas-aquaticos-continentais",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "zootecnia>aquicultura-sistemas-de-recirculacao-e-reuso-de-agua",
+              "confianca": 0.9
+            },
+            {
+              "id": "zootecnia>aquicultura-e-sistemas-de-producao-aquicola",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "zootecnia>aquicultura-sistemas-de-recirculacao-e-reuso-de-agua",
+          "confianca": 0.9
+        },
+        {
+          "id": "zootecnia>aquicultura-e-sistemas-de-producao-aquicola",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -2008,6 +3053,163 @@
         {
           "id": "econometria>modelo-de-regressao-linear>analise-de-variancia-da-regressao",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.93
+            },
+            {
+              "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.93
+        },
+        {
+          "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+              "confianca": 0.6
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1685
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>probabilidade-e-distribuicoes-em-aplicacoes-amostragem-estimacao-intervalos-de-confianca-e-testes-de-hipoteses",
+          "confianca": 0.6
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.95
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.95
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.9
+            },
+            {
+              "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.45
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.9
+        },
+        {
+          "id": "matematica-financeira>governanca-de-dados>amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.45
         }
       ],
       "incerto": false,
@@ -2360,6 +3562,43 @@
         },
         {
           "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+              "confianca": 0.85
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "econometria>inferencia-estatistica>propriedades-desejaveis-dos-estimadores",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>inferencia-estatistica>estimacao-pontual-metodos-de-estimacao-propriedades-dos-estimadores-suficiencia",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>inferencia-estatistica>propriedades-desejaveis-dos-estimadores",
+          "confianca": 0.5
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
           "confianca": 0.5
         }
       ],
@@ -2723,6 +3962,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_007_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+              "confianca": 0.7
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1691
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>analise-de-regressao-linear-e-nao-linear>criterios-de-minimos-quadrados-e-de-maxima-verossimilhanca",
+          "confianca": 0.7
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>relacoes-entre-variaveis>correlacao-regressao-e-analise-de-variancia-pressupostos-tamanho-de-efeito-e-interpretacao-de-resultados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_007_01:99": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2747,6 +4023,48 @@
         {
           "id": "econometria>modelo-de-regressao-linear>regressao-linear-simples",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_008_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geologia>geologia-economica-e-recursos-minerais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "geologia>geologia-economica-e-recursos-minerais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_008_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-minas>lavra-e-metodos-de-extracao-mineral",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-minas>lavra-e-metodos-de-extracao-mineral",
+          "confianca": 0.95
         }
       ],
       "incerto": false,
@@ -3105,6 +4423,35 @@
         {
           "id": "direito-constitucional>comunicacao-social",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_010_01:120": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>normas-gerais-de-licitacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1694
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>normas-gerais-de-licitacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -3605,6 +4952,188 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_011_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>ciencia-de-dados-e-inteligencia-artificial>big-data-etl-modelagem-dimensional-business-intelligence-data-mining",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+              "confianca": 0.85
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.8
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+          "confianca": 0.85
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.8
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>tecnicas-de-modelagem-e-otimizacao-de-bases-de-dados-multidimensionais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+              "confianca": 0.8
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+          "confianca": 0.8
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.7
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+              "confianca": 0.5
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.7
+        },
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>data-mining",
+          "confianca": 0.5
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>conceitos-fundamentos-caracteristicas-tecnicas-e-metodos-de-business-intelligence-bi",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+              "confianca": 0.8
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>definicoes-e-conceitos-de-data-warehouse-e-data-mining",
+          "confianca": 0.8
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1690
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_011_01:112": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3774,6 +5303,35 @@
         {
           "id": "seguranca-da-informacao>engenharia-social",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>windows-server-active-directory-microsoft-exchange-dns-dhcp-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -4115,6 +5673,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.98
+            }
+          ],
+          "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_CB1_01:18": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4337,6 +5916,31 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>sistemas-embarcados-desenvolvimento-de-software-restricoes-de-hardware-e-energia",
+              "confianca": 0.3
+            },
+            {
+              "id": "arquitetura-e-organizacao-de-computadores>memoria-e-hierarquia-de-memoria",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-organizacao-de-computadores>memoria-e-hierarquia-de-memoria",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "CODEVASF_24:989_CODEVASF_CB1_01:4": {

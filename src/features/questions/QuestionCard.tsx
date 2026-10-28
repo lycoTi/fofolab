@@ -105,7 +105,7 @@ export function QuestionCard(props: {
           {question.acervo_uncertain === 1 && (
             <span
               className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-300"
-              title="Classificação ainda não confirmada: pesa metade no domínio."
+              title="Classificação sugerida pela IA"
             >
               <AlertTriangle size={11} className="text-amber-400" />
               Classificação incerta
@@ -124,6 +124,7 @@ export function QuestionCard(props: {
             type="button"
             onClick={props.onNotThisTopic}
             className="inline-flex items-center gap-1 rounded-md border border-transparent px-2 py-1 text-[11px] text-slate-400 transition-colors hover:border-slate-800 hover:bg-slate-800/40 hover:text-slate-200"
+            title="Tirar esta questão deste tópico do plano"
           >
             <XCircle size={12} className="text-slate-500" />
             Não é deste tópico

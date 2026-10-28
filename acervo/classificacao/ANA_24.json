@@ -286,6 +286,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_001_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>ativos-intangiveis>aspectos-conceituais-definicao-reconhecimento-e-mensuracao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1683
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>ativos-intangiveis>aspectos-conceituais-definicao-reconhecimento-e-mensuracao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_001_01:109": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -321,6 +350,35 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>juros-compostos-calculo-de-valor-presente-montante-e-series-de-pagamentos",
+              "confianca": 0.9
+            },
+            {
+              "id": "matematica-financeira>juros-compostos-e-capitalizacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>juros-compostos-calculo-de-valor-presente-montante-e-series-de-pagamentos",
+          "confianca": 0.9
+        },
+        {
+          "id": "matematica-financeira>juros-compostos-e-capitalizacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "ANA_24:957_ANA_001_01:86": {
@@ -389,6 +447,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_CB1_01:16": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -434,6 +521,35 @@
         {
           "id": "nocoes-de-estatistica-probabilidade>compreensao-e-representacao-de-dados-apresentados-em-graficos-e-tabelas",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -547,6 +663,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_CB1_01:38": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -571,6 +716,31 @@
         {
           "id": "realidade-brasileira>infraestrutura-economica-e-social>saneamento-basico-nas-cidades",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1687
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -613,6 +783,35 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>papeis-e-responsabilidades-do-estado-como-proprietario-das-empresas-estatais-e-gestor-de-seus-administradores-dos-conselhos-de-administracao-e-fiscal-e-das-instancias-de-auditoria-e-fiscalizacao",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1686
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
