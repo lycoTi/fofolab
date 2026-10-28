@@ -41,7 +41,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 
 ## 4. Estrutura de Código & Onde as Coisas Moram
 - **Componentes de Interface (`src/features/fofoia/`):**
-  - `FofoIaPanel.tsx`: Painel mestre na coluna direita, gerenciamento de largura (`LESSON_MIN_WIDTH = 560`), atalhos de modo e rolagem.
+  - `FofoIaPanel.tsx`: Painel mestre na coluna direita, gerenciamento de largura (`LESSON_MIN_WIDTH = 560`), atalhos de modo, rolagem e entrada multilinhas com auto-expand (até ~35% de altura da tela, Enter envia e Shift+Enter quebra linha).
   - `FofoMessage.tsx`: Balão de mensagem, expressão do hamster, selinho de jeito e ações (aula, resumo, copiar).
   - `useFofoConversation.ts`: Hook de ciclo de vida da conversa, envio de mensagens e retomada de partes cortadas.
   - `useFofoIaInputs.ts`: Coleta de insumos (caderno até 1.500 caracteres, questão ativa, pontos fortes).

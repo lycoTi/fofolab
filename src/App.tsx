@@ -13,7 +13,6 @@ import { useFofoIaInputs } from './features/fofoia/useFofoIaInputs';
 import { FofoSprite } from './features/mascot/FofoSprite';
 import { FofoOutfitProvider, useFofoOutfit } from './features/mascot/FofoOutfitContext';
 import { FofoWardrobeButton } from './features/mascot/FofoWardrobeButton';
-import { ThematicPerimeter } from './features/mascot/ThematicPerimeter';
 import { useFofoPrefs } from './features/mascot/useFofoPrefs';
 import { StudyPlanView } from './features/study-plan/StudyPlanView';
 import { useWeekAvailability } from './features/study-plan/useWeekAvailability';
@@ -1102,7 +1101,6 @@ export default function App() {
   return (
     <FofoOutfitProvider value={{ app: fofo.app, fofodoro: fofo.fofodoro, focus: fofoFocus, resting: fofoResting }}>
     <div className="relative flex h-screen w-screen flex-col overflow-hidden bg-[var(--fofo-ground,#0B0E17)] text-slate-100 transition-colors duration-500">
-      <ThematicPerimeter />
       {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
       {mode === 'student' && (
         <AppHeader

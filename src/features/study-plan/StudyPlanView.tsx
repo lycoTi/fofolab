@@ -15,8 +15,8 @@ import { WeekView } from './WeekView';
 const FINAL_STRETCH_OPTIONS = [7, 10, 14, 21];
 
 const secondaryButton =
-  'inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1 text-[11px] text-slate-200 ' +
-  'hover:border-orange-500/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400';
+  'inline-flex items-center gap-1.5 rounded-lg border border-slate-800 bg-slate-950/80 px-2.5 py-1 text-[11px] text-slate-200 ' +
+  'transition-all duration-100 hover:border-slate-700 hover:text-white active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400';
 
 /**
  * Aba Plano de estudo (spec 13 §4.4): Sua semana → Ajustar (dias e horas do padrão; semana atípica) → divisão da semana
@@ -90,7 +90,7 @@ export function StudyPlanView({
         ref={adjustRef}
         open={adjustOpen}
         onToggle={(e) => setAdjustOpen(e.currentTarget.open)}
-        className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs text-slate-300"
+        className="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4 text-xs text-slate-300"
       >
         <summary className="flex cursor-pointer select-none items-center gap-1.5 text-slate-200 hover:text-white">
           <Sliders size={13} />

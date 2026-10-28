@@ -43,7 +43,7 @@ export function CycleView({
   return (
     <div className="space-y-5">
       {suggestions.length > 0 && (
-        <section aria-label="Sugestões para o próximo ciclo" className="p-4 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-2.5">
+        <section aria-label="Sugestões para o próximo ciclo" className="space-y-2.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h3 className="text-xs font-bold text-white flex items-center gap-1.5">
               <Sparkles size={14} className="text-orange-400" />
@@ -52,7 +52,7 @@ export function CycleView({
             <button
               type="button"
               onClick={applySuggestion}
-              className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold flex items-center gap-1.5"
+              className="flex items-center gap-1.5 rounded-xl bg-orange-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition-transform duration-100 hover:bg-orange-600 active:scale-[0.97]"
             >
               <RefreshCw size={12} />
               Aplicar sugestão
@@ -74,10 +74,10 @@ export function CycleView({
       )}
 
       {groups.map((group) => (
-        <section key={group.key} aria-label={group.title} className="p-4 rounded-2xl bg-slate-900/70 border border-slate-800">
+        <section key={group.key} aria-label={group.title} className="space-y-3 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
           <div className="flex flex-wrap items-baseline justify-between gap-2 pb-1 border-b border-slate-800">
             <div>
-              <h3 className="text-sm font-bold text-white">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                 {group.title}
                 {group.highlight && (
                   <span className="ml-2 text-[10px] font-semibold px-1.5 py-0.5 rounded bg-orange-500/15 text-orange-300 align-middle">

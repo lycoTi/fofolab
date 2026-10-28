@@ -22,7 +22,7 @@ const REASON: Record<ReviewItem['reason'], string> = {
   COOLING: 'Faz um tempo que você viu este tópico: boa hora de puxar da memória.',
 };
 
-const frame = 'space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-5';
+const frame = 'space-y-4 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4';
 
 /** Revisão do dia no topo do "Início" (spec 09 §5.3): um item por vez, sem penalidade para pular. */
 export function DailyReviewCard(props: DailyReviewCardProps) {
@@ -53,7 +53,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
     <section aria-label="Revisão do dia" className={frame}>
       <div className="flex items-start justify-between gap-3">
         <div className="space-y-1">
-          <h2 className="flex items-center gap-2 text-sm font-semibold text-white">
+          <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
             <RotateCcw size={15} className="text-orange-400" />
             {`Revisão do dia · ${position} de ${items.length}`}
           </h2>
@@ -76,7 +76,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
         <button
           type="button"
           onClick={() => props.onOutside(current.item.topicId)}
-          className="flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300"
+          className="flex items-center gap-1.5 text-xs font-medium text-orange-400 transition-all duration-100 hover:text-orange-300 active:scale-[0.98]"
         >
           <ClipboardList size={13} />
           Fiz questões fora do app

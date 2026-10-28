@@ -16,7 +16,6 @@ interface SituationCardProps {
   progress?: EditalProgressSummary | null;
 }
 
-const tile = 'space-y-0.5 rounded-xl border border-slate-800 bg-slate-950/50 p-3';
 
 /**
  * Situação (spec 07 §5.5): quanto falta, cobertura × proficiência (separadas, nunca numa média só), o ritmo para ver
@@ -25,8 +24,8 @@ const tile = 'space-y-0.5 rounded-xl border border-slate-800 bg-slate-950/50 p-3
 export function SituationCard({ daysLine, parts, warning, progress = null }: SituationCardProps) {
   if (!daysLine && parts.length === 0 && !progress) return null;
   return (
-    <section aria-label="Situação" className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-      <h2 className="text-sm font-semibold text-white">Situação</h2>
+    <section aria-label="Situação" className="space-y-3.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+      <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Situação</h2>
       {daysLine && (
         <p className="flex items-center gap-2 text-xs text-slate-300">
           <CalendarDays size={14} className="text-orange-400" />
@@ -34,13 +33,13 @@ export function SituationCard({ daysLine, parts, warning, progress = null }: Sit
         </p>
       )}
       {progress && progress.totalTopics > 0 && (
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={tile}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-lg border border-slate-800/70 bg-slate-900/50 p-3.5 divide-y sm:divide-y-0 sm:divide-x divide-slate-800/70">
+          <div className="space-y-1">
             <p className="text-[11px] text-slate-400">Cobertura do edital</p>
             <p className="text-lg font-semibold text-white">{`${progress.coveragePercent}%`}</p>
             <p className="text-[11px] text-slate-400">{`${progress.seenTopics} de ${progress.totalTopics} tópicos vistos`}</p>
           </div>
-          <div className={tile}>
+          <div className="space-y-1 pt-3 sm:pt-0 sm:pl-4">
             <p className="text-[11px] text-slate-400">Proficiência nos tópicos estudados</p>
             {progress.proficiencyPercent === null ? (
               <p className="pt-1 text-xs text-slate-400">Aparece depois dos primeiros estudos</p>

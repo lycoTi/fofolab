@@ -45,7 +45,9 @@ export interface FofoIaPanelProps {
   onRequestHandled: () => void;
 }
 
-const shortcut = 'rounded-lg border border-slate-700 px-2.5 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
+const shortcut =
+  'rounded-lg border border-slate-800 bg-slate-900/60 px-2.5 py-1 text-[11px] font-medium text-slate-300 ' +
+  'transition-all duration-100 hover:border-slate-700 hover:bg-slate-800/60 hover:text-white active:scale-[0.97]';
 
 /** FofoIA (spec 11): um só professor na coluna direita, com jeitos de ensinar escolhidos pelos sinais do estudante. */
 export function FofoIaPanel(props: FofoIaPanelProps) {
@@ -71,8 +73,20 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   const [pending, setPending] = useState<FofoMode | null>(null);
   const [warmup, setWarmup] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const handledRequest = useRef<number | null>(null);
   const unanswered = activeQuestion !== null && !activeQuestion.answered;
+
+  // Ajusta altura do textarea até ~35% da altura da janela com rolagem vertical
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    if (draft) {
+      const maxHeight = Math.min(el.scrollHeight, Math.floor(window.innerHeight * 0.35));
+      el.style.height = `${maxHeight}px`;
+    }
+  }, [draft]);
 
   // Rola só a lista de mensagens (scrollIntoView rolaria também as colunas de fora e deslocaria a tela)
   useEffect(() => {
@@ -123,7 +137,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
   return (
     <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
-      <div className="flex items-center gap-2.5 border-b border-slate-800 p-3.5">
+      <div className="flex items-center gap-2.5 border-b border-slate-800/80 bg-slate-950/30 p-3.5">
         <CurrentFofo decorative />
         <div className="min-w-0">
           <h3 className="text-xs font-bold text-white">FofoIA</h3>
@@ -133,7 +147,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
       <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (
-          <p className="rounded-xl border border-slate-800 bg-slate-950/70 p-3 text-xs leading-relaxed text-slate-300">
+          <p className="rounded-xl border border-slate-800/80 bg-slate-950/50 p-3 text-xs leading-relaxed text-slate-300">
             {`Oi! Sou a FofoIA. Pergunte o que quiser sobre ${topicLabel}: eu explico rápido ou dou uma aula completa.`}
           </p>
         )}
@@ -177,7 +191,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         )}
       </div>
 
-      <div className="space-y-2 border-t border-slate-800 bg-slate-950/60 p-3">
+      <div className="space-y-2 border-t border-slate-800/80 bg-slate-950/60 p-3">
         <div className="flex flex-wrap gap-1.5">
           <button type="button" onClick={() => lesson()} className={shortcut}>
             Aula completa
@@ -204,16 +218,24 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             e.preventDefault();
             submit();
           }}
-          className="flex items-center gap-2"
+          className="flex items-end gap-2"
         >
-          <input
+          <textarea
+            ref={textareaRef}
+            rows={1}
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                submit();
+              }
+            }}
             placeholder={pending === 'EDITAL' ? 'Ex.: mensageria com filas…' : 'Pergunte sobre o tópico ou a questão…'}
             aria-label="Pergunte à FofoIA"
-            className="flex-1 rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-white outline-none focus:border-orange-500"
+            className="max-h-[35vh] flex-1 resize-none rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs leading-relaxed text-white outline-none focus:border-orange-500"
           />
-          <button type="submit" disabled={loading || !draft.trim()} aria-label="Enviar pergunta" className="rounded-xl bg-orange-500 p-2 text-white hover:bg-orange-600 disabled:opacity-40">
+          <button type="submit" disabled={loading || !draft.trim()} aria-label="Enviar pergunta" className="rounded-xl bg-orange-500 p-2 text-white shadow-sm transition-transform duration-100 hover:bg-orange-600 active:scale-95 disabled:opacity-40">
             {loading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
           </button>
         </form>

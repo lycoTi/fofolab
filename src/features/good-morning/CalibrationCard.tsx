@@ -14,8 +14,8 @@ interface CalibrationLine {
  */
 export function CalibrationCard({ lines }: { lines: CalibrationLine[] }) {
   return (
-    <section aria-label="Sua calibração" className="space-y-2.5 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-      <h2 className="flex items-center gap-2 text-sm font-semibold text-white">
+    <section aria-label="Sua calibração" className="space-y-2.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+      <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
         <Gauge size={15} className="text-orange-400" />
         Sua calibração
       </h2>

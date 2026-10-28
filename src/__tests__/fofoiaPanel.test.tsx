@@ -270,4 +270,18 @@ describe('Aula completa e resumo depois de uma conversa', () => {
     await press('Salvar resumo de revisão');
     expect(screen.getByText('Resumo de revisão do que conversamos (tópico 1.1 Microsserviços).')).toBeTruthy();
   });
+
+  it('Enter envia a pergunta; Shift+Enter não envia e permite nova linha', async () => {
+    render(<FofoIaPanel {...props()} />);
+    const textarea = screen.getByLabelText('Pergunte à FofoIA');
+
+    fireEvent.change(textarea, { target: { value: 'Primeira linha\nSegunda linha' } });
+    fireEvent.keyDown(textarea, { key: 'Enter', shiftKey: true });
+    expect(screen.queryByText('Primeira linha\nSegunda linha')).toBeNull();
+
+    await act(async () => {
+      fireEvent.keyDown(textarea, { key: 'Enter', shiftKey: false });
+    });
+    expect(screen.getAllByText(/Primeira linha/).length).toBeGreaterThan(0);
+  });
 });

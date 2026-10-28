@@ -22,8 +22,8 @@ function dayLabel(day: CalendarDay): string {
 /** As últimas 4 semanas, um quadradinho por dia (mais forte = mais tempo). Sem contagem de dias seguidos: não é cobrança. */
 export function StudyCalendar({ days }: { days: CalendarDay[] }) {
   return (
-    <section aria-label="Últimas 4 semanas" className="space-y-2.5 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-      <h2 className="text-sm font-semibold text-white">Últimas 4 semanas</h2>
+    <section aria-label="Últimas 4 semanas" className="space-y-2.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+      <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Últimas 4 semanas</h2>
       <ul className="grid w-fit grid-cols-7 gap-1.5">
         {days.map((day) => (
           <li

@@ -131,7 +131,7 @@ export function GoodMorningView(props: GoodMorningViewProps) {
         <button
           type="button"
           onClick={props.onStartNextBlock}
-          className="flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-orange-400"
+          className="flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform duration-100 hover:bg-orange-400 active:scale-[0.98]"
         >
           <Play size={15} />
           {`Começar o bloco de ${props.nextBlock.subjectName}`}

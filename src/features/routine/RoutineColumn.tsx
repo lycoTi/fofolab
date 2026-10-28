@@ -77,7 +77,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
 
   return (
     <div aria-label="Roteiro de hoje" className="flex h-full w-full min-w-0 flex-col">
-      <div className="shrink-0 border-b border-white/[0.08] py-3 pl-4 pr-10">
+      <div className="shrink-0 border-b border-slate-800/80 bg-slate-950/40 py-3 pl-4 pr-10">
         <h2 className="text-sm font-semibold text-white">{`Hoje · ${formatDuration(props.dayTotalMinutes)}`}</h2>
         {props.todayTime && <TodayTimeControl {...props.todayTime} disabled={blockRunning} />}
       </div>
@@ -128,7 +128,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
         )}
       </ol>
 
-      <div className="shrink-0 space-y-2 border-t border-white/[0.08] px-4 py-3">
+      <div className="shrink-0 space-y-2 border-t border-slate-800/80 bg-slate-950/40 px-4 py-3">
         {hint && (
           <div className="space-y-1.5 text-xs text-slate-300">
             <p>{hint}</p>

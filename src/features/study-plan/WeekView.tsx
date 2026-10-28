@@ -37,10 +37,10 @@ export function WeekView({
   const topicsById = new Map(Object.values(topicsBySubject).flat().map((t) => [t.id, t]));
 
   return (
-    <section aria-label="Sua semana" className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
+    <section aria-label="Sua semana" className="space-y-3.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h3 className="text-sm font-bold text-white">Sua semana</h3>
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Sua semana</h3>
           <p className="text-[11px] text-slate-400">
             {`${shortDate(weekStart)} – ${shortDate(weekEnd)} · `}
             <span className="font-mono tabular-nums text-slate-200">{`${formatDuration(studied)} de ${formatDuration(weekBudget)}`}</span>

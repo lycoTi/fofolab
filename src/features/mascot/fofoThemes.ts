@@ -120,7 +120,6 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ambientGradient:
         'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(147, 51, 234, 0.28), rgba(255, 122, 0, 0.16), transparent 80%)',
     },
-    festiveNotice: 'Clima de Halloween ativo nas molduras!',
   },
   natal: {
     id: 'natal',
@@ -140,7 +139,6 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ambientGradient:
         'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(244, 63, 94, 0.24), rgba(16, 185, 129, 0.12), transparent 80%)',
     },
-    festiveNotice: 'Boas festas! Moldura natalina sutil ativa.',
   },
   anonovo: {
     id: 'anonovo',

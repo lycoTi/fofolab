@@ -5,7 +5,9 @@ import { MODE_BADGE } from '../../lib/fofoia/signals';
 import { formatSummaryForNotebook } from '../../lib/fofoia/summary';
 import type { FofoTurn } from './useFofoConversation';
 
-const action = 'rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
+const action =
+  'inline-flex items-center gap-1 rounded-md border border-slate-800 bg-slate-900/80 px-2 py-1 text-[11px] font-medium text-slate-300 ' +
+  'transition-all duration-100 hover:border-slate-700 hover:bg-slate-800/60 hover:text-white active:scale-[0.97]';
 
 /** Uma fala da conversa: o selinho do jeito, o texto (sempre por RichText) e as ações que cabem naquele jeito. */
 export function FofoMessage({
@@ -42,11 +44,11 @@ export function FofoMessage({
     return <p className="fofolab-enter text-center text-[11px] text-slate-500">{turn.content}</p>;
   }
   if (turn.role === 'student') {
-    return <p className="fofolab-enter ml-8 rounded-xl bg-orange-500/15 px-3 py-2 text-xs text-orange-50">{turn.content}</p>;
+    return <p className="fofolab-enter ml-8 rounded-xl border border-orange-500/20 bg-orange-500/15 px-3 py-2 text-xs leading-relaxed text-orange-50">{turn.content}</p>;
   }
   if (turn.failed) {
     return (
-      <div className="fofolab-enter space-y-1.5 rounded-xl border border-slate-800 bg-slate-950/70 p-3 text-xs text-slate-300">
+      <div className="fofolab-enter space-y-1.5 rounded-xl border border-slate-800/80 bg-slate-950/60 p-3 text-xs text-slate-300">
         <p>{turn.content}</p>
         <button type="button" onClick={onRetry} className={`${action} flex items-center gap-1`}>
           <RotateCcw size={11} />
@@ -63,7 +65,7 @@ export function FofoMessage({
   const lineCount = text.split('\n').filter((l) => l.trim()).length;
   const after = reveal ? { className: 'fofolab-reveal', style: { animationDelay: `${revealDelayMs(lineCount, lineCount + 1)}ms` } } : { className: '', style: undefined };
   return (
-    <div className="fofolab-enter space-y-2 rounded-xl border border-slate-800 bg-slate-950/70 p-3">
+    <div className="fofolab-enter space-y-2 rounded-xl border border-slate-800/80 bg-slate-950/50 p-3">
       <div className="flex flex-wrap items-center gap-2">
         {turn.mode && <span className="rounded-md bg-orange-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-orange-200">{MODE_BADGE[turn.mode]}</span>}
         {turn.simulated && <span className="text-[10px] text-slate-500">Exemplo simulado — a IA ainda não está configurada</span>}

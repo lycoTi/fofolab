@@ -72,43 +72,54 @@ export function QuestionFilters(props: {
   const [expanded, setExpanded] = useState(props.defaultExpanded ?? false);
 
   return (
-    <div className="rounded-xl border border-white/[0.08] bg-[#0E121B]/90 backdrop-blur-sm text-xs transition-all shadow-sm">
-      {/* Cabeçalho compacto com resumo visual */}
+    <div className="rounded-xl border border-slate-800/80 bg-slate-900/40 text-xs transition-all overflow-hidden">
+      {/* Cabeçalho compacto com resumo visual contínuo (sem cápsulas de cards) */}
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
         aria-expanded={expanded}
         aria-label="Filtros e busca"
-        className="flex w-full flex-wrap items-center justify-between gap-2 px-3.5 py-2 text-left hover:bg-white/[0.03] transition-colors rounded-xl"
+        className="flex w-full flex-wrap items-center justify-between gap-2 px-4 py-2 text-left hover:bg-slate-800/40 transition-colors"
       >
-        <div className="flex flex-wrap items-center gap-1.5 min-w-0">
-          <span className="flex items-center gap-1.5 font-medium text-slate-400 mr-0.5">
-            <SlidersHorizontal size={13} className="text-[var(--fofo-accent)] shrink-0" />
-            <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Filtros:</span>
+        <div className="flex flex-wrap items-center gap-2 min-w-0 text-[11px]">
+          <span className="flex items-center gap-1.5 font-semibold uppercase tracking-wider text-slate-400 mr-1">
+            <SlidersHorizontal size={12} className="text-[var(--fofo-accent)] shrink-0" />
+            <span>Filtros:</span>
           </span>
-          <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11px] font-medium text-slate-200">
+          <span className="font-medium text-slate-200">
             {scopeLabel(props.scope, props.groupCode)}
           </span>
-          <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11px] font-medium text-slate-200">
+          <span className="text-slate-600 select-none">·</span>
+          <span className="font-medium text-slate-200">
             {statusLabel(props.statusFilter, props.counts)}
           </span>
-          <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11px] font-medium text-slate-200">
+          <span className="text-slate-600 select-none">·</span>
+          <span className="font-medium text-slate-200">
             {formatLabel(props.formatFilter)}
           </span>
           {props.board !== 'ALL' && (
-            <span className="rounded-md border border-sky-500/30 bg-sky-500/10 px-2 py-0.5 text-[11px] text-sky-300">
-              {props.board}
-            </span>
+            <>
+              <span className="text-slate-600 select-none">·</span>
+              <span className="font-medium text-sky-300">
+                {props.board}
+              </span>
+            </>
           )}
           {props.complexity !== 'ALL' && (
-            <span className="rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-300">
-              {props.complexity}
-            </span>
+            <>
+              <span className="text-slate-600 select-none">·</span>
+              <span className="font-medium text-amber-300">
+                {props.complexity}
+              </span>
+            </>
           )}
           {props.search.trim() && (
-            <span className="rounded-md border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/10 px-2 py-0.5 text-[11px] font-mono text-[var(--fofo-accent-text)] truncate max-w-[140px]">
-              "{props.search.trim()}"
-            </span>
+            <>
+              <span className="text-slate-600 select-none">·</span>
+              <span className="font-mono text-[var(--fofo-accent-text)] truncate max-w-[140px]">
+                "{props.search.trim()}"
+              </span>
+            </>
           )}
         </div>
 
@@ -122,7 +133,7 @@ export function QuestionFilters(props: {
       </button>
 
       {/* Painel com todos os controles quando expandido */}
-      <div className={expanded ? 'space-y-2 border-t border-white/[0.06] p-3.5 pt-2.5' : 'hidden'}>
+      <div className={expanded ? 'space-y-2 border-t border-slate-800/80 bg-slate-950/40 p-3.5 pt-2.5' : 'hidden'}>
         <div className="flex flex-wrap items-center gap-2">
           <select
             value={props.scope}

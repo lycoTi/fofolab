@@ -31,14 +31,14 @@ function formatAttemptBadge(summary: QuestionAttemptSummary): { label: string; t
   return { label: 'Já respondida · Acertou', tone: 'emerald' };
 }
 
-function complexityStyle(level: QuestionComplexityProfile['levelLabel']): string {
+function complexityColor(level: QuestionComplexityProfile['levelLabel']): string {
   switch (level) {
     case 'Fácil':
-      return 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400';
+      return 'text-emerald-400';
     case 'Média':
-      return 'border-amber-500/30 bg-amber-500/10 text-amber-400';
+      return 'text-amber-400';
     case 'Difícil':
-      return 'border-rose-500/30 bg-rose-500/10 text-rose-400';
+      return 'text-rose-400';
   }
 }
 
@@ -72,38 +72,41 @@ export function QuestionCard(props: {
   const badge = attemptSummary ? formatAttemptBadge(attemptSummary) : null;
 
   return (
-    <article aria-label="Folha de questão" className="rounded-2xl border border-white/[0.08] bg-[#0E121B] shadow-sm overflow-hidden transition-colors">
-      {/* Barra de metadados da questão com linhas de 1px e chips objetivos */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] bg-white/[0.015] px-5 py-3 text-xs">
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Origem e concurso */}
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] font-medium text-slate-200">
-            <Bookmark size={12} className="text-[var(--fofo-accent)]" />
+    <article aria-label="Folha de questão" className="rounded-xl border border-slate-800/80 bg-slate-900/40 backdrop-blur-[2px] transition-colors overflow-hidden">
+      {/* Barra de metadados integrada no estilo folha de prova (sem cards aninhados) */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/80 bg-slate-950/40 px-6 py-3 text-xs">
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Origem e concurso com tipografia mono nítida */}
+          <div className="inline-flex items-center gap-1.5 font-mono text-[11px] font-medium text-slate-300">
+            <Bookmark size={12} className="text-[var(--fofo-accent)] shrink-0" />
             <span>{origin}</span>
-          </span>
+          </div>
 
-          {/* Dificuldade em semáforo suave com explicador */}
-          <span
-            className={`inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[11px] font-medium transition-colors ${complexityStyle(
-              complexity.levelLabel
-            )}`}
+          <span className="text-slate-700 select-none">|</span>
+
+          {/* Dificuldade em semáforo sutil com explicador */}
+          <div
+            className="inline-flex items-center gap-1 text-[11px] font-medium transition-colors"
             title={complexity.summaryTip}
           >
-            <Gauge size={12} />
-            <span>{complexity.levelLabel}</span>
+            <Gauge size={12} className="text-slate-400 shrink-0" />
+            <span className={complexityColor(complexity.levelLabel)}>{complexity.levelLabel}</span>
             <MetricExplainer explanation={explainQuestionComplexity(complexity, question.exam_board)} />
-          </span>
+          </div>
 
           {/* Selos de histórico / status */}
           {badge && (
-            <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.02] px-2 py-0.5 text-[11px] text-slate-300">
-              <StatusSquare tone={badge.tone} />
-              {badge.label}
-            </span>
+            <>
+              <span className="text-slate-700 select-none">|</span>
+              <div className="inline-flex items-center gap-1.5 text-[11px] text-slate-400">
+                <StatusSquare tone={badge.tone} />
+                <span>{badge.label}</span>
+              </div>
+            </>
           )}
           {question.acervo_uncertain === 1 && (
             <span
-              className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[11px] text-amber-300"
+              className="inline-flex items-center gap-1 text-[11px] text-amber-300"
               title="Classificação sugerida pela IA"
             >
               <AlertTriangle size={11} className="text-amber-400" />
@@ -111,8 +114,8 @@ export function QuestionCard(props: {
             </span>
           )}
           {annulled && (
-            <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.02] px-2 py-0.5 text-[11px] text-slate-400">
-              <Ban size={11} className="text-slate-400" />
+            <span className="inline-flex items-center gap-1 text-[11px] text-slate-400">
+              <Ban size={11} className="text-slate-500" />
               Anulada pela banca
             </span>
           )}
@@ -143,13 +146,13 @@ export function QuestionCard(props: {
 
       {/* Barra de ação inferior antes de responder */}
       {!annulled && !props.locked && (
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] bg-white/[0.015] px-5 py-3 text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/80 bg-slate-950/40 px-6 py-3 text-xs">
           <div className="flex flex-wrap items-center gap-2">
             {props.onHint && (
               <button
                 type="button"
                 onClick={props.onHint}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/5 px-3 py-1.5 font-medium text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/15"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/40 bg-[var(--fofo-accent)]/10 px-3 py-1.5 font-medium text-[var(--fofo-accent-text)] transition-all duration-150 hover:bg-[var(--fofo-accent)]/20 active:scale-[0.97]"
               >
                 <Lightbulb size={13} className="text-[var(--fofo-accent)]" />
                 Pedir pista à FofoIA
@@ -158,7 +161,7 @@ export function QuestionCard(props: {
             <button
               type="button"
               onClick={props.onFirstContact}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 py-1.5 text-slate-300 transition-colors hover:border-white/[0.18] hover:bg-white/[0.05] hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/30 px-3 py-1.5 text-slate-300 transition-all duration-150 hover:border-slate-600 hover:bg-slate-800/60 hover:text-white active:scale-[0.97]"
             >
               <Eye size={13} className="text-slate-400" />
               Ver explicação antes de responder
@@ -166,7 +169,7 @@ export function QuestionCard(props: {
           </div>
 
           {position && position.total > 0 && (
-            <div className="ml-auto flex items-center gap-1.5">
+            <div className="ml-auto flex items-center gap-2">
               <span className="pr-1 tabular-nums font-mono text-xs text-slate-400">
                 Questão <strong className="font-semibold text-white">{position.index + 1}</strong> de{' '}
                 <strong className="font-semibold text-white">{position.total}</strong>
@@ -177,7 +180,7 @@ export function QuestionCard(props: {
                 onClick={position.onPrev}
                 aria-label="Questão anterior"
                 title="Questão anterior"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-700/60 bg-slate-800/30 text-slate-300 transition-all duration-150 hover:border-slate-600 hover:text-white active:scale-[0.93] disabled:opacity-40"
               >
                 <ChevronLeft size={14} />
               </button>
@@ -187,7 +190,7 @@ export function QuestionCard(props: {
                 onClick={position.onNext}
                 aria-label="Próxima questão"
                 title="Próxima questão"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-700/60 bg-slate-800/30 text-slate-300 transition-all duration-150 hover:border-slate-600 hover:text-white active:scale-[0.93] disabled:opacity-40"
               >
                 <ChevronRight size={14} />
               </button>

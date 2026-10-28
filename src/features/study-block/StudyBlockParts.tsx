@@ -34,10 +34,10 @@ export function BlockModePicker({
             aria-checked={selected}
             disabled={locked}
             onClick={() => onChange(option.mode, option.focus)}
-            className={`px-2 py-1 rounded-lg border text-[11px] font-mono transition disabled:cursor-not-allowed ${
+            className={`px-2.5 py-1 rounded-md border text-[11px] font-mono transition-all duration-150 active:scale-[0.95] disabled:cursor-not-allowed ${
               selected
-                ? 'bg-orange-500/20 border-orange-500 text-orange-200'
-                : 'bg-slate-950 border-slate-800 text-slate-400 hover:border-slate-600 disabled:opacity-50'
+                ? 'bg-[var(--fofo-accent)]/15 border-[var(--fofo-accent)] text-[var(--fofo-accent-text)] font-semibold shadow-sm'
+                : 'bg-slate-900/60 border-slate-800/80 text-slate-400 hover:border-slate-700 hover:text-slate-200 disabled:opacity-50'
             }`}
           >
             {option.label}

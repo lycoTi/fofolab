@@ -47,7 +47,7 @@ export function DayCard({
         aria-label={label}
         aria-pressed={selected}
         onClick={onSelect}
-        className={`flex h-full min-h-28 w-full flex-col gap-1.5 rounded-xl border p-2.5 text-left text-[11px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 ${frame} ${day.when === 'past' ? 'opacity-80' : ''}`}
+        className={`flex h-full min-h-28 w-full flex-col gap-1.5 rounded-xl border p-2.5 text-left text-[11px] transition-all duration-100 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 ${frame} ${day.when === 'past' ? 'opacity-80' : ''}`}
       >
         <span className="flex w-full items-baseline justify-between gap-2">
           <span className={`text-xs font-semibold ${isToday ? 'text-orange-200' : 'text-slate-100'}`}>{day.label}</span>

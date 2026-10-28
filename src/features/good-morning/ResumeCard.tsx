@@ -14,14 +14,14 @@ interface ResumeCardProps {
 }
 
 const row =
-  'flex w-full items-start gap-2.5 rounded-xl border border-slate-800 bg-slate-950/50 p-3 text-left transition-colors duration-150 hover:border-orange-500/50';
+  'flex w-full items-start gap-2.5 rounded-lg border border-slate-800/80 bg-slate-900/60 p-3 text-left transition-all duration-100 hover:border-slate-700 hover:bg-slate-900/90 active:scale-[0.98]';
 
 /** "Continuar de onde parou": o último PDF (na página em que parou) e a última anotação, a um clique. */
 export function ResumeCard({ pdf, note, onOpenPdf, onOpenNotes }: ResumeCardProps) {
   if (!pdf && !note) return null;
   return (
-    <section aria-label="Continuar de onde parou" className="space-y-2.5 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-      <h2 className="text-sm font-semibold text-white">Continuar de onde parou</h2>
+    <section aria-label="Continuar de onde parou" className="space-y-2.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+      <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Continuar de onde parou</h2>
       <div className="grid gap-2.5 sm:grid-cols-2">
         {pdf && (
           <button type="button" onClick={() => onOpenPdf(pdf.subjectId, pdf.topicId)} className={row}>

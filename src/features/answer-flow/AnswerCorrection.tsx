@@ -31,7 +31,7 @@ export function AnswerCorrection({
   return (
     <section
       aria-label="Correção da questão"
-      className="fofolab-enter space-y-4 rounded-2xl border border-white/[0.08] bg-[#0E121B] p-5 sm:p-6 shadow-sm transition-colors"
+      className="fofolab-enter space-y-4 rounded-xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6 shadow-sm transition-colors"
     >
       <Verdict isCorrect={isCorrect} firstContact={firstContact} />
       <div className="flex items-center gap-2 text-xs text-slate-300">

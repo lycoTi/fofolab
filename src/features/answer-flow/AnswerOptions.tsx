@@ -32,7 +32,7 @@ export function AnswerOptions({
       <div className="flex flex-col sm:flex-row gap-3 pt-2">
         {options.map((o) => {
           let tone =
-            'border-white/[0.08] bg-white/[0.02] text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.04]';
+            'border-slate-800/80 bg-slate-900/40 text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-slate-800/50';
           if (picked && o.key === correct?.key) {
             tone = 'border-emerald-500/60 bg-emerald-500/15 text-emerald-100 font-semibold shadow-sm';
           } else if (picked === o.key) {
@@ -44,7 +44,7 @@ export function AnswerOptions({
               type="button"
               disabled={picked !== null}
               onClick={() => onPick(o.key)}
-              className={`flex-1 flex items-center justify-center h-11 rounded-xl border px-5 text-sm font-medium transition-all duration-150 disabled:cursor-default ${tone}`}
+              className={`flex-1 flex items-center justify-center h-12 rounded-xl border px-5 text-sm font-medium transition-all duration-150 active:scale-[0.98] disabled:cursor-default ${tone}`}
             >
               {optionName(o, true)}
             </button>
@@ -58,7 +58,7 @@ export function AnswerOptions({
     <div className="space-y-2 pt-2">
       {options.map((o) => {
         let tone =
-          'border-white/[0.08] bg-white/[0.02] text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.04]';
+          'border-slate-800/80 bg-slate-900/30 text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-slate-800/50';
         if (picked && o.key === correct?.key) {
           tone = 'border-emerald-500/60 bg-emerald-500/15 text-emerald-100 font-semibold shadow-sm';
         } else if (picked === o.key) {
@@ -70,7 +70,7 @@ export function AnswerOptions({
             type="button"
             disabled={picked !== null}
             onClick={() => onPick(o.key)}
-            className={`block w-full rounded-xl border p-3.5 text-left text-xs sm:text-sm leading-relaxed transition-all duration-150 disabled:cursor-default ${tone}`}
+            className={`block w-full rounded-xl border p-3.5 text-left text-xs sm:text-sm leading-relaxed transition-all duration-150 active:scale-[0.99] disabled:cursor-default ${tone}`}
           >
             {optionName(o, false)}
           </button>

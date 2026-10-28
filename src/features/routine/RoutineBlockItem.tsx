@@ -33,13 +33,13 @@ function topicLabel(topic: Topic | null): string {
 }
 
 const materialButton =
-  'rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[11px] text-slate-300 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.06] hover:text-white transition-colors';
+  'rounded-lg border border-slate-700/60 bg-slate-800/30 px-2.5 py-1 text-[11px] font-medium text-slate-300 hover:border-slate-600 hover:bg-slate-800/60 hover:text-white active:scale-[0.96] transition-all duration-150';
 
-/** Moldura de cada estado; a troca entre eles anima (cor, borda, opacidade, respiro). */
+/** Trilho do tempo: feito (esmaecido), próximo (estação limpa) e atual (estação ativa em foco). */
 const FRAME: Record<'done' | 'next' | 'open', string> = {
-  done: 'border-white/[0.05] bg-transparent px-3 py-2 text-slate-400 opacity-60',
-  next: 'border-white/[0.07] bg-white/[0.015] px-3 py-2 hover:border-white/[0.12]',
-  open: 'border-l-2 border-l-[var(--fofo-accent)] border-t-white/[0.08] border-r-white/[0.08] border-b-white/[0.08] bg-[#0E121B] p-3.5 shadow-sm',
+  done: 'border-transparent bg-transparent px-3 py-2 text-slate-400 opacity-60 hover:bg-slate-800/20 rounded-lg',
+  next: 'border-transparent bg-transparent px-3 py-2.5 text-slate-300 hover:bg-slate-800/20 hover:border-slate-800/50 rounded-lg',
+  open: 'border-l-2 border-l-[var(--fofo-accent)] border-t-slate-800/80 border-r-slate-800/80 border-b-slate-800/80 bg-slate-900/40 p-3.5 shadow-sm rounded-xl',
 };
 
 /**
@@ -203,7 +203,7 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           <button
             type="button"
             onClick={onStart}
-            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-2 text-xs font-semibold text-white hover:bg-[var(--fofo-accent-hover)] transition-colors shadow-sm"
+            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-2 text-xs font-semibold text-white hover:bg-[var(--fofo-accent-hover)] active:scale-[0.98] transition-all duration-150 shadow-sm"
           >
             <Play size={13} />
             {startLabel}

@@ -47,9 +47,9 @@ function partTag(code: string, coverage: number, warning: string | null): { labe
  */
 export function ExamOutlookCard({ outlook, onAdjust }: { outlook: ExamOutlook | null; onAdjust: () => void }) {
   return (
-    <section aria-label="Dá tempo?" className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+    <section aria-label="Dá tempo?" className="space-y-3.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
       <div className="flex items-center gap-2">
-        <h3 className="text-sm font-bold text-white">Dá tempo?</h3>
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Dá tempo?</h3>
         {outlook && outlook.status === 'PROJETANDO' && <MetricExplainer explanation={explanation(outlook)} />}
       </div>
       <OutlookBody outlook={outlook} onAdjust={onAdjust} />
@@ -142,7 +142,7 @@ function ExtraHours({ outlook, onAdjust }: { outlook: ExamOutlook; onAdjust: () 
         type="button"
         onClick={onAdjust}
         title="Abre o Ajustar, para mudar as horas"
-        className="rounded-lg border border-orange-500/60 px-2 py-0.5 font-mono text-orange-200 hover:bg-orange-500/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
+        className="rounded-lg border border-orange-500/60 px-2 py-0.5 font-mono text-orange-200 transition-all duration-100 hover:bg-orange-500/10 active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400"
       >
         {`+${formatDuration(outlook.extraWeeklyMinutes)} por semana`}
       </button>

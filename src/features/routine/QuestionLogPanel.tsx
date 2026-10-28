@@ -57,7 +57,7 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
   };
 
   return (
-    <div className="mx-3 mt-3 rounded-xl border border-slate-800 bg-slate-900/60 p-3 text-xs">
+    <div className="mx-3 mt-2 rounded-xl border border-slate-800/80 bg-slate-950/40 p-3 text-xs transition-colors">
       {lastLogLabel && (
         <div className="mb-2 flex items-center justify-between gap-2 text-emerald-300">
           <span>{lastLogLabel}</span>
