@@ -66,7 +66,7 @@ export function SidePanel({
       ref={asideRef}
       aria-label={label}
       style={{ width: open ? width : RAIL_WIDTH }}
-      className={`fofolab-panel relative h-full shrink-0 overflow-hidden border-slate-800 bg-slate-900/70 ${
+      className={`fofolab-panel relative h-full shrink-0 overflow-hidden border-[var(--fofo-border-subtle,rgba(255,255,255,0.08))] bg-[var(--fofo-surface,#111622)]/85 backdrop-blur-sm transition-colors duration-300 ${
         isLeft ? 'border-r' : 'border-l'
       }`}
     >
@@ -89,7 +89,7 @@ export function SidePanel({
           onClick={() => onOpenChange(false)}
           aria-label={collapseLabel}
           title={collapseLabel}
-          className={`absolute top-2 z-10 flex h-6 w-6 items-center justify-center rounded-md border border-slate-700 bg-slate-900 text-slate-400 hover:text-slate-200 ${
+          className={`absolute top-2 z-10 flex h-6 w-6 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.04] text-slate-400 hover:text-white transition-colors ${
             isLeft ? 'right-1.5' : 'left-1.5'
           }`}
         >
@@ -155,7 +155,7 @@ export function RailButton({ label, icon, active = false, onClick }: RailButtonP
       aria-label={label}
       title={label}
       className={`flex h-[30px] w-[30px] items-center justify-center rounded-lg border bg-slate-900 text-slate-300 hover:text-white ${
-        active ? 'border-orange-500/70' : 'border-slate-700'
+        active ? 'border-[var(--fofo-accent)]' : 'border-slate-700'
       }`}
     >
       {icon}

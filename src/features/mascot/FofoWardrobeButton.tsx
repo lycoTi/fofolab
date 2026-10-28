@@ -58,9 +58,9 @@ export function FofoWardrobeButton({
         aria-label={`${OUTFIT_LABELS[outfit]} — Guarda-roupa do Fofo`}
         title={OUTFIT_LABELS[outfit]}
         onClick={() => setOpen((v) => !v)}
-        className="fofo-hover block rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
+        className="fofo-hover block rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--fofo-accent)]"
       >
-        <CurrentFofo decorative sleepWhenResting />
+        <CurrentFofo decorative sleepWhenResting={false} />
       </button>
 
       {open && (

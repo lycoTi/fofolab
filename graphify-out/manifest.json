@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793154378.625056,
-    "seen": 1793154863.7092664,
-    "ast_hash": "e23ad2df95d369afc5bea5af4aa0df06",
+    "mtime": 1793156117.1704078,
+    "seen": 1793188570.5317085,
+    "ast_hash": "d95aa755001fd28c8f00111c1a4312a3",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -810,9 +810,9 @@
     "semantic_hash": ""
   },
   "src/features/workbench-shell/SidePanel.tsx": {
-    "mtime": 1792721616.1515703,
-    "seen": 1792877783.489539,
-    "ast_hash": "85561763e9c2de7a7f329fa444b882a0",
+    "mtime": 1793156118.0322552,
+    "seen": 1793188570.6118834,
+    "ast_hash": "8ab48587e4e8384a5b583cd714ba23de",
     "semantic_hash": ""
   },
   "src/features/workbench-shell/headerSummary.ts": {
@@ -3162,9 +3162,9 @@
     "semantic_hash": ""
   },
   "src/features/mascot/FofoWardrobeButton.tsx": {
-    "mtime": 1793066665.3629067,
-    "seen": 1793068660.1123962,
-    "ast_hash": "616fca3024a1e0fb0f58105e7090d91a",
+    "mtime": 1793187730.414935,
+    "seen": 1793188570.5895507,
+    "ast_hash": "e0cf1db29f2859f4f76f16d2041c2c55",
     "semantic_hash": ""
   },
   "src/features/mascot/sun.ts": {
@@ -3588,15 +3588,39 @@
     "semantic_hash": ""
   },
   "src/__tests__/acervoLinkBar.test.tsx": {
-    "mtime": 1793150708.4153433,
-    "seen": 1793154863.7110052,
-    "ast_hash": "327e953d060862cd9aa6e32433afff67",
+    "mtime": 1793154894.4070165,
+    "seen": 1793155516.7951066,
+    "ast_hash": "df26e5cdfcae31eb6fca07853b940f9a",
     "semantic_hash": ""
   },
   "src/features/mascot/fofoThemes.ts": {
-    "mtime": 1793153762.6823938,
-    "seen": 1793154863.77681,
-    "ast_hash": "3837e9ff769b2376601a6845cd2b3b4b",
+    "mtime": 1793156117.8419929,
+    "seen": 1793188570.5900555,
+    "ast_hash": "b8b41f50eb6dec61922e2a431997e2f2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/fofoia-specialist/SKILL.md": {
+    "mtime": 1793155362.2714205,
+    "seen": 1793155516.9165514,
+    "ast_hash": "bbaee3232aa01dd81a8053365c5c4f67",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/AGENTS.md": {
+    "mtime": 1793155338.8545854,
+    "seen": 1793155516.971325,
+    "ast_hash": "90fd41f6b093cb73a7dc15cdda3c7391",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/CONTEXT.md": {
+    "mtime": 1793155330.6031563,
+    "seen": 1793155516.971329,
+    "ast_hash": "0dd26065cb2a4cc222740b85b574970b",
+    "semantic_hash": ""
+  },
+  "src/features/mascot/ThematicPerimeter.tsx": {
+    "mtime": 1793156117.737612,
+    "seen": 1793188570.589555,
+    "ast_hash": "a48d0e092773c477c2478e26089af0c8",
     "semantic_hash": ""
   }
 }
