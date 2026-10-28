@@ -100,7 +100,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
         )}
       </Collapse>
 
-      <ol className="relative flex-1 space-y-3 overflow-y-auto px-4 py-4 before:absolute before:left-[21px] before:top-6 before:bottom-6 before:w-[2px] before:bg-slate-800/80">
+      <ol className="flex-1 space-y-3.5 overflow-y-auto px-4 py-3">
         {items.length === 0 && restDay && (
           <li className="text-xs text-slate-300">Hoje é dia de folga. Descansar também faz parte: a memória se firma no intervalo.</li>
         )}

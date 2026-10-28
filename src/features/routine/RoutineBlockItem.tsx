@@ -33,85 +33,91 @@ function topicLabel(topic: Topic | null): string {
 }
 
 const materialButton =
-  'rounded-lg border border-slate-700/60 bg-slate-800/30 px-2.5 py-1 text-[11px] font-medium text-slate-300 hover:border-slate-600 hover:bg-slate-800/60 hover:text-white active:scale-[0.96] transition-all duration-150';
-
-/** Trilho do tempo: feito (esmaecido), próximo (estação limpa) e atual (estação ativa em foco). */
-const FRAME: Record<'done' | 'next' | 'open', string> = {
-  done: 'border-transparent bg-transparent px-3 py-2 text-slate-400 opacity-60 hover:bg-slate-800/20 rounded-lg',
-  next: 'border-transparent bg-transparent px-3 py-2.5 text-slate-300 hover:bg-slate-800/20 hover:border-slate-800/50 rounded-lg',
-  open: 'border-l-2 border-l-[var(--fofo-accent)] border-t-slate-800/80 border-r-slate-800/80 border-b-slate-800/80 bg-slate-900/40 p-3.5 shadow-sm rounded-xl',
-};
+  'flex-1 py-1.5 px-2 text-center text-[11px] font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors';
 
 /**
- * Um bloco do roteiro: feito (esmaecido), atual (aberto, com material) ou próximo (recolhido, com o motivo).
- * É o mesmo elemento nos três estados: quando o bloco termina ele recolhe com a altura animada e o próximo
- * se abre, em vez de um trocar pelo outro de supetão.
+ * Um bloco do roteiro no paradigma anti-card:
+ * - Feito: linha plana compacta com checkmark;
+ * - Próximo: item limpo com nó de cor da matéria e motivo;
+ * - Atual: estação de foco aberta sobre a prancheta da coluna, sem bordas externas de cartão.
  */
 export function RoutineBlockItem({ item, current }: { item: RoutineItem; current?: CurrentBlockExtras }) {
   const { topic, status, block } = item;
   const done = status === 'done';
   const open = !done && current !== undefined;
 
+  if (done) {
+    return (
+      <li
+        data-testid={`routine-item-${block.blockNumber}`}
+        data-status={status}
+        className="flex items-center justify-between gap-2 py-1.5 text-xs text-slate-500 opacity-60 hover:opacity-100 transition-opacity"
+      >
+        <div className="flex items-center gap-2 min-w-0">
+          <Check size={12} className="shrink-0 text-emerald-400" />
+          <span className="truncate">{`${block.kind === 'WEEK_REVIEW' ? 'Revisão da semana · ' : ''}${item.subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
+        </div>
+        <span className="shrink-0 font-mono text-[11px] text-slate-500">{formatDuration(block.durationMinutes)}</span>
+      </li>
+    );
+  }
+
+  if (!open) {
+    return (
+      <li
+        data-testid={`routine-item-${block.blockNumber}`}
+        data-status={status}
+        className="space-y-1 py-2 text-xs border-t border-slate-800/60 first:border-t-0"
+      >
+        <div className="flex items-baseline justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: item.subject.color }} />
+            <span className="font-semibold text-slate-300 truncate">{item.subject.name}</span>
+            {block.kind === 'WEEK_REVIEW' && (
+              <span className="shrink-0 rounded bg-blue-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-blue-200">Revisão da semana</span>
+            )}
+          </div>
+          <span className="shrink-0 font-mono text-[11px] text-slate-400">{formatDuration(block.durationMinutes)}</span>
+        </div>
+        <p className="pl-4 text-[11px] text-slate-500 leading-relaxed">{block.reasonText}</p>
+      </li>
+    );
+  }
+
+  // Bloco ATUAL (Open): Aberto diretamente na coluna, sem moldura de card
   return (
     <li
       data-testid={`routine-item-${block.blockNumber}`}
       data-status={status}
-      className={`relative pl-6 text-xs transition-all duration-200 ${done ? 'opacity-60 text-slate-400' : ''}`}
+      className="space-y-3 py-3 border-y border-slate-800/80 text-xs"
     >
-      {/* Marcador na linha do tempo */}
-      {done && (
-        <span className="absolute left-[-2px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-slate-950 border border-emerald-500/70 text-emerald-400 ring-2 ring-slate-950">
-          <Check size={9} />
-        </span>
-      )}
-      {open && (
-        <span className="absolute left-[-2px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[var(--fofo-accent)] ring-4 ring-[var(--fofo-accent)]/20 shadow-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-white" />
-        </span>
-      )}
-      {!done && !open && (
-        <span className="absolute left-[1px] top-1.5 h-2.5 w-2.5 rounded-full bg-slate-800 border border-slate-600 ring-2 ring-slate-950" />
-      )}
-
-      {/* Conteúdo da estação */}
-      <div className={open ? 'rounded-xl border border-slate-800/80 bg-slate-900/30 p-3.5 space-y-2.5' : 'py-1'}>
-        <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
-        <Collapse open={!done && !open}>
-          <p className="pt-0.5 text-[11px] text-slate-500 leading-relaxed">{block.reasonText}</p>
-        </Collapse>
-        <Collapse open={open}>{open && current && <CurrentBody item={item} topic={topic} current={current} />}</Collapse>
-      </div>
+      <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
+      {current && <CurrentBody item={item} topic={topic} current={current} />}
     </li>
   );
 }
 
-/** Linha de cima do bloco, com o que cada estado precisa mostrar. */
+/** Linha de cabeçalho do bloco ativo. */
 function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; done: boolean; open: boolean; liveFocusMs: number }) {
-  const { subject, topic, block } = item;
-  if (done) {
-    return (
-      <div className="flex items-center gap-2">
-        <span className="truncate">{`${block.kind === 'WEEK_REVIEW' ? 'Revisão da semana · ' : ''}${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
-        <span className="ml-auto shrink-0 font-mono text-[11px] text-slate-400">{formatDuration(block.durationMinutes)}</span>
-      </div>
-    );
-  }
+  const { subject, block } = item;
   const doneMinutes = item.studiedMinutes + Math.floor(liveFocusMs / 60_000);
   return (
-    <div className="flex items-center gap-2">
-      <span className={`shrink-0 rounded-full ${open ? 'h-2.5 w-2.5' : 'h-2 w-2'}`} style={{ backgroundColor: subject.color }} />
-      <span className={`truncate ${open ? 'font-semibold text-white' : 'font-medium text-slate-200'}`}>{subject.name}</span>
-      {block.kind === 'WEEK_REVIEW' && (
-        <span className="shrink-0 rounded bg-blue-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-blue-200">Revisão da semana</span>
-      )}
-      <span className={`ml-auto shrink-0 font-mono text-[11px] ${open ? 'text-slate-300' : 'text-slate-400'}`}>
-        {open ? `${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}` : formatDuration(block.durationMinutes)}
+    <div className="flex items-baseline justify-between gap-2">
+      <div className="flex items-center gap-2 min-w-0">
+        <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: subject.color }} />
+        <span className="font-bold text-white text-sm truncate">{subject.name}</span>
+        {block.kind === 'WEEK_REVIEW' && (
+          <span className="shrink-0 rounded bg-blue-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-blue-200">Revisão da semana</span>
+        )}
+      </div>
+      <span className="shrink-0 font-mono text-xs font-semibold text-orange-200">
+        {`${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}`}
       </span>
     </div>
   );
 }
 
-/** Conteúdo do bloco atual: progresso, tópico-pai recolhível, subtópico ativo, material, FofoDoro e o botão de começar. */
+/** Conteúdo do bloco atual: progresso, árvore de tópicos, materiais em toolbar única, FofoDoro e ação primária. */
 function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic | null; current: CurrentBlockExtras }) {
   const { group, selectedTopicId, liveFocusMs, materials, blockRunning, startLabel, onStart, onSelectTopic, onOpenMaterial, fofodoro, preview } = current;
   const hasTree = group.members.length > 1;
@@ -127,20 +133,23 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
   const parentTitle = group.parent ? topicLabel(group.parent) : 'Subtópicos do assunto';
 
   return (
-    <div className="space-y-2.5 pt-2.5">
+    <div className="space-y-3">
+      {/* Barra de progresso contínua */}
       <div
         role="progressbar"
         aria-label="Progresso do bloco"
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={progressPercent}
-        className="h-1 overflow-hidden rounded-full bg-white/[0.08]"
+        className="h-1 w-full overflow-hidden rounded-full bg-slate-800"
       >
         <div
-          className="h-full rounded-full bg-[var(--fofo-accent)] transition-[width] duration-500 motion-reduce:transition-none"
+          className="h-full rounded-full bg-[var(--fofo-accent)] transition-[width] duration-300 motion-reduce:transition-none"
           style={{ width: `${progressPercent}%` }}
         />
       </div>
+
+      {/* Tópico e árvore de subtópicos */}
       {hasTree && (
         <div className="space-y-1.5">
           <h3 className="text-xs font-medium leading-snug text-slate-300">
@@ -149,11 +158,11 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
               onClick={() => setTreeOpen((v) => !v)}
               aria-expanded={treeOpen}
               aria-label={`Subtópicos de ${parentTitle}`}
-              className="flex w-full items-center gap-1.5 rounded-md py-0.5 text-left transition-colors duration-150 hover:text-white"
+              className="flex w-full items-center gap-1.5 py-0.5 text-left text-slate-400 hover:text-white transition-colors"
             >
-              {group.parent?.code && <span className="font-mono text-[var(--fofo-accent)]">{group.parent.code}</span>}
-              <span className="flex-1 truncate">{group.parent?.title ?? parentTitle}</span>
-              <span className="shrink-0 font-normal text-[11px] text-slate-400">{`${group.members.length} subtópicos`}</span>
+              {group.parent?.code && <span className="font-mono text-orange-400">{group.parent.code}</span>}
+              <span className="flex-1 truncate font-medium text-slate-300">{group.parent?.title ?? parentTitle}</span>
+              <span className="shrink-0 text-[11px] text-slate-500">{`${group.members.length} subtópicos`}</span>
               <ChevronDown
                 size={13}
                 className={`shrink-0 text-slate-400 transition-transform duration-200 motion-reduce:transition-none ${treeOpen ? 'rotate-180' : ''}`}
@@ -170,12 +179,8 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
                     ? `${topicLabel(focusedTopic)} (tópico do bloco)`
                     : `Voltar ao tópico do bloco: ${topicLabel(topic)}`
                 }
-                className="flex w-full items-start gap-1.5 rounded-md border-l border-white/[0.15] pl-2 py-0.5 text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
+                className="flex w-full items-start gap-2 pl-3 py-1 text-left text-xs font-medium leading-snug text-white hover:text-orange-200 border-l-2 border-orange-500/70 transition-colors"
               >
-                <span
-                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${focusedTopic.id === topic?.id ? 'bg-[var(--fofo-accent)]' : 'bg-slate-500'}`}
-                  title={focusedTopic.id === topic?.id ? 'Tópico do bloco' : undefined}
-                />
                 <span className="flex-1">{topicLabel(focusedTopic)}</span>
               </button>
             )}
@@ -190,13 +195,15 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           type="button"
           onClick={() => onSelectTopic(topic.subject_id, topic.id)}
           aria-label={`Voltar ao tópico do bloco: ${topicLabel(topic)}`}
-          className="block w-full rounded-md text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
+          className="block w-full text-left text-xs font-medium leading-snug text-white hover:text-orange-200 pl-3 border-l-2 border-orange-500/70 transition-colors"
         >
-          {topic.code && <span className="mr-1 font-mono text-[var(--fofo-accent)]">{topic.code}</span>}
+          {topic.code && <span className="mr-1 font-mono text-orange-400">{topic.code}</span>}
           <span>{topic.title}</span>
         </button>
       )}
-      <div className="flex flex-wrap gap-1.5">
+
+      {/* Toolbar unificada de materiais (sem cartões soltos) */}
+      <div className="flex items-center divide-x divide-slate-800 rounded-lg border border-slate-800 bg-slate-900/60 overflow-hidden shadow-sm">
         <button type="button" className={materialButton} onClick={() => onOpenMaterial('pdf')}>
           {materials.pdfLabel ?? 'Abrir PDF'}
         </button>
@@ -207,19 +214,20 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           Caderno
         </button>
       </div>
-      {/* Relógio e prévia trocam de lugar: quem entra espera quem sai, para não se sobreporem */}
+
+      {/* Relógio e prévia */}
       <Collapse open={hasFofodoro} afterExit>
         {fofodoro}
       </Collapse>
       <Collapse open={!blockRunning} afterExit>
-        <div className="space-y-2.5">
+        <div className="space-y-3 pt-1">
           {preview}
           <button
             type="button"
             onClick={onStart}
-            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-2 text-xs font-semibold text-white hover:bg-[var(--fofo-accent-hover)] active:scale-[0.98] transition-all duration-150 shadow-sm"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-orange-600 active:scale-[0.98] transition-all"
           >
-            <Play size={13} />
+            <Play size={13} fill="currentColor" />
             {startLabel}
           </button>
         </div>
