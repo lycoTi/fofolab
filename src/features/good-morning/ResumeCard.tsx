@@ -20,7 +20,7 @@ const row =
 export function ResumeCard({ pdf, note, onOpenPdf, onOpenNotes }: ResumeCardProps) {
   if (!pdf && !note) return null;
   return (
-    <section aria-label="Continuar de onde parou" className="space-y-2.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+    <section aria-label="Continuar de onde parou" className="space-y-3 border-t border-slate-800/60 pt-6">
       <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Continuar de onde parou</h2>
       <div className="grid gap-2.5 sm:grid-cols-2">
         {pdf && (

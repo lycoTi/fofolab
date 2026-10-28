@@ -22,7 +22,7 @@ const REASON: Record<ReviewItem['reason'], string> = {
   COOLING: 'Faz um tempo que você viu este tópico: boa hora de puxar da memória.',
 };
 
-const frame = 'space-y-4 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4';
+const frame = 'space-y-3.5';
 
 /** Revisão do dia no topo do "Início" (spec 09 §5.3): um item por vez, sem penalidade para pular. */
 export function DailyReviewCard(props: DailyReviewCardProps) {
@@ -31,7 +31,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
 
   if (skipped) {
     return (
-      <section aria-label="Revisão do dia" className={frame}>
+      <section aria-label="Revisão do dia" className="py-2">
         <p className="text-xs text-slate-400">Revisão de hoje pulada. Os tópicos voltam amanhã.</p>
       </section>
     );
@@ -39,7 +39,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
 
   if (!current) {
     return (
-      <section aria-label="Revisão do dia" className={frame}>
+      <section aria-label="Revisão do dia" className="py-2">
         <p className="fofolab-enter flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
           <CheckCircle2 size={15} />
           {`Revisão de hoje feita: ${doneCount} ${doneCount === 1 ? 'tópico revisado' : 'tópicos revisados'}.`}
@@ -51,7 +51,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
   const position = Math.min(items.length, doneCount + 1);
   return (
     <section aria-label="Revisão do dia" className={frame}>
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex items-start justify-between gap-3 border-b border-slate-800/60 pb-2.5">
         <div className="space-y-1">
           <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
             <RotateCcw size={15} className="text-orange-400" />
@@ -72,7 +72,7 @@ export function DailyReviewCard(props: DailyReviewCardProps) {
         <ReviewOpenPrompt key={current.item.topicId} topicLabel={current.topicLabel} notebookExcerpt={current.notebookExcerpt} onRate={props.onRate} />
       )}
 
-      <div className="border-t border-slate-800 pt-3">
+      <div className="pt-2">
         <button
           type="button"
           onClick={() => props.onOutside(current.item.topicId)}

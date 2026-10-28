@@ -51,21 +51,36 @@ export function RoutineBlockItem({ item, current }: { item: RoutineItem; current
   const { topic, status, block } = item;
   const done = status === 'done';
   const open = !done && current !== undefined;
-  let frame = FRAME.next;
-  if (done) frame = FRAME.done;
-  else if (open) frame = FRAME.open;
 
   return (
     <li
       data-testid={`routine-item-${block.blockNumber}`}
       data-status={status}
-      className={`rounded-xl border text-xs transition-[background-color,border-color,opacity,padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${frame}`}
+      className={`relative pl-6 text-xs transition-all duration-200 ${done ? 'opacity-60 text-slate-400' : ''}`}
     >
-      <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
-      <Collapse open={!done && !open}>
-        <p className="pt-1 text-slate-400">{block.reasonText}</p>
-      </Collapse>
-      <Collapse open={open}>{open && current && <CurrentBody item={item} topic={topic} current={current} />}</Collapse>
+      {/* Marcador na linha do tempo */}
+      {done && (
+        <span className="absolute left-[-2px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-slate-950 border border-emerald-500/70 text-emerald-400 ring-2 ring-slate-950">
+          <Check size={9} />
+        </span>
+      )}
+      {open && (
+        <span className="absolute left-[-2px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[var(--fofo-accent)] ring-4 ring-[var(--fofo-accent)]/20 shadow-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-white" />
+        </span>
+      )}
+      {!done && !open && (
+        <span className="absolute left-[1px] top-1.5 h-2.5 w-2.5 rounded-full bg-slate-800 border border-slate-600 ring-2 ring-slate-950" />
+      )}
+
+      {/* Conteúdo da estação */}
+      <div className={open ? 'rounded-xl border border-slate-800/80 bg-slate-900/30 p-3.5 space-y-2.5' : 'py-1'}>
+        <BlockHeader item={item} done={done} open={open} liveFocusMs={current?.liveFocusMs ?? 0} />
+        <Collapse open={!done && !open}>
+          <p className="pt-0.5 text-[11px] text-slate-500 leading-relaxed">{block.reasonText}</p>
+        </Collapse>
+        <Collapse open={open}>{open && current && <CurrentBody item={item} topic={topic} current={current} />}</Collapse>
+      </div>
     </li>
   );
 }
@@ -76,7 +91,6 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
   if (done) {
     return (
       <div className="flex items-center gap-2">
-        <Check size={13} className="shrink-0 text-emerald-400" />
         <span className="truncate">{`${block.kind === 'WEEK_REVIEW' ? 'Revisão da semana · ' : ''}${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
         <span className="ml-auto shrink-0 font-mono text-[11px] text-slate-400">{formatDuration(block.durationMinutes)}</span>
       </div>

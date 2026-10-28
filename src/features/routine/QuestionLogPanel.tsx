@@ -57,7 +57,7 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
   };
 
   return (
-    <div className="mx-3 mt-2 rounded-xl border border-slate-800/80 bg-slate-950/40 p-3 text-xs transition-colors">
+    <div className="border-b border-slate-800/60 bg-slate-950/20 px-4 py-2 text-xs transition-colors">
       {lastLogLabel && (
         <div className="mb-2 flex items-center justify-between gap-2 text-emerald-300">
           <span>{lastLogLabel}</span>
@@ -69,7 +69,7 @@ export function QuestionLogPanel(props: QuestionLogPanelProps) {
       )}
 
       <Collapse open={!open}>
-        <button type="button" onClick={() => setOpen(true)} className="flex items-center gap-1.5 font-medium text-orange-400 hover:text-orange-300">
+        <button type="button" onClick={() => setOpen(true)} className="flex items-center gap-1.5 font-medium text-slate-400 hover:text-orange-300 transition-colors">
           <ClipboardList size={13} />
           Registrar questões feitas fora do app
         </button>

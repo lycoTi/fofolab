@@ -24,7 +24,7 @@ interface SituationCardProps {
 export function SituationCard({ daysLine, parts, warning, progress = null }: SituationCardProps) {
   if (!daysLine && parts.length === 0 && !progress) return null;
   return (
-    <section aria-label="Situação" className="space-y-3.5 rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+    <section aria-label="Situação" className="space-y-4 border-t border-slate-800/60 pt-6">
       <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">Situação</h2>
       {daysLine && (
         <p className="flex items-center gap-2 text-xs text-slate-300">
@@ -33,7 +33,7 @@ export function SituationCard({ daysLine, parts, warning, progress = null }: Sit
         </p>
       )}
       {progress && progress.totalTopics > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-lg border border-slate-800/70 bg-slate-900/50 p-3.5 divide-y sm:divide-y-0 sm:divide-x divide-slate-800/70">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-2 border-y border-slate-800/60 divide-y sm:divide-y-0 sm:divide-x divide-slate-800/60">
           <div className="space-y-1">
             <p className="text-[11px] text-slate-400">Cobertura do edital</p>
             <p className="text-lg font-semibold text-white">{`${progress.coveragePercent}%`}</p>

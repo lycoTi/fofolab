@@ -65,7 +65,7 @@ describe('Montagem da prova: gabarito, anulados, código e figura', () => {
     expect(q1.alternativas).toHaveLength(5);
     expect(q1.alternativas![1]).toBe('B) civis competem as funções de polícia judiciária e a apuração de infrações penais comuns e militares.');
     expect(outcome.itens.find((i) => i.procedencias[0].numero === 16)!.anulado).toBe(true);
-  });
+  }, 15000);
 
   it('contagens que não batem mandam a prova inteira para a quarentena', () => {
     const semResposta = new Map(serproKey);

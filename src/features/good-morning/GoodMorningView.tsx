@@ -97,9 +97,9 @@ export function GoodMorningView(props: GoodMorningViewProps) {
   });
 
   return (
-    <div className="mx-auto max-w-3xl space-y-5">
-      <div className="space-y-1.5">
-        <h1 className="flex items-center gap-2 text-xl font-semibold text-white">
+    <div className="mx-auto max-w-3xl space-y-7 pb-12">
+      <div className="space-y-1 border-b border-slate-800/60 pb-5">
+        <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
           <Sun size={20} className="text-amber-400" />
           {greeting(now())}
         </h1>
@@ -122,20 +122,22 @@ export function GoodMorningView(props: GoodMorningViewProps) {
 
       <SituationCard daysLine={situation.daysLine} parts={situation.parts} warning={situation.warning} progress={progress} />
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-6 border-t border-slate-800/60 pt-6 sm:grid-cols-2">
         <StudyCalendar days={studyCalendar(facts?.sessions ?? [], now())} />
         <CalibrationCard lines={confidenceCalibration(props.attempts)} />
       </div>
 
       {props.nextBlock && (
-        <button
-          type="button"
-          onClick={props.onStartNextBlock}
-          className="flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform duration-100 hover:bg-orange-400 active:scale-[0.98]"
-        >
+        <div className="border-t border-slate-800/60 pt-6">
+          <button
+            type="button"
+            onClick={props.onStartNextBlock}
+            className="flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform duration-100 hover:bg-orange-400 active:scale-[0.98]"
+          >
           <Play size={15} />
           {`Começar o bloco de ${props.nextBlock.subjectName}`}
-        </button>
+          </button>
+        </div>
       )}
     </div>
   );

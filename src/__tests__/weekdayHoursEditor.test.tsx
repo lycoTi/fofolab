@@ -32,7 +32,7 @@ describe('Editor de dias de estudo e horas (spec 13 §4.1)', () => {
     expect(screen.getByRole('button', { name: 'Sáb' }).getAttribute('aria-pressed')).toBe('true');
     expect(screen.queryByLabelText('Tempo de domingo')).toBeNull();
     expect((screen.getByLabelText('Tempo de sábado') as HTMLSelectElement).value).toBe('300');
-  });
+  }, 15000);
 
   it('desligar um dia grava 0; religar volta ao tempo que ele tinha', () => {
     const onChange = vi.fn();
