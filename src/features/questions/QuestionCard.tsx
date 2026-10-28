@@ -58,7 +58,6 @@ export function QuestionCard(props: {
   onPick: (key: string) => void;
   onFirstContact: () => void;
   onHint?: () => void;
-  onNotThisTopic?: () => void;
   position?: {
     index: number;
     total: number;
@@ -118,18 +117,6 @@ export function QuestionCard(props: {
             </span>
           )}
         </div>
-
-        {props.onNotThisTopic && (
-          <button
-            type="button"
-            onClick={props.onNotThisTopic}
-            className="inline-flex items-center gap-1 rounded-md border border-transparent px-2 py-1 text-[11px] text-slate-400 transition-colors hover:border-slate-800 hover:bg-slate-800/40 hover:text-slate-200"
-            title="Tirar esta questão deste tópico do plano"
-          >
-            <XCircle size={12} className="text-slate-500" />
-            Não é deste tópico
-          </button>
-        )}
       </div>
 
       <p className="whitespace-pre-line text-sm leading-relaxed text-slate-100">{question.statement}</p>

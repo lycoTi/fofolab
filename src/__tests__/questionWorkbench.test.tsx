@@ -209,11 +209,17 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     expect(props.onAnswer).not.toHaveBeenCalled();
   });
 
-  it('"Não é deste tópico" tira o item do tópico', () => {
-    const acervo = acervoProps();
-    renderWorkbench({ questions: [{ question: acervoItem, dissection: null }], scopeFilter: 'topic', acervo });
-    fireEvent.click(screen.getByRole('button', { name: 'Não é deste tópico' }));
-    expect(acervo.onExcludeItem).toHaveBeenCalledWith(acervoItem);
+  it('bancada de estudos limpa: sem botões de curadoria técnica ou desligar assunto', () => {
+    const acervo = acervoProps({
+      links: [{ assuntoId: 'direito-administrativo>licitacoes>lei-14-133', caminho: ['Direito Administrativo', 'Licitações', 'Lei 14.133'] }],
+      excluded: [{ itemId: 'TCU_25:c1:9', sourceLabel: 'Cebraspe · TCU 2025 · item 9' }],
+    });
+    const { container } = renderWorkbench({ questions: [{ question: acervoItem, dissection: null }], scopeFilter: 'topic', acervo });
+    expect(screen.queryByRole('button', { name: 'Não é deste tópico' })).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Desligar este assunto' })).toBeNull();
+    expect(screen.queryByText(/Do acervo:/)).toBeNull();
+    for (const term of FORBIDDEN) expect(container.textContent).not.toContain(term);
+    expect(EMOJI.test(container.textContent ?? '')).toBe(false);
   });
 
   it('o mesmo item em dois tópicos: respondido em A, continua aberto em B', () => {
@@ -225,46 +231,6 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
 
     rerender(<QuestionWorkbench {...props} questions={[{ question: { ...acervoItem, topic_id: 'tB' }, dissection: null }]} />);
     expect(screen.getByRole('button', { name: 'Sei' })).toBeTruthy();
-  });
-
-  it('questão própria não oferece "Não é deste tópico"', () => {
-    renderWorkbench({ questions: [first], scopeFilter: 'topic', acervo: acervoProps() });
-    expect(screen.queryByRole('button', { name: 'Não é deste tópico' })).toBeNull();
-  });
-
-  it('linha "Do acervo" com "Desligar este assunto"; tirados podem ser devolvidos', () => {
-    const acervo = acervoProps({
-      links: [{ assuntoId: 'direito-administrativo>licitacoes>lei-14-133', caminho: ['Direito Administrativo', 'Licitações', 'Lei 14.133'] }],
-      excluded: [{ itemId: 'TCU_25:c1:9', sourceLabel: 'Cebraspe · TCU 2025 · item 9' }],
-    });
-    renderWorkbench({ questions: [{ question: acervoItem, dissection: null }], scopeFilter: 'topic', acervo });
-    expect(screen.getByText('Do acervo: Licitações › Lei 14.133')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Desligar este assunto' }));
-    expect(acervo.onDisableLink).toHaveBeenCalledWith('direito-administrativo>licitacoes>lei-14-133');
-
-    expect(screen.queryByRole('button', { name: 'Devolver ao tópico' })).toBeNull();
-    fireEvent.click(screen.getByRole('button', { name: 'Tirados deste tópico (1)' }));
-    expect(screen.getByText('Cebraspe · TCU 2025 · item 9')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Devolver ao tópico' }));
-    expect(acervo.onRestoreItem).toHaveBeenCalledWith('TCU_25:c1:9');
-  });
-
-  it('acervo que não está neste computador: avisa como trazer de volta', () => {
-    renderWorkbench({ questions: [first], scopeFilter: 'topic', acervo: acervoProps({ acervoMissing: true }) });
-    expect(screen.getByText('O acervo da Cebraspe não está neste computador. Importe o pacote de novo em "Importar Questões".')).toBeTruthy();
-  });
-
-  it('sem termos técnicos e sem emoji nas telas do acervo', () => {
-    const acervo = acervoProps({
-      links: [{ assuntoId: 'x>y', caminho: ['X', 'Y'] }],
-      excluded: [{ itemId: 'i', sourceLabel: 'Cebraspe · TCU 2025 · item 9' }],
-      acervoMissing: true,
-      groupCode: '1',
-    });
-    const { container } = renderWorkbench({ questions: [{ question: { ...acervoItem, acervo_uncertain: 1 }, dissection: null }], scopeFilter: 'topic', acervo });
-    fireEvent.click(screen.getByRole('button', { name: 'Tirados deste tópico (1)' }));
-    for (const term of FORBIDDEN) expect(container.textContent).not.toContain(term);
-    expect(EMOJI.test(container.textContent ?? '')).toBe(false);
   });
 
   it('fila inteligente (spec 12d §3.2): mostra inéditas por padrão, ordena C/E antes de múltipla escolha, mantém na tela ao responder e permite refazer erros/chutes', () => {

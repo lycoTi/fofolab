@@ -194,9 +194,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
 
   const inTopic = props.scopeFilter === 'topic';
   const acervo = props.acervo;
-  const linkBar = inTopic && acervo && (
-    <AcervoLinkBar view={acervo.view} onDisableLink={acervo.onDisableLink} onRestoreItem={acervo.onRestoreItem} />
-  );
 
   const filters = (
     <QuestionFilters
@@ -215,7 +212,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       search={search}
       onSearch={setSearch}
       groupCode={props.acervo?.view.groupCode ?? null}
-      linkBar={linkBar}
     />
   );
 
@@ -296,7 +292,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
 
   const isCorrect = current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase();
   const hasNext = safeIndex < filtered.length - 1;
-  const onNotThisTopic = inTopic && acervo && active.question.acervo_item_id ? () => acervo.onExcludeItem(active.question) : undefined;
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       {filters}
@@ -314,7 +309,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           record(key, current.confidence);
         }}
         onFirstContact={() => record(null, null)}
-        onNotThisTopic={onNotThisTopic}
         onHint={
           onAskFofoIa
             ? () => {

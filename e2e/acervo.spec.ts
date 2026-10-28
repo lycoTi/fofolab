@@ -56,7 +56,6 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   const main = page.getByRole('main');
   await openTopicQuestions(page, TOPIC_A);
   await expect(position(page)).toHaveText('Questão 1 de 2');
-  await expect(main).toContainText('Do acervo: Arquiteturas de aplicações › Monolitos, microsserviços e arquiteturas orientadas a eventos');
   await expect(main).toContainText('Cebraspe · TESTE 2024 · item 1');
   await page.screenshot({ path: `${SCREENS}/19-acervo-importado.png` });
 
@@ -77,39 +76,30 @@ test('acervo da Cebraspe: sincroniza sozinho, filtra inéditas e todas, responde
   await expect(position(page)).toHaveText('Questão 1 de 3');
   await main.getByLabel('Filtrar por situação').selectOption('UNSOLVED');
 
-  // 4. Tópico B: item 3 (incerto) e item 2; "Não é deste tópico" tira só o 2 daqui
+  // 4. Tópico B: item 3 (incerto) e item 2; bancada limpa sem botões técnicos
   await openTopicQuestions(page, TOPIC_B);
   await expect(position(page)).toHaveText('Questão 1 de 2');
   await expect(main).toContainText('Classificação incerta');
   await main.getByRole('button', { name: 'Próxima questão' }).click();
   await expect(main).toContainText('Cebraspe · TESTE 2023 · item 2');
-  await main.getByRole('button', { name: 'Não é deste tópico' }).click();
-  await expect(position(page)).toHaveText('Questão 1 de 1');
-  await main.getByRole('button', { name: 'Filtros e busca' }).click();
-  await expect(main.getByRole('button', { name: 'Tirados deste tópico (1)' })).toBeVisible();
 
-  // 5. Tópico A: ao voltar, Inéditas mostra só o item 2 (1 de 1) e Todas mostra os 2 com selo "Já respondida"; desligar esvazia o tópico
+  // 5. Tópico A: ao voltar, Inéditas mostra só o item 2 (1 de 1) e Todas mostra os 2 com selo "Já respondida"
   await openTopicQuestions(page, TOPIC_A);
   await expect(position(page)).toHaveText('Questão 1 de 1');
   await main.getByRole('button', { name: 'Filtros e busca' }).click();
   await main.getByLabel('Filtrar por situação').selectOption('ALL');
   await expect(position(page)).toHaveText('Questão 1 de 2');
   await expect(main).toContainText('Já respondida · Acertou');
-  await main.getByRole('button', { name: 'Desligar este assunto' }).click();
-  await expect(main).toContainText('Ainda não há questões classificadas neste tópico.');
 
-  // 6. Recarregar: a tentativa, a ligação desligada e o item tirado continuam
+  // 6. Recarregar: a tentativa e o progresso continuam gravados no banco
   await expect(page.getByText('Salvo', { exact: true })).toBeVisible();
   await page.reload();
   await page.getByRole('button', { name: 'Mapa de Calor', exact: true }).click();
   await main.getByRole('button', { name: TOPIC_A }).click();
   await expect(main).toContainText('1 questão');
   await openTopicQuestions(page, TOPIC_A);
-  await expect(main).toContainText('Ainda não há questões classificadas neste tópico.');
-  await openTopicQuestions(page, TOPIC_B);
-  await expect(position(page)).toHaveText('Questão 1 de 1');
-  await expect(main).toContainText('Cebraspe · TESTE 2024 · item 3');
   await main.getByRole('button', { name: 'Filtros e busca' }).click();
-  await expect(main.getByRole('button', { name: 'Tirados deste tópico (1)' })).toBeVisible();
+  await main.getByLabel('Filtrar por situação').selectOption('ALL');
+  await expect(main).toContainText('Já respondida · Acertou');
   await page.screenshot({ path: `${SCREENS}/21-acervo-depois-de-recarregar.png`, fullPage: true });
 });
