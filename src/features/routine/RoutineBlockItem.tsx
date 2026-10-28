@@ -33,13 +33,13 @@ function topicLabel(topic: Topic | null): string {
 }
 
 const materialButton =
-  'rounded-md border border-slate-700 bg-slate-900 px-2 py-1 text-[11px] text-slate-300 hover:border-orange-500/50 hover:text-white';
+  'rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[11px] text-slate-300 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.06] hover:text-white transition-colors';
 
 /** Moldura de cada estado; a troca entre eles anima (cor, borda, opacidade, respiro). */
 const FRAME: Record<'done' | 'next' | 'open', string> = {
-  done: 'border-slate-800 px-3 py-2 text-slate-400 opacity-60',
-  next: 'border-slate-800 px-3 py-2',
-  open: 'border-orange-500/40 bg-orange-500/5 p-3',
+  done: 'border-white/[0.05] bg-transparent px-3 py-2 text-slate-400 opacity-60',
+  next: 'border-white/[0.07] bg-white/[0.015] px-3 py-2 hover:border-white/[0.12]',
+  open: 'border-l-2 border-l-[var(--fofo-accent)] border-t-white/[0.08] border-r-white/[0.08] border-b-white/[0.08] bg-[#0E121B] p-3.5 shadow-sm',
 };
 
 /**
@@ -78,7 +78,7 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
       <div className="flex items-center gap-2">
         <Check size={13} className="shrink-0 text-emerald-400" />
         <span className="truncate">{`${block.kind === 'WEEK_REVIEW' ? 'Revisão da semana · ' : ''}${subject.name}${topic ? ` · ${topicLabel(topic)}` : ''}`}</span>
-        <span className="ml-auto shrink-0">{formatDuration(block.durationMinutes)}</span>
+        <span className="ml-auto shrink-0 font-mono text-[11px] text-slate-400">{formatDuration(block.durationMinutes)}</span>
       </div>
     );
   }
@@ -90,7 +90,7 @@ function BlockHeader({ item, done, open, liveFocusMs }: { item: RoutineItem; don
       {block.kind === 'WEEK_REVIEW' && (
         <span className="shrink-0 rounded bg-blue-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-blue-200">Revisão da semana</span>
       )}
-      <span className={`ml-auto shrink-0 ${open ? 'text-slate-300' : 'text-slate-400'}`}>
+      <span className={`ml-auto shrink-0 font-mono text-[11px] ${open ? 'text-slate-300' : 'text-slate-400'}`}>
         {open ? `${formatDuration(doneMinutes)} de ${formatDuration(block.durationMinutes)}` : formatDuration(block.durationMinutes)}
       </span>
     </div>
@@ -120,9 +120,12 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={progressPercent}
-        className="h-1 overflow-hidden rounded-full bg-slate-800"
+        className="h-1 overflow-hidden rounded-full bg-white/[0.08]"
       >
-        <div className="h-full rounded-full bg-orange-500 transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progressPercent}%` }} />
+        <div
+          className="h-full rounded-full bg-[var(--fofo-accent)] transition-[width] duration-500 motion-reduce:transition-none"
+          style={{ width: `${progressPercent}%` }}
+        />
       </div>
       {hasTree && (
         <div className="space-y-1.5">
@@ -134,7 +137,7 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
               aria-label={`Subtópicos de ${parentTitle}`}
               className="flex w-full items-center gap-1.5 rounded-md py-0.5 text-left transition-colors duration-150 hover:text-white"
             >
-              {group.parent?.code && <span className="font-mono text-orange-300">{group.parent.code}</span>}
+              {group.parent?.code && <span className="font-mono text-[var(--fofo-accent)]">{group.parent.code}</span>}
               <span className="flex-1 truncate">{group.parent?.title ?? parentTitle}</span>
               <span className="shrink-0 font-normal text-[11px] text-slate-400">{`${group.members.length} subtópicos`}</span>
               <ChevronDown
@@ -153,10 +156,10 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
                     ? `${topicLabel(focusedTopic)} (tópico do bloco)`
                     : `Voltar ao tópico do bloco: ${topicLabel(topic)}`
                 }
-                className="flex w-full items-start gap-1.5 rounded-md border-l border-slate-700/80 pl-2 py-0.5 text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
+                className="flex w-full items-start gap-1.5 rounded-md border-l border-white/[0.15] pl-2 py-0.5 text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
               >
                 <span
-                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${focusedTopic.id === topic?.id ? 'bg-orange-400' : 'bg-slate-500'}`}
+                  className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${focusedTopic.id === topic?.id ? 'bg-[var(--fofo-accent)]' : 'bg-slate-500'}`}
                   title={focusedTopic.id === topic?.id ? 'Tópico do bloco' : undefined}
                 />
                 <span className="flex-1">{topicLabel(focusedTopic)}</span>
@@ -175,7 +178,7 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           aria-label={`Voltar ao tópico do bloco: ${topicLabel(topic)}`}
           className="block w-full rounded-md text-left text-sm font-medium leading-snug text-slate-100 transition-colors duration-150 hover:text-white"
         >
-          {topic.code && <span className="mr-1 font-mono text-orange-300">{topic.code}</span>}
+          {topic.code && <span className="mr-1 font-mono text-[var(--fofo-accent)]">{topic.code}</span>}
           <span>{topic.title}</span>
         </button>
       )}
@@ -200,7 +203,7 @@ function CurrentBody({ item, topic, current }: { item: RoutineItem; topic: Topic
           <button
             type="button"
             onClick={onStart}
-            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-orange-500 px-3 py-2 text-xs font-semibold text-white hover:bg-orange-400"
+            className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-2 text-xs font-semibold text-white hover:bg-[var(--fofo-accent-hover)] transition-colors shadow-sm"
           >
             <Play size={13} />
             {startLabel}

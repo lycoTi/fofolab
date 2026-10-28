@@ -1100,7 +1100,7 @@ export default function App() {
 
   return (
     <FofoOutfitProvider value={{ app: fofo.app, fofodoro: fofo.fofodoro, focus: fofoFocus, resting: fofoResting }}>
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-[var(--fofo-ground,#0B0E17)] text-slate-100 transition-colors duration-300">
       {/* Cabeçalho de ponta a ponta (fora das colunas). Escondido com CSS na leitura ampliada para o Pomodoro continuar contando */}
       {mode === 'student' && (
         <AppHeader
@@ -1206,7 +1206,7 @@ export default function App() {
             {(
               <>
                 <div
-                  className={`fofolab-tabs px-6 pt-2.5 border-b border-slate-800 items-center gap-2 bg-slate-900/20 overflow-x-auto ${
+                  className={`fofolab-tabs px-6 pt-2.5 border-b border-white/[0.08] items-center gap-1.5 bg-white/[0.01] overflow-x-auto ${
                     readerExpanded ? 'hidden' : 'flex'
                   }`}
                 >
@@ -1227,13 +1227,13 @@ export default function App() {
                         type="button"
                         key={tab.id}
                         onClick={() => selectTab(tab.id)}
-                        className={`px-4 py-2 text-xs font-medium rounded-t-lg border-b-2 flex shrink-0 items-center gap-2 whitespace-nowrap transition ${
+                        className={`px-3.5 py-2 text-xs font-medium rounded-t-lg border-b-2 flex shrink-0 items-center gap-2 whitespace-nowrap transition-colors ${
                           active
-                            ? 'border-orange-500 text-orange-300 bg-slate-900/70'
-                            : 'border-transparent text-slate-400 hover:text-slate-200'
+                            ? 'border-[var(--fofo-accent)] text-[var(--fofo-accent-text)] bg-white/[0.04]'
+                            : 'border-transparent text-slate-400 hover:text-slate-200 hover:bg-white/[0.015]'
                         }`}
                       >
-                        <Icon size={14} />
+                        <Icon size={14} className={active ? 'text-[var(--fofo-accent)]' : undefined} />
                         {tab.label}
                       </button>
                     );

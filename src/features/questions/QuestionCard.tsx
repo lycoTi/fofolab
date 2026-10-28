@@ -7,7 +7,6 @@ import {
   Eye,
   Gauge,
   Lightbulb,
-  XCircle,
 } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import { StatusSquare } from '../../components/StatusSquare';
@@ -44,8 +43,9 @@ function complexityStyle(level: QuestionComplexityProfile['levelLabel']): string
 }
 
 /**
- * Enunciado, confiança (obrigatória antes das alternativas — spec 11) e alternativas.
- * Antes de responder: saídas honestas (pista ou 1º contato) e paginação de questões seguindo o fluxo do olhar.
+ * Prancheta de Leitura / Folha de Prova (spec 11):
+ * Alto contraste tipográfico, ausência de caixas aninhadas desnecessárias,
+ * metadados estruturados e fluxo natural do olhar para as opções de resposta.
  */
 export function QuestionCard(props: {
   question: Question;
@@ -72,13 +72,13 @@ export function QuestionCard(props: {
   const badge = attemptSummary ? formatAttemptBadge(attemptSummary) : null;
 
   return (
-    <div className="space-y-4 rounded-xl border border-slate-800 bg-slate-900/60 p-5">
-      {/* Cabeçalho com identidade visual, divisão por chips e 1px border */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/80 pb-3 text-xs">
-        <div className="flex flex-wrap items-center gap-1.5">
+    <article aria-label="Folha de questão" className="rounded-2xl border border-white/[0.08] bg-[#0E121B] shadow-sm overflow-hidden transition-colors">
+      {/* Barra de metadados da questão com linhas de 1px e chips objetivos */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.06] bg-white/[0.015] px-5 py-3 text-xs">
+        <div className="flex flex-wrap items-center gap-2">
           {/* Origem e concurso */}
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-700/80 bg-slate-800/90 px-2.5 py-1 font-mono text-[11px] font-medium text-slate-200">
-            <Bookmark size={12} className="text-orange-400" />
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] font-medium text-slate-200">
+            <Bookmark size={12} className="text-[var(--fofo-accent)]" />
             <span>{origin}</span>
           </span>
 
@@ -96,7 +96,7 @@ export function QuestionCard(props: {
 
           {/* Selos de histórico / status */}
           {badge && (
-            <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-slate-950/80 px-2 py-0.5 text-[11px] text-slate-300">
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.02] px-2 py-0.5 text-[11px] text-slate-300">
               <StatusSquare tone={badge.tone} />
               {badge.label}
             </span>
@@ -111,7 +111,7 @@ export function QuestionCard(props: {
             </span>
           )}
           {annulled && (
-            <span className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-slate-900 px-2 py-0.5 text-[11px] text-slate-400">
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.02] px-2 py-0.5 text-[11px] text-slate-400">
               <Ban size={11} className="text-slate-400" />
               Anulada pela banca
             </span>
@@ -119,40 +119,46 @@ export function QuestionCard(props: {
         </div>
       </div>
 
-      <p className="whitespace-pre-line text-sm leading-relaxed text-slate-100">{question.statement}</p>
+      {/* Enunciado da questão: superfície editorial limpa com alto contraste */}
+      <div className="p-5 sm:p-6 space-y-5">
+        <p className="whitespace-pre-line text-[15px] leading-relaxed text-slate-100 font-normal">
+          {question.statement}
+        </p>
 
-      {annulled && (
-        <ul className="space-y-1.5 border-t border-slate-800 pt-3 text-sm text-slate-300">
-          {options.map((option) => (
-            <li key={option.key}>{optionName(option, isCertoErradoOptions(options))}</li>
-          ))}
-        </ul>
-      )}
+        {annulled && (
+          <ul className="space-y-1.5 border-t border-white/[0.06] pt-3 text-sm text-slate-300">
+            {options.map((option) => (
+              <li key={option.key}>{optionName(option, isCertoErradoOptions(options))}</li>
+            ))}
+          </ul>
+        )}
 
+        {!annulled && !props.locked && (
+          <ConfidencePicker value={props.confidence} disabled={props.picked !== null} onChange={props.onConfidence} />
+        )}
+        {!annulled && (props.confidence || props.picked) && (
+          <AnswerOptions options={options} finalAnswer={question.final_answer} picked={props.picked} onPick={props.onPick} />
+        )}
+      </div>
+
+      {/* Barra de ação inferior antes de responder */}
       {!annulled && !props.locked && (
-        <ConfidencePicker value={props.confidence} disabled={props.picked !== null} onChange={props.onConfidence} />
-      )}
-      {!annulled && (props.confidence || props.picked) && (
-        <AnswerOptions options={options} finalAnswer={question.final_answer} picked={props.picked} onPick={props.onPick} />
-      )}
-
-      {!annulled && !props.locked && (
-        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80 pt-3 text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] bg-white/[0.015] px-5 py-3 text-xs">
           <div className="flex flex-wrap items-center gap-2">
             {props.onHint && (
               <button
                 type="button"
                 onClick={props.onHint}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-orange-500/30 px-3 py-1.5 font-medium text-orange-200 transition-colors hover:bg-orange-500/10"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/5 px-3 py-1.5 font-medium text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/15"
               >
-                <Lightbulb size={13} className="text-orange-400" />
+                <Lightbulb size={13} className="text-[var(--fofo-accent)]" />
                 Pedir pista à FofoIA
               </button>
             )}
             <button
               type="button"
               onClick={props.onFirstContact}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-800 bg-slate-950/60 px-3 py-1.5 text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 py-1.5 text-slate-300 transition-colors hover:border-white/[0.18] hover:bg-white/[0.05] hover:text-white"
             >
               <Eye size={13} className="text-slate-400" />
               Ver explicação antes de responder
@@ -171,7 +177,7 @@ export function QuestionCard(props: {
                 onClick={position.onPrev}
                 aria-label="Questão anterior"
                 title="Questão anterior"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-800 bg-slate-950 text-slate-300 transition-colors hover:border-slate-700 hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
               >
                 <ChevronLeft size={14} />
               </button>
@@ -181,7 +187,7 @@ export function QuestionCard(props: {
                 onClick={position.onNext}
                 aria-label="Próxima questão"
                 title="Próxima questão"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-800 bg-slate-950 text-slate-300 transition-colors hover:border-slate-700 hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
               >
                 <ChevronRight size={14} />
               </button>
@@ -189,6 +195,6 @@ export function QuestionCard(props: {
           )}
         </div>
       )}
-    </div>
+    </article>
   );
 }

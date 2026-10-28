@@ -26,21 +26,53 @@ export function AnswerOptions({
 }) {
   const certoErrado = isCertoErradoOptions(options);
   const correct = findCorrectOption(options, finalAnswer);
+
+  if (certoErrado) {
+    return (
+      <div className="flex flex-col sm:flex-row gap-3 pt-2">
+        {options.map((o) => {
+          let tone =
+            'border-white/[0.08] bg-white/[0.02] text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.04]';
+          if (picked && o.key === correct?.key) {
+            tone = 'border-emerald-500/60 bg-emerald-500/15 text-emerald-100 font-semibold shadow-sm';
+          } else if (picked === o.key) {
+            tone = 'border-rose-500/60 bg-rose-500/15 text-rose-100 font-semibold shadow-sm';
+          }
+          return (
+            <button
+              key={o.key}
+              type="button"
+              disabled={picked !== null}
+              onClick={() => onPick(o.key)}
+              className={`flex-1 flex items-center justify-center h-11 rounded-xl border px-5 text-sm font-medium transition-all duration-150 disabled:cursor-default ${tone}`}
+            >
+              {optionName(o, true)}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
-    <div className={certoErrado ? 'flex gap-2' : 'space-y-1.5'}>
+    <div className="space-y-2 pt-2">
       {options.map((o) => {
-        let tone = 'border-slate-700 bg-slate-950/60 text-slate-200 hover:border-orange-500/50';
-        if (picked && o.key === correct?.key) tone = 'border-emerald-500/60 bg-emerald-500/10 text-emerald-100';
-        else if (picked === o.key) tone = 'border-rose-500/60 bg-rose-500/10 text-rose-100';
+        let tone =
+          'border-white/[0.08] bg-white/[0.02] text-slate-200 hover:border-[var(--fofo-accent)]/50 hover:bg-white/[0.04]';
+        if (picked && o.key === correct?.key) {
+          tone = 'border-emerald-500/60 bg-emerald-500/15 text-emerald-100 font-semibold shadow-sm';
+        } else if (picked === o.key) {
+          tone = 'border-rose-500/60 bg-rose-500/15 text-rose-100 font-semibold shadow-sm';
+        }
         return (
           <button
             key={o.key}
             type="button"
             disabled={picked !== null}
             onClick={() => onPick(o.key)}
-            className={`block w-full rounded-lg border px-3 py-2 text-left text-xs transition-colors duration-150 disabled:cursor-default ${tone}`}
+            className={`block w-full rounded-xl border p-3.5 text-left text-xs sm:text-sm leading-relaxed transition-all duration-150 disabled:cursor-default ${tone}`}
           >
-            {optionName(o, certoErrado)}
+            {optionName(o, false)}
           </button>
         );
       })}

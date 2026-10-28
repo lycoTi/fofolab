@@ -222,7 +222,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       <div className="space-y-4">
         {filters}
         {emptyTopic && props.loading && (
-          <p className="rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+          <p className="rounded-2xl border border-white/[0.08] bg-[#0E121B] p-8 text-center text-xs text-slate-400">
             Carregando as questões do acervo…
           </p>
         )}
@@ -235,7 +235,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           />
         )}
         {!emptyTopic && allSolvedInTopic && (
-          <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+          <div className="space-y-3 rounded-2xl border border-white/[0.08] bg-[#0E121B] p-8 text-center text-xs text-slate-400">
             <p className="text-sm text-slate-200">
               {inTopic
                 ? 'Você já respondeu todas as questões inéditas deste tópico.'
@@ -246,7 +246,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
                 <button
                   type="button"
                   onClick={() => setStatusFilter('RETRY')}
-                  className="rounded-lg border border-orange-500/40 bg-orange-500/10 px-3 py-1.5 font-medium text-orange-200 hover:bg-orange-500/20"
+                  className="rounded-lg border border-[var(--fofo-accent)]/40 bg-[var(--fofo-accent)]/10 px-3 py-1.5 font-medium text-[var(--fofo-accent-text)] hover:bg-[var(--fofo-accent)]/20 transition-colors"
                 >
                   {`Refazer as que errei ou chutei (${counts.retry})`}
                 </button>
@@ -254,7 +254,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
               <button
                 type="button"
                 onClick={() => setStatusFilter('ALL')}
-                className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+                className="rounded-lg border border-white/[0.1] px-3 py-1.5 text-slate-200 hover:border-[var(--fofo-accent)]/40 hover:text-[var(--fofo-accent-text)] transition-colors"
               >
                 {`Ver todas (${counts.all})`}
               </button>
@@ -262,7 +262,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
                 <button
                   type="button"
                   onClick={acervo.onShowGroup}
-                  className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+                  className="rounded-lg border border-white/[0.1] px-3 py-1.5 text-slate-200 hover:border-[var(--fofo-accent)]/40 hover:text-[var(--fofo-accent-text)] transition-colors"
                 >
                   {`Ver do tópico ${acervo.view.groupCode}`}
                 </button>
@@ -271,14 +271,14 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           </div>
         )}
         {!emptyTopic && !allSolvedInTopic && (
-          <div className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-8 text-center text-xs text-slate-400">
+          <div className="space-y-3 rounded-2xl border border-white/[0.08] bg-[#0E121B] p-8 text-center text-xs text-slate-400">
             <p>Nenhuma questão encontrada para o filtro selecionado. Experimente "Toda a matéria" ou "Todo o plano".</p>
             {props.scopeFilter === 'group' && (
               <div>
                 <button
                   type="button"
                   onClick={() => props.onChangeScopeFilter('subject')}
-                  className="rounded-lg border border-slate-700 px-3 py-1.5 text-slate-200 hover:border-orange-500/40 hover:text-orange-200"
+                  className="rounded-lg border border-white/[0.1] px-3 py-1.5 text-slate-200 hover:border-[var(--fofo-accent)]/40 hover:text-[var(--fofo-accent-text)] transition-colors"
                 >
                   Ver toda a matéria
                 </button>

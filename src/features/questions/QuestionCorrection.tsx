@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, GraduationCap, Loader2, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, GraduationCap, Loader2, Sparkles } from 'lucide-react';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { AnswerCorrection } from '../answer-flow/AnswerCorrection';
 import { DiagnosisPicker } from '../answer-flow/DiagnosisPicker';
@@ -58,14 +58,14 @@ export function QuestionCorrection(props: {
   return (
     <AnswerCorrection question={props.question} isCorrect={props.isCorrect} dissection={props.dissection} firstContact={props.firstContact}>
       {!props.dissection && (
-        <div className="space-y-2 rounded-lg border border-dashed border-slate-700 p-3 text-xs text-slate-300">
+        <div className="space-y-2.5 rounded-xl border border-dashed border-white/[0.12] bg-white/[0.015] p-3.5 text-xs text-slate-300">
           <p>Esta questão ainda não tem explicação.</p>
           {props.aiConfigured && props.onGenerateDissection ? (
             <button
               type="button"
               onClick={generate}
               disabled={generating}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-orange-500 px-3 py-1.5 font-semibold text-white transition-colors hover:bg-orange-400 disabled:opacity-60"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-1.5 font-semibold text-white transition-colors hover:bg-[var(--fofo-accent-hover)] disabled:opacity-60 shadow-sm"
             >
               {generating ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} />}
               {generating ? 'Gerando explicação…' : 'Gerar explicação'}
@@ -79,29 +79,29 @@ export function QuestionCorrection(props: {
         </div>
       )}
       {prerequisites.length > 0 && (
-        <p className="flex flex-wrap items-center gap-1.5 text-[11px] text-slate-400">
-          Conceitos-chave:
+        <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-400">
+          <span className="font-medium text-slate-400">Conceitos-chave:</span>
           {prerequisites.map((p) => (
-            <span key={p} className="rounded-md border border-purple-500/30 bg-purple-500/15 px-2 py-0.5 text-purple-300">
+            <span key={p} className="rounded-md border border-purple-500/30 bg-purple-500/15 px-2 py-0.5 text-[11px] text-purple-300">
               {p}
             </span>
           ))}
-        </p>
+        </div>
       )}
       {!props.firstContact && (
         <DiagnosisPicker isCorrect={props.isCorrect} confidence={props.confidence} value={props.diagnosis} onChange={props.onDiagnosis} />
       )}
-      {props.feedback && <p className="text-[11px] text-emerald-300">{props.feedback}</p>}
+      {props.feedback && <p className="text-xs text-emerald-300 font-medium">{props.feedback}</p>}
 
       {/* Barra de ação inferior: a numeração e navegação seguem o olhar do usuário */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/80 pt-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] pt-3.5">
         {props.onDeepen ? (
           <button
             type="button"
             onClick={props.onDeepen}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-orange-500/40 px-3 py-1.5 text-xs font-semibold text-orange-200 transition-colors hover:bg-orange-500/10"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/5 px-3 py-1.5 text-xs font-semibold text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/15"
           >
-            <GraduationCap size={13} className="text-orange-400" />
+            <GraduationCap size={13} className="text-[var(--fofo-accent)]" />
             Aprofundar com a FofoIA
           </button>
         ) : (
@@ -121,7 +121,7 @@ export function QuestionCorrection(props: {
                 onClick={position.onPrev}
                 aria-label="Questão anterior"
                 title="Questão anterior"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-800 bg-slate-950 text-slate-300 transition-colors hover:border-slate-700 hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
               >
                 <ChevronLeft size={14} />
               </button>
@@ -131,7 +131,7 @@ export function QuestionCorrection(props: {
                 onClick={position.onNext}
                 aria-label="Próxima questão"
                 title="Próxima questão"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-slate-800 bg-slate-950 text-slate-300 transition-colors hover:border-slate-700 hover:text-white disabled:opacity-40"
+                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
               >
                 <ChevronRight size={14} />
               </button>
@@ -141,7 +141,7 @@ export function QuestionCorrection(props: {
             <button
               type="button"
               onClick={props.onNextQuestion}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-3.5 py-1.5 text-xs font-semibold text-slate-100 transition-colors hover:bg-slate-700"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-white/[0.08] px-3.5 py-1.5 text-xs font-semibold text-slate-100 transition-colors hover:bg-white/[0.14] hover:text-white"
             >
               Próxima questão →
             </button>

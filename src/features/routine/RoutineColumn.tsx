@@ -50,9 +50,10 @@ export interface RoutineColumnProps {
   todayTime?: TodayTime;
 }
 
-const footerLink = 'flex items-center gap-1.5 text-xs font-medium text-orange-400 hover:text-orange-300';
+const footerLink =
+  'flex items-center gap-1.5 text-xs font-medium text-[var(--fofo-accent)] hover:underline transition-colors';
 
-/** Coluna esquerda da bancada (spec 09): o roteiro de hoje, com o bloco atual aberto e os outros recolhidos. */
+/** Coluna esquerda da bancada (spec 09): o roteiro de hoje como mesa de apoio contínua. */
 export function RoutineColumn(props: RoutineColumnProps) {
   const { items, extraBlock, blockRunning, peek, hint } = props;
   const currentIndex = items.findIndex((i) => i.status === 'current');
@@ -76,7 +77,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
 
   return (
     <div aria-label="Roteiro de hoje" className="flex h-full w-full min-w-0 flex-col">
-      <div className="shrink-0 border-b border-slate-800 py-3 pl-4 pr-10">
+      <div className="shrink-0 border-b border-white/[0.08] py-3 pl-4 pr-10">
         <h2 className="text-sm font-semibold text-white">{`Hoje · ${formatDuration(props.dayTotalMinutes)}`}</h2>
         {props.todayTime && <TodayTimeControl {...props.todayTime} disabled={blockRunning} />}
       </div>
@@ -87,8 +88,13 @@ export function RoutineColumn(props: RoutineColumnProps) {
       <QuestionLogPanel {...props.questionLog} />
       <Collapse open={Boolean(props.freeBlock)} className="shrink-0">
         {props.freeBlock && (
-          <section aria-label={props.freeBlockTitle ?? 'Bloco livre'} className="mx-3 mt-3 space-y-2 rounded-xl border border-orange-500/40 bg-orange-500/5 p-3">
-            <h3 className="text-xs font-semibold text-orange-300">{props.freeBlockTitle ?? 'Bloco livre · fora do roteiro de hoje'}</h3>
+          <section
+            aria-label={props.freeBlockTitle ?? 'Bloco livre'}
+            className="mx-3 mt-3 space-y-2 rounded-xl border border-[var(--fofo-accent)]/40 bg-[var(--fofo-accent)]/5 p-3"
+          >
+            <h3 className="text-xs font-semibold text-[var(--fofo-accent-text)]">
+              {props.freeBlockTitle ?? 'Bloco livre · fora do roteiro de hoje'}
+            </h3>
             {props.freeBlock}
           </section>
         )}
@@ -122,7 +128,7 @@ export function RoutineColumn(props: RoutineColumnProps) {
         )}
       </ol>
 
-      <div className="shrink-0 space-y-2 border-t border-slate-800 px-4 py-3">
+      <div className="shrink-0 space-y-2 border-t border-white/[0.08] px-4 py-3">
         {hint && (
           <div className="space-y-1.5 text-xs text-slate-300">
             <p>{hint}</p>

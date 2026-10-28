@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --fofo-accent: #f97316;
+  --fofo-accent-hover: #ea580c;
+  --fofo-accent-subtle: rgba(249, 115, 22, 0.12);
+  --fofo-accent-text: #fed7aa;
+  --fofo-accent-border: rgba(249, 115, 22, 0.35);
+  --fofo-secondary: #38bdf8;
+  --fofo-ground: #0b0e17;
+  --fofo-surface: #111622;
+  --fofo-surface-highlight: #182030;
+  --fofo-border-subtle: rgba(255, 255, 255, 0.08);
+  --fofo-ambient-gradient: radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.07), rgba(249, 115, 22, 0.06), transparent 70%);
+}
+
+body {
+  background-color: var(--fofo-ground);
+  color: #f1f5f9;
+  transition: background-color 400ms ease;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

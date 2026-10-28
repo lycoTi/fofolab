@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { FofoSprite, type FofoMotion } from './FofoSprite';
+import { applyFofoThemeToDom, getFofoTheme, type FofoThemeTokens } from './fofoThemes';
 import type { PoseId } from './poses';
 import { coordsForTimeZone, sunTimes } from './sun';
 import { pickOutfit, type OutfitId } from './wardrobe';
@@ -19,7 +20,20 @@ const OutfitContext = createContext<FofoOutfits>({ app: 'fofodeck', fofodoro: 'f
 
 /** O App escolhe as roupas uma vez; cabeçalho, FofoIA e avisos leem daqui sem receber a roupa por props. */
 export function FofoOutfitProvider({ value, children }: { value: FofoOutfits; children: ReactNode }) {
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      const theme = getFofoTheme(value.app);
+      applyFofoThemeToDom(theme, document.documentElement);
+    }
+  }, [value.app]);
+
   return <OutfitContext.Provider value={value}>{children}</OutfitContext.Provider>;
+}
+
+/** Tema visual adaptativo baseado na roupa/profissão ativa do Fofo. */
+export function useCurrentFofoTheme(): FofoThemeTokens {
+  const outfits = useContext(OutfitContext);
+  return getFofoTheme(outfits.app);
 }
 
 /** O Fofo com a roupa de agora (ou numa pose de momento). `auto` (padrão): se mexe, mas durante o foco só pisca. */
