@@ -270,6 +270,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:33": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -357,6 +394,46 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:37": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>tratamento-diferenciado-a-microempresas-e-empresas-de-pequeno-porte-lc-123-2006",
+              "confianca": 0.8
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>tratamento-diferenciado-a-microempresas-e-empresas-de-pequeno-porte-lc-123-2006",
+          "confianca": 0.8
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>lei-n-14-133-2021>licitacao-publica-conceito-principios-finalidade-do-procedimento-licitatorio-fiscalizacao-contratual-modalidades-dispensa-e-inexigibilidade-de-licitacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:41": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -410,6 +487,56 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>competencia-penal-conceito>criterios-determinadores-e-causas-modificadoras-da-competencia-de-foro-e-do-juizo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>competencia-penal-conceito>criterios-determinadores-e-causas-modificadoras-da-competencia-de-foro-e-do-juizo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:54": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>prisao-liberdade-provisoria-e-fianca",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-penal>prisao-medidas-cautelares-e-liberdade-provisoria",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>prisao-liberdade-provisoria-e-fianca",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-penal>prisao-medidas-cautelares-e-liberdade-provisoria",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:56": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -450,6 +577,39 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_001_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-penal>juiz-ministerio-publico-acusado-defensor-assistentes-e-auxiliares-da-justica-atos-de-terceiros>sujeitos-e-partes-do-processo",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-penal>atos-processuais-conceito-classificacao-forma-tempo-lugar-prazos>atos-das-partes-do-juiz-dos-auxiliares-da-justica-e-de-terceiros",
+              "confianca": 0.4
+            },
+            {
+              "id": "direito-penal>juiz-ministerio-publico-acusado-defensor-assistentes-e-auxiliares-da-justica-atos-de-terceiros",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-penal>juiz-ministerio-publico-acusado-defensor-assistentes-e-auxiliares-da-justica-atos-de-terceiros>sujeitos-e-partes-do-processo",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-penal>atos-processuais-conceito-classificacao-forma-tempo-lugar-prazos>atos-das-partes-do-juiz-dos-auxiliares-da-justica-e-de-terceiros",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:24": {
@@ -666,6 +826,35 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_002_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -1019,6 +1208,43 @@
         {
           "id": "fundamentos-de-evidencias-dados-e-inteligencia-artificial>leitura-de-dados-e-indicadores>interpretacao-de-tabelas-graficos-proporcoes-taxas-e-medidas-descritivas-denominadores-qualidade-e-comparabilidade",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TJ_CE_23_SERVIDOR:820_TJCE_SERVIDOR_CG1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+              "confianca": 0.85
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.6
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas",
+          "confianca": 0.85
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.6
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-e-nocoes-basicas-de-logica-conectivos-tautologia-contradicoes-contingencia-implicacoes-equivalencias-quantificadores-afirmacoes-e-negacoes",
+          "confianca": 0.5
         }
       ],
       "incerto": false,

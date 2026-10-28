@@ -96,6 +96,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_001_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilidade-administrativa-de-pessoas-juridicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-anticorrupcao-lei-n-12-846-2013-responsabilizacao-de-pessoas-juridicas-e-sancoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>instrumentos-de-responsabilizacao-e-solucoes-consensuais>processo-administrativo-disciplinar-e-processo-administrativo-de-responsabilizacao-de-pessoas-juridicas-cabimento-instrucao-garantias-e-decisao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_001_01:37": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -157,6 +194,56 @@
         {
           "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:41": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.65
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.65
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>balanco-patrimonial",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -236,6 +323,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_001_01:45": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_001_01:47": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -265,6 +381,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_001_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+              "confianca": 0.95
+            },
+            {
+              "id": "contabilidade-geral>analise-economico-financeira",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>analise-economico-financeira>analise-vertical-e-horizontal",
+          "confianca": 0.95
+        },
+        {
+          "id": "contabilidade-geral>analise-economico-financeira",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_001_01:50": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -281,6 +426,35 @@
         {
           "id": "contabilidade-geral>analise-economico-financeira",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+              "confianca": 0.7
+            },
+            {
+              "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>planejamento-execucao-comunicacao-e-monitoramento-finalidade-de-objetivos-escopo-criterios-e-perguntas",
+          "confianca": 0.7
+        },
+        {
+          "id": "fundamentos-de-auditoria-governamental-e-atuacao-integrada-da-cgu>ciclo-do-trabalho>priorizacao-por-risco-materialidade-e-relevancia-social-em-nivel-conceitual-adequacao-do-trabalho-as-finalidades-de-avaliacao-consultoria-ou-apuracao",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -1014,6 +1188,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_001_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-n-13-303-2016-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>organizacao-administrativa>autarquias-fundacoes-empresas-publicas-e-sociedades-de-economia-mista",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_001_01:81": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1038,6 +1241,64 @@
         {
           "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-dos-fluxos-de-caixa-metodos-direto-e-indireto",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>conceito-e-classificacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante>conceito-e-classificacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>realizavel-a-longo-prazo-nao-circulante",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_001_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>consolidacao-das-demonstracoes-contabeis-conceito-e-objetivos-da-consolidacao-procedimentos-e-criterios-contabeis-aplicados-obrigatoriedade-e-divulgacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>consolidacao-das-demonstracoes-contabeis-e-demonstracoes-separadas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>consolidacao-das-demonstracoes-contabeis-conceito-e-objetivos-da-consolidacao-procedimentos-e-criterios-contabeis-aplicados-obrigatoriedade-e-divulgacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>consolidacao-das-demonstracoes-contabeis-e-demonstracoes-separadas",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -1410,6 +1671,97 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_002_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>passivo-circulante-e-nao-circulante-classificacao-e-criterios-de-liquidacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>passivo-circulante-e-nao-circulante-classificacao-e-criterios-de-liquidacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>pronunciamentos-interpretacoes-e-orientacoes-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.85
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>pronunciamentos-interpretacoes-e-orientacoes-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.85
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>pronunciamentos-interpretacoes-e-orientacoes-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.5
+            },
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>pronunciamentos-interpretacoes-e-orientacoes-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_002_01:45": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1442,6 +1794,56 @@
         {
           "id": "contabilidade-geral>pronunciamentos-interpretacoes-e-orientacoes-do-comite-de-pronunciamentos-contabeis-cpc",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>transacoes-entre-partes-relacionadas",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1707
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>transacoes-entre-partes-relacionadas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:47": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estoques>criterios-de-avaliacao-de-estoques",
+              "confianca": 0.9
+            },
+            {
+              "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>estoques>criterios-de-avaliacao-de-estoques",
+          "confianca": 0.9
+        },
+        {
+          "id": "contabilidade-geral>mensuracao-do-valor-justo>definicao-de-valor-justo>aplicacao-para-ativos-passivos-e-instrumentos-patrimoniais",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -1499,6 +1901,27 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "TBG_23:888_TBG_002_01:65": {
@@ -1622,11 +2045,159 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_002_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>icms-diferencial-de-aliquota-e-operacoes-interestaduais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1706
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>icms-diferencial-de-aliquota-e-operacoes-interestaduais",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>icms-sobre-aquisicao-de-mercadorias-para-revenda",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>icms-sobre-aquisicao-de-mercadorias-para-revenda",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>icms-pis-e-cofins-incidencia-e-substituto-tributario",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1706
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>icms-pis-e-cofins-incidencia-e-substituto-tributario",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:79": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1706
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>icms-sobre-aquisicao-de-mercadorias-para-revenda",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>icms-sobre-aquisicao-de-mercadorias-para-revenda",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-tributario>pis-e-cofins-nao-cumulatividade-e-creditos",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-tributario>pis-cofins-base-de-calculo-e-regime-nao-cumulativo",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_002_01:81": {
       "opinioes": {
         "deepseek:deepseek-flash": {
           "assuntos": [],
           "versaoVocabulario": 1688
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_002_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1701
         }
       },
       "consenso": [],
@@ -1707,6 +2278,46 @@
         {
           "id": "contabilidade-avancada-e-contabilidade-de-custos>conceitos-gerais-e-terminologia-aplicavel-a-contabilidade-de-custos",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_003_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>analise-de-industrias-e-da-concorrencia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>concorrencia-perfeita-concorrencia-imperfeita-monopolio-e-oligopolio-definicao-e-caracterizacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "econometria>fluxos-financeiros-internacionais-e-mercados-de-capitais-ii-microeconomia>estruturas-de-mercado>analise-de-industrias-e-da-concorrencia",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -1828,6 +2439,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_004_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>linguagem-java-orientacao-a-objetos-heranca-e-polimorfismo",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>linguagem-java-orientacao-a-objetos-heranca-e-polimorfismo",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_004_01:34": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1902,6 +2542,43 @@
         {
           "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>modelagem-funcional-diagrama-entidade-relacionamento",
+              "confianca": 0.85
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>modelagem-funcional-e-diagrama-entidade-relacionamento",
+              "confianca": 0.8
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>modelagem-funcional-diagrama-entidade-relacionamento",
+          "confianca": 0.85
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>modelagem-funcional-e-diagrama-entidade-relacionamento",
+          "confianca": 0.8
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2081,6 +2758,43 @@
         {
           "id": "seguranca-da-informacao>seguranca-cibernetica>tecnicas-de-desenvolvimento-seguro",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_004_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+              "confianca": 0.8
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>devops-e-ci-cd-integracao-e-entrega-continuas",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>devops-e-devsecops>integracao-continua-ci-conceitos-basicos-e-processos-ageis-de-testes",
+          "confianca": 0.8
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>devops-e-ci-cd-integracao-e-entrega-continuas",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>devops-e-devsecops>modelo-de-versionamento-merge-branch-pipeline-ci-cd-continuous-integration-continuous-delivery",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2646,6 +3360,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_007_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>cadastro-ambiental-rural-car-e-codigo-florestal",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-ambiental>cadastro-ambiental-rural-car-e-regularizacao-ambiental",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>cadastro-ambiental-rural-car-e-codigo-florestal",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-ambiental>cadastro-ambiental-rural-car-e-regularizacao-ambiental",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_007_01:84": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2816,6 +3559,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_009_01:43": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>analise-e-avaliacao-de-riscos-probabilidade-e-impacto",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_009_01:46": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2861,6 +3633,43 @@
         {
           "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>analise-de-risco-de-acidentes-fta-eta-fmea",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-geral>gestao-de-riscos-e-analise-de-modos-de-falha-fmea",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-arvore-de-eventos-e-arvore-de-falhas",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>analise-de-risco-de-acidentes-fta-eta-fmea",
+          "confianca": 0.6
+        },
+        {
+          "id": "administracao-geral>gestao-de-riscos-e-analise-de-modos-de-falha-fmea",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2916,6 +3725,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_009_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>cipa-comissao-interna-de-prevencao-de-acidentes-e-de-assedio-nr-5",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>programas-de-prevencao-de-acidentes-e-acoes-preventivas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>cipa-comissao-interna-de-prevencao-de-acidentes-e-de-assedio-nr-5",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>programas-de-prevencao-de-acidentes-e-acoes-preventivas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_009_01:70": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2932,6 +3770,138 @@
         {
           "id": "engenharia-ambiental>sistemas-de-gestao-ambiental-iso-14001",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-ambiental>emergencias-ambientais-com-produtos-quimicos-perigosos",
+              "confianca": 0.5
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>identificacao-de-perigos-e-classificacao-de-produtos-quimicos-ghs",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-ambiental>emergencias-ambientais-com-produtos-quimicos-perigosos",
+          "confianca": 0.5
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:83": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-seguranca-contra-incendio",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-eletrica>prevencao-e-combate-a-incendios>sistemas-de-deteccao-e-alarme-de-incendios",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-civil>seguranca-contra-incendio-e-panico-em-edificacoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-seguranca-contra-incendio",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-eletrica>prevencao-e-combate-a-incendios>sistemas-de-deteccao-e-alarme-de-incendios",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-civil>seguranca-contra-incendio-e-panico-em-edificacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>programa-de-controle-medico-de-saude-ocupacional-pcmso",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>exames-medicos-e-periodicos-ocupacionais",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>programa-de-controle-medico-de-saude-ocupacional-pcmso",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>exames-medicos-e-periodicos-ocupacionais",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_009_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>agentes-nocivos-e-limites-de-tolerancia-ruido",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>agentes-nocivos-e-limites-de-tolerancia-ruido",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>normas-regulamentadoras-de-seguranca-e-saude-no-trabalho-nrs",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2995,6 +3965,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_009_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-ambiental>emergencias-ambientais-com-produtos-quimicos-perigosos",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-ambiental>emergencias-ambientais-com-produtos-quimicos-perigosos",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_009_01:99": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3011,6 +4002,130 @@
         {
           "id": "seguranca-e-saude-no-trabalho>plano-de-resposta-a-emergencias-e-evacuacao",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_010_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerenciamento-de-cronograma-e-caminho-critico",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-de-edificacoes>projeto-de-estruturas-de-concreto-armado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerenciamento-de-cronograma-e-caminho-critico",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-de-edificacoes>projeto-de-estruturas-de-concreto-armado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_010_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>analise-estrutural-e-comportamento-de-vigas-de-concreto-armado",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>analise-estrutural-e-comportamento-de-vigas-de-concreto-armado",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+          "confianca": 0.7
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_010_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_010_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>analise-estrutural-e-comportamento-de-vigas-de-concreto-armado",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>analise-estrutural-e-comportamento-de-vigas-de-concreto-armado",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-flexao-linha-neutra-e-esforcos",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-civil>estruturas-de-concreto-armado-e-protendido-materiais-aco-e-dimensionamento",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -3040,6 +4155,43 @@
         {
           "id": "direito-administrativo>licitacoes-e-contratos-lei-n-13-303-2016-regimes-de-execucao-de-obras-e-servicos",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_011_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-materiais>ensaios-mecanicos-e-propriedades-dos-materiais",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-materiais>propriedades-mecanicas-dos-materiais-elasticidade-modulo-de-young-e-deformacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-de-materiais>propriedades-mecanicas-e-aplicacao-de-acos-e-materiais-metalicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-materiais>ensaios-mecanicos-e-propriedades-dos-materiais",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-materiais>propriedades-mecanicas-dos-materiais-elasticidade-modulo-de-young-e-deformacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-de-materiais>propriedades-mecanicas-e-aplicacao-de-acos-e-materiais-metalicos",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -3119,6 +4271,172 @@
         {
           "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_014_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_014_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>gerenciamento-da-integridade-de-dutos-e-gasodutos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-uso-treinamento-e-conscientizacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-uso-treinamento-e-conscientizacao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-e-controle-de-riscos-em-maquinas-equipamentos-e-instalacoes",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>maquinas-e-equipamentos-nr-12-e-protecao-do-trabalhador",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1707
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>caldeiras-e-vasos-de-pressao",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>nr-13-caldeiras-vasos-de-pressao-e-tubulacoes",
+          "confianca": 0.75
         }
       ],
       "incerto": false,
@@ -3226,6 +4544,72 @@
         },
         {
           "id": "engenharia-civil>seguranca-contra-incendio-e-panico-em-edificacoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-e-normas-regulamentadoras-nr",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-e-responsabilidades-em-seguranca-do-trabalho",
+              "confianca": 0.6
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-e-normas-regulamentadoras-nr",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>equipamentos-de-protecao-individual-epi-e-responsabilidades-em-seguranca-do-trabalho",
+          "confianca": 0.6
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+              "confianca": 0.75
+            },
+            {
+              "id": "direito-do-trabalho>acordo-e-convencao-coletivos-e-duracao-do-trabalho",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-e-acidentes-do-trabalho-medidas-de-protecao-coletiva-e-individual-epi",
+          "confianca": 0.75
+        },
+        {
+          "id": "direito-do-trabalho>acordo-e-convencao-coletivos-e-duracao-do-trabalho",
           "confianca": 0.6
         }
       ],
@@ -3514,6 +4898,101 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_018_01:91": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>programa-de-controle-medico-de-saude-ocupacional-pcmso",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-pgr-nr-01",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>programa-de-controle-medico-de-saude-ocupacional-pcmso",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-controle-medico-de-saude-ocupacional",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>gerenciamento-de-riscos-ocupacionais-e-pgr-nr-01",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_018_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+              "confianca": 0.85
+            },
+            {
+              "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-agentes-quimicos-carcinogenicos",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>lesoes-musculoesqueleticas-relacionadas-ao-trabalho-ler-dort-e-vibracoes",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-e-saude-no-trabalho>prevencao-de-doencas-relacionadas-ao-trabalho-e-higiene-ocupacional",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_020_01:46": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3672,6 +5151,123 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_022_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_022_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-mecanica>manutencao-tipos-e-caracteristicas-preventiva-preditiva-e-corretiva",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-producao>gestao-da-manutencao-tipos-preditiva-e-preventiva",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-mecanica>manutencao-tipos-e-caracteristicas-preventiva-preditiva-e-corretiva",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-producao>gestao-da-manutencao-tipos-preditiva-e-preventiva",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_022_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-tempos-e-modos-verbais",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-tempos-e-modos-verbais",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>substituicao-de-palavras-ou-de-trechos-de-texto",
+          "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual>emprego-de-elementos-de-referenciacao-substituicao-e-repeticao-de-conectores-e-de-outros-elementos-de-sequenciacao-textual",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_CB1_01:13": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3742,6 +5338,35 @@
         {
           "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-dos-sinais-de-pontuacao",
           "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -4038,6 +5663,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "TBG_23:888_TBG_CB2_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "TBG_23:888_TBG_CB2_01:12": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4062,6 +5716,27 @@
         {
           "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB2_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -4473,6 +6148,56 @@
         {
           "id": "raciocinio-logico>analise-combinatoria",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>geometria-analitica-equacao-da-reta",
+              "confianca": 1
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>geometria-analitica-equacao-da-reta",
+          "confianca": 1
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TBG_23:888_TBG_CB3_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>geometria-analitica-equacao-da-parabola",
+              "confianca": 0.9
+            },
+            {
+              "id": "matematica-financeira>funcao-quadratica-e-parabola",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1698
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>geometria-analitica-equacao-da-parabola",
+          "confianca": 0.9
+        },
+        {
+          "id": "matematica-financeira>funcao-quadratica-e-parabola",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

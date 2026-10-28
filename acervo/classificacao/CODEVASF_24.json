@@ -67,6 +67,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_001_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>descentralizacao-orcamentaria-e-financeira",
+              "confianca": 0.75
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>termo-de-execucao-descentralizada-com-repasse",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>programacao-e-execucao-orcamentaria-e-financeira>descentralizacao-orcamentaria-e-financeira",
+          "confianca": 0.75
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>termo-de-execucao-descentralizada-com-repasse",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_001_01:109": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -310,6 +339,85 @@
         {
           "id": "administracao-geral>administracao-financeira>principios-gerais-de-alavancagem-operacional-e-financeira",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>agentes-administrativos>lei-n-8-112-1990-regime-juridico-dos-servidores-publicos-da-uniao-das-autarquias-e-das-fundacoes-publicas-federais",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>agentes-publicos>regime-juridico-dos-servidores-publicos-federais-admissao-demissao-concurso-publico-estagio-probatorio-vencimento-basico-acumulacao-regime-disciplinar-licenca-e-seguridade-social",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-da-qualidade-e-modelo-de-excelencia-gerencial",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>modelos-de-gestao-gestao-da-qualidade-gestao-do-conhecimento-gestao-por-processos-gestao-de-projetos-gestao-de-orcamento-publico-planejamento-estrategico-administracao-de-conflitos-instituicoes-e-organizacao-do-estado",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -721,6 +829,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_002_01:100": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-tributario>tributos-conceito-e-especies-impostos-taxas-contribuicao-de-melhoria-imunidades-impostos-da-uniao-impostos-dos-estados-e-do-distrito-federal-impostos-dos-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-constitucional>sistema-tributario-nacional>impostos-da-uniao-dos-estados-e-dos-municipios",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_002_01:102": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -737,6 +903,35 @@
         {
           "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-tributario>retencoes-na-fonte-de-tributos-federais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>retencoes-tributarias-na-fonte-em-pagamentos-pela-administracao-publica",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-tributario>retencoes-na-fonte-de-tributos-federais",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -817,6 +1012,72 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_002_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "contabilidade-geral>folha-de-pagamento-e-encargos-sociais",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-avancada-e-contabilidade-de-custos>ativo-intangivel-objetivo-alcance-definicoes-procedimentos-divulgacao-e-demais-aspectos-objeto-da-resolucao-cfc-n-1-303-2010-e-suas-alteracoes-conceitos-e-procedimentos-reconhecimento-e-mensuracao-reconhecimento-de-despesa-mensuracao-apos-reconhecimento-vida-util-ativo-intangivel-com-vida-util-definida-e-indefinida-recuperacao-do-valor-contabil-perda-por-reducao-ao-valor-recuperavel-de-ativos-baixa-e-alienacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "contabilidade-geral>folha-de-pagamento-e-encargos-sociais",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>despesas-e-outros-resultados-das-operacoes-continuadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "contabilidade-geral>elaboracao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>estrutura-caracteristicas-e-forma-de-apresentacao-de-demonstracoes-contabeis-pela-legislacao-societaria-e-pelos-pronunciamentos-tecnicos-do-comite-de-pronunciamentos-contabeis-cpc>demonstracao-do-resultado-do-exercicio",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>despesas-e-outros-resultados-das-operacoes-continuadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_002_01:63": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -870,6 +1131,35 @@
         {
           "id": "contabilidade-geral>passivo-exigivel>conceitos-gerais-avaliacao-reconhecimento-mensuracao-e-conteudo-do-passivo",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+              "confianca": 0.8
+            },
+            {
+              "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>informacao-contabil-aplicada-ao-controle>relacoes-entre-execucao-orcamentaria-financeira-e-patrimonio-reconhecimento-e-mensuracao-de-operacoes-usuais-com-receitas-despesas-ativos-e-passivos",
+          "confianca": 0.8
+        },
+        {
+          "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -956,6 +1246,43 @@
         },
         {
           "id": "contabilidade-geral>ativos-e-passivos-no-setor-publico-potencial-de-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+              "confianca": 0.5
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1713
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>despesa-publica",
+          "confianca": 0.8
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>estrutura-do-plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "confianca": 0.7
+        },
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
           "confianca": 0.5
         }
       ],
@@ -1051,6 +1378,35 @@
         },
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>etapas-da-receita-e-da-despesa-empenho-liquidacao-e-pagamento-restos-a-pagar-conta-unica-do-tesouro-nacional-e-gestao-de-disponibilidades",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+              "confianca": 0.85
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>abertura-e-reabertura-de-creditos-adicionais",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>demonstracoes-contabeis-aplicadas-ao-setor-publico",
+          "confianca": 0.85
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>abertura-e-reabertura-de-creditos-adicionais",
           "confianca": 0.6
         }
       ],
@@ -1276,6 +1632,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_002_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>risco-inerente-de-controle-e-de-deteccao",
+              "confianca": 0.95
+            },
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>risco-de-auditoria-distorcao-e-risco-de-deteccao",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>plano-de-auditoria-baseado-no-risco>risco-inerente-de-controle-e-de-deteccao",
+          "confianca": 0.95
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>risco-de-auditoria-distorcao-e-risco-de-deteccao",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_002_01:87": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1432,6 +1817,35 @@
         {
           "id": "direito-tributario>imposto-de-renda-pessoa-juridica-lucro-real-presumido-e-arbitrado",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_002_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-tributario>itcmd-imposto-sobre-transmissao-causa-mortis-e-doacao",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-tributario>sistema-tributario-nacional-na-constituicao-federal-principios-gerais-limitacoes-ao-poder-de-tributar-tributos-de-competencia-da-uniao-tributos-de-competencia-dos-estados-e-do-distrito-federal-tributos-de-competencia-dos-municipios-reparticao-das-receitas-tributarias",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -1598,6 +2012,77 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_003_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>oferta-e-demanda-agregadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "macroeconomia>curva-de-phillips-desemprego-e-inflacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>oferta-e-demanda-agregadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_003_01:67": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1682,6 +2167,64 @@
       "consenso": [
         {
           "id": "econometria>identidades-macroeconomicas-basicas>teoria-keynesiana>oferta-e-demanda-agregadas",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>necessidades-de-financiamento-do-setor-publico-nfsp",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-endividamento-publico-e-a-lrf>alternativas-de-financiamento-do-deficit-publico",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>necessidades-de-financiamento-do-setor-publico-nfsp",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>evolucao-da-participacao-do-setor-publico-na-atividade-economica>contabilidade-fiscal>necessidade-de-financiamento-do-setor-publico-nfsp",
+          "confianca": 0.5
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>o-endividamento-publico-e-a-lrf>alternativas-de-financiamento-do-deficit-publico",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>tributacao>caracteristicas-basicas-eficiencia-dos-impostos-equidade-horizontal-e-vertical-conflitos-entre-eficiencia-e-equidade",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>tributacao>caracteristicas-basicas-eficiencia-dos-impostos-equidade-horizontal-e-vertical-conflitos-entre-eficiencia-e-equidade",
           "confianca": 0.9
         }
       ],
@@ -1828,6 +2371,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_003_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>planos-economicos-e-estabilizacao-monetaria",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>planos-economicos-e-estabilizacao-monetaria",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+              "confianca": 0.9
+            },
+            {
+              "id": "macroeconomia>politica-monetaria>regime-de-metas-para-a-inflacao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+          "confianca": 0.9
+        },
+        {
+          "id": "macroeconomia>politica-monetaria>regime-de-metas-para-a-inflacao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_003_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>identidades-macroeconomicas-basicas>inflacao>inflacao-inercial",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1706
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>a-economia-brasileira-na-segunda-metade-do-seculo-xx>plano-real-estabilizacao-monetaria-e-reformas-da-decada-de-noventa",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>identidades-macroeconomicas-basicas>inflacao>inflacao-inercial",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_003_01:96": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1944,6 +2574,151 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:101": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>rodoviarias-sondagem-terraplenagem-pavimentacao-drenagem-sinalizacao-obras-de-arte-especiais-e-correntes",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-rodoviarias>construcao>execucao-de-servicos-de-terraplanagem-pavimentacao-drenagem-e-sinalizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>rodoviarias-sondagem-terraplenagem-pavimentacao-drenagem-sinalizacao-obras-de-arte-especiais-e-correntes",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-rodoviarias>construcao>execucao-de-servicos-de-terraplanagem-pavimentacao-drenagem-e-sinalizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:102": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>geotecnia-sondagem-spt-e-indice-de-resistencia-a-penetracao",
+              "confianca": 0.95
+            },
+            {
+              "id": "obras-rodoviarias>estudos-geotecnicos-analise-de-relatorio-de-sondagens",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>geotecnia-sondagem-spt-e-indice-de-resistencia-a-penetracao",
+          "confianca": 0.95
+        },
+        {
+          "id": "obras-rodoviarias>estudos-geotecnicos-analise-de-relatorio-de-sondagens",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>construcao>execucao-de-servicos-de-terraplanagem-pavimentacao-drenagem-e-sinalizacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-rodoviarias>especificacoes-de-servicos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>construcao>execucao-de-servicos-de-terraplanagem-pavimentacao-drenagem-e-sinalizacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-rodoviarias>especificacoes-de-servicos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>especificacoes-de-servicos>drenagem-e-obras-de-arte-especiais",
+              "confianca": 0.75
+            },
+            {
+              "id": "obras-rodoviarias>especificacoes-de-servicos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>especificacoes-de-servicos>drenagem-e-obras-de-arte-especiais",
+          "confianca": 0.75
+        },
+        {
+          "id": "obras-rodoviarias>especificacoes-de-servicos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-rodoviarias>especificacoes-de-servicos>pavimentacao>reforco-do-subleito-sub-base-base-e-revestimento-asfaltico",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>rodoviarias-sondagem-terraplenagem-pavimentacao-drenagem-sinalizacao-obras-de-arte-especiais-e-correntes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-rodoviarias>especificacoes-de-servicos>pavimentacao>reforco-do-subleito-sub-base-base-e-revestimento-asfaltico",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>analise-e-compatibilizacao-de-projetos>rodoviarias-sondagem-terraplenagem-pavimentacao-drenagem-sinalizacao-obras-de-arte-especiais-e-correntes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:108": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2039,6 +2814,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:115": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>equilibrio-economico-financeiro",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>equilibrio-economico-financeiro",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:59": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2103,6 +2899,43 @@
         {
           "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>orcamento-analitico-e-sintetico",
+              "confianca": 0.8
+            },
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.7
+            },
+            {
+              "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>avaliacao-de-custos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>orcamento-analitico-e-sintetico",
+          "confianca": 0.8
+        },
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.7
+        },
+        {
+          "id": "obras-planejamento-normas-fiscalizacao-e-legislacao>orcamento>avaliacao-de-custos",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -2253,6 +3086,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-civil>sinapi-e-custos-da-construcao-civil",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-civil>sinapi-e-custos-da-construcao-civil",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:78": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2348,6 +3202,56 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_004_01:84": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "arquitetura-e-urbanismo>comunicacao-visual-no-edificio-e-na-cidade>especificacoes-e-caderno-de-encargos>coberturas-e-impermeabilizacoes",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "arquitetura-e-urbanismo>comunicacao-visual-no-edificio-e-na-cidade>especificacoes-e-caderno-de-encargos>coberturas-e-impermeabilizacoes",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1713
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-de-edificacoes>construcao>organizacao-do-canteiro-de-obras-execucao-de-fundacoes-diretas-e-indiretas-alvenaria-concreto-estruturas-de-concreto-armado-e-protendido-estruturas-metalicas-inclusive-para-coberturas-impermeabilizacao-cobertura-esquadrias-pisos-revestimento-pinturas-instalacoes-eletrica-hidrossanitaria-prevencao-a-incendio-etc",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_004_01:88": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2364,6 +3268,35 @@
         {
           "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_004_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-mecanica>maquinas-hidraulicas-bombas-e-turbinas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>aproveitamento-hidreletrico>avaliacao-de-potencial-hidraulico-estruturas-componentes-turbinas-tipos-e-aplicacao-e-geradores-aspectos-construtivos-vantagens-e-desvantagens-em-relacao-a-outras-formas-de-geracao-de-energia-termica-eolica-nuclear-biomassa",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-mecanica>maquinas-hidraulicas-bombas-e-turbinas",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -2823,6 +3756,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_006_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biologia>indicadores-biologicos-de-qualidade-da-agua-e-coliformes",
+              "confianca": 0.85
+            },
+            {
+              "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-ambiental>recursos-hidricos-e-efluentes-liquidos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "biologia>indicadores-biologicos-de-qualidade-da-agua-e-coliformes",
+          "confianca": 0.85
+        },
+        {
+          "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-ambiental>recursos-hidricos-e-efluentes-liquidos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_006_01:84": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2847,6 +3817,80 @@
         {
           "id": "engenharia-ambiental>recursos-hidricos-e-efluentes-liquidos",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:85": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-ambiental>recursos-hidricos-e-efluentes-liquidos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-ambiental>poluicao-das-aguas-e-ambiente-marinho",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-ambiental>recursos-hidricos-e-efluentes-liquidos",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-ambiental>poluicao-das-aguas-e-ambiente-marinho",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_006_01:87": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-ambiental>contaminacao-e-remediacao-de-aquiferos-subterraneos",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-gestao-de-residuos",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-ambiental>residuos-solidos-e-aterros-sanitarios",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-ambiental>contaminacao-e-remediacao-de-aquiferos-subterraneos",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-ambiental>politica-nacional-de-residuos-solidos-e-gestao-de-residuos",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-ambiental>residuos-solidos-e-aterros-sanitarios",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -3153,6 +4197,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_007_01:109": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.8
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.8
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:110": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.9
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+          "confianca": 0.9
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_007_01:111": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3239,6 +4341,31 @@
         {
           "id": "nocoes-de-estatistica-probabilidade>populacao-e-amostra",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:114": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
+              "confianca": 0.35
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -3368,6 +4495,220 @@
         {
           "id": "estatistica-programacao-e-analise-de-dados>tecnicas-de-amostragem-amostragem-aleatoria-simples-estratificada-sistematica-e-por-conglomerados>tamanho-amostral",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+              "confianca": 0.75
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>distribuicoes-condicionais-e-independencia",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+          "confianca": 0.75
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>distribuicoes-condicionais-e-independencia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:57": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>probabilidade>funcao-de-probabilidade-e-densidade-de-probabilidade",
+              "confianca": 0.85
+            },
+            {
+              "id": "econometria>probabilidade>principais-distribuicoes-continuas-uniforme-normal-exponencial-qui-quadrado-t-e-f",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>probabilidade>funcao-de-probabilidade-e-densidade-de-probabilidade",
+          "confianca": 0.85
+        },
+        {
+          "id": "econometria>probabilidade>principais-distribuicoes-continuas-uniforme-normal-exponencial-qui-quadrado-t-e-f",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.8
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.8
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+              "confianca": 0.85
+            },
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.7
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "econometria>probabilidade>esperanca-matematica-e-variancia-de-uma-variavel-aleatoria",
+          "confianca": 0.85
+        },
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.7
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>variaveis-aleatorias-e-distribuicao-de-probabilidade",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_007_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.9
+            },
+            {
+              "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "estatistica-programacao-e-analise-de-dados>probabilidade-e-inferencia>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.9
+        },
+        {
+          "id": "econometria>probabilidade>variaveis-aleatorias-discretas-e-continuas",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -4070,6 +5411,101 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_008_01:117": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-ambiental>politica-nacional-de-seguranca-de-barragens",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_008_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-de-agrimensura-ou-geodesia>cartografia-e-escalas-de-cartas-topograficas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-de-agrimensura-ou-geodesia>cartografia-e-escalas-de-cartas-topograficas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_008_01:119": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-civil>geodesia-e-cartografia-sistemas-de-referencia-e-datum",
+              "confianca": 0.7
+            },
+            {
+              "id": "topografia>sistemas-de-coordenadas-e-cartografia-topografica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-civil>geodesia-e-cartografia-sistemas-de-referencia-e-datum",
+          "confianca": 0.7
+        },
+        {
+          "id": "topografia>sistemas-de-coordenadas-e-cartografia-topografica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_008_01:120": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4086,6 +5522,35 @@
         {
           "id": "geologia>cartografia-de-riscos-geologicos-e-seguranca-na-mineracao",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_008_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geologia>rochas-igneas-e-texturas",
+              "confianca": 0.95
+            },
+            {
+              "id": "geologia>mineralogia-e-tipos-de-rochas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "geologia>rochas-igneas-e-texturas",
+          "confianca": 0.95
+        },
+        {
+          "id": "geologia>mineralogia-e-tipos-de-rochas",
+          "confianca": 0.5
         }
       ],
       "incerto": false,
@@ -5113,6 +6578,97 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_011_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>sistemas-de-suporte-a-decisao-e-gestao-de-conteudo",
+              "confianca": 0.85
+            },
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>sistemas-de-suporte-a-decisao-e-gestao-de-conteudo",
+          "confianca": 0.85
+        },
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+              "confianca": 0.8
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>olap-online-analytical-processing",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>banco-de-dados>data-warehousing",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "inteligencia-de-negocios-business-intelligence>arquitetura-e-aplicacoes-de-data-warehouse-com-etl-e-olap",
+          "confianca": 0.8
+        },
+        {
+          "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao>olap-online-analytical-processing",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>banco-de-dados>data-warehousing",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:107": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+              "confianca": 0.95
+            },
+            {
+              "id": "ciencia-de-dados>analise-de-dados>solucoes-de-suporte-a-decisao",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>nocoes-de-mineracao-de-dados>conceituacao-e-caracteristicas-modelo-de-referencia-crisp-dm-tecnicas-para-pre-processamento-de-dados-tecnicas-e-tarefas-de-mineracao-de-dados-classificacao-regras-de-associacao-analise-de-agrupamentos-clusterizacao-deteccao-de-anomalias-modelagem-preditiva-aprendizado-de-maquina-mineracao-de-texto",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_011_01:111": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -5158,6 +6714,43 @@
         {
           "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
           "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-acerca-de-privacidade-e-protecao-de-dados-pessoais>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-lgpd-capitulos-i-ii-iii-iv-vii-viii-e-ix",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>lei-n-13-709-2018-lei-geral-de-protecao-de-dados-pessoais-e-suas-alteracoes",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -5224,6 +6817,35 @@
         {
           "id": "direito-administrativo>lei-geral-de-protecao-de-dados-lei-n-13-709-2018",
           "confianca": 0.55
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>protocolos-de-seguranca-e-criptografia-https-tls",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>protocolos-de-seguranca-e-criptografia-https-tls",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -5308,6 +6930,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_011_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gestao-de-riscos-e-continuidade-de-negocio",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_011_01:59": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -5332,6 +6983,143 @@
         {
           "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:61": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+              "confianca": 0.85
+            },
+            {
+              "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>servidores-e-sistemas-operacionais>linux-ubuntu-server-rocky-linux-conceitos-administracao-configuracao-servicos-de-rede",
+          "confianca": 0.85
+        },
+        {
+          "id": "tecnologia>infraestrutura-de-ti>sistemas-linux-e-microsoft-windows-server-fundamentos-arquitetura-operacao-e-administracao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>sistema-operacional-windows-recursos-e-funcionalidades",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>sistema-operacional-windows-recursos-e-funcionalidades",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-sistemas-e-plataformas-de-dados>sistemas-e-diretorios>administracao-de-windows-e-linux",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -5615,6 +7403,93 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "CODEVASF_24:989_CODEVASF_011_01:92": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>banco-de-dados>linguagem-sql-e-programacao-para-bancos-de-dados-linguagens-procedurais",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>banco-de-dados>linguagem-sql-e-programacao-para-bancos-de-dados-linguagens-procedurais",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:93": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:95": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "analise-de-informacao>banco-de-dados-relacionais",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais>conceitos-basicos-e-caracteristicas-metadados-tabelas-visoes-views-e-indices-chaves-e-relacionamentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "analise-de-informacao>banco-de-dados-relacionais",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "CODEVASF_24:989_CODEVASF_011_01:96": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -5639,6 +7514,72 @@
         {
           "id": "redes-sistemas-e-plataformas-de-dados>armazenamento>capacidade-desempenho-disponibilidade-e-protecao",
           "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:98": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+              "confianca": 0.9
+            },
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-tuning",
+          "confianca": 0.9
+        },
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>banco-de-dados>tecnicas-de-analise-de-desempenho-e-otimizacao-de-consultas-sql",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_011_01:99": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>balanceamento-de-carga-fail-over-e-replicacao-de-estado",
+              "confianca": 0.8
+            },
+            {
+              "id": "bancos-de-dados>banco-de-dados>topologia-tipica-de-ambientes-com-alta-disponibilidade-e-escalabilidade",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1698
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>balanceamento-de-carga-fail-over-e-replicacao-de-estado",
+          "confianca": 0.8
+        },
+        {
+          "id": "bancos-de-dados>banco-de-dados>topologia-tipica-de-ambientes-com-alta-disponibilidade-e-escalabilidade",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -5689,6 +7630,64 @@
         {
           "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>emprego-do-sinal-indicativo-de-crase",
           "confianca": 0.98
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -5779,6 +7778,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+              "confianca": 0.6
+            },
+            {
+              "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>planejamento-e-recursos>funcoes-do-planejamento-e-do-orcamento-relacao-entre-ppa-ldo-e-loa-receita-e-despesa-em-nivel-conceitual-restricoes-fiscais-escolhas-alocativas-e-sustentabilidade-das-acoes",
+          "confianca": 0.6
+        },
+        {
+          "id": "planejamento-e-orcamento-publico>orcamento>classificacoes-orcamentarias-da-receita-e-da-despesa-publica-utilizacao-origens-fundamentacao-economica",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "CODEVASF_24:989_CODEVASF_CB1_01:3": {
@@ -6083,6 +8111,27 @@
         {
           "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>atos-administrativos-conceitos-requisitos-atributos-classificacoes-e-especies",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "CODEVASF_24:989_CODEVASF_CB1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>direito-administrativo>servicos-publicos-conceitos-principios-formas-de-prestacao-concessao-permissao-e-autorizacao",
+          "confianca": 0.95
         }
       ],
       "incerto": false,

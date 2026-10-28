@@ -4229,6 +4229,15 @@
           ],
           "versaoVocabulario": 4
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -4242,11 +4251,15 @@
       "consenso": [
         {
           "id": "matematica-financeira>taxa-real-e-inflacao",
-          "confianca": 0.48
+          "confianca": 0.32
+        },
+        {
+          "id": "matematica-financeira>taxas-de-juros-nominal-efetiva-equivalente-real-e-aparente",
+          "confianca": 0.3
         },
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>governanca-e-finalidade-publica-de-empresas-estatais>coerencia-entre-objetivos-recursos-e-resultados-divulgados-compromissos-de-politicas-publicas-e-informacoes-da-carta-anual",
-          "confianca": 0.4
+          "confianca": 0.27
         }
       ],
       "incerto": true,
@@ -4879,6 +4892,19 @@
           ],
           "versaoVocabulario": 3
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>dominio-dos-mecanismos-de-coesao-textual",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -4892,11 +4918,7 @@
       "consenso": [
         {
           "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
-          "confianca": 0.48
-        },
-        {
-          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
-          "confianca": 0.45
+          "confianca": 0.6
         }
       ],
       "incerto": true,

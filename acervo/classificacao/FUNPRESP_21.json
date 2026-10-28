@@ -279,6 +279,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>normas-gerais-de-licitacao",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "gestao-de-contratos>licitacoes-e-contratos-administrativos-lei-n-14-133-2021-conceito-principios-contratacao-direta-modalidades-tipos-e-aspectos-procedimentais",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>normas-gerais-de-licitacao",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_001_01:55": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -443,6 +472,309 @@
         {
           "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-10-520-2002-e-demais-disposicoes-normativas-relativas-ao-pregao",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:63": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.95
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.95
+        },
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>legislacao-pertinente>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>lei-n-12-462-2011-e-suas-alteracoes-regime-diferenciado-de-contratacoes-publicas",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-11-531-2023-e-portaria-conjunta-mgi-mf-cgu-n-33-2023-convenios-e-instrumentos-congeneres",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>licitacoes-e-contratos-administrativos>decreto-n-11-531-2023-e-portaria-conjunta-mgi-mf-cgu-n-33-2023-convenios-e-instrumentos-congeneres",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:70": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:71": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_001_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>convenios-e-transferencias-instrucao-normativa-stn-n-01-1997",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -1200,6 +1532,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>desenvolvimento-de-pessoas-como-estrategia-de-gestao-e-a-interacao-dessa-atividade-com-as-demais-funcoes-do-processo-de-gestao-de-pessoas",
+              "confianca": 0.5
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+              "confianca": 0.5
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>governanca",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1698
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca",
+          "confianca": 0.7
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>comportamento-organizacional-relacoes-individuo-organizacao-motivacao-desempenho-engajamento-trabalho-em-equipe-e-colaboracao",
+          "confianca": 0.5
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-pessoas>desenvolvimento-de-pessoas-como-estrategia-de-gestao-e-a-interacao-dessa-atividade-com-as-demais-funcoes-do-processo-de-gestao-de-pessoas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:60": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>governanca>teorias-de-governanca-corporativa-teoria-da-agencia-e-teoria-dos-stakeholders",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:62": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1713
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>teoria-da-agencia-e-conflitos-de-interesse",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-comercial>sociedades-empresarias-classificacao-caracteristicas-distincoes-sociedades-nao-personificadas-sociedade-comum-e-em-conta-de-participacao-sociedades-personificadas-sociedade-simples-em-nome-coletivo-em-comandita-simples-limitada-anonima-em-comandita-por-acoes-cooperativa-e-coligadas-liquidacao-transformacao-incorporacao-fusao-e-da-cisao-das-sociedades-sociedade-dependente-de-autorizacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_003_01:63": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1216,6 +1635,101 @@
         {
           "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
           "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.9
+            },
+            {
+              "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.9
+        },
+        {
+          "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.85
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-processos>abordagens-de-melhoria-de-processos",
+              "confianca": 0.8
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.85
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-processos>abordagens-de-melhoria-de-processos",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>gestao-de-processos>conceitos-modelagem-de-processos-analise-de-processos-desenho-de-processos-gerenciamento-de-desempenho-de-processos-transformacao-de-processos-tecnologias-de-bpm",
+          "confianca": 0.7
         }
       ],
       "incerto": false,
@@ -1478,6 +1992,109 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:80": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.85
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+              "confianca": 0.7
+            },
+            {
+              "id": "estrategia-e-planejamento>gestao-de-processos-organizacionais>analise-padronizacao-e-melhoria-de-processos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.85
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+          "confianca": 0.7
+        },
+        {
+          "id": "estrategia-e-planejamento>gestao-de-processos-organizacionais>analise-padronizacao-e-melhoria-de-processos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.85
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.85
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_003_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+              "confianca": 0.9
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+              "confianca": 0.6
+            },
+            {
+              "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-processos-organizacionais>desenho-analise-padronizacao-e-melhoria-de-processos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-processos>tecnicas-de-mapeamento-analise-e-melhoria-de-processos",
+          "confianca": 0.9
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>mapeamento-e-melhoria-de-processos-de-negocio-bpi",
+          "confianca": 0.6
+        },
+        {
+          "id": "nocoes-de-administracao-e-gestao-publica>gestao-de-processos-organizacionais>desenho-analise-padronizacao-e-melhoria-de-processos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_003_01:83": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1694,6 +2311,69 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_004_01:87": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1852,6 +2532,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_004_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>linguagens-procedurais-para-programacao-de-stored-procedures-funcoes-e-triggers",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_005_01:117": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2005,6 +2714,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_007_01:82": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>valor-presente-liquido-e-analise-de-investimentos",
+              "confianca": 0.95
+            },
+            {
+              "id": "econometria>metodo-do-custo-capitalizado-e-perpetuidades",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>valor-presente-liquido-e-analise-de-investimentos",
+          "confianca": 0.95
+        },
+        {
+          "id": "econometria>metodo-do-custo-capitalizado-e-perpetuidades",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_007_01:85": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2034,6 +2772,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_008_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-do-trabalho>extincao-do-contrato-de-trabalho-e-aviso-previo",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-do-trabalho>fundo-de-amparo-ao-trabalhador-fat-e-seguro-desemprego",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-do-trabalho>extincao-do-contrato-de-trabalho-e-aviso-previo",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-do-trabalho>ferias-gratificacao-natalina-aviso-previo-e-fgts-reflexos-das-horas-extras-e-do-repouso-semanal-remunerado",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-do-trabalho>fundo-de-amparo-ao-trabalhador-fat-e-seguro-desemprego",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_008_01:92": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2058,6 +2833,35 @@
         {
           "id": "direito-do-trabalho>trabalho-temporario",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_009_01:68": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>previdencia-complementar-planos-de-beneficios-e-regimes-de-capitalizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>previdencia-complementar-planos-de-beneficios-e-regimes-de-capitalizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -2119,6 +2923,154 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+              "confianca": 0.8
+            },
+            {
+              "id": "estrategia-e-planejamento>fundamentos-de-estrategia-o-que-e-estrategia-quais-as-condicoes-necessarias-para-se-desenvolver-a-estrategia-quais-sao-as-questoes-chave-em-estrategia",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>balanced-scorecard-bsc-principais-conceitos-aplicacoes-mapa-estrategico-perspectivas-temas-estrategicos-objetivos-estrategicos-relacoes-de-causa-e-efeito-indicadores-metas-iniciativas-estrategicas",
+          "confianca": 0.8
+        },
+        {
+          "id": "estrategia-e-planejamento>fundamentos-de-estrategia-o-que-e-estrategia-quais-as-condicoes-necessarias-para-se-desenvolver-a-estrategia-quais-sao-as-questoes-chave-em-estrategia",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+              "confianca": 0.9
+            },
+            {
+              "id": "estrategia-e-planejamento>planejamento-estrategico>analise-swot",
+              "confianca": 0.8
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+          "confianca": 0.9
+        },
+        {
+          "id": "estrategia-e-planejamento>planejamento-estrategico>analise-swot",
+          "confianca": 0.8
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:108": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+              "confianca": 0.9
+            },
+            {
+              "id": "estrategia-e-planejamento>planejamento-estrategico>analise-swot",
+              "confianca": 0.8
+            },
+            {
+              "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1717
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>governanca-e-estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+          "confianca": 0.9
+        },
+        {
+          "id": "estrategia-e-planejamento>planejamento-estrategico>analise-swot",
+          "confianca": 0.8
+        },
+        {
+          "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_010_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>normalizacao",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1713
+        }
+      },
+      "consenso": [
+        {
+          "id": "bancos-de-dados>banco-de-dados>modelagem-e-normalizacao-de-dados",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>banco-de-dados>bancos-de-dados-relacionais>normalizacao",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-arquitetura-e-governanca-de-dados>modelagem-e-arquiteturas>modelos-relacional-documental-chave-valor-multidimensional-e-vetorial-normalizacao-e-integridade-transacoes-e-consistencia",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "FUNPRESP_21:648_FUNPRESP_EXE_010_01:113": {
@@ -2796,6 +3748,31 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:1": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+              "confianca": 0.4
+            },
+            {
+              "id": "conhecimentos-sobre-santa-catarina>realidade-etnica-social-historica-geografica-cultural-politica-e-economica-de-santa-catarina",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:10": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2909,6 +3886,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+              "confianca": 0.85
+            },
+            {
+              "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-setor-publico>comissao-de-etica-e-apuracao-de-conduta-etica",
+          "confianca": 0.85
+        },
+        {
+          "id": "etica-no-servico-publico>codigos-de-etica-e-comissoes-de-etica",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:23": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2967,6 +3973,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:29": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>malware-e-seguranca-em-dispositivos-e-e-mail",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>malware-e-seguranca-em-dispositivos-e-e-mail",
+          "confianca": 0.85
+        },
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:3": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2975,6 +4010,201 @@
         }
       },
       "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-geral-de-previdencia-social-filiacao-segurados-e-custeio",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-geral-de-previdencia-social-filiacao-segurados-e-custeio",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-previdenciario>contagem-reciproca-de-tempo-de-contribuicao-e-regimes-proprios-de-previdencia",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-previdenciario>contagem-reciproca-de-tempo-de-contribuicao-e-regimes-proprios-de-previdencia",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-lei-n-9-717-1998",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-publicos-segurados-e-dependentes",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-previdenciario>regime-proprio-de-previdencia-social-dos-servidores-lei-n-9-717-1998",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:35": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-previdenciario>regimes-de-previdencia-social-rgps-rpps-e-complementar",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-previdenciario>regimes-de-previdencia-social-rgps-rpps-e-complementar",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-fechada-e-portabilidade-lc-109-2001",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-fechada-e-portabilidade-lc-109-2001",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "atuaria>previdencia-complementar-e-resultado-tecnico-de-planos-de-beneficio-definido",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+              "confianca": 0.6
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-dos-servidores-publicos",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-lc-109-2001",
+          "confianca": 0.6
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-dos-servidores-publicos",
+          "confianca": 0.4
+        }
+      ],
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
@@ -2987,6 +4217,64 @@
       },
       "consenso": [],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+              "confianca": 0.95
+            },
+            {
+              "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-previdenciario>regime-de-previdencia-complementar-do-servidor-publico-federal-lei-n-12-618-2012",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-previdenciario>previdencia-complementar-planos-de-beneficios-e-entidades-fechadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:5": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.85
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.85
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:6": {
@@ -3016,6 +4304,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:7": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+              "confianca": 0.55
+            },
+            {
+              "id": "conhecimentos-sobre-santa-catarina>realidade-etnica-social-historica-geografica-cultural-politica-e-economica-de-santa-catarina",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direitos-humanos>teoria-geral-dos-direitos-humanos>origem-sentido-e-evolucao-historica-dos-direitos-humanos",
+          "confianca": 0.55
+        },
+        {
+          "id": "conhecimentos-sobre-santa-catarina>realidade-etnica-social-historica-geografica-cultural-politica-e-economica-de-santa-catarina",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "FUNPRESP_21:648_FUNPRESP_EXE_CB1_01:8": {

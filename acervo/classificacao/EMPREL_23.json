@@ -2974,6 +2974,19 @@
           ],
           "versaoVocabulario": 3
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
+              "confianca": 0.5
+            },
+            {
+              "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -2987,11 +3000,11 @@
       "consenso": [
         {
           "id": "licitacoes-contratos-e-convenios>lei-das-estatais-lei-n-13-303-2016",
-          "confianca": 0.48
+          "confianca": 0.6
         },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>criterios-de-julgamento-disposicoes-preliminares-procedimentos-conducao-do-processo-e-fase-preparatoria>menor-preco-ou-maior-desconto-instrucao-normativa-seges-me-n-73-de-30-de-setembro-de-2022",
-          "confianca": 0.45
+          "confianca": 0.47
         }
       ],
       "incerto": true,

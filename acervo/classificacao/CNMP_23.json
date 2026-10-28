@@ -16898,6 +16898,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -16910,12 +16923,8 @@
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.48
-        },
-        {
           "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
-          "confianca": 0.43
+          "confianca": 0.52
         }
       ],
       "incerto": true,
@@ -17254,6 +17263,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.85
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -17270,12 +17292,12 @@
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.49
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.53
         },
         {
-          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
-          "confianca": 0.45
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.48
         }
       ],
       "incerto": true,
@@ -17549,6 +17571,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -17565,11 +17600,11 @@
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.49
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.52
         },
         {
-          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
           "confianca": 0.43
         }
       ],
@@ -17853,6 +17888,15 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -17870,11 +17914,7 @@
       "consenso": [
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.49
-        },
-        {
-          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
-          "confianca": 0.48
+          "confianca": 0.61
         }
       ],
       "incerto": true,
@@ -18144,6 +18184,23 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+              "confianca": 0.8
+            },
+            {
+              "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+              "confianca": 0.7
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -18160,12 +18217,16 @@
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.49
+          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
+          "confianca": 0.55
         },
         {
-          "id": "direitos-humanos>direitos-humanos-em-especie-e-grupos-vulneraveis>direitos-humanos-das-minorias-e-de-vitimas-de-injusticas-historicas-mulher-negro-crianca-e-adolescente-idoso-pessoa-com-deficiencia-pessoas-em-situacao-de-rua-povos-indigenas-lgbtqiapn-lesbicas-gays-bissexuais-travestis-transexuais-e-transgeneros-queers-intersexos-pansexuais-nao-binarios-e-demais-possibilidades-de-orientacoes-sexuais-e-de-identidade-de-genero-quilombolas-ribeirinhos-ciganos-usuarios-dos-servicos-de-saude-mental-imigrantes-e-refugiados",
-          "confianca": 0.48
+          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>diversidade-e-acesso-a-direitos>relacoes-etnico-raciais-genero-e-sexualidade-pessoas-com-deficiencia-idade-povos-indigenas-e-comunidades-tradicionais-interseccionalidade-acessibilidade-e-barreiras-administrativas-e-digitais",
+          "confianca": 0.55
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.49
         }
       ],
       "incerto": true,

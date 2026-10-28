@@ -337,6 +337,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:103": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+              "confianca": 0.75
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-tributaria-estadual>icms-responsabilidade-tributaria-infracao-e-restituicao",
+          "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "SEFAZ_SE_25_AUDITOR:1E67DC47AC2FFFBDC5A009D414BF897874CCDF38D912B337FC94F8368C99A4DB:104": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3694,6 +3715,23 @@
           ],
           "versaoVocabulario": 4
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-saldo-credor-na-conta-caixa-por-falta-de-emissao-de-documentos-fiscais",
+              "confianca": 0.6
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -3711,11 +3749,15 @@
       "consenso": [
         {
           "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
-          "confianca": 0.55
+          "confianca": 0.62
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>identificacao-de-saldo-credor-na-conta-caixa-por-falta-de-emissao-de-documentos-fiscais",
+          "confianca": 0.52
         }
       ],
       "incerto": true,
-      "concordancia": "discordam"
+      "concordancia": "concordam"
     },
     "SEFAZ_SE_25_AUDITOR:F927E8429BCFC0E728F26BDAE85D57CF3F739BB42B858C0C70373EBFBC83C62E:89": {
       "opinioes": {

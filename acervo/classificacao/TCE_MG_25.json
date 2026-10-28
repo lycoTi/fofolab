@@ -2168,6 +2168,23 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
+              "confianca": 0.8
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -2185,7 +2202,15 @@
       "consenso": [
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>testes-e-sinais-de-irregularidade>concentracao-e-vinculos-entre-fornecedores-fracionamento-e-padroes-atipicos-comprovacao-fisica-e-documental-cruzamentos-de-dados-limites-de-amostras-dirigidas-por-risco",
-          "confianca": 0.73
+          "confianca": 0.75
+        },
+        {
+          "id": "auditoria-governamental-avaliacao-consultoria-e-apuracao>testes-e-amostragem>testes-de-controles-e-substantivos-inspecao-confirmacao-observacao-procedimentos-analiticos-e-recalculo-amostragem-estatistica-e-por-julgamento-tamanho-selecao-limitacoes-e-desenho-de-procedimentos-para-riscos-identificados",
+          "confianca": 0.6
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>execucao-da-auditoria>tecnicas-e-procedimentos-exame-documental-inspecao-fisica-conferencia-de-calculos-observacao-entrevista-circularizacao-conciliacoes-analise-de-contas-contabeis-revisao-analitica",
+          "confianca": 0.53
         }
       ],
       "incerto": true,
@@ -10211,6 +10236,35 @@
         {
           "id": "biblioteconomia>disseminacao-seletiva-da-informacao-e-servicos-de-informacao",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_MG_25:C60373A77C83FA035B8CF21DE398159F4CBDB36E8985C0A30BE1D79C9F5EB691:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "biblioteconomia>disseminacao-seletiva-da-informacao-e-servicos-de-informacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "biblioteconomia>bibliotecas-digitais-e-tecnologias-de-informacao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "biblioteconomia>disseminacao-seletiva-da-informacao-e-servicos-de-informacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "biblioteconomia>bibliotecas-digitais-e-tecnologias-de-informacao",
+          "confianca": 0.4
         }
       ],
       "incerto": false,

@@ -2141,6 +2141,15 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -2154,11 +2163,7 @@
       "consenso": [
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.49
-        },
-        {
-          "id": "direito-tributario>obrigacao-tributaria-conceito-especies-fato-gerador-hipotese-de-incidencia-sujeitos-ativo-e-passivo-solidariedade-capacidade-tributaria-domicilio-tributario",
-          "confianca": 0.48
+          "confianca": 0.63
         }
       ],
       "incerto": true,

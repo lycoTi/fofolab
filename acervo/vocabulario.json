@@ -1,5 +1,5 @@
 {
-  "versao": 1694,
+  "versao": 1717,
   "assuntos": [
     {
       "id": "administracao-de-recursos-humanos",
@@ -2941,6 +2941,15 @@
       "origem": "proposta"
     },
     {
+      "id": "administracao-publica-e-fundamentos-de-politicas-publicas>excelencia-nos-servicos-publicos",
+      "caminho": [
+        "Administração Pública e Fundamentos de Políticas Públicas",
+        "Excelência nos serviços públicos"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "administracao-publica-e-fundamentos-de-politicas-publicas>gestao-patrimonial-e-tombamento-de-bens-publicos",
       "caminho": [
         "Administração Pública e Fundamentos de Políticas Públicas",
@@ -3264,10 +3273,28 @@
       "origem": "proposta"
     },
     {
+      "id": "agronomia>fitopatologia-e-manejo-de-nematoides-bioinsumos-e-indutores-de-resistencia",
+      "caminho": [
+        "Agronomia",
+        "Fitopatologia e manejo de nematoides; bioinsumos e indutores de resistência"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "agronomia>olericultura-sistemas-de-producao-de-hortalicas-tuberosas",
       "caminho": [
         "Agronomia",
         "Olericultura: sistemas de produção de hortaliças tuberosas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "agronomia>recursos-geneticos-e-melhoramento-de-plantas",
+      "caminho": [
+        "Agronomia",
+        "Recursos genéticos e melhoramento de plantas"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -3592,6 +3619,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-agrupamento-k-means-e-clustering",
+      "caminho": [
+        "Aprendizado de Máquina e Inteligência Artificial",
+        "Algoritmos de agrupamento (K-means e clustering)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
@@ -4685,6 +4721,15 @@
       "caminho": [
         "Arquitetura e Organização de Computadores",
         "Pipeline e paralelismo de instruções"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "arquitetura-e-organizacao-de-computadores>processamento-paralelo-e-gpu-cuda",
+      "caminho": [
+        "Arquitetura e Organização de Computadores",
+        "Processamento paralelo e GPU/CUDA"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -5916,6 +5961,24 @@
       "caminho": [
         "Atualidades",
         "Meio ambiente e mudanças climáticas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "atualidades>pesquisa-desenvolvimento-e-inovacao-no-brasil",
+      "caminho": [
+        "Atualidades",
+        "Pesquisa, desenvolvimento e inovação no Brasil"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "atualidades>plano-de-transformacao-ecologica-e-economia-verde",
+      "caminho": [
+        "Atualidades",
+        "Plano de Transformação Ecológica e economia verde"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -7743,6 +7806,15 @@
       "origem": "edital"
     },
     {
+      "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>etica-profissional-em-auditoria-nbasp-issai-130-e-140-principios-fundamentais",
+      "caminho": [
+        "Auditoria Governamental, Compliance, Gestão de Risco e Governança",
+        "Ética profissional em auditoria (NBASP/ISSAI 130 e 140): princípios fundamentais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>evidencias",
       "caminho": [
         "Auditoria Governamental, Compliance, Gestão de Risco e Governança",
@@ -9426,6 +9498,15 @@
       "caminho": [
         "Biologia",
         "Ecologia de florestas tropicais e resiliência"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "biologia>ecologia-de-insetos",
+      "caminho": [
+        "Biologia",
+        "Ecologia de insetos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -14941,6 +15022,15 @@
       "origem": "edital"
     },
     {
+      "id": "controle-externo-da-administracao-publica>julgamento-das-contas-dos-chefes-do-poder-executivo-e-parecer-previo",
+      "caminho": [
+        "Controle Externo da Administração Pública",
+        "Julgamento das contas dos chefes do Poder Executivo e parecer prévio"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "controle-externo-da-administracao-publica>lei-complementar-n-202-2000-lei-organica-do-tribunal-de-contas-do-estado-de-santa-catarina",
       "caminho": [
         "Controle Externo da Administração Pública",
@@ -15041,6 +15131,15 @@
       "origem": "proposta"
     },
     {
+      "id": "controle-externo-da-administracao-publica>prestacao-de-contas-e-intervencao-estadual",
+      "caminho": [
+        "Controle Externo da Administração Pública",
+        "Prestação de contas e intervenção estadual"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "controle-externo-da-administracao-publica>processo-de-controle-externo-e-sessao-virtual-de-julgamento-em-tribunais-de-contas",
       "caminho": [
         "Controle Externo da Administração Pública",
@@ -15111,6 +15210,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "controle-externo-da-administracao-publica>sustacao-de-atos-e-contratos-pelos-tribunais-de-contas",
+      "caminho": [
+        "Controle Externo da Administração Pública",
+        "Sustação de atos e contratos pelos tribunais de contas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "controle-externo-da-administracao-publica>tomada-de-contas-especial",
@@ -18642,6 +18750,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-aeronautico>regulamento-espacial-brasileiro-reb-licenciamento-de-operador-de-lancamento",
+      "caminho": [
+        "Direito Aeronáutico",
+        "Regulamento Espacial Brasileiro (REB): licenciamento de operador de lançamento"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-aeronautico>seguranca-operacional-da-aviacao-civil-pnso-e-cso-br",
       "caminho": [
         "Direito Aeronáutico",
@@ -21076,6 +21193,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-civil>recursos-e-admissibilidade-recursal",
+      "caminho": [
+        "Direito Civil",
+        "Recursos e admissibilidade recursal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-civil>recursos-e-cabimento-de-agravo-de-instrumento",
       "caminho": [
         "Direito Civil",
@@ -22514,6 +22640,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-constitucional>nacionalidade-na-constituicao-federal",
+      "caminho": [
+        "Direito Constitucional",
+        "Nacionalidade na Constituição Federal"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-constitucional>ordem-de-precedencia-entre-autoridades-civis-militares-e-diplomaticas-em-cerimonias-oficiais",
       "caminho": [
         "Direito Constitucional",
@@ -23333,6 +23468,15 @@
       "caminho": [
         "Direito Constitucional",
         "Técnica Legislativa (LC 95/1998)"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-constitucional>teto-remuneratorio-e-acumulacao-de-cargos-publicos",
+      "caminho": [
+        "Direito Constitucional",
+        "Teto remuneratório e acumulação de cargos públicos"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -25186,6 +25330,15 @@
       "caminho": [
         "Direito Financeiro",
         "Lei de Responsabilidade Fiscal: despesa com pessoal e limites"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-financeiro>lei-de-responsabilidade-fiscal-fiscalizacao-e-controle",
+      "caminho": [
+        "Direito Financeiro",
+        "Lei de Responsabilidade Fiscal: fiscalização e controle"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -28157,6 +28310,15 @@
       "origem": "proposta"
     },
     {
+      "id": "direito-tributario>icms-diferencial-de-aliquota-e-operacoes-interestaduais",
+      "caminho": [
+        "Direito Tributário",
+        "ICMS: diferencial de alíquota e operações interestaduais"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "direito-tributario>icms-e-iss-incidencia-fato-gerador-e-nao-incidencia",
       "caminho": [
         "Direito Tributário",
@@ -28188,6 +28350,15 @@
       "caminho": [
         "Direito Tributário",
         "ICMS: local da operação e responsabilidade tributária"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "direito-tributario>icms-pis-e-cofins-incidencia-e-substituto-tributario",
+      "caminho": [
+        "Direito Tributário",
+        "ICMS, PIS e COFINS: incidência e substituto tributário"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -33166,6 +33337,15 @@
       "origem": "proposta"
     },
     {
+      "id": "engenharia-ambiental>gestao-de-recursos-hidricos-e-planos-de-bacia-hidrografica",
+      "caminho": [
+        "Engenharia Ambiental",
+        "Gestão de recursos hídricos e planos de bacia hidrográfica"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-ambiental>hidrologia-e-hidrometria",
       "caminho": [
         "Engenharia Ambiental",
@@ -33226,6 +33406,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "engenharia-arquitetura-e-governanca-de-dados>administracao-de-dados-papeis-atribuicoes-e-governanca-de-dados",
+      "caminho": [
+        "Engenharia, Arquitetura e Governança de Dados",
+        "Administração de dados: papéis, atribuições e governança de dados"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "engenharia-arquitetura-e-governanca-de-dados>arquitetura-de-dados-e-evolucao-de-esquemas",
@@ -35324,6 +35513,15 @@
       "origem": "edital"
     },
     {
+      "id": "engenharia-de-software-e-programacao>metricas-ageis-delivery-rate-throughput-e-velocity",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Métricas ágeis: delivery rate, throughput e velocity"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "engenharia-de-software-e-programacao>modelagem-de-dados",
       "caminho": [
         "Engenharia de Software e Programação",
@@ -35591,6 +35789,15 @@
       ],
       "sinonimos": [],
       "origem": "edital"
+    },
+    {
+      "id": "engenharia-de-software-e-programacao>programacao-orientada-a-objetos-encapsulamento-heranca-e-polimorfismo",
+      "caminho": [
+        "Engenharia de Software e Programação",
+        "Programação orientada a objetos: encapsulamento, herança e polimorfismo"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
     },
     {
       "id": "engenharia-de-software-e-programacao>qualidade",
@@ -44484,6 +44691,15 @@
       "origem": "edital"
     },
     {
+      "id": "governanca-e-gestao-de-projetos>gerenciamento-das-partes-interessadas",
+      "caminho": [
+        "Governança e Gestão de Projetos",
+        "Gerenciamento das partes interessadas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "governanca-e-gestao-de-projetos>gerenciamento-de-cronograma-e-caminho-critico",
       "caminho": [
         "Governança e Gestão de Projetos",
@@ -46324,6 +46540,15 @@
       "origem": "proposta"
     },
     {
+      "id": "interacao-humano-computador>usabilidade-e-heuristicas-de-design-de-interface",
+      "caminho": [
+        "Interação Humano-Computador",
+        "Usabilidade e heurísticas de design de interface"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "interacao-humano-computador>usabilidade-metas-de-eficiencia-eficacia-e-satisfacao",
       "caminho": [
         "Interação Humano-Computador",
@@ -47455,6 +47680,15 @@
       "caminho": [
         "Licitações, Contratos e Convênios",
         "Matriz de riscos em contratações públicas"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "licitacoes-contratos-e-convenios>orcamento-de-referencia-de-obras-e-servicos-de-engenharia-decreto-n-7-983-2013",
+      "caminho": [
+        "Licitações, Contratos e Convênios",
+        "Orçamento de referência de obras e serviços de engenharia (Decreto nº 7.983/2013)"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -49227,6 +49461,15 @@
       "origem": "proposta"
     },
     {
+      "id": "matematica-financeira>juros-compostos-calculo-e-aplicacoes",
+      "caminho": [
+        "Matemática Financeira",
+        "Juros compostos: cálculo e aplicações"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "matematica-financeira>juros-compostos-e-capitalizacao",
       "caminho": [
         "Matemática Financeira",
@@ -50544,6 +50787,15 @@
       "caminho": [
         "Medicina",
         "Hematologia: distúrbios de coagulação e anemias"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "medicina>hematologia-e-implicacoes-hematologicas-da-covid-19",
+      "caminho": [
+        "Medicina",
+        "Hematologia e implicações hematológicas da covid-19"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -62883,6 +63135,24 @@
       "origem": "proposta"
     },
     {
+      "id": "seguranca-da-informacao>malware-e-seguranca-em-dispositivos-e-e-mail",
+      "caminho": [
+        "Segurança da Informação",
+        "Malware e segurança em dispositivos e e-mail"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "seguranca-da-informacao>malware-e-tipos-de-ameacas",
+      "caminho": [
+        "Segurança da Informação",
+        "Malware e tipos de ameaças"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "seguranca-da-informacao>mecanismos-de-seguranca",
       "caminho": [
         "Segurança da Informação",
@@ -66762,6 +67032,15 @@
       "origem": "edital"
     },
     {
+      "id": "tecnologia>computacao-quantica-e-agricultura-digital",
+      "caminho": [
+        "Tecnologia",
+        "Computação quântica e agricultura digital"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "tecnologia>conceitos-basicos-de-hardware-e-software",
       "caminho": [
         "Tecnologia",
@@ -69877,6 +70156,23 @@
       "origem": "proposta"
     },
     {
+      "id": "visualizacao-de-dados",
+      "caminho": [
+        "Visualização de Dados"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "visualizacao-de-dados>tipos-de-visualizacao-de-dados",
+      "caminho": [
+        "Visualização de Dados",
+        "Tipos de visualização de dados"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
       "id": "zootecnia",
       "caminho": [
         "Zootecnia"
@@ -69979,6 +70275,15 @@
       "caminho": [
         "Zootecnia",
         "Produtos apícolas: qualidade e avaliação do mel"
+      ],
+      "sinonimos": [],
+      "origem": "proposta"
+    },
+    {
+      "id": "zootecnia>reproducao-animal-e-biotecnologias-da-reproducao",
+      "caminho": [
+        "Zootecnia",
+        "Reprodução animal e biotecnologias da reprodução"
       ],
       "sinonimos": [],
       "origem": "proposta"
@@ -82036,6 +82341,155 @@
       "versao": 1694,
       "mudancas": [
         "novo assunto: Comunicação › Produção editorial e projeto gráfico"
+      ]
+    },
+    {
+      "versao": 1695,
+      "mudancas": [
+        "novo assunto: Auditoria Governamental, Compliance, Gestão de Risco e Governança › Ética profissional em auditoria (NBASP/ISSAI 130 e 140): princípios fundamentais"
+      ]
+    },
+    {
+      "versao": 1696,
+      "mudancas": [
+        "novo assunto: Controle Externo da Administração Pública › Sustação de atos e contratos pelos tribunais de contas",
+        "novo assunto: Controle Externo da Administração Pública › Prestação de contas e intervenção estadual"
+      ]
+    },
+    {
+      "versao": 1697,
+      "mudancas": [
+        "novo assunto: Arquitetura e Organização de Computadores › Processamento paralelo e GPU/CUDA"
+      ]
+    },
+    {
+      "versao": 1698,
+      "mudancas": [
+        "novo assunto: Atualidades › Plano de Transformação Ecológica e economia verde",
+        "novo assunto: Atualidades › Pesquisa, desenvolvimento e inovação no Brasil"
+      ]
+    },
+    {
+      "versao": 1699,
+      "mudancas": [
+        "novo assunto: Controle Externo da Administração Pública › Julgamento das contas dos chefes do Poder Executivo e parecer prévio"
+      ]
+    },
+    {
+      "versao": 1700,
+      "mudancas": [
+        "novo assunto: Segurança da Informação › Malware e tipos de ameaças",
+        "novo assunto: Visualização de Dados",
+        "novo assunto: Visualização de Dados › Tipos de visualização de dados"
+      ]
+    },
+    {
+      "versao": 1701,
+      "mudancas": [
+        "novo assunto: Direito Civil › Recursos e admissibilidade recursal"
+      ]
+    },
+    {
+      "versao": 1702,
+      "mudancas": [
+        "novo assunto: Direito Constitucional › Teto remuneratório e acumulação de cargos públicos",
+        "novo assunto: Segurança da Informação › Malware e segurança em dispositivos e e-mail",
+        "novo assunto: Tecnologia › Computação quântica e agricultura digital"
+      ]
+    },
+    {
+      "versao": 1703,
+      "mudancas": [
+        "novo assunto: Agronomia › Recursos genéticos e melhoramento de plantas"
+      ]
+    },
+    {
+      "versao": 1704,
+      "mudancas": [
+        "novo assunto: Zootecnia › Reprodução animal e biotecnologias da reprodução"
+      ]
+    },
+    {
+      "versao": 1705,
+      "mudancas": [
+        "novo assunto: Licitações, Contratos e Convênios › Orçamento de referência de obras e serviços de engenharia (Decreto nº 7.983/2013)"
+      ]
+    },
+    {
+      "versao": 1706,
+      "mudancas": [
+        "novo assunto: Direito Tributário › ICMS: diferencial de alíquota e operações interestaduais",
+        "novo assunto: Direito Tributário › ICMS, PIS e COFINS: incidência e substituto tributário"
+      ]
+    },
+    {
+      "versao": 1707,
+      "mudancas": [
+        "novo assunto: Interação Humano-Computador › Usabilidade e heurísticas de design de interface"
+      ]
+    },
+    {
+      "versao": 1708,
+      "mudancas": [
+        "novo assunto: Aprendizado de Máquina e Inteligência Artificial › Algoritmos de agrupamento (K-means e clustering)"
+      ]
+    },
+    {
+      "versao": 1709,
+      "mudancas": [
+        "novo assunto: Engenharia Ambiental › Gestão de recursos hídricos e planos de bacia hidrográfica"
+      ]
+    },
+    {
+      "versao": 1710,
+      "mudancas": [
+        "novo assunto: Governança e Gestão de Projetos › Gerenciamento das partes interessadas"
+      ]
+    },
+    {
+      "versao": 1711,
+      "mudancas": [
+        "novo assunto: Engenharia, Arquitetura e Governança de Dados › Administração de dados: papéis, atribuições e governança de dados"
+      ]
+    },
+    {
+      "versao": 1712,
+      "mudancas": [
+        "novo assunto: Direito Aeronáutico › Regulamento Espacial Brasileiro (REB): licenciamento de operador de lançamento"
+      ]
+    },
+    {
+      "versao": 1713,
+      "mudancas": [
+        "novo assunto: Direito Financeiro › Lei de Responsabilidade Fiscal: fiscalização e controle",
+        "novo assunto: Biologia › Ecologia de insetos"
+      ]
+    },
+    {
+      "versao": 1714,
+      "mudancas": [
+        "novo assunto: Direito Constitucional › Nacionalidade na Constituição Federal"
+      ]
+    },
+    {
+      "versao": 1715,
+      "mudancas": [
+        "novo assunto: Administração Pública e Fundamentos de Políticas Públicas › Excelência nos serviços públicos"
+      ]
+    },
+    {
+      "versao": 1716,
+      "mudancas": [
+        "novo assunto: Engenharia de Software e Programação › Programação orientada a objetos: encapsulamento, herança e polimorfismo",
+        "novo assunto: Matemática Financeira › Juros compostos: cálculo e aplicações",
+        "novo assunto: Medicina › Hematologia e implicações hematológicas da covid-19",
+        "novo assunto: Engenharia de Software e Programação › Métricas ágeis: delivery rate, throughput e velocity"
+      ]
+    },
+    {
+      "versao": 1717,
+      "mudancas": [
+        "novo assunto: Agronomia › Fitopatologia e manejo de nematoides; bioinsumos e indutores de resistência"
       ]
     }
   ]

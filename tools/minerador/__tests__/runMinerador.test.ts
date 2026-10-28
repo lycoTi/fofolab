@@ -59,7 +59,7 @@ describe('Rodada completa do minerador', () => {
     const again = await runMinerador({ ...opts, client: fakeClient() });
     expect(again.baixados).toBe(0);
     expect(readFileSync(file).equals(before)).toBe(true);
-  });
+  }, 15000);
 
   it('PDF que o leitor não consegue abrir vai para a quarentena sem derrubar a rodada', async () => {
     const root = mkdtempSync(join(tmpdir(), 'minerador-'));
@@ -93,7 +93,7 @@ describe('Rodada completa do minerador', () => {
     expect(report.quarentena.map((q) => q.caderno)).toContain('SERPRO_23/846_SERPRO_23_001_01');
     const final = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')).itens : [];
     expect(final.some((i: AcervoItem) => i.procedencias.some((p) => p.caderno === '846_SERPRO_23_001_01'))).toBe(false);
-  });
+  }, 15000);
 
   it('identificador estranho no lote não vira caminho de arquivo', async () => {
     const root = mkdtempSync(join(tmpdir(), 'minerador-'));

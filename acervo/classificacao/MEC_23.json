@@ -1463,6 +1463,19 @@
           ],
           "versaoVocabulario": 5
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
+              "confianca": 0.8
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -1475,12 +1488,8 @@
       },
       "consenso": [
         {
-          "id": "planejamento-e-orcamento-publico>orcamento>receita-orcamentaria-e-despesa-orcamentaria-da-uniao>previsao-da-receita-e-arrecadacao",
-          "confianca": 0.45
-        },
-        {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
-          "confianca": 0.43
+          "confianca": 0.55
         }
       ],
       "incerto": true,

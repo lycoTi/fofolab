@@ -84,6 +84,17 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_001_01:28": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_001_01:33": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -250,6 +261,17 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_001_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_001_01:46": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -395,6 +417,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_001_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+              "confianca": 0.6
+            },
+            {
+              "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-em-lingua-inglesa-e-itens-gramaticais-relevantes-para-o-entendimento-dos-sentidos-dos-textos",
+          "confianca": 0.6
+        },
+        {
+          "id": "lingua-inglesa>compreensao-de-textos-variados-dominio-do-vocabulario-e-da-estrutura-da-lingua-ideias-principais-e-secundarias-explicitas-e-implicitas-relacoes-intratextuais-e-intertextuais",
+          "confianca": 0.5
+        },
+        {
+          "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_001_01:57": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -428,6 +487,27 @@
         }
       },
       "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-aeronautico>politica-de-aviacao-civil-e-competencias-institucionais",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-aeronautico>politica-de-aviacao-civil-e-competencias-institucionais",
+          "confianca": 0.55
+        }
+      ],
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
@@ -526,6 +606,35 @@
         {
           "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>as-politicas-publicas-no-estado-brasileiro-contemporaneo-descentralizacao-e-democracia-participacao-atores-sociais-e-controle-social-gestao-local-cidadania-e-equidade-social>ciclo-de-politicas-publicas-identificacao-do-problema-e-montagem-da-agenda-formulacao-de-alternativas-tomada-de-decisao-politica-implementacao-avaliacao-e-revisao",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:34": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processo-de-formulacao-e-desenvolvimento-de-politicas-construcao-de-agendas-formulacao-de-politicas-implementacao-de-politicas-financiamento-de-politicas-publicas-indicadores-de-desempenho-de-politicas-publicas",
+              "confianca": 0.6
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>politicas-publicas",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>processo-de-formulacao-e-desenvolvimento-de-politicas-construcao-de-agendas-formulacao-de-politicas-implementacao-de-politicas-financiamento-de-politicas-publicas-indicadores-de-desempenho-de-politicas-publicas",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -634,6 +743,64 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_002_01:38": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "licitacoes-contratos-e-convenios>administracao-de-contratos>legislacao-pertinente>lei-n-11-079-2004-e-suas-alteracoes-parcerias-publico-privadas-1-1-6-lei-n-8-987-1995-e-suas-alteracoes-lei-de-concessoes",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:39": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>ato-administrativo>invalidacao-extincao-anulacao-e-revogacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "direito-administrativo>atos-administrativos-anulacao-e-revogacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-administrativo>ato-administrativo>extincao-do-ato-administrativo>cassacao-anulacao-revogacao-e-convalidacao",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_002_01:40": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -700,6 +867,72 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_002_01:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-constitucional>nacionalidade-na-constituicao-federal",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-constitucional>nacionalidade-na-constituicao-federal",
+          "confianca": 0.95
+        },
+        {
+          "id": "direito-constitucional>constituicao-da-republica-federativa-do-brasil-de-1988",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:44": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>principio-da-irredutibilidade-de-vencimentos-e-contribuicao-previdenciaria-dos-servidores",
+              "confianca": 0.7
+            },
+            {
+              "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+              "confianca": 0.5
+            },
+            {
+              "id": "direito-do-trabalho>remuneracao-e-salario",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>principio-da-irredutibilidade-de-vencimentos-e-contribuicao-previdenciaria-dos-servidores",
+          "confianca": 0.7
+        },
+        {
+          "id": "direito-do-trabalho>duracao-do-trabalho-descanso-semanal-remunerado-ferias-e-trabalho-em-domingos-e-feriados",
+          "confianca": 0.5
+        },
+        {
+          "id": "direito-do-trabalho>remuneracao-e-salario",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_002_01:45": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -737,6 +970,43 @@
         {
           "id": "nocoes-de-administracao-e-gestao-publica>convergencias-e-diferencas-entre-a-gestao-publica-e-a-gestao-privada",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_002_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos",
+              "confianca": 0.6
+            },
+            {
+              "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+              "confianca": 0.4
+            },
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>excelencia-nos-servicos-publicos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>excelencia-nos-servicos-publicos",
+          "confianca": 0.8
+        },
+        {
+          "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>informacao-participacao-e-qualidade-dos-servicos",
+          "confianca": 0.6
+        },
+        {
+          "id": "estado-democracia-direitos-e-ciencia-politica>valor-publico-e-controle>resultados-socialmente-relevantes-legitimidade-confianca-e-direitos-controle-interno-externo-e-social-em-perspectiva-institucional-tensoes-entre-eficiencia-equidade-e-garantias",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -861,6 +1131,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_002_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>gestao-de-projetos>ferramentas-e-tecnicas-de-apoio-ao-gerenciamento-de-projetos",
+              "confianca": 0.8
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>gestao-de-projetos>ferramentas-e-tecnicas-de-apoio-ao-gerenciamento-de-projetos",
+          "confianca": 0.8
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_002_01:60": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -909,6 +1208,92 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-aeronautico>politica-de-aviacao-civil-e-competencias-institucionais",
+              "confianca": 0.55
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-aeronautico>politica-de-aviacao-civil-e-competencias-institucionais",
+          "confianca": 0.55
+        }
+      ],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:25": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>organizacao-administrativa>administracao-direta-e-indireta-descentralizacao-e-desconcentracao-agentes-publicos-funcoes-da-administracao-publica-formulacao-execucao-regulacao-e-controle-de-politicas-e-acoes-publicas-arranjos-de-cooperacao-com-entes-federativos-e-entidades-nao-estatais",
+              "confianca": 0.3
+            },
+            {
+              "id": "direito-aeronautico>regulamento-espacial-brasileiro-reb-licenciamento-de-operador-de-lancamento",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1712
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-aeronautico>regulamento-espacial-brasileiro-reb-licenciamento-de-operador-de-lancamento",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:27": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+              "confianca": 0.6
+            },
+            {
+              "id": "conhecimentos-especificos>politica-nacional-de-desenvolvimento-das-atividades-espaciais-pndae",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>politicas-publicas-de-ciencia-tecnologia-e-inovacao-e-agencias-de-fomento",
+          "confianca": 0.6
+        },
+        {
+          "id": "conhecimentos-especificos>politica-nacional-de-desenvolvimento-das-atividades-espaciais-pndae",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "AEB_24:051_AEB_24_003_01:28": {
@@ -964,6 +1349,27 @@
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>execucao-e-responsabilidade-fiscal>limites-metas-e-transparencia-fiscal-divida-e-riscos-fiscais-no-escopo-do-programa",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:36": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "governanca-e-gestao-de-projetos>gerenciamento-das-partes-interessadas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "governanca-e-gestao-de-projetos>gerenciamento-das-partes-interessadas",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -1048,6 +1454,114 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_003_01:46": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-aeroespacial>mecanica-orbital-e-manobras-de-mudanca-de-inclinacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-aeroespacial>mecanica-orbital-e-manobras-de-mudanca-de-inclinacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:49": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+              "confianca": 0.7
+            },
+            {
+              "id": "engenharia-aeroespacial>segmentos-de-sistemas-espaciais-solo-espacial-e-lancamento",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-aeroespacial>segmentos-de-sistemas-espaciais-solo-espacial-e-lancamento",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-aeroespacial>sistemas-espaciais-veiculos-lancadores-e-propulsao",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:56": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-tributario>imposto-de-renda-pessoa-juridica-lucro-real-presumido-e-arbitrado",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-tributario>imposto-de-renda-pessoa-juridica-lucro-real-presumido-e-arbitrado",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_003_01:57": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1093,6 +1607,35 @@
         {
           "id": "estado-democracia-direitos-e-ciencia-politica>estado-e-modelos-de-desenvolvimento-economico>arranjos-de-desenvolvimento-com-diferentes-combinacoes-de-mercado-planejamento-regulacao-provisao-publica-e-atuacao-empresarial-do-estado-industrializacao-inovacao-e-transformacao-produtiva",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_003_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "direito-administrativo>marco-legal-de-ciencia-tecnologia-e-inovacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "direito-administrativo>marco-legal-de-ciencia-tecnologia-e-inovacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "direito-administrativo>lei-de-inovacao-e-incentivos-a-pesquisa-e-ao-desenvolvimento-cientifico-e-tecnologico",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -1335,6 +1878,106 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_CB1_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:20": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_CB1_01:5": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1359,6 +2002,35 @@
         {
           "id": "lingua-portuguesa>redacao-oficial-e-padrao-oficio",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+              "confianca": 0.95
+            },
+            {
+              "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "etica-no-servico-publico>etica-no-setor-publico>decreto-n-1-171-1994-codigo-de-etica-profissional-do-servico-publico",
+          "confianca": 0.95
+        },
+        {
+          "id": "etica-no-setor-publico>codigo-de-etica-profissional-do-servico-publico-decreto-n-1-171-1994",
+          "confianca": 0.9
         }
       ],
       "incerto": false,
@@ -1535,6 +2207,90 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "AEB_24:051_AEB_24_CB2_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>malware-e-tipos-de-ameacas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>malware-e-tipos-de-ameacas",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:18": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "visualizacao-de-dados>tipos-de-visualizacao-de-dados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "visualizacao-de-dados>tipos-de-visualizacao-de-dados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:2": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "AEB_24:051_AEB_24_CB2_01:20": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1551,6 +2307,77 @@
         {
           "id": "analise-de-informacao>mineracao-de-dados-e-business-intelligence",
           "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:3": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.85
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:4": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "AEB_24:051_AEB_24_CB2_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.95
         }
       ],
       "incerto": false,

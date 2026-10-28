@@ -120,6 +120,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:0CE54BE871E478A99D85AEE00C0566975103F0B9ED0564ABFEABF86AAA8CE15A:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-ambiental>gestao-de-recursos-hidricos-e-planos-de-bacia-hidrografica",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-ambiental>gestao-de-recursos-hidricos-e-planos-de-bacia-hidrografica",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:0CE54BE871E478A99D85AEE00C0566975103F0B9ED0564ABFEABF86AAA8CE15A:4": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -147,6 +168,35 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:0CE54BE871E478A99D85AEE00C0566975103F0B9ED0564ABFEABF86AAA8CE15A:42": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-agricola>gestao-de-bacias-hidrograficas-e-uso-da-terra",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>gestao-de-recursos-hidricos-e-qualidade-da-agua",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-agricola>gestao-de-bacias-hidrograficas-e-uso-da-terra",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "ANA_24:957_ANA_001_01:100": {
@@ -352,6 +402,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_001_01:66": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "matematica-financeira>planos-de-amortizacao-de-emprestimos-e-financiamentos>sistema-de-amortizacao-constante-sac",
+              "confianca": 1
+            },
+            {
+              "id": "matematica-financeira>planos-de-amortizacao-de-emprestimos-e-financiamentos",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "matematica-financeira>planos-de-amortizacao-de-emprestimos-e-financiamentos>sistema-de-amortizacao-constante-sac",
+          "confianca": 1
+        },
+        {
+          "id": "matematica-financeira>planos-de-amortizacao-de-emprestimos-e-financiamentos",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_001_01:67": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -476,6 +555,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+              "confianca": 0.9
+            },
+            {
+              "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>tabelas-verdade",
+          "confianca": 0.9
+        },
+        {
+          "id": "raciocinio-logico>estruturas-logicas-conectivos-tautologia-e-contradicoes-implicacoes-e-equivalencias-afirmacoes-e-negacoes-argumento-silogismo-validade-de-argumento-logica-sentencial-ou-proposicional-proposicoes-simples-e-compostas>proposicoes-simples-e-compostas",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_CB1_01:16": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -584,6 +692,64 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "ANA_24:957_ANA_CB1_01:23": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+              "confianca": 0.95
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1702
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>infraestrutura-de-ti>cloud-computing-iaas-paas-saas-aws-azure-microsoft-365-conceitos-configuracao-e-administracao",
+          "confianca": 0.95
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>tecnologias-emergentes-e-tendencias>computacao-em-nuvem-saas-paas-iaas-migracao-para-a-nuvem-estrategias-de-escalabilidade",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:24": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+              "confianca": 0.95
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciencia-de-dados>linguagens-de-programacao>python-sintaxe-variaveis-tipos-de-dados-e-estruturas-de-controle-de-fluxo",
+          "confianca": 0.95
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>desenvolvimento-de-sistemas>linguagens-de-programacao-java-javascript-python-php-frameworks-spring-hibernate-angular-laravel",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "ANA_24:957_ANA_CB1_01:26": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -687,6 +853,109 @@
         {
           "id": "lingua-portuguesa>argumentacao-e-tipos-de-argumento",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:31": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "geografia>hidrogeologia-e-aguas-subterraneas",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "geografia>hidrogeologia-e-aguas-subterraneas",
+          "confianca": 0.9
+        },
+        {
+          "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:32": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+              "confianca": 0.85
+            },
+            {
+              "id": "engenharia-civil>ciclo-hidrologico-e-escoamento-superficial",
+              "confianca": 0.75
+            },
+            {
+              "id": "engenharia-agricola>bacias-hidrograficas-ciclo-da-agua-divisores-e-rede-de-drenagem",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1705
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+          "confianca": 0.85
+        },
+        {
+          "id": "engenharia-civil>ciclo-hidrologico-e-escoamento-superficial",
+          "confianca": 0.75
+        },
+        {
+          "id": "engenharia-agricola>bacias-hidrograficas-ciclo-da-agua-divisores-e-rede-de-drenagem",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "ANA_24:957_ANA_CB1_01:33": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+              "confianca": 0.9
+            },
+            {
+              "id": "engenharia-agricola>bacias-hidrograficas-ciclo-da-agua-divisores-e-rede-de-drenagem",
+              "confianca": 0.8
+            },
+            {
+              "id": "engenharia-civil>ciclo-hidrologico-e-escoamento-superficial",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "obras-hidricas>hidrologia-e-caracterizacao-de-bacias-hidrograficas",
+          "confianca": 0.9
+        },
+        {
+          "id": "engenharia-agricola>bacias-hidrograficas-ciclo-da-agua-divisores-e-rede-de-drenagem",
+          "confianca": 0.8
+        },
+        {
+          "id": "engenharia-civil>ciclo-hidrologico-e-escoamento-superficial",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

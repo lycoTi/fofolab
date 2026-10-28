@@ -8428,6 +8428,15 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [],
           "versaoVocabulario": 11
@@ -8436,7 +8445,7 @@
       "consenso": [
         {
           "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
-          "confianca": 0.45
+          "confianca": 0.58
         }
       ],
       "incerto": true,
@@ -32498,6 +32507,35 @@
         {
           "id": "realidade-brasileira>aspectos-historicos-culturais-e-etnicos-do-acre",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TCE_AC_24:993_TCE_AC_CB3_01:19": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "historia-do-brasil>tratado-de-petropolis-e-questao-do-acre",
+              "confianca": 0.85
+            },
+            {
+              "id": "historia-do-brasil>formacao-territorial-e-ocupacao-do-acre-e-da-amazonia",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "historia-do-brasil>tratado-de-petropolis-e-questao-do-acre",
+          "confianca": 0.85
+        },
+        {
+          "id": "historia-do-brasil>formacao-territorial-e-ocupacao-do-acre-e-da-amazonia",
+          "confianca": 0.6
         }
       ],
       "incerto": false,

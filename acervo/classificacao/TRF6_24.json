@@ -5917,6 +5917,23 @@
           ],
           "versaoVocabulario": 4
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>topicos-especiais>jurisprudencia-do-tribunal-de-contas-da-uniao-acordao-n-2-037-2019-tcu-plenario-e-acordao-n-1-508-2020-tcu-plenario",
+              "confianca": 0.9
+            },
+            {
+              "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+              "confianca": 0.6
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -5930,11 +5947,15 @@
       "consenso": [
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>topicos-especiais>jurisprudencia-do-tribunal-de-contas-da-uniao-acordao-n-2-037-2019-tcu-plenario-e-acordao-n-1-508-2020-tcu-plenario",
-          "confianca": 0.48
+          "confianca": 0.62
         },
         {
           "id": "controle-externo-da-administracao-publica>tribunal-de-contas-da-uniao-tcu-tribunais-de-contas-dos-estados-e-do-distrito-federal",
           "confianca": 0.4
+        },
+        {
+          "id": "obras-de-edificacoes>analise-orcamentaria-composicao-de-custos-unitarios-quantificacao-de-materiais-e-servicos-planilhas-de-orcamento-sintetico-e-analitico-curva-abc-de-servicos-e-de-insumos-cronogramas-fisico-e-fisico-financeiro-beneficios-e-despesas-indiretas-bdi-encargos-sociais",
+          "confianca": 0.37
         }
       ],
       "incerto": true,
@@ -36197,6 +36218,19 @@
           ],
           "versaoVocabulario": 3
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
+              "confianca": 0.7
+            },
+            {
+              "id": "etica-profissional-e-bioetica>etica-em-pesquisa-com-seres-humanos-e-codigo-de-etica-medica",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -36210,11 +36244,7 @@
       "consenso": [
         {
           "id": "politicas-publicas-e-metodos-de-investigacao-e-avaliacao>etica-da-investigacao>distincao-entre-auditoria-e-pesquisa-cientifica-envolvendo-seres-humanos-finalidades-protecao-dos-participantes-e-requisitos-de-apreciacao-etica",
-          "confianca": 0.48
-        },
-        {
-          "id": "direitos-humanos>a-posicao-hierarquica-dos-tratados-internacionais-de-direitos-humanos-em-face-da-constituicao-da-republica-do-brasil",
-          "confianca": 0.4
+          "confianca": 0.55
         }
       ],
       "incerto": true,
@@ -41610,6 +41640,27 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "TRF6_24:034_TRF6_025_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-3-2013-182-2013-185-2013-331-2020-332-2020-335-2020-370-2021-383-2021-396-2021-468-2022-522-2023-e-suas-alteracoes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1704
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>resolucoes-do-conselho-nacional-de-justica-3-2013-182-2013-185-2013-331-2020-332-2020-335-2020-370-2021-383-2021-396-2021-468-2022-522-2023-e-suas-alteracoes",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "TRF6_24:034_TRF6_025_01:112": {

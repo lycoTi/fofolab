@@ -11168,6 +11168,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -11181,11 +11194,11 @@
       "consenso": [
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
-          "confianca": 0.48
+          "confianca": 0.62
         },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>dispensa-de-licitacao-instrucao-normativa-seges-me-n-67-de-8-de-julho-de-2021-e-alteracoes",
-          "confianca": 0.45
+          "confianca": 0.47
         }
       ],
       "incerto": true,
@@ -11201,6 +11214,23 @@
             }
           ],
           "versaoVocabulario": 2
+        },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",
+              "confianca": 0.4
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-termo-de-referencia-instrucao-normativa-seges-me-n-81-de-25-de-novembro-de-2022",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1694
         },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
@@ -11219,7 +11249,7 @@
       "consenso": [
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>contratacoes-de-bens-e-servicos-de-tecnologia-da-informacao>procedimentos-para-aprovacao-de-contratacoes-ou-de-formacao-de-atas-de-registro-de-precos-instrucao-normativa-sgd-mgi-n-6-de-29-de-marco-de-2023",
-          "confianca": 0.48
+          "confianca": 0.62
         },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>normas-e-procedimentos-de-licitacoes-em-geral>elaboracao-de-estudos-tecnicos-preliminares-etp-instrucao-normativa-seges-me-n-58-de-8-de-agosto-de-2022",

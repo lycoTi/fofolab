@@ -42,14 +42,15 @@ O módulo de mineração do FofoLab (`tools/minerador/`) é responsável por aba
 
 ## 2. Estado Atual do Acervo (Snapshot 28/10/2026)
 
-- **Total de itens com assunto ativo no pacote:** `28.344`
-- **Total de concursos Cebraspe minerados:** `76`
-- **Versão do Vocabulário Canônico:** `v1694`
+- **Total de itens com assunto ativo no pacote:** `29.323` (+979 questões novas nesta rodada)
+- **Total de concursos Cebraspe minerados:** `76` (`35.221` itens extraídos de provas)
+- **Versão do Vocabulário Canônico:** `v1717`
+- **Fila Restante:** `3.995` itens sem nenhuma opinião
 - **Consenso Atual:**
-  - `84` concordâncias plenas (duas opiniões idênticas).
-  - `41` discordâncias ativas (aguardando 3ª opinião / desempate).
-  - `28.948` itens com 1 opinião consolidada.
-  - `2.922` itens marcados como incertos (confiança limítrofe ou proposta pendente).
+  - `85` concordâncias plenas.
+  - `40` discordâncias ativas (as 41 originais foram desempadas pelo DeepSeek Chat V3).
+  - `29.877` itens com 1 opinião consolidada.
+- **Gasto do Dia (DeepSeek):** `R$ 1,80` (~$0,30 USD) do saldo restante do usuário (~$1,33 USD livres).
 - **Meta prioritária do estudante:** **CGU 2026** (Cargo 4: TI – Desenvolvimento de Sistemas), banca Cebraspe.
 
 ---

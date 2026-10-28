@@ -375,6 +375,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
+              "confianca": 0.85
+            },
+            {
+              "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -388,11 +401,11 @@
       "consenso": [
         {
           "id": "legislacao-especial>fundo-nacional-de-desenvolvimento-cientifico-e-tecnologico-fndct-e-finep",
-          "confianca": 0.5
+          "confianca": 0.61
         },
         {
           "id": "auditoria-de-contratacoes-transferencias-e-execucao-de-recursos>transferencias-e-parcerias>objetivos-instrumentos-planos-de-trabalho-e-obrigacoes-selecao-e-execucao-acompanhamento-e-prestacao-de-contas-capacidades-locais-e-responsabilidades-dos-participantes",
-          "confianca": 0.46
+          "confianca": 0.51
         }
       ],
       "incerto": true,

@@ -1,6 +1,43 @@
 {
   "identificador": "BANRISUL_22",
   "itens": {
+    "BANRISUL_22:726_BANRISUL_001_01:111": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+              "confianca": 0.75
+            },
+            {
+              "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+          "confianca": 0.75
+        },
+        {
+          "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_001_01:114": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -88,6 +125,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_001_01:58": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_001_01:59": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_001_01:64": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>controles-e-gerenciamento-de-seguranca-da-informacao>conceitos-e-controles-normas-nbr-iso-iec-27001-2013-e-27002-2013",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>aspectos-da-seguranca-da-informacao-na-gestao-da-continuidade-do-negocio>classificacao-e-controle-de-ativos-de-informacao-seguranca-de-ambientes-fisicos-e-logicos-controle-de-acesso",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_001_01:69": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -120,6 +244,64 @@
         {
           "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-identificacao-avaliacao-e-estrategias-de-tratamento",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_001_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>brute-force-port-scanning",
+              "confianca": 0.95
+            },
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1706
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores>brute-force-port-scanning",
+          "confianca": 0.95
+        },
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_001_01:76": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+              "confianca": 0.9
+            },
+            {
+              "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>sistemas-de-criptografia-simetrica-e-assimetrica-infraestrutura-de-chaves-publicas-x509-icp-brasil",
+          "confianca": 0.9
+        },
+        {
+          "id": "seguranca-da-informacao>criptografia-e-protecao-de-dados-em-transito-e-em-repouso>sistemas-criptograficos-simetricos-e-assimetricos-principais-algoritmos",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -315,6 +497,93 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_002_01:104": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>qualidade-niveis-de-servico-e-entregas-verificaveis",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>metricas-ageis-delivery-rate-throughput-e-velocity",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>metricas-ageis-delivery-rate-throughput-e-velocity",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>contratacao-e-fiscalizacao-de-solucoes>qualidade-niveis-de-servico-e-entregas-verificaveis",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:105": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.5
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>metricas-ageis-delivery-rate-throughput-e-velocity",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>metricas-ageis-delivery-rate-throughput-e-velocity",
+          "confianca": 0.85
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:106": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+              "confianca": 0.75
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>estatistica-descritiva-distribuicao-de-frequencias-organizacao-de-dados-quadros-tabelas-graficos-e-outras-formas-de-apresentacao",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "nocoes-de-estatistica-probabilidade>medidas-de-tendencia-central-media-mediana-moda-medidas-de-posicao-minimo-e-maximo-e-de-dispersao-amplitude-amplitude-interquartil-variancia-desvio-padrao-e-coeficiente-de-variacao",
+          "confianca": 0.75
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>estatistica>estatistica-descritiva-distribuicao-de-frequencias-organizacao-de-dados-quadros-tabelas-graficos-e-outras-formas-de-apresentacao",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_002_01:108": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -418,6 +687,43 @@
         {
           "id": "administracao-publica-e-fundamentos-de-politicas-publicas>inovacao-aberta-e-modelos-de-inovacao",
           "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:112": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-publica-e-fundamentos-de-politicas-publicas>inovacao-aberta-e-modelos-de-inovacao",
+              "confianca": 0.7
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.5
+            },
+            {
+              "id": "administracao-geral>inovacao-tipos-de-inovacao-processo-produto",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-publica-e-fundamentos-de-politicas-publicas>inovacao-aberta-e-modelos-de-inovacao",
+          "confianca": 0.7
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.5
+        },
+        {
+          "id": "administracao-geral>inovacao-tipos-de-inovacao-processo-produto",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -639,6 +945,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_002_01:51": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+              "confianca": 0.95
+            },
+            {
+              "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>processo-administrativo>processo-de-planejamento>planejamento-estrategico-visao-missao-e-analise-swot-matriz-gut-e-ferramenta-5w2h",
+          "confianca": 0.95
+        },
+        {
+          "id": "governanca-estrategia-e-gestao>estrategia>ferramentas-de-planejamento-estrategico>analise-swot",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_002_01:52": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -742,6 +1077,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_002_01:67": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1701
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_002_01:76": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -837,6 +1201,27 @@
         {
           "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:81": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "metodos-de-pesquisa>tecnicas-de-coleta-de-dados-qualitativos-entrevista-analise-de-conteudo-analise-documental-aplicacao-de-questionario-estudos-de-caso-etnografia-etc",
+          "confianca": 0.85
         }
       ],
       "incerto": false,
@@ -1080,6 +1465,43 @@
         {
           "id": "engenharia-de-software-e-programacao>problemas-e-requisitos>necessidades-de-usuarios",
           "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_002_01:90": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario",
+              "confianca": 0.7
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+              "confianca": 0.5
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario",
+          "confianca": 0.7
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>engenharia-de-software>gestao-de-projetos-e-produtos-de-software-backlog-produto-minimo-viavel-tecnicas-de-priorizacao-story-points",
+          "confianca": 0.5
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -1392,6 +1814,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:113": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>engenharia-de-software>modelos-de-software-entidades-e-relacionamentos-uml-principios-de-projeto-de-software-solid-padroes-de-projeto",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "engenharia-de-software-e-programacao>padroes-de-projeto-design-patterns",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>arquitetura-de-aplicacoes>padroes-arquiteturais-padroes-de-projeto-padroes-grasp-e-anti-padroes-arquiteturais",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>engenharia-de-software>modelos-de-software-entidades-e-relacionamentos-uml-principios-de-projeto-de-software-solid-padroes-de-projeto",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:115": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1627,6 +2086,27 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>metodos-de-autenticacao>protocolos-de-autenticacao-oauth-2-0-openid-connect-jwt-json-web-tokens-e-sso",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>metodos-de-autenticacao>protocolos-de-autenticacao-oauth-2-0-openid-connect-jwt-json-web-tokens-e-sso",
+          "confianca": 0.9
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:68": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1809,6 +2289,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:78": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.9
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+              "confianca": 0.6
+            },
+            {
+              "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>gestao-de-produtos-e-governanca>scrum-e-kanban",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.9
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+          "confianca": 0.6
+        },
+        {
+          "id": "desenvolvimento-seguro-qualidade-e-gestao-da-entrega>gestao-de-produtos-e-governanca>scrum-e-kanban",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:81": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1941,6 +2458,43 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_003_01:89": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "desenvolvimento-de-sistemas>programacao-orientada-a-objetos-em-c-classes-e-instanciacao-de-objetos",
+              "confianca": 0.7
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>linguagem-java-orientacao-a-objetos-heranca-e-polimorfismo",
+              "confianca": 0.6
+            },
+            {
+              "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1699
+        }
+      },
+      "consenso": [
+        {
+          "id": "desenvolvimento-de-sistemas>programacao-orientada-a-objetos-em-c-classes-e-instanciacao-de-objetos",
+          "confianca": 0.7
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>linguagem-java-orientacao-a-objetos-heranca-e-polimorfismo",
+          "confianca": 0.6
+        },
+        {
+          "id": "engenharia-de-software-e-programacao>programacao-e-correcao>linguagem-java-tipos-de-dados-estruturas-de-controle-metodos-classes-e-objetos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_003_01:90": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -1994,6 +2548,43 @@
         {
           "id": "engenharia-de-software-e-programacao>interfaces-e-experiencia-do-usuario",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_003_01:94": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>assinatura-digital-e-criptografia-em-transito-e-repouso",
+              "confianca": 0.75
+            },
+            {
+              "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-da-informacao>mecanismos-de-seguranca>assinatura-digital",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>identidades-e-protecao-criptografica>assinatura-digital-e-criptografia-em-transito-e-repouso",
+          "confianca": 0.75
+        },
+        {
+          "id": "seguranca-da-informacao>assinatura-e-certificacao-digital",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-da-informacao>mecanismos-de-seguranca>assinatura-digital",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -2295,6 +2886,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_004_01:118": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "administracao-geral>ciencia-comportamental-e-vieses-cognitivos-na-tomada-de-decisao",
+              "confianca": 0.85
+            },
+            {
+              "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>a-burocracia-e-o-estado-poder-racionalidade-tomada-de-decisoes-e-elites-burocraticas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1711
+        }
+      },
+      "consenso": [
+        {
+          "id": "administracao-geral>ciencia-comportamental-e-vieses-cognitivos-na-tomada-de-decisao",
+          "confianca": 0.85
+        },
+        {
+          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>a-burocracia-e-o-estado-poder-racionalidade-tomada-de-decisoes-e-elites-burocraticas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_004_01:119": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2390,6 +3010,80 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_004_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.7
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1709
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.7
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:53": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+              "confianca": 0.9
+            },
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+              "confianca": 0.8
+            },
+            {
+              "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1700
+        }
+      },
+      "consenso": [
+        {
+          "id": "tecnologia>governanca-de-tic-2-1-cobit-2019-conceitos-basicos-estrutura-objetivos-e-aplicacao-para-a-governanca-de-tic>itil-v4-gerenciamento-de-servicos-de-tic-com-foco-em-processos-e-melhores-praticas",
+          "confianca": 0.9
+        },
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-servicos-itil-v4",
+          "confianca": 0.8
+        },
+        {
+          "id": "tecnologia>gestao-e-governanca-na-administracao-publica>gerenciamento-de-servicos-de-ti-itil-v4-conceitos-e-fundamentos",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_004_01:58": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -2414,6 +3108,39 @@
         {
           "id": "governanca-estrategia-e-gestao>gestao-de-projetos>processos-de-gerenciamento-de-projetos",
           "confianca": 0.75
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:69": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.9
+            },
+            {
+              "id": "estrategia-e-planejamento>gestao-de-projetos>metodologias-ageis",
+              "confianca": 0.4
+            },
+            {
+              "id": "governanca-e-gestao-de-projetos>gerencia-de-projetos>gerenciamento-de-projetos-com-metodologias-ageis",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.9
+        },
+        {
+          "id": "estrategia-e-planejamento>gestao-de-projetos>metodologias-ageis",
+          "confianca": 0.4
         }
       ],
       "incerto": false,
@@ -2483,6 +3210,17 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_004_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     },
     "BANRISUL_22:726_BANRISUL_004_01:79": {
@@ -3396,6 +4134,35 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_005_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>gerencia-de-riscos>ameaca-vulnerabilidade-e-impacto",
+              "confianca": 0.9
+            },
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-qualitativa-e-quantitativa-iso-31-000",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>gerencia-de-riscos>ameaca-vulnerabilidade-e-impacto",
+          "confianca": 0.9
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>gestao-de-riscos-tecnicas-de-analise-qualitativa-e-quantitativa-iso-31-000",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_005_01:66": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -3570,6 +4337,35 @@
         {
           "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops",
           "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_005_01:77": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+              "confianca": 0.85
+            },
+            {
+              "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "processos-de-desenvolvimento-e-sustentacao-de-software>gerenciamento-de-produtos-de-software>gerenciamento-de-produtos-com-metodos-ageis-scrum-kanban-xp-lean",
+          "confianca": 0.85
+        },
+        {
+          "id": "desenvolvimento-de-sistemas>metodologias-ageis-e-praticas-devops>scrum-kanban-integracao-continua-entrega-continua",
+          "confianca": 0.8
         }
       ],
       "incerto": false,
@@ -4134,6 +4930,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_006_01:52": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+              "confianca": 0.85
+            },
+            {
+              "id": "redes-de-computadores>comutacao-de-pacotes-e-controle-de-congestionamento",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+          "confianca": 0.85
+        },
+        {
+          "id": "redes-de-computadores>comutacao-de-pacotes-e-controle-de-congestionamento",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_006_01:55": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4169,6 +4994,35 @@
         }
       ],
       "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_006_01:65": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>gerenciamento-de-redes-snmp-e-rmon",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-de-computadores>protocolos-de-gerenciamento-de-rede-snmp",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>gerenciamento-de-redes-snmp-e-rmon",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-de-computadores>protocolos-de-gerenciamento-de-rede-snmp",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
       "concordancia": "uma-opiniao"
     },
     "BANRISUL_22:726_BANRISUL_006_01:70": {
@@ -4282,6 +5136,35 @@
         {
           "id": "ciberseguranca-privacidade-e-continuidade-de-servicos>riscos-e-arquitetura-de-seguranca>firewall-prevencao-de-intrusoes-waf-protecao-contra-negacao-de-servico-e-acesso-remoto-seguro",
           "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_006_01:86": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+              "confianca": 0.8
+            },
+            {
+              "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1714
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-da-informacao>seguranca-cibernetica>solucoes-para-seguranca-da-informacao-como-firewalls-ids-ips-siem-e-correlatos-identity-access-management-pam-antivirus-antispam-xdr-endpoints-e-dispositivos-moveis",
+          "confianca": 0.8
+        },
+        {
+          "id": "seguranca-da-informacao>prevencao-e-combate-a-ataques-a-redes-de-computadores",
+          "confianca": 0.6
         }
       ],
       "incerto": false,
@@ -4638,6 +5521,97 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_007_01:72": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1697
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>equipamentos-de-rede-e-comutacao-switches",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.6
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_007_01:73": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.9
+            },
+            {
+              "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+              "confianca": 0.5
+            },
+            {
+              "id": "infraestrutura-em-tic>redes-de-computadores-fundamentos-tecnologias-ethernet-fibre-channel-iscsi-padrao-wi-fi-ieee-802-11x-dispositivos-repetidores-bridges-switches-e-roteadores-implantacao-de-voip-e-vpn-seguranca-firewall-certificado-digital-antivirus-anti-spam-modelo-de-referencia-osi-protocolo-tcp-ip-active-directory-ad",
+              "confianca": 0.3
+            }
+          ],
+          "versaoVocabulario": 1710
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.9
+        },
+        {
+          "id": "redes-de-computadores>modelo-osi-e-camadas-de-rede",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_007_01:74": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+              "confianca": 0.9
+            },
+            {
+              "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "redes-de-computadores>arquitetura-tcp-ip-e-camadas-de-rede",
+          "confianca": 0.9
+        },
+        {
+          "id": "tecnologia>redes-de-computadores>protocolos-de-rede-http-https-smtp-imap-dns-dhcp-tcp-udp-ospf-bgp-snmp",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_007_01:78": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4832,6 +5806,204 @@
       "incerto": true,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_CB1_01:10": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+              "confianca": 0.95
+            },
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo>relacoes-de-subordinacao-entre-oracoes-e-entre-termos-da-oracao",
+          "confianca": 0.95
+        },
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:11": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:12": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reescrita-de-textos-de-diferentes-generos-e-niveis-de-formalidade",
+              "confianca": 0.9
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>reescrita-de-frases-e-paragrafos-do-texto>reescrita-de-textos-de-diferentes-generos-e-niveis-de-formalidade",
+          "confianca": 0.9
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:13": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>coesao-textual-e-referenciacao",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:14": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [],
+      "incerto": true,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:15": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.95
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.95
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:16": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "realidade-brasileira>cultura-e-formacao-historico-social-regional",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "realidade-brasileira>cultura-e-formacao-historico-social-regional",
+          "confianca": 0.8
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:17": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+          "confianca": 0.8
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_CB1_01:18": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4974,6 +6146,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "BANRISUL_22:726_BANRISUL_CB1_01:48": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "legislacao-especial>violencia-domestica-e-familiar-contra-a-mulher-lei-maria-da-penha",
+              "confianca": 0.7
+            },
+            {
+              "id": "seguranca-publica>sistema-unico-de-seguranca-publica-e-politica-nacional-de-seguranca-publica-e-defesa-social",
+              "confianca": 0.4
+            }
+          ],
+          "versaoVocabulario": 1716
+        }
+      },
+      "consenso": [
+        {
+          "id": "legislacao-especial>violencia-domestica-e-familiar-contra-a-mulher-lei-maria-da-penha",
+          "confianca": 0.7
+        },
+        {
+          "id": "seguranca-publica>sistema-unico-de-seguranca-publica-e-politica-nacional-de-seguranca-publica-e-defesa-social",
+          "confianca": 0.4
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "BANRISUL_22:726_BANRISUL_CB1_01:5": {
       "opinioes": {
         "deepseek:deepseek-flash": {
@@ -4994,6 +6195,35 @@
         {
           "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
           "confianca": 0.7
+        },
+        {
+          "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+          "confianca": 0.5
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:6": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+              "confianca": 0.8
+            },
+            {
+              "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1715
+        }
+      },
+      "consenso": [
+        {
+          "id": "lingua-portuguesa>dominio-da-estrutura-morfossintatica-do-periodo",
+          "confianca": 0.8
         },
         {
           "id": "lingua-portuguesa>as-estruturas-linguisticas-no-processo-de-construcao-de-mensagens-adequadas",
@@ -5059,6 +6289,17 @@
         }
       ],
       "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
+    "BANRISUL_22:726_BANRISUL_CB1_01:9": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [],
+          "versaoVocabulario": 1708
+        }
+      },
+      "consenso": [],
+      "incerto": true,
       "concordancia": "uma-opiniao"
     }
   }

@@ -5443,6 +5443,23 @@
     },
     "ANATEL_24:961_ANATEL_002_01:87": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
+              "confianca": 0.9
+            },
+            {
+              "id": "nocoes-de-estatistica-probabilidade>teorema-de-bayes",
+              "confianca": 0.6
+            },
+            {
+              "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -5469,11 +5486,15 @@
       "consenso": [
         {
           "id": "aprendizado-de-maquina-e-inteligencia-artificial>algoritmos-de-classificacao-naive-bayes-random-forest",
-          "confianca": 0.43
+          "confianca": 0.58
         },
         {
           "id": "aprendizado-de-maquina-e-inteligencia-artificial>selecao-e-construcao-de-modelos>aprendizado-supervisionado-e-nao-supervisionado-nocoes-e-limites-de-abordagens-semissupervisionadas-e-por-reforco",
-          "confianca": 0.43
+          "confianca": 0.45
+        },
+        {
+          "id": "nocoes-de-estatistica-probabilidade>teorema-de-bayes",
+          "confianca": 0.4
         }
       ],
       "incerto": true,

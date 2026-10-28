@@ -16384,6 +16384,23 @@
           ],
           "versaoVocabulario": 5
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
+              "confianca": 0.4
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>distribuicao-de-recursos",
+              "confianca": 0.7
+            },
+            {
+              "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -16396,12 +16413,8 @@
       },
       "consenso": [
         {
-          "id": "administracao-orcamentaria-e-financeira-e-orcamento-publico>principios-orcamentarios",
-          "confianca": 0.48
-        },
-        {
-          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb",
-          "confianca": 0.4
+          "id": "financas-publicas-orcamento-e-contabilidade-publica>lei-n-14-133-2020-novo-fundo-de-manutencao-e-desenvolvimento-da-educacao-basica-e-de-valorizacao-dos-profissionais-de-educacao-fundeb>composicao-financeira",
+          "confianca": 0.5
         }
       ],
       "incerto": true,

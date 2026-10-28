@@ -38549,6 +38549,35 @@
       "incerto": false,
       "concordancia": "uma-opiniao"
     },
+    "DATAPREV_23:893_DATAPREV_024_01:97": {
+      "opinioes": {
+        "deepseek:deepseek-flash": {
+          "assuntos": [
+            {
+              "id": "seguranca-e-saude-no-trabalho>politica-nacional-de-seguranca-e-saude-no-trabalho-pnsst",
+              "confianca": 0.85
+            },
+            {
+              "id": "direito-do-trabalho>inspecao-do-trabalho-sindicato-e-ministerio-publico-do-trabalho",
+              "confianca": 0.7
+            }
+          ],
+          "versaoVocabulario": 1703
+        }
+      },
+      "consenso": [
+        {
+          "id": "seguranca-e-saude-no-trabalho>politica-nacional-de-seguranca-e-saude-no-trabalho-pnsst",
+          "confianca": 0.85
+        },
+        {
+          "id": "direito-do-trabalho>inspecao-do-trabalho-sindicato-e-ministerio-publico-do-trabalho",
+          "confianca": 0.7
+        }
+      ],
+      "incerto": false,
+      "concordancia": "uma-opiniao"
+    },
     "DATAPREV_23:893_DATAPREV_024_01:98": {
       "opinioes": {
         "deepseek:deepseek-flash": {

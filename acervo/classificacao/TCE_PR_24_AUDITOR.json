@@ -6724,6 +6724,15 @@
           ],
           "versaoVocabulario": 4
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "direito-constitucional>ordem-social",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [],
           "versaoVocabulario": 12
@@ -6732,7 +6741,7 @@
       "consenso": [
         {
           "id": "direito-constitucional>ordem-social",
-          "confianca": 0.48
+          "confianca": 0.62
         }
       ],
       "incerto": true,
@@ -6904,6 +6913,19 @@
           ],
           "versaoVocabulario": 5
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+              "confianca": 0.5
+            },
+            {
+              "id": "controle-externo-da-administracao-publica>prestacao-de-contas-e-intervencao-estadual",
+              "confianca": 0.8
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -6920,12 +6942,8 @@
       },
       "consenso": [
         {
-          "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
-          "confianca": 0.48
-        },
-        {
-          "id": "estado-democracia-direitos-e-ciencia-politica>ordem-constitucional-e-direitos>fundamentos-e-objetivos-da-republica-direitos-fundamentais-sociais-e-politicos-igualdade-devido-processo-e-limites-ao-exercicio-do-poder-principios-da-administracao-publica",
-          "confianca": 0.45
+          "id": "fundamentos-de-direito-publico-aplicado-controle-e-responsabilizacao>funcoes-de-controle-e-melhoria-da-gestao>autonomia-tecnica-e-responsabilidades-dos-gestores-diferencas-de-competencias-e-complementaridade-com-o-controle-externo-exercido-pelo-congresso-nacional-com-o-auxilio-do-tcu",
+          "confianca": 0.47
         }
       ],
       "incerto": true,
@@ -6942,6 +6960,15 @@
           ],
           "versaoVocabulario": 5
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "controle-externo-da-administracao-publica>sustacao-de-atos-e-contratos-pelos-tribunais-de-contas",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -6955,11 +6982,15 @@
       "consenso": [
         {
           "id": "controle-externo-da-administracao-publica>competencias-dos-tribunais-de-contas",
-          "confianca": 0.48
+          "confianca": 0.32
+        },
+        {
+          "id": "controle-externo-da-administracao-publica>sustacao-de-atos-e-contratos-pelos-tribunais-de-contas",
+          "confianca": 0.28
         },
         {
           "id": "licitacoes-contratos-e-convenios>poderes-do-tribunal-de-contas",
-          "confianca": 0.43
+          "confianca": 0.28
         }
       ],
       "incerto": true,
@@ -6997,6 +7028,15 @@
           ],
           "versaoVocabulario": 3
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>etica-profissional-em-auditoria-nbasp-issai-130-e-140-principios-fundamentais",
+              "confianca": 0.85
+            }
+          ],
+          "versaoVocabulario": 1695
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -7010,11 +7050,15 @@
       "consenso": [
         {
           "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>normas-de-auditoria-nbasp-e-issai-e-codigo-de-etica",
-          "confianca": 0.48
+          "confianca": 0.32
         },
         {
           "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>direito-publico-aplicado-as-respostas-de-controle>definicao-de-prioridades-e-combinacao-de-respostas-preventivas-corretivas-e-de-responsabilizacao-competencias-motivacao-proporcionalidade-consequencias-praticas-e-condicoes-de-atuacao",
-          "confianca": 0.47
+          "confianca": 0.31
+        },
+        {
+          "id": "auditoria-governamental-compliance-gestao-de-risco-e-governanca>etica-profissional-em-auditoria-nbasp-issai-130-e-140-principios-fundamentais",
+          "confianca": 0.28
         }
       ],
       "incerto": true,
@@ -7524,6 +7568,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
+              "confianca": 0.7
+            },
+            {
+              "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
+              "confianca": 0.6
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -7541,11 +7598,11 @@
       "consenso": [
         {
           "id": "fundamentos-de-governanca-riscos-e-integridade-publica-e-privada>governanca-e-responsabilidades>distincao-entre-direcao-gestao-controle-e-prestacao-de-contas-papeis-supervisao-transparencia-e-responsabilizacao-relacao-entre-decisoes-organizacionais-finalidade-publica-e-direitos",
-          "confianca": 0.45
+          "confianca": 0.53
         },
         {
           "id": "integridade-transparencia-e-responsabilizacao-aplicadas-ao-controle-publico>resultados-comunicacao-e-aprendizagem-institucional>comunicacao-publica-de-resultados-contextualizacao-de-informacoes-protecao-de-pessoas-e-prestacao-de-contas",
-          "confianca": 0.43
+          "confianca": 0.48
         }
       ],
       "incerto": true,

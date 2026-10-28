@@ -3864,6 +3864,19 @@
           ],
           "versaoVocabulario": 2
         },
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociologia>aplicacoes-da-perspectiva-sociologica-comparada-aos-temas-e-problemas-contemporaneos-da-sociedade-brasileira-a-questao-da-igualdade-juridica-e-dos-direitos-de-cidadania-o-pluralismo-juridico-acesso-a-justica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "groq:openai/gpt-oss-120b": {
           "assuntos": [
             {
@@ -3876,12 +3889,8 @@
       },
       "consenso": [
         {
-          "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.48
-        },
-        {
           "id": "sociologia>aplicacoes-da-perspectiva-sociologica-comparada-aos-temas-e-problemas-contemporaneos-da-sociedade-brasileira-a-questao-da-igualdade-juridica-e-dos-direitos-de-cidadania-o-pluralismo-juridico-acesso-a-justica",
-          "confianca": 0.4
+          "confianca": 0.43
         }
       ],
       "incerto": true,
@@ -4171,6 +4180,19 @@
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:2": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.5
+            },
+            {
+              "id": "sociologia>aplicacoes-da-perspectiva-sociologica-comparada-aos-temas-e-problemas-contemporaneos-da-sociedade-brasileira-a-questao-da-igualdade-juridica-e-dos-direitos-de-cidadania-o-pluralismo-juridico-acesso-a-justica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -4193,11 +4215,7 @@
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.45
-        },
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.4
+          "confianca": 0.47
         }
       ],
       "incerto": true,
@@ -4478,6 +4496,19 @@
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:3": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.6
+            },
+            {
+              "id": "sociologia>aplicacoes-da-perspectiva-sociologica-comparada-aos-temas-e-problemas-contemporaneos-da-sociedade-brasileira-a-questao-da-igualdade-juridica-e-dos-direitos-de-cidadania-o-pluralismo-juridico-acesso-a-justica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -4500,11 +4531,7 @@
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.45
-        },
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.43
+          "confianca": 0.5
         }
       ],
       "incerto": true,
@@ -4746,6 +4773,19 @@
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:4": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
+              "confianca": 0.5
+            },
+            {
+              "id": "sociologia>aplicacoes-da-perspectiva-sociologica-comparada-aos-temas-e-problemas-contemporaneos-da-sociedade-brasileira-a-questao-da-igualdade-juridica-e-dos-direitos-de-cidadania-o-pluralismo-juridico-acesso-a-justica",
+              "confianca": 0.5
+            }
+          ],
+          "versaoVocabulario": 1694
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -4768,11 +4808,7 @@
       "consenso": [
         {
           "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.45
-        },
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>tecnologia-social-e-desenvolvimento-comunitario",
-          "confianca": 0.4
+          "confianca": 0.47
         }
       ],
       "incerto": true,
@@ -5070,6 +5106,15 @@
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:5": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -5095,12 +5140,8 @@
       },
       "consenso": [
         {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.45
-        },
-        {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.35
+          "confianca": 0.53
         }
       ],
       "incerto": true,
@@ -5171,6 +5212,15 @@
     },
     "BANCO_DO_NORDESTE_22:772_BNB_CG1_01:7": {
       "opinioes": {
+        "deepseek:deepseek-chat": {
+          "assuntos": [
+            {
+              "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
+              "confianca": 0.9
+            }
+          ],
+          "versaoVocabulario": 1696
+        },
         "deepseek:deepseek-flash": {
           "assuntos": [
             {
@@ -5193,11 +5243,7 @@
       "consenso": [
         {
           "id": "lingua-portuguesa>compreensao-e-interpretacao-de-textos-de-generos-variados",
-          "confianca": 0.45
-        },
-        {
-          "id": "sociedade-brasileira-desigualdades-diversidade-e-desenvolvimento>desenvolvimento-e-realidade-brasileira>pobreza-renda-e-protecao-social-educacao-saude-saneamento-e-habitacao-como-problemas-publicos-sustentabilidade-e-vulnerabilidade-climatica-leitura-contextual-de-indicadores-e-desigualdades",
-          "confianca": 0.4
+          "confianca": 0.6
         }
       ],
       "incerto": true,
