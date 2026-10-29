@@ -35,6 +35,10 @@
 - **Formatos:**
   - **Certo/Errado:** 2 botões táteis largos (`Certo` / `Errado`) em destaque.
   - **Múltipla Escolha:** alternativas completas de A a E tratadas via `parseQuestionOptions`.
+- **Riscador de Distratores (Eliminação Ativa):**
+  - Permite descartar/riscar alternativas óbvias antes de responder, reduzindo a sobrecarga na memória de trabalho (*Cognitive Load Theory*).
+  - Acionamento duplo: clique no botão sutil de corte na borda da alternativa ou atalho `Alt + Letra` (ex.: `Alt + A`).
+  - Alternativa riscada recebe destaque esmaecido com tachado (`line-through opacity-40 text-slate-500 bg-slate-950/30`), com opção de desfazer a qualquer momento.
 - **Travamento Imediato Anti-Viés:** ao clicar na alternativa, a resposta trava instantaneamente. A primeira tentativa é gravada no banco (`onAnswer`), impedindo autoengano pós-gabarito.
 - **Feedback Visual de 150ms:**
   - Alternativa correta: destaque verde sutil (`border-emerald-500/60 bg-emerald-500/15 text-emerald-100`).

@@ -75,7 +75,8 @@ export function parseLawMarkdown(
   const firstTitleLine = body.match(/^#\s+(.+)$/m)?.[1]?.trim();
   const title = metadata.titulo || fallback.title || firstTitleLine || 'Norma Federal';
   const shortName = fallback.shortName || metadata.sigla || title.slice(0, 30);
-  const sourceUrl = metadata.fonte || metadata.url || fallback.sourceUrl || '';
+  const sourceMatch = body.match(/>\s*Fonte:\s*\[.*?\]\((https?:\/\/[^\s\)]+)\)/i);
+  const sourceUrl = metadata.fonte || metadata.url || (sourceMatch ? sourceMatch[1] : '') || fallback.sourceUrl || '';
   const urn = metadata.urn;
   const description = metadata.ementa || metadata.descricao;
 
@@ -85,6 +86,7 @@ export function parseLawMarkdown(
   let currentKey: string | null = null;
   let currentLabel = '';
   let currentLines: string[] = [];
+  let isAdct = false;
 
   const flushCurrent = () => {
     if (!currentKey || currentLines.length === 0) return;
@@ -99,12 +101,16 @@ export function parseLawMarkdown(
   };
 
   for (const line of rawLines) {
+    if (/ATO DAS DISPOSIÇÕES CONSTITUCIONAIS TRANSITÓRIAS/i.test(line)) {
+      isAdct = true;
+    }
     const match = line.trim().match(ARTICLE_LINE_REGEX);
     if (match) {
       flushCurrent();
       const rawNum = match[1].replace(/[.]/g, '');
-      currentKey = normalizeArticleKey(rawNum);
-      currentLabel = `Art. ${rawNum}`;
+      const baseKey = normalizeArticleKey(rawNum);
+      currentKey = isAdct ? `adct-${baseKey}` : baseKey;
+      currentLabel = isAdct ? `ADCT Art. ${rawNum}` : `Art. ${rawNum}`;
       currentLines = [line];
     } else if (currentKey) {
       currentLines.push(line);

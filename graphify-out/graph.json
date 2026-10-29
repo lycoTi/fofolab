@@ -186,6 +186,19 @@
       "source_location": "L15"
     },
     {
+      "id": "src_lib_fofoia_editalmatch_editaltopicentry",
+      "label": "EditalTopicEntry",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "fofoia.test.ts",
+      "file_type": "code",
+      "norm_label": "editaltopicentry",
+      "source_file": "src/lib/fofoia/editalMatch.ts",
+      "source_location": "L8"
+    },
+    {
       "id": "src_lib_fofoia_prompts_fofopromptextra",
       "label": "FofoPromptExtra",
       "_callable": true,
@@ -1070,19 +1083,6 @@
       "source_location": "L3"
     },
     {
-      "id": "src_types_database_recallcheck",
-      "label": "RecallCheck",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 206,
-      "community_name": "GoodMorningView.tsx",
-      "file_type": "code",
-      "norm_label": "recallcheck",
-      "source_file": "src/types/database.ts",
-      "source_location": "L198"
-    },
-    {
       "id": "src_app_appmode",
       "label": "AppMode",
       "_callable": true,
@@ -1395,17 +1395,30 @@
       "source_location": "L73"
     },
     {
-      "id": "src_lib_diagnosis_answerstate",
-      "label": "AnswerState",
+      "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
+      "label": "CurriculumManagerModalProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "answerstate",
-      "source_file": "src/lib/diagnosis.ts",
-      "source_location": "L10"
+      "norm_label": "curriculummanagermodalprops",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_components_curriculummanagermodal_curriculumsection",
+      "label": "CurriculumSection",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "curriculumsection",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L34"
     },
     {
       "id": "src_types_database_blueprinthealthstatus",
@@ -1447,17 +1460,56 @@
       "source_location": "L6"
     },
     {
-      "id": "src_types_database_questionattempt",
-      "label": "QuestionAttempt",
+      "id": "src_types_database_createstudyplaninput",
+      "label": "CreateStudyPlanInput",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "questionattempt",
+      "norm_label": "createstudyplaninput",
       "source_file": "src/types/database.ts",
-      "source_location": "L170"
+      "source_location": "L252"
+    },
+    {
+      "id": "src_types_database_createsubjectinput",
+      "label": "CreateSubjectInput",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "createsubjectinput",
+      "source_file": "src/types/database.ts",
+      "source_location": "L275"
+    },
+    {
+      "id": "src_types_database_createtopicinput",
+      "label": "CreateTopicInput",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "createtopicinput",
+      "source_file": "src/types/database.ts",
+      "source_location": "L291"
+    },
+    {
+      "id": "src_types_database_importtopicitem",
+      "label": "ImportTopicItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "importtopicitem",
+      "source_file": "src/types/database.ts",
+      "source_location": "L317"
     },
     {
       "id": "src_types_database_studysessiontype",
@@ -1484,6 +1536,19 @@
       "norm_label": "topicrelationtype",
       "source_file": "src/types/database.ts",
       "source_location": "L9"
+    },
+    {
+      "id": "src_types_database_topicstatus",
+      "label": "TopicStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "topicstatus",
+      "source_file": "src/types/database.ts",
+      "source_location": "L8"
     },
     {
       "id": "src_types_database_updatestudyplaninput",
@@ -1523,19 +1588,6 @@
       "norm_label": "updatetopicinput",
       "source_file": "src/types/database.ts",
       "source_location": "L300"
-    },
-    {
-      "id": "src_components_richtext_richblock",
-      "label": "RichBlock",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richblock",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L34"
     },
     {
       "id": "src_lib_acervo_acervostore_acervostorage",
@@ -1746,19 +1798,6 @@
       "source_location": "L39"
     },
     {
-      "id": "src_features_fofoia_usefofoconversation_fofoturn",
-      "label": "FofoTurn",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 228,
-      "community_name": "useFofoConversation.ts",
-      "file_type": "code",
-      "norm_label": "fofoturn",
-      "source_file": "src/features/fofoia/useFofoConversation.ts",
-      "source_location": "L12"
-    },
-    {
       "id": "src_features_fofoia_usefofoconversation_savedsession",
       "label": "SavedSession",
       "_callable": true,
@@ -1798,19 +1837,6 @@
       "source_location": "L31"
     },
     {
-      "id": "src_lib_fofoia_summary_reviewsummary",
-      "label": "ReviewSummary",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 228,
-      "community_name": "useFofoConversation.ts",
-      "file_type": "code",
-      "norm_label": "reviewsummary",
-      "source_file": "src/lib/fofoia/summary.ts",
-      "source_location": "L4"
-    },
-    {
       "id": "src_features_fofoia_fofoshortcuts_fofoshortcutsprops",
       "label": "FofoShortcutsProps",
       "_callable": true,
@@ -1822,6 +1848,19 @@
       "norm_label": "fofoshortcutsprops",
       "source_file": "src/features/fofoia/FofoShortcuts.tsx",
       "source_location": "L8"
+    },
+    {
+      "id": "src_features_fofoia_usefofoconversation_fofoturn",
+      "label": "FofoTurn",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "fofoturn",
+      "source_file": "src/features/fofoia/useFofoConversation.ts",
+      "source_location": "L12"
     },
     {
       "id": "src_lib_fofoia_signals_fofomode",
@@ -1848,6 +1887,19 @@
       "norm_label": "modesignals",
       "source_file": "src/lib/fofoia/signals.ts",
       "source_location": "L78"
+    },
+    {
+      "id": "src_lib_fofoia_summary_reviewsummary",
+      "label": "ReviewSummary",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "reviewsummary",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_components_metricexplainer_metricexplainerprops",
@@ -2136,6 +2188,32 @@
       "source_location": "L27"
     },
     {
+      "id": "src_types_database_questionlog",
+      "label": "QuestionLog",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 238,
+      "community_name": "dailyReview.ts",
+      "file_type": "code",
+      "norm_label": "questionlog",
+      "source_file": "src/types/database.ts",
+      "source_location": "L228"
+    },
+    {
+      "id": "src_types_database_recallcheck",
+      "label": "RecallCheck",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 238,
+      "community_name": "dailyReview.ts",
+      "file_type": "code",
+      "norm_label": "recallcheck",
+      "source_file": "src/types/database.ts",
+      "source_location": "L198"
+    },
+    {
       "id": "tools_minerador_candidates_indexed",
       "label": "Indexed",
       "_callable": true,
@@ -2253,6 +2331,32 @@
       "source_location": "L11"
     },
     {
+      "id": "src_lib_diagnosis_answerstate",
+      "label": "AnswerState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "answerstate",
+      "source_file": "src/lib/diagnosis.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_types_database_questionattempt",
+      "label": "QuestionAttempt",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "questionattempt",
+      "source_file": "src/types/database.ts",
+      "source_location": "L170"
+    },
+    {
       "id": "src_lib_airouter_aireply",
       "label": "AiReply",
       "_callable": true,
@@ -2331,19 +2435,6 @@
       "source_location": "L24"
     },
     {
-      "id": "src_features_fofoia_fofoiapanel_fofoactivequestion",
-      "label": "FofoActiveQuestion",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "fofoactivequestion",
-      "source_file": "src/features/fofoia/FofoIaPanel.tsx",
-      "source_location": "L27"
-    },
-    {
       "id": "src_features_fofoia_fofoiapanel_fofoiapanelprops",
       "label": "FofoIaPanelProps",
       "_callable": true,
@@ -2357,30 +2448,17 @@
       "source_location": "L38"
     },
     {
-      "id": "src_features_questions_questionworkbench_questionworkbenchprops",
-      "label": "QuestionWorkbenchProps",
+      "id": "src_features_fofoia_fofoiapanel_fofostudentattempt",
+      "label": "FofoStudentAttempt",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 26,
       "community_name": "FofoIaPanel.tsx",
       "file_type": "code",
-      "norm_label": "questionworkbenchprops",
-      "source_file": "src/features/questions/QuestionWorkbench.tsx",
-      "source_location": "L38"
-    },
-    {
-      "id": "src_lib_acervo_topicquestions_questionsviewitem",
-      "label": "QuestionsViewItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "questionsviewitem",
-      "source_file": "src/lib/acervo/topicQuestions.ts",
-      "source_location": "L32"
+      "norm_label": "fofostudentattempt",
+      "source_file": "src/features/fofoia/FofoIaPanel.tsx",
+      "source_location": "L18"
     },
     {
       "id": "src_lib_airouter_studentcontextsnapshot",
@@ -2396,69 +2474,17 @@
       "source_location": "L47"
     },
     {
-      "id": "src_lib_fofoia_context_fofoactivequestioncontext",
-      "label": "FofoActiveQuestionContext",
+      "id": "src_components_richtext_richblock",
+      "label": "RichBlock",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
       "file_type": "code",
-      "norm_label": "fofoactivequestioncontext",
-      "source_file": "src/lib/fofoia/context.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_lib_fofoia_editalmatch_editaltopicentry",
-      "label": "EditalTopicEntry",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "editaltopicentry",
-      "source_file": "src/lib/fofoia/editalMatch.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_types_database_aidissection",
-      "label": "AiDissection",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "aidissection",
-      "source_file": "src/types/database.ts",
-      "source_location": "L159"
-    },
-    {
-      "id": "src_types_database_question",
-      "label": "Question",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "question",
-      "source_file": "src/types/database.ts",
-      "source_location": "L137"
-    },
-    {
-      "id": "src_types_database_questionlog",
-      "label": "QuestionLog",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "FofoIaPanel.tsx",
-      "file_type": "code",
-      "norm_label": "questionlog",
-      "source_file": "src/types/database.ts",
-      "source_location": "L228"
+      "norm_label": "richblock",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L34"
     },
     {
       "id": "src_features_notebook_dock_notebookdockpanel_notebookdockpanelprops",
@@ -2539,6 +2565,19 @@
       "source_location": "L122"
     },
     {
+      "id": "src_features_fofoia_fofoiapanel_fofoactivequestion",
+      "label": "FofoActiveQuestion",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "fofoactivequestion",
+      "source_file": "src/features/fofoia/FofoIaPanel.tsx",
+      "source_location": "L27"
+    },
+    {
       "id": "src_features_questions_questionfilters_questionformatfilter",
       "label": "QuestionFormatFilter",
       "_callable": true,
@@ -2578,6 +2617,19 @@
       "source_location": "L36"
     },
     {
+      "id": "src_features_questions_questionworkbench_questionworkbenchprops",
+      "label": "QuestionWorkbenchProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questionworkbenchprops",
+      "source_file": "src/features/questions/QuestionWorkbench.tsx",
+      "source_location": "L38"
+    },
+    {
       "id": "src_features_questions_usequestionkeyboardshortcuts_usequestionkeyboardshortcutsoptions",
       "label": "UseQuestionKeyboardShortcutsOptions",
       "_callable": true,
@@ -2615,6 +2667,58 @@
       "norm_label": "questionsview",
       "source_file": "src/lib/acervo/topicQuestions.ts",
       "source_location": "L40"
+    },
+    {
+      "id": "src_lib_acervo_topicquestions_questionsviewitem",
+      "label": "QuestionsViewItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "questionsviewitem",
+      "source_file": "src/lib/acervo/topicQuestions.ts",
+      "source_location": "L32"
+    },
+    {
+      "id": "src_lib_fofoia_context_fofoactivequestioncontext",
+      "label": "FofoActiveQuestionContext",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "fofoactivequestioncontext",
+      "source_file": "src/lib/fofoia/context.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_types_database_aidissection",
+      "label": "AiDissection",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "aidissection",
+      "source_file": "src/types/database.ts",
+      "source_location": "L159"
+    },
+    {
+      "id": "src_types_database_question",
+      "label": "Question",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "question",
+      "source_file": "src/types/database.ts",
+      "source_location": "L137"
     },
     {
       "id": "src_lib_database_invalidbackuperror",
@@ -2745,19 +2849,6 @@
       "norm_label": "statustone",
       "source_file": "src/components/StatusSquare.tsx",
       "source_location": "L5"
-    },
-    {
-      "id": "src_features_fofoia_fofoiapanel_fofostudentattempt",
-      "label": "FofoStudentAttempt",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "ReviewConfidence",
-      "file_type": "code",
-      "norm_label": "fofostudentattempt",
-      "source_file": "src/features/fofoia/FofoIaPanel.tsx",
-      "source_location": "L18"
     },
     {
       "id": "src_features_questions_questionworkbench_answersubmission",
@@ -3202,32 +3293,6 @@
       "source_location": "L72"
     },
     {
-      "id": "src_components_curriculummanagermodal_curriculummanagermodalprops",
-      "label": "CurriculumManagerModalProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "curriculummanagermodalprops",
-      "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_components_curriculummanagermodal_curriculumsection",
-      "label": "CurriculumSection",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "curriculumsection",
-      "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L34"
-    },
-    {
       "id": "src_features_edital_import_editaldraft_editaldraft",
       "label": "EditalDraft",
       "_callable": true,
@@ -3345,45 +3410,6 @@
       "source_location": "L2"
     },
     {
-      "id": "src_types_database_createstudyplaninput",
-      "label": "CreateStudyPlanInput",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "createstudyplaninput",
-      "source_file": "src/types/database.ts",
-      "source_location": "L252"
-    },
-    {
-      "id": "src_types_database_createsubjectinput",
-      "label": "CreateSubjectInput",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "createsubjectinput",
-      "source_file": "src/types/database.ts",
-      "source_location": "L275"
-    },
-    {
-      "id": "src_types_database_createtopicinput",
-      "label": "CreateTopicInput",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "createtopicinput",
-      "source_file": "src/types/database.ts",
-      "source_location": "L291"
-    },
-    {
       "id": "src_types_database_editalplaninput",
       "label": "EditalPlanInput",
       "_callable": true,
@@ -3395,32 +3421,6 @@
       "norm_label": "editalplaninput",
       "source_file": "src/types/database.ts",
       "source_location": "L323"
-    },
-    {
-      "id": "src_types_database_importtopicitem",
-      "label": "ImportTopicItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "importtopicitem",
-      "source_file": "src/types/database.ts",
-      "source_location": "L317"
-    },
-    {
-      "id": "src_types_database_topicstatus",
-      "label": "TopicStatus",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "topicstatus",
-      "source_file": "src/types/database.ts",
-      "source_location": "L8"
     },
     {
       "id": "tools_minerador_types_cebraspeeventdetail",
@@ -4587,6 +4587,18 @@
       "source_location": "L36"
     },
     {
+      "id": "src_lib_fofoia_lessonpart_readlessonpart",
+      "label": "readLessonPart()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "fofoia.test.ts",
+      "file_type": "code",
+      "norm_label": "readlessonpart()",
+      "source_file": "src/lib/fofoia/lessonPart.ts",
+      "source_location": "L5"
+    },
+    {
       "id": "src_lib_fofoia_truefalsehint_truefalsehint",
       "label": "trueFalseHint()",
       "_callable": true,
@@ -4597,18 +4609,6 @@
       "norm_label": "truefalsehint()",
       "source_file": "src/lib/fofoia/trueFalseHint.ts",
       "source_location": "L17"
-    },
-    {
-      "id": "src_tests_airouter_test_ask",
-      "label": "ask()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "fofoia.test.ts",
-      "file_type": "code",
-      "norm_label": "ask()",
-      "source_file": "src/__tests__/aiRouter.test.ts",
-      "source_location": "L25"
     },
     {
       "id": "src_tests_fofoia_test_signals",
@@ -8703,6 +8703,30 @@
       "source_location": "L5"
     },
     {
+      "id": "src_features_answer_flow_confidencepicker_confidencepicker",
+      "label": "ConfidencePicker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "QuestionCard.tsx",
+      "file_type": "code",
+      "norm_label": "confidencepicker()",
+      "source_file": "src/features/answer-flow/ConfidencePicker.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_features_answer_flow_diagnosispicker_diagnosispicker",
+      "label": "DiagnosisPicker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "QuestionCard.tsx",
+      "file_type": "code",
+      "norm_label": "diagnosispicker()",
+      "source_file": "src/features/answer-flow/DiagnosisPicker.tsx",
+      "source_location": "L11"
+    },
+    {
       "id": "src_features_good_morning_reviewquestion_reviewquestion",
       "label": "ReviewQuestion()",
       "_callable": true,
@@ -8749,18 +8773,6 @@
       "norm_label": "questioncard()",
       "source_file": "src/features/questions/QuestionCard.tsx",
       "source_location": "L51"
-    },
-    {
-      "id": "src_lib_dailyreview_derivediagnosis",
-      "label": "deriveDiagnosis()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 211,
-      "community_name": "QuestionCard.tsx",
-      "file_type": "code",
-      "norm_label": "derivediagnosis()",
-      "source_file": "src/lib/dailyReview.ts",
-      "source_location": "L142"
     },
     {
       "id": "src_lib_explainabilityengine_explainquestioncomplexity",
@@ -9111,136 +9123,76 @@
       "source_location": "L10"
     },
     {
-      "id": "src_lib_diagnosis_getalloweddiagnoses",
-      "label": "getAllowedDiagnoses()",
+      "id": "src_components_curriculummanagermodal_curriculummanagermodal",
+      "label": "CurriculumManagerModal()",
       "_callable": true,
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "getalloweddiagnoses()",
-      "source_file": "src/lib/diagnosis.ts",
-      "source_location": "L15"
+      "norm_label": "curriculummanagermodal()",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L69"
     },
     {
-      "id": "src_lib_diagnosis_isdiagnosisallowed",
-      "label": "isDiagnosisAllowed()",
+      "id": "src_components_curriculummanagermodal_syllabuspastebox",
+      "label": "SyllabusPasteBox()",
       "_callable": true,
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "isdiagnosisallowed()",
-      "source_file": "src/lib/diagnosis.ts",
-      "source_location": "L23"
+      "norm_label": "syllabuspastebox()",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
+      "source_location": "L883"
     },
     {
-      "id": "src_lib_diagnosis_isfalsecertainty",
-      "label": "isFalseCertainty()",
+      "id": "src_lib_syllabusimport_cleantitle",
+      "label": "cleanTitle()",
       "_callable": true,
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "isfalsecertainty()",
-      "source_file": "src/lib/diagnosis.ts",
-      "source_location": "L37"
+      "norm_label": "cleantitle()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L16"
     },
     {
-      "id": "src_components_richtext_parseblocks",
-      "label": "parseBlocks()",
+      "id": "src_lib_syllabusimport_lookslikeheader",
+      "label": "looksLikeHeader()",
       "_callable": true,
       "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
+      "community": 215,
+      "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "parseblocks()",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L45"
+      "norm_label": "lookslikeheader()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L36"
     },
     {
-      "id": "src_components_richtext_renderinline",
-      "label": "renderInline()",
+      "id": "src_lib_syllabusimport_parsesyllabustopics",
+      "label": "parseSyllabusTopics()",
       "_callable": true,
       "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
+      "community": 215,
+      "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "renderinline()",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_components_richtext_revealdelayms",
-      "label": "revealDelayMs()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "revealdelayms()",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_components_richtext_richtext",
-      "label": "RichText()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richtext()",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L163"
-    },
-    {
-      "id": "src_components_richtextblocks_richcodeblock",
-      "label": "RichCodeBlock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richcodeblock()",
-      "source_file": "src/components/richTextBlocks.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_richtextblocks_richtableblock",
-      "label": "RichTableBlock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richtableblock()",
-      "source_file": "src/components/richTextBlocks.tsx",
-      "source_location": "L62"
-    },
-    {
-      "id": "src_features_fofoia_fofomessage_fofomessage",
-      "label": "FofoMessage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "fofomessage()",
-      "source_file": "src/features/fofoia/FofoMessage.tsx",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_lib_fofoia_summary_formatsummaryfornotebook",
-      "label": "formatSummaryForNotebook()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "formatsummaryfornotebook()",
-      "source_file": "src/lib/fofoia/summary.ts",
+      "norm_label": "parsesyllabustopics()",
+      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L43"
+    },
+    {
+      "id": "src_lib_syllabusimport_splitnumberedsegments",
+      "label": "splitNumberedSegments()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 215,
+      "community_name": "types/database.ts",
+      "file_type": "code",
+      "norm_label": "splitnumberedsegments()",
+      "source_file": "src/lib/syllabusImport.ts",
+      "source_location": "L20"
     },
     {
       "id": "src_features_acervo_usetopicquestions_usetopicquestioncount",
@@ -9987,40 +9939,28 @@
       "source_location": "L104"
     },
     {
-      "id": "src_lib_fofoia_lessonpart_readlessonpart",
-      "label": "readLessonPart()",
+      "id": "src_lib_fofoia_smalltalk_smalltalkreply",
+      "label": "smallTalkReply()",
       "_callable": true,
       "_origin": "ast",
       "community": 228,
       "community_name": "useFofoConversation.ts",
       "file_type": "code",
-      "norm_label": "readlessonpart()",
-      "source_file": "src/lib/fofoia/lessonPart.ts",
-      "source_location": "L5"
+      "norm_label": "smalltalkreply()",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L29"
     },
     {
-      "id": "src_lib_fofoia_summary_clean",
-      "label": "clean()",
+      "id": "src_lib_fofoia_smalltalk_strip",
+      "label": "strip()",
       "_callable": true,
       "_origin": "ast",
       "community": 228,
       "community_name": "useFofoConversation.ts",
       "file_type": "code",
-      "norm_label": "clean()",
-      "source_file": "src/lib/fofoia/summary.ts",
-      "source_location": "L22"
-    },
-    {
-      "id": "src_lib_fofoia_summary_parsesummary",
-      "label": "parseSummary()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 228,
-      "community_name": "useFofoConversation.ts",
-      "file_type": "code",
-      "norm_label": "parsesummary()",
-      "source_file": "src/lib/fofoia/summary.ts",
-      "source_location": "L27"
+      "norm_label": "strip()",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L17"
     },
     {
       "id": "e2e_roteiro_spec_column",
@@ -10081,6 +10021,30 @@
       "norm_label": "openapp()",
       "source_file": "e2e/roteiro.spec.ts",
       "source_location": "L9"
+    },
+    {
+      "id": "src_components_richtext_revealdelayms",
+      "label": "revealDelayMs()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "revealdelayms()",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_features_fofoia_fofomessage_fofomessage",
+      "label": "FofoMessage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "fofomessage()",
+      "source_file": "src/features/fofoia/FofoMessage.tsx",
+      "source_location": "L13"
     },
     {
       "id": "src_features_fofoia_fofoshortcuts_fofoshortcuts",
@@ -10189,6 +10153,42 @@
       "norm_label": "shouldsuggestlesson()",
       "source_file": "src/lib/fofoia/signals.ts",
       "source_location": "L117"
+    },
+    {
+      "id": "src_lib_fofoia_summary_clean",
+      "label": "clean()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "clean()",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "src_lib_fofoia_summary_formatsummaryfornotebook",
+      "label": "formatSummaryForNotebook()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "formatsummaryfornotebook()",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_fofoia_summary_parsesummary",
+      "label": "parseSummary()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "parsesummary()",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L27"
     },
     {
       "id": "src_components_metricexplainer_metricexplainer",
@@ -11055,6 +11055,18 @@
       "source_location": "L111"
     },
     {
+      "id": "src_lib_dailyreview_derivediagnosis",
+      "label": "deriveDiagnosis()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 238,
+      "community_name": "dailyReview.ts",
+      "file_type": "code",
+      "norm_label": "derivediagnosis()",
+      "source_file": "src/lib/dailyReview.ts",
+      "source_location": "L142"
+    },
+    {
       "id": "src_lib_dailyreview_interleavebysubject",
       "label": "interleaveBySubject()",
       "_callable": true,
@@ -11463,16 +11475,16 @@
       "source_location": "L269"
     },
     {
-      "id": "src_lib_fofoia_context_buildfofocontext",
-      "label": "buildFofoContext()",
+      "id": "src_tests_airouter_test_ask",
+      "label": "ask()",
       "_callable": true,
       "_origin": "ast",
       "community": 24,
       "community_name": "aiRouter.ts",
       "file_type": "code",
-      "norm_label": "buildfofocontext()",
-      "source_file": "src/lib/fofoia/context.ts",
-      "source_location": "L45"
+      "norm_label": "ask()",
+      "source_file": "src/__tests__/aiRouter.test.ts",
+      "source_location": "L25"
     },
     {
       "id": "src_tests_airouter_test_geminiresponse",
@@ -11497,6 +11509,42 @@
       "norm_label": "stubnoai()",
       "source_file": "src/__tests__/aiRouter.test.ts",
       "source_location": "L27"
+    },
+    {
+      "id": "src_lib_diagnosis_getalloweddiagnoses",
+      "label": "getAllowedDiagnoses()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "getalloweddiagnoses()",
+      "source_file": "src/lib/diagnosis.ts",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_lib_diagnosis_isdiagnosisallowed",
+      "label": "isDiagnosisAllowed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "isdiagnosisallowed()",
+      "source_file": "src/lib/diagnosis.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_lib_diagnosis_isfalsecertainty",
+      "label": "isFalseCertainty()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "isfalsecertainty()",
+      "source_file": "src/lib/diagnosis.ts",
+      "source_location": "L37"
     },
     {
       "id": "src_lib_goodmorningstats_confidencecalibration",
@@ -11847,30 +11895,6 @@
       "source_location": "L1328"
     },
     {
-      "id": "src_lib_fofoia_smalltalk_smalltalkreply",
-      "label": "smallTalkReply()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "smalltalkreply()",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_strip",
-      "label": "strip()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "strip()",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L17"
-    },
-    {
       "id": "src_features_admin_factory_adminfactoryview_adminfactoryview",
       "label": "AdminFactoryView()",
       "_callable": true,
@@ -11979,6 +12003,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_lib_fofoia_context_buildfofocontext",
+      "label": "buildFofoContext()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 26,
+      "community_name": "FofoIaPanel.tsx",
+      "file_type": "code",
+      "norm_label": "buildfofocontext()",
+      "source_file": "src/lib/fofoia/context.ts",
+      "source_location": "L45"
+    },
+    {
       "id": "src_tests_fofoiapanel_test_ask",
       "label": "ask()",
       "_callable": true,
@@ -12025,6 +12061,66 @@
       "norm_label": "setup()",
       "source_file": "src/__tests__/useFofoIaInputs.test.tsx",
       "source_location": "L20"
+    },
+    {
+      "id": "src_components_richtext_parseblocks",
+      "label": "parseBlocks()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "parseblocks()",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_components_richtext_renderinline",
+      "label": "renderInline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "renderinline()",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_components_richtext_richtext",
+      "label": "RichText()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richtext()",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L163"
+    },
+    {
+      "id": "src_components_richtextblocks_richcodeblock",
+      "label": "RichCodeBlock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richcodeblock()",
+      "source_file": "src/components/richTextBlocks.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_richtextblocks_richtableblock",
+      "label": "RichTableBlock()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richtableblock()",
+      "source_file": "src/components/richTextBlocks.tsx",
+      "source_location": "L62"
     },
     {
       "id": "src_features_notebook_dock_notebookdockpanel_draftstatusbadge",
@@ -13419,30 +13515,6 @@
       "source_location": "L16"
     },
     {
-      "id": "src_features_answer_flow_confidencepicker_confidencepicker",
-      "label": "ConfidencePicker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "ReviewConfidence",
-      "file_type": "code",
-      "norm_label": "confidencepicker()",
-      "source_file": "src/features/answer-flow/ConfidencePicker.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_features_answer_flow_diagnosispicker_diagnosispicker",
-      "label": "DiagnosisPicker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "ReviewConfidence",
-      "file_type": "code",
-      "norm_label": "diagnosispicker()",
-      "source_file": "src/features/answer-flow/DiagnosisPicker.tsx",
-      "source_location": "L11"
-    },
-    {
       "id": "src_features_questions_questioncorrection_prerequisitesof",
       "label": "prerequisitesOf()",
       "_callable": true,
@@ -14727,30 +14799,6 @@
       "source_location": "L19"
     },
     {
-      "id": "src_components_curriculummanagermodal_curriculummanagermodal",
-      "label": "CurriculumManagerModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "curriculummanagermodal()",
-      "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L69"
-    },
-    {
-      "id": "src_components_curriculummanagermodal_syllabuspastebox",
-      "label": "SyllabusPasteBox()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "syllabuspastebox()",
-      "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L883"
-    },
-    {
       "id": "src_features_edital_import_editaldraft_createeditaldraft",
       "label": "createEditalDraft()",
       "_callable": true,
@@ -15145,54 +15193,6 @@
       "norm_label": "textitemstolines()",
       "source_file": "src/lib/pdfText.ts",
       "source_location": "L13"
-    },
-    {
-      "id": "src_lib_syllabusimport_cleantitle",
-      "label": "cleanTitle()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "cleantitle()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_lib_syllabusimport_lookslikeheader",
-      "label": "looksLikeHeader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "lookslikeheader()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_lib_syllabusimport_parsesyllabustopics",
-      "label": "parseSyllabusTopics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "parsesyllabustopics()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L43"
-    },
-    {
-      "id": "src_lib_syllabusimport_splitnumberedsegments",
-      "label": "splitNumberedSegments()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "splitnumberedsegments()",
-      "source_file": "src/lib/syllabusImport.ts",
-      "source_location": "L20"
     },
     {
       "id": "src_tests_editalparser_test_toplevel",
@@ -20341,6 +20341,17 @@
       "source_location": "L21"
     },
     {
+      "id": "src_lib_fofoia_lessonpart",
+      "label": "lessonPart.ts",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "fofoia.test.ts",
+      "file_type": "code",
+      "norm_label": "lessonpart.ts",
+      "source_file": "src/lib/fofoia/lessonPart.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_tests_fofoia_test",
       "label": "fofoia.test.ts",
       "_origin": "ast",
@@ -23318,7 +23329,7 @@
       "node_kind": "heading",
       "norm_label": "2.1 modo teclado & ergonomia de alta velocidade (`usequestionkeyboardshortcuts`)",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L60"
+      "source_location": "L64"
     },
     {
       "id": "src_features_questions_context_2_o_fluxo_de_resolu\u00e7\u00e3o_em_4_fases",
@@ -23342,7 +23353,7 @@
       "node_kind": "heading",
       "norm_label": "3. fila inteligente & filtros dinamicos (spec 12d)",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L74"
+      "source_location": "L78"
     },
     {
       "id": "src_features_questions_context_4_integra\u00e7\u00e3o_com_o_acervo_local_acervo_db",
@@ -23354,7 +23365,7 @@
       "node_kind": "heading",
       "norm_label": "4. integracao com o acervo local (`acervo.db`)",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L97"
+      "source_location": "L101"
     },
     {
       "id": "src_features_questions_context_5_diretrizes_inviol\u00e1veis_anti_objetivos",
@@ -23366,7 +23377,7 @@
       "node_kind": "heading",
       "norm_label": "5. diretrizes inviolaveis & anti-objetivos",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L105"
+      "source_location": "L109"
     },
     {
       "id": "src_features_questions_context_6_arquivos_sob_responsabilidade_da_fatia",
@@ -23378,7 +23389,7 @@
       "node_kind": "heading",
       "norm_label": "6. arquivos sob responsabilidade da fatia",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L115"
+      "source_location": "L119"
     },
     {
       "id": "src_features_questions_context_7_pr\u00f3ximos_passos_d\u00edvidas_t\u00e9cnicas_identificadas",
@@ -23390,7 +23401,7 @@
       "node_kind": "heading",
       "norm_label": "7. proximos passos & dividas tecnicas identificadas",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L131"
+      "source_location": "L135"
     },
     {
       "id": "src_features_questions_context_fase_1_leitura_calibra\u00e7\u00e3o_pr\u00e9_resposta_confidencepicker",
@@ -23426,7 +23437,7 @@
       "node_kind": "heading",
       "norm_label": "fase 3: correcao & autodiagnostico (`questioncorrection` & `diagnosispicker`)",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L43"
+      "source_location": "L47"
     },
     {
       "id": "src_features_questions_context_fase_4_aprofundamento_pr\u00f3xima_quest\u00e3o",
@@ -23438,7 +23449,7 @@
       "node_kind": "heading",
       "norm_label": "fase 4: aprofundamento & proxima questao",
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L55"
+      "source_location": "L59"
     },
     {
       "id": "src_features_questions_context_m\u00f3dulo_de_quest\u00f5es_contexto_vivo_arquitetura_da_bancada",
@@ -23649,6 +23660,17 @@
       "norm_label": "level_color",
       "source_file": "src/features/good-morning/StudyCalendar.tsx",
       "source_location": "L9"
+    },
+    {
+      "id": "src_lib_dailyreview_review_lookback_days",
+      "label": "REVIEW_LOOKBACK_DAYS",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "GoodMorningView.tsx",
+      "file_type": "code",
+      "norm_label": "review_lookback_days",
+      "source_file": "src/lib/dailyReview.ts",
+      "source_location": "L23"
     },
     {
       "id": "src_tests_goodmorningcards_test",
@@ -24388,15 +24410,26 @@
       "source_location": "L12"
     },
     {
-      "id": "src_tests_importers_test",
-      "label": "importers.test.ts",
+      "id": "src_tests_answerflow_test",
+      "label": "answerFlow.test.tsx",
       "_origin": "ast",
       "community": 211,
       "community_name": "QuestionCard.tsx",
       "file_type": "code",
-      "norm_label": "importers.test.ts",
-      "source_file": "src/__tests__/importers.test.ts",
+      "norm_label": "answerflow.test.tsx",
+      "source_file": "src/__tests__/answerFlow.test.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_tests_answerflow_test_forbidden_jargon",
+      "label": "FORBIDDEN_JARGON",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "QuestionCard.tsx",
+      "file_type": "code",
+      "norm_label": "forbidden_jargon",
+      "source_file": "src/__tests__/answerFlow.test.tsx",
+      "source_location": "L7"
     },
     {
       "id": "tools_mascote_mobile",
@@ -24674,81 +24707,26 @@
       "source_location": "L21"
     },
     {
-      "id": "src_lib_diagnosis",
-      "label": "diagnosis.ts",
+      "id": "src_components_curriculummanagermodal",
+      "label": "CurriculumManagerModal.tsx",
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "diagnosis.ts",
-      "source_file": "src/lib/diagnosis.ts",
+      "norm_label": "curriculummanagermodal.tsx",
+      "source_file": "src/components/CurriculumManagerModal.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_tests_diagnosis_test",
-      "label": "diagnosis.test.ts",
+      "id": "src_lib_syllabusimport",
+      "label": "syllabusImport.ts",
       "_origin": "ast",
       "community": 215,
       "community_name": "types/database.ts",
       "file_type": "code",
-      "norm_label": "diagnosis.test.ts",
-      "source_file": "src/__tests__/diagnosis.test.ts",
+      "norm_label": "syllabusimport.ts",
+      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_tests_usetopicquestions_test",
-      "label": "useTopicQuestions.test.tsx",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "usetopicquestions.test.tsx",
-      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_usetopicquestions_test_acervo",
-      "label": "ACERVO",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "acervo",
-      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_tests_usetopicquestions_test_base",
-      "label": "base",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "base",
-      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_tests_usetopicquestions_test_calls",
-      "label": "calls",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "calls",
-      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_tests_usetopicquestions_test_linked",
-      "label": "linked",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "types/database.ts",
-      "file_type": "code",
-      "norm_label": "linked",
-      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
-      "source_location": "L7"
     },
     {
       "id": "src_types_database",
@@ -24844,94 +24822,6 @@
       "norm_label": "voz do fofo",
       "source_file": ".agents/rules/identidade-fofolab.md",
       "source_location": "L36"
-    },
-    {
-      "id": "src_components_richtext",
-      "label": "RichText.tsx",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richtext.tsx",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_richtext_heading_classes",
-      "label": "HEADING_CLASSES",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "heading_classes",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L151"
-    },
-    {
-      "id": "src_components_richtext_reveal_step_ms",
-      "label": "REVEAL_STEP_MS",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "reveal_step_ms",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_components_richtext_reveal_total_ms",
-      "label": "REVEAL_TOTAL_MS",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "reveal_total_ms",
-      "source_file": "src/components/RichText.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_richtextblocks",
-      "label": "richTextBlocks.tsx",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richtextblocks.tsx",
-      "source_file": "src/components/richTextBlocks.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_features_fofoia_fofomessage",
-      "label": "FofoMessage.tsx",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "fofomessage.tsx",
-      "source_file": "src/features/fofoia/FofoMessage.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_fofoia_signals_mode_badge",
-      "label": "MODE_BADGE",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "mode_badge",
-      "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_tests_richtext_test",
-      "label": "richText.test.tsx",
-      "_origin": "ast",
-      "community": 217,
-      "community_name": "RichText.tsx",
-      "file_type": "code",
-      "norm_label": "richtext.test.tsx",
-      "source_file": "src/__tests__/richText.test.tsx",
-      "source_location": "L1"
     },
     {
       "id": "plugin_fs",
@@ -25648,37 +25538,70 @@
       "source_location": "L47"
     },
     {
-      "id": "src_lib_fofoia_lessonpart",
-      "label": "lessonPart.ts",
+      "id": "src_lib_fofoia_smalltalk",
+      "label": "smallTalk.ts",
       "_origin": "ast",
       "community": 228,
       "community_name": "useFofoConversation.ts",
       "file_type": "code",
-      "norm_label": "lessonpart.ts",
-      "source_file": "src/lib/fofoia/lessonPart.ts",
+      "norm_label": "smalltalk.ts",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_fofoia_summary",
-      "label": "summary.ts",
+      "id": "src_lib_fofoia_smalltalk_ack",
+      "label": "ACK",
       "_origin": "ast",
       "community": 228,
       "community_name": "useFofoConversation.ts",
       "file_type": "code",
-      "norm_label": "summary.ts",
-      "source_file": "src/lib/fofoia/summary.ts",
-      "source_location": "L1"
+      "norm_label": "ack",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L11"
     },
     {
-      "id": "src_lib_fofoia_summary_fields",
-      "label": "FIELDS",
+      "id": "src_lib_fofoia_smalltalk_filler",
+      "label": "FILLER",
       "_origin": "ast",
       "community": 228,
       "community_name": "useFofoConversation.ts",
       "file_type": "code",
-      "norm_label": "fields",
-      "source_file": "src/lib/fofoia/summary.ts",
+      "norm_label": "filler",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
       "source_location": "L13"
+    },
+    {
+      "id": "src_lib_fofoia_smalltalk_greeting",
+      "label": "GREETING",
+      "_origin": "ast",
+      "community": 228,
+      "community_name": "useFofoConversation.ts",
+      "file_type": "code",
+      "norm_label": "greeting",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_lib_fofoia_smalltalk_how_are_you",
+      "label": "HOW_ARE_YOU",
+      "_origin": "ast",
+      "community": 228,
+      "community_name": "useFofoConversation.ts",
+      "file_type": "code",
+      "norm_label": "how_are_you",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_lib_fofoia_smalltalk_thanks",
+      "label": "THANKS",
+      "_origin": "ast",
+      "community": 228,
+      "community_name": "useFofoConversation.ts",
+      "file_type": "code",
+      "norm_label": "thanks",
+      "source_file": "src/lib/fofoia/smallTalk.ts",
+      "source_location": "L10"
     },
     {
       "id": "src_features_fofoia_agents",
@@ -25725,6 +25648,17 @@
       "file_type": "code",
       "norm_label": "roteiro.spec.ts",
       "source_file": "e2e/roteiro.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_fofoia_fofomessage",
+      "label": "FofoMessage.tsx",
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "fofomessage.tsx",
+      "source_file": "src/features/fofoia/FofoMessage.tsx",
       "source_location": "L1"
     },
     {
@@ -25805,6 +25739,17 @@
       "source_location": "L24"
     },
     {
+      "id": "src_lib_fofoia_signals_mode_badge",
+      "label": "MODE_BADGE",
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "mode_badge",
+      "source_file": "src/lib/fofoia/signals.ts",
+      "source_location": "L10"
+    },
+    {
       "id": "src_lib_fofoia_signals_retrieval_patterns",
       "label": "RETRIEVAL_PATTERNS",
       "_origin": "ast",
@@ -25814,6 +25759,28 @@
       "norm_label": "retrieval_patterns",
       "source_file": "src/lib/fofoia/signals.ts",
       "source_location": "L61"
+    },
+    {
+      "id": "src_lib_fofoia_summary",
+      "label": "summary.ts",
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "summary.ts",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_fofoia_summary_fields",
+      "label": "FIELDS",
+      "_origin": "ast",
+      "community": 230,
+      "community_name": "signals.ts",
+      "file_type": "code",
+      "norm_label": "fields",
+      "source_file": "src/lib/fofoia/summary.ts",
+      "source_location": "L13"
     },
     {
       "id": "tools_minerador_context",
@@ -26543,17 +26510,6 @@
       "source_location": "L19"
     },
     {
-      "id": "src_lib_dailyreview_review_lookback_days",
-      "label": "REVIEW_LOOKBACK_DAYS",
-      "_origin": "ast",
-      "community": 238,
-      "community_name": "dailyReview.ts",
-      "file_type": "code",
-      "norm_label": "review_lookback_days",
-      "source_file": "src/lib/dailyReview.ts",
-      "source_location": "L23"
-    },
-    {
       "id": "src_lib_dailyreview_review_max_items",
       "label": "REVIEW_MAX_ITEMS",
       "_origin": "ast",
@@ -26719,6 +26675,17 @@
       "source_location": "L14"
     },
     {
+      "id": "src_lib_diagnosis",
+      "label": "diagnosis.ts",
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "diagnosis.ts",
+      "source_file": "src/lib/diagnosis.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_goodmorningstats",
       "label": "goodMorningStats.ts",
       "_origin": "ast",
@@ -26727,6 +26694,17 @@
       "file_type": "code",
       "norm_label": "goodmorningstats.ts",
       "source_file": "src/lib/goodMorningStats.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_diagnosis_test",
+      "label": "diagnosis.test.ts",
+      "_origin": "ast",
+      "community": 240,
+      "community_name": "goodMorningStats.ts",
+      "file_type": "code",
+      "norm_label": "diagnosis.test.ts",
+      "source_file": "src/__tests__/diagnosis.test.ts",
       "source_location": "L1"
     },
     {
@@ -26794,72 +26772,6 @@
       "norm_label": "pdflines.ts",
       "source_file": "tools/minerador/pdfLines.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk",
-      "label": "smallTalk.ts",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "smalltalk.ts",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_ack",
-      "label": "ACK",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "ack",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_filler",
-      "label": "FILLER",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "filler",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_greeting",
-      "label": "GREETING",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "greeting",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_how_are_you",
-      "label": "HOW_ARE_YOU",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "how_are_you",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_lib_fofoia_smalltalk_thanks",
-      "label": "THANKS",
-      "_origin": "ast",
-      "community": 244,
-      "community_name": "smallTalk.ts",
-      "file_type": "code",
-      "norm_label": "thanks",
-      "source_file": "src/lib/fofoia/smallTalk.ts",
-      "source_location": "L10"
     },
     {
       "id": "src_features_admin_factory_adminfactoryview",
@@ -27733,7 +27645,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfe0 checklist do app desktop (pendente \u2014 juntado na `main` antes, por decisao do dono)",
       "source_file": "BACKLOG.md",
-      "source_location": "L127"
+      "source_location": "L137"
     },
     {
       "id": "backlog_defini\u00e7\u00e3o_de_pronto",
@@ -27745,7 +27657,7 @@
       "node_kind": "heading",
       "norm_label": "\u2705 definicao de pronto",
       "source_file": "BACKLOG.md",
-      "source_location": "L65"
+      "source_location": "L75"
     },
     {
       "id": "backlog_estado_real_por_\u00e1rea",
@@ -27757,7 +27669,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfaf estado real por area",
       "source_file": "BACKLOG.md",
-      "source_location": "L69"
+      "source_location": "L79"
     },
     {
       "id": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
@@ -27781,7 +27693,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udd1c proximas fatias",
       "source_file": "BACKLOG.md",
-      "source_location": "L136"
+      "source_location": "L146"
     },
     {
       "id": "backlog_status_global",
@@ -27794,6 +27706,61 @@
       "norm_label": "\ud83d\udccc status global",
       "source_file": "BACKLOG.md",
       "source_location": "L5"
+    },
+    {
+      "id": "src_components_richtext",
+      "label": "RichText.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richtext.tsx",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_richtext_heading_classes",
+      "label": "HEADING_CLASSES",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "heading_classes",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L151"
+    },
+    {
+      "id": "src_components_richtext_reveal_step_ms",
+      "label": "REVEAL_STEP_MS",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "reveal_step_ms",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_components_richtext_reveal_total_ms",
+      "label": "REVEAL_TOTAL_MS",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "reveal_total_ms",
+      "source_file": "src/components/RichText.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_components_richtextblocks",
+      "label": "richTextBlocks.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richtextblocks.tsx",
+      "source_file": "src/components/richTextBlocks.tsx",
+      "source_location": "L1"
     },
     {
       "id": "src_features_notebook_dock_notebookdockpanel",
@@ -27870,6 +27837,17 @@
       "file_type": "code",
       "norm_label": "pdfreadprogress.test.ts",
       "source_file": "src/__tests__/pdfReadProgress.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_richtext_test",
+      "label": "richText.test.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "PdfReaderStage.tsx",
+      "file_type": "code",
+      "norm_label": "richtext.test.tsx",
+      "source_file": "src/__tests__/richText.test.tsx",
       "source_location": "L1"
     },
     {
@@ -28502,6 +28480,61 @@
       "source_location": "L1"
     },
     {
+      "id": "src_tests_usetopicquestions_test",
+      "label": "useTopicQuestions.test.tsx",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "usetopicquestions.test.tsx",
+      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tests_usetopicquestions_test_acervo",
+      "label": "ACERVO",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "acervo",
+      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_tests_usetopicquestions_test_base",
+      "label": "base",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "base",
+      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_tests_usetopicquestions_test_calls",
+      "label": "calls",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "calls",
+      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_tests_usetopicquestions_test_linked",
+      "label": "linked",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "QuestionWorkbench.tsx",
+      "file_type": "code",
+      "norm_label": "linked",
+      "source_file": "src/__tests__/useTopicQuestions.test.tsx",
+      "source_location": "L7"
+    },
+    {
       "id": "src_lib_database",
       "label": "lib/database.ts",
       "_origin": "ast",
@@ -28996,6 +29029,17 @@
       "source_location": "L41"
     },
     {
+      "id": "src_tests_importers_test",
+      "label": "importers.test.ts",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "questionImport.ts",
+      "file_type": "code",
+      "norm_label": "importers.test.ts",
+      "source_file": "src/__tests__/importers.test.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "agents_skills_questoes_specialist_skill",
       "label": "questoes-specialist/SKILL.md",
       "_origin": "ast",
@@ -29488,28 +29532,6 @@
       "norm_label": "diagnosis_tone",
       "source_file": "src/lib/answerLabels.ts",
       "source_location": "L26"
-    },
-    {
-      "id": "src_tests_answerflow_test",
-      "label": "answerFlow.test.tsx",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "ReviewConfidence",
-      "file_type": "code",
-      "norm_label": "answerflow.test.tsx",
-      "source_file": "src/__tests__/answerFlow.test.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tests_answerflow_test_forbidden_jargon",
-      "label": "FORBIDDEN_JARGON",
-      "_origin": "ast",
-      "community": 41,
-      "community_name": "ReviewConfidence",
-      "file_type": "code",
-      "norm_label": "forbidden_jargon",
-      "source_file": "src/__tests__/answerFlow.test.tsx",
-      "source_location": "L6"
     },
     {
       "id": "agents_skills_cognitive_load_analyser_skill",
@@ -34279,17 +34301,6 @@
       "source_file": "pdfjs-dist/build/pdf.worker.min.mjs?url"
     },
     {
-      "id": "src_components_curriculummanagermodal",
-      "label": "CurriculumManagerModal.tsx",
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "curriculummanagermodal.tsx",
-      "source_file": "src/components/CurriculumManagerModal.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_features_edital_import_editaldraft",
       "label": "editalDraft.ts",
       "_origin": "ast",
@@ -34397,17 +34408,6 @@
       "file_type": "code",
       "norm_label": "pdftext.ts",
       "source_file": "src/lib/pdfText.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_syllabusimport",
-      "label": "syllabusImport.ts",
-      "_origin": "ast",
-      "community": 72,
-      "community_name": "editalParser.ts",
-      "file_type": "code",
-      "norm_label": "syllabusimport.ts",
-      "source_file": "src/lib/syllabusImport.ts",
       "source_location": "L1"
     },
     {
@@ -70407,7 +70407,7 @@
     },
     {
       "source": "src_tests_answerflow_test",
-      "target": "src_features_answer_flow_confidencepicker_confidencepicker",
+      "target": "src_features_answer_flow_answeroptions_answeroptions",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -70419,7 +70419,7 @@
     },
     {
       "source": "src_tests_answerflow_test",
-      "target": "src_features_answer_flow_diagnosispicker_diagnosispicker",
+      "target": "src_features_answer_flow_confidencepicker_confidencepicker",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -70427,6 +70427,18 @@
       "context": "import",
       "source_file": "src/__tests__/answerFlow.test.tsx",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_answerflow_test",
+      "target": "src_features_answer_flow_diagnosispicker_diagnosispicker",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/answerFlow.test.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -84337,7 +84349,7 @@
     },
     {
       "source": "src_tests_answerflow_test",
-      "target": "src_features_answer_flow_confidencepicker",
+      "target": "src_features_answer_flow_answeroptions",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -84349,7 +84361,7 @@
     },
     {
       "source": "src_tests_answerflow_test",
-      "target": "src_features_answer_flow_diagnosispicker",
+      "target": "src_features_answer_flow_confidencepicker",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -84357,6 +84369,18 @@
       "context": "import",
       "source_file": "src/__tests__/answerFlow.test.tsx",
       "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tests_answerflow_test",
+      "target": "src_features_answer_flow_diagnosispicker",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/__tests__/answerFlow.test.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -92336,7 +92360,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L127",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -92347,7 +92371,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L136",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -92369,7 +92393,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L65",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -92380,7 +92404,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L69",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -100839,7 +100863,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L43",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -100850,7 +100874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L55",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -100861,7 +100885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L60",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -100877,13 +100901,24 @@
     },
     {
       "source": "src_features_questions_context_m\u00f3dulo_de_quest\u00f5es_contexto_vivo_arquitetura_da_bancada",
+      "target": "src_features_questions_context_4_integra\u00e7\u00e3o_com_o_acervo_local_acervo_db",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/questions/CONTEXT.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_questions_context_m\u00f3dulo_de_quest\u00f5es_contexto_vivo_arquitetura_da_bancada",
       "target": "src_features_questions_context_5_diretrizes_inviol\u00e1veis_anti_objetivos",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L105",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -100894,7 +100929,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L115",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -100905,7 +100940,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L131",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -100927,18 +100962,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_questions_context_m\u00f3dulo_de_quest\u00f5es_contexto_vivo_arquitetura_da_bancada",
-      "target": "src_features_questions_context_4_integra\u00e7\u00e3o_com_o_acervo_local_acervo_db",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/questions/CONTEXT.md",
-      "source_location": "L97",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -109518,7 +109542,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/__tests__/answerFlow.test.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -118439,5 +118463,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4771dac3dc24079704f9529fd972f441d4f1a5fc"
+  "built_at_commit": "16d58a3c4e1d56bed8c62e2c0f2fa6be8f92742f"
 }
