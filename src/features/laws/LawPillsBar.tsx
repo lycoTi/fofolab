@@ -7,6 +7,7 @@ import { LawReaderModal } from './LawReaderModal';
 export interface LawPillsBarProps {
   excerpts?: LawExcerpt[];
   conversationText?: string;
+  onWiden?: (minWidth: number) => void;
   onSaveToNotebook?: (markdown: string) => void;
 }
 
@@ -14,7 +15,12 @@ export interface LawPillsBarProps {
  * Barra tátil de pílulas da Letra da Lei (spec 11 §8 - Fatia 11.2.4).
  * Exibe os dispositivos jurídicos que fundamentam a questão ou a conversa da FofoIA.
  */
-export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook }: LawPillsBarProps) {
+export function LawPillsBar({
+  excerpts = [],
+  conversationText,
+  onWiden,
+  onSaveToNotebook,
+}: LawPillsBarProps) {
   const dynamicExcerpts = useLawExcerpts({ conversationText });
 
   const allExcerpts = useMemo(() => {
@@ -29,6 +35,11 @@ export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook 
 
   const [selected, setSelected] = useState<LawExcerpt | null>(null);
 
+  const handleOpen = (excerpt: LawExcerpt) => {
+    setSelected(excerpt);
+    onWiden?.(540);
+  };
+
   if (allExcerpts.length === 0) return null;
 
   return (
@@ -36,7 +47,7 @@ export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook 
       <div
         role="region"
         aria-label="Legislação citada"
-        className="flex flex-wrap items-center gap-1.5 border-b border-slate-800/80 bg-slate-950/40 px-3.5 py-1.5 text-xs"
+        className="flex flex-wrap items-center gap-1.5 border-b border-slate-800/80 bg-slate-950/40 px-3.5 py-1.5 text-xs animate-in fade-in slide-in-from-top-1 duration-200"
       >
         <span className="text-[11px] font-medium text-slate-400 select-none">
           Letra da lei:
@@ -45,8 +56,8 @@ export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook 
           <button
             key={`${excerpt.lawName}-${excerpt.article}`}
             type="button"
-            onClick={() => setSelected(excerpt)}
-            className="inline-flex items-center gap-1.5 rounded-md border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-[11px] text-slate-300 transition-all hover:border-slate-600 hover:bg-slate-800 hover:text-white active:scale-[0.97]"
+            onClick={() => handleOpen(excerpt)}
+            className="inline-flex items-center gap-1.5 rounded-md border border-slate-700/60 bg-slate-800/40 px-2 py-0.5 text-[11px] text-slate-300 transition-all hover:border-slate-500 hover:bg-slate-800 hover:text-white active:scale-[0.97]"
             title={`Consultar ${excerpt.lawName} ${excerpt.article}`}
           >
             <Scale size={11} className="text-amber-400 shrink-0" />
@@ -59,6 +70,8 @@ export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook 
       {selected && (
         <LawReaderModal
           excerpt={selected}
+          allExcerpts={allExcerpts}
+          onSelectExcerpt={(exc) => setSelected(exc)}
           onClose={() => setSelected(null)}
           onSaveToNotebook={onSaveToNotebook}
         />
@@ -66,4 +79,3 @@ export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook 
     </>
   );
 }
-

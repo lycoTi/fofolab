@@ -1,4 +1,5 @@
 import type { SelfDiagnosisType } from '../../types/database';
+import { detectLawReferences } from '../laws/detector';
 
 /**
  * Jeitos de ensinar da FofoIA (spec 11 §5.2.1), escolhidos pelos sinais que o app já tem — sem chamada extra à IA.
@@ -104,7 +105,8 @@ function needsFromZero(s: ModeSignals): boolean {
  */
 export function chooseMode(s: ModeSignals): FofoMode {
   const unansweredQuestion = s.activeQuestion !== null && !s.activeQuestion.answered;
-  if (unansweredQuestion && (s.requested === null || s.requested === 'HINT')) return 'HINT';
+  const isLawInquiry = s.requested === null && detectLawReferences(s.text).length > 0;
+  if (unansweredQuestion && !isLawInquiry && (s.requested === null || s.requested === 'HINT')) return 'HINT';
   if (s.requested === 'HINT') return 'QUICK';
   if (s.requested) return s.requested;
   if (isEditalQuestion(s.text)) return 'EDITAL';

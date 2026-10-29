@@ -163,6 +163,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
       <LawPillsBar
         excerpts={props.lawExcerpts}
         conversationText={turns.length > 0 ? turns.map((t) => t.content).join(' ') : undefined}
+        onWiden={props.onWiden}
         onSaveToNotebook={props.onSaveSummary}
       />
 

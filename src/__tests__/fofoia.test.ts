@@ -57,6 +57,8 @@ describe('Sinais e jeito da FofoIA (spec 11 §5.2.1)', () => {
     // Pedir a aula do tópico explicitamente segue valendo (o prompt não leva o gabarito e proíbe revelar a alternativa)
     expect(chooseMode(signals({ requested: 'LESSON', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('LESSON');
     expect(chooseMode(signals({ requested: 'HINT', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('HINT');
+    // Pergunta explícita sobre legislação não é sequestrada pela pista da questão
+    expect(chooseMode(signals({ text: 'oi, me fale sobre a lei 8112', activeQuestion: { answered: false, diagnosis: null, falseCertainty: false } }))).toBe('QUICK');
   });
 
   it('sugere a aula pelos sinais, sem chamada extra', () => {
