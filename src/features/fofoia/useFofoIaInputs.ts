@@ -5,7 +5,7 @@ import { getNotebookForTopic, saveTopicNotebook } from '../../lib/database';
 import { isFalseCertainty } from '../../lib/diagnosis';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import type { AiDissection, ExamPart, Notebook, Question, QuestionAttempt, QuestionLog, Subject, Topic } from '../../types/database';
-import type { FofoActiveQuestion, FofoIaPanelProps } from './FofoIaPanel';
+import type { FofoActiveQuestion, FofoIaPanelProps, FofoStudentAttempt } from './FofoIaPanel';
 
 function topicLabel(topic: Topic): string {
   return topic.code ? `${topic.code} ${topic.title}` : topic.title;
@@ -68,13 +68,26 @@ export function useFofoIaInputs(params: {
   // 2. Questão ativa com o último diagnóstico dela (sinais de "Do zero": falsa certeza, "confundi")
   let active: FofoActiveQuestion | null = null;
   if (activeQuestion) {
-    const last = activeQuestion.answered ? attempts.find((a) => a.question_id === activeQuestion.question.id) : undefined;
+    const last = activeQuestion.answered
+      ? [...attempts].filter((a) => a.question_id === activeQuestion.question.id).sort((a, b) => b.attempted_at.localeCompare(a.attempted_at))[0]
+      : undefined;
+    const attempt: FofoStudentAttempt | null = last
+      ? {
+          selectedOption: last.selected_option,
+          isCorrect: last.is_correct === 1,
+          confidence: last.confidence ?? null,
+          diagnosis: last.self_diagnosis ?? null,
+          timeSpentSeconds: last.time_spent_seconds,
+          falseCertainty: isFalseCertainty(last),
+        }
+      : null;
     active = {
       question: activeQuestion.question,
       answered: activeQuestion.answered,
       dissection: params.topicQuestions.find((q) => q.question.id === activeQuestion.question.id)?.dissection ?? null,
       diagnosis: last?.self_diagnosis ?? null,
       falseCertainty: last ? isFalseCertainty(last) : false,
+      attempt,
     };
   }
 

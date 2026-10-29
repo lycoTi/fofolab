@@ -135,12 +135,36 @@ describe('Painel da FofoIA (spec 11)', () => {
     expect(p.onSaveSummary).not.toHaveBeenCalled();
   });
 
-  it('"Cai no meu edital?" usa o filtro local e responde com o tópico do plano', async () => {
+  it('"Cai no meu edital?" usa o filtro local e responde quando o estudante pergunta sobre edital', async () => {
     render(<FofoIaPanel {...props()} />);
-    fireEvent.click(screen.getByRole('button', { name: 'Cai no meu edital?' }));
-    await ask('microsserviços');
+
+    await ask('microsserviços cai no edital?');
     expect(badge('Cai no meu edital?')).toBeTruthy();
     expect(screen.getByText(/1.1 Monolitos e microsserviços/)).toBeTruthy();
+  });
+
+  it('exibe atalhos dinâmicos conforme o estado do estudante', () => {
+    const { rerender } = render(<FofoIaPanel {...props()} />);
+    expect(screen.getByRole('button', { name: 'Aula completa' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Do zero' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Salvar resumo' })).toBeTruthy();
+
+    const unans = { question, answered: false, dissection: null, diagnosis: null, falseCertainty: false };
+    rerender(<FofoIaPanel {...props({ activeQuestion: unans })} />);
+    expect(screen.getByRole('button', { name: 'Pedir pista' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Conceito-base' })).toBeTruthy();
+
+    const wrong = {
+      question,
+      answered: true,
+      dissection: null,
+      diagnosis: 'BASE_GAP' as const,
+      falseCertainty: false,
+      attempt: { selectedOption: 'C', isCorrect: false, confidence: 'SURE' as const, diagnosis: 'BASE_GAP' as const, falseCertainty: false },
+    };
+    rerender(<FofoIaPanel {...props({ activeQuestion: wrong })} />);
+    expect(screen.getByRole('button', { name: 'Por que errei?' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Aula completa' })).toBeTruthy();
   });
 
   it('pedido vindo da aba Questões: "Aprofundar" abre a conversa sobre a questão', async () => {
@@ -283,5 +307,84 @@ describe('Aula completa e resumo depois de uma conversa', () => {
       fireEvent.keyDown(textarea, { key: 'Enter', shiftKey: false });
     });
     expect(screen.getAllByText(/Primeira linha/).length).toBeGreaterThan(0);
+  });
+});
+
+describe('Gestão da conversa, memória por questão e envio ao caderno', () => {
+  const q1 = {
+    question: { id: 'q1', statement: 'Questão um', exam_board: 'Cebraspe', exam_year: 2025, options_json: JSON.stringify(['C', 'E']), final_answer: 'C' } as Question,
+    answered: true,
+    dissection: null,
+    diagnosis: null,
+    falseCertainty: false,
+  };
+  const q2 = {
+    question: { id: 'q2', statement: 'Questão dois', exam_board: 'Cebraspe', exam_year: 2025, options_json: JSON.stringify(['C', 'E']), final_answer: 'E' } as Question,
+    answered: true,
+    dissection: null,
+    diagnosis: null,
+    falseCertainty: false,
+  };
+
+  it('isola a conversa por questão ativa: trocar de questão limpa a lousa; voltar restaura a conversa', async () => {
+    localStorage.clear();
+    const { rerender } = render(<FofoIaPanel {...props({ activeQuestion: q1 })} />);
+    await ask('Minha dúvida na questão 1');
+    expect(screen.getByText('Minha dúvida na questão 1')).toBeTruthy();
+
+    // Troca para a questão 2: lousa limpa, sem histórico da questão 1
+    rerender(<FofoIaPanel {...props({ activeQuestion: q2 })} />);
+    expect(screen.queryByText('Minha dúvida na questão 1')).toBeNull();
+
+    // Volta para a questão 1: a conversa anterior reaparece intacta
+    rerender(<FofoIaPanel {...props({ activeQuestion: q1 })} />);
+    expect(screen.getByText('Minha dúvida na questão 1')).toBeTruthy();
+  });
+
+  it('botão "Limpar" no cabeçalho limpa a lousa da questão atual', async () => {
+    render(<FofoIaPanel {...props({ activeQuestion: q1 })} />);
+    await ask('Pergunta para zerar');
+    expect(screen.getByText('Pergunta para zerar')).toBeTruthy();
+
+    const clearBtn = screen.getByRole('button', { name: 'Limpar conversa' });
+    await act(async () => {
+      fireEvent.click(clearBtn);
+    });
+    expect(screen.queryByText('Pergunta para zerar')).toBeNull();
+  });
+
+  it('em modo simulado (sem chave), o botão "+ Caderno" fica desabilitado para não poluir o caderno', async () => {
+    const onSave = vi.fn();
+    render(<FofoIaPanel {...props()} />);
+    await ask('Explique broker');
+    const addBtn = screen.getAllByRole('button', { name: '+ Caderno' })[0] as HTMLButtonElement;
+    expect(addBtn).toBeTruthy();
+
+    expect(addBtn.disabled).toBe(true);
+
+  });
+
+  it('botão "+ Caderno" na fala real do tutor salva a explicação e altera o estado', async () => {
+    const { FofoMessage } = await import('../features/fofoia/FofoMessage');
+    const onSave = vi.fn();
+    render(
+      <FofoMessage
+        turn={{ id: 't1', role: 'tutor', content: 'Explicação importante sobre arquitetura.', mode: 'QUICK', simulated: false }}
+        topicLabel="Arquitetura"
+        aiConfigured={true}
+        onContinue={() => {}}
+        onResume={() => {}}
+        onAnotherHint={() => {}}
+        onLesson={() => {}}
+        onSummary={() => {}}
+        onSaveSummary={onSave}
+        onRetry={() => {}}
+      />
+    );
+    const addBtn = screen.getByRole('button', { name: '+ Caderno' });
+    expect(addBtn).toBeTruthy();
+    fireEvent.click(addBtn);
+    expect(onSave).toHaveBeenCalledWith('Explicação importante sobre arquitetura.');
+    expect(screen.getByRole('button', { name: 'Salvo no caderno' })).toBeTruthy();
   });
 });

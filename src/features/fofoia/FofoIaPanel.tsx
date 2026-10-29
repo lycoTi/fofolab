@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { Loader2, Send, X } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
 import type { StudentContextSnapshot } from '../../lib/aiRouter';
 import { buildFofoContext } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
-import type { FofoMode } from '../../lib/fofoia/signals';
-import type { AiDissection, Question, SelfDiagnosisType } from '../../types/database';
+import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import { FofoMessage } from './FofoMessage';
+import { FofoPanelHeader } from './FofoPanelHeader';
+import { FofoShortcuts } from './FofoShortcuts';
 import { useFofoConversation } from './useFofoConversation';
 import { WarmupInvite } from './WarmupInvite';
 import { markWarmupSeen, warmupSeen } from './warmup';
@@ -14,12 +15,22 @@ import { markWarmupSeen, warmupSeen } from './warmup';
 /** Largura mínima da coluna enquanto se lê uma aula completa (spec 11 §5.1). */
 export const LESSON_MIN_WIDTH = 560;
 
+export interface FofoStudentAttempt {
+  selectedOption: string;
+  isCorrect: boolean;
+  confidence: ReviewConfidence | null;
+  diagnosis: SelfDiagnosisType | null;
+  timeSpentSeconds?: number;
+  falseCertainty: boolean;
+}
+
 export interface FofoActiveQuestion {
   question: Question;
   answered: boolean;
   dissection: AiDissection | null;
   diagnosis: SelfDiagnosisType | null;
   falseCertainty: boolean;
+  attempt?: FofoStudentAttempt | null;
 }
 
 export interface FofoIaPanelProps {
@@ -45,32 +56,38 @@ export interface FofoIaPanelProps {
   onRequestHandled: () => void;
 }
 
-const shortcut =
-  'rounded-lg border border-slate-800 bg-slate-900/60 px-2.5 py-1 text-[11px] font-medium text-slate-300 ' +
-  'transition-all duration-100 hover:border-slate-700 hover:bg-slate-800/60 hover:text-white active:scale-[0.97]';
-
 /** FofoIA (spec 11): um só professor na coluna direita, com jeitos de ensinar escolhidos pelos sinais do estudante. */
 export function FofoIaPanel(props: FofoIaPanelProps) {
   const { activeQuestion, topicLabel } = props;
   const ctx = buildFofoContext({
     context: props.context,
     notebook: props.notebook,
-    activeQuestion: activeQuestion ? { question: activeQuestion.question, answered: activeQuestion.answered, dissection: activeQuestion.dissection } : null,
+    activeQuestion: activeQuestion
+      ? {
+          question: activeQuestion.question,
+          answered: activeQuestion.answered,
+          dissection: activeQuestion.dissection,
+          attempt: activeQuestion.attempt,
+        }
+      : null,
     prerequisites: props.prerequisites,
   });
-  const { turns, loading, send, resume } = useFofoConversation({
+  const sessionKey = activeQuestion?.question?.id ? `q:${activeQuestion.question.id}` : `t:${props.topicKey}`;
+  const { turns, loading, send, resume, clear } = useFofoConversation({
+    sessionKey,
     topicKey: props.topicKey,
     topicLabel,
     ctx,
     baseSignals: {
       topicMastery: props.context.currentTopicMastery,
       firstContact: props.firstContact,
-      activeQuestion: activeQuestion ? { answered: activeQuestion.answered, diagnosis: activeQuestion.diagnosis, falseCertainty: activeQuestion.falseCertainty } : null,
+      activeQuestion: activeQuestion
+        ? { answered: activeQuestion.answered, diagnosis: activeQuestion.diagnosis, falseCertainty: activeQuestion.falseCertainty }
+        : null,
     },
     editalTopics: props.editalTopics,
   });
   const [draft, setDraft] = useState('');
-  const [pending, setPending] = useState<FofoMode | null>(null);
   const [warmup, setWarmup] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -130,20 +147,18 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   const submit = () => {
     const text = draft.trim();
     if (!text) return;
-    void send(text, pending);
+    void send(text);
     setDraft('');
-    setPending(null);
   };
 
   return (
     <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
-      <div className="flex items-center gap-2.5 border-b border-slate-800/80 bg-slate-950/30 p-3.5">
-        <CurrentFofo decorative />
-        <div className="min-w-0">
-          <h3 className="text-xs font-bold text-white">FofoIA</h3>
-          <p className="truncate text-[10px] text-slate-400">{props.aiConfigured ? `Conversando sobre ${topicLabel}` : 'Modo demonstração — respostas de exemplo até a IA ser configurada'}</p>
-        </div>
-      </div>
+      <FofoPanelHeader
+        topicLabel={topicLabel}
+        aiConfigured={props.aiConfigured}
+        hasTurns={turns.length > 0}
+        onClear={clear}
+      />
 
       <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (
@@ -192,27 +207,15 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
       </div>
 
       <div className="space-y-2 border-t border-slate-800/80 bg-slate-950/60 p-3">
-        <div className="flex flex-wrap gap-1.5">
-          <button type="button" onClick={() => lesson()} className={shortcut}>
-            Aula completa
-          </button>
-          <button type="button" aria-pressed={pending === 'EDITAL'} onClick={() => setPending(pending === 'EDITAL' ? null : 'EDITAL')} className={`${shortcut} ${pending === 'EDITAL' ? 'border-orange-500 text-orange-200' : ''}`}>
-            Cai no meu edital?
-          </button>
-          {unanswered && (
-            <button type="button" onClick={hint} className={shortcut}>
-              Pedir pista
-            </button>
-          )}
-        </div>
-        {pending === 'EDITAL' && (
-          <p className="flex items-center gap-1.5 text-[11px] text-orange-200">
-            Descreva o assunto e eu digo se está no seu edital.
-            <button type="button" onClick={() => setPending(null)} aria-label="Cancelar" className="text-slate-400 hover:text-white">
-              <X size={11} />
-            </button>
-          </p>
-        )}
+        <FofoShortcuts
+          unanswered={unanswered}
+          activeQuestion={activeQuestion}
+          topicLabel={topicLabel}
+          talked={talked}
+          onHint={hint}
+          onLesson={() => lesson()}
+          onSend={(msg, mode) => void send(msg, mode ?? null)}
+        />
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -231,7 +234,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
                 submit();
               }
             }}
-            placeholder={pending === 'EDITAL' ? 'Ex.: mensageria com filas…' : 'Pergunte sobre o tópico ou a questão…'}
+            placeholder="Pergunte sobre o tópico ou a questão…"
             aria-label="Pergunte à FofoIA"
             className="max-h-[35vh] flex-1 resize-none rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs leading-relaxed text-white outline-none focus:border-orange-500"
           />

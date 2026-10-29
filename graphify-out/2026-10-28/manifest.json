@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793198325.2195525,
-    "seen": 1793201913.0409544,
-    "ast_hash": "b7f31538a9a965a2acde03dce6ebba35",
+    "mtime": 1793238357.1664443,
+    "seen": 1793239241.5257685,
+    "ast_hash": "559593661395e14fb2678d17be9af8a4",
     "semantic_hash": ""
   },
   "README.md": {
@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/richText.test.tsx": {
-    "mtime": 1792961711.5166407,
-    "seen": 1792962125.6553364,
-    "ast_hash": "843d597f56d109cbfe33701bdcb1577a",
+    "mtime": 1793239023.3161001,
+    "seen": 1793239241.368371,
+    "ast_hash": "e46029c22b3ea5c6e97da250c33f485c",
     "semantic_hash": ""
   },
   "src/__tests__/studyBlockMachine.test.ts": {
@@ -624,9 +624,9 @@
     "semantic_hash": ""
   },
   "src/components/RichText.tsx": {
-    "mtime": 1792961742.643243,
-    "seen": 1792962125.6553774,
-    "ast_hash": "155998301f6523b628f712a4b73ecf13",
+    "mtime": 1793238992.0745182,
+    "seen": 1793239241.3878093,
+    "ast_hash": "9991a655672a9029dea58ffb08005fb0",
     "semantic_hash": ""
   },
   "src/features/cycle/CycleSubjectRow.tsx": {
@@ -660,9 +660,9 @@
     "semantic_hash": ""
   },
   "src/features/study-block/StudyBlockParts.tsx": {
-    "mtime": 1793199435.464679,
-    "seen": 1793201912.9430406,
-    "ast_hash": "71c6e4d9ec31f89677f65f52d777ac45",
+    "mtime": 1793202616.4618306,
+    "seen": 1793202931.4478152,
+    "ast_hash": "863ba531a7576f676ce70948d9b661b6",
     "semantic_hash": ""
   },
   "src/features/study-block/studyBlockMachine.ts": {
@@ -870,15 +870,15 @@
     "semantic_hash": ""
   },
   "src/features/routine/RoutineBlockItem.tsx": {
-    "mtime": 1793200883.0866878,
-    "seen": 1793201912.9404655,
-    "ast_hash": "a5e8dfdd0032c76f0d6e86b4bbe66c40",
+    "mtime": 1793203084.4765434,
+    "seen": 1793239241.4199817,
+    "ast_hash": "502891ce3b3d26f851e0fdfaa4736a44",
     "semantic_hash": ""
   },
   "src/features/routine/RoutineColumn.tsx": {
-    "mtime": 1793200808.094559,
-    "seen": 1793201912.940468,
-    "ast_hash": "df8c0f15f7630008461894f59287ec6f",
+    "mtime": 1793203084.8403697,
+    "seen": 1793239241.4199853,
+    "ast_hash": "5e7507a8cac5f050d890ee0353b6af07",
     "semantic_hash": ""
   },
   "src/features/routine/useDailyRoutine.ts": {
@@ -942,8 +942,8 @@
     "semantic_hash": ""
   },
   "src/features/routine/QuestionLogPanel.tsx": {
-    "mtime": 1793200748.950824,
-    "seen": 1793201912.9404619,
+    "mtime": 1793202224.160931,
+    "seen": 1793202931.4454503,
     "ast_hash": "357619264e395b2d9a96c919990ab7e4",
     "semantic_hash": ""
   },
@@ -1632,9 +1632,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoia.test.ts": {
-    "mtime": 1793064119.3711708,
-    "seen": 1793065130.691855,
-    "ast_hash": "887a9529a55ecbdf7fde15273c6a41a3",
+    "mtime": 1793239119.103362,
+    "seen": 1793239241.3600209,
+    "ast_hash": "3cb9bc3775900f9e505d7f2aebbb03a3",
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
@@ -1764,9 +1764,9 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/prompts.ts": {
-    "mtime": 1793139728.5975254,
-    "seen": 1793140211.1671834,
-    "ast_hash": "3abad0b0360938be225e01e97b41f37a",
+    "mtime": 1793239082.2308316,
+    "seen": 1793239241.4451215,
+    "ast_hash": "abf5452191e1800389d4faedc7a45490",
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
@@ -1962,8 +1962,8 @@
     "semantic_hash": ""
   },
   "tools/minerador/__tests__/assembleExam.test.ts": {
-    "mtime": 1793201810.5080855,
-    "seen": 1793201912.978512,
+    "mtime": 1793202224.786434,
+    "seen": 1793202931.4979794,
     "ast_hash": "4f66d97394bbfe8d596c2543db3112e8",
     "semantic_hash": ""
   },
@@ -2862,8 +2862,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/weekdayHoursEditor.test.tsx": {
-    "mtime": 1793201831.9956038,
-    "seen": 1793201912.909967,
+    "mtime": 1793202224.0195303,
+    "seen": 1793202931.3972504,
     "ast_hash": "56bad65bbfeca02d6c6d244831690e82",
     "semantic_hash": ""
   },
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793189124.6819646,
-    "seen": 1793191394.453694,
-    "ast_hash": "0f1b53583c30dd14105c91e8dabad5ad",
+    "mtime": 1793239154.2187855,
+    "seen": 1793239241.540491,
+    "ast_hash": "a31106a417bfbf7802bf47e908a2464b",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3639,6 +3639,12 @@
     "mtime": 1793201636.7675612,
     "seen": 1793201913.0608974,
     "ast_hash": "612c215b4005c2a1409d5ae64590b738",
+    "semantic_hash": ""
+  },
+  "src/components/richTextBlocks.tsx": {
+    "mtime": 1793238960.4307668,
+    "seen": 1793239241.3886397,
+    "ast_hash": "6b3e1361b504bd89689c64603a75b7c4",
     "semantic_hash": ""
   }
 }

@@ -22,6 +22,7 @@ export const FROM_ZERO_MASTERY_BELOW = 30;
 export const LESSON_FOLLOW_UPS = 2;
 
 const BASIC_PATTERNS = ['o que e', 'o que significa', 'nao entendi', 'nao sei nada', 'do zero', 'como funciona', 'nunca vi', 'me explica'];
+const EDITAL_PATTERNS = ['edital', 'cai na prova', 'cai no concurso', 'cai na cgu', 'peso da materia', 'quantas questoes'];
 
 /** Minúsculas e sem acento: "Não entendi" e "nao entendi" contam igual. */
 export function normalizeText(text: string): string {
@@ -33,8 +34,13 @@ export function isBasicQuestion(text: string): boolean {
   return BASIC_PATTERNS.some((p) => normalized.includes(p));
 }
 
+export function isEditalQuestion(text: string): boolean {
+  const normalized = normalizeText(text);
+  return EDITAL_PATTERNS.some((p) => normalized.includes(p));
+}
+
 export interface ModeSignals {
-  /** Pedido explícito por botão ("Aula completa", "Salvar resumo", "Cai no meu edital?", "Pedir pista"). */
+  /** Pedido explícito por botão ("Aula completa", "Salvar resumo", "Pedir pista"). */
   requested: FofoMode | null;
   text: string;
   topicMastery: number;
@@ -57,14 +63,15 @@ function needsFromZero(s: ModeSignals): boolean {
 
 /**
  * Precedência: pergunta livre com a questão ativa sem resposta → pista (o gabarito nunca sai antes da tentativa); pedido
- * explícito (a aula do tópico segue, sem gabarito no prompt e com a regra de não revelar a alternativa); sinais de "do
- * zero"; senão a resposta rápida. Pista sem questão aberta não faz sentido e vira resposta rápida.
+ * explícito; pergunta sobre o edital; sinais de "do zero"; senão a resposta rápida. Pista sem questão aberta não faz
+ * sentido e vira resposta rápida.
  */
 export function chooseMode(s: ModeSignals): FofoMode {
   const unansweredQuestion = s.activeQuestion !== null && !s.activeQuestion.answered;
   if (unansweredQuestion && (s.requested === null || s.requested === 'HINT')) return 'HINT';
   if (s.requested === 'HINT') return 'QUICK';
   if (s.requested) return s.requested;
+  if (isEditalQuestion(s.text)) return 'EDITAL';
   return needsFromZero(s) ? 'FROM_ZERO' : 'QUICK';
 }
 

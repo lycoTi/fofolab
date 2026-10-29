@@ -9,6 +9,24 @@
 - **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE] [Claude Code]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. **12d [DONE] [Antigravity]** (`docs/specs/12d-auto-sync-e-fila-questoes.md`): sincronização automática do acervo sem clique manual (`/__acervo/index.json` + pacotes por banca), fila inteligente na aba Questões (`Inéditas`, `Errei ou chutei`, `Todas`, ordenação `Certo/Errado` antes de `Múltipla escolha`, anuladas fora da contagem do bloco) e reta final flexível (migração **v13**).
 - **27/10/2026 [Antigravity]:** Bancada de Questões polida no padrão Anti-IA (filtros colapsáveis compactos com resumo, paginação de questões seguindo o fluxo do olhar do estudante, complexidade intrínseca de 3 níveis Fácil/Média/Difícil estável, diagnóstico pós-resolução desmarcado por padrão para avaliação sem viés). Sincronização automática com stamp estritamente determinístico (notificação recorrente eliminada). Acervo Cebraspe ampliado com +500 questões pelo DeepSeek (28.344 itens com assunto, vocabulário v1694). Todos os 82 arquivos de teste (743 testes), E2E e build verificados e passando.
 - **28/10/2026 [Antigravity]:** Des-cardização completa do app no paradigma da Prancheta/Bancada de Alta Densidade (*Operate mode*, Anti-IA, Emil Kowalski & Apple Design). Removida hiper-cardização e decorações de landing page (teias de aranha de Halloween removidas da área de estudo). Reestruturados: Coluna da Esquerda (remoção da trilha vertical artificial que espremia o texto, eliminação radical da moldura/caixa de 4 bordas do bloco atual, itens feitos e próximos em linhas limpas de alta densidade sem cards, botões de materiais e seletor de Pomodoro convertidos em toolbars/segmented controls unificados de 1px), Questões (metadados tipográficos inline em vez de chips aninhados), FofoIA (textarea expansível até 35vh com Shift+Enter para quebra de linha, botões táteis `active:scale-[0.97]`), Início/Bom dia (painel contínuo de prancheta com divisores de 1px sem cards dentro de cards) e Plano de estudo (calendário com micro-interações táteis e réguas de ciclo limpas). Especialistas modulares criados: `fofoia-specialist` (com `CONTEXT.md`) e `ui-design-specialist` (com `emil-design-eng` e `apple-design` na stack global). Verificados: 83 arquivos de testes (742 testes) passando 100%, `npm run build` e grafo `graphify` atualizados.
+- **28/10/2026 [Antigravity]:** Varredura e refino completo da FofoIA (Renderização Rica, Segurança e Didática):
+  - **Exibição e Markdown (`RichText.tsx`, `richTextBlocks.tsx`):** Parser de blocos completo para `RichText` (sem HTML cru, sanitização total e renderização suave com reveal por bloco). Adicionado suporte completo a:
+    - Blocos de código cercados (```` ```linguagem ````) com cabeçalho de linguagem, botão de cópia com feedback tátil e rolagem horizontal suave;
+    - Tabelas Markdown (`| col1 | col2 |`) com container responsivo com rolagem horizontal (`overflow-x-auto rounded-lg border border-slate-800`), zebra striping sutil e formatação inline (`renderInline`);
+    - Listas numeradas (`1. `) e citações (`> `) com borda lateral de destaque (border accent);
+  - **Segurança e Blindagem (`prompts.ts`):** Adicionada regra 11 explícita anti-jailbreak / prompt injection (imunidade contra ordens de desconsiderar regras, simulação de personas para burlar restrições e vazamento de tags internas);
+  - **Didática e Ciência da Aprendizagem (`prompts.ts`, `context.ts`, `FofoIaPanel.tsx`):**
+    - Injeção da tentativa real do estudante (`<tentativa_do_estudante>`): alternativa marcada, resultado, nível de confiança, autodiagnóstico e tempo gasto, permitindo desarmar o distrator específico e calibrar a falsa certeza;
+    - Andaime progressivo de pistas (Hint Scaffolding Ladder em 3 níveis: Nudge conceitual -> Andaime procedimental -> Alerta de armadilha mental e incentivo ao teste) conectado via `hintsGiven` para questões de múltipla escolha;
+    - Atalhos dinâmicos contextuais substituindo o botão redundante "Cai no meu edital?": não respondida (`Pedir pista`, `Conceito-base`), respondida com erro (`Por que errei?`, `Aula completa`, `Salvar resumo`), respondida com acerto (`Destrinchar alternativas`, `Aula completa`, `Salvar resumo`) e estudo livre (`Aula completa`, `Do zero`, `Salvar resumo`); auto-roteamento para EDITAL mantido via detecção de texto natural;
+  - **Personalidade e Anti-IA:** Regra de voz proibindo clichês e saudações/fechamentos ocos de IA, focando no diálogo técnico de alto rendimento.
+  - Verificados: 59 testes passando (unitários e de painel), `npm run build` limpo e `graphify update .` executado.
+- **29/10/2026 [Antigravity]:** Memória isolada por questão, gestão de contexto e envio de trechos ao caderno na FofoIA (DoD 100% verificado):
+  - **Memória & Isolamento por Questão (`useFofoConversation.ts`):** sessões indexadas por `sessionKey` (`q:<id>` por questão ativa, ou `t:<topico>` em navegação livre). Avançar para uma nova questão limpa a lousa automaticamente, economizando tokens e evitando poluição de temas; retornar a uma questão anterior restaura com fidelidade a conversa exata daquela questão (persistência local multissessão com janela de restauração de 20 min);
+  - **Botão "Limpar" Lousa (`FofoPanelHeader.tsx`):** ação tátil no cabeçalho para reiniciar a lousa sob demanda a qualquer instante;
+  - **Captura de Trecho para o Caderno (`+ Caderno` em `FofoMessage.tsx`):** envio com um clique de qualquer resposta ou explicação da FofoIA diretamente para o caderno do tópico, com badge de confirmação ("Salvo no caderno");
+  - **Modularização e Teto de 250 Linhas:** extraídos `FofoShortcuts.tsx` (121 linhas) e `FofoPanelHeader.tsx` (39 linhas), mantendo `FofoIaPanel.tsx` estritamente com 249 linhas (abaixo do teto de ~250);
+  - **Verificação Total:** 83 arquivos de testes (755 testes) passando 100%, `npm run build` (tsc -b + vite) concluído com sucesso.
 - **Fase atual (24/10/2026):** fatias 5.5–5.7 na `main`; no branch **`fatia-7-edital-ciclo`**: 7a/7b, 9a/9b/9c (bancada, roteiro, Revisão do dia e aba Início), FofoDoro (10), **FofoIA (11)** e Plano de estudo (13a/13b) — banco na migração **v11**. O app desktop (Tauri) ainda **não foi compilado em nenhum PC** (checklist abaixo). **Estado e próximos passos: `docs/handoff/2026-10-24-estado-e-proxima-ia.md`.**
 
 - **Retomando (outra IA ou outro PC)?** Leia `docs/handoff/2026-10-24-estado-e-proxima-ia.md`; para preparar um PC novo, a seção 1 de `docs/handoff/2026-10-22-continuar-no-outro-pc.md`.
@@ -85,6 +103,27 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
+- [ ] **Coluna Hoje com a janela do Fofo** (28/10/2026 [Claude Code], brainstorming em andamento; começo da reestruturação
+  do app inteiro por roupa do Fofo). Decidido com o dono: ordem tópico de agora → janela do Fofo (FofoDoro com cenário em
+  pixel, mesmo tamanho de pixel do Fofo, que pisa no chão) → trilho do resto do dia com hora estimada até o fim do roteiro;
+  céu pela hora de verdade e festa por cima; destaque das roupas fora das cores de status; Fofo por momento (antes do play:
+  ritual de começo; foco: só pisca; pausa: dorme). Primeira entrega: coluna + três paisagens da hora + antes/foco/pausa +
+  camada do Natal até 1º/12. Esboços em pixel feitos por código. Depois: outras partes do app, uma por vez.
+  **Spec: `docs/specs/14-coluna-hoje-janela-do-fofo.md`** (esboços em `docs/specs/14-esbocos/`), aguardando aprovação do
+  dono para virar plano. A janela usa a roupa da hora (fazendeiro/explorador/madrugada), decisão do dono em 28/10.
+- [ ] **Roupa base do Fofo e fone azul jeans** (29/10/2026 [Claude Code], decisões do dono; fora da spec 14, em
+  `tools/mascote/gen.cjs`). (1) **Fone azul jeans** em todas as roupas, poses e no ícone: `j #263a52`, `K #3f5f82`,
+  `u #86a6c6` (o azul-céu `#38BDF8` ficou estourado; o cinza some no pelo). Hoje `K`/`u` também pintam objetos de
+  outras roupas (relógio da base, estrelinha do Ano-novo, caneta da prova): dar ao fone cores próprias antes de trocar.
+  (2) **Roupa base "estudante em casa"**: moletom, óculos redondos e marca-texto atrás da orelha; livros e caneca ficam
+  no cenário da janela, não no corpo (32×32 não comporta tudo). Nos avisos do FofoDoro, segura o relógio "25".
+- [ ] **Ideia guardada: arte do Fofo em 3D renderizada como pixel art** (28/10/2026 [Claude Code], decisão do dono:
+  para depois). Caminho do Dead Cells: Fofo modelado e animado no Blender, cada quadro renderizado em baixa resolução sem
+  suavização → sprites; roupas como peças trocáveis (qualquer pose com qualquer roupa sem redesenhar), cenários 3D com o
+  sol na hora certa, animação fluida a 8–12 fps (personagem) sem mexer durante o foco. Ferramentas conferidas em
+  28/10/2026: servidor oficial do Blender para agentes (Blender 5.1+) e a skill `roble3/cc-blender-skill` (conferir com
+  `--list` antes de instalar, no projeto). Muda a regra "sem 3D" de `identidade-fofolab.md` (decisão do dono). Começar por
+  um teste descartável: Fofo modelado, passagem do ritual para o foco e o cenário da fazenda, comparado com o atual.
 - [DONE] **Fofo no app** (regra `.agents/rules/identidade-fofolab.md`; desenhos em `tools/mascote/`, 11 roupas).
   **Parte 1 feita (26/10/2026):** guarda-roupa `src/features/mascot/wardrobe.ts` (roupa fixa > dia da prova > nomeado >
   data especial > madrugada > aba > base; Carnaval pela Páscoa), `FofoSprite` (SVG pixel a pixel; parado / só pisca /

@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793198325.2195525,
-    "seen": 1793201913.0409544,
-    "ast_hash": "b7f31538a9a965a2acde03dce6ebba35",
+    "mtime": 1793278630.854866,
+    "seen": 1793278688.376647,
+    "ast_hash": "1ab79ca17fe5eeb1608c39cb8fb609fa",
     "semantic_hash": ""
   },
   "README.md": {
@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/richText.test.tsx": {
-    "mtime": 1792961711.5166407,
-    "seen": 1792962125.6553364,
-    "ast_hash": "843d597f56d109cbfe33701bdcb1577a",
+    "mtime": 1793239418.4107285,
+    "seen": 1793240855.483632,
+    "ast_hash": "e46029c22b3ea5c6e97da250c33f485c",
     "semantic_hash": ""
   },
   "src/__tests__/studyBlockMachine.test.ts": {
@@ -624,9 +624,9 @@
     "semantic_hash": ""
   },
   "src/components/RichText.tsx": {
-    "mtime": 1792961742.643243,
-    "seen": 1792962125.6553774,
-    "ast_hash": "155998301f6523b628f712a4b73ecf13",
+    "mtime": 1793239418.6578903,
+    "seen": 1793240855.5020258,
+    "ast_hash": "9991a655672a9029dea58ffb08005fb0",
     "semantic_hash": ""
   },
   "src/features/cycle/CycleSubjectRow.tsx": {
@@ -870,14 +870,14 @@
     "semantic_hash": ""
   },
   "src/features/routine/RoutineBlockItem.tsx": {
-    "mtime": 1793202764.1203191,
-    "seen": 1793202931.4454541,
+    "mtime": 1793203084.4765434,
+    "seen": 1793239241.4199817,
     "ast_hash": "502891ce3b3d26f851e0fdfaa4736a44",
     "semantic_hash": ""
   },
   "src/features/routine/RoutineColumn.tsx": {
-    "mtime": 1793202543.1634517,
-    "seen": 1793202931.4454567,
+    "mtime": 1793203084.8403697,
+    "seen": 1793239241.4199853,
     "ast_hash": "5e7507a8cac5f050d890ee0353b6af07",
     "semantic_hash": ""
   },
@@ -1632,15 +1632,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoia.test.ts": {
-    "mtime": 1793064119.3711708,
-    "seen": 1793065130.691855,
-    "ast_hash": "887a9529a55ecbdf7fde15273c6a41a3",
+    "mtime": 1793240691.0323136,
+    "seen": 1793240855.4696376,
+    "ast_hash": "e4783d2445abfd65bf8dddfe9cc296ce",
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
-    "mtime": 1793189090.3552577,
-    "seen": 1793191394.2233865,
-    "ast_hash": "d9e0d5dff9c2c867369483162d524b84",
+    "mtime": 1793277858.6804843,
+    "seen": 1793278688.2097213,
+    "ast_hash": "cd9711306fe6665ed9d1bd052c6f8cea",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
@@ -1674,15 +1674,15 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793199433.3480394,
-    "seen": 1793201912.9231632,
-    "ast_hash": "f107c7a6c6cf18d708b5764697f4c43c",
+    "mtime": 1793278501.9659462,
+    "seen": 1793278688.2439451,
+    "ast_hash": "5e63092b4102a362b214457950491762",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
-    "mtime": 1793199433.6661758,
-    "seen": 1793201912.9231663,
-    "ast_hash": "87bd702b55b81041bd524cd4ec621352",
+    "mtime": 1793277462.559242,
+    "seen": 1793278688.2439492,
+    "ast_hash": "01df40845c64bc614ecebcbc55f9cf8b",
     "semantic_hash": ""
   },
   "src/features/fofoia/WarmupInvite.tsx": {
@@ -1692,15 +1692,15 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoConversation.ts": {
-    "mtime": 1793060328.2843602,
-    "seen": 1793060769.0427763,
-    "ast_hash": "f9257b506ecb48319606d62d64e34e14",
+    "mtime": 1793278034.2358868,
+    "seen": 1793278688.2444654,
+    "ast_hash": "d012251a1e3f1d43786e90b08668dd0a",
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoIaInputs.ts": {
-    "mtime": 1792871023.8547094,
-    "seen": 1792877783.4894707,
-    "ast_hash": "fd18e813b1b189ec639d148987b47a3b",
+    "mtime": 1793240915.6026013,
+    "seen": 1793278688.2444682,
+    "ast_hash": "e10e60ba56421b2e25526de38d89c455",
     "semantic_hash": ""
   },
   "src/features/fofoia/warmup.ts": {
@@ -1746,9 +1746,9 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/context.ts": {
-    "mtime": 1792871023.902316,
-    "seen": 1792877783.489562,
-    "ast_hash": "7e6e465cddac41ddcc8f83949c7314e4",
+    "mtime": 1793240915.6675422,
+    "seen": 1793278688.293933,
+    "ast_hash": "3b432c7031ea08cecc7e1e5fbbd670c4",
     "semantic_hash": ""
   },
   "src/lib/fofoia/demo.ts": {
@@ -1764,15 +1764,15 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/prompts.ts": {
-    "mtime": 1793139728.5975254,
-    "seen": 1793140211.1671834,
-    "ast_hash": "3abad0b0360938be225e01e97b41f37a",
+    "mtime": 1793240553.8576086,
+    "seen": 1793240855.6140642,
+    "ast_hash": "13dd5a2d6d8df8a8dd90c00ef4763b70",
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
-    "mtime": 1793061531.4744103,
-    "seen": 1793062745.8455153,
-    "ast_hash": "64166903f4bc5df89cf7cc8190f45aec",
+    "mtime": 1793240915.9368584,
+    "seen": 1793278688.2963643,
+    "ast_hash": "85703d29981d05e60ab2d1201a44ddcc",
     "semantic_hash": ""
   },
   "src/lib/fofoia/summary.ts": {
@@ -1788,9 +1788,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/useFofoConversation.test.tsx": {
-    "mtime": 1793060309.6365535,
-    "seen": 1793060769.0284832,
-    "ast_hash": "60f4419389815153f941037e336ef881",
+    "mtime": 1793278139.831942,
+    "seen": 1793278688.2250023,
+    "ast_hash": "bf84dd85aa16eccef59818a39a3b8a97",
     "semantic_hash": ""
   },
   "src/__tests__/useFofoIaInputs.test.tsx": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793189124.6819646,
-    "seen": 1793191394.453694,
-    "ast_hash": "0f1b53583c30dd14105c91e8dabad5ad",
+    "mtime": 1793278606.5012028,
+    "seen": 1793278688.3940625,
+    "ast_hash": "1787a2bb28bf0772d6f9f5ddf1d7bfe8",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3639,6 +3639,42 @@
     "mtime": 1793201636.7675612,
     "seen": 1793201913.0608974,
     "ast_hash": "612c215b4005c2a1409d5ae64590b738",
+    "semantic_hash": ""
+  },
+  "src/components/richTextBlocks.tsx": {
+    "mtime": 1793239324.505153,
+    "seen": 1793240855.5030603,
+    "ast_hash": "28aa3f80e11518d5356265e9fbcc9729",
+    "semantic_hash": ""
+  },
+  "docs/specs/14-coluna-hoje-janela-do-fofo.md": {
+    "mtime": 1793240543.1410136,
+    "seen": 1793240855.7477798,
+    "ast_hash": "2a8000ba8311808d3fcaf9db77b97441",
+    "semantic_hash": ""
+  },
+  "docs/specs/14-esbocos/coluna-v1.html": {
+    "mtime": 1793240147.757671,
+    "seen": 1793240855.7477844,
+    "ast_hash": "85ceaf5a100b4e9dd983722e3c411b88",
+    "semantic_hash": ""
+  },
+  "docs/specs/14-esbocos/coluna-v2.html": {
+    "mtime": 1793240147.895733,
+    "seen": 1793240855.7477872,
+    "ast_hash": "08d6b854f3348cc93f1faca3353f7584",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoPanelHeader.tsx": {
+    "mtime": 1793278474.7902794,
+    "seen": 1793278688.2439523,
+    "ast_hash": "af735ae8cc8525dae90e62fa6695c602",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoShortcuts.tsx": {
+    "mtime": 1793278405.7778015,
+    "seen": 1793278688.2439544,
+    "ast_hash": "400e41d7afbf2991995f48a66c58a235",
     "semantic_hash": ""
   }
 }

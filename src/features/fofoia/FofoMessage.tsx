@@ -118,6 +118,21 @@ export function FofoMessage({
             {saved ? 'Salvo no caderno' : 'Salvar no caderno'}
           </button>
         )}
+        {!summaryText && turn.role === 'tutor' && turn.mode !== 'HINT' && (
+          <button
+            type="button"
+            disabled={!aiConfigured || turn.simulated || saved}
+            title={turn.simulated ? 'Explicação de exemplo não vai para o caderno' : 'Salvar esta explicação no caderno do tópico'}
+            onClick={() => {
+              onSaveSummary(turn.content);
+              setSaved(true);
+            }}
+            className={`${action} flex items-center gap-1 disabled:opacity-40`}
+          >
+            {saved ? <CheckCircle2 size={11} className="text-emerald-400" /> : <BookPlus size={11} />}
+            {saved ? 'Salvo no caderno' : '+ Caderno'}
+          </button>
+        )}
       </div>
     </div>
   );

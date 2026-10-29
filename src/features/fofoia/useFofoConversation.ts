@@ -43,66 +43,108 @@ const isQuestionOpen = (s: BaseSignals) => s.activeQuestion !== null && !s.activ
 let seq = 0;
 const nextId = (prefix: string) => `${prefix}-${Date.now()}-${(seq += 1)}`;
 
-/** Conversa em andamento neste computador: um F5 (ou fechar e abrir o app) no meio do estudo não a perde. */
+/** Conversas em andamento neste computador: mapa indexado por questão ou tópico para não perder nem misturar contextos. */
 export const FOFO_CONVERSATION_KEY = 'fofolab_fofoia_conversa_v1';
 /** Depois disso a conversa é dada como encerrada (contado da última mensagem). */
 const RESTORE_WINDOW_MS = 20 * 60 * 1000;
 
-function loadSavedTurns(topicKey: string): FofoTurn[] {
+interface SavedSession {
+  savedAt: number;
+  turns: FofoTurn[];
+}
+
+type SavedSessionsMap = Record<string, SavedSession>;
+
+function loadAllSavedSessions(): SavedSessionsMap {
   try {
-    const raw = JSON.parse(localStorage.getItem(FOFO_CONVERSATION_KEY) ?? 'null') as {
-      topicKey?: string;
-      savedAt?: number;
-      turns?: FofoTurn[];
-    } | null;
-    if (!raw || raw.topicKey !== topicKey || typeof raw.savedAt !== 'number' || !Array.isArray(raw.turns)) return [];
-    if (Date.now() - raw.savedAt > RESTORE_WINDOW_MS) return [];
-    return raw.turns;
+    const raw = JSON.parse(localStorage.getItem(FOFO_CONVERSATION_KEY) ?? 'null');
+    if (!raw || typeof raw !== 'object') return {};
+    // Retrocompatibilidade se tiver formato legado { topicKey, savedAt, turns }
+    if ('topicKey' in raw && Array.isArray((raw as { turns?: unknown }).turns)) {
+      const leg = raw as { topicKey?: string; savedAt?: number; turns: FofoTurn[] };
+      return { [`t:${leg.topicKey}`]: { savedAt: leg.savedAt ?? Date.now(), turns: leg.turns } };
+    }
+    return raw as SavedSessionsMap;
   } catch {
-    return [];
+    return {};
+  }
+}
+
+export function loadSavedTurns(sessionKey: string): FofoTurn[] {
+  const sessions = loadAllSavedSessions();
+  const session = sessions[sessionKey];
+  if (!session || typeof session.savedAt !== 'number' || !Array.isArray(session.turns)) return [];
+  if (Date.now() - session.savedAt > RESTORE_WINDOW_MS) return [];
+  return session.turns;
+}
+
+function saveSessionTurns(sessionKey: string, turns: FofoTurn[]) {
+  try {
+    const sessions = loadAllSavedSessions();
+    if (turns.length === 0) {
+      delete sessions[sessionKey];
+    } else {
+      sessions[sessionKey] = { savedAt: Date.now(), turns };
+    }
+    // Retém até 50 sessões recentes ativas no limite de 20 minutos para segurar espaço
+    const entries = Object.entries(sessions)
+      .filter(([, s]) => Date.now() - s.savedAt <= RESTORE_WINDOW_MS)
+      .sort((a, b) => b[1].savedAt - a[1].savedAt)
+      .slice(0, 50);
+    localStorage.setItem(FOFO_CONVERSATION_KEY, JSON.stringify(Object.fromEntries(entries)));
+  } catch {
+    // Sem localStorage (janela privada)
   }
 }
 
 /**
- * Conversa da FofoIA (spec 11 §5.3): recomeça quando o tópico muda (o histórico gastaria o limite de uso) e volta
- * depois de recarregar a página por até 20 minutos. Escolhe o jeito pelos sinais, monta o filtro do edital quando é o
- * caso e chama a IA.
+ * Conversa da FofoIA: isolada por questão ativa (ou tópico em navegação livre) para não poluir
+ * o contexto nem gastar tokens desnecessários. Limpa a lousa ao avançar para nova questão e restaura ao voltar.
  */
 export function useFofoConversation(input: {
+  sessionKey?: string;
   topicKey: string;
   topicLabel: string;
   ctx: FofoContext;
   baseSignals: BaseSignals;
   editalTopics: EditalTopicEntry[];
 }) {
-  const [turns, setTurns] = useState<FofoTurn[]>(() => loadSavedTurns(input.topicKey));
+  const currentKey = input.sessionKey ?? `t:${input.topicKey}`;
+  const [turns, setTurns] = useState<FofoTurn[]>(() => loadSavedTurns(currentKey));
   const [loading, setLoading] = useState(false);
-  const previousKey = useRef(input.topicKey);
-  // Muda a cada troca de tópico: resposta que chega depois pertence à conversa anterior e é descartada
+  const previousSessionKey = useRef(currentKey);
+  const previousTopicKey = useRef(input.topicKey);
+  // Muda a cada troca de contexto: resposta que chega depois pertence à conversa anterior e é descartada
   const generation = useRef(0);
 
   useEffect(() => {
-    if (previousKey.current === input.topicKey) return;
-    previousKey.current = input.topicKey;
+    const key = input.sessionKey ?? `t:${input.topicKey}`;
+    if (previousSessionKey.current === key) return;
+    const topicChanged = previousTopicKey.current !== input.topicKey;
+    previousSessionKey.current = key;
+    previousTopicKey.current = input.topicKey;
     generation.current += 1;
     setLoading(false);
-    // Ao recarregar, o painel pode abrir num tópico e só depois ir para o do bloco: a conversa guardada dele volta
-    const saved = loadSavedTurns(input.topicKey);
+
+    const saved = loadSavedTurns(key);
     setTurns((prev) => {
       if (saved.length > 0) return saved;
-      return prev.length > 0 ? [{ id: nextId('notice'), role: 'notice', content: `Nova conversa sobre ${input.topicLabel}.` }] : [];
+      if (topicChanged && prev.length > 0) {
+        return [{ id: nextId('notice'), role: 'notice', content: `Nova conversa sobre ${input.topicLabel}.` }];
+      }
+      return [];
     });
-  }, [input.topicKey, input.topicLabel]);
+  }, [input.sessionKey, input.topicKey, input.topicLabel]);
 
-  // Guarda a cada fala, com o tópico dono dessas falas (previousKey já é o novo quando a conversa recomeça)
+  // Guarda a cada fala na sessão ativa correspondente
   useEffect(() => {
-    if (turns.length === 0) return;
-    try {
-      localStorage.setItem(FOFO_CONVERSATION_KEY, JSON.stringify({ topicKey: previousKey.current, savedAt: Date.now(), turns }));
-    } catch {
-      // Sem localStorage (janela privada): a conversa só não volta depois de recarregar
-    }
+    saveSessionTurns(previousSessionKey.current, turns);
   }, [turns]);
+
+  const clear = () => {
+    setTurns([]);
+    saveSessionTurns(previousSessionKey.current, []);
+  };
 
   const send = async (message: string, requested: FofoMode | null = null, options: SendOptions = {}) => {
     const text = message.trim();
@@ -164,5 +206,5 @@ export function useFofoConversation(input: {
   /** Pede o resto de uma resposta cortada no teto de tamanho, no mesmo jeito. */
   const resume = (turn: FofoTurn) => send('Continue de onde parou.', turn.mode ?? null, { resumeOf: turn });
 
-  return { turns, loading, send, resume };
+  return { turns, loading, send, resume, clear };
 }

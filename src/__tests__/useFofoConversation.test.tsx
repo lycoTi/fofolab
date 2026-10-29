@@ -22,6 +22,10 @@ const { useFofoConversation } = await import('../features/fofoia/useFofoConversa
 const ctx = { student: { currentTopicMastery: 60 }, notebookExcerpt: null, activeQuestion: null, prerequisites: [] } as unknown as FofoContext;
 const base = { topicMastery: 60, firstContact: false, activeQuestion: null };
 
+beforeEach(() => {
+  window.localStorage.clear();
+});
+
 describe('Conversa da FofoIA: respostas fora de hora', () => {
   it('resposta que chega depois da troca de tópico é descartada (não cai na conversa nova)', async () => {
     const { result, rerender } = renderHook((p: { key: string }) =>
@@ -131,5 +135,61 @@ describe('Conversa da FofoIA: sobrevive a recarregar a página por 20 minutos', 
     expect(reopen('F')).toEqual([]);
     vi.setSystemTime(new Date(2026, 9, 26, 20, 21));
     expect(reopen('E')).toEqual([]);
+  });
+
+  it('isola conversas por sessionKey (questão 101 vs questão 102) no mesmo tópico e restaura ao voltar', async () => {
+    const hook = renderHook(
+      (p: { sessionKey: string }) =>
+        useFofoConversation({ sessionKey: p.sessionKey, topicKey: 'topico-1', topicLabel: 'Tópico 1', ctx, baseSignals: base, editalTopics: [] }),
+      { initialProps: { sessionKey: 'q:101' } },
+    );
+
+    act(() => {
+      void hook.result.current.send('pergunta da questao 101');
+    });
+    await act(async () => {
+      resolveReply({ reply: 'resposta da questao 101', provider: 'GROQ_FREE', simulated: false });
+    });
+    expect(hook.result.current.turns.map((t) => t.content)).toEqual(['pergunta da questao 101', 'resposta da questao 101']);
+
+    // Avança para a questão 102: lousa limpa
+    hook.rerender({ sessionKey: 'q:102' });
+    expect(hook.result.current.turns).toEqual([]);
+
+    act(() => {
+      void hook.result.current.send('pergunta da questao 102');
+    });
+    await act(async () => {
+      resolveReply({ reply: 'resposta da questao 102', provider: 'GROQ_FREE', simulated: false });
+    });
+    expect(hook.result.current.turns.map((t) => t.content)).toEqual(['pergunta da questao 102', 'resposta da questao 102']);
+
+    // Volta para a questão 101: conversa anterior restaurada
+    hook.rerender({ sessionKey: 'q:101' });
+    expect(hook.result.current.turns.map((t) => t.content)).toEqual(['pergunta da questao 101', 'resposta da questao 101']);
+  });
+
+  it('clear() limpa os turnos da sessão ativa e apaga do armazenamento', async () => {
+    const hook = renderHook(() =>
+      useFofoConversation({ sessionKey: 'q:999', topicKey: 'topico-1', topicLabel: 'Tópico 1', ctx, baseSignals: base, editalTopics: [] }),
+    );
+    act(() => {
+      void hook.result.current.send('mensagem que será limpa');
+    });
+    await act(async () => {
+      resolveReply({ reply: 'resposta a ser limpa', provider: 'GROQ_FREE', simulated: false });
+    });
+    expect(hook.result.current.turns.length).toBe(2);
+
+    act(() => {
+      hook.result.current.clear();
+    });
+    expect(hook.result.current.turns).toEqual([]);
+
+    hook.unmount();
+    const reopened = renderHook(() =>
+      useFofoConversation({ sessionKey: 'q:999', topicKey: 'topico-1', topicLabel: 'Tópico 1', ctx, baseSignals: base, editalTopics: [] }),
+    );
+    expect(reopened.result.current.turns).toEqual([]);
   });
 });
