@@ -19,12 +19,32 @@ const sampleExcerpts: LawExcerpt[] = [
   },
 ];
 
+vi.mock('../lib/laws/resolver', async () => {
+  const actual = await vi.importActual<Record<string, unknown>>('../lib/laws/resolver');
+  return {
+    ...actual,
+    resolveLawExcerpts: vi.fn(async ({ text }: { text?: string }) => {
+      if (text && (text.includes('8112') || text.includes('lei 8112'))) {
+        return [
+          {
+            lawName: 'Lei 8.112/1990',
+            article: 'Art. 1º',
+            text: 'Esta Lei institui o Regime Jurídico dos Servidores Públicos Civis da União...',
+            sourceUrl: 'https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm#art1',
+          },
+        ];
+      }
+      return [];
+    }),
+  };
+});
+
 describe('LawPillsBar & LawReaderModal (Fatia 11.2.4)', () => {
   beforeEach(() => {
-    vi.restoreAllMocks();
+    vi.clearAllMocks();
   });
 
-  it('não renderiza nada se a lista de excerpts for vazia', () => {
+  it('não renderiza nada se a lista de excerpts for vazia e não houver conversa com leis', () => {
     const { container } = render(<LawPillsBar excerpts={[]} />);
     expect(container.firstChild).toBeNull();
   });
@@ -38,6 +58,18 @@ describe('LawPillsBar & LawReaderModal (Fatia 11.2.4)', () => {
     expect(screen.getByText('Art. 37')).toBeTruthy();
     expect(screen.getByText('Lei 8.112/1990')).toBeTruthy();
     expect(screen.getByText('Art. 5º')).toBeTruthy();
+  });
+
+  it('resolve pílulas dinamicamente da conversa quando alguém cita lei no chat da FofoIA', async () => {
+    render(
+      <LawPillsBar
+        excerpts={[]}
+        conversationText="oi, me fale sobre a lei 8112"
+      />
+    );
+
+    expect(await screen.findByText('Lei 8.112/1990')).toBeTruthy();
+    expect(screen.getByText('Art. 1º')).toBeTruthy();
   });
 
   it('abre o modal de leitura tátil ao clicar na pílula', () => {
@@ -120,7 +152,6 @@ describe('LawPillsBar & LawReaderModal (Fatia 11.2.4)', () => {
       </>
     );
 
-    // Regex que detecta emojis Unicode comuns
     const emojiRegex = /[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u;
     expect(emojiRegex.test(container.innerHTML)).toBe(false);
   });

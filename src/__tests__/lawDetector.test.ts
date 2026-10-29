@@ -58,6 +58,26 @@ describe('Detector de Referências a Leis (Fatia 11.2.3)', () => {
     expect(detected.map((d) => d.articleKey)).toContain('41');
   });
 
+  it('retorna Art. 1º quando a lei é citada sem artigo específico (ex: "me fale sobre a lei 8112")', () => {
+    const text1 = 'oi, me fale sobre a lei 8112';
+    const detected1 = detectLawReferences(text1);
+    expect(detected1).toHaveLength(1);
+    expect(detected1[0].lawId).toBe('lei-8112-1990');
+    expect(detected1[0].articleKey).toBe('1');
+
+    const text2 = 'O que está previsto na Constituição Federal?';
+    const detected2 = detectLawReferences(text2);
+    expect(detected2).toHaveLength(1);
+    expect(detected2[0].lawId).toBe('cf88');
+    expect(detected2[0].articleKey).toBe('1');
+
+    const text3 = 'Pense na Lei nº 8.112/1991 como o manual do servidor no RJU';
+    const detected3 = detectLawReferences(text3);
+    expect(detected3).toHaveLength(1);
+    expect(detected3[0].lawId).toBe('lei-8112-1990');
+    expect(detected3[0].articleKey).toBe('1');
+  });
+
   it('retorna array vazio quando o texto não contém menção a normas ou artigos', () => {
     expect(detectLawReferences('Em microsserviços, a comunicação assíncrona desacopla os serviços.')).toEqual([]);
     expect(detectLawReferences('O algoritmo de Dijkstra calcula o caminho mais curto.')).toEqual([]);

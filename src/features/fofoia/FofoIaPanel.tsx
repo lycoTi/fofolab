@@ -160,9 +160,11 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         hasTurns={turns.length > 0}
         onClear={clear}
       />
-      {props.lawExcerpts && props.lawExcerpts.length > 0 && (
-        <LawPillsBar excerpts={props.lawExcerpts} onSaveToNotebook={props.onSaveSummary} />
-      )}
+      <LawPillsBar
+        excerpts={props.lawExcerpts}
+        conversationText={turns.length > 0 ? turns.map((t) => t.content).join(' ') : undefined}
+        onSaveToNotebook={props.onSaveSummary}
+      />
 
       <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (

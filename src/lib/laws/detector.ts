@@ -14,27 +14,27 @@ interface LawPattern {
 const LAW_PATTERNS: LawPattern[] = [
   {
     lawId: 'cf88',
-    regex: /(?:constitui[çc][ãa]o(?:\s+federal)?(?:\s+de\s+1988)?|cf\s*(?:\/|\s*)?88|carta\s+magna)/i,
+    regex: /(?:constitui[çc][ãa]o(?:\s+federal|\s+da\s+rep[úu]blica)?(?:\s+de\s+1988)?|cf\s*(?:\/|\s*)?88|carta\s+magna)/i,
   },
   {
     lawId: 'lei-8112-1990',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?112(?:\/90|\/1990)?|estatuto\s+dos\s+servidores(?:\s+da\s+uni[ãa]o)?)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?112(?:\/(?:19)?9[0-9])?|estatuto\s+dos\s+servidores(?:\s+da\s+uni[ãa]o)?|\brju\b|regime\s+jur[íi]dico\s+[úu]nico)/i,
   },
   {
     lawId: 'lei-9784-1999',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?9\.?784(?:\/99|\/1999)?|processo\s+administrativo\s+federal)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?9\.?784(?:\/(?:19)?9[0-9])?|processo\s+administrativo(?:\s+federal)?)/i,
   },
   {
     lawId: 'lei-14133-2021',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?14\.?133(?:\/21|\/2021)?|nova\s+lei\s+de\s+licita[çc][õo]es)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?14\.?133(?:\/(?:20)?2[0-9])?|nova\s+lei\s+de\s+licita[çc][õo]es|\bnllc\b|lei\s+de\s+licita[çc][õo]es)/i,
   },
   {
     lawId: 'lei-8429-1992',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?429(?:\/92|\/1992)?|lei\s+de\s+improbidade(?:\s+administrativa)?|\blia\b)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?429(?:\/(?:19)?9[0-9])?|lei\s+de\s+improbidade(?:\s+administrativa)?|\blia\b)/i,
   },
   {
     lawId: 'lei-12527-2011',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?12\.?527(?:\/11|\/2011)?|lei\s+de\s+acesso\s+[àa]\s+informa[çc][ãa]o|\blai\b)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?12\.?527(?:\/(?:20)?1[0-9])?|lei\s+de\s+acesso\s+[àa]\s+informa[çc][ãa]o|\blai\b)/i,
   },
 ];
 
@@ -77,7 +77,12 @@ export function detectLawReferences(text: string): DetectedLawReference[] {
   }
 
   if (articlesFound.length === 0) {
-    return [];
+    // Se a norma foi citada sem artigo específico, entrega o Art. 1º (conceito/escopo basilar da lei)
+    return detectedLaws.slice(0, 3).map((lawId) => ({
+      lawId,
+      articleKey: '1',
+      rawReference: `Art. 1 (${lawId})`,
+    }));
   }
 
   const results: DetectedLawReference[] = [];

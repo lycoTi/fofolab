@@ -6,10 +6,11 @@ import type { Question } from '../../types/database';
 export interface UseLawExcerptsParams {
   question?: Question | null;
   topicTitle?: string;
+  conversationText?: string;
 }
 
 /**
- * Hook para detecção e resolução de fragmentos de lei da questão ativa ou tópico.
+ * Hook para detecção e resolução de fragmentos de lei da questão ativa, tópico ou conversa.
  * Executa em segundo plano de forma não-bloqueante; retorna LawExcerpt[] para ancorar a FofoIA.
  */
 export function useLawExcerpts(params: UseLawExcerptsParams): LawExcerpt[] {
@@ -18,6 +19,7 @@ export function useLawExcerpts(params: UseLawExcerptsParams): LawExcerpt[] {
   const questionId = params.question?.id;
   const statement = params.question?.statement;
   const topicTitle = params.topicTitle;
+  const conversationText = params.conversationText;
 
   useEffect(() => {
     let active = true;
@@ -26,8 +28,15 @@ export function useLawExcerpts(params: UseLawExcerptsParams): LawExcerpt[] {
       ? `${params.question.statement} ${params.question.options_json}`
       : undefined;
 
+    const combinedText = [fullQuestionText, conversationText].filter(Boolean).join(' ').trim();
+
+    if (!combinedText && !topicTitle) {
+      setExcerpts([]);
+      return;
+    }
+
     resolveLawExcerpts({
-      text: fullQuestionText,
+      text: combinedText || undefined,
       topicTitle,
     })
       .then((resolved) => {
@@ -44,7 +53,7 @@ export function useLawExcerpts(params: UseLawExcerptsParams): LawExcerpt[] {
     return () => {
       active = false;
     };
-  }, [questionId, statement, topicTitle]);
+  }, [questionId, statement, topicTitle, conversationText]);
 
   return excerpts;
 }

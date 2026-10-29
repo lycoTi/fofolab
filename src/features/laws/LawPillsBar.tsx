@@ -1,21 +1,35 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Scale } from 'lucide-react';
 import type { LawExcerpt } from '../../lib/fofoia/context';
+import { useLawExcerpts } from '../fofoia/useLawExcerpts';
 import { LawReaderModal } from './LawReaderModal';
 
 export interface LawPillsBarProps {
-  excerpts: LawExcerpt[];
+  excerpts?: LawExcerpt[];
+  conversationText?: string;
   onSaveToNotebook?: (markdown: string) => void;
 }
 
 /**
  * Barra tátil de pílulas da Letra da Lei (spec 11 §8 - Fatia 11.2.4).
- * Exibe os dispositivos jurídicos que fundamentam a questão ou a FofoIA, abrindo a leitura rápida ao toque.
+ * Exibe os dispositivos jurídicos que fundamentam a questão ou a conversa da FofoIA.
  */
-export function LawPillsBar({ excerpts, onSaveToNotebook }: LawPillsBarProps) {
+export function LawPillsBar({ excerpts = [], conversationText, onSaveToNotebook }: LawPillsBarProps) {
+  const dynamicExcerpts = useLawExcerpts({ conversationText });
+
+  const allExcerpts = useMemo(() => {
+    const list = [...excerpts];
+    for (const item of dynamicExcerpts) {
+      if (!list.some((e) => e.lawName === item.lawName && e.article === item.article)) {
+        list.push(item);
+      }
+    }
+    return list.slice(0, 3);
+  }, [excerpts, dynamicExcerpts]);
+
   const [selected, setSelected] = useState<LawExcerpt | null>(null);
 
-  if (!excerpts || excerpts.length === 0) return null;
+  if (allExcerpts.length === 0) return null;
 
   return (
     <>
@@ -27,7 +41,7 @@ export function LawPillsBar({ excerpts, onSaveToNotebook }: LawPillsBarProps) {
         <span className="text-[11px] font-medium text-slate-400 select-none">
           Letra da lei:
         </span>
-        {excerpts.map((excerpt) => (
+        {allExcerpts.map((excerpt) => (
           <button
             key={`${excerpt.lawName}-${excerpt.article}`}
             type="button"
