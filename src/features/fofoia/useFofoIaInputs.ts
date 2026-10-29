@@ -56,6 +56,11 @@ export function useFofoIaInputs(params: {
 
   const otherNotebook = topic && topic.id !== currentTopic?.id ? (params.notebooks.find((n) => n.topic_id === topic.id)?.content_markdown ?? null) : null;
 
+  const lawExcerpts = useLawExcerpts({
+    question: activeQuestion?.question,
+    topicTitle: topic?.title,
+  });
+
   if (!studentContext || !topic) return null;
 
   // 1. Contexto do tópico da conversa (pode ser outro que o selecionado, quando a questão é do grupo ou da matéria)
@@ -100,10 +105,6 @@ export function useFofoIaInputs(params: {
   }
 
   const isCurrent = topic.id === currentTopic?.id;
-  const lawExcerpts = useLawExcerpts({
-    question: activeQuestion?.question,
-    topicTitle: topic.title,
-  });
   const firstContact =
     topic.last_studied_at === null && !attempts.some((a) => a.topic_id === topic.id) && !questionLogs.some((l) => l.topic_id === topic.id);
 

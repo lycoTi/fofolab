@@ -28,8 +28,11 @@ function isOutfit(value: unknown): value is OutfitId {
 function loadPrefs(): StoredPrefs {
   try {
     const raw = JSON.parse(localStorage.getItem(FOFO_PREFS_KEY) ?? 'null') as Partial<StoredPrefs> | null;
-    if (!raw) return EMPTY;
-    const appointed = raw.appointed && typeof raw.appointed.planId === 'string' ? raw.appointed : null;
+    if (!raw || typeof raw !== 'object') return EMPTY;
+    const appointed =
+      raw.appointed && typeof raw.appointed === 'object' && typeof raw.appointed.planId === 'string'
+        ? { planId: raw.appointed.planId, examDate: raw.appointed.examDate ?? null }
+        : null;
     return { fixedOutfit: isOutfit(raw.fixedOutfit) ? raw.fixedOutfit : null, appointed };
   } catch {
     return EMPTY;
@@ -48,15 +51,16 @@ export function useFofoPrefs(activePlan: PlanRef | null) {
   }, [prefs]);
 
   const appointed =
-    prefs.appointed !== null &&
+    Boolean(prefs?.appointed) &&
     activePlan !== null &&
-    prefs.appointed.planId === activePlan.id &&
-    prefs.appointed.examDate === activePlan.exam_date;
+    prefs.appointed?.planId === activePlan.id &&
+    prefs.appointed?.examDate === activePlan.exam_date;
 
   return {
-    fixedOutfit: prefs.fixedOutfit,
+    fixedOutfit: prefs?.fixedOutfit ?? null,
     appointed,
-    setFixedOutfit: (fixedOutfit: OutfitId | null) => setPrefs((p) => ({ ...p, fixedOutfit })),
+    setFixedOutfit: (fixedOutfit: OutfitId | null) =>
+      setPrefs((p) => ({ fixedOutfit, appointed: p?.appointed ?? null })),
     setAppointed: (value: boolean) =>
       setPrefs((p) => ({
         ...p,

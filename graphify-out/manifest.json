@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793311833.08059,
-    "seen": 1793311887.37733,
-    "ast_hash": "b3b6d673dfed4ea649971684d3946fe9",
+    "mtime": 1793313459.4223266,
+    "seen": 1793313506.7145164,
+    "ast_hash": "89c73a9c792be2f0e4889ecda31d89e7",
     "semantic_hash": ""
   },
   "README.md": {
@@ -252,9 +252,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/cycleEngine.test.ts": {
-    "mtime": 1792983842.8753064,
-    "seen": 1792984105.183137,
-    "ast_hash": "6a75b869c757a74d74fd105bff1cd556",
+    "mtime": 1793313388.2802804,
+    "seen": 1793313506.5393398,
+    "ast_hash": "781f09d665f557037bb511a51241f7a7",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbenchAndRouter.test.tsx": {
@@ -1674,9 +1674,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793311373.9218957,
-    "seen": 1793311715.645108,
-    "ast_hash": "ff8047db7bfb1cab707776981e6d2648",
+    "mtime": 1793313373.306234,
+    "seen": 1793313506.5839584,
+    "ast_hash": "1a1862aee44c6cff5e04e12f72179c5a",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
@@ -1698,9 +1698,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoIaInputs.ts": {
-    "mtime": 1793311466.2385437,
-    "seen": 1793311715.6473727,
-    "ast_hash": "200038722922c53451939ae287c3b91c",
+    "mtime": 1793312950.7659442,
+    "seen": 1793313506.5861833,
+    "ast_hash": "880d77156d72eb87df66adb4038229e6",
     "semantic_hash": ""
   },
   "src/features/fofoia/warmup.ts": {
@@ -3174,9 +3174,9 @@
     "semantic_hash": ""
   },
   "src/features/mascot/useFofoPrefs.ts": {
-    "mtime": 1793062992.422767,
-    "seen": 1793063705.806758,
-    "ast_hash": "016a95773fee6163b9c5d8f6b81ca663",
+    "mtime": 1793312986.2643178,
+    "seen": 1793313506.5947282,
+    "ast_hash": "0f13085e6f9026492fe38302cf7f9a63",
     "semantic_hash": ""
   },
   "src/__tests__/appIcon.test.ts": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793311753.449494,
-    "seen": 1793311887.3943126,
-    "ast_hash": "5c8d63f038f7f4e5fb2e400cabd75201",
+    "mtime": 1793313426.0227406,
+    "seen": 1793313506.732476,
+    "ast_hash": "345817c1e380a17a5a8052fd0de8fba0",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3726,9 +3726,9 @@
     "semantic_hash": ""
   },
   "src/lib/laws/catalog.ts": {
-    "mtime": 1793303880.1988816,
-    "seen": 1793304511.8517187,
-    "ast_hash": "c10675aeca328711c3b1a7b229fdf5a9",
+    "mtime": 1793312755.0029843,
+    "seen": 1793313506.63303,
+    "ast_hash": "719909da9b22dcf376bda23a39ea651b",
     "semantic_hash": ""
   },
   "src/lib/laws/index.ts": {
@@ -3738,9 +3738,9 @@
     "semantic_hash": ""
   },
   "src/lib/laws/parser.ts": {
-    "mtime": 1793304017.800481,
-    "seen": 1793304511.8517253,
-    "ast_hash": "2d73d3ac5b313e1e544fc8863d85b333",
+    "mtime": 1793312782.181236,
+    "seen": 1793313506.6334958,
+    "ast_hash": "5f405f7e70b19d895e1ae185273e02a8",
     "semantic_hash": ""
   },
   "src/lib/laws/store.ts": {
@@ -3762,8 +3762,8 @@
     "semantic_hash": ""
   },
   "src/__tests__/lawResolver.test.ts": {
-    "mtime": 1793311615.4187899,
-    "seen": 1793311715.6178632,
+    "mtime": 1793312070.367032,
+    "seen": 1793313506.5534296,
     "ast_hash": "62c72c5f8e94c06039e8ea1b35b7ecd7",
     "semantic_hash": ""
   },
@@ -3774,8 +3774,8 @@
     "semantic_hash": ""
   },
   "src/lib/laws/detector.ts": {
-    "mtime": 1793311561.0849688,
-    "seen": 1793311715.68993,
+    "mtime": 1793312071.1868658,
+    "seen": 1793313506.6330342,
     "ast_hash": "d0f0eae116c3883e5bed778ba5df902e",
     "semantic_hash": ""
   },
@@ -3783,6 +3783,24 @@
     "mtime": 1793311616.3351164,
     "seen": 1793311715.6903586,
     "ast_hash": "714325e0d9cd9e92163af02f81266bbb",
+    "semantic_hash": ""
+  },
+  "src/__tests__/lawPills.test.tsx": {
+    "mtime": 1793313280.6112664,
+    "seen": 1793313506.5534253,
+    "ast_hash": "7564624000c3fc6176405fc208956089",
+    "semantic_hash": ""
+  },
+  "src/features/laws/LawPillsBar.tsx": {
+    "mtime": 1793313233.6690073,
+    "seen": 1793313506.5911715,
+    "ast_hash": "b51e0294c835686a242c8461e84d8cbf",
+    "semantic_hash": ""
+  },
+  "src/features/laws/LawReaderModal.tsx": {
+    "mtime": 1793313233.8561049,
+    "seen": 1793313506.5911748,
+    "ast_hash": "026daff305c2317b46145ddd14557f62",
     "semantic_hash": ""
   }
 }

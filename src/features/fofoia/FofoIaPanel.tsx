@@ -5,6 +5,7 @@ import { buildFofoContext, type LawExcerpt } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { CurrentFofo } from '../mascot/FofoOutfitContext';
+import { LawPillsBar } from '../laws/LawPillsBar';
 import { FofoMessage } from './FofoMessage';
 import { FofoPanelHeader } from './FofoPanelHeader';
 import { FofoShortcuts } from './FofoShortcuts';
@@ -67,12 +68,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     context: props.context,
     notebook: props.notebook,
     activeQuestion: activeQuestion
-      ? {
-          question: activeQuestion.question,
-          answered: activeQuestion.answered,
-          dissection: activeQuestion.dissection,
-          attempt: activeQuestion.attempt,
-        }
+      ? { question: activeQuestion.question, answered: activeQuestion.answered, dissection: activeQuestion.dissection, attempt: activeQuestion.attempt }
       : null,
     prerequisites: props.prerequisites,
     lawExcerpts: props.lawExcerpts,
@@ -164,6 +160,9 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         hasTurns={turns.length > 0}
         onClear={clear}
       />
+      {props.lawExcerpts && props.lawExcerpts.length > 0 && (
+        <LawPillsBar excerpts={props.lawExcerpts} onSaveToNotebook={props.onSaveSummary} />
+      )}
 
       <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (

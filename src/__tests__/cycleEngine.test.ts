@@ -64,8 +64,10 @@ describe('Motor Matemático do Ciclo de Estudos & Mapa de Calor (cycleEngine)', 
     });
     expect(result.totalWeeklyMinutesBudget).toBe(900);
     const recommended = result.allocations.reduce((acc, a) => acc + a.recommendedWeeklyMinutes, 0);
-    expect(recommended).toBeLessThanOrEqual(900 + result.allocations.length);
-    expect(recommended).toBeGreaterThanOrEqual(900 - result.allocations.length);
+    // Cada matéria arredonda em blocos de 15 min (spec §6b); a soma oscila no máximo um bloco por matéria
+    const maxRoundingDelta = 15 * result.allocations.length;
+    expect(recommended).toBeLessThanOrEqual(900 + maxRoundingDelta);
+    expect(recommended).toBeGreaterThanOrEqual(900 - maxRoundingDelta);
   });
 
   it('semana inteira de folga: orçamento 0 sem inventar minutos nem gerar NaN', () => {
