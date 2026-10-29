@@ -25,7 +25,7 @@ const question = {
 } as unknown as Question;
 
 const signals = (over: Partial<ModeSignals> = {}): ModeSignals => ({
-  requested: null, text: 'Qual a diferença entre orquestração e coreografia?', topicMastery: 70, firstContact: false, activeQuestion: null, followUps: 0, ...over,
+  requested: null, text: 'Como aplicar esse conceito no dia a dia?', topicMastery: 70, firstContact: false, activeQuestion: null, followUps: 0, ...over,
 });
 
 describe('Sinais e jeito da FofoIA (spec 11 §5.2.1)', () => {
@@ -37,6 +37,9 @@ describe('Sinais e jeito da FofoIA (spec 11 §5.2.1)', () => {
   it('escolhe o jeito pelos sinais, com o pedido explícito na frente', () => {
     expect(chooseMode(signals())).toBe('QUICK');
     expect(chooseMode(signals({ text: 'o que é saga?' }))).toBe('FROM_ZERO');
+    expect(chooseMode(signals({ text: 'faça uma matriz de contraste' }))).toBe('CONTRAST');
+    expect(chooseMode(signals({ text: 'tabela comparativa x vs y' }))).toBe('CONTRAST');
+    expect(chooseMode(signals({ requested: 'CONTRAST' }))).toBe('CONTRAST');
     expect(chooseMode(signals({ topicMastery: 10 }))).toBe('FROM_ZERO');
     expect(chooseMode(signals({ firstContact: true }))).toBe('FROM_ZERO');
     expect(chooseMode(signals({ activeQuestion: { answered: true, diagnosis: 'MISCONCEPTION', falseCertainty: false } }))).toBe('FROM_ZERO');
@@ -268,7 +271,7 @@ describe('Modo demonstração (sem chave)', () => {
 
   it('todos os jeitos respondem marcados como simulação (menos a pista de Certo/Errado, que é do app); a pista de exemplo não entrega o gabarito', async () => {
     const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: { question, answered: false, dissection: null }, prerequisites: [] });
-    for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'SUMMARY', 'EDITAL', 'HINT'] as const) {
+    for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'SUMMARY', 'EDITAL', 'HINT', 'CONTRAST'] as const) {
       const reply = await askFofoIa({ mode, ctx, conversation: [], message: 'microsserviços' });
       expect(reply.simulated).toBe(mode !== 'HINT');
       expect(reply.reply.length).toBeGreaterThan(20);
@@ -276,6 +279,10 @@ describe('Modo demonstração (sem chave)', () => {
     const hint = demoFofoReply('HINT', ctx, 'qual a resposta?');
     expect(hint).not.toMatch(/gabarito|errado|letra e/i);
     expect(parseSummary(demoFofoReply('SUMMARY', ctx, 'resumo'))).not.toBeNull();
+    const contrast = demoFofoReply('CONTRAST', ctx, 'contraste');
+    expect(contrast).toContain('Matriz de Contraste');
+    expect(contrast).toContain('Critério / Ângulo');
+    expect(contrast).toContain('O ponto de ruptura:');
   });
 });
 

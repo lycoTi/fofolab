@@ -25,5 +25,7 @@ export function demoFofoReply(mode: FofoMode, ctx: FofoContext, message: string,
     }
     case 'HINT':
       return 'Pista: repare em qual ideia o enunciado está testando e se há alguma palavra que generaliza demais. Marque sua resposta e a confiança, mesmo chutando: tentar antes fixa mais depois.';
+    case 'CONTRAST':
+      return `**Matriz de Contraste: ${topic}**\n\nComparando o conceito central exigido e o distrator mais frequente:\n\n| Critério / Ângulo | Conceito Oficial | Distrator Frequente |\n| :--- | :--- | :--- |\n| **Definição** | Regra central expressa na doutrina/norma | Conceito correlato ou exceção |\n| **Gatilho Prático** | Hipótese padrão prevista no enunciado | Caso especial ou hipótese distinta |\n| **Distinção Crítica** | Aplica-se diretamente ao caso da questão | Trocado frequentemente em provas |\n\n**O ponto de ruptura:** A distinção sutil está na finalidade e no escopo de aplicação. Cuidado comum em provas: atente para palavras restritivas que deslocam a regra para o distrator.`;
   }
 }

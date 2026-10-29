@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793240802.7722704,
-    "seen": 1793240855.7353964,
-    "ast_hash": "e32570fa7a1a888ed41c0b33c3c19733",
+    "mtime": 1793278630.854866,
+    "seen": 1793278688.376647,
+    "ast_hash": "1ab79ca17fe5eeb1608c39cb8fb609fa",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
-    "mtime": 1793240668.465518,
-    "seen": 1793240855.4697204,
-    "ast_hash": "872c016d3bdc7a51d4b629da8c46eee7",
+    "mtime": 1793277858.6804843,
+    "seen": 1793278688.2097213,
+    "ast_hash": "cd9711306fe6665ed9d1bd052c6f8cea",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
@@ -1674,15 +1674,15 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793240513.1027744,
-    "seen": 1793240855.527883,
-    "ast_hash": "eaa92b73a66651e78f5728c8a7f93b5a",
+    "mtime": 1793278501.9659462,
+    "seen": 1793278688.2439451,
+    "ast_hash": "5e63092b4102a362b214457950491762",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
-    "mtime": 1793199433.6661758,
-    "seen": 1793201912.9231663,
-    "ast_hash": "87bd702b55b81041bd524cd4ec621352",
+    "mtime": 1793277462.559242,
+    "seen": 1793278688.2439492,
+    "ast_hash": "01df40845c64bc614ecebcbc55f9cf8b",
     "semantic_hash": ""
   },
   "src/features/fofoia/WarmupInvite.tsx": {
@@ -1692,14 +1692,14 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoConversation.ts": {
-    "mtime": 1793060328.2843602,
-    "seen": 1793060769.0427763,
-    "ast_hash": "f9257b506ecb48319606d62d64e34e14",
+    "mtime": 1793278034.2358868,
+    "seen": 1793278688.2444654,
+    "ast_hash": "d012251a1e3f1d43786e90b08668dd0a",
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoIaInputs.ts": {
-    "mtime": 1793240473.6657674,
-    "seen": 1793240855.5317008,
+    "mtime": 1793240915.6026013,
+    "seen": 1793278688.2444682,
     "ast_hash": "e10e60ba56421b2e25526de38d89c455",
     "semantic_hash": ""
   },
@@ -1746,8 +1746,8 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/context.ts": {
-    "mtime": 1793240413.8760602,
-    "seen": 1793240855.6115775,
+    "mtime": 1793240915.6675422,
+    "seen": 1793278688.293933,
     "ast_hash": "3b432c7031ea08cecc7e1e5fbbd670c4",
     "semantic_hash": ""
   },
@@ -1770,8 +1770,8 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
-    "mtime": 1793240539.8058746,
-    "seen": 1793240855.614068,
+    "mtime": 1793240915.9368584,
+    "seen": 1793278688.2963643,
     "ast_hash": "85703d29981d05e60ab2d1201a44ddcc",
     "semantic_hash": ""
   },
@@ -1788,9 +1788,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/useFofoConversation.test.tsx": {
-    "mtime": 1793060309.6365535,
-    "seen": 1793060769.0284832,
-    "ast_hash": "60f4419389815153f941037e336ef881",
+    "mtime": 1793278139.831942,
+    "seen": 1793278688.2250023,
+    "ast_hash": "bf84dd85aa16eccef59818a39a3b8a97",
     "semantic_hash": ""
   },
   "src/__tests__/useFofoIaInputs.test.tsx": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793240783.0854137,
-    "seen": 1793240855.765738,
-    "ast_hash": "1b5b57047e115d1a3c38e43859644589",
+    "mtime": 1793278606.5012028,
+    "seen": 1793278688.3940625,
+    "ast_hash": "1787a2bb28bf0772d6f9f5ddf1d7bfe8",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3663,6 +3663,18 @@
     "mtime": 1793240147.895733,
     "seen": 1793240855.7477872,
     "ast_hash": "08d6b854f3348cc93f1faca3353f7584",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoPanelHeader.tsx": {
+    "mtime": 1793278474.7902794,
+    "seen": 1793278688.2439523,
+    "ast_hash": "af735ae8cc8525dae90e62fa6695c602",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoShortcuts.tsx": {
+    "mtime": 1793278405.7778015,
+    "seen": 1793278688.2439544,
+    "ast_hash": "400e41d7afbf2991995f48a66c58a235",
     "semantic_hash": ""
   }
 }

@@ -50,31 +50,61 @@ export function FofoShortcuts({
     return (
       <div className="flex flex-wrap gap-1.5">
         {isError ? (
-          <button
-            type="button"
-            onClick={() =>
-              onSend(
-                activeQuestion.attempt?.selectedOption
-                  ? `Por que errei ao marcar a alternativa ${activeQuestion.attempt.selectedOption}? Por que o gabarito oficial é ${activeQuestion.question.final_answer}?`
-                  : `Por que errei esta questão e por que o gabarito oficial é ${activeQuestion.question.final_answer}?`,
-              )
-            }
-            className={`${shortcut} border-orange-500/40 text-orange-200`}
-          >
-            Por que errei?
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={() =>
+                onSend(
+                  activeQuestion.attempt?.selectedOption
+                    ? `Por que errei ao marcar a alternativa ${activeQuestion.attempt.selectedOption}? Por que o gabarito oficial é ${activeQuestion.question.final_answer}?`
+                    : `Por que errei esta questão e por que o gabarito oficial é ${activeQuestion.question.final_answer}?`,
+                )
+              }
+              className={`${shortcut} border-orange-500/40 text-orange-200`}
+            >
+              Por que errei?
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                onSend(
+                  activeQuestion.attempt?.selectedOption
+                    ? `Faça uma matriz de contraste comparando a alternativa ${activeQuestion.attempt.selectedOption} que marquei com o gabarito oficial ${activeQuestion.question.final_answer}.`
+                    : `Faça uma matriz de contraste entre a afirmação da questão e o conceito correto de ${topicLabel}.`,
+                  'CONTRAST',
+                )
+              }
+              className={`${shortcut} ${activeQuestion.diagnosis === 'MISCONCEPTION' || activeQuestion.falseCertainty ? 'border-amber-500/40 text-amber-200' : ''}`}
+            >
+              Matriz X vs Y
+            </button>
+          </>
         ) : (
-          <button
-            type="button"
-            onClick={() =>
-              onSend(
-                `Por que o gabarito oficial é ${activeQuestion.question.final_answer} e quais são os erros das outras alternativas?`,
-              )
-            }
-            className={shortcut}
-          >
-            Destrinchar alternativas
-          </button>
+          <>
+            <button
+              type="button"
+              onClick={() =>
+                onSend(
+                  `Por que o gabarito oficial é ${activeQuestion.question.final_answer} e quais são os erros das outras alternativas?`,
+                )
+              }
+              className={shortcut}
+            >
+              Destrinchar alternativas
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                onSend(
+                  `Faça uma matriz de contraste entre o gabarito oficial (${activeQuestion.question.final_answer}) e os principais distratores desta questão.`,
+                  'CONTRAST',
+                )
+              }
+              className={shortcut}
+            >
+              Matriz X vs Y
+            </button>
+          </>
         )}
         <button type="button" onClick={onLesson} className={shortcut}>
           Aula completa
@@ -108,6 +138,18 @@ export function FofoShortcuts({
         className={shortcut}
       >
         Do zero
+      </button>
+      <button
+        type="button"
+        onClick={() =>
+          onSend(
+            `Quais são os dois conceitos de ${topicLabel} que mais se confundem em provas? Faça uma matriz de contraste entre eles.`,
+            'CONTRAST',
+          )
+        }
+        className={shortcut}
+      >
+        Matriz X vs Y
       </button>
       <button
         type="button"

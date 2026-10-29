@@ -15,7 +15,7 @@
 
 ---
 
-## 2. Os 5 Jeitos da FofoIA (Personas Pedagógicas)
+## 2. Os 6 Jeitos da FofoIA (Personas Pedagógicas)
 O app escolhe o jeito automaticamente através de **sinais heurísticos locais** (sem gastar chamada de IA para classificar):
 
 | Jeito | Selinho | Gatilhos / Sinais | Formato & Comportamento |
@@ -26,6 +26,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 | **Resumo** | 🐹📝 Resumo | Botão "Salvar resumo de revisão" | Exatamente 6 linhas (formato Dora) para o caderno do tópico: Título com emoji, Palavras-chave, Conceito curto (máx 2 frases), Uso funcional, Analogia, Cuidado em prova. |
 | **Cai no meu edital?** | 🐹🧭 Edital | Pergunta livre em texto sobre relevância/edital (sem botão redundante) | Filtra localmente até 20 tópicos candidatos; responde em até 150 palavras se está no edital, qual tópico/peso, ou abstenção honesta. |
 | **Pista** | 🐹🔍 Pista | Questão ativa do app ainda NÃO respondida | Até ~80 palavras. **NUNCA dá o gabarito nem elimina**. Se 1ª pista: indica conceito e pergunta socrática; se 2ª pista: aponta trecho do enunciado para reflexão. |
+| **Matriz X vs Y** | 🐹⚖️ Matriz X vs Y | Botão "Matriz X vs Y" (destacado ao errar por "Confundi" ou falsa certeza) ou menção a "matriz/tabela comparativa" | Até ~220 palavras. Tabela comparativa Markdown com 3 colunas (Critério, Conceito X, Conceito Y) e 3-5 linhas (Definição, Hipótese prática, Distinção formal) + fechamento com "O ponto de ruptura:" destacando a armadilha do distrator. |
 
 ---
 

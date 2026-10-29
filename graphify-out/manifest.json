@@ -1632,15 +1632,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoia.test.ts": {
-    "mtime": 1793240691.0323136,
-    "seen": 1793240855.4696376,
-    "ast_hash": "e4783d2445abfd65bf8dddfe9cc296ce",
+    "mtime": 1793283491.2999644,
+    "seen": 1793283838.0129156,
+    "ast_hash": "750d3c68b24bb1496d2854afa7635cfd",
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
-    "mtime": 1793277858.6804843,
-    "seen": 1793278688.2097213,
-    "ast_hash": "cd9711306fe6665ed9d1bd052c6f8cea",
+    "mtime": 1793283533.953212,
+    "seen": 1793283838.0129201,
+    "ast_hash": "462725447f56cd4ca50591b52263f16d",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
@@ -1674,8 +1674,8 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793278501.9659462,
-    "seen": 1793278688.2439451,
+    "mtime": 1793282308.5462012,
+    "seen": 1793283838.0480266,
     "ast_hash": "5e63092b4102a362b214457950491762",
     "semantic_hash": ""
   },
@@ -1692,8 +1692,8 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoConversation.ts": {
-    "mtime": 1793278034.2358868,
-    "seen": 1793278688.2444654,
+    "mtime": 1793282309.6457481,
+    "seen": 1793283838.0490808,
     "ast_hash": "d012251a1e3f1d43786e90b08668dd0a",
     "semantic_hash": ""
   },
@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/ask.ts": {
-    "mtime": 1793059989.5423133,
-    "seen": 1793060769.0738447,
-    "ast_hash": "6867fde22dfa5551e799424e3f9ea6a0",
+    "mtime": 1793283225.9578042,
+    "seen": 1793283838.1022637,
+    "ast_hash": "d79d6486905714fce0d9e86259c2e154",
     "semantic_hash": ""
   },
   "src/lib/fofoia/context.ts": {
@@ -1752,9 +1752,9 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/demo.ts": {
-    "mtime": 1792871023.9038503,
-    "seen": 1792877783.489564,
-    "ast_hash": "09c74e4e6b1a7ca0faea271e27c95996",
+    "mtime": 1793283118.147268,
+    "seen": 1793283838.1034448,
+    "ast_hash": "f91040f9d2c27a750bc1e70119338922",
     "semantic_hash": ""
   },
   "src/lib/fofoia/editalMatch.ts": {
@@ -1764,15 +1764,15 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/prompts.ts": {
-    "mtime": 1793240553.8576086,
-    "seen": 1793240855.6140642,
-    "ast_hash": "13dd5a2d6d8df8a8dd90c00ef4763b70",
+    "mtime": 1793283474.9689412,
+    "seen": 1793283838.1044745,
+    "ast_hash": "e6df2a8a0e62aac7327a4c05094b127c",
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
-    "mtime": 1793240915.9368584,
-    "seen": 1793278688.2963643,
-    "ast_hash": "85703d29981d05e60ab2d1201a44ddcc",
+    "mtime": 1793283462.013676,
+    "seen": 1793283838.1044798,
+    "ast_hash": "e77e8cfeb56eb84c5102e4da71dd2bef",
     "semantic_hash": ""
   },
   "src/lib/fofoia/summary.ts": {
@@ -3612,8 +3612,8 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793278606.5012028,
-    "seen": 1793278688.3940625,
+    "mtime": 1793282308.353205,
+    "seen": 1793283838.3587067,
     "ast_hash": "1787a2bb28bf0772d6f9f5ddf1d7bfe8",
     "semantic_hash": ""
   },
@@ -3666,15 +3666,21 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoPanelHeader.tsx": {
-    "mtime": 1793278474.7902794,
-    "seen": 1793278688.2439523,
-    "ast_hash": "af735ae8cc8525dae90e62fa6695c602",
+    "mtime": 1793282308.941442,
+    "seen": 1793283838.0484893,
+    "ast_hash": "0e0c78a7ef08b8b10a221b9acb2e247c",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoShortcuts.tsx": {
-    "mtime": 1793278405.7778015,
-    "seen": 1793278688.2439544,
-    "ast_hash": "400e41d7afbf2991995f48a66c58a235",
+    "mtime": 1793283161.7560124,
+    "seen": 1793283838.048493,
+    "ast_hash": "412e65506c260e204d65b1a1f85cc76d",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-29-14-coluna-hoje-janela-do-fofo.md": {
+    "mtime": 1793282072.4709244,
+    "seen": 1793283838.3575265,
+    "ast_hash": "a5e28eef74faae4f508f5c0aef6a42ae",
     "semantic_hash": ""
   }
 }

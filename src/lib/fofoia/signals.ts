@@ -4,7 +4,7 @@ import type { SelfDiagnosisType } from '../../types/database';
  * Jeitos de ensinar da FofoIA (spec 11 §5.2.1), escolhidos pelos sinais que o app já tem — sem chamada extra à IA.
  * Inspirados nos professores do grupo de estudos do dono (Bill, Jorge, Diana, Dora) e no "chat do edital".
  */
-export type FofoMode = 'QUICK' | 'FROM_ZERO' | 'LESSON' | 'SUMMARY' | 'EDITAL' | 'HINT';
+export type FofoMode = 'QUICK' | 'FROM_ZERO' | 'LESSON' | 'SUMMARY' | 'EDITAL' | 'HINT' | 'CONTRAST';
 
 /** Selinho mostrado no topo de cada resposta. */
 export const MODE_BADGE: Record<FofoMode, string> = {
@@ -14,6 +14,7 @@ export const MODE_BADGE: Record<FofoMode, string> = {
   SUMMARY: 'Resumo',
   EDITAL: 'Cai no meu edital?',
   HINT: 'Pista',
+  CONTRAST: 'Matriz X vs Y',
 };
 
 /** Abaixo disso o tópico é tratado como "do zero" (linguagem simples, metáfora, pré-requisito). */
@@ -23,6 +24,15 @@ export const LESSON_FOLLOW_UPS = 2;
 
 const BASIC_PATTERNS = ['o que e', 'o que significa', 'nao entendi', 'nao sei nada', 'do zero', 'como funciona', 'nunca vi', 'me explica'];
 const EDITAL_PATTERNS = ['edital', 'cai na prova', 'cai no concurso', 'cai na cgu', 'peso da materia', 'quantas questoes'];
+const CONTRAST_PATTERNS = [
+  'matriz',
+  'tabela comparativa',
+  'tabela de contraste',
+  'quadro comparativo',
+  'matriz de contraste',
+  'x vs y',
+  'tabela comparando',
+];
 
 /** Minúsculas e sem acento: "Não entendi" e "nao entendi" contam igual. */
 export function normalizeText(text: string): string {
@@ -37,6 +47,11 @@ export function isBasicQuestion(text: string): boolean {
 export function isEditalQuestion(text: string): boolean {
   const normalized = normalizeText(text);
   return EDITAL_PATTERNS.some((p) => normalized.includes(p));
+}
+
+export function isContrastQuestion(text: string): boolean {
+  const normalized = normalizeText(text);
+  return CONTRAST_PATTERNS.some((p) => normalized.includes(p));
 }
 
 export interface ModeSignals {
@@ -72,11 +87,12 @@ export function chooseMode(s: ModeSignals): FofoMode {
   if (s.requested === 'HINT') return 'QUICK';
   if (s.requested) return s.requested;
   if (isEditalQuestion(s.text)) return 'EDITAL';
+  if (isContrastQuestion(s.text)) return 'CONTRAST';
   return needsFromZero(s) ? 'FROM_ZERO' : 'QUICK';
 }
 
 /** Destaque discreto "Parece que vale a aula completa" — quem decide é sempre o estudante. */
 export function shouldSuggestLesson(s: ModeSignals): boolean {
-  if (s.requested === 'LESSON' || s.requested === 'SUMMARY' || s.requested === 'EDITAL') return false;
+  if (s.requested === 'LESSON' || s.requested === 'SUMMARY' || s.requested === 'EDITAL' || s.requested === 'CONTRAST') return false;
   return needsFromZero(s) || s.followUps >= LESSON_FOLLOW_UPS;
 }
