@@ -6,6 +6,7 @@ import {
   ChevronRight,
   Eye,
   Gauge,
+  Keyboard,
   Lightbulb,
 } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
@@ -120,6 +121,15 @@ export function QuestionCard(props: {
             </span>
           )}
         </div>
+
+        {/* Atalhos de teclado ativos */}
+        <div
+          className="inline-flex items-center gap-1 text-[11px] text-slate-500 select-none"
+          title="Atalhos: 1–4 confiança · C/E ou A–E resposta · ↵ ou Espaço para avançar"
+        >
+          <Keyboard size={12} className="text-slate-500 shrink-0" />
+          <span className="hidden sm:inline">Teclado ativo</span>
+        </div>
       </div>
 
       {/* Enunciado da questão: superfície editorial limpa com alto contraste */}
@@ -155,7 +165,13 @@ export function QuestionCard(props: {
                 className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/40 bg-[var(--fofo-accent)]/10 px-3 py-1.5 font-medium text-[var(--fofo-accent-text)] transition-all duration-150 hover:bg-[var(--fofo-accent)]/20 active:scale-[0.97]"
               >
                 <Lightbulb size={13} className="text-[var(--fofo-accent)]" />
-                Pedir pista à FofoIA
+                <span>Pedir pista à FofoIA</span>
+                <kbd
+                  aria-hidden="true"
+                  className="rounded bg-white/[0.08] px-1 py-0.2 text-[10px] font-mono text-[var(--fofo-accent-text)]"
+                >
+                  P
+                </kbd>
               </button>
             )}
             <button
@@ -164,7 +180,13 @@ export function QuestionCard(props: {
               className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/30 px-3 py-1.5 text-slate-300 transition-all duration-150 hover:border-slate-600 hover:bg-slate-800/60 hover:text-white active:scale-[0.97]"
             >
               <Eye size={13} className="text-slate-400" />
-              Ver explicação antes de responder
+              <span>Ver explicação antes de responder</span>
+              <kbd
+                aria-hidden="true"
+                className="rounded bg-white/[0.08] px-1 py-0.2 text-[10px] font-mono text-slate-400"
+              >
+                V
+              </kbd>
             </button>
           </div>
 

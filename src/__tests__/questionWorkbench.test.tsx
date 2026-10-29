@@ -376,4 +376,24 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     fireEvent.click(screen.getByRole('button', { name: /Refazer as que errei ou chutei \(1\)/ }));
     expect(screen.getByText('Questão já tentada.')).toBeTruthy();
   });
+
+  it('permite fluxo de resolução 100% pelo teclado: 1 (confiança) -> C (resposta) -> Enter (próxima)', () => {
+    const q1: Question = { ...SEED_QUESTIONS[2], id: 'q-ce-1', statement: 'Questão 1 Certo/Errado.', options_json: JSON.stringify(['C) Certo', 'E) Errado']), final_answer: 'C' };
+    const q2: Question = { ...SEED_QUESTIONS[2], id: 'q-ce-2', statement: 'Questão 2 Certo/Errado.', options_json: JSON.stringify(['C) Certo', 'E) Errado']), final_answer: 'E' };
+    const { props } = renderWorkbench({ questions: [{ question: q1, dissection: null }, { question: q2, dissection: null }] });
+
+    expect(screen.getByText('Questão 1 Certo/Errado.')).toBeTruthy();
+    // 1. Pressiona tecla 1 (Sei)
+    fireEvent.keyDown(window, { key: '1' });
+    expect(screen.getByRole('button', { name: 'Certo' })).toBeTruthy();
+
+    // 2. Pressiona tecla C (Certo)
+    fireEvent.keyDown(window, { key: 'c' });
+    expect(props.onAnswer).toHaveBeenCalledWith(expect.objectContaining({ selectedOptionLetter: 'C', isCorrect: true }));
+    expect(screen.getByText('Você acertou.')).toBeTruthy();
+
+    // 3. Pressiona Enter para avançar
+    fireEvent.keyDown(window, { key: 'Enter' });
+    expect(screen.getByText('Questão 2 Certo/Errado.')).toBeTruthy();
+  });
 });

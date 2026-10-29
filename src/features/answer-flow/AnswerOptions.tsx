@@ -44,9 +44,12 @@ export function AnswerOptions({
               type="button"
               disabled={picked !== null}
               onClick={() => onPick(o.key)}
-              className={`flex-1 flex items-center justify-center h-12 rounded-xl border px-5 text-sm font-medium transition-all duration-150 active:scale-[0.98] disabled:cursor-default ${tone}`}
+              className={`flex-1 flex items-center justify-center gap-2 h-12 rounded-xl border px-5 text-sm font-medium transition-all duration-150 active:scale-[0.98] disabled:cursor-default ${tone}`}
             >
-              {optionName(o, true)}
+              <span>{optionName(o, true)}</span>
+              <kbd aria-hidden="true" className="rounded bg-white/[0.08] px-1.5 py-0.5 text-xs font-mono text-slate-400">
+                {o.key}
+              </kbd>
             </button>
           );
         })}

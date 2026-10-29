@@ -2,6 +2,12 @@ import { CONFIDENCE_LABEL } from '../../lib/answerLabels';
 import type { ReviewConfidence } from '../../types/database';
 
 const ORDER: ReviewConfidence[] = ['SURE', 'RECENT', 'THINK', 'GUESS'];
+const SHORTCUT_KEY: Record<ReviewConfidence, string> = {
+  SURE: '1',
+  RECENT: '2',
+  THINK: '3',
+  GUESS: '4',
+};
 
 export const chip = 'rounded-lg border px-3.5 py-1.5 text-xs font-medium transition-all duration-150 select-none active:scale-[0.97]';
 export const chipOn =
@@ -30,9 +36,15 @@ export function ConfidencePicker({
             disabled={disabled}
             aria-pressed={value === c}
             onClick={() => onChange(c)}
-            className={`${chip} ${value === c ? chipOn : chipOff} disabled:cursor-default`}
+            className={`${chip} ${value === c ? chipOn : chipOff} inline-flex items-center gap-1.5 disabled:cursor-default`}
           >
-            {CONFIDENCE_LABEL[c]}
+            <span>{CONFIDENCE_LABEL[c]}</span>
+            <kbd
+              aria-hidden="true"
+              className="rounded bg-white/[0.08] px-1 py-0.2 text-[10px] font-mono text-slate-400"
+            >
+              {SHORTCUT_KEY[c]}
+            </kbd>
           </button>
         ))}
       </div>

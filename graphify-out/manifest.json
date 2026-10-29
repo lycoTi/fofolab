@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793303186.1587124,
-    "seen": 1793303251.8697076,
-    "ast_hash": "5c0d71a4f304545397f2846df9f50fc6",
+    "mtime": 1793304534.2045355,
+    "seen": 1793304587.5894597,
+    "ast_hash": "e4b67deb245ab31d67c20a8f7e6a223a",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1644,9 +1644,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
-    "mtime": 1793296069.0288393,
-    "seen": 1793300588.4737287,
-    "ast_hash": "678fb9027b301e4a2601ec9e8f292e1b",
+    "mtime": 1793303942.282637,
+    "seen": 1793304511.7725625,
+    "ast_hash": "d51eb8d2a267fceed950decf7b605c53",
     "semantic_hash": ""
   },
   "src/features/answer-flow/AnswerCorrection.tsx": {
@@ -1656,15 +1656,15 @@
     "semantic_hash": ""
   },
   "src/features/answer-flow/AnswerOptions.tsx": {
-    "mtime": 1793195743.1505046,
-    "seen": 1793198280.4121082,
-    "ast_hash": "35db2ca67cf65f7e173de48c0b2f2d42",
+    "mtime": 1793303769.3417323,
+    "seen": 1793304511.7918422,
+    "ast_hash": "b152b00c46e51971cd4bf019b170bf87",
     "semantic_hash": ""
   },
   "src/features/answer-flow/ConfidencePicker.tsx": {
-    "mtime": 1793195743.3541732,
-    "seen": 1793198280.4121113,
-    "ast_hash": "d0dd2a22f0e5669b9e99b55344ad4cf8",
+    "mtime": 1793303761.5053592,
+    "seen": 1793304511.7918456,
+    "ast_hash": "56dfd0dadc465b208a5233a8b576ef8c",
     "semantic_hash": ""
   },
   "src/features/answer-flow/DiagnosisPicker.tsx": {
@@ -1710,15 +1710,15 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCard.tsx": {
-    "mtime": 1793195743.6113632,
-    "seen": 1793198280.444333,
-    "ast_hash": "d5ac36549417df51a1f0b37af05072b1",
+    "mtime": 1793303811.9697695,
+    "seen": 1793304511.8189452,
+    "ast_hash": "3ccec2863d450982b1b132aa7f8e96df",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCorrection.tsx": {
-    "mtime": 1793296069.9421942,
-    "seen": 1793300588.5523915,
-    "ast_hash": "5a1352a3b499f60e0776e059fae78643",
+    "mtime": 1793303776.3394518,
+    "seen": 1793304511.8189487,
+    "ast_hash": "58b8c14e28a0e522a7b2c4e60bcb94a2",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionFilters.tsx": {
@@ -1728,9 +1728,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793296070.2380104,
-    "seen": 1793300588.5589502,
-    "ast_hash": "e51adf314702e831dfe19c70f58256b2",
+    "mtime": 1793304013.9137278,
+    "seen": 1793304511.819414,
+    "ast_hash": "c34533da5726754131ca9b945df212a6",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793303170.7844083,
-    "seen": 1793303251.8903093,
-    "ast_hash": "032d23266ecd09150b2f947e4acc05d2",
+    "mtime": 1793304555.008643,
+    "seen": 1793304587.6111104,
+    "ast_hash": "428f29c0f10f2ca6ae60c0ab51bcfc5b",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3696,9 +3696,63 @@
     "semantic_hash": ""
   },
   "src/features/questions/CONTEXT.md": {
-    "mtime": 1793300479.856672,
-    "seen": 1793300588.7279916,
-    "ast_hash": "d25bdd3baca825f2af2d9b687786a37e",
+    "mtime": 1793304516.838817,
+    "seen": 1793304587.6115494,
+    "ast_hash": "23b0709d6bdf3ce30477810f51cdb693",
+    "semantic_hash": ""
+  },
+  "src/__tests__/lawParser.test.ts": {
+    "mtime": 1793303942.9475155,
+    "seen": 1793304511.766874,
+    "ast_hash": "501a4c919b80f20a5ed1930ce8796189",
+    "semantic_hash": ""
+  },
+  "src/__tests__/lawStore.test.ts": {
+    "mtime": 1793303983.609236,
+    "seen": 1793304511.7668784,
+    "ast_hash": "d0336cdc9aa3f58d0b759ada6542ac03",
+    "semantic_hash": ""
+  },
+  "src/__tests__/useQuestionKeyboardShortcuts.test.ts": {
+    "mtime": 1793304151.7126284,
+    "seen": 1793304511.7810574,
+    "ast_hash": "6e2652500e6da94744a502dbe5a24d6c",
+    "semantic_hash": ""
+  },
+  "src/features/questions/useQuestionKeyboardShortcuts.ts": {
+    "mtime": 1793304175.712386,
+    "seen": 1793304511.819417,
+    "ast_hash": "d3c633e877b24f41ca44de7370d91a76",
+    "semantic_hash": ""
+  },
+  "src/lib/laws/catalog.ts": {
+    "mtime": 1793303880.1988816,
+    "seen": 1793304511.8517187,
+    "ast_hash": "c10675aeca328711c3b1a7b229fdf5a9",
+    "semantic_hash": ""
+  },
+  "src/lib/laws/index.ts": {
+    "mtime": 1793303924.1298382,
+    "seen": 1793304511.8517227,
+    "ast_hash": "3fb135c30054ebfad0122d7f150aaf9f",
+    "semantic_hash": ""
+  },
+  "src/lib/laws/parser.ts": {
+    "mtime": 1793304017.800481,
+    "seen": 1793304511.8517253,
+    "ast_hash": "2d73d3ac5b313e1e544fc8863d85b333",
+    "semantic_hash": ""
+  },
+  "src/lib/laws/store.ts": {
+    "mtime": 1793303918.195027,
+    "seen": 1793304511.8517277,
+    "ast_hash": "665d96eb87c7a455177855827c9645b2",
+    "semantic_hash": ""
+  },
+  "src/lib/laws/types.ts": {
+    "mtime": 1793303867.5352597,
+    "seen": 1793304511.8517303,
+    "ast_hash": "78a3c9f2ab272dbba61aab8193a04264",
     "semantic_hash": ""
   }
 }

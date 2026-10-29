@@ -57,6 +57,18 @@
 - **Desafiar o Ponto Cego (`findNextSameSubjectQuestion`):** atalho `Próxima sobre [Assunto] →` localiza a próxima questão inédita do acervo com a mesma tag minerada para teste imediato de retenção.
 - **Próxima Questão:** navegação fluida seguindo a ordem visual do olhar do estudante.
 
+### 2.1 Modo Teclado & Ergonomia de Alta Velocidade (`useQuestionKeyboardShortcuts`)
+- **Resolução Sem Tirar as Mãos do Teclado:**
+  - `1`, `2`, `3`, `4`: calibra a certeza (`1`: Sei, `2`: Estudando, `3`: Acho que sei, `4`: Chuto).
+  - `C` / `E` (em Certo/Errado) ou `A`, `B`, `C`, `D`, `E` (em Múltipla Escolha): responde a alternativa correspondente.
+  - `Enter` ou `Espaço` ou `Seta Direita (→)`: avança para a próxima questão (`onNextQuestion`).
+  - `Seta Esquerda (←)`: retorna para a questão anterior.
+  - `P`: pede pista à FofoIA (`onHint`).
+  - `V`: ver explicação antes de responder (1º contato).
+- **Proteção e Acessibilidade:**
+  - Ignora atalhos automaticamente quando o foco está em campos de texto (`input`, `textarea`, `select`, `contentEditable`) ou com teclas modificadoras (`Ctrl`, `Alt`, `Cmd`).
+  - Badges visuais sutis com `aria-hidden="true"` preservam os nomes acessíveis dos botões para leitor de tela e testes.
+
 ---
 
 ## 3. Fila Inteligente & Filtros Dinâmicos (Spec 12d)
@@ -105,6 +117,7 @@ A `QuestionWorkbench` gerencia uma fila inteligente orientada à produtividade:
 | Área | Arquivo | Responsabilidade |
 |---|---|---|
 | **Bancada Principal** | [`src/features/questions/QuestionWorkbench.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionWorkbench.tsx) | Orquestração da fila, filtros, tentativas da sessão e atalhos. |
+| **Atalhos de Teclado** | [`src/features/questions/useQuestionKeyboardShortcuts.ts`](file:///d:/dev/fofolab/src/features/questions/useQuestionKeyboardShortcuts.ts) | Ergonomia de alta velocidade (1-4 confiança, C/E ou A-E resposta, ↵ próxima). |
 | **Folha de Questão** | [`src/features/questions/QuestionCard.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionCard.tsx) | Prancheta editorial limpa: metadados, enunciado, calibração e botões de ação. |
 | **Correção & Feedback** | [`src/features/questions/QuestionCorrection.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionCorrection.tsx) | Veredito, gabarito, explicação salva, autodiagnóstico e navegação. |
 | **Barra de Filtros** | [`src/features/questions/QuestionFilters.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionFilters.tsx) | Toolstrip em acordeão com resumo tipográfico contínuo. |

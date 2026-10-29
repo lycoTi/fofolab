@@ -74,7 +74,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 
 ## 5. Próximos Passos & Evolução do Módulo
 - [x] **Fatia 11.2.1:** Contrato de Dados (`LawExcerpt`) & Blindagem Normativa no Prompt da FofoIA.
-- [ ] **Fatia 11.2.2:** Parser de Artigos do `ctresb/leis` & Armazenamento Local Sob Demanda (IndexedDB / Cache Local).
+- [x] **Fatia 11.2.2:** Parser de Artigos do `ctresb/leis` & Armazenamento Local Sob Demanda (IndexedDB / Cache Local).
 - [ ] **Fatia 11.2.3:** Detector & Resolvedor (Questão / Tópico ↔ Artigo Exato).
 - [ ] **Fatia 11.2.4:** Interface Tátil & Pílula da Lei (Link Planalto + Leitura na Mesa de Estudos).
 - [ ] Ativação de modelo mais forte (`VITE_*_MODEL_STRONG`) para Aula Completa e Edital quando configurado.

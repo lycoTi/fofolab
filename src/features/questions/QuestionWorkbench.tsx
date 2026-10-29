@@ -20,6 +20,7 @@ import {
   type QuestionScope,
   type QuestionStatusFilter,
 } from './QuestionFilters';
+import { useQuestionKeyboardShortcuts } from './useQuestionKeyboardShortcuts';
 
 export interface AnswerSubmission {
   question: Question;
@@ -221,6 +222,34 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     if (current.attemptId) props.onChangeDiagnosis(current.attemptId, diagnosis);
   };
 
+  const hasNext = safeIndex < filtered.length - 1;
+
+  const activeOptions = useMemo(
+    () => (active ? parseQuestionOptions(active.question.options_json) : []),
+    [active?.question.options_json]
+  );
+
+  useQuestionKeyboardShortcuts({
+    enabled: Boolean(active),
+    confidence: current.confidence,
+    answered,
+    options: activeOptions,
+    onConfidence: (confidence) => setCurrent({ ...current, confidence }),
+    onPick: (key) => {
+      if (!current.confidence || answered) return;
+      record(key, current.confidence);
+    },
+    onFirstContact: () => record(null, null),
+    onHint: onAskFofoIa
+      ? () => {
+          usedAi.current = true;
+          onAskFofoIa({ kind: 'hint', question: active.question });
+        }
+      : undefined,
+    onNext: hasNext ? () => setIndex(safeIndex + 1) : undefined,
+    onPrev: safeIndex > 0 ? () => setIndex(safeIndex - 1) : undefined,
+  });
+
   const pagination = {
     index: safeIndex,
     total: filtered.length,
@@ -327,7 +356,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   }
 
   const isCorrect = current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase();
-  const hasNext = safeIndex < filtered.length - 1;
+
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       {filters}

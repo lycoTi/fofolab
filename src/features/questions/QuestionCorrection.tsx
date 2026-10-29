@@ -143,7 +143,13 @@ export function QuestionCorrection(props: {
               onClick={props.onNextQuestion}
               className="inline-flex items-center gap-1.5 rounded-lg bg-white/[0.08] px-3.5 py-1.5 text-xs font-semibold text-slate-100 transition-colors hover:bg-white/[0.14] hover:text-white active:scale-[0.97]"
             >
-              Próxima questão →
+              <span>Próxima questão →</span>
+              <kbd
+                aria-hidden="true"
+                className="rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300"
+              >
+                ↵
+              </kbd>
             </button>
           )}
         </div>
