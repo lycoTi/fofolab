@@ -14,7 +14,7 @@ export const MODE_BADGE: Record<FofoMode, string> = {
   SUMMARY: 'Resumo',
   EDITAL: 'Cai no meu edital?',
   HINT: 'Pista',
-  CONTRAST: 'Matriz X vs Y',
+  CONTRAST: 'Comparativo',
 };
 
 /** Abaixo disso o tópico é tratado como "do zero" (linguagem simples, metáfora, pré-requisito). */
@@ -25,11 +25,14 @@ export const LESSON_FOLLOW_UPS = 2;
 const BASIC_PATTERNS = ['o que e', 'o que significa', 'nao entendi', 'nao sei nada', 'do zero', 'como funciona', 'nunca vi', 'me explica'];
 const EDITAL_PATTERNS = ['edital', 'cai na prova', 'cai no concurso', 'cai na cgu', 'peso da materia', 'quantas questoes'];
 const CONTRAST_PATTERNS = [
-  'matriz',
+  'comparativo',
+  'comparar com a certa',
+  'ver comparativo',
+  'comparar conceitos',
   'tabela comparativa',
   'tabela de contraste',
   'quadro comparativo',
-  'matriz de contraste',
+  'matriz',
   'x vs y',
   'tabela comparando',
 ];

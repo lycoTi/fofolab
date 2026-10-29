@@ -280,9 +280,9 @@ describe('Modo demonstração (sem chave)', () => {
     expect(hint).not.toMatch(/gabarito|errado|letra e/i);
     expect(parseSummary(demoFofoReply('SUMMARY', ctx, 'resumo'))).not.toBeNull();
     const contrast = demoFofoReply('CONTRAST', ctx, 'contraste');
-    expect(contrast).toContain('Matriz de Contraste');
-    expect(contrast).toContain('Critério / Ângulo');
-    expect(contrast).toContain('O ponto de ruptura:');
+    expect(contrast).toContain('No que prestar atenção');
+    expect(contrast).toContain('O que é certo');
+    expect(contrast).toContain('Cuidado na prova:');
   });
 });
 

@@ -388,7 +388,7 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
     expect(screen.getByRole('button', { name: 'Salvo no caderno' })).toBeTruthy();
   });
 
-  it('atalho "Matriz X vs Y" aparece ao errar questão e responde com a tabela de contraste', async () => {
+  it('atalho "Comparar com a certa" aparece ao errar questão e responde com o comparativo', async () => {
     const wrongQuestion = {
       question: { id: 'q-wrong', statement: 'Questão de teste', options_json: '["A) Certo","B) Errado"]', final_answer: 'A' },
       answered: true,
@@ -404,15 +404,15 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
       },
     };
     render(<FofoIaPanel {...props({ activeQuestion: wrongQuestion as any })} />);
-    const contrastBtn = screen.getByRole('button', { name: 'Matriz X vs Y' });
+    const contrastBtn = screen.getByRole('button', { name: 'Comparar com a certa' });
     expect(contrastBtn).toBeTruthy();
 
     await act(async () => {
       fireEvent.click(contrastBtn);
     });
 
-    expect(badge('Matriz X vs Y')).toBeTruthy();
-    expect(screen.getByText('Critério / Ângulo')).toBeTruthy();
-    expect(screen.getByText('O ponto de ruptura:')).toBeTruthy();
+    expect(badge('Comparativo')).toBeTruthy();
+    expect(screen.getByText(/No que prestar aten/)).toBeTruthy();
+    expect(screen.getByText('Cuidado na prova:')).toBeTruthy();
   });
 });

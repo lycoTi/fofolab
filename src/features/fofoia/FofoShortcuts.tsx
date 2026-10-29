@@ -69,14 +69,14 @@ export function FofoShortcuts({
               onClick={() =>
                 onSend(
                   activeQuestion.attempt?.selectedOption
-                    ? `Faça uma matriz de contraste comparando a alternativa ${activeQuestion.attempt.selectedOption} que marquei com o gabarito oficial ${activeQuestion.question.final_answer}.`
-                    : `Faça uma matriz de contraste entre a afirmação da questão e o conceito correto de ${topicLabel}.`,
+                    ? `Faça uma tabela comparativa simples entre a alternativa ${activeQuestion.attempt.selectedOption} que marquei e o gabarito oficial ${activeQuestion.question.final_answer}.`
+                    : `Faça uma tabela comparativa simples entre a pegadinha desta questão e o gabarito oficial (${activeQuestion.question.final_answer}).`,
                   'CONTRAST',
                 )
               }
               className={`${shortcut} ${activeQuestion.diagnosis === 'MISCONCEPTION' || activeQuestion.falseCertainty ? 'border-amber-500/40 text-amber-200' : ''}`}
             >
-              Matriz X vs Y
+              Comparar com a certa
             </button>
           </>
         ) : (
@@ -96,13 +96,13 @@ export function FofoShortcuts({
               type="button"
               onClick={() =>
                 onSend(
-                  `Faça uma matriz de contraste entre o gabarito oficial (${activeQuestion.question.final_answer}) e os principais distratores desta questão.`,
+                  `Faça uma tabela comparativa simples entre o gabarito oficial (${activeQuestion.question.final_answer}) e as outras opções da questão.`,
                   'CONTRAST',
                 )
               }
               className={shortcut}
             >
-              Matriz X vs Y
+              Ver comparativo
             </button>
           </>
         )}
@@ -143,13 +143,13 @@ export function FofoShortcuts({
         type="button"
         onClick={() =>
           onSend(
-            `Quais são os dois conceitos de ${topicLabel} que mais se confundem em provas? Faça uma matriz de contraste entre eles.`,
+            `Quais são os dois conceitos de ${topicLabel} que as pessoas mais confundem em provas? Faça uma tabela comparativa simples entre eles.`,
             'CONTRAST',
           )
         }
         className={shortcut}
       >
-        Matriz X vs Y
+        Comparar conceitos
       </button>
       <button
         type="button"

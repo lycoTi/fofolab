@@ -430,7 +430,7 @@
       "file_type": "code",
       "norm_label": "fofopromptextra",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L91"
+      "source_location": "L95"
     },
     {
       "id": "src_lib_fofoia_signals_modesignals",
@@ -443,7 +443,7 @@
       "file_type": "code",
       "norm_label": "modesignals",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L57"
+      "source_location": "L60"
     },
     {
       "id": "src_lib_fofoia_summary_reviewsummary",
@@ -4845,7 +4845,7 @@
       "file_type": "code",
       "norm_label": "choosemode()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L84"
+      "source_location": "L87"
     },
     {
       "id": "src_lib_fofoia_signals_isbasicquestion",
@@ -4857,7 +4857,7 @@
       "file_type": "code",
       "norm_label": "isbasicquestion()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L42"
+      "source_location": "L45"
     },
     {
       "id": "src_lib_fofoia_signals_iscontrastquestion",
@@ -4869,7 +4869,7 @@
       "file_type": "code",
       "norm_label": "iscontrastquestion()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L52"
+      "source_location": "L55"
     },
     {
       "id": "src_lib_fofoia_signals_iseditalquestion",
@@ -4881,7 +4881,7 @@
       "file_type": "code",
       "norm_label": "iseditalquestion()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L47"
+      "source_location": "L50"
     },
     {
       "id": "src_lib_fofoia_signals_needsfromzero",
@@ -4893,7 +4893,7 @@
       "file_type": "code",
       "norm_label": "needsfromzero()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L69"
+      "source_location": "L72"
     },
     {
       "id": "src_lib_fofoia_signals_normalizetext",
@@ -4905,7 +4905,7 @@
       "file_type": "code",
       "norm_label": "normalizetext()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L38"
+      "source_location": "L41"
     },
     {
       "id": "src_lib_fofoia_signals_shouldsuggestlesson",
@@ -4917,7 +4917,7 @@
       "file_type": "code",
       "norm_label": "shouldsuggestlesson()",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L95"
+      "source_location": "L98"
     },
     {
       "id": "src_lib_fofoia_smalltalk_smalltalkreply",
@@ -12717,7 +12717,7 @@
       "file_type": "code",
       "norm_label": "buildfofoprompt()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L122"
+      "source_location": "L126"
     },
     {
       "id": "src_lib_fofoia_prompts_continuationxml",
@@ -12729,7 +12729,7 @@
       "file_type": "code",
       "norm_label": "continuationxml()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L102"
+      "source_location": "L106"
     },
     {
       "id": "src_lib_fofoia_prompts_conversationxml",
@@ -12741,7 +12741,7 @@
       "file_type": "code",
       "norm_label": "conversationxml()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L75"
+      "source_location": "L79"
     },
     {
       "id": "src_lib_fofoia_prompts_editalxml",
@@ -12753,7 +12753,7 @@
       "file_type": "code",
       "norm_label": "editalxml()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L82"
+      "source_location": "L86"
     },
     {
       "id": "src_lib_fofoia_prompts_hintladderxml",
@@ -12765,7 +12765,7 @@
       "file_type": "code",
       "norm_label": "hintladderxml()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L111"
+      "source_location": "L115"
     },
     {
       "id": "src_lib_fofoia_prompts_pastedanchorxml",
@@ -12777,7 +12777,7 @@
       "file_type": "code",
       "norm_label": "pastedanchorxml()",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L67"
+      "source_location": "L71"
     },
     {
       "id": "src_features_edital_import_editaldraft_createeditaldraft",
@@ -24980,14 +24980,14 @@
       "source_location": "L10"
     },
     {
-      "id": "src_features_fofoia_context_2_os_5_jeitos_da_fofoia_personas_pedag\u00f3gicas",
-      "label": "2. Os 5 Jeitos da FofoIA (Personas Pedag\u00f3gicas)",
+      "id": "src_features_fofoia_context_2_os_6_jeitos_da_fofoia_personas_pedag\u00f3gicas",
+      "label": "2. Os 6 Jeitos da FofoIA (Personas Pedag\u00f3gicas)",
       "_origin": "ast",
       "community": 222,
       "community_name": "\ud83d\udc39 FofoIA \u2014 Contexto Vivo & Arquitetura da Fatia",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. os 5 jeitos da fofoia (personas pedagogicas)",
+      "norm_label": "2. os 6 jeitos da fofoia (personas pedagogicas)",
       "source_file": "src/features/fofoia/CONTEXT.md",
       "source_location": "L18"
     },
@@ -25001,7 +25001,7 @@
       "node_kind": "heading",
       "norm_label": "3. diretrizes inviolaveis (regras de seguranca & anti-objetivos)",
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "src_features_fofoia_context_4_estrutura_de_c\u00f3digo_onde_as_coisas_moram",
@@ -25013,7 +25013,7 @@
       "node_kind": "heading",
       "norm_label": "4. estrutura de codigo & onde as coisas moram",
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L45"
+      "source_location": "L46"
     },
     {
       "id": "src_features_fofoia_context_5_pr\u00f3ximos_passos_evolu\u00e7\u00e3o_do_m\u00f3dulo",
@@ -25025,7 +25025,7 @@
       "node_kind": "heading",
       "norm_label": "5. proximos passos & evolucao do modulo",
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L72"
+      "source_location": "L73"
     },
     {
       "id": "src_features_fofoia_context_fofoia_contexto_vivo_arquitetura_da_fatia",
@@ -26803,7 +26803,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfe0 checklist do app desktop (pendente \u2014 juntado na `main` antes, por decisao do dono)",
       "source_file": "BACKLOG.md",
-      "source_location": "L96"
+      "source_location": "L97"
     },
     {
       "id": "backlog_defini\u00e7\u00e3o_de_pronto",
@@ -26815,7 +26815,7 @@
       "node_kind": "heading",
       "norm_label": "\u2705 definicao de pronto",
       "source_file": "BACKLOG.md",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "backlog_estado_real_por_\u00e1rea",
@@ -26827,7 +26827,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfaf estado real por area",
       "source_file": "BACKLOG.md",
-      "source_location": "L38"
+      "source_location": "L39"
     },
     {
       "id": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
@@ -26851,7 +26851,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udd1c proximas fatias",
       "source_file": "BACKLOG.md",
-      "source_location": "L105"
+      "source_location": "L106"
     },
     {
       "id": "backlog_status_global",
@@ -47617,7 +47617,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L129",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -47629,7 +47629,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L130",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -47641,7 +47641,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L131",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -47653,7 +47653,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L132",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -47665,7 +47665,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L134",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -47677,7 +47677,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L135",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -47689,7 +47689,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L136",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -47701,7 +47701,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L104",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -47713,7 +47713,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L78",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -47725,7 +47725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L79",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -47737,7 +47737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L86",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -47749,7 +47749,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L72",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -47761,7 +47761,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L89",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -47773,7 +47773,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L90",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -47785,7 +47785,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L91",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -47797,7 +47797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -47809,7 +47809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L53",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -47821,7 +47821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L48",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -47833,7 +47833,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L72",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -47845,7 +47845,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L97",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
@@ -55538,7 +55538,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L92",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -55550,7 +55550,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L64",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -89965,7 +89965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L105",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -89976,7 +89976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -89987,7 +89987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -90009,7 +90009,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L96",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -96548,7 +96548,7 @@
     },
     {
       "source": "src_features_fofoia_context_fofoia_contexto_vivo_arquitetura_da_fatia",
-      "target": "src_features_fofoia_context_2_os_5_jeitos_da_fofoia_personas_pedag\u00f3gicas",
+      "target": "src_features_fofoia_context_2_os_6_jeitos_da_fofoia_personas_pedag\u00f3gicas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -96565,7 +96565,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -96576,7 +96576,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -96587,7 +96587,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/fofoia/CONTEXT.md",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -104386,7 +104386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -104397,7 +104397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L111",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -104408,7 +104408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L122",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -104424,17 +104424,6 @@
     },
     {
       "source": "src_lib_fofoia_prompts",
-      "target": "src_lib_fofoia_prompts_pastedanchorxml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_fofoia_prompts",
       "target": "src_lib_fofoia_prompts_conversation_turns_sent",
       "relation": "contains",
       "_origin": "ast",
@@ -104446,13 +104435,24 @@
     },
     {
       "source": "src_lib_fofoia_prompts",
+      "target": "src_lib_fofoia_prompts_pastedanchorxml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/fofoia/prompts.ts",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_fofoia_prompts",
       "target": "src_lib_fofoia_prompts_conversationxml",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L75",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -104463,7 +104463,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L82",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -104474,7 +104474,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/prompts.ts",
-      "source_location": "L91",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -104551,7 +104551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L38",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -104562,7 +104562,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L42",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -104573,7 +104573,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L47",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -104584,7 +104584,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L52",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -104595,18 +104595,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L57",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_fofoia_signals",
-      "target": "src_lib_fofoia_signals_needsfromzero",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L69",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -104622,13 +104611,24 @@
     },
     {
       "source": "src_lib_fofoia_signals",
+      "target": "src_lib_fofoia_signals_needsfromzero",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/fofoia/signals.ts",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_fofoia_signals",
       "target": "src_lib_fofoia_signals_choosemode",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L84",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -104639,7 +104639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/fofoia/signals.ts",
-      "source_location": "L95",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -115364,5 +115364,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "30bdcc4b10eccf1a97fd6b5581c9cf57b16cfec2"
+  "built_at_commit": "58ff88a1d7ca38aec7cb2125c3234f27666be146"
 }
