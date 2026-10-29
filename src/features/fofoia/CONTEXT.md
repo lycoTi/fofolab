@@ -41,6 +41,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 7. **Blindagem contra Prompt Injection:** Regra explícita de segurança proibindo ignorar instruções pedagógicas, vazar tags XML internas ou simular personas para furar a proteção de gabaritos.
 8. **Voz Sem Clichês de IA:** Proibição estrita de saudações ocos ("Olá!", "Certamente!", "Com certeza!") e despedidas protocolares ("Espero ter ajudado!"). Direto ao conteúdo com clareza e empatia.
 9. **Contexto da Tentativa Real:** Quando a questão é respondida, o prompt injeta `<tentativa_do_estudante>` (alternativa marcada, resultado, nível de confiança, autodiagnóstico e tempo gasto) para desconstruir distratores e calibrar a falsa certeza de forma personalizada.
+10. **Letra da Lei (`<legislacao_relevante>` - Fatia 11.2.1):** Quando fragmentos de normas oficiais (CF/88, leis do edital) são injetados no contexto, a FofoIA ancora a explicação na literalidade do texto legal, cita a redação exata do dispositivo entre aspas, destaca os termos normativos objetivos do próprio texto (ex.: "deve" [vinculado] vs "pode" [discricionário], prazos expressos) e mantém rigorosa abstenção honesta sem inventar dispositivos ou manias de bancas.
 
 ---
 
@@ -72,6 +73,9 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 ---
 
 ## 5. Próximos Passos & Evolução do Módulo
-- [ ] Conectar com repositório de legislação (`ctresb/leis`) para citações literais precisas.
+- [x] **Fatia 11.2.1:** Contrato de Dados (`LawExcerpt`) & Blindagem Normativa no Prompt da FofoIA.
+- [ ] **Fatia 11.2.2:** Parser de Artigos do `ctresb/leis` & Armazenamento Local Sob Demanda (IndexedDB / Cache Local).
+- [ ] **Fatia 11.2.3:** Detector & Resolvedor (Questão / Tópico ↔ Artigo Exato).
+- [ ] **Fatia 11.2.4:** Interface Tátil & Pílula da Lei (Link Planalto + Leitura na Mesa de Estudos).
 - [ ] Ativação de modelo mais forte (`VITE_*_MODEL_STRONG`) para Aula Completa e Edital quando configurado.
 - [ ] Perfil de bancas integrado quando o banco oficial classificado estiver populado.

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { askFofoIa, isStrongMode } from '../lib/fofoia/ask';
-import { buildFofoContext, NOTEBOOK_CONTEXT_CHARS } from '../lib/fofoia/context';
+import { buildFofoContext, lawExcerptsXml, NOTEBOOK_CONTEXT_CHARS, type LawExcerpt } from '../lib/fofoia/context';
 import { demoFofoReply } from '../lib/fofoia/demo';
 import { matchEditalTopics, EDITAL_MAX_CANDIDATES, type EditalTopicEntry } from '../lib/fofoia/editalMatch';
 import { readLessonPart } from '../lib/fofoia/lessonPart';
@@ -120,6 +120,55 @@ describe('Contexto e prompts', () => {
     expect(lesson.indexOf('O essencial')).toBeLessThan(lesson.indexOf('Cuidados comuns em provas'));
     expect(lesson).toMatch(/Parte 2/);
     expect(buildFofoPrompt('FROM_ZERO', ctx, [], 'o que é?')).toContain('1.0 Camadas');
+  });
+
+  it('Fatia 11.2.1: ancore a FofoIA na letra da lei com citação literal, abstenção e zero alucinação', () => {
+    const excerpt: LawExcerpt = {
+      lawName: 'CF/88',
+      article: 'Art. 37, § 6º',
+      text: 'As pessoas jurídicas de direito público responderão pelos danos causados por seus agentes.',
+      sourceUrl: 'https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37',
+    };
+    // 1. Serializador XML
+    expect(lawExcerptsXml([])).toBe('');
+    expect(lawExcerptsXml(undefined)).toBe('');
+    const xml = lawExcerptsXml([excerpt]);
+    expect(xml).toContain('<legislacao_relevante>');
+    expect(xml).toContain('norma="CF/88"');
+    expect(xml).toContain('artigo="Art. 37, § 6º"');
+    expect(xml).toContain('fonte_oficial="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37"');
+    expect(xml).toContain('As pessoas jurídicas de direito público');
+
+    // 2. Injeção no Prompt
+    const ctxWithLaw = buildFofoContext({
+      context: student,
+      notebook: null,
+      activeQuestion: null,
+      prerequisites: [],
+      lawExcerpts: [excerpt],
+    });
+    const prompt = buildFofoPrompt('QUICK', ctxWithLaw, [], 'qual é a responsabilidade do Estado?');
+    expect(prompt).toContain('<legislacao_relevante>');
+    expect(prompt).toContain('norma="CF/88"');
+    expect(prompt).toMatch(/cite a redação literal exata do dispositivo entre aspas/i);
+    expect(prompt).toMatch(/aponte os termos normativos objetivos/i);
+    expect(prompt).toMatch(/nunca invente artigos/i);
+
+    // 3. Demonstração sem chave inclui a letra da lei
+    const demoQuick = demoFofoReply('QUICK', ctxWithLaw, 'responsabilidade civil');
+    expect(demoQuick).toContain('Na letra da lei (CF/88, Art. 37, § 6º): "As pessoas jurídicas de direito público responderão');
+    const demoLesson = demoFofoReply('LESSON', ctxWithLaw, 'responsabilidade civil');
+    expect(demoLesson).toContain('letra da lei (CF/88, Art. 37, § 6º: "As pessoas jurídicas de direito público responderão');
+
+    // 4. Sem lei, prompt limpo sem <legislacao_relevante>
+    const ctxWithoutLaw = buildFofoContext({
+      context: student,
+      notebook: null,
+      activeQuestion: null,
+      prerequisites: [],
+    });
+    const promptNoLaw = buildFofoPrompt('QUICK', ctxWithoutLaw, [], 'pergunta');
+    expect(promptNoLaw).not.toContain('<legislacao_relevante>');
   });
 
   it('cada jeito diz o tamanho da resposta, para caber no teto e não chegar cortada', () => {

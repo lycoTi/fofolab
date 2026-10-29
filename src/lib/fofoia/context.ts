@@ -21,12 +21,25 @@ export interface FofoActiveQuestionContext {
   attempt?: FofoStudentAttemptContext | null;
 }
 
+export interface LawExcerpt {
+  /** Nome ou identificador da norma (ex.: "CF/88", "Lei nº 8.112/1990"). */
+  lawName: string;
+  /** Dispositivo específico (ex.: "Art. 37, § 6º", "Art. 5º, inc. X"). */
+  article: string;
+  /** Redação literal exata do dispositivo compilado oficial. */
+  text: string;
+  /** Link oficial para a fonte (ex.: Planalto ou Senado). */
+  sourceUrl?: string;
+}
+
 export interface FofoContext {
   student: StudentContextSnapshot;
   notebookExcerpt: string | null;
   activeQuestion: FofoActiveQuestionContext | null;
   /** Pré-requisitos do tópico (ligações entre tópicos), para o jeito "Do zero" oferecer antes. */
   prerequisites: string[];
+  /** Fragmentos de legislação relevante (CF/88, leis do edital) para ancorar a explicação na letra da lei. */
+  lawExcerpts?: LawExcerpt[];
 }
 
 export function buildFofoContext(input: {
@@ -34,6 +47,7 @@ export function buildFofoContext(input: {
   notebook: string | null;
   activeQuestion: FofoContext['activeQuestion'];
   prerequisites: string[];
+  lawExcerpts?: LawExcerpt[];
 }): FofoContext {
   const notes = input.notebook?.trim() ?? '';
   return {
@@ -41,6 +55,7 @@ export function buildFofoContext(input: {
     notebookExcerpt: notes ? notes.slice(0, NOTEBOOK_CONTEXT_CHARS) : null,
     activeQuestion: input.activeQuestion,
     prerequisites: input.prerequisites,
+    lawExcerpts: input.lawExcerpts && input.lawExcerpts.length > 0 ? input.lawExcerpts : undefined,
   };
 }
 
@@ -94,4 +109,17 @@ export function activeQuestionXml(ctx: FofoContext): string {
   <gabarito_definitivo>${escapeXml(question.final_answer)}</gabarito_definitivo>${attemptLine}
   <explicacao_guardada>${escapeXml(dissection?.dissection_markdown ?? '')}</explicacao_guardada>
 </questao_ativa>`;
+}
+
+/**
+ * Trechos de legislação oficial (CF/88, leis do edital) para ancoragem normativa no prompt.
+ * Entrega redação literal exata de 1 a 3 artigos e link oficial para o Planalto/Senado.
+ */
+export function lawExcerptsXml(excerpts?: LawExcerpt[]): string {
+  if (!excerpts || excerpts.length === 0) return '';
+  const rows = excerpts.map((e) => {
+    const urlAttr = e.sourceUrl ? ` fonte_oficial="${escapeXml(e.sourceUrl)}"` : '';
+    return `  <dispositivo norma="${escapeXml(e.lawName)}" artigo="${escapeXml(e.article)}"${urlAttr}>\n    ${escapeXml(e.text)}\n  </dispositivo>`;
+  });
+  return `<legislacao_relevante>\n${rows.join('\n')}\n</legislacao_relevante>`;
 }
