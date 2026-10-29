@@ -21,7 +21,12 @@ export function useFofoIaInputs(params: {
   subjects: Subject[];
   topicsBySubject: Record<string, Topic[]>;
   examParts: ExamPart[];
-  activeQuestion: { question: Question; answered: boolean } | null;
+  activeQuestion: {
+    question: Question;
+    answered: boolean;
+    onNextSameSubject?: () => void;
+    nextSameSubjectLabel?: string | null;
+  } | null;
   topicQuestions: { question: Question; dissection: AiDissection | null }[];
   attempts: QuestionAttempt[];
   questionLogs: QuestionLog[];
@@ -88,6 +93,8 @@ export function useFofoIaInputs(params: {
       diagnosis: last?.self_diagnosis ?? null,
       falseCertainty: last ? isFalseCertainty(last) : false,
       attempt,
+      onNextSameSubject: activeQuestion.onNextSameSubject,
+      nextSameSubjectLabel: activeQuestion.nextSameSubjectLabel,
     };
   }
 

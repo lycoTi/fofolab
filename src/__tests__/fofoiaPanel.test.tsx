@@ -415,4 +415,44 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
     expect(screen.getByText(/No que prestar aten/)).toBeTruthy();
     expect(screen.getByText('Cuidado na prova:')).toBeTruthy();
   });
+
+  it('exibe o atalho para a próxima questão inédita do mesmo assunto e dispara ao clicar', () => {
+    const onNextSameSubject = vi.fn();
+    const activeQuestion = {
+      question: {
+        id: 'q1',
+        subject_id: 's1',
+        topic_id: 't1',
+        exam_board: 'Cebraspe',
+        exam_year: 2024,
+        organ: 'ANATEL',
+        statement: 'CSRF statement',
+        options_json: '["C) Certo","E) Errado"]',
+        preliminary_answer: null,
+        final_answer: 'C',
+        is_annulled: 0,
+        annulment_reason: null,
+      },
+      answered: true,
+      dissection: null,
+      diagnosis: 'MISCONCEPTION' as const,
+      falseCertainty: true,
+      attempt: {
+        selectedOption: 'E',
+        isCorrect: false,
+        confidence: 'SURE' as const,
+        diagnosis: 'MISCONCEPTION' as const,
+        falseCertainty: true,
+      },
+      onNextSameSubject,
+      nextSameSubjectLabel: 'CSRF',
+    };
+
+    render(<FofoIaPanel {...props({ activeQuestion })} />);
+
+    const nextBtn = screen.getByRole('button', { name: /Próxima sobre CSRF/i });
+    expect(nextBtn).toBeTruthy();
+    fireEvent.click(nextBtn);
+    expect(onNextSameSubject).toHaveBeenCalledTimes(1);
+  });
 });

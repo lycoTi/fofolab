@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793195742.7467668,
-    "seen": 1793198280.3569508,
-    "ast_hash": "eea046b60f9d7354636590e3a382828d",
+    "mtime": 1793289824.055323,
+    "seen": 1793290682.9524825,
+    "ast_hash": "c690d15b5e93b7cebc48f3f677a8dba6",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793285836.6753821,
-    "seen": 1793285958.710798,
-    "ast_hash": "339124d34003f98fe98e5d7f29229f83",
+    "mtime": 1793290630.9311688,
+    "seen": 1793290683.1856534,
+    "ast_hash": "f191af5232d7ecb7ae56c370cb1fbb9e",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1632,21 +1632,21 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoia.test.ts": {
-    "mtime": 1793285492.8285487,
-    "seen": 1793285958.4649649,
+    "mtime": 1793286779.4338725,
+    "seen": 1793290682.9723468,
     "ast_hash": "737c060cbccb329e0a7d0dc5d86b022e",
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
-    "mtime": 1793285655.1524603,
-    "seen": 1793285958.4649694,
-    "ast_hash": "f577931662f9b38bc938335ad21ef841",
+    "mtime": 1793290007.3923373,
+    "seen": 1793290682.9723508,
+    "ast_hash": "f832f24ed88d08860024f7d7dcbb6794",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
-    "mtime": 1793150294.5966065,
-    "seen": 1793154863.7359703,
-    "ast_hash": "a94a7b089417ff94ed00fd60402aa3a7",
+    "mtime": 1793290202.7433481,
+    "seen": 1793290682.9834435,
+    "ast_hash": "38df55742a4ab6328fe0b80a24551990",
     "semantic_hash": ""
   },
   "src/features/answer-flow/AnswerCorrection.tsx": {
@@ -1674,9 +1674,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793282308.5462012,
-    "seen": 1793283838.0480266,
-    "ast_hash": "5e63092b4102a362b214457950491762",
+    "mtime": 1793289861.912817,
+    "seen": 1793290683.0141008,
+    "ast_hash": "aa402284c4d65c9938ec633300085f9e",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
@@ -1698,9 +1698,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoIaInputs.ts": {
-    "mtime": 1793240915.6026013,
-    "seen": 1793278688.2444682,
-    "ast_hash": "e10e60ba56421b2e25526de38d89c455",
+    "mtime": 1793289917.7769678,
+    "seen": 1793290683.0164733,
+    "ast_hash": "48522a59f89f2f45f7343873cb0c7920",
     "semantic_hash": ""
   },
   "src/features/fofoia/warmup.ts": {
@@ -1716,9 +1716,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCorrection.tsx": {
-    "mtime": 1793154103.20103,
-    "seen": 1793154863.7859764,
-    "ast_hash": "c48e001c3681f83b7334325c7ce93dd8",
+    "mtime": 1793290449.4690425,
+    "seen": 1793290683.0365582,
+    "ast_hash": "e0983ffa01107c398636178c679dc50b",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionFilters.tsx": {
@@ -1728,9 +1728,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793154140.5942247,
-    "seen": 1793154863.7859814,
-    "ast_hash": "0f0ff32dc0eb0c109deee717514e4964",
+    "mtime": 1793290184.2784615,
+    "seen": 1793290683.0370305,
+    "ast_hash": "98e89e719b6ebed5d26f8bce264ebe0b",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
@@ -1752,8 +1752,8 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/demo.ts": {
-    "mtime": 1793285434.5525064,
-    "seen": 1793285958.6106145,
+    "mtime": 1793286779.9969368,
+    "seen": 1793290683.0705097,
     "ast_hash": "7110c39ce7fb28240e7b9e572e47e470",
     "semantic_hash": ""
   },
@@ -1764,14 +1764,14 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/prompts.ts": {
-    "mtime": 1793285412.1993332,
-    "seen": 1793285958.6115084,
-    "ast_hash": "b3e7d8f3c02bfb3e46a3ddf57adfaf60",
+    "mtime": 1793290480.5941434,
+    "seen": 1793290683.0713937,
+    "ast_hash": "4f9c10209cb15d8e433278ed57463d88",
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
-    "mtime": 1793285370.383674,
-    "seen": 1793285958.6115131,
+    "mtime": 1793286780.412959,
+    "seen": 1793290683.0713968,
     "ast_hash": "3b71f7ab3280d1473c31ebe8073421e2",
     "semantic_hash": ""
   },
@@ -3300,15 +3300,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/topicQuestions.test.ts": {
-    "mtime": 1793135397.665151,
-    "seen": 1793140211.1041844,
-    "ast_hash": "d69700fb2ba56ed94a4dc82c111f8de3",
+    "mtime": 1793289669.6546664,
+    "seen": 1793290682.9889054,
+    "ast_hash": "dc6df3e81380c55b5afd406b0ddd2526",
     "semantic_hash": ""
   },
   "src/lib/acervo/topicQuestions.ts": {
-    "mtime": 1793135399.1290376,
-    "seen": 1793140211.161346,
-    "ast_hash": "439a4e412b7f05d580ac60a6c0c69706",
+    "mtime": 1793289654.5351753,
+    "seen": 1793290683.0634077,
+    "ast_hash": "e0060deb96177019cefd96832b081314",
     "semantic_hash": ""
   },
   "src/__tests__/useTopicQuestions.test.tsx": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793285829.4527698,
-    "seen": 1793285958.7298884,
-    "ast_hash": "a430a8878de02b8a405b5dd55d376d99",
+    "mtime": 1793290611.5601268,
+    "seen": 1793290683.2037601,
+    "ast_hash": "df6ceb46219b3b36cb988213032076a8",
     "semantic_hash": ""
   },
   "src/features/mascot/ThematicPerimeter.tsx": {
@@ -3672,9 +3672,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoShortcuts.tsx": {
-    "mtime": 1793285475.6537151,
-    "seen": 1793285958.507275,
-    "ast_hash": "45673b5b45423707fa5c85fa38edb222",
+    "mtime": 1793290436.1597981,
+    "seen": 1793290683.015154,
+    "ast_hash": "a4b247d602607e6750a74d2bf65c0691",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-29-14-coluna-hoje-janela-do-fofo.md": {

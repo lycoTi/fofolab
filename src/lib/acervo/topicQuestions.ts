@@ -33,6 +33,8 @@ export interface QuestionsViewItem {
   question: Question;
   dissection: AiDissection | null;
   attemptSummary: QuestionAttemptSummary | null;
+  /** [spec 12d / FofoIA] Assuntos minerados do acervo ligados à questão. */
+  assuntos?: { id: string; label: string }[];
 }
 
 export interface QuestionsView {
@@ -218,7 +220,7 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
   return byKey;
 }
 
-function withDissectionsAndAttempts(questions: Question[]): QuestionsView['items'] {
+function withDissectionsAndAttempts(questions: Question[], acervo?: Database | null): QuestionsView['items'] {
   const ids = questions.map((q) => q.id);
   const dissections = new Map(
     ids.length > 0
@@ -229,10 +231,42 @@ function withDissectionsAndAttempts(questions: Question[]): QuestionsView['items
       : []
   );
   const summaries = summarizeAttempts(questions);
+
+  // Mapeia os assuntos do acervo para cada item (para o botão de próxima do mesmo assunto)
+  const acervoItemIds = [...new Set(questions.map((q) => q.acervo_item_id).filter((id): id is string => Boolean(id)))];
+  const assuntosByItemId = new Map<string, { id: string; label: string }[]>();
+  if (acervo && acervoItemIds.length > 0) {
+    try {
+      const rows = queryAll<{ item_id: string; assunto_id: string; caminho_json: string }>(
+        acervo,
+        `SELECT a.item_id, a.assunto_id, s.caminho_json
+         FROM item_assuntos a
+         JOIN assuntos s ON s.id = a.assunto_id
+         WHERE a.item_id IN (${placeholders(acervoItemIds.length)})`,
+        acervoItemIds
+      );
+      for (const r of rows) {
+        let label = r.assunto_id;
+        try {
+          const caminho = JSON.parse(r.caminho_json) as string[];
+          if (caminho.length > 0) label = caminho[caminho.length - 1] ?? r.assunto_id;
+        } catch {
+          // Mantém id como fallback
+        }
+        const list = assuntosByItemId.get(r.item_id) ?? [];
+        list.push({ id: r.assunto_id, label });
+        assuntosByItemId.set(r.item_id, list);
+      }
+    } catch {
+      // Ignora erro se a tabela de assuntos não existir
+    }
+  }
+
   return questions.map((question) => ({
     question,
     dissection: dissections.get(question.id) ?? null,
     attemptSummary: summaries.get(`${question.topic_id ?? ''}:${question.id}`) ?? null,
+    assuntos: question.acervo_item_id ? assuntosByItemId.get(question.acervo_item_id) ?? [] : [],
   }));
 }
 
@@ -256,7 +290,7 @@ export function getQuestionsView(input: ScopeInput & { acervo: Database | null }
   const own = ownQuestions(input, topicIds);
   const fromAcervo = input.acervo ? acervoQuestions(input.acervo, topicIds) : [];
   const view: QuestionsView = {
-    items: withDissectionsAndAttempts([...own, ...fromAcervo]),
+    items: withDissectionsAndAttempts([...own, ...fromAcervo], input.acervo),
     links: [],
     excluded: [],
     groupCode: groupCodeOf(input.topicId),
@@ -274,6 +308,62 @@ export function getQuestionsView(input: ScopeInput & { acervo: Database | null }
     sourceLabel: row.source_label,
   }));
   return view;
+}
+
+export interface NextSubjectMatch {
+  questionId: string;
+  subjectLabel: string;
+}
+
+/**
+ * Encontra a próxima questão inédita (não respondida) que compartilha o mesmo assunto minerado
+ * da questão atual (ou o mesmo tópico se for questão própria/sem assunto específico).
+ */
+export function findNextSameSubjectQuestion(
+  currentQuestion: Question | null | undefined,
+  items: QuestionsViewItem[],
+  sessionAttempts: Record<string, { picked: string | null; firstContact: boolean }> = {}
+): NextSubjectMatch | null {
+  if (!currentQuestion) return null;
+
+  const currentItem = items.find((i) => i.question.id === currentQuestion.id);
+  const currentAssuntos = currentItem?.assuntos ?? [];
+  const currentAssuntoIds = currentAssuntos.map((a) => a.id);
+  const preferredLabel =
+    currentAssuntos[currentAssuntos.length - 1]?.label || null;
+
+  // 1. Prioridade máxima: outra questão não anulada e inédita que compartilha ao menos um assunto específico
+  if (currentAssuntoIds.length > 0) {
+    const match = items.find((item) => {
+      if (item.question.id === currentQuestion.id) return false;
+      if (item.question.is_annulled === 1) return false;
+      const touched = Boolean(sessionAttempts[`${item.question.topic_id ?? ''}:${item.question.id}`]);
+      if (item.attemptSummary || touched) return false;
+      return item.assuntos?.some((a) => currentAssuntoIds.includes(a.id));
+    });
+
+    if (match) {
+      const matchLabel =
+        match.assuntos?.find((a) => currentAssuntoIds.includes(a.id))?.label || preferredLabel || 'este assunto';
+      return { questionId: match.question.id, subjectLabel: matchLabel };
+    }
+  }
+
+  // 2. Se não houver do mesmo assunto específico ou questão for própria: outra questão inédita do mesmo tópico
+  const topicMatch = items.find((item) => {
+    if (item.question.id === currentQuestion.id) return false;
+    if (item.question.is_annulled === 1) return false;
+    if (item.question.topic_id !== currentQuestion.topic_id) return false;
+    const touched = Boolean(sessionAttempts[`${item.question.topic_id ?? ''}:${item.question.id}`]);
+    if (item.attemptSummary || touched) return false;
+    return true;
+  });
+
+  if (topicMatch) {
+    return { questionId: topicMatch.question.id, subjectLabel: preferredLabel || 'este tópico' };
+  }
+
+  return null;
 }
 
 /**

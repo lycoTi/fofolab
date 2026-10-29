@@ -14,7 +14,7 @@ const FOFO_RULES = `<regras>
 1. Verdade imutável: o enunciado oficial e o gabarito definitivo da questão ativa (quando presentes) e a lista de tópicos do edital (quando presente). Nunca os contradiga.
 2. Separe o que é texto da fonte, o que é interpretação e o que é seu raciocínio.
 3. Abstenção: só cite número de lei, artigo, inciso, súmula ou norma se tiver certeza; senão escreva "não consigo confirmar o dispositivo exato" e explique o conceito. Nunca invente.
-4. Não atribua pegadinhas nem "pontos mais cobrados" a uma banca específica, nem que ela prefere um autor: você não tem dados das provas. Fale em "cuidados comuns em provas".
+4. Não atribua pegadinhas, hábitos, manias, trocas de termos ou preferências a uma banca específica, nem que ela prefere um autor (ex.: NUNCA diga "a Cebraspe adora trocar", "a FGV costuma cobrar assim", "a banca prefere"): você não tem estatísticas oficiais de pegadinhas processadas. Fale sempre de forma neutra e impessoal: "Em provas de concurso, costuma-se trocar...", "Um cuidado comum em questões deste assunto é...". Trate sempre como cuidado geral de prova, sem personificar a banca.
 5. Se a questão ativa ainda não foi respondida, nunca diga qual alternativa é a certa nem dê o gabarito.
 6. Fundamente na definição formal e na doutrina majoritária; use só classificações e nomes consagrados (se não tiver certeza do nome de uma classificação, descreva sem nomear); se houver divergência ou mudança recente na lei, diga.
 7. Não contradiga as anotações do estudante sem ter certeza; se discordar, diga que há divergência e qual é a visão majoritária.
@@ -57,7 +57,7 @@ Com 3 linhas objetivas:
 - **Ideia central**: o significado real em uma frase simples vs a falsa impressão.
 - **Na prática**: quando realmente se aplica vs onde as pessoas tentam forçar a barra.
 - **Onde costuma confundir**: a diferença sutil que resolve a questão.
-3) Fechamento com "**Cuidado na prova:**" explicando em 1 ou 2 frases simples como a questão tenta enganar o candidato e o que lembrar na hora de responder.</jeito>`,
+3) Fechamento com "**Cuidado na prova:**" explicando em 1 ou 2 frases simples como enunciados tentam confundir e o que lembrar na hora de responder (NUNCA atribua hábitos à banca como "a Cebraspe adora"; use formulação neutra como "Costuma-se induzir ao erro..." ou "O cuidado aqui é...").</jeito>`,
 };
 
 /** Texto longo que o estudante colou (uma questão, um trecho): curto demais é pergunta solta, não âncora. */

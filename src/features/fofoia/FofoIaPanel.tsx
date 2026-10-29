@@ -31,6 +31,8 @@ export interface FofoActiveQuestion {
   diagnosis: SelfDiagnosisType | null;
   falseCertainty: boolean;
   attempt?: FofoStudentAttempt | null;
+  onNextSameSubject?: () => void;
+  nextSameSubjectLabel?: string | null;
 }
 
 export interface FofoIaPanelProps {
@@ -216,13 +218,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
           onLesson={() => lesson()}
           onSend={(msg, mode) => void send(msg, mode ?? null)}
         />
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            submit();
-          }}
-          className="flex items-end gap-2"
-        >
+        <form onSubmit={(e) => { e.preventDefault(); submit(); }} className="flex items-end gap-2">
           <textarea
             ref={textareaRef}
             rows={1}

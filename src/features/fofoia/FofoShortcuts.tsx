@@ -109,6 +109,16 @@ export function FofoShortcuts({
         <button type="button" onClick={onLesson} className={shortcut}>
           Aula completa
         </button>
+        {activeQuestion.onNextSameSubject && (
+          <button
+            type="button"
+            onClick={activeQuestion.onNextSameSubject}
+            title={`Avançar para a próxima questão inédita sobre ${activeQuestion.nextSameSubjectLabel || 'este assunto'}`}
+            className={`${shortcut} border-amber-500/40 text-amber-200`}
+          >
+            Próxima sobre {activeQuestion.nextSameSubjectLabel || 'este assunto'}
+          </button>
+        )}
         <button
           type="button"
           onClick={() =>

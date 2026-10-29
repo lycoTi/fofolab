@@ -2,7 +2,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { getQuestionComplexityProfile } from '../../lib/aiRouter';
 import { deriveDiagnosis } from '../../lib/dailyReview';
 import { parseQuestionOptions } from '../../lib/questionOptions';
-import type { QuestionAttemptSummary, QuestionsView } from '../../lib/acervo/topicQuestions';
+import {
+  findNextSameSubjectQuestion,
+  type QuestionAttemptSummary,
+  type QuestionsView,
+  type QuestionsViewItem,
+} from '../../lib/acervo/topicQuestions';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { isCertoErradoOptions } from '../answer-flow/AnswerOptions';
 import { AcervoLinkBar } from './AcervoLinkBar';
@@ -40,7 +45,14 @@ export interface QuestionWorkbenchProps {
   lastDiagnosisFeedback: string | null;
   onAskFofoIa?: (request: FofoQuestionRequest) => void;
   /** A questão na tela (a FofoIA usa; o gabarito só vai junto depois de respondida). */
-  onActiveQuestionChange?: (active: { question: Question; answered: boolean } | null) => void;
+  onActiveQuestionChange?: (
+    active: {
+      question: Question;
+      answered: boolean;
+      onNextSameSubject?: () => void;
+      nextSameSubjectLabel?: string | null;
+    } | null
+  ) => void;
   onGenerateDissection?: (question: Question) => Promise<{ ok: boolean; message?: string }>;
   onOpenImport?: () => void;
   aiConfigured?: boolean;
@@ -152,14 +164,38 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     if (activeId) setAttempts((all) => ({ ...all, [activeId]: next }));
   };
 
+  const nextSameSubject = useMemo(
+    () => findNextSameSubjectQuestion(active?.question, enriched, attempts),
+    [active?.question, enriched, attempts]
+  );
+
+  const handleNextSameSubject = () => {
+    if (!nextSameSubject) return;
+    const targetIdx = filtered.findIndex((q) => q.question.id === nextSameSubject.questionId);
+    if (targetIdx !== -1) {
+      setIndex(targetIdx);
+    } else {
+      setStatusFilter('UNSOLVED');
+      const idxInEnriched = enriched.findIndex((q) => q.question.id === nextSameSubject.questionId);
+      if (idxInEnriched !== -1) setIndex(idxInEnriched);
+    }
+  };
+
   useEffect(() => {
     shownAt.current = Date.now();
     usedAi.current = false;
   }, [activeId]);
 
   useEffect(() => {
-    onActiveQuestionChange?.(active ? { question: active.question, answered } : null);
-  }, [activeId, answered]);
+    if (!active) {
+      onActiveQuestionChange?.(null);
+      return;
+    }
+    const extra = nextSameSubject
+      ? { onNextSameSubject: handleNextSameSubject, nextSameSubjectLabel: nextSameSubject.subjectLabel }
+      : {};
+    onActiveQuestionChange?.({ question: active.question, answered, ...extra });
+  }, [activeId, answered, nextSameSubject]);
 
   useEffect(() => () => onActiveQuestionChange?.(null), []);
 
@@ -332,6 +368,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           onGenerateDissection={props.onGenerateDissection}
           onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}
           onNextQuestion={hasNext ? () => setIndex(safeIndex + 1) : undefined}
+          onNextSameSubject={nextSameSubject ? handleNextSameSubject : undefined}
+          nextSameSubjectLabel={nextSameSubject?.subjectLabel ?? null}
           position={pagination}
         />
       )}

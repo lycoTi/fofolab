@@ -138,6 +138,27 @@ describe('Aba Questões: confiança antes de responder (spec 11 §5.5)', () => {
     expect(screen.getAllByText(/Cebraspe/i).length).toBeGreaterThanOrEqual(2);
     expect(screen.getByRole('button', { name: 'Próxima questão' })).toBeTruthy();
   });
+
+  it('exibe e avança pelo botão da próxima questão do mesmo assunto minerado', () => {
+    const q1 = {
+      ...bundles[0],
+      question: { ...bundles[0].question, id: 'q1', acervo_item_id: 'i1' },
+      assuntos: [{ id: 'seg>csrf', label: 'CSRF' }],
+    };
+    const q2 = {
+      ...bundles[1],
+      question: { ...bundles[1].question, id: 'q2', acervo_item_id: 'i2' },
+      assuntos: [{ id: 'seg>csrf', label: 'CSRF' }],
+    };
+    renderWorkbench({ questions: [q1, q2] });
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+    fireEvent.click(optionA()!);
+
+    const nextSubjectBtn = screen.getByRole('button', { name: /Próxima sobre CSRF/i });
+    expect(nextSubjectBtn).toBeTruthy();
+    fireEvent.click(nextSubjectBtn);
+    expect(screen.getByText(q2.question.statement)).toBeTruthy();
+  });
 });
 
 describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)', () => {

@@ -239,4 +239,28 @@ describe('Questões do tópico com o acervo (spec 12c §5.4)', () => {
     const vB = viewOf(ctx, ctx.b.id);
     expect(vB.items.find((i) => i.question.acervo_item_id === 'i2')!.attemptSummary).toBeNull();
   });
+
+  it('encontra a próxima questão inédita que compartilha o mesmo assunto minerado', async () => {
+    const ctx = await open();
+    const vA = viewOf(ctx, ctx.a.id);
+    const item1 = vA.items.find((i) => i.question.acervo_item_id === 'i1')!;
+    const item2 = vA.items.find((i) => i.question.acervo_item_id === 'i2')!;
+
+    // i1 e i2 compartilham 'x>atos>atributos'
+    expect(item1.assuntos).toBeDefined();
+    expect(item1.assuntos?.some((a) => a.id === 'x>atos>atributos')).toBe(true);
+    expect(item2.assuntos?.some((a) => a.id === 'x>atos>atributos')).toBe(true);
+
+    // Estando em i1, a próxima do mesmo assunto é i2
+    const next = ctx.view.findNextSameSubjectQuestion(item1.question, vA.items);
+    expect(next).not.toBeNull();
+    expect(next?.questionId).toBe(item2.question.id);
+    expect(next?.subjectLabel).toBe('atributos');
+
+    // Se i2 já foi respondida na sessão, não retorna ela de novo
+    const sessionAttempts = { [`${item2.question.topic_id}:${item2.question.id}`]: { picked: 'C', firstContact: false } };
+    const nextAfterTouch = ctx.view.findNextSameSubjectQuestion(item1.question, vA.items, sessionAttempts);
+    // Cai para a próxima do mesmo tópico (a própria) se houver
+    expect(nextAfterTouch?.questionId).not.toBe(item2.question.id);
+  });
 });

@@ -200,7 +200,12 @@ export default function App() {
   const [questionScope, setQuestionScope] = useState<QuestionScope>('topic');
   const [lastDiagnosisMsg, setLastDiagnosisMsg] = useState<string | null>(null);
   // Questão na tela da aba Questões (a FofoIA só recebe o gabarito depois de respondida)
-  const [activeQuestion, setActiveQuestion] = useState<{ question: Question; answered: boolean } | null>(null);
+  const [activeQuestion, setActiveQuestion] = useState<{
+    question: Question;
+    answered: boolean;
+    onNextSameSubject?: () => void;
+    nextSameSubjectLabel?: string | null;
+  } | null>(null);
   // Pedido da aba Questões para a FofoIA ("Aprofundar", "Pedir pista"); o id faz cada pedido ser atendido uma vez
   const [fofoRequest, setFofoRequest] = useState<{ id: number; kind: 'deepen' | 'hint' } | null>(null);
   const [pdfSource, setPdfSource] = useState<PdfSource | null>(null);
