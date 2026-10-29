@@ -396,4 +396,21 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     fireEvent.keyDown(window, { key: 'Enter' });
     expect(screen.getByText('Questão 2 Certo/Errado.')).toBeTruthy();
   });
+
+  it('riscador de distratores: Alt+A descarta a alternativa com line-through e botão de descarte', () => {
+    renderWorkbench();
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+
+    const optionBtnA = optionA()!;
+    expect(optionBtnA.className).not.toContain('line-through');
+
+    // Descartar via atalho Alt+A
+    fireEvent.keyDown(window, { key: 'a', altKey: true });
+    expect(optionBtnA.className).toContain('line-through');
+
+    // Clicar no botão de restaurar
+    const restoreA = screen.getByRole('button', { name: 'Restaurar alternativa A' });
+    fireEvent.click(restoreA);
+    expect(optionBtnA.className).not.toContain('line-through');
+  });
 });

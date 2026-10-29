@@ -55,6 +55,8 @@ export function QuestionCard(props: {
   confidence: ReviewConfidence | null;
   picked: string | null;
   locked: boolean;
+  eliminated?: string[];
+  onToggleEliminate?: (key: string) => void;
   onConfidence: (confidence: ReviewConfidence) => void;
   onPick: (key: string) => void;
   onFirstContact: () => void;
@@ -125,7 +127,7 @@ export function QuestionCard(props: {
         {/* Atalhos de teclado ativos */}
         <div
           className="inline-flex items-center gap-1 text-[11px] text-slate-500 select-none"
-          title="Atalhos: 1–4 confiança · C/E ou A–E resposta · ↵ ou Espaço para avançar"
+          title="Atalhos: 1–4 confiança · C/E ou A–E resposta · Alt+Letra descartar · ↵ ou Espaço para avançar"
         >
           <Keyboard size={12} className="text-slate-500 shrink-0" />
           <span className="hidden sm:inline">Teclado ativo</span>
@@ -150,7 +152,14 @@ export function QuestionCard(props: {
           <ConfidencePicker value={props.confidence} disabled={props.picked !== null} onChange={props.onConfidence} />
         )}
         {!annulled && (props.confidence || props.picked) && (
-          <AnswerOptions options={options} finalAnswer={question.final_answer} picked={props.picked} onPick={props.onPick} />
+          <AnswerOptions
+            options={options}
+            finalAnswer={question.final_answer}
+            picked={props.picked}
+            eliminated={props.eliminated}
+            onToggleEliminate={props.onToggleEliminate}
+            onPick={props.onPick}
+          />
         )}
       </div>
 

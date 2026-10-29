@@ -6,6 +6,7 @@ import { isFalseCertainty } from '../../lib/diagnosis';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import type { AiDissection, ExamPart, Notebook, Question, QuestionAttempt, QuestionLog, Subject, Topic } from '../../types/database';
 import type { FofoActiveQuestion, FofoIaPanelProps, FofoStudentAttempt } from './FofoIaPanel';
+import { useLawExcerpts } from './useLawExcerpts';
 
 function topicLabel(topic: Topic): string {
   return topic.code ? `${topic.code} ${topic.title}` : topic.title;
@@ -99,6 +100,10 @@ export function useFofoIaInputs(params: {
   }
 
   const isCurrent = topic.id === currentTopic?.id;
+  const lawExcerpts = useLawExcerpts({
+    question: activeQuestion?.question,
+    topicTitle: topic.title,
+  });
   const firstContact =
     topic.last_studied_at === null && !attempts.some((a) => a.topic_id === topic.id) && !questionLogs.some((l) => l.topic_id === topic.id);
 
@@ -111,6 +116,7 @@ export function useFofoIaInputs(params: {
     prerequisites: context.relatedPrerequisites,
     editalTopics,
     firstContact,
+    lawExcerpts,
     onSaveSummary: (markdown) => {
       if (isCurrent) {
         params.appendToCurrentNotebook(markdown);

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Loader2, Send } from 'lucide-react';
 import type { StudentContextSnapshot } from '../../lib/aiRouter';
-import { buildFofoContext } from '../../lib/fofoia/context';
+import { buildFofoContext, type LawExcerpt } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { CurrentFofo } from '../mascot/FofoOutfitContext';
@@ -56,6 +56,8 @@ export interface FofoIaPanelProps {
   onTryQuestions: () => void;
   /** O pedido foi atendido: o App o limpa (senão voltaria a ser enviado quando o painel reaparecer). */
   onRequestHandled: () => void;
+  /** Fragmentos oficiais da letra da lei (Fatia 11.2.3). */
+  lawExcerpts?: LawExcerpt[];
 }
 
 /** FofoIA (spec 11): um só professor na coluna direita, com jeitos de ensinar escolhidos pelos sinais do estudante. */
@@ -73,6 +75,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         }
       : null,
     prerequisites: props.prerequisites,
+    lawExcerpts: props.lawExcerpts,
   });
   const sessionKey = activeQuestion?.question?.id ? `q:${activeQuestion.question.id}` : `t:${props.topicKey}`;
   const { turns, loading, send, resume, clear } = useFofoConversation({

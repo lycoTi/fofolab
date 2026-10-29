@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
+import { AnswerOptions } from '../features/answer-flow/AnswerOptions';
 import { ConfidencePicker } from '../features/answer-flow/ConfidencePicker';
 import { DiagnosisPicker } from '../features/answer-flow/DiagnosisPicker';
 
@@ -48,5 +49,43 @@ describe('Diagnóstico depois de responder', () => {
     rerender(<DiagnosisPicker isCorrect={false} confidence="GUESS" value="BASE_GAP" onChange={vi.fn()} />);
     expect(screen.queryByText(/Você tinha certeza/)).toBeNull();
     expect(screen.getByText(/primeiro contato/i)).toBeTruthy();
+  });
+});
+
+describe('AnswerOptions: riscador de alternativas (eliminação de distratores)', () => {
+  const options = [
+    { key: 'A', text: 'Opção A', label: 'A) Opção A' },
+    { key: 'B', text: 'Opção B', label: 'B) Opção B' },
+    { key: 'C', text: 'Opção C', label: 'C) Opção C' },
+  ];
+
+  it('exibe o botão de riscar e aciona onToggleEliminate ao clicar', () => {
+    const onToggle = vi.fn();
+    render(
+      <AnswerOptions
+        options={options}
+        finalAnswer="C"
+        picked={null}
+        eliminated={['A']}
+        onToggleEliminate={onToggle}
+        onPick={vi.fn()}
+      />
+    );
+
+    // Opção A possui classe de line-through
+    const buttonA = screen.getByRole('button', { name: 'A) Opção A' });
+    expect(buttonA.className).toContain('line-through');
+
+    // Botão de restaurar alternativa A
+    const restoreA = screen.getByRole('button', { name: 'Restaurar alternativa A' });
+    expect(restoreA).toBeTruthy();
+    fireEvent.click(restoreA);
+    expect(onToggle).toHaveBeenCalledWith('A');
+
+    // Botão de descartar alternativa B
+    const discardB = screen.getByRole('button', { name: 'Descartar alternativa B' });
+    expect(discardB).toBeTruthy();
+    fireEvent.click(discardB);
+    expect(onToggle).toHaveBeenCalledWith('B');
   });
 });

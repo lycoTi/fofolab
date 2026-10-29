@@ -116,4 +116,21 @@ describe('useQuestionKeyboardShortcuts', () => {
 
     document.body.removeChild(input);
   });
+
+  it('tecla Alt + Letra aciona o descarte/riscador da alternativa (onToggleEliminate)', () => {
+    const onToggleEliminate = vi.fn();
+    renderHook(() =>
+      useQuestionKeyboardShortcuts({
+        ...defaultOptions,
+        options: [{ key: 'A' }, { key: 'B' }, { key: 'C' }],
+        onToggleEliminate,
+      })
+    );
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'a', altKey: true }));
+    expect(onToggleEliminate).toHaveBeenCalledWith('A');
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'B', altKey: true }));
+    expect(onToggleEliminate).toHaveBeenCalledWith('B');
+  });
 });

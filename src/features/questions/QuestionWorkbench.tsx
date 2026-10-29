@@ -93,6 +93,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   const [complexity, setComplexity] = useState('ALL');
   const [search, setSearch] = useState('');
   const [index, setIndex] = useState(0);
+  const [eliminatedKeys, setEliminatedKeys] = useState<string[]>([]);
   // Uma tentativa por questão na leva atual: responder não tira a questão da tela antes de o estudante avançar
   const [attempts, setAttempts] = useState<Record<string, AttemptState>>({});
   const shownAt = useRef(Date.now());
@@ -154,6 +155,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   useEffect(() => {
     setIndex(0);
     setAttempts({});
+    setEliminatedKeys([]);
   }, [statusFilter, formatFilter, board, complexity, search, props.scopeFilter]);
 
   const safeIndex = filtered.length > 0 ? Math.min(index, filtered.length - 1) : 0;
@@ -185,6 +187,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   useEffect(() => {
     shownAt.current = Date.now();
     usedAi.current = false;
+    setEliminatedKeys([]);
   }, [activeId]);
 
   useEffect(() => {
@@ -229,6 +232,12 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     [active?.question.options_json]
   );
 
+  const toggleEliminate = (key: string) => {
+    setEliminatedKeys((prev) =>
+      prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
+    );
+  };
+
   useQuestionKeyboardShortcuts({
     enabled: Boolean(active),
     confidence: current.confidence,
@@ -239,6 +248,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       if (!current.confidence || answered) return;
       record(key, current.confidence);
     },
+    onToggleEliminate: toggleEliminate,
     onFirstContact: () => record(null, null),
     onHint: onAskFofoIa
       ? () => {
@@ -367,6 +377,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
+        eliminated={eliminatedKeys}
+        onToggleEliminate={toggleEliminate}
         position={pagination}
         onConfidence={(confidence) => setCurrent({ ...current, confidence })}
         onPick={(key) => {
