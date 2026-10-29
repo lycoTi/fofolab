@@ -4,7 +4,7 @@ import type { SelfDiagnosisType } from '../../types/database';
  * Jeitos de ensinar da FofoIA (spec 11 §5.2.1), escolhidos pelos sinais que o app já tem — sem chamada extra à IA.
  * Inspirados nos professores do grupo de estudos do dono (Bill, Jorge, Diana, Dora) e no "chat do edital".
  */
-export type FofoMode = 'QUICK' | 'FROM_ZERO' | 'LESSON' | 'SUMMARY' | 'EDITAL' | 'HINT' | 'CONTRAST';
+export type FofoMode = 'QUICK' | 'FROM_ZERO' | 'LESSON' | 'SUMMARY' | 'EDITAL' | 'HINT' | 'CONTRAST' | 'RETRIEVAL';
 
 /** Selinho mostrado no topo de cada resposta. */
 export const MODE_BADGE: Record<FofoMode, string> = {
@@ -15,6 +15,7 @@ export const MODE_BADGE: Record<FofoMode, string> = {
   EDITAL: 'Cai no meu edital?',
   HINT: 'Pista',
   CONTRAST: 'Comparativo',
+  RETRIEVAL: 'Fixação',
 };
 
 /** Abaixo disso o tópico é tratado como "do zero" (linguagem simples, metáfora, pré-requisito). */
@@ -57,6 +58,23 @@ export function isContrastQuestion(text: string): boolean {
   return CONTRAST_PATTERNS.some((p) => normalized.includes(p));
 }
 
+const RETRIEVAL_PATTERNS = [
+  'testar se fixei',
+  'teste de fixacao',
+  'pergunta de fixacao',
+  'me teste',
+  'testar se entendi',
+  'desafio de fixacao',
+  'recuperacao ativa',
+  'pergunta rapida',
+  'testar fixacao',
+];
+
+export function isRetrievalQuestion(text: string): boolean {
+  const normalized = normalizeText(text);
+  return RETRIEVAL_PATTERNS.some((p) => normalized.includes(p));
+}
+
 export interface ModeSignals {
   /** Pedido explícito por botão ("Aula completa", "Salvar resumo", "Pedir pista"). */
   requested: FofoMode | null;
@@ -91,11 +109,19 @@ export function chooseMode(s: ModeSignals): FofoMode {
   if (s.requested) return s.requested;
   if (isEditalQuestion(s.text)) return 'EDITAL';
   if (isContrastQuestion(s.text)) return 'CONTRAST';
+  if (isRetrievalQuestion(s.text)) return 'RETRIEVAL';
   return needsFromZero(s) ? 'FROM_ZERO' : 'QUICK';
 }
 
 /** Destaque discreto "Parece que vale a aula completa" — quem decide é sempre o estudante. */
 export function shouldSuggestLesson(s: ModeSignals): boolean {
-  if (s.requested === 'LESSON' || s.requested === 'SUMMARY' || s.requested === 'EDITAL' || s.requested === 'CONTRAST') return false;
+  if (
+    s.requested === 'LESSON' ||
+    s.requested === 'SUMMARY' ||
+    s.requested === 'EDITAL' ||
+    s.requested === 'CONTRAST' ||
+    s.requested === 'RETRIEVAL'
+  )
+    return false;
   return needsFromZero(s) || s.followUps >= LESSON_FOLLOW_UPS;
 }

@@ -58,6 +58,12 @@ Com 3 linhas objetivas:
 - **Na prática**: quando realmente se aplica vs onde as pessoas tentam forçar a barra.
 - **Onde costuma confundir**: a diferença sutil que resolve a questão.
 3) Fechamento com "**Cuidado na prova:**" explicando em 1 ou 2 frases simples como enunciados tentam confundir e o que lembrar na hora de responder (NUNCA atribua hábitos à banca como "a Cebraspe adora"; use formulação neutra como "Costuma-se induzir ao erro..." ou "O cuidado aqui é...").</jeito>`,
+  RETRIEVAL: `<jeito nome="Fixação">O estudante quer testar ativamente a fixação da ideia central (Retrieval Practice) para não cair em ilusão de fluência e sem queimar questões reais do acervo.
+Responda em até ~100 palavras.
+Estrutura:
+1) Proponha 1 único micro-cenário prático e inédito (uma situação hipotética curta ou pergunta direta de "Certo ou Errado") que exija julgar a distinção conceitual ou o cuidado prático do tema tratado na conversa ou na questão ativa.
+2) NUNCA dê a resposta nem a justificativa nesta mensagem!
+3) Termine convidando o estudante: "Como você julgaria esse caso? Pode responder de cabeça ou mandar aqui para conferir."</jeito>`,
 };
 
 /** Texto longo que o estudante colou (uma questão, um trecho): curto demais é pergunta solta, não âncora. */

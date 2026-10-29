@@ -27,5 +27,7 @@ export function demoFofoReply(mode: FofoMode, ctx: FofoContext, message: string,
       return 'Pista: repare em qual ideia o enunciado está testando e se há alguma palavra que generaliza demais. Marque sua resposta e a confiança, mesmo chutando: tentar antes fixa mais depois.';
     case 'CONTRAST':
       return `Para você nunca mais cair nessa dúvida sobre ${topic}:\n\n| No que prestar atenção | O que é certo (Gabarito) | Onde tentam te pegar |\n| :--- | :--- | :--- |\n| **Ideia central** | A regra geral prevista na norma ou conceito oficial. | Confundir com uma exceção ou hipótese parecida. |\n| **Na prática** | Aplica-se diretamente à situação apresentada no enunciado. | Generalizações como "sempre" ou "apenas". |\n| **Onde costuma confundir** | A finalidade e o momento exato em que a regra age. | Trocar a causa pelo efeito. |\n\n**Cuidado na prova:** A questão tenta induzir ao erro usando uma palavra restritiva. Lembre-se: verifique sempre se o enunciado está cobrando a regra geral ou a exceção.`;
+    case 'RETRIEVAL':
+      return `Vamos testar se você fixou a ideia central de ${topic}:\n\nImagine que um usuário acessou o sistema e disparou uma solicitação em que a regra geral deveria ser aplicada, mas um parâmetro secundário foi omitido. O ato continuará válido ou será nulo?\n\nPode responder de cabeça ou mandar aqui para conferir!`;
   }
 }

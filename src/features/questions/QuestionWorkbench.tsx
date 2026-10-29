@@ -368,8 +368,6 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
           onGenerateDissection={props.onGenerateDissection}
           onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}
           onNextQuestion={hasNext ? () => setIndex(safeIndex + 1) : undefined}
-          onNextSameSubject={nextSameSubject ? handleNextSameSubject : undefined}
-          nextSameSubjectLabel={nextSameSubject?.subjectLabel ?? null}
           position={pagination}
         />
       )}

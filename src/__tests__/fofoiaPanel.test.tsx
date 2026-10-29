@@ -416,8 +416,7 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
     expect(screen.getByText('Cuidado na prova:')).toBeTruthy();
   });
 
-  it('exibe o atalho para a próxima questão inédita do mesmo assunto e dispara ao clicar', () => {
-    const onNextSameSubject = vi.fn();
+  it('exibe o atalho "Testar se fixei" e responde no jeito Fixação', async () => {
     const activeQuestion = {
       question: {
         id: 'q1',
@@ -444,15 +443,18 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
         diagnosis: 'MISCONCEPTION' as const,
         falseCertainty: true,
       },
-      onNextSameSubject,
-      nextSameSubjectLabel: 'CSRF',
     };
 
     render(<FofoIaPanel {...props({ activeQuestion })} />);
 
-    const nextBtn = screen.getByRole('button', { name: /Próxima sobre CSRF/i });
-    expect(nextBtn).toBeTruthy();
-    fireEvent.click(nextBtn);
-    expect(onNextSameSubject).toHaveBeenCalledTimes(1);
+    const testBtn = screen.getByRole('button', { name: 'Testar se fixei' });
+    expect(testBtn).toBeTruthy();
+
+    await act(async () => {
+      fireEvent.click(testBtn);
+    });
+
+    expect(badge('Fixação')).toBeTruthy();
+    expect(screen.getByText(/testar se você fixou/i)).toBeTruthy();
   });
 });

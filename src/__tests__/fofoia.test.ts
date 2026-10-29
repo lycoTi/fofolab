@@ -40,6 +40,8 @@ describe('Sinais e jeito da FofoIA (spec 11 §5.2.1)', () => {
     expect(chooseMode(signals({ text: 'faça uma matriz de contraste' }))).toBe('CONTRAST');
     expect(chooseMode(signals({ text: 'tabela comparativa x vs y' }))).toBe('CONTRAST');
     expect(chooseMode(signals({ requested: 'CONTRAST' }))).toBe('CONTRAST');
+    expect(chooseMode(signals({ text: 'quero testar se fixei' }))).toBe('RETRIEVAL');
+    expect(chooseMode(signals({ requested: 'RETRIEVAL' }))).toBe('RETRIEVAL');
     expect(chooseMode(signals({ topicMastery: 10 }))).toBe('FROM_ZERO');
     expect(chooseMode(signals({ firstContact: true }))).toBe('FROM_ZERO');
     expect(chooseMode(signals({ activeQuestion: { answered: true, diagnosis: 'MISCONCEPTION', falseCertainty: false } }))).toBe('FROM_ZERO');
@@ -271,7 +273,7 @@ describe('Modo demonstração (sem chave)', () => {
 
   it('todos os jeitos respondem marcados como simulação (menos a pista de Certo/Errado, que é do app); a pista de exemplo não entrega o gabarito', async () => {
     const ctx = buildFofoContext({ context: student, notebook: null, activeQuestion: { question, answered: false, dissection: null }, prerequisites: [] });
-    for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'SUMMARY', 'EDITAL', 'HINT', 'CONTRAST'] as const) {
+    for (const mode of ['QUICK', 'FROM_ZERO', 'LESSON', 'SUMMARY', 'EDITAL', 'HINT', 'CONTRAST', 'RETRIEVAL'] as const) {
       const reply = await askFofoIa({ mode, ctx, conversation: [], message: 'microsserviços' });
       expect(reply.simulated).toBe(mode !== 'HINT');
       expect(reply.reply.length).toBeGreaterThan(20);
@@ -283,6 +285,8 @@ describe('Modo demonstração (sem chave)', () => {
     expect(contrast).toContain('No que prestar atenção');
     expect(contrast).toContain('O que é certo');
     expect(contrast).toContain('Cuidado na prova:');
+    const retrieval = demoFofoReply('RETRIEVAL', ctx, 'fixação');
+    expect(retrieval).toContain('testar se você fixou');
   });
 });
 

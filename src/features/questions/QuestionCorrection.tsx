@@ -31,8 +31,6 @@ export function QuestionCorrection(props: {
   onGenerateDissection?: (question: Question) => Promise<{ ok: boolean; message?: string }>;
   onDeepen?: () => void;
   onNextQuestion?: () => void;
-  onNextSameSubject?: () => void;
-  nextSameSubjectLabel?: string | null;
   position?: {
     index: number;
     total: number;
@@ -139,23 +137,13 @@ export function QuestionCorrection(props: {
               </button>
             </div>
           )}
-          {props.onNextSameSubject && props.nextSameSubjectLabel && (
-            <button
-              type="button"
-              onClick={props.onNextSameSubject}
-              title={`Avançar para a próxima questão inédita sobre ${props.nextSameSubjectLabel}`}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3.5 py-1.5 text-xs font-semibold text-amber-200 transition-all duration-150 hover:bg-amber-500/20 active:scale-[0.97]"
-            >
-              Próxima sobre {props.nextSameSubjectLabel} →
-            </button>
-          )}
           {props.onNextQuestion && (
             <button
               type="button"
               onClick={props.onNextQuestion}
               className="inline-flex items-center gap-1.5 rounded-lg bg-white/[0.08] px-3.5 py-1.5 text-xs font-semibold text-slate-100 transition-colors hover:bg-white/[0.14] hover:text-white active:scale-[0.97]"
             >
-              {props.onNextSameSubject && props.nextSameSubjectLabel ? 'Outro tema →' : 'Próxima questão →'}
+              Próxima questão →
             </button>
           )}
         </div>

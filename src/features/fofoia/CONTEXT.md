@@ -15,7 +15,7 @@
 
 ---
 
-## 2. Os 6 Jeitos da FofoIA (Personas Pedagógicas)
+## 2. Os 7 Jeitos da FofoIA (Personas Pedagógicas)
 O app escolhe o jeito automaticamente através de **sinais heurísticos locais** (sem gastar chamada de IA para classificar):
 
 | Jeito | Selinho | Gatilhos / Sinais | Formato & Comportamento |
@@ -27,6 +27,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 | **Cai no meu edital?** | 🐹🧭 Edital | Pergunta livre em texto sobre relevância/edital (sem botão redundante) | Filtra localmente até 20 tópicos candidatos; responde em até 150 palavras se está no edital, qual tópico/peso, ou abstenção honesta. |
 | **Pista** | 🐹🔍 Pista | Questão ativa do app ainda NÃO respondida | Até ~80 palavras. **NUNCA dá o gabarito nem elimina**. Se 1ª pista: indica conceito e pergunta socrática; se 2ª pista: aponta trecho do enunciado para reflexão. |
 | **Comparativo** | 🐹⚖️ Comparativo | Botão "Comparar com a certa" (ao errar) / "Ver comparativo" (ao acertar) / "Comparar conceitos" (livre), ou menção a "comparar/comparativo" | Até ~220 palavras. Tabela comparativa humanizada (sem jargão acadêmico como "distrator", "conceito X/Y" ou "ponto de ruptura"). 3 colunas: "No que prestar atenção" \| "O que é certo (Gabarito)" \| "Onde tentam te pegar", e 3 linhas práticas: Ideia central, Na prática, Onde costuma confundir. Fecha com "Cuidado na prova:" direto e acionável. |
+| **Fixação** | 🐹🧠 Fixação | Botão "Testar se fixei" ou pedido de teste de fixação ("me teste", "pergunta rápida", "recuperação ativa") | Até ~100 palavras. Recuperação ativa (*Retrieval Practice*): propõe 1 micro-cenário prático inédito para responder mentalmente ou em 1 linha na lousa, sem revelar a resposta antes e sem gastar/canibalizar as questões reais do acervo. |
 
 ---
 

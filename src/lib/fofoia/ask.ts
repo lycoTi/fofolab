@@ -22,6 +22,7 @@ export const MODE_MAX_TOKENS: Record<FofoMode, number> = {
   EDITAL: 400,
   HINT: 350,
   CONTRAST: 600,
+  RETRIEVAL: 350,
 };
 
 /** Aula completa e "Cai no meu edital?" podem usar o modelo mais forte, se configurado ("pensar mais"). */
