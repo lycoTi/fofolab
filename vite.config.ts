@@ -15,7 +15,7 @@ const AGY_REPLY_SCHEMA = {
   additionalProperties: false,
 };
 
-function runLocalAgy(prompt: string): Promise<string | null> {
+function runLocalAgy(prompt: string, strong?: boolean): Promise<string | null> {
   const exe = join(process.env.LOCALAPPDATA ?? '', 'agy', 'bin', 'agy.exe');
   if (!existsSync(exe)) return Promise.resolve(null);
   const base = join(tmpdir(), 'fofolab-fofoia-agy');
@@ -24,11 +24,15 @@ function runLocalAgy(prompt: string): Promise<string | null> {
   const schemaPath = join(base, 'reply-schema.json');
   writeFileSync(schemaPath, JSON.stringify(AGY_REPLY_SCHEMA));
 
+  const model = strong
+    ? (process.env.VITE_AGY_MODEL_STRONG || 'gemini-3.8-flash-high')
+    : (process.env.VITE_AGY_MODEL || 'gemini-3.8-flash-low');
+
   const args = [
     '--input-format', 'stream-json',
     '--output-format', 'stream-json',
     '--json-schema', schemaPath,
-    '--model', 'gemini-3.8-flash-low',
+    '--model', model,
     '--disable-slash-commands',
     '--sandbox',
     '-p=',
@@ -75,13 +79,13 @@ function fofolabLocalBridges(): Plugin {
           req.on('data', (chunk) => (body += chunk));
           req.on('end', () => {
             try {
-              const { prompt } = JSON.parse(body) as { prompt?: unknown };
+              const { prompt, strong } = JSON.parse(body) as { prompt?: unknown; strong?: unknown };
               if (typeof prompt !== 'string' || !prompt.trim()) {
                 res.statusCode = 400;
                 res.end();
                 return;
               }
-              void runLocalAgy(prompt).then((reply) => {
+              void runLocalAgy(prompt, Boolean(strong)).then((reply) => {
                 if (!reply) {
                   res.statusCode = 502;
                   res.end();

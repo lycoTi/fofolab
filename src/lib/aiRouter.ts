@@ -21,6 +21,8 @@ export interface AiReply {
   failed?: boolean;
   /** A IA bateu no teto de tamanho: o texto vai até a última frase completa e dá para pedir o resto. */
   cut?: boolean;
+  /** Resposta gerada por modelo forte de raciocínio aprofundado. */
+  strong?: boolean;
 }
 
 export interface ChatTurn {
@@ -240,7 +242,7 @@ type ProviderOutcome = { ok: true; text: string; truncated: boolean } | { ok: fa
 type FetchOutcome = { ok: true; data: unknown } | { ok: false; retryAfterSec: number | null };
 
 export type AiCallResult =
-  | { ok: true; text: string; provider: AiProviderUsed; truncated: boolean }
+  | { ok: true; text: string; provider: AiProviderUsed; truncated: boolean; strong?: boolean }
   | { ok: false; retryAfterSec: number | null };
 
 function readRetryAfter(response: Response): number {
@@ -273,11 +275,11 @@ function textOutcome(outcome: FetchOutcome, pick: (data: unknown) => unknown, wa
   return { ok: true, text, truncated: wasCut(outcome.data) };
 }
 
-async function callGateway(url: string, prompt: string, json: boolean, maxTokens: number): Promise<ProviderOutcome> {
+async function callGateway(url: string, prompt: string, json: boolean, strong: boolean, maxTokens: number): Promise<ProviderOutcome> {
   const outcome = await fetchJson(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ prompt, json, maxTokens }),
+    body: JSON.stringify({ prompt, json, strong, maxTokens }),
   });
   return textOutcome(
     outcome,
@@ -339,10 +341,20 @@ function callGroq(apiKey: string, prompt: string, json: boolean, strong: boolean
   return callOpenAiCompatible(GROQ_URL, apiKey, model, prompt, json, { max_completion_tokens: maxTokens });
 }
 
-function callDeepSeek(apiKey: string, prompt: string, json: boolean, maxTokens: number): Promise<ProviderOutcome> {
-  const model = readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL;
+function callDeepSeek(apiKey: string, prompt: string, json: boolean, strong: boolean, maxTokens: number): Promise<ProviderOutcome> {
+  const model = (strong ? readEnv('VITE_DEEPSEEK_MODEL_STRONG') : undefined) ?? readEnv('VITE_DEEPSEEK_MODEL') ?? DEFAULT_DEEPSEEK_MODEL;
+  const isReasoner = model.includes('reasoner');
   // O modo de raciocínio vem ligado por padrão e cobra os tokens de pensamento como saída.
-  return callOpenAiCompatible(DEEPSEEK_URL, apiKey, model, prompt, json, { max_tokens: maxTokens, thinking: { type: 'disabled' } });
+  return callOpenAiCompatible(
+    DEEPSEEK_URL,
+    apiKey,
+    model,
+    prompt,
+    json,
+    isReasoner
+      ? { max_tokens: maxTokens }
+      : { max_tokens: maxTokens, thinking: { type: 'disabled' } }
+  );
 }
 
 /**
@@ -362,22 +374,29 @@ export async function callAiProviders(
   const gatewayUrl = readEnv('VITE_FOFOLAB_AI_GATEWAY_URL');
   const isLocalAgyBridge = gatewayUrl === '/__ai/agy';
   if (gatewayUrl && !isLocalAgyBridge) {
-    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
+    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, strong, maxTokens) });
   }
   const groqKey = readEnv('VITE_GROQ_API_KEY');
   if (groqKey) attempts.push({ provider: 'GROQ_FREE', call: () => callGroq(groqKey, prompt, json, strong, maxTokens) });
   const geminiKey = readEnv('VITE_GEMINI_API_KEY');
   if (geminiKey) attempts.push({ provider: 'GEMINI_FREE', call: () => callGemini(geminiKey, prompt, json, strong) });
   const deepseekKey = readEnv('VITE_DEEPSEEK_API_KEY');
-  if (deepseekKey) attempts.push({ provider: 'DEEPSEEK_FALLBACK', call: () => callDeepSeek(deepseekKey, prompt, json, maxTokens) });
+  if (deepseekKey) attempts.push({ provider: 'DEEPSEEK_FALLBACK', call: () => callDeepSeek(deepseekKey, prompt, json, strong, maxTokens) });
   if (gatewayUrl && isLocalAgyBridge) {
-    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, maxTokens) });
+    attempts.push({ provider: 'GATEWAY', call: () => callGateway(gatewayUrl, prompt, json, strong, maxTokens) });
   }
 
   let retryAfterSec: number | null = null;
   for (const attempt of attempts) {
     const outcome = await attempt.call();
-    if (outcome.ok) return { ok: true, text: outcome.text.replace(FOREIGN_SCRIPT, ''), provider: attempt.provider, truncated: outcome.truncated };
+    if (outcome.ok)
+      return {
+        ok: true,
+        text: outcome.text.replace(FOREIGN_SCRIPT, ''),
+        provider: attempt.provider,
+        truncated: outcome.truncated,
+        ...(strong ? { strong: true } : {}),
+      };
     if (outcome.retryAfterSec !== null) retryAfterSec = Math.min(retryAfterSec ?? outcome.retryAfterSec, outcome.retryAfterSec);
   }
   return { ok: false, retryAfterSec };

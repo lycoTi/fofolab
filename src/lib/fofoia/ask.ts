@@ -58,14 +58,28 @@ export async function askFofoIa(input: {
   if (!getAiStatus().configured) {
     return { reply: demoFofoReply(mode, ctx, message, extra), provider: 'OFFLINE_DEMO', simulated: true };
   }
+  const strong = isStrongMode(mode);
   const result = await callAiProviders(buildFofoPrompt(mode, ctx, conversation, message, extra), {
-    strong: isStrongMode(mode),
+    strong,
     maxTokens: MODE_MAX_TOKENS[mode],
   });
   if (!result.ok) {
     const reply = result.retryAfterSec === null ? FOFO_UNAVAILABLE_REPLY : aiPauseReply(result.retryAfterSec);
     return { reply, provider: 'OFFLINE_DEMO', simulated: false, failed: true };
   }
-  if (result.truncated) return { reply: trimCutReply(result.text), provider: result.provider, simulated: false, cut: true };
-  return { reply: result.text, provider: result.provider, simulated: false };
+  const isStrong = Boolean(result.strong ?? strong);
+  if (result.truncated)
+    return {
+      reply: trimCutReply(result.text),
+      provider: result.provider,
+      simulated: false,
+      cut: true,
+      ...(isStrong ? { strong: true } : {}),
+    };
+  return {
+    reply: result.text,
+    provider: result.provider,
+    simulated: false,
+    ...(isStrong ? { strong: true } : {}),
+  };
 }

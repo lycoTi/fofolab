@@ -68,6 +68,14 @@ export function FofoMessage({
     <div className="fofolab-enter space-y-2 rounded-xl border border-slate-800/80 bg-slate-950/50 p-3">
       <div className="flex flex-wrap items-center gap-2">
         {turn.mode && <span className="rounded-md bg-orange-500/15 px-1.5 py-0.5 text-[10px] font-semibold text-orange-200">{MODE_BADGE[turn.mode]}</span>}
+        {turn.strong && !turn.simulated && (
+          <span
+            className="rounded-md border border-sky-500/30 bg-sky-500/10 px-1.5 py-0.5 text-[10px] font-medium text-sky-300"
+            title="Gerado com modelo de raciocínio aprofundado"
+          >
+            Modelo forte
+          </span>
+        )}
         {turn.simulated && <span className="text-[10px] text-slate-500">Exemplo simulado — a IA ainda não está configurada</span>}
       </div>
       <RichText text={text} reveal={reveal} className="text-xs leading-relaxed text-slate-200" />

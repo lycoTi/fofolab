@@ -3,6 +3,10 @@
 interface ImportMetaEnv {
   /** Gateway próprio (recomendado no .exe distribuído: a chave fica no servidor). */
   readonly VITE_FOFOLAB_AI_GATEWAY_URL?: string;
+  /** Modelo no agy local (ponte /__ai/agy). Padrão: gemini-3.8-flash-low. */
+  readonly VITE_AGY_MODEL?: string;
+  /** Modelo forte no agy local (ponte /__ai/agy: aula completa e edital). Padrão: gemini-3.8-flash-high. */
+  readonly VITE_AGY_MODEL_STRONG?: string;
   /** Chaves diretas — só para desenvolvimento local (variáveis VITE_* vão para dentro do bundle). */
   readonly VITE_GROQ_API_KEY?: string;
   readonly VITE_GROQ_MODEL?: string;
@@ -13,6 +17,7 @@ interface ImportMetaEnv {
   readonly VITE_GEMINI_MODEL_STRONG?: string;
   readonly VITE_DEEPSEEK_API_KEY?: string;
   readonly VITE_DEEPSEEK_MODEL?: string;
+  readonly VITE_DEEPSEEK_MODEL_STRONG?: string;
 }
 
 declare module 'sql.js' {
@@ -48,4 +53,3 @@ declare module 'sql.js' {
 
   export default function initSqlJs(config?: SqlJsConfig): Promise<SqlJsStatic>;
 }
-

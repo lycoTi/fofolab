@@ -106,10 +106,51 @@ describe('Roteador de IA: modo demonstração honesto, grounding e explicação 
     vi.stubEnv('VITE_GROQ_MODEL_STRONG', 'modelo-forte');
     const fetchMock = vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'ok' } }] }), { status: 200 }));
     vi.stubGlobal('fetch', fetchMock);
-    await ask('LESSON');
-    await ask('QUICK');
+    const lessonReply = await ask('LESSON');
+    const quickReply = await ask('QUICK');
     const models = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)).model);
     expect(models).toEqual(['modelo-forte', 'qwen/qwen3.8-27b']);
+    expect(lessonReply.strong).toBe(true);
+    expect(quickReply.strong).toBeUndefined();
+  });
+
+  it('aula completa usa o modelo forte do DeepSeek quando configurado; a rápida usa o padrão', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_DEEPSEEK_API_KEY', 'chave-deepseek');
+    vi.stubEnv('VITE_DEEPSEEK_MODEL_STRONG', 'deepseek-v4-pro');
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ choices: [{ message: { content: 'ok' } }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const lessonReply = await ask('LESSON');
+    const quickReply = await ask('QUICK');
+    const models = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)).model);
+    expect(models).toEqual(['deepseek-v4-pro', 'deepseek-flash']);
+    expect(lessonReply.strong).toBe(true);
+    expect(quickReply.strong).toBeUndefined();
+  });
+
+  it('aula completa usa o modelo forte do Gemini quando configurado', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_GEMINI_API_KEY', 'chave-gemini');
+    vi.stubEnv('VITE_GEMINI_MODEL_STRONG', 'gemini-1.5-pro');
+    const fetchMock = vi.fn(async () => geminiResponse('ok'));
+    vi.stubGlobal('fetch', fetchMock);
+    await ask('LESSON');
+    await ask('QUICK');
+    const urls = fetchMock.mock.calls.map((call) => (call as unknown as [string, RequestInit])[0]);
+    expect(urls[0]).toContain('gemini-1.5-pro:generateContent');
+    expect(urls[1]).toContain('gemini-flash-latest:generateContent');
+  });
+
+  it('gateway recebe strong: true na aula completa e strong: false na rápida', async () => {
+    stubNoAi();
+    vi.stubEnv('VITE_FOFOLAB_AI_GATEWAY_URL', 'https://gateway.fofolab.test/api');
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ reply: 'ok' }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    await ask('LESSON');
+    await ask('QUICK');
+    const bodies = fetchMock.mock.calls.map((call) => JSON.parse(String((call as unknown as [string, RequestInit])[1].body)));
+    expect(bodies[0].strong).toBe(true);
+    expect(bodies[1].strong).toBe(false);
   });
 
   it('cada chamada pede um teto de resposta abaixo do limite grátis do Groq (1.000 por minuto); a aula pode mais que a rápida', async () => {

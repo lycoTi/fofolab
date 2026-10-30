@@ -31,6 +31,8 @@ export interface FofoTurn {
   /** Aula em partes: "Parte N de M" lido da resposta. */
   part?: { n: number; total: number } | null;
   summary?: ReviewSummary | null;
+  /** Gerado com modelo forte de raciocínio aprofundado (VITE_*_MODEL_STRONG). */
+  strong?: boolean;
   /** Para "Tentar de novo" quando o provedor falha. */
   retry?: { message: string; requested: FofoMode | null; options?: SendOptions };
   /** Cumprimento/agradecimento respondido pelo app: fica fora do histórico mandado à IA e da contagem de perguntas. */
@@ -199,6 +201,7 @@ export function useFofoConversation(input: {
         mode,
         simulated: reply.simulated,
         failed: reply.failed,
+        strong: reply.strong,
         suggestLesson: !reply.failed && mode !== 'HINT' && !options.resumeOf && shouldSuggestLesson(signals),
         part,
         summary: mode === 'SUMMARY' ? parseSummary(reply.reply) : null,

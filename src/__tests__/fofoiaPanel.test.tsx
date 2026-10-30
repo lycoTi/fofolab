@@ -297,6 +297,26 @@ describe('Resposta cortada no teto de tamanho', () => {
     expect(onResume).toHaveBeenCalledOnce();
     expect(onContinue).not.toHaveBeenCalled();
   });
+
+  it('exibe o selo "Modelo forte" quando a resposta foi gerada com modelo forte e IA configurada', async () => {
+    const { FofoMessage } = await import('../features/fofoia/FofoMessage');
+    const { unmount } = render(
+      <FofoMessage
+        turn={{ id: 't', role: 'tutor', content: 'Aula avançada com raciocínio profundo.', mode: 'LESSON', strong: true }}
+        topicLabel="1.1 Microsserviços"
+        aiConfigured
+        onContinue={() => {}}
+        onResume={() => {}}
+        onAnotherHint={() => {}}
+        onLesson={() => {}}
+        onSummary={() => {}}
+        onSaveSummary={() => {}}
+        onRetry={() => {}}
+      />
+    );
+    expect(screen.getByText('Modelo forte')).toBeTruthy();
+    unmount();
+  });
 });
 
 describe('Aula completa e resumo depois de uma conversa', () => {
