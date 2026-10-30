@@ -158,6 +158,26 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
+- [ ] **Bancada de Questões — Refino de Alto Rendimento, Navegação Protegida & Inteligência de Ritmo (Fase 15 / Fatia 15)** (29/10/2026 [Antigravity], desenhado com o dono):
+  - **15a — Ergonomia de Prova e Limpeza Visual (UI/UX Anti-IA):**
+    - Remoção da redundância da setinha `>` na paginação da folha (manter apenas `[ ← Anterior ]`, `Questão X de Y` e o botão primário `[ Próxima questão → ↵ ]` com destaque tátil);
+    - Fim da "boneca russa de cards" na folha de questões: eliminar a borda dupla interna da correção, integrando veredito e diagnóstico como continuação contínua da prancheta via régua de 1px (`border-t border-white/[0.06]`);
+    - Limpeza de ícones informativos redundantes no cabeçalho editorial (eliminar os dois círculos `(i)` concorrentes de complexidade e cronômetro);
+    - Estabilidade espacial ancorada na barra inferior para evitar layout shift entre estado antes e depois de responder.
+  - **15b — Modo Consulta / Revisão Protegida de Questões Anteriores:**
+    - Permitir recuar livremente com `[ ← Anterior ]` (ou atalho `←`) em questões já feitas do bloco/sessão;
+    - A questão revisitada abre em **Modo Consulta Travado** (exibe a tentativa anterior, o gabarito oficial, o veredito e a dissecação);
+    - **Blindagem das Estatísticas:** impede resolução duplicada acidental no meio do bloco, preservando a pureza das métricas de acerto e tempo da sessão;
+    - Diálogo com a FofoIA (`Explicar com a FofoIA`) e envio de notas ao caderno totalmente liberados na questão revisitada.
+  - **15c — Ferramentas Ativas de Resolução na Folha (Grifo & Caderno Rápido):**
+    - **Grifo no Enunciado:** ferramenta de marca-texto sutil para palavras-chave e termos restritivos típicos da Cebraspe/FGV ("exclusivamente", "vedado", "sempre", conceitos técnicos);
+    - **Nota Rápida no Caderno (`+ Caderno`):** campo compacto pós-questão para registrar insights e pegadinhas direto nas anotações do tópico sem sair do fluxo de resolução.
+  - **15d — Inteligência de Ritmo & Simulação de Prova Real (Micro na Bancada & Macro no App):**
+    - **Micro (HUD do Bloco em Tempo Real):** indicador compacto no topo da prancheta mostrando acertos da sessão atual (`8/10 acertos · 80%`), ritmo médio (`Ø 01:25/q`) e tempo de foco do bloco;
+    - **Macro (Painel de Ritmo & Simulação de Prova Real nas abas Início e Plano de Estudo):**
+      - Projeção de tempo de prova real com base no ritmo histórico medido por estilo de item (Certo/Errado vs Múltipla Escolha) com estimativa de folga para preenchimento de cartão-resposta e banheiro;
+      - Matriz de Desempenho (*Tempo Médio × Taxa de Acerto*) para identificar gargalos críticos por matéria (ex.: Português/Interpretação FGV consumindo tempo excessivo vs Direito rápido);
+      - Integração com o ciclo de estudos para balancear o orçamento de matérias que exigem mais tempo de treino de velocidade.
 - [ ] **Coluna Hoje com a janela do Fofo** (28/10/2026 [Claude Code], brainstorming em andamento; começo da reestruturação
   do app inteiro por roupa do Fofo). Decidido com o dono: ordem tópico de agora → janela do Fofo (FofoDoro com cenário em
   pixel, mesmo tamanho de pixel do Fofo, que pisa no chão) → trilho do resto do dia com hora estimada até o fim do roteiro;
