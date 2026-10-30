@@ -1310,6 +1310,7 @@ export default function App() {
                         onOpenImport={() => setImportOpen(true)}
                         aiConfigured={aiStatus.configured}
                         blockRunning={studyBlock.state.phase === 'FOCUS' && studyBlock.state.running}
+                        onSaveToNotebook={fofoInputs?.onSaveSummary ?? ((markdown) => notebook.appendAndSave(markdown))}
                       />
                     )}
 

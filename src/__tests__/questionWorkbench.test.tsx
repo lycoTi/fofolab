@@ -519,4 +519,32 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     expect(screen.queryByText('Modo consulta')).toBeNull();
     expect(screen.getByRole('button', { name: 'Sei' })).toBeTruthy();
   });
+
+  it('nota rápida no caderno (+ Caderno): permite anotar insight direto no caderno do tópico', () => {
+    const onSaveToNotebook = vi.fn();
+    renderWorkbench({ onSaveToNotebook });
+
+    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+    fireEvent.click(optionA()!);
+
+    // Botão "+ Caderno" aparece na correção
+    const notebookBtn = screen.getByRole('button', { name: '+ Caderno' });
+    expect(notebookBtn).toBeTruthy();
+
+    // Clica para abrir o editor compacto
+    fireEvent.click(notebookBtn);
+    expect(screen.getByText('Anotar insight no caderno do tópico')).toBeTruthy();
+
+    const textarea = screen.getByPlaceholderText(/Escreva a pegadinha ou conceito-chave/i);
+    fireEvent.change(textarea, { target: { value: 'Pegadinha importante sobre tipos de risco.' } });
+
+    // Salvar nota
+    fireEvent.click(screen.getByRole('button', { name: 'Salvar no caderno' }));
+
+    expect(onSaveToNotebook).toHaveBeenCalledTimes(1);
+    expect(onSaveToNotebook).toHaveBeenCalledWith(
+      expect.stringContaining('Pegadinha importante sobre tipos de risco.')
+    );
+    expect(screen.getByText('Salvo no caderno')).toBeTruthy();
+  });
 });

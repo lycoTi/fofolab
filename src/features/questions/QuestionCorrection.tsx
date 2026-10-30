@@ -1,4 +1,5 @@
-import { ChevronLeft, GraduationCap, RotateCcw } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Check, ChevronLeft, GraduationCap, NotebookPen, RotateCcw } from 'lucide-react';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { AnswerCorrection } from '../answer-flow/AnswerCorrection';
 import { DiagnosisPicker } from '../answer-flow/DiagnosisPicker';
@@ -38,9 +39,29 @@ export function QuestionCorrection(props: {
     onPrev: () => void;
     onNext: () => void;
   };
+  onSaveToNotebook?: (markdown: string) => void;
 }) {
   const prerequisites = prerequisitesOf(props.dissection);
-  const { position } = props;
+  const { position, onSaveToNotebook } = props;
+  const [noteDraft, setNoteDraft] = useState('');
+  const [isNoteOpen, setIsNoteOpen] = useState(false);
+  const [savedToNotebook, setSavedToNotebook] = useState(false);
+
+  useEffect(() => {
+    setNoteDraft('');
+    setIsNoteOpen(false);
+    setSavedToNotebook(false);
+  }, [props.question.id]);
+
+  const handleSaveNote = () => {
+    if (!noteDraft.trim() || !onSaveToNotebook) return;
+    const origin = props.question.source_label ?? `${props.question.exam_board} (${props.question.exam_year})`;
+    const markdown = `### Nota da questão (${origin})\n> ${props.question.statement.slice(0, 140)}...\n\n**Insight:** ${noteDraft.trim()}`;
+    onSaveToNotebook(markdown);
+    setSavedToNotebook(true);
+    setIsNoteOpen(false);
+    setNoteDraft('');
+  };
 
   return (
     <AnswerCorrection question={props.question} isCorrect={props.isCorrect} dissection={props.dissection} firstContact={props.firstContact} embedded>
@@ -59,6 +80,49 @@ export function QuestionCorrection(props: {
       )}
       {props.feedback && <p className="text-xs text-emerald-300 font-medium">{props.feedback}</p>}
 
+      {/* Mini editor de notas para o caderno do tópico */}
+      {isNoteOpen && onSaveToNotebook && (
+        <div className="space-y-2 rounded-lg border border-slate-700/60 bg-slate-900/80 p-3 text-xs">
+          <div className="flex items-center justify-between">
+            <span className="font-medium text-slate-300">Anotar insight no caderno do tópico</span>
+            <button
+              type="button"
+              onClick={() => setIsNoteOpen(false)}
+              className="text-slate-400 hover:text-white text-[11px]"
+            >
+              Cancelar
+            </button>
+          </div>
+          <textarea
+            value={noteDraft}
+            onChange={(e) => setNoteDraft(e.target.value)}
+            placeholder="Escreva a pegadinha ou conceito-chave que aprendeu nesta questão..."
+            rows={2}
+            autoFocus
+            className="w-full rounded border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs text-slate-200 placeholder-slate-500 outline-none focus:border-[var(--fofo-accent)] resize-none"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                handleSaveNote();
+              } else if (e.key === 'Escape') {
+                setIsNoteOpen(false);
+              }
+            }}
+          />
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] text-slate-500">Ctrl+Enter para salvar</span>
+            <button
+              type="button"
+              disabled={!noteDraft.trim()}
+              onClick={handleSaveNote}
+              className="rounded border border-emerald-500/40 bg-emerald-500/15 px-3 py-1 font-medium text-emerald-300 hover:bg-emerald-500/25 transition-colors disabled:opacity-40"
+            >
+              Salvar no caderno
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Barra de ação inferior: aprofundamento na FofoIA à esquerda e navegação/avanço à direita */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] pt-3.5">
         <div className="flex flex-wrap items-center gap-2">
@@ -74,6 +138,30 @@ export function QuestionCorrection(props: {
               <kbd aria-hidden="true" className="ml-1 rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300">
                 E
               </kbd>
+            </button>
+          )}
+          {onSaveToNotebook && (
+            <button
+              type="button"
+              onClick={() => {
+                if (savedToNotebook) return;
+                setIsNoteOpen((prev) => !prev);
+              }}
+              aria-label={savedToNotebook ? 'Salvo no caderno' : '+ Caderno'}
+              title={savedToNotebook ? 'Insight já salvo no caderno do tópico' : 'Anotar insight desta questão no caderno do tópico'}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/40 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-slate-500 hover:text-white active:scale-[0.97]"
+            >
+              {savedToNotebook ? (
+                <>
+                  <Check size={12} className="text-emerald-400" />
+                  <span className="text-emerald-300">Salvo no caderno</span>
+                </>
+              ) : (
+                <>
+                  <NotebookPen size={12} className="text-slate-400" />
+                  <span>+ Caderno</span>
+                </>
+              )}
             </button>
           )}
           {props.isConsultation && props.onRedo && (

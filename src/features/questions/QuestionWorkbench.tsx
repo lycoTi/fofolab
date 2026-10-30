@@ -69,6 +69,8 @@ export interface QuestionWorkbenchProps {
   loading?: boolean;
   /** Se há um bloco de foco ativo rodando no Pomodoro / FofoDoro */
   blockRunning?: boolean;
+  /** Envia anotação/insight diretamente para o caderno do tópico */
+  onSaveToNotebook?: (markdown: string) => void;
 }
 
 interface AttemptState {
@@ -460,6 +462,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
             feedback={props.lastDiagnosisFeedback}
             aiConfigured={props.aiConfigured ?? false}
             isConsultation={isConsultation}
+            onSaveToNotebook={props.onSaveToNotebook}
             onRedo={activeId ? () => setRedoKeys((prev) => [...prev, activeId]) : undefined}
             onGenerateDissection={props.onGenerateDissection}
             onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}

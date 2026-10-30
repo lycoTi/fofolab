@@ -12,6 +12,7 @@ import type { Question, ReviewConfidence } from '../../types/database';
 import { AnswerOptions, isCertoErradoOptions, optionName } from '../answer-flow/AnswerOptions';
 import { ConfidencePicker } from '../answer-flow/ConfidencePicker';
 import { QuestionPacingTimer } from './QuestionPacingTimer';
+import { QuestionStatement } from './QuestionStatement';
 
 function formatAttemptBadge(summary: QuestionAttemptSummary): { label: string; tone: 'emerald' | 'amber' | 'rose' } {
   if (summary.isFirstContact) return { label: 'Já respondida · 1º contato', tone: 'amber' };
@@ -145,11 +146,9 @@ export function QuestionCard(props: QuestionCardProps) {
         </div>
       </div>
 
-      {/* Enunciado da questão: superfície editorial limpa com alto contraste */}
+      {/* Enunciado da questão: superfície editorial limpa com alto contraste e grifo ativo */}
       <div className="p-5 sm:p-6 space-y-5">
-        <p className="whitespace-pre-line text-[15px] leading-relaxed text-slate-100 font-normal">
-          {question.statement}
-        </p>
+        <QuestionStatement questionId={question.id} statement={question.statement} />
 
         {annulled && (
           <ul className="space-y-1.5 border-t border-white/[0.06] pt-3 text-sm text-slate-300">
