@@ -1,6 +1,6 @@
-import type { BlockTarget } from '../features/study-block/studyBlockMachine';
-import type { Subject, Topic } from '../types/database';
-import type { RoutineItem } from './dailyRoutine';
+import type { BlockTarget } from '../study-block/studyBlockMachine';
+import type { Subject, Topic } from '../../types/database';
+import type { RoutineItem } from '../../lib/dailyRoutine';
 
 /**
  * "Agora" da coluna Hoje (spec 14 §8): é sempre o bloco que está rodando; sem bloco rodando, o atual do roteiro (ou o
@@ -15,6 +15,7 @@ export interface NowBlock {
   /** Item do roteiro (ou o extra); null no bloco fora do roteiro. */
   item: RoutineItem | null;
   tag: NowTag;
+  /** Bloco ativo (rodando, pausado ou pronto), não relógio andando. */
   running: boolean;
 }
 

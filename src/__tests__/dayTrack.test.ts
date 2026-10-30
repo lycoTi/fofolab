@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { BETWEEN_BLOCKS_MINUTES, buildDayTrack, humanReason, roundToFiveMinutes, type DayTrack } from '../lib/dayTrack';
-import { pickNowBlock } from '../lib/nowBlock';
+import { BETWEEN_BLOCKS_MINUTES, buildDayTrack, humanReason, roundToFiveMinutes, type DayTrack } from '../features/routine/dayTrack';
+import { pickNowBlock } from '../features/routine/nowBlock';
 import { formatTimeOfDay } from '../lib/timeFormat';
 import { initialBlockState, remainingBlockMs, stepBlock, type BlockState, type BlockTarget } from '../features/study-block/studyBlockMachine';
 import type { RoutineItem } from '../lib/dailyRoutine';
@@ -151,13 +151,23 @@ describe('Trilho do dia com horas estimadas (agora 14:00, foco 30, ajustes padr�
   });
 });
 
-describe('Horas arredondadas para 5 min (a mais próxima)', () => {
-  it('arredonda para o múltiplo de 5 mais próximo e zera os segundos', () => {
+describe('Horas arredondadas para 5 min (para cima, nos minutos inteiros)', () => {
+  it('sobe para o próximo múltiplo de 5 e ignora os segundos', () => {
     expect(roundToFiveMinutes(at(16, 28))).toEqual(at(16, 30));
     expect(roundToFiveMinutes(at(16, 18))).toEqual(at(16, 20));
-    expect(roundToFiveMinutes(at(16, 22))).toEqual(at(16, 20));
-    expect(roundToFiveMinutes(new Date(2026, 9, 29, 16, 27, 30))).toEqual(at(16, 30));
+    expect(roundToFiveMinutes(at(16, 22))).toEqual(at(16, 25));
+    expect(roundToFiveMinutes(at(16, 20))).toEqual(at(16, 20));
     expect(roundToFiveMinutes(new Date(2026, 9, 29, 16, 20, 45))).toEqual(at(16, 20));
+    expect(roundToFiveMinutes(new Date(2026, 9, 29, 16, 27, 30))).toEqual(at(16, 30));
+  });
+
+  it('Livre com a meta já passada: o fim é "agora" e a hora exibida não fica antes do relógio', () => {
+    const now = new Date(2026, 9, 29, 14, 2, 40);
+    const current = item(ti, tTi, 'current', 30);
+    const livre = started(targetOf(current), { ...initialBlockState, mode: 'LIVRE' }, at(13, 0).getTime());
+    const { track: result } = track([current], livre, { now });
+    expect(result.nowEndsAt).toEqual(now);
+    expect(formatTimeOfDay(roundToFiveMinutes(now))).toBe('14:05');
   });
 
   it('passa da meia-noite sem quebrar', () => {

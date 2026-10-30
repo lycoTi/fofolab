@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { pickNowBlock, type NowBlock } from '../lib/nowBlock';
+import { pickNowBlock, type NowBlock } from '../features/routine/nowBlock';
 import { adm, item, lookedTarget, port, subjects, tAdm, ti, tLooked, topics, tPort, targetOf, tTi } from './helpers/routineFixtures';
 
 describe('"Agora" é o bloco rodando, senão o atual do roteiro', () => {

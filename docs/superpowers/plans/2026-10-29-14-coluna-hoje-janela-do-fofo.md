@@ -235,16 +235,19 @@ Consome: `paintScene`, `sceneKey`, `CurrentFofo` (lê a roupa `app` do contexto)
 
 **Arquivos:**
 - Modificar: `src/features/study-block/studyBlockMachine.ts` (nova função), `src/lib/timeFormat.ts` (nova função)
-- Criar: `src/lib/nowBlock.ts`, `src/lib/dayTrack.ts`
-- Testes: `src/__tests__/studyBlockMachine.test.ts` (existente), `src/__tests__/dayTrack.test.ts`
+- Criar: `src/features/routine/nowBlock.ts`, `src/features/routine/dayTrack.ts` (regra da fatia da coluna; `src/lib` não importa de feature)
+- Testes: `src/__tests__/studyBlockMachine.test.ts` (existente), `src/__tests__/dayTrack.test.ts`, `src/__tests__/nowBlock.test.ts`,
+  `src/__tests__/dayTrackMachine.test.ts` (horas conferidas contra a própria máquina do FofoDoro)
 
 **Interfaces — produz:**
 ```ts
 // studyBlockMachine.ts — quanto falta do bloco rodando (pomodoros + pausas), ou null se não dá para saber
 export function remainingBlockMs(state: BlockState, now: number): number | null;
+// studyBlockMachine.ts — pomodoros do bloco que ainda vão terminar, contando o do foco atual
+export function pomodorosLeft(state: BlockState): number;
 // timeFormat.ts
 export function formatTimeOfDay(date: Date): string; // '16:10'
-// nowBlock.ts — "Agora" é sempre o bloco rodando, senão o atual do roteiro (ou o extra)
+// nowBlock.ts — "Agora" é sempre o bloco rodando, senão o atual do roteiro (ou o extra); running = bloco ativo (rodando, pausado ou pronto), não relógio andando
 export type NowTag = 'fora do roteiro' | 'meta cumprida' | null;
 export interface NowBlock { subject: Subject; topic: Topic | null; item: RoutineItem | null; tag: NowTag; running: boolean }
 export function pickNowBlock(input: { items: RoutineItem[]; extra: RoutineItem | null; block: BlockTarget | null; active: boolean; subjects: Subject[]; topics: Topic[] }): NowBlock | null;
@@ -272,9 +275,12 @@ export function humanReason(reasonText: string): string | null;
     `'Faltam 08:45 desta matéria na sua meta da semana.'`; `'Meta da semana cumprida — bloco extra na matéria de maior
     prioridade (peso 2x).'` → sem `(peso 2x)`; texto de Revisão da semana fica igual
 - [ ] **Passo 2:** FALHA. **Passo 3:** implementar. Pausas pelo contador do ciclo, como `planPreview`
-  (`(cyclePomodoros + i) % longEvery === 0` → longa). Blocos seguintes: `planPreview(item.remainingMinutes, …, 0).totalMinutes`
-  no modo pomodoro, `item.remainingMinutes` no Livre; `BETWEEN_BLOCKS_MINUTES` entre blocos; horas exibidas por
-  `roundToFiveMinutes`.
+  (`(cyclePomodoros + i) % longEvery === 0` → longa). Blocos seguintes: `planPreview(item.remainingMinutes, …, ciclo).totalMinutes`
+  no modo pomodoro, com o ciclo propagado: começa no ciclo do fim do "agora" (foco: `cyclePomodoros + pomodoros que faltam`
+  contando o atual; pausa/pronto: `cyclePomodoros + os que faltam`; antes do play: `effectiveCyclePomodoros + pomodoros do
+  bloco`) e, depois de cada bloco, `(ciclo + pomodoros) % longEvery` (a longa zera o ciclo e o START zera quando a longa
+  ficou devida); `item.remainingMinutes` no Livre; `BETWEEN_BLOCKS_MINUTES` entre blocos; horas exibidas por
+  `roundToFiveMinutes` (para cima, nos minutos inteiros: um fim que já é "agora" nunca aparece como hora passada).
 - [ ] **Passo 4:** PASSA. **Passo 5: commit** — `feat(roteiro): trilho do dia com horas estimadas`.
 
 ### Tarefa 10: FofoDoro na janela

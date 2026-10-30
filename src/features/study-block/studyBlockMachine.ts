@@ -189,6 +189,13 @@ function breaksBetweenMs(pomodoros: number, focusMinutes: number, settings: Pomo
   return minutes * MINUTE_MS;
 }
 
+/** Pomodoros do bloco que ainda vão terminar, contando o do foco atual (0 sem bloco em andamento). */
+export function pomodorosLeft(state: BlockState): number {
+  if (state.phase === 'IDLE' || state.phase === 'DONE') return 0;
+  const planned = pomodoroCount(state.block?.targetMinutes ?? null, state.focusMinutes);
+  return Math.max(0, planned - state.completedPomodoros);
+}
+
 /**
  * Quanto falta do bloco rodando: o resto da fase atual + os pomodoros e as pausas que faltam (sem pausa depois do
  * último, como na prévia). No modo livre, o foco que falta até a meta. null quando não há bloco rodando ou quando
@@ -205,9 +212,8 @@ export function remainingBlockMs(state: BlockState, now: number): number | null 
   }
 
   // 2. Pomodoros que ainda vão começar (o do foco atual já está no resto da fase)
-  const planned = pomodoroCount(state.block?.targetMinutes ?? null, state.focusMinutes);
   const inFocus = state.phase === 'FOCUS';
-  const ahead = Math.max(0, planned - state.completedPomodoros - (inFocus ? 1 : 0));
+  const ahead = Math.max(0, pomodorosLeft(state) - (inFocus ? 1 : 0));
   const phaseLeft = phaseRemainingMs(state, now) ?? 0;
   const focusAheadMs = ahead * state.focusMinutes * MINUTE_MS;
 

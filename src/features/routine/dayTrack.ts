@@ -1,5 +1,12 @@
-import { effectiveCyclePomodoros, planPreview, remainingBlockMs, type BlockState } from '../features/study-block/studyBlockMachine';
-import type { RoutineItem } from './dailyRoutine';
+import {
+  effectiveCyclePomodoros,
+  planPreview,
+  pomodoroCount,
+  pomodorosLeft,
+  remainingBlockMs,
+  type BlockState,
+} from '../study-block/studyBlockMachine';
+import type { RoutineItem } from '../../lib/dailyRoutine';
 import type { NowBlock } from './nowBlock';
 
 /**
@@ -33,6 +40,32 @@ const EMPTY_TRACK: DayTrack = { done: null, nowEndsAt: null, upcoming: [], endsA
 function sameItem(a: RoutineItem, b: RoutineItem | null): boolean {
   if (!b) return false;
   return a === b || (a.block.blockNumber === b.block.blockNumber && a.subject.id === b.subject.id);
+}
+
+/** Pomodoros que um bloco do roteiro vai ter no modo atual (o modo livre não conta pomodoros). */
+function pomodorosOf(item: RoutineItem, block: BlockState): number {
+  if (block.mode === 'LIVRE') return 0;
+  return pomodoroCount(item.remainingMinutes, block.focusMinutes);
+}
+
+/**
+ * Ciclo rumo à pausa longa que chega ao bloco seguinte. A máquina zera o ciclo depois de cada pausa longa e o START
+ * zera quando a longa ficou devida no fim do bloco; as duas coisas juntas dão o resto da divisão por `longEvery`
+ * (estimativa no mesmo dia: a virada da meia-noite também zeraria).
+ */
+function cycleAfter(cyclePomodoros: number, pomodoros: number, block: BlockState): number {
+  const longEvery = Math.max(1, block.settings.longEvery);
+  return (cyclePomodoros + pomodoros) % longEvery;
+}
+
+/** Ciclo no fim do "agora": rodando, o atual mais os pomodoros que faltam; antes do play, o do START mais os do bloco. */
+function cycleAfterNow(nowBlock: NowBlock | null, block: BlockState, now: Date): number {
+  if (nowBlock?.running) {
+    const left = block.mode === 'LIVRE' ? 0 : pomodorosLeft(block);
+    return cycleAfter(block.cyclePomodoros, left, block);
+  }
+  const startCycle = effectiveCyclePomodoros(block, now.getTime());
+  return cycleAfter(startCycle, nowBlock?.item ? pomodorosOf(nowBlock.item, block) : 0, block);
 }
 
 /** Minutos de relógio de um bloco: a meta mais as pausas do FofoDoro; no modo livre, só a meta. */
@@ -89,11 +122,14 @@ export function buildDayTrack(input: {
   const nowEndsAt = nowEnd(nowBlock, block, now);
   let cursor = (nowEndsAt ?? now).getTime();
 
-  // 2. Cada bloco seguinte começa depois do intervalo e dura a prévia da sua meta (ciclo do zero: não dá para prever)
+  // 2. Cada bloco seguinte começa depois do intervalo e dura a prévia da sua meta, com o ciclo que vem do anterior
+  //    (a pausa longa pode cair no meio dele, como vai cair no relógio)
+  let cycle = cycleAfterNow(nowBlock, block, now);
   const upcoming: TrackStop[] = upcomingItems(items, extra, nowItem).map((item, index) => {
     cursor += BETWEEN_BLOCKS_MINUTES * MINUTE_MS;
     const startsAt = new Date(cursor);
-    cursor += plannedMinutes(item, block, 0) * MINUTE_MS;
+    cursor += plannedMinutes(item, block, cycle) * MINUTE_MS;
+    cycle = cycleAfter(cycle, pomodorosOf(item, block), block);
     return { item, startsAt, emphasis: index === 0 ? 'next' : 'later' };
   });
 
@@ -102,12 +138,15 @@ export function buildDayTrack(input: {
   return { done, nowEndsAt, upcoming, endsAt };
 }
 
-/** Hora exibida no trilho: arredondada para os 5 min mais próximos (é estimativa, marcada com "≈"). */
+/**
+ * Hora exibida no trilho (estimativa, marcada com "≈"): sobe para o próximo múltiplo de 5 nos minutos inteiros, sem
+ * contar os segundos. Para cima porque um fim que já é "agora" (meta do modo livre passada) nunca pode aparecer como
+ * hora que já passou.
+ */
 export function roundToFiveMinutes(date: Date): Date {
   const rounded = new Date(date.getTime());
   if (Number.isNaN(rounded.getTime())) return rounded;
-  const minutes = rounded.getMinutes() + rounded.getSeconds() / 60 + rounded.getMilliseconds() / MINUTE_MS;
-  rounded.setMinutes(Math.round(minutes / 5) * 5, 0, 0);
+  rounded.setMinutes(Math.ceil(rounded.getMinutes() / 5) * 5, 0, 0);
   return rounded;
 }
 
