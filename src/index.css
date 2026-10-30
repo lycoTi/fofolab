@@ -269,7 +269,7 @@ body.fofolab-resizing {
 }
 
 /* Fofo em pixel art: os quadros trocam em passos (sem fade, como num jogo) e ele pisca de vez em quando.
-   Quem pediu menos movimento vê o Fofo parado no primeiro quadro, de olhos abertos. */
+   Quem pediu menos movimento vê o Fofo parado no primeiro quadro, de olhos abertos (fechados, se estiver dormindo). */
 .fofo-sprite {
   image-rendering: pixelated;
 }
@@ -319,6 +319,11 @@ body.fofolab-resizing {
 .fofo-sprite[data-motion='full'] .fofo-blink,
 .fofo-sprite[data-motion='blink'] .fofo-blink {
   animation: fofo-blink 4.8s step-end infinite;
+}
+/* Dormindo na roupa: o quadro de olhos fechados fica por cima, parado. Sem animação de propósito, para valer igual
+   com "reduzir movimento" (o bloco abaixo só desliga animações, não mexe na opacidade). */
+.fofo-sprite[data-motion='asleep'] .fofo-blink {
+  opacity: 1;
 }
 @media (prefers-reduced-motion: reduce) {
   .fofo-sprite .fofo-fa,

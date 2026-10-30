@@ -14,6 +14,9 @@ export default {
         fofoAmber: '#fbbf24',
         primary: '#8b5cf6',
       },
+      fontFamily: {
+        pixel: ['"Pixelify Sans"', 'monospace'],
+      },
     },
   },
   plugins: [],

@@ -6,11 +6,13 @@ import { OUTFIT_LABELS, type OutfitId } from './wardrobe';
 /**
  * - still: parado (tela de erro);
  * - blink: só pisca de vez em quando (durante um bloco de foco, para não puxar o olho do estudo);
- * - full: alterna os quadros da roupa e pisca.
- * Os três quadros estão sempre no SVG; o CSS (index.css) anima conforme `data-motion`, e passar o mouse num Fofo
+ * - full: alterna os quadros da roupa e pisca;
+ * - asleep: fica de olhos fechados sem trocar a roupa (nas pausas da janela do Fofo, onde a pose de dormir esconderia
+ *   a roupa do momento).
+ * Os quadros estão sempre no SVG; o CSS (index.css) anima conforme `data-motion`, e passar o mouse num Fofo
  * clicável (`.fofo-hover`) faz ele se mexer. Quem pediu menos movimento no sistema vê o Fofo parado.
  */
-export type FofoMotion = 'still' | 'blink' | 'full';
+export type FofoMotion = 'still' | 'blink' | 'full' | 'asleep';
 
 interface FofoSpriteProps {
   outfit?: OutfitId;

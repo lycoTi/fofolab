@@ -1,10 +1,46 @@
 import { fireEvent, render, screen } from '@testing-library/react';
+import { readFileSync } from 'node:fs';
 import { describe, expect, it, vi } from 'vitest';
 import { FofoSprite } from '../features/mascot/FofoSprite';
 import { FofoWardrobeButton } from '../features/mascot/FofoWardrobeButton';
 import { FOFO_POSES, FOFO_SPRITES } from '../features/mascot/fofoSprites.generated';
 import { POSE_LABELS, type PoseId } from '../features/mascot/poses';
 import { OUTFIT_LABELS, type OutfitId } from '../features/mascot/wardrobe';
+
+const INDEX_CSS = readFileSync('src/index.css', 'utf8');
+const REDUCED_MOTION = '@media (prefers-reduced-motion: reduce)';
+
+/** Miolo dos blocos de "reduzir movimento", sem o @media em volta: o jsdom não tem como ligar essa preferência. */
+function reducedMotionRules(css: string): string {
+  const parts: string[] = [];
+  let from = css.indexOf(REDUCED_MOTION);
+  while (from !== -1) {
+    const open = css.indexOf('{', from);
+    let depth = 1;
+    let i = open + 1;
+    while (depth > 0) {
+      if (css[i] === '{') depth += 1;
+      if (css[i] === '}') depth -= 1;
+      i += 1;
+    }
+    parts.push(css.slice(open + 1, i - 1));
+    from = css.indexOf(REDUCED_MOTION, i);
+  }
+  return parts.join('\n');
+}
+
+/** Opacidade do quadro de olhos fechados com o CSS real do app; com "reduzir movimento", as regras dele vêm por último,
+ *  como no fim do index.css. */
+function eyesClosedOpacity(closedEyes: Element, reducedMotion: boolean): string {
+  const style = document.createElement('style');
+  style.textContent = reducedMotion ? `${INDEX_CSS}\n${reducedMotionRules(INDEX_CSS)}` : INDEX_CSS;
+  document.head.appendChild(style);
+  try {
+    return getComputedStyle(closedEyes).opacity;
+  } finally {
+    style.remove();
+  }
+}
 
 describe('Fofo em pixel art', () => {
   it('toda roupa do guarda-roupa tem desenho de 32×32 nos dois quadros e nos olhos fechados', () => {
@@ -44,6 +80,28 @@ describe('Fofo em pixel art', () => {
     expect(screen.getByRole('img').getAttribute('data-motion')).toBe('still');
     rerender(<FofoSprite outfit="fofodeck" motion="full" />);
     expect(screen.getByRole('img').getAttribute('data-motion')).toBe('full');
+  });
+
+  it('dormindo na roupa: o quadro de olhos fechados fica por cima', () => {
+    const { container } = render(<FofoSprite outfit="natal" motion="asleep" decorative />);
+    const svg = container.querySelector('svg[data-motion="asleep"]');
+    expect(svg).not.toBeNull();
+    // A roupa continua: dormir aqui não troca o desenho pela pose
+    expect(svg?.hasAttribute('data-pose')).toBe(false);
+    const closedEyes = container.querySelector('.fofo-blink') as Element;
+    expect(eyesClosedOpacity(closedEyes, false)).toBe('1');
+  });
+
+  it('dormindo com "reduzir movimento" ligado, continua de olhos fechados', () => {
+    const { container } = render(<FofoSprite outfit="natal" motion="asleep" decorative />);
+    const closedEyes = container.querySelector('.fofo-blink') as Element;
+    expect(eyesClosedOpacity(closedEyes, true)).toBe('1');
+  });
+
+  it('acordado e parado, os olhos ficam abertos', () => {
+    const { container } = render(<FofoSprite outfit="natal" motion="still" decorative />);
+    const closedEyes = container.querySelector('.fofo-blink') as Element;
+    expect(eyesClosedOpacity(closedEyes, true)).toBe('0');
   });
 
   it('ao lado de um texto que já diz o que é, fica escondido do leitor de tela', () => {
