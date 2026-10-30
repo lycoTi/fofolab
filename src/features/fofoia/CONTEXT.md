@@ -42,6 +42,7 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 8. **Voz Sem Clichês de IA:** Proibição estrita de saudações ocos ("Olá!", "Certamente!", "Com certeza!") e despedidas protocolares ("Espero ter ajudado!"). Direto ao conteúdo com clareza e empatia.
 9. **Contexto da Tentativa Real:** Quando a questão é respondida, o prompt injeta `<tentativa_do_estudante>` (alternativa marcada, resultado, nível de confiança, autodiagnóstico e tempo gasto) para desconstruir distratores e calibrar a falsa certeza de forma personalizada.
 10. **Letra da Lei (`<legislacao_relevante>` - Fatia 11.2.1):** Quando fragmentos de normas oficiais (CF/88, leis do edital) são injetados no contexto, a FofoIA ancora a explicação na literalidade do texto legal, cita a redação exata do dispositivo entre aspas, destaca os termos normativos objetivos do próprio texto (ex.: "deve" [vinculado] vs "pode" [discricionário], prazos expressos) e mantém rigorosa abstenção honesta sem inventar dispositivos ou manias de bancas.
+11. **Guardrails de Foco & Defesa do Edital:** A FofoIA protege ativamente a meta e os tokens do estudante contra desvios de escopo (receitas de culinária, finanças pessoais, conversas aleatórias ou normas jurídicas que não pertencem ao edital/tópico ativo). Quando um desvio é detectado, a IA adverte pedagogicamente sobre a desconexão com o edital ativo e reconduz o estudante ao objetivo da prova.
 
 ---
 
@@ -54,6 +55,11 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
   - `useFofoConversation.ts`: Hook de ciclo de vida da conversa, isolamento por `sessionKey` (`q:<id>` por questão, ou `t:<topico>` em navegação livre), sobrevivência a recarregamento por até 20 minutos e retomada de partes cortadas.
   - `useFofoIaInputs.ts`: Coleta de insumos (caderno até 1.500 caracteres, questão ativa com tentativa calibrada, pontos fortes).
   - `WarmupInvite.tsx` & `warmup.ts`: Convite de aquecimento pré-aula (opcional para tópicos sem tentativas).
+- **Módulo de Legislação & Mesa de Estudos (`src/features/laws/` e `src/lib/laws/`):**
+  - `LawPillsBar.tsx`: Barra de pílulas táteis de leis citadas na questão ou conversa da FofoIA com auto-alargamento da coluna (`onWiden`).
+  - `LawReaderModal.tsx`: Leitor tátil Slide-over ("Mesa de Estudos" - Opção B) ocupando a coluna direita suavemente e mantendo a questão da prova aberta na esquerda.
+  - `LawArticleFormatter.tsx`: Renderizador Vade Mecum Editorial (sem asteriscos crus, caput destacado, incisos romanos e parágrafos tabulados).
+  - `store.ts`, `parser.ts`, `detector.ts`, `resolver.ts`: Armazenamento local sob demanda (IndexedDB `fofolab-laws`), parsing e detecção com fallback de Art. 1º.
 - **Componentes de Renderização (`src/components/`):**
   - `RichText.tsx`: Parser estruturado seguro de blocos (tabelas, blocos de código com cópia, listas numeradas, citações e bullets).
   - `richTextBlocks.tsx`: `RichCodeBlock` (linguagem e botão de cópia com feedback tátil) e `RichTableBlock` (tabela Markdown fluida com rolagem horizontal e zebrado de 1px).
