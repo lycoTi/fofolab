@@ -107,6 +107,19 @@ describe('Resolvedor de Artigos e Letra da Lei (Fatia 11.2.3)', () => {
     expect(excerpts[0].article).toBe('Art. 37');
   });
 
+  it('faz fallback gracioso para o primeiro artigo disponível quando o artigo específico não está no arquivo', async () => {
+    const store = createMockLawsStore();
+    // mockLei8112 só tem o Art. 20 cadastrado; buscando menção geral sem número (que pede o Art. 1)
+    const excerpts = await resolveLawExcerpts({
+      text: 'O que diz a Lei 8.112/1990 sobre servidores?',
+      store,
+    });
+
+    expect(excerpts).toHaveLength(1);
+    expect(excerpts[0].lawName).toBe('Lei 8.112/1990');
+    expect(excerpts[0].article).toBe('Art. 20');
+  });
+
   it('retorna array vazio quando nem o texto nem o tópico têm relação com legislação cadastrada', async () => {
     const store = createMockLawsStore();
     const excerpts = await resolveLawExcerpts({

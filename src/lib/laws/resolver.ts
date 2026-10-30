@@ -63,11 +63,11 @@ const TOPIC_LAW_MAPPINGS: TopicLawMapping[] = [
 ];
 
 export function buildLawExcerpt(law: ParsedLaw, articleKey: string): LawExcerpt | null {
-  const article = law.articles[articleKey];
+  const article = law.articles[articleKey] ?? Object.values(law.articles)[0];
   if (!article) return null;
 
   const sourceUrl = law.sourceUrl
-    ? `${law.sourceUrl}#art${articleKey}`
+    ? `${law.sourceUrl}#art${article.key}`
     : '';
 
   return {
