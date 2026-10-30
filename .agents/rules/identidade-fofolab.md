@@ -19,7 +19,7 @@ não a institucional; e existe uma zona com personalidade, onde mora o Fofo.
 - **Guarda-roupa:** a roupa sai de uma função pura com teste (`src/features/mascot/wardrobe.ts`). Ordem: roupa fixa
   (clicar no Fofo do cabeçalho) > marco do concurso (dia da prova, nomeado) > data especial > hora do dia, pelo sol do
   fuso do computador: fazendeiro do nascer ao pôr do sol, explorador do pôr do sol às 22:00, madrugada das 22:00 ao
-  nascer do sol. No FofoDoro, no lugar da hora do dia, o Fofo do relógio (base). Roupa fixa e nomeado ficam neste
+  nascer do sol. Nos avisos do FofoDoro, o Fofo do relógio (base); na janela do Fofo, a roupa do app. Roupa fixa e nomeado ficam neste
   computador (preferência); o nomeado vale para o plano e a data de prova de quando foi marcado.
   Roupa nova = sprite + regra + teste.
 - **Calendário (cerca de um mês por festa, para as roupas de momento aparecerem no resto do ano):** Halloween em
