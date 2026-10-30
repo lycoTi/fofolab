@@ -8,32 +8,17 @@ import { POSE_LABELS, type PoseId } from '../features/mascot/poses';
 import { OUTFIT_LABELS, type OutfitId } from '../features/mascot/wardrobe';
 
 const INDEX_CSS = readFileSync('src/index.css', 'utf8');
-const REDUCED_MOTION = '@media (prefers-reduced-motion: reduce)';
+const REDUCED_MOTION_QUERY = /@media\s*\(\s*prefers-reduced-motion\s*:\s*reduce\s*\)/g;
+/** Quantos blocos de "reduzir movimento" o index.css tem: zero quer dizer que a simulação abaixo não testou nada. */
+const REDUCED_MOTION_BLOCKS = INDEX_CSS.match(REDUCED_MOTION_QUERY)?.length ?? 0;
+/** O jsdom não liga a preferência de movimento, mas aplica `@media screen`: trocar a condição no lugar faz os blocos
+ *  valerem na posição real do arquivo, com a ordem e a especificidade de verdade. */
+const INDEX_CSS_REDUCED_MOTION = INDEX_CSS.replace(REDUCED_MOTION_QUERY, '@media screen');
 
-/** Miolo dos blocos de "reduzir movimento", sem o @media em volta: o jsdom não tem como ligar essa preferência. */
-function reducedMotionRules(css: string): string {
-  const parts: string[] = [];
-  let from = css.indexOf(REDUCED_MOTION);
-  while (from !== -1) {
-    const open = css.indexOf('{', from);
-    let depth = 1;
-    let i = open + 1;
-    while (depth > 0) {
-      if (css[i] === '{') depth += 1;
-      if (css[i] === '}') depth -= 1;
-      i += 1;
-    }
-    parts.push(css.slice(open + 1, i - 1));
-    from = css.indexOf(REDUCED_MOTION, i);
-  }
-  return parts.join('\n');
-}
-
-/** Opacidade do quadro de olhos fechados com o CSS real do app; com "reduzir movimento", as regras dele vêm por último,
- *  como no fim do index.css. */
+/** Opacidade do quadro de olhos fechados com o CSS real do app, com ou sem "reduzir movimento". */
 function eyesClosedOpacity(closedEyes: Element, reducedMotion: boolean): string {
   const style = document.createElement('style');
-  style.textContent = reducedMotion ? `${INDEX_CSS}\n${reducedMotionRules(INDEX_CSS)}` : INDEX_CSS;
+  style.textContent = reducedMotion ? INDEX_CSS_REDUCED_MOTION : INDEX_CSS;
   document.head.appendChild(style);
   try {
     return getComputedStyle(closedEyes).opacity;
@@ -93,6 +78,7 @@ describe('Fofo em pixel art', () => {
   });
 
   it('dormindo com "reduzir movimento" ligado, continua de olhos fechados', () => {
+    expect(REDUCED_MOTION_BLOCKS).toBeGreaterThan(0);
     const { container } = render(<FofoSprite outfit="natal" motion="asleep" decorative />);
     const closedEyes = container.querySelector('.fofo-blink') as Element;
     expect(eyesClosedOpacity(closedEyes, true)).toBe('1');
