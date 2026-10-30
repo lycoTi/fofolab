@@ -8,6 +8,7 @@ import {
   initialBlockState,
   phaseRemainingMs,
   pomodoroCount,
+  remainingBlockMs,
   stepBlock,
   totalPomodoros,
   type BlockAction,
@@ -306,5 +307,90 @@ describe('FofoDoro: correções da revisão', () => {
     localStorage.setItem(POMODORO_PREFS_KEY, JSON.stringify({ mode: 'POMODORO', focusMinutes: 25, settings: { longBreakMinutes: 20, longEvery: 4 } }));
     expect(loadPomodoroPrefs().settings.shortBreakMinutes).toBeNull();
     localStorage.clear();
+  });
+});
+
+describe('Quanto falta do bloco rodando (pomodoros + pausas)', () => {
+  // Foco 30, ajustes padrão: pausa curta 6, longa 20 a cada 4; meta 120 = 4 pomodoros
+  const target120: BlockTarget = { ...block, targetMinutes: 120 };
+  const started = run([{ type: 'START', block: target120, now: 0 }]).state;
+
+  it('no 2º pomodoro com 10 min restantes: 10 + pausa 6 + 30 + pausa 6 + 30 = 82 min (sem pausa depois do último)', () => {
+    const state = run(
+      [
+        { type: 'TICK', now: 30 * MIN },
+        { type: 'NEXT', now: 36 * MIN },
+      ],
+      started
+    ).state;
+    expect(state.phase).toBe('FOCUS');
+    expect(state.completedPomodoros).toBe(1);
+    expect(state.cyclePomodoros).toBe(1);
+    expect(remainingBlockMs(state, 56 * MIN)).toBe(82 * MIN);
+  });
+
+  it('pausado no foco, o que falta não diminui com o tempo', () => {
+    const paused = run(
+      [
+        { type: 'TICK', now: 30 * MIN },
+        { type: 'NEXT', now: 36 * MIN },
+        { type: 'PAUSE', now: 56 * MIN },
+      ],
+      started
+    ).state;
+    expect(remainingBlockMs(paused, 56 * MIN)).toBe(82 * MIN);
+    expect(remainingBlockMs(paused, 300 * MIN)).toBe(82 * MIN);
+  });
+
+  it('na pausa curta com 4 min restantes depois de 2 pomodoros: 4 + 30 + pausa 6 + 30 = 70 min', () => {
+    const state = run(
+      [
+        { type: 'TICK', now: 30 * MIN },
+        { type: 'NEXT', now: 36 * MIN },
+        { type: 'TICK', now: 66 * MIN },
+      ],
+      started
+    ).state;
+    expect(state.phase).toBe('BREAK');
+    expect(state.breakKind).toBe('SHORT');
+    expect(state.completedPomodoros).toBe(2);
+    expect(state.cyclePomodoros).toBe(2);
+    expect(remainingBlockMs(state, 68 * MIN)).toBe(70 * MIN);
+  });
+
+  it('a pausa longa entra na conta pelo contador do ciclo, como na prévia', () => {
+    // 2º pomodoro com o ciclo em 2: a pausa depois dele é a 3ª do ciclo (curta) e a seguinte a 4ª (longa, 20)
+    const focus: BlockState = { ...started, completedPomodoros: 1, cyclePomodoros: 2, phaseEndsAt: 10 * MIN };
+    expect(remainingBlockMs(focus, 0)).toBe((10 + 6 + 30 + 20 + 30) * MIN);
+  });
+
+  it('pronto para o próximo, com 3 de 4 feitos: só o último pomodoro, 30 min', () => {
+    const ready: BlockState = { ...started, phase: 'READY', running: false, phaseEndsAt: null, completedPomodoros: 3, cyclePomodoros: 3 };
+    expect(remainingBlockMs(ready, 0)).toBe(30 * MIN);
+  });
+
+  it('modo Livre com meta 60 e 45 min focados: 15 min', () => {
+    const livre = run([
+      { type: 'SET_MODE', mode: 'LIVRE', focusMinutes: 30 },
+      { type: 'START', block: { ...block, targetMinutes: 60 }, now: 0 },
+    ]).state;
+    expect(remainingBlockMs(livre, 45 * MIN)).toBe(15 * MIN);
+    // Passou da meta: não fica negativo
+    expect(remainingBlockMs(livre, 90 * MIN)).toBe(0);
+  });
+
+  it('modo Livre sem meta: não dá para saber (null)', () => {
+    const livre = run([
+      { type: 'SET_MODE', mode: 'LIVRE', focusMinutes: 30 },
+      { type: 'START', block: { ...block, targetMinutes: null }, now: 0 },
+    ]).state;
+    expect(remainingBlockMs(livre, 45 * MIN)).toBeNull();
+  });
+
+  it('sem bloco rodando (parado ou concluído): null', () => {
+    expect(remainingBlockMs(initialBlockState, 0)).toBeNull();
+    const done = run([{ type: 'FINISH', now: 10 * MIN }], started).state;
+    expect(done.phase).toBe('DONE');
+    expect(remainingBlockMs(done, 10 * MIN)).toBeNull();
   });
 });

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { formatClock, formatDuration } from '../lib/timeFormat';
+import { formatClock, formatDuration, formatTimeOfDay } from '../lib/timeFormat';
 
 describe('Tempo sempre em HH:mm', () => {
   it('formata durações em minutos', () => {
@@ -14,5 +14,15 @@ describe('Tempo sempre em HH:mm', () => {
     expect(formatClock(18 * 60_000 + 42_000)).toBe('18:42');
     expect(formatClock(500)).toBe('00:01');
     expect(formatClock(65 * 60_000 + 9_000)).toBe('1:05:09');
+  });
+
+  it('formata a hora do dia em HH:mm (relógio local)', () => {
+    expect(formatTimeOfDay(new Date(2026, 9, 29, 9, 5))).toBe('09:05');
+    expect(formatTimeOfDay(new Date(2026, 9, 29, 16, 18, 59))).toBe('16:18');
+    expect(formatTimeOfDay(new Date(2026, 9, 29, 0, 0))).toBe('00:00');
+  });
+
+  it('data inválida não vira "NaN:NaN" na tela', () => {
+    expect(formatTimeOfDay(new Date(Number.NaN))).toBe('');
   });
 });

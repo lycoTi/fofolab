@@ -18,6 +18,12 @@ export function formatClock(milliseconds: number): string {
   return hours > 0 ? `${hours}:${mmss}` : mmss;
 }
 
+/** Hora do dia no relógio local: "16:10". Data inválida vira texto vazio (nunca "NaN:NaN" na tela). */
+export function formatTimeOfDay(date: Date): string {
+  if (Number.isNaN(date.getTime())) return '';
+  return `${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+}
+
 /** Data local 'YYYY-MM-DD' (não UTC): estudar às 23h conta para o dia de hoje. */
 export function localDateKey(date: Date): string {
   const pad = (n: number) => String(n).padStart(2, '0');

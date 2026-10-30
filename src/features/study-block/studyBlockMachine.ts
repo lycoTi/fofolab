@@ -179,6 +179,46 @@ export function phaseRemainingMs(state: BlockState, now: number): number | null 
   return null;
 }
 
+/** Soma das pausas entre `pomodoros` seguidos, contando o ciclo a partir de `cyclePomodoros` (a mesma regra da prévia). */
+function breaksBetweenMs(pomodoros: number, focusMinutes: number, settings: PomodoroSettings, cyclePomodoros: number): number {
+  let minutes = 0;
+  for (let i = 1; i < pomodoros; i++) {
+    const isLong = (cyclePomodoros + i) % settings.longEvery === 0;
+    minutes += isLong ? settings.longBreakMinutes : shortBreakMinutes(focusMinutes, settings);
+  }
+  return minutes * MINUTE_MS;
+}
+
+/**
+ * Quanto falta do bloco rodando: o resto da fase atual + os pomodoros e as pausas que faltam (sem pausa depois do
+ * último, como na prévia). No modo livre, o foco que falta até a meta. null quando não há bloco rodando ou quando
+ * não dá para saber (modo livre sem meta).
+ */
+export function remainingBlockMs(state: BlockState, now: number): number | null {
+  if (state.phase === 'IDLE' || state.phase === 'DONE') return null;
+
+  // 1. Modo livre: só a meta diz quando acaba
+  if (state.mode === 'LIVRE') {
+    const target = state.block?.targetMinutes ?? null;
+    if (!target) return null;
+    return Math.max(0, target * MINUTE_MS - state.blockFocusedMs - focusedSegmentMs(state, now));
+  }
+
+  // 2. Pomodoros que ainda vão começar (o do foco atual já está no resto da fase)
+  const planned = pomodoroCount(state.block?.targetMinutes ?? null, state.focusMinutes);
+  const inFocus = state.phase === 'FOCUS';
+  const ahead = Math.max(0, planned - state.completedPomodoros - (inFocus ? 1 : 0));
+  const phaseLeft = phaseRemainingMs(state, now) ?? 0;
+  const focusAheadMs = ahead * state.focusMinutes * MINUTE_MS;
+
+  // 3. Pausas: no foco, a primeira vem depois do pomodoro atual; na pausa ou pronto, o ciclo já contou os feitos.
+  //    Depois de uma pausa longa a máquina zera o ciclo, o que dá o mesmo resto da divisão (a longa só cai no múltiplo)
+  if (inFocus) {
+    return phaseLeft + focusAheadMs + breaksBetweenMs(ahead + 1, state.focusMinutes, state.settings, state.cyclePomodoros);
+  }
+  return phaseLeft + focusAheadMs + breaksBetweenMs(ahead, state.focusMinutes, state.settings, state.cyclePomodoros);
+}
+
 function startFocus(state: BlockState, now: number): BlockState {
   return {
     ...state,
