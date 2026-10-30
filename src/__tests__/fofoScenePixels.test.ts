@@ -7,8 +7,12 @@ import {
   createBuffer,
   painter,
   seeded,
+  toPixelColor,
   type PixelBuffer,
 } from '../features/fofo-window/scene/pixelBuffer';
+
+// Impressão digital da cena composta, gravada antes de otimizar os pincéis: otimização não muda o desenho.
+const GOLDEN_DIGEST = 'ac8b9f3f';
 
 const at = (buf: PixelBuffer, x: number, y: number) => buf.pixels[y * buf.width + x];
 const painted = (buf: PixelBuffer) => buf.pixels.filter((c) => c !== null).length;
@@ -58,6 +62,13 @@ describe('buffer de pixels do cenário', () => {
   it('cor fora do formato hexadecimal é erro (não pinta lixo calado)', () => {
     const p = painter(createBuffer(2, 2));
     expect(() => p.px(0, 0, 'rgba(0,0,0,.5)')).toThrow();
+  });
+
+  it('cor inválida é erro mesmo fora da borda (não depende da largura do buffer)', () => {
+    const p = painter(createBuffer(2, 2));
+    expect(() => p.px(-5, -5, 'rgba(0,0,0,.5)')).toThrow();
+    expect(() => p.px(99, 0, 'laranja')).toThrow();
+    expect(() => p.rect(10, 10, 2, 2, '#12')).toThrow();
   });
 
   it('rect pinta o retângulo e corta na borda', () => {
@@ -138,6 +149,15 @@ describe('buffer de pixels do cenário', () => {
     expect(at(dotted, 5, 2)).toBe('#aa0000');
   });
 
+  it('ellipse com raio zero não pinta nada', () => {
+    const buf = createBuffer(5, 5);
+    const p = painter(buf);
+    p.ellipse(2, 2, 0, 1, '#aa0000');
+    p.ellipse(2, 2, 1, 0, '#aa0000');
+    p.ellipse(2, 2, 0, 0, '#aa0000', 1);
+    expect(painted(buf)).toBe(0);
+  });
+
   it('hills pinta do topo da onda até a linha de baixo, com borda clara', () => {
     const buf = createBuffer(3, SCENE_HEIGHT);
     painter(buf).hills(50, [[0, 0, 0]], '#336633', '#88cc88');
@@ -180,6 +200,44 @@ describe('buffer de pixels do cenário', () => {
     const again = createBuffer(20, SCENE_HEIGHT);
     painter(again).ground('#000000', '#111111', '#ff0000', '#000000', seeded(11), 30);
     expect(bufferDigest(again)).toBe(bufferDigest(buf));
+  });
+});
+
+describe('cor vinda de dado do usuário', () => {
+  it('toPixelColor normaliza #rgb e #rrggbb', () => {
+    expect(toPixelColor('#ABCDEF', '#808080')).toBe('#abcdef');
+    expect(toPixelColor('#F0a', '#808080')).toBe('#ff00aa');
+  });
+
+  it('toPixelColor devolve o substituto sem lançar quando a cor não serve', () => {
+    expect(toPixelColor('rgb(10, 20, 30)', '#808080')).toBe('#808080');
+    expect(toPixelColor('red', '#808080')).toBe('#808080');
+    expect(toPixelColor('#11223344', '#808080')).toBe('#808080');
+    expect(toPixelColor('', '#808080')).toBe('#808080');
+    expect(toPixelColor(null, '#808080')).toBe('#808080');
+    expect(toPixelColor(undefined, '#808080')).toBe('#808080');
+  });
+
+  it('toPixelColor normaliza o próprio substituto', () => {
+    expect(toPixelColor(null, '#AbC')).toBe('#aabbcc');
+  });
+});
+
+describe('desenho composto (trava de regressão)', () => {
+  it('a mesma cena de pincéis mantém a impressão digital', () => {
+    const buf = createBuffer(32, SCENE_HEIGHT);
+    const p = painter(buf);
+    const rnd = seeded(11);
+    p.gradV(0, GROUND_Y, ['#3a7fbf', '#5fa0d6', '#cde3f2']);
+    p.glow(10, 12, 4, 9, '#9fd0ee');
+    p.disc(10, 12, 4, '#FFE27A');
+    p.hills(47, [[3, 0.05, 1], [2, 0.11, 3]], '#86b663', '#a3cf7c');
+    p.rect(20, 50, 6, 12, '#a8432f');
+    p.map(['a.b', 'bab'], { a: '#f2e8dc', b: '#7a2c1e' }, 21, 46);
+    p.ground('#5d8c33', '#7fae4a', '#4f7a2a', '#456c24', rnd, 40);
+    p.ellipse(16, GROUND_Y + 6, 8, 2, '#7d613a');
+    p.ellipse(16, GROUND_Y + 10, 6, 2, '#2c2340', 1.2);
+    expect(bufferDigest(buf)).toBe(GOLDEN_DIGEST);
   });
 });
 
