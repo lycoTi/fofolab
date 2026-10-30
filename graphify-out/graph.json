@@ -2237,7 +2237,7 @@
       "file_type": "code",
       "norm_label": "dissectionresult",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L410"
+      "source_location": "L417"
     },
     {
       "id": "src_lib_airouter_fetchoutcome",
@@ -4896,7 +4896,7 @@
       "file_type": "code",
       "norm_label": "aipausereply()",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L402"
+      "source_location": "L409"
     },
     {
       "id": "src_lib_fofoia_ask_askfofoia",
@@ -11400,7 +11400,7 @@
       "file_type": "code",
       "norm_label": "parsedissectionresponse()",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L415"
+      "source_location": "L422"
     },
     {
       "id": "src_lib_airouter_parseprerequisites",
@@ -15252,7 +15252,7 @@
       "file_type": "code",
       "norm_label": "generatequestiondissection()",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L436"
+      "source_location": "L443"
     },
     {
       "id": "src_lib_airouter_getaistatus",
@@ -30696,7 +30696,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfe0 checklist do app desktop (pendente \u2014 juntado na `main` antes, por decisao do dono)",
       "source_file": "BACKLOG.md",
-      "source_location": "L167"
+      "source_location": "L181"
     },
     {
       "id": "backlog_defini\u00e7\u00e3o_de_pronto",
@@ -30708,7 +30708,7 @@
       "node_kind": "heading",
       "norm_label": "\u2705 definicao de pronto",
       "source_file": "BACKLOG.md",
-      "source_location": "L105"
+      "source_location": "L119"
     },
     {
       "id": "backlog_estado_real_por_\u00e1rea",
@@ -30720,7 +30720,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83c\udfaf estado real por area",
       "source_file": "BACKLOG.md",
-      "source_location": "L109"
+      "source_location": "L123"
     },
     {
       "id": "backlog_fofolab_backlog_estado_do_projeto_\u00edndice_para_ia",
@@ -30744,7 +30744,7 @@
       "node_kind": "heading",
       "norm_label": "\ud83d\udd1c proximas fatias",
       "source_file": "BACKLOG.md",
-      "source_location": "L176"
+      "source_location": "L190"
     },
     {
       "id": "backlog_status_global",
@@ -47881,7 +47881,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L437",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -47893,7 +47893,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L439",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -47905,7 +47905,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L439",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -47917,7 +47917,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L441",
+      "source_location": "L448",
       "weight": 1.0
     },
     {
@@ -47929,7 +47929,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L445",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -52345,7 +52345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/fofoia/ask.ts",
-      "source_location": "L71",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -100261,7 +100261,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L105",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -100272,7 +100272,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L109",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -100283,7 +100283,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L167",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -100294,7 +100294,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "BACKLOG.md",
-      "source_location": "L176",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -113439,7 +113439,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L402",
+      "source_location": "L409",
       "weight": 1.0
     },
     {
@@ -113450,7 +113450,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L410",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -113461,7 +113461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L415",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
@@ -113472,7 +113472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/aiRouter.ts",
-      "source_location": "L436",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -128575,5 +128575,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b7c3a85e9693cddeb86b02aeecc529dff014ab1b"
+  "built_at_commit": "7528ad634b3ccfcec55610dc225c3c0bf666e318"
 }
