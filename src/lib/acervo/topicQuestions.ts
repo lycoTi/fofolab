@@ -25,6 +25,7 @@ export interface QuestionAttemptSummary {
   lastDiagnosis: SelfDiagnosisType;
   lastAttemptAt: string;
   isFirstContact?: boolean;
+  lastSelectedOption?: string | null;
   /** Tempo gasto na última tentativa (segundos). */
   lastTimeSpentSeconds?: number;
   /** Última tentativa foi erro, chute ou 1º contato: entra no filtro "Errei ou chutei". */
@@ -217,6 +218,7 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
       lastDiagnosis: r.self_diagnosis,
       lastAttemptAt: r.attempted_at,
       isFirstContact,
+      lastSelectedOption: r.selected_option || null,
       lastTimeSpentSeconds: typeof r.time_spent_seconds === 'number' ? r.time_spent_seconds : undefined,
       needsRetry,
     });

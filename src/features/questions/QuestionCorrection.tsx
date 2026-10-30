@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
+import { ChevronLeft, GraduationCap, RotateCcw } from 'lucide-react';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { AnswerCorrection } from '../answer-flow/AnswerCorrection';
 import { DiagnosisPicker } from '../answer-flow/DiagnosisPicker';
@@ -27,6 +27,8 @@ export function QuestionCorrection(props: {
   onDiagnosis: (diagnosis: SelfDiagnosisType) => void;
   feedback: string | null;
   aiConfigured: boolean;
+  isConsultation?: boolean;
+  onRedo?: () => void;
   onGenerateDissection?: (question: Question) => Promise<{ ok: boolean; message?: string }>;
   onDeepen?: () => void;
   onNextQuestion?: () => void;
@@ -41,7 +43,7 @@ export function QuestionCorrection(props: {
   const { position } = props;
 
   return (
-    <AnswerCorrection question={props.question} isCorrect={props.isCorrect} dissection={props.dissection} firstContact={props.firstContact}>
+    <AnswerCorrection question={props.question} isCorrect={props.isCorrect} dissection={props.dissection} firstContact={props.firstContact} embedded>
       {prerequisites.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-400">
           <span className="font-medium text-slate-400">Conceitos-chave:</span>
@@ -57,24 +59,36 @@ export function QuestionCorrection(props: {
       )}
       {props.feedback && <p className="text-xs text-emerald-300 font-medium">{props.feedback}</p>}
 
-      {/* Barra de ação inferior: aprofundamento na FofoIA à esquerda e navegação à direita */}
+      {/* Barra de ação inferior: aprofundamento na FofoIA à esquerda e navegação/avanço à direita */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] pt-3.5">
-        {props.onDeepen ? (
-          <button
-            type="button"
-            onClick={props.onDeepen}
-            aria-label="Aprofundar com a FofoIA"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/10 px-3.5 py-1.5 text-xs font-semibold text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/20 active:scale-[0.97]"
-          >
-            <GraduationCap size={14} className="text-[var(--fofo-accent)]" />
-            <span>{props.dissection ? 'Ver explicação na FofoIA' : 'Explicar com a FofoIA'}</span>
-            <kbd aria-hidden="true" className="ml-1 rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300">
-              E
-            </kbd>
-          </button>
-        ) : (
-          <div />
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          {props.onDeepen && (
+            <button
+              type="button"
+              onClick={props.onDeepen}
+              aria-label="Aprofundar com a FofoIA"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/10 px-3.5 py-1.5 text-xs font-semibold text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/20 active:scale-[0.97]"
+            >
+              <GraduationCap size={14} className="text-[var(--fofo-accent)]" />
+              <span>{props.dissection ? 'Ver explicação na FofoIA' : 'Explicar com a FofoIA'}</span>
+              <kbd aria-hidden="true" className="ml-1 rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300">
+                E
+              </kbd>
+            </button>
+          )}
+          {props.isConsultation && props.onRedo && (
+            <button
+              type="button"
+              onClick={props.onRedo}
+              aria-label="Refazer"
+              title="Permite resolver esta questão novamente"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/40 px-3 py-1.5 text-xs font-medium text-slate-300 transition-colors hover:border-slate-500 hover:text-white active:scale-[0.97]"
+            >
+              <RotateCcw size={12} className="text-slate-400" />
+              <span>Refazer</span>
+            </button>
+          )}
+        </div>
 
         <div className="flex items-center gap-3">
           {position && position.total > 0 && (
@@ -93,28 +107,19 @@ export function QuestionCorrection(props: {
               >
                 <ChevronLeft size={14} />
               </button>
-              <button
-                type="button"
-                disabled={position.index >= position.total - 1}
-                onClick={position.onNext}
-                aria-label="Próxima questão"
-                title="Próxima questão"
-                className="flex h-7 w-7 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:border-white/[0.18] hover:text-white disabled:opacity-40"
-              >
-                <ChevronRight size={14} />
-              </button>
             </div>
           )}
           {props.onNextQuestion && (
             <button
               type="button"
               onClick={props.onNextQuestion}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-white/[0.08] px-3.5 py-1.5 text-xs font-semibold text-slate-100 transition-colors hover:bg-white/[0.14] hover:text-white active:scale-[0.97]"
+              aria-label="Próxima questão →"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-200 transition-all hover:bg-emerald-500/20 hover:text-white active:scale-[0.97] shadow-sm"
             >
               <span>Próxima questão →</span>
               <kbd
                 aria-hidden="true"
-                className="rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300"
+                className="rounded bg-emerald-500/20 px-1 py-0.2 text-[10px] font-mono text-emerald-300"
               >
                 ↵
               </kbd>

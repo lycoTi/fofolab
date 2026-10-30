@@ -14,6 +14,7 @@ export function AnswerCorrection({
   isCorrect,
   dissection,
   firstContact = false,
+  embedded = false,
   children,
 }: {
   question: Question;
@@ -21,6 +22,8 @@ export function AnswerCorrection({
   dissection: AiDissection | null;
   /** Abriu a explicação antes de responder: acolhe como primeiro contato, sem "acertou/errou". */
   firstContact?: boolean;
+  /** Renderizado dentro de folha contínua (sem borda dupla externa) */
+  embedded?: boolean;
   children?: ReactNode;
 }) {
   const options = parseQuestionOptions(question.options_json);
@@ -31,7 +34,11 @@ export function AnswerCorrection({
   return (
     <section
       aria-label="Correção da questão"
-      className="fofolab-enter space-y-4 rounded-xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6 shadow-sm transition-colors"
+      className={
+        embedded
+          ? 'fofolab-enter space-y-4 border-t border-slate-800/80 bg-slate-950/25 p-5 sm:p-6 transition-colors'
+          : 'fofolab-enter space-y-4 rounded-xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6 shadow-sm transition-colors'
+      }
     >
       <Verdict isCorrect={isCorrect} firstContact={firstContact} />
       <div className="flex items-center gap-2 text-xs text-slate-300">

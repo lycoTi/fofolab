@@ -1,13 +1,6 @@
+import type { ReactNode } from 'react';
 import {
-  AlertTriangle,
-  Ban,
-  Bookmark,
-  ChevronLeft,
-  ChevronRight,
-  Eye,
-  Gauge,
-  Keyboard,
-  Lightbulb,
+  AlertTriangle, Ban, Bookmark, ChevronLeft, ChevronRight, Eye, Gauge, Keyboard, Lightbulb, ShieldCheck,
 } from 'lucide-react';
 import { MetricExplainer } from '../../components/MetricExplainer';
 import { StatusSquare } from '../../components/StatusSquare';
@@ -35,18 +28,14 @@ const COMPLEXITY_COLORS: Record<QuestionComplexityProfile['levelLabel'], string>
   Difícil: 'text-rose-400',
 };
 
-/**
- * Prancheta de Leitura / Folha de Prova (spec 11):
- * Alto contraste tipográfico, ausência de caixas aninhadas desnecessárias,
- * metadados estruturados e fluxo natural do olhar para as opções de resposta.
- */
-export function QuestionCard(props: {
+export interface QuestionCardProps {
   question: Question;
   complexity: QuestionComplexityProfile;
   attemptSummary?: QuestionAttemptSummary | null;
   confidence: ReviewConfidence | null;
   picked: string | null;
   locked: boolean;
+  isConsultation?: boolean;
   frozenSeconds?: number | null;
   blockRunning?: boolean;
   eliminated?: string[];
@@ -55,13 +44,16 @@ export function QuestionCard(props: {
   onPick: (key: string) => void;
   onFirstContact: () => void;
   onHint?: () => void;
-  position?: {
-    index: number;
-    total: number;
-    onPrev: () => void;
-    onNext: () => void;
-  };
-}) {
+  position?: { index: number; total: number; onPrev: () => void; onNext: () => void };
+  children?: ReactNode;
+}
+
+/**
+ * Prancheta de Leitura / Folha de Prova (spec 11):
+ * Alto contraste tipográfico, ausência de caixas aninhadas desnecessárias,
+ * metadados estruturados e fluxo natural do olhar para as opções de resposta.
+ */
+export function QuestionCard(props: QuestionCardProps) {
   const { question, complexity, attemptSummary, position } = props;
   const options = parseQuestionOptions(question.options_json);
   const annulled = question.is_annulled === 1;
@@ -98,6 +90,18 @@ export function QuestionCard(props: {
               <div className="inline-flex items-center gap-1.5 text-[11px] text-slate-400">
                 <StatusSquare tone={badge.tone} />
                 <span>{badge.label}</span>
+              </div>
+            </>
+          )}
+          {props.isConsultation && (
+            <>
+              <span className="text-slate-700 select-none">|</span>
+              <div
+                className="inline-flex items-center gap-1.5 text-[11px] font-medium text-sky-400"
+                title="Questão já respondida anteriormente. Suas estatísticas estão protegidas."
+              >
+                <ShieldCheck size={12} className="text-sky-400 shrink-0" />
+                <span>Modo consulta</span>
               </div>
             </>
           )}
@@ -170,8 +174,10 @@ export function QuestionCard(props: {
         )}
       </div>
 
+      {props.children}
+
       {/* Barra de ação inferior antes de responder */}
-      {!annulled && !props.locked && (
+      {!annulled && !props.locked && !props.children && (
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/80 bg-slate-950/40 px-6 py-3 text-xs">
           <div className="flex flex-wrap items-center gap-2">
             {props.onHint && (

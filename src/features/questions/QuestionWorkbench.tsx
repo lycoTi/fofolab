@@ -11,7 +11,6 @@ import {
 } from '../../lib/acervo/topicQuestions';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { isCertoErradoOptions } from '../answer-flow/AnswerOptions';
-import { AcervoLinkBar } from './AcervoLinkBar';
 import { EmptyTopicQuestions } from './EmptyTopicQuestions';
 import { QuestionCard } from './QuestionCard';
 import { QuestionCorrection } from './QuestionCorrection';
@@ -100,6 +99,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   const [eliminatedKeys, setEliminatedKeys] = useState<string[]>([]);
   // Uma tentativa por questão na leva atual: responder não tira a questão da tela antes de o estudante avançar
   const [attempts, setAttempts] = useState<Record<string, AttemptState>>({});
+  const [redoKeys, setRedoKeys] = useState<string[]>([]);
   const shownAt = useRef(Date.now());
   const usedAi = useRef(false);
 
@@ -159,13 +159,37 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   useEffect(() => {
     setIndex(0);
     setAttempts({});
+    setRedoKeys([]);
     setEliminatedKeys([]);
   }, [statusFilter, formatFilter, board, complexity, search, props.scopeFilter]);
 
   const safeIndex = filtered.length > 0 ? Math.min(index, filtered.length - 1) : 0;
   const active = filtered[safeIndex] ?? null;
   const activeId = active ? itemKey(active.question) : undefined;
-  const current = (activeId && attempts[activeId]) || FRESH;
+
+  const hasSessionAttempt = Boolean(activeId && attempts[activeId]);
+  const isPriorAttempt = Boolean(active?.attemptSummary && !hasSessionAttempt);
+  const isRedo = Boolean(activeId && redoKeys.includes(activeId));
+  const isConsultation = isPriorAttempt && statusFilter !== 'RETRY' && !isRedo;
+
+  const current: AttemptState = useMemo(() => {
+    if (activeId && attempts[activeId]) {
+      return attempts[activeId];
+    }
+    if (isConsultation && active?.attemptSummary) {
+      const sum = active.attemptSummary;
+      return {
+        confidence: sum.lastConfidence,
+        picked: sum.lastSelectedOption ?? null,
+        firstContact: sum.isFirstContact ?? false,
+        attemptId: null,
+        diagnosis: sum.lastDiagnosis,
+        timeSpentSeconds: sum.lastTimeSpentSeconds,
+      };
+    }
+    return FRESH;
+  }, [activeId, attempts, isConsultation, active?.attemptSummary]);
+
   const answered = current.picked !== null || current.firstContact;
   const setCurrent = (next: AttemptState) => {
     if (activeId) setAttempts((all) => ({ ...all, [activeId]: next }));
@@ -208,7 +232,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   useEffect(() => () => onActiveQuestionChange?.(null), []);
 
   const record = (picked: string | null, confidence: ReviewConfidence | null) => {
-    if (!active) return;
+    if (!active || isConsultation) return;
     const isCorrect = picked !== null && picked === active.question.final_answer.trim().toUpperCase();
     const diagnosis = confidence && picked ? deriveDiagnosis(confidence, isCorrect) : 'BASE_GAP';
     const timeSpentSeconds = Math.round((Date.now() - shownAt.current) / 1000);
@@ -245,7 +269,10 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   );
 
   const isCorrect = Boolean(
-    active && current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase()
+    active && (
+      (current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase()) ||
+      (isConsultation && active.attemptSummary?.lastIsCorrect)
+    )
   );
   const allowedDiagnoses = useMemo(
     () => getAllowedDiagnoses({ kind: 'answered', isCorrect }),
@@ -400,6 +427,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
+        isConsultation={isConsultation}
         frozenSeconds={frozenSeconds}
         blockRunning={props.blockRunning}
         eliminated={eliminatedKeys}
@@ -419,24 +447,27 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
               }
             : undefined
         }
-      />
-      {answered && (
-        <QuestionCorrection
-          question={active.question}
-          dissection={active.dissection}
-          isCorrect={isCorrect}
-          firstContact={current.firstContact}
-          confidence={current.confidence}
-          diagnosis={current.diagnosis}
-          onDiagnosis={changeDiagnosis}
-          feedback={props.lastDiagnosisFeedback}
-          aiConfigured={props.aiConfigured ?? false}
-          onGenerateDissection={props.onGenerateDissection}
-          onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}
-          onNextQuestion={hasNext ? () => setIndex(safeIndex + 1) : undefined}
-          position={pagination}
-        />
-      )}
+      >
+        {answered && (
+          <QuestionCorrection
+            question={active.question}
+            dissection={active.dissection}
+            isCorrect={isCorrect}
+            firstContact={current.firstContact}
+            confidence={current.confidence}
+            diagnosis={current.diagnosis}
+            onDiagnosis={changeDiagnosis}
+            feedback={props.lastDiagnosisFeedback}
+            aiConfigured={props.aiConfigured ?? false}
+            isConsultation={isConsultation}
+            onRedo={activeId ? () => setRedoKeys((prev) => [...prev, activeId]) : undefined}
+            onGenerateDissection={props.onGenerateDissection}
+            onDeepen={onAskFofoIa ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined}
+            onNextQuestion={hasNext ? () => setIndex(safeIndex + 1) : undefined}
+            position={pagination}
+          />
+        )}
+      </QuestionCard>
     </div>
   );
 }

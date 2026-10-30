@@ -1,5 +1,4 @@
 import { Clock, Pause, Play } from 'lucide-react';
-import { MetricExplainer } from '../../components/MetricExplainer';
 import { useQuestionPacingTimer } from './useQuestionPacingTimer';
 
 export interface QuestionPacingTimerProps {
@@ -84,21 +83,6 @@ export function QuestionPacingTimer(props: QuestionPacingTimerProps) {
           (livre)
         </span>
       )}
-
-      {/* Explicabilidade para o estudante leigo / novato */}
-      <MetricExplainer
-        explanation={{
-          title: 'Ritmo de Prova (Time Pacing)',
-          humanSummary:
-            'Cronometra o tempo de resolução desta questão individual para você treinar velocidade e ritmo de prova sem pressão desnecessária.',
-          bulletPoints: [
-            'Meta recomendada para alto rendimento: ~2 a 3 minutos por item.',
-            'Inicia automaticamente quando você começa um bloco de foco (ou manualmente pelo botão de play).',
-            'Pausa automaticamente se você mudar de aba, suspender o computador ou ficar 60s ausente.',
-            'Não consome horas do seu ciclo e não penaliza seu plano de estudos.',
-          ],
-        }}
-      />
     </div>
   );
 }

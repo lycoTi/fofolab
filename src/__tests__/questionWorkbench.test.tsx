@@ -120,7 +120,7 @@ describe('Aba Questões: confiança antes de responder (spec 11 §5.5)', () => {
     const { props } = renderWorkbench({ questions: bundles.slice(0, 2) });
     fireEvent.click(screen.getByRole('button', { name: 'Acho que sei' }));
     fireEvent.click(optionA()!);
-    fireEvent.click(screen.getByRole('button', { name: 'Próxima questão' }));
+    fireEvent.click(screen.getByRole('button', { name: /Próxima questão/i }));
     fireEvent.click(screen.getByRole('button', { name: 'Questão anterior' }));
     expect(screen.getByText(/^Gabarito: C/)).toBeTruthy();
     expect(screen.queryByRole('button', { name: 'Sei' })).toBeNull();
@@ -476,5 +476,47 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     // Tecla E abre explicação / aprofunda na FofoIA
     fireEvent.keyDown(window, { key: 'e' });
     expect(props.onAskFofoIa).toHaveBeenCalledWith({ kind: 'deepen', question: q1 });
+  });
+
+  it('modo consulta / revisão protegida: questão já respondida abre travada, protege estatísticas e permite refazer', () => {
+    const q1: Question = {
+      ...SEED_QUESTIONS[2],
+      id: 'q-consult',
+      statement: 'Questão para modo consulta.',
+      options_json: JSON.stringify(['C) Certo', 'E) Errado']),
+      final_answer: 'C',
+    };
+    const summary = {
+      count: 1,
+      lastIsCorrect: true,
+      lastConfidence: 'SURE' as const,
+      lastDiagnosis: 'MASTERED' as const,
+      lastAttemptAt: new Date().toISOString(),
+      lastSelectedOption: 'C',
+      needsRetry: false,
+    };
+    const { props } = renderWorkbench({
+      questions: [{ question: q1, dissection: null, attemptSummary: summary }],
+    });
+
+    // Como já foi respondida e o filtro inicial é UNSOLVED, trocamos para ALL para vê-la
+    fireEvent.change(screen.getByLabelText('Filtrar por situação'), { target: { value: 'ALL' } });
+
+    // Exibe selo de modo consulta e gabarito
+    expect(screen.getByText('Modo consulta')).toBeTruthy();
+    expect(screen.getByText(/Gabarito: C/)).toBeTruthy();
+
+    // Tentar clicar em Certo ou Errado não grava nova tentativa
+    fireEvent.click(screen.getByRole('button', { name: /Errado/i }));
+    expect(props.onAnswer).not.toHaveBeenCalled();
+
+    // Botão de refazer destrava a questão para resolução ativa
+    const redoBtn = screen.getByRole('button', { name: /Refazer/i });
+    expect(redoBtn).toBeTruthy();
+    fireEvent.click(redoBtn);
+
+    // Agora o modo consulta sai e os botões de confiança aparecem
+    expect(screen.queryByText('Modo consulta')).toBeNull();
+    expect(screen.getByRole('button', { name: 'Sei' })).toBeTruthy();
   });
 });
