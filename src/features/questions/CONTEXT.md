@@ -62,16 +62,49 @@
 - **Próxima Questão:** navegação fluida seguindo a ordem visual do olhar do estudante.
 
 ### 2.1 Modo Teclado & Ergonomia de Alta Velocidade (`useQuestionKeyboardShortcuts`)
-- **Resolução Sem Tirar as Mãos do Teclado:**
-  - `1`, `2`, `3`, `4`: calibra a certeza (`1`: Sei, `2`: Estudando, `3`: Acho que sei, `4`: Chuto).
-  - `C` / `E` (em Certo/Errado) ou `A`, `B`, `C`, `D`, `E` (em Múltipla Escolha): responde a alternativa correspondente.
-  - `Enter` ou `Espaço` ou `Seta Direita (→)`: avança para a próxima questão (`onNextQuestion`).
-  - `Seta Esquerda (←)`: retorna para a questão anterior.
-  - `P`: pede pista à FofoIA (`onHint`).
-  - `V`: ver explicação antes de responder (1º contato).
+- **Resolução Sem Tirar as Mãos do Teclado (Fluxo 100% Contínuo):**
+  - **Antes de responder:**
+    - `1`, `2`, `3`, `4`: calibra a certeza (`1`: Sei, `2`: Estudando, `3`: Acho que sei, `4`: Chuto).
+    - `C` / `E` (em Certo/Errado) ou `A`, `B`, `C`, `D`, `E` (em Múltipla Escolha): responde a alternativa correspondente.
+    - `Alt + Letra`: descarta/risca a alternativa correspondente (Riscador de Distratores).
+    - `P`: pede pista à FofoIA (`onHint`).
+    - `V`: ver explicação antes de responder (1º contato).
+  - **Após responder:**
+    - `1`, `2`, `3`, `4`, `5`: seleciona diretamente as opções de autodiagnóstico ("Como foi?" / "Por quê?"), ajustando a tentativa na hora sem tocar no mouse.
+    - `E`: aprofunda ou abre a explicação com a FofoIA na doca direita.
+    - `Enter` ou `Espaço` ou `Seta Direita (→)`: avança para a próxima questão (`onNextQuestion`).
+    - `Seta Esquerda (←)`: retorna para a questão anterior.
 - **Proteção e Acessibilidade:**
   - Ignora atalhos automaticamente quando o foco está em campos de texto (`input`, `textarea`, `select`, `contentEditable`) ou com teclas modificadoras (`Ctrl`, `Alt`, `Cmd`).
   - Badges visuais sutis com `aria-hidden="true"` preservam os nomes acessíveis dos botões para leitor de tela e testes.
+
+### 2.2 Centralização de Explicação na FofoIA (0 Tokens com Dissecação do Acervo)
+- **Folha de Prova Limpa (Prancheta Central):** a prancheta de resolução permanece sóbria e focada em resolver, sem calhamaços de texto ou caixas pontilhadas desnecessárias. O gabarito oficial é exibido logo após a resposta.
+- **Tutoria Unificada na Coluna Direita (FofoIA):**
+  - Todo o estudo reverso, dissecação e explicação aprofundada acontecem na coluna da direita.
+  - **Zero Consumo de Tokens (Acervo Oficial):** se a questão já possui dissecação cadastrada no banco (`dissection_markdown` em `ai_dissections` / acervo), o Fofo exibe instantaneamente a análise da banca com 0 tokens de IA e sem latência de rede (`sendStored`).
+  - **Geração Sob Demanda:** se a questão não possuía dissecação prévia, a FofoIA analisa com a IA e disponibiliza o aprofundamento.
+
+### 2.3 Cronômetro Discreto de Ritmo de Prova (`QuestionPacingTimer` & `useQuestionPacingTimer`)
+- **Autopercepção Temporal Sem Estresse (Time Pacing):**
+  - Diferente de contagens regressivas que disparam ansiedade com alarmes vermelhos ou bipes, o cronômetro é **progressivo e editorial** (formato tabular `mm:ss`).
+  - Posicionado discretamente no cluster superior direito da folha de prova junto ao indicador de teclado.
+- **Transparência de Inicialização & Vínculo com Bloco de Foco (`blockRunning`):**
+  - **Modo Livre (sem bloco ativo):** o cronômetro fica em espera `(livre)` e não corre sozinho, respeitando a navegação descompromissada do aluno. Permite ativação manual via clique tátil de play `▶`.
+  - **Com Bloco de Foco Ativo (Pomodoro / FofoDoro):** o cronômetro corre automaticamente durante a resolução de cada item do bloco.
+- **Detecção Real de Presença & Inatividade:**
+  - **Mudança de aba / Janela oculta (`visibilitychange`):** pausa imediata `(em espera)` ao trocar de aba ou suspender a tela, impedindo que o tempo infle artificialmente.
+  - **Inatividade de Mouse e Teclado (60s):** ao passar 60 segundos sem nenhuma interação, entra em pausa automática `(ausente)` e retoma no primeiro toque no mouse/teclado.
+  - **Controle Manual:** botão tátil play/pause (`⏸` / `▶`) direto no cronômetro.
+- **Explicabilidade para Aluno Leigo (`MetricExplainer`):**
+  - Ícone `?` com popover educativo explicando a finalidade do ritmo de prova, como funciona a pausa automática e que o recurso não consome nem altera as horas do ciclo semanal.
+- **Faixas de Ritmo Recomendadas (Concursos de Alto Nível):**
+  - `< 02:00` (`normal`): ritmo ideal de prova (`text-slate-400`).
+  - `02:00 – 03:00` (`warning`): zona de atenção para não perder tempo excessivo (`text-amber-400`).
+  - `> 03:00` (`extended`): ritmo estendido / questão longa (`text-rose-400`).
+- **Congelamento e Persistência:**
+  - Ao responder a questão (`locked`), o cronômetro congela instantaneamente no tempo final gasto.
+  - O valor em segundos é gravado na tentativa (`time_spent_seconds`) e recuperado ao revisitar o item na sessão (`AttemptState.timeSpentSeconds`) ou no histórico (`QuestionAttemptSummary.lastTimeSpentSeconds`).
 
 ---
 
@@ -122,6 +155,7 @@ A `QuestionWorkbench` gerencia uma fila inteligente orientada à produtividade:
 |---|---|---|
 | **Bancada Principal** | [`src/features/questions/QuestionWorkbench.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionWorkbench.tsx) | Orquestração da fila, filtros, tentativas da sessão e atalhos. |
 | **Atalhos de Teclado** | [`src/features/questions/useQuestionKeyboardShortcuts.ts`](file:///d:/dev/fofolab/src/features/questions/useQuestionKeyboardShortcuts.ts) | Ergonomia de alta velocidade (1-4 confiança, C/E ou A-E resposta, ↵ próxima). |
+| **Cronômetro de Ritmo** | [`src/features/questions/QuestionPacingTimer.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionPacingTimer.tsx)<br/>[`src/features/questions/useQuestionPacingTimer.ts`](file:///d:/dev/fofolab/src/features/questions/useQuestionPacingTimer.ts) | Time Pacing discreto (mm:ss), vínculo com bloco de foco, detecção de inatividade/aba e explicabilidade. |
 | **Folha de Questão** | [`src/features/questions/QuestionCard.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionCard.tsx) | Prancheta editorial limpa: metadados, enunciado, calibração e botões de ação. |
 | **Correção & Feedback** | [`src/features/questions/QuestionCorrection.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionCorrection.tsx) | Veredito, gabarito, explicação salva, autodiagnóstico e navegação. |
 | **Barra de Filtros** | [`src/features/questions/QuestionFilters.tsx`](file:///d:/dev/fofolab/src/features/questions/QuestionFilters.tsx) | Toolstrip em acordeão com resumo tipográfico contínuo. |

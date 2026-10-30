@@ -30,10 +30,22 @@ export function DiagnosisPicker({
       )}
       <p className="text-xs text-slate-400">{isCorrect ? 'Como foi?' : 'Por quê?'}</p>
       <div className="flex flex-wrap gap-1.5">
-        {allowed.map((d) => (
-          <button key={d} type="button" aria-pressed={value === d} onClick={() => onChange(d)} className={`${chip} inline-flex items-center gap-1.5 ${value === d ? chipOn : chipOff}`}>
+        {allowed.map((d, index) => (
+          <button
+            key={d}
+            type="button"
+            aria-pressed={value === d}
+            onClick={() => onChange(d)}
+            className={`${chip} inline-flex items-center gap-1.5 ${value === d ? chipOn : chipOff}`}
+          >
             <StatusSquare tone={DIAGNOSIS_TONE[d]} />
-            {DIAGNOSIS_LABEL[d]}
+            <span>{DIAGNOSIS_LABEL[d]}</span>
+            <kbd
+              aria-hidden="true"
+              className="ml-0.5 rounded bg-white/[0.08] px-1 py-0.2 text-[9px] font-mono text-slate-400 opacity-80"
+            >
+              {index + 1}
+            </kbd>
           </button>
         ))}
       </div>

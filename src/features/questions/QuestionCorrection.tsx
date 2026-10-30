@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, GraduationCap, Loader2, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
 import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { AnswerCorrection } from '../answer-flow/AnswerCorrection';
 import { DiagnosisPicker } from '../answer-flow/DiagnosisPicker';
@@ -15,8 +14,8 @@ function prerequisitesOf(dissection: AiDissection | null): string[] {
 }
 
 /**
- * Correção da aba Questões, embaixo da questão: veredito, gabarito, explicação guardada (ou "Gerar explicação", só quando
- * pedido), conceitos-chave, diagnóstico e o caminho para ir além com a FofoIA.
+ * Correção da aba Questões, embaixo da questão: veredito, gabarito oficial, conceitos-chave,
+ * autodiagnóstico de calibração e aprofundamento centralizado com a FofoIA.
  */
 export function QuestionCorrection(props: {
   question: Question;
@@ -38,46 +37,11 @@ export function QuestionCorrection(props: {
     onNext: () => void;
   };
 }) {
-  const [generating, setGenerating] = useState(false);
-  const [generateMessage, setGenerateMessage] = useState<string | null>(null);
   const prerequisites = prerequisitesOf(props.dissection);
   const { position } = props;
 
-  const generate = async () => {
-    if (!props.onGenerateDissection || generating) return;
-    setGenerating(true);
-    setGenerateMessage(null);
-    try {
-      const result = await props.onGenerateDissection(props.question);
-      if (!result.ok) setGenerateMessage(result.message ?? 'Não foi possível gerar a explicação agora.');
-    } finally {
-      setGenerating(false);
-    }
-  };
-
   return (
     <AnswerCorrection question={props.question} isCorrect={props.isCorrect} dissection={props.dissection} firstContact={props.firstContact}>
-      {!props.dissection && (
-        <div className="space-y-2.5 rounded-xl border border-dashed border-white/[0.12] bg-white/[0.015] p-3.5 text-xs text-slate-300">
-          <p>Esta questão ainda não tem explicação.</p>
-          {props.aiConfigured && props.onGenerateDissection ? (
-            <button
-              type="button"
-              onClick={generate}
-              disabled={generating}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--fofo-accent)] px-3 py-1.5 font-semibold text-white transition-colors hover:bg-[var(--fofo-accent-hover)] disabled:opacity-60 shadow-sm"
-            >
-              {generating ? <Loader2 size={13} className="animate-spin" /> : <Sparkles size={13} />}
-              {generating ? 'Gerando explicação…' : 'Gerar explicação'}
-            </button>
-          ) : (
-            <p className="text-[11px] text-slate-500">
-              Quando a IA estiver configurada, você poderá gerá-la aqui (ela fica guardada para as próximas vezes).
-            </p>
-          )}
-          {generateMessage && <p className="text-[11px] text-amber-300">{generateMessage}</p>}
-        </div>
-      )}
       {prerequisites.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-400">
           <span className="font-medium text-slate-400">Conceitos-chave:</span>
@@ -93,16 +57,20 @@ export function QuestionCorrection(props: {
       )}
       {props.feedback && <p className="text-xs text-emerald-300 font-medium">{props.feedback}</p>}
 
-      {/* Barra de ação inferior: a numeração e navegação seguem o olhar do usuário */}
+      {/* Barra de ação inferior: aprofundamento na FofoIA à esquerda e navegação à direita */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] pt-3.5">
         {props.onDeepen ? (
           <button
             type="button"
             onClick={props.onDeepen}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/5 px-3 py-1.5 text-xs font-semibold text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/15"
+            aria-label="Aprofundar com a FofoIA"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--fofo-accent)]/30 bg-[var(--fofo-accent)]/10 px-3.5 py-1.5 text-xs font-semibold text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/20 active:scale-[0.97]"
           >
-            <GraduationCap size={13} className="text-[var(--fofo-accent)]" />
-            Aprofundar com a FofoIA
+            <GraduationCap size={14} className="text-[var(--fofo-accent)]" />
+            <span>{props.dissection ? 'Ver explicação na FofoIA' : 'Explicar com a FofoIA'}</span>
+            <kbd aria-hidden="true" className="ml-1 rounded bg-white/[0.12] px-1 py-0.2 text-[10px] font-mono text-slate-300">
+              E
+            </kbd>
           </button>
         ) : (
           <div />

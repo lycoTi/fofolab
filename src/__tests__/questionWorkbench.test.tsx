@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { QuestionWorkbench, type QuestionWorkbenchProps } from '../features/questions/QuestionWorkbench';
 import { SEED_AI_DISSECTIONS, SEED_QUESTIONS } from '../data/initialSeed';
@@ -95,22 +95,19 @@ describe('Aba Questões: confiança antes de responder (spec 11 §5.5)', () => {
     expect(props.onAnswer).toHaveBeenCalledWith(expect.objectContaining({ usedAiReview: true, confidence: 'GUESS' }));
   });
 
-  it('questão sem explicação: sem IA, aviso honesto; com IA, "Gerar explicação" só quando pedido', () => {
+  it('questão sem explicação no acervo: direciona para explicar com a FofoIA sem poluição na folha', () => {
     const semExplicacao = { question: SEED_QUESTIONS[0], dissection: null };
-    const { unmount } = renderWorkbench({ questions: [semExplicacao], aiConfigured: false, onGenerateDissection: vi.fn() });
+    const { props } = renderWorkbench({ questions: [semExplicacao] });
     fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
     fireEvent.click(optionA()!);
-    expect(screen.getByText(/ainda não tem explicação/)).toBeTruthy();
-    expect(screen.queryByRole('button', { name: /Gerar explicação/ })).toBeNull();
-    unmount();
-
-    const onGenerate = vi.fn(async () => ({ ok: true }));
-    renderWorkbench({ questions: [semExplicacao], aiConfigured: true, onGenerateDissection: onGenerate });
-    fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
-    fireEvent.click(optionA()!);
-    expect(onGenerate).not.toHaveBeenCalled();
-    fireEvent.click(screen.getByRole('button', { name: /Gerar explicação/ }));
-    expect(onGenerate).toHaveBeenCalledTimes(1);
+    // Não tem mais caixa pontilhada no centro da folha de prova
+    expect(screen.queryByText(/Esta questão ainda não tem explicação/)).toBeNull();
+    // O botão principal é Explicar com a FofoIA
+    const deepenBtn = screen.getByRole('button', { name: /Aprofundar com a FofoIA/ });
+    expect(deepenBtn).toBeTruthy();
+    expect(screen.getByText('Explicar com a FofoIA')).toBeTruthy();
+    fireEvent.click(deepenBtn);
+    expect(props.onAskFofoIa).toHaveBeenCalledWith({ kind: 'deepen', question: semExplicacao.question });
   });
 
   it('sair da aba Questões avisa que não há mais questão ativa (a FofoIA não fica presa nela)', () => {
@@ -412,5 +409,72 @@ describe('Aba Questões com o acervo da Cebraspe (spec 12c §5.3, §5.4 e §5.7)
     const restoreA = screen.getByRole('button', { name: 'Restaurar alternativa A' });
     fireEvent.click(restoreA);
     expect(optionBtnA.className).not.toContain('line-through');
+  });
+
+  it('exibe cronômetro discreto de ritmo (Time Pacing) que inicia e congela ao responder quando bloco está ativo', () => {
+    vi.useFakeTimers();
+    try {
+      renderWorkbench({ blockRunning: true });
+      expect(screen.getByLabelText(/Tempo decorrido: 00:00/)).toBeTruthy();
+
+      act(() => {
+        vi.advanceTimersByTime(5000);
+      });
+      expect(screen.getByLabelText(/Tempo decorrido: 00:05/)).toBeTruthy();
+
+      // Ao responder, o cronômetro congela
+      fireEvent.click(screen.getByRole('button', { name: 'Sei' }));
+      fireEvent.click(optionA()!);
+
+      expect(screen.getByLabelText(/Tempo final de resolução: 00:05/)).toBeTruthy();
+
+      act(() => {
+        vi.advanceTimersByTime(10000);
+      });
+      // Permanece congelado
+      expect(screen.getByLabelText(/Tempo final de resolução: 00:05/)).toBeTruthy();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('no modo livre (sem bloco), o cronômetro não corre sozinho mas permite play manual', () => {
+    vi.useFakeTimers();
+    try {
+      renderWorkbench({ blockRunning: false });
+      expect(screen.getByText('(livre)')).toBeTruthy();
+
+      act(() => {
+        vi.advanceTimersByTime(5000);
+      });
+      expect(screen.getByLabelText(/Tempo decorrido: 00:00/)).toBeTruthy();
+
+      // Clicar no botão dá play manual
+      fireEvent.click(screen.getByTitle(/Iniciar cronômetro para esta questão/));
+      act(() => {
+        vi.advanceTimersByTime(3000);
+      });
+      expect(screen.getByLabelText(/Tempo decorrido: 00:03/)).toBeTruthy();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('após responder, teclas 1..5 ajustam o diagnóstico e tecla E aprofunda na FofoIA', () => {
+    const q1: Question = { ...SEED_QUESTIONS[2], id: 'q-ce-diag', statement: 'Questão para diagnóstico.', options_json: JSON.stringify(['C) Certo', 'E) Errado']), final_answer: 'C' };
+    const { props } = renderWorkbench({ questions: [{ question: q1, dissection: null }] });
+
+    // 1 (Sei) -> C (Certo)
+    fireEvent.keyDown(window, { key: '1' });
+    fireEvent.keyDown(window, { key: 'c' });
+    expect(props.onAnswer).toHaveBeenCalledTimes(1);
+
+    // Tecla 2 no diagnóstico altera para o 2º diagnóstico permitido
+    fireEvent.keyDown(window, { key: '2' });
+    expect(props.onChangeDiagnosis).toHaveBeenCalledWith('att-1', expect.any(String));
+
+    // Tecla E abre explicação / aprofunda na FofoIA
+    fireEvent.keyDown(window, { key: 'e' });
+    expect(props.onAskFofoIa).toHaveBeenCalledWith({ kind: 'deepen', question: q1 });
   });
 });

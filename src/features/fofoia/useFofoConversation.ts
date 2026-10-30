@@ -206,5 +206,26 @@ export function useFofoConversation(input: {
   /** Pede o resto de uma resposta cortada no teto de tamanho, no mesmo jeito. */
   const resume = (turn: FofoTurn) => send('Continue de onde parou.', turn.mode ?? null, { resumeOf: turn });
 
-  return { turns, loading, send, resume, clear };
+  const sendStored = (studentText: string, replyText: string) => {
+    const student = studentText.trim();
+    const reply = replyText.trim();
+    if (!student || !reply) return;
+    setTurns((prev) => {
+      const last = prev[prev.length - 1];
+      if (last && last.role === 'tutor' && last.content.includes(reply)) return prev;
+      return [
+        ...prev,
+        { id: nextId('s'), role: 'student', content: student },
+        {
+          id: nextId('t'),
+          role: 'tutor',
+          content: reply,
+          mode: 'QUICK',
+          simulated: false,
+        },
+      ];
+    });
+  };
+
+  return { turns, loading, send, sendStored, resume, clear };
 }

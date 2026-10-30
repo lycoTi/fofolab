@@ -18,30 +18,22 @@ import { parseQuestionOptions } from '../../lib/questionOptions';
 import type { Question, ReviewConfidence } from '../../types/database';
 import { AnswerOptions, isCertoErradoOptions, optionName } from '../answer-flow/AnswerOptions';
 import { ConfidencePicker } from '../answer-flow/ConfidencePicker';
+import { QuestionPacingTimer } from './QuestionPacingTimer';
 
 function formatAttemptBadge(summary: QuestionAttemptSummary): { label: string; tone: 'emerald' | 'amber' | 'rose' } {
-  if (summary.isFirstContact) {
-    return { label: 'Já respondida · 1º contato', tone: 'amber' };
-  }
-  if (!summary.lastIsCorrect) {
-    return { label: 'Já respondida · Errou', tone: 'rose' };
-  }
+  if (summary.isFirstContact) return { label: 'Já respondida · 1º contato', tone: 'amber' };
+  if (!summary.lastIsCorrect) return { label: 'Já respondida · Errou', tone: 'rose' };
   if (summary.lastConfidence === 'GUESS' || summary.lastDiagnosis === 'LUCKY_GUESS') {
     return { label: 'Já respondida · Chutou', tone: 'amber' };
   }
   return { label: 'Já respondida · Acertou', tone: 'emerald' };
 }
 
-function complexityColor(level: QuestionComplexityProfile['levelLabel']): string {
-  switch (level) {
-    case 'Fácil':
-      return 'text-emerald-400';
-    case 'Média':
-      return 'text-amber-400';
-    case 'Difícil':
-      return 'text-rose-400';
-  }
-}
+const COMPLEXITY_COLORS: Record<QuestionComplexityProfile['levelLabel'], string> = {
+  Fácil: 'text-emerald-400',
+  Média: 'text-amber-400',
+  Difícil: 'text-rose-400',
+};
 
 /**
  * Prancheta de Leitura / Folha de Prova (spec 11):
@@ -55,6 +47,8 @@ export function QuestionCard(props: {
   confidence: ReviewConfidence | null;
   picked: string | null;
   locked: boolean;
+  frozenSeconds?: number | null;
+  blockRunning?: boolean;
   eliminated?: string[];
   onToggleEliminate?: (key: string) => void;
   onConfidence: (confidence: ReviewConfidence) => void;
@@ -93,7 +87,7 @@ export function QuestionCard(props: {
             title={complexity.summaryTip}
           >
             <Gauge size={12} className="text-slate-400 shrink-0" />
-            <span className={complexityColor(complexity.levelLabel)}>{complexity.levelLabel}</span>
+            <span className={COMPLEXITY_COLORS[complexity.levelLabel]}>{complexity.levelLabel}</span>
             <MetricExplainer explanation={explainQuestionComplexity(complexity, question.exam_board)} />
           </div>
 
@@ -124,13 +118,26 @@ export function QuestionCard(props: {
           )}
         </div>
 
-        {/* Atalhos de teclado ativos */}
-        <div
-          className="inline-flex items-center gap-1 text-[11px] text-slate-500 select-none"
-          title="Atalhos: 1–4 confiança · C/E ou A–E resposta · Alt+Letra descartar · ↵ ou Espaço para avançar"
-        >
-          <Keyboard size={12} className="text-slate-500 shrink-0" />
-          <span className="hidden sm:inline">Teclado ativo</span>
+        {/* Painel direito: cronômetro discreto de ritmo e atalhos de teclado */}
+        <div className="flex items-center gap-2.5">
+          {/* Cronômetro de ritmo de prova (Time Pacing) com detecção de presença */}
+          <QuestionPacingTimer
+            questionId={question.id}
+            locked={props.locked}
+            frozenSeconds={props.frozenSeconds}
+            blockRunning={props.blockRunning}
+          />
+
+          <span className="text-slate-800 select-none">|</span>
+
+          {/* Atalhos de teclado ativos */}
+          <div
+            className="inline-flex items-center gap-1 text-[11px] text-slate-500 select-none"
+            title="Atalhos: 1–4 confiança · C/E ou A–E resposta · Alt+Letra descartar · ↵ ou Espaço para avançar"
+          >
+            <Keyboard size={12} className="text-slate-500 shrink-0" />
+            <span className="hidden sm:inline">Teclado ativo</span>
+          </div>
         </div>
       </div>
 

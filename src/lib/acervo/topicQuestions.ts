@@ -25,6 +25,8 @@ export interface QuestionAttemptSummary {
   lastDiagnosis: SelfDiagnosisType;
   lastAttemptAt: string;
   isFirstContact?: boolean;
+  /** Tempo gasto na última tentativa (segundos). */
+  lastTimeSpentSeconds?: number;
   /** Última tentativa foi erro, chute ou 1º contato: entra no filtro "Errei ou chutei". */
   needsRetry: boolean;
 }
@@ -183,6 +185,7 @@ interface AttemptRow {
   confidence: ReviewConfidence | null;
   self_diagnosis: SelfDiagnosisType;
   attempted_at: string;
+  time_spent_seconds?: number | null;
 }
 
 function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSummary> {
@@ -190,7 +193,7 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
   const ids = [...new Set(questions.map((q) => q.id))];
   const rows = queryAll<AttemptRow>(
     getDb(),
-    `SELECT question_id, topic_id, selected_option, is_correct, confidence, self_diagnosis, attempted_at
+    `SELECT question_id, topic_id, selected_option, is_correct, confidence, self_diagnosis, attempted_at, time_spent_seconds
      FROM question_attempts
      WHERE question_id IN (${placeholders(ids.length)})
      ORDER BY attempted_at ASC, rowid ASC`,
@@ -214,6 +217,7 @@ function summarizeAttempts(questions: Question[]): Map<string, QuestionAttemptSu
       lastDiagnosis: r.self_diagnosis,
       lastAttemptAt: r.attempted_at,
       isFirstContact,
+      lastTimeSpentSeconds: typeof r.time_spent_seconds === 'number' ? r.time_spent_seconds : undefined,
       needsRetry,
     });
   }

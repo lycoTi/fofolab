@@ -67,14 +67,12 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   const ctx = buildFofoContext({
     context: props.context,
     notebook: props.notebook,
-    activeQuestion: activeQuestion
-      ? { question: activeQuestion.question, answered: activeQuestion.answered, dissection: activeQuestion.dissection, attempt: activeQuestion.attempt }
-      : null,
+    activeQuestion: activeQuestion ? { question: activeQuestion.question, answered: activeQuestion.answered, dissection: activeQuestion.dissection, attempt: activeQuestion.attempt } : null,
     prerequisites: props.prerequisites,
     lawExcerpts: props.lawExcerpts,
   });
   const sessionKey = activeQuestion?.question?.id ? `q:${activeQuestion.question.id}` : `t:${props.topicKey}`;
-  const { turns, loading, send, resume, clear } = useFofoConversation({
+  const { turns, loading, send, sendStored, resume, clear } = useFofoConversation({
     sessionKey,
     topicKey: props.topicKey,
     topicLabel,
@@ -82,9 +80,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     baseSignals: {
       topicMastery: props.context.currentTopicMastery,
       firstContact: props.firstContact,
-      activeQuestion: activeQuestion
-        ? { answered: activeQuestion.answered, diagnosis: activeQuestion.diagnosis, falseCertainty: activeQuestion.falseCertainty }
-        : null,
+      activeQuestion: activeQuestion ? { answered: activeQuestion.answered, diagnosis: activeQuestion.diagnosis, falseCertainty: activeQuestion.falseCertainty } : null,
     },
     editalTopics: props.editalTopics,
   });
@@ -136,11 +132,22 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     // Com a FofoIA pensando, o pedido espera (senão seria marcado como atendido e sumiria)
     if (!request || loading || handledRequest.current === request.id) return;
     handledRequest.current = request.id;
-    if (request.kind === 'hint') hint();
-    else void send('Me explique esta questão e por que as outras alternativas estão erradas.');
+    if (request.kind === 'hint') {
+      hint();
+    } else {
+      const stored = activeQuestion?.dissection?.dissection_markdown;
+      if (stored && stored.trim()) {
+        sendStored(
+          'Me explique esta questão e por que as outras alternativas estão erradas.',
+          `**Dissecação oficial do acervo:**\n\n${stored.trim()}`
+        );
+      } else {
+        void send('Me explique esta questão e por que as outras alternativas estão erradas.');
+      }
+    }
     props.onRequestHandled();
     // Cada pedido (id) é atendido uma vez; send/hint mudam a cada render
-  }, [props.request, loading]);
+  }, [props.request, loading, activeQuestion?.dissection]);
 
   // Trocou de tópico: o convite de aquecimento era do tópico anterior
   useEffect(() => setWarmup(false), [props.topicKey]);
@@ -154,18 +161,8 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
   return (
     <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
-      <FofoPanelHeader
-        topicLabel={topicLabel}
-        aiConfigured={props.aiConfigured}
-        hasTurns={turns.length > 0}
-        onClear={clear}
-      />
-      <LawPillsBar
-        excerpts={props.lawExcerpts}
-        conversationText={turns.length > 0 ? turns.map((t) => t.content).join(' ') : undefined}
-        onWiden={props.onWiden}
-        onSaveToNotebook={props.onSaveSummary}
-      />
+      <FofoPanelHeader topicLabel={topicLabel} aiConfigured={props.aiConfigured} hasTurns={turns.length > 0} onClear={clear} />
+      <LawPillsBar excerpts={props.lawExcerpts} conversationText={turns.length > 0 ? turns.map((t) => t.content).join(' ') : undefined} onWiden={props.onWiden} onSaveToNotebook={props.onSaveSummary} />
 
       <div ref={listRef} role="log" aria-label="Conversa com a FofoIA" className="flex-1 space-y-2.5 overflow-y-auto p-3.5">
         {turns.length === 0 && (

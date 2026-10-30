@@ -133,4 +133,42 @@ describe('useQuestionKeyboardShortcuts', () => {
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'B', altKey: true }));
     expect(onToggleEliminate).toHaveBeenCalledWith('B');
   });
+
+  it('quando respondida, teclas 1 a 4 selecionam o autodiagnóstico (onDiagnosis)', () => {
+    const onDiagnosis = vi.fn();
+    renderHook(() =>
+      useQuestionKeyboardShortcuts({
+        ...defaultOptions,
+        answered: true,
+        allowedDiagnoses: ['MASTERED', 'STUDYING', 'LUCKY_GUESS'],
+        onDiagnosis,
+      })
+    );
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '1' }));
+    expect(onDiagnosis).toHaveBeenCalledWith('MASTERED');
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '2' }));
+    expect(onDiagnosis).toHaveBeenCalledWith('STUDYING');
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '3' }));
+    expect(onDiagnosis).toHaveBeenCalledWith('LUCKY_GUESS');
+  });
+
+  it('quando respondida, tecla E aciona onDeepen (abrir explicação com a FofoIA)', () => {
+    const onDeepen = vi.fn();
+    renderHook(() =>
+      useQuestionKeyboardShortcuts({
+        ...defaultOptions,
+        answered: true,
+        onDeepen,
+      })
+    );
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'e' }));
+    expect(onDeepen).toHaveBeenCalledTimes(1);
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'E' }));
+    expect(onDeepen).toHaveBeenCalledTimes(2);
+  });
 });

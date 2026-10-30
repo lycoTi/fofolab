@@ -1,29 +1,36 @@
 import { useEffect } from 'react';
-import type { ReviewConfidence } from '../../types/database';
+import type { ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 
 export interface UseQuestionKeyboardShortcutsOptions {
   enabled?: boolean;
   confidence: ReviewConfidence | null;
   answered: boolean;
   options: { key: string }[];
+  allowedDiagnoses?: SelfDiagnosisType[];
   onConfidence: (confidence: ReviewConfidence) => void;
   onPick: (key: string) => void;
+  onDiagnosis?: (diagnosis: SelfDiagnosisType) => void;
   onToggleEliminate?: (key: string) => void;
   onFirstContact?: () => void;
   onHint?: () => void;
+  onDeepen?: () => void;
   onNext?: () => void;
   onPrev?: () => void;
 }
 
 /**
  * Atalhos de Teclado da Bancada de Questões (spec 11 / ergonomia de alta velocidade):
- * - 1, 2, 3, 4: Calibra a confiança (1: Sei, 2: Estudando, 3: Acho que sei, 4: Chuto).
- * - C / E ou A, B, C, D, E: Seleciona e responde a alternativa correspondente (após calibrar).
- * - Alt + Letra (ex.: Alt+A): Descarta / risca distrator na múltipla escolha.
- * - Enter / Espaço / Seta Direita: Avança para a próxima questão (quando respondida).
- * - Seta Esquerda: Volta para a questão anterior.
- * - P: Pede pista à FofoIA.
- * - V: Ver explicação antes de responder (1º contato consciente).
+ * - Antes de responder:
+ *   - 1, 2, 3, 4: Calibra a confiança (1: Sei, 2: Estudando, 3: Acho que sei, 4: Chuto).
+ *   - C / E ou A, B, C, D, E: Seleciona e responde a alternativa correspondente.
+ *   - Alt + Letra (ex.: Alt+A): Descarta / risca distrator na múltipla escolha.
+ *   - P: Pede pista à FofoIA.
+ *   - V: Ver explicação antes de responder (1º contato consciente).
+ * - Após responder:
+ *   - 1 a 5: Seleciona o autodiagnóstico correspondente ("Por quê?" / "Como foi?").
+ *   - E: Abre a explicação na FofoIA (coluna direita).
+ *   - Enter / Espaço / Seta Direita: Avança para a próxima questão.
+ *   - Seta Esquerda: Volta para a questão anterior.
  */
 export function useQuestionKeyboardShortcuts(options: UseQuestionKeyboardShortcutsOptions): void {
   const {
@@ -31,11 +38,14 @@ export function useQuestionKeyboardShortcuts(options: UseQuestionKeyboardShortcu
     confidence,
     answered,
     options: questionOptions,
+    allowedDiagnoses,
     onConfidence,
     onPick,
+    onDiagnosis,
     onToggleEliminate,
     onFirstContact,
     onHint,
+    onDeepen,
     onNext,
     onPrev,
   } = options;
@@ -92,8 +102,24 @@ export function useQuestionKeyboardShortcuts(options: UseQuestionKeyboardShortcu
         }
       }
 
-      // Se a questão já foi respondida, não processa respostas adicionais
-      if (answered) return;
+      // Se a questão já foi respondida: atalhos de diagnóstico (1..5) e explicação (E)
+      if (answered) {
+        if ((key === 'e' || key === 'E') && onDeepen) {
+          event.preventDefault();
+          onDeepen();
+          return;
+        }
+
+        if (onDiagnosis && allowedDiagnoses && allowedDiagnoses.length > 0) {
+          const num = parseInt(key, 10);
+          if (!Number.isNaN(num) && num >= 1 && num <= allowedDiagnoses.length) {
+            event.preventDefault();
+            onDiagnosis(allowedDiagnoses[num - 1]);
+            return;
+          }
+        }
+        return;
+      }
 
       // 2. Ações antes de responder: Pista (P) e 1º Contato (V)
       if (key === 'p' || key === 'P') {
@@ -147,6 +173,21 @@ export function useQuestionKeyboardShortcuts(options: UseQuestionKeyboardShortcu
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [enabled, confidence, answered, questionOptions, onConfidence, onPick, onToggleEliminate, onFirstContact, onHint, onNext, onPrev]);
+  }, [
+    enabled,
+    confidence,
+    answered,
+    questionOptions,
+    allowedDiagnoses,
+    onConfidence,
+    onPick,
+    onDiagnosis,
+    onToggleEliminate,
+    onFirstContact,
+    onHint,
+    onDeepen,
+    onNext,
+    onPrev,
+  ]);
 }
 

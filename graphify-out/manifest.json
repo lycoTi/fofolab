@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1792901863.0599327,
-    "seen": 1792901890.1020808,
-    "ast_hash": "0571338cc2e1b39a3d2aca32f26fbcc3",
+    "mtime": 1793324116.4070392,
+    "seen": 1793324637.1676636,
+    "ast_hash": "67523e6d4f6858f02fad56b984b0f2e1",
     "semantic_hash": ""
   },
   "postcss.config.js": {
@@ -18,22 +18,22 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793292683.3069801,
-    "seen": 1793295256.9040992,
-    "ast_hash": "c690d15b5e93b7cebc48f3f677a8dba6",
+    "mtime": 1793318150.5002704,
+    "seen": 1793318367.5928972,
+    "ast_hash": "58ef1be7ed7c0ce8f62c3d0f796718e9",
     "semantic_hash": ""
   },
   "src/main.tsx": {
-    "mtime": 1792528954.5776043,
-    "seen": 1792877783.4895976,
-    "ast_hash": "07b50e7b8b49a193420edb60063ce4c8",
-    "semantic_hash": "07b50e7b8b49a193420edb60063ce4c8"
+    "mtime": 1793324131.7626376,
+    "seen": 1793324637.2910662,
+    "ast_hash": "48d678217b3ce128deea463d361f1d7c",
+    "semantic_hash": ""
   },
   "tailwind.config.js": {
-    "mtime": 1792528954.5786054,
-    "seen": 1792877783.4896026,
-    "ast_hash": "882da4f143ea179549d7dc3ef82fe6d4",
-    "semantic_hash": "882da4f143ea179549d7dc3ef82fe6d4"
+    "mtime": 1793324131.778656,
+    "seen": 1793324637.2919147,
+    "ast_hash": "b8ab310c4430e1097e5709a3815606bb",
+    "semantic_hash": ""
   },
   "tsconfig.json": {
     "mtime": 1792901863.0599327,
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793315939.1797059,
-    "seen": 1793318149.5746863,
-    "ast_hash": "f0b24b221c7affe6288870e5260aab73",
+    "mtime": 1793323783.6242256,
+    "seen": 1793324637.3759427,
+    "ast_hash": "4554ae86809c1a8ba362c8c31a805b89",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1644,9 +1644,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
-    "mtime": 1793315610.5741692,
-    "seen": 1793315855.075474,
-    "ast_hash": "d2a428462e6a4a915afdcbcd31512ed9",
+    "mtime": 1793324469.3168359,
+    "seen": 1793324637.200657,
+    "ast_hash": "b53ebf2104a2fc2aebca29645e83d248",
     "semantic_hash": ""
   },
   "src/features/answer-flow/AnswerCorrection.tsx": {
@@ -1668,15 +1668,15 @@
     "semantic_hash": ""
   },
   "src/features/answer-flow/DiagnosisPicker.tsx": {
-    "mtime": 1793149046.899129,
-    "seen": 1793154863.756415,
-    "ast_hash": "36e930a51ec9f08c273237ad75ef7cd4",
+    "mtime": 1793322738.7465608,
+    "seen": 1793323736.9488466,
+    "ast_hash": "8a95e61c95ac668ee7198c6c84dba6bf",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793317676.488046,
-    "seen": 1793318149.4210048,
-    "ast_hash": "571e189e627b01bd5f258e1612ab47b1",
+    "mtime": 1793323106.3247447,
+    "seen": 1793323736.956213,
+    "ast_hash": "fd7ab561bb7f2b1280bf94b19390c8a3",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
@@ -1692,9 +1692,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoConversation.ts": {
-    "mtime": 1793282309.6457481,
-    "seen": 1793283838.0490808,
-    "ast_hash": "d012251a1e3f1d43786e90b08668dd0a",
+    "mtime": 1793323635.5914931,
+    "seen": 1793323736.9586258,
+    "ast_hash": "43a8a85031b8e8f316ed87e4c87ea6f0",
     "semantic_hash": ""
   },
   "src/features/fofoia/useFofoIaInputs.ts": {
@@ -1716,9 +1716,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionCorrection.tsx": {
-    "mtime": 1793310669.4621265,
-    "seen": 1793311715.6625235,
-    "ast_hash": "58b8c14e28a0e522a7b2c4e60bcb94a2",
+    "mtime": 1793324451.8910742,
+    "seen": 1793324637.2482038,
+    "ast_hash": "a50f4ddbe362a92d0b3dca187a99a729",
     "semantic_hash": ""
   },
   "src/features/questions/QuestionFilters.tsx": {
@@ -1728,9 +1728,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793318137.9616816,
-    "seen": 1793318149.443956,
-    "ast_hash": "47f468aa4ed4bab991eb6c2209fd8e3e",
+    "mtime": 1793323231.7380874,
+    "seen": 1793323736.9940298,
+    "ast_hash": "a7fb7107e0a0547c00426f6631397fd7",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
@@ -1770,8 +1770,8 @@
     "semantic_hash": ""
   },
   "src/lib/fofoia/signals.ts": {
-    "mtime": 1793317707.7848458,
-    "seen": 1793318149.474416,
+    "mtime": 1793318358.2143672,
+    "seen": 1793318367.936746,
     "ast_hash": "93f5ec2474c2c3057173ba338796df78",
     "semantic_hash": ""
   },
@@ -3006,9 +3006,9 @@
     "semantic_hash": ""
   },
   ".agents/rules/identidade-fofolab.md": {
-    "mtime": 1793066790.5950212,
-    "seen": 1793068660.1127298,
-    "ast_hash": "3136ab5a75d9c0b4d53140b44befedd4",
+    "mtime": 1793323202.7162979,
+    "seen": 1793323737.281285,
+    "ast_hash": "764a716ec25532582e8f72ce99c0092e",
     "semantic_hash": ""
   },
   "tools/mascote/build.cjs": {
@@ -3084,15 +3084,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoOutfitContext.test.tsx": {
-    "mtime": 1793066633.7032657,
-    "seen": 1793068660.112206,
-    "ast_hash": "1ff55e51c1449763444d377727b5fcb1",
+    "mtime": 1793324597.4911735,
+    "seen": 1793324637.1865036,
+    "ast_hash": "29d3e0da1b06645fa0e6ae4c10ee416f",
     "semantic_hash": ""
   },
   "src/__tests__/fofoSprite.test.tsx": {
-    "mtime": 1793064381.1505349,
-    "seen": 1793065130.6913836,
-    "ast_hash": "cdae11701e692a0cf3d26e7d0ed7b5c8",
+    "mtime": 1793324525.8583758,
+    "seen": 1793324637.1865075,
+    "ast_hash": "d0949ab0b84648efc93ac5478f198140",
     "semantic_hash": ""
   },
   "src/__tests__/fofoWardrobe.test.ts": {
@@ -3108,9 +3108,9 @@
     "semantic_hash": ""
   },
   "src/features/mascot/FofoSprite.tsx": {
-    "mtime": 1793064418.8015785,
-    "seen": 1793065130.733847,
-    "ast_hash": "1cd5d73010c6be28855df6dfc1b3d760",
+    "mtime": 1793324102.9990995,
+    "seen": 1793324637.2386782,
+    "ast_hash": "85bd4e8985739098ad3cde122c3aac9f",
     "semantic_hash": ""
   },
   "src/features/mascot/fofoSprites.generated.ts": {
@@ -3594,9 +3594,9 @@
     "semantic_hash": ""
   },
   "src/features/mascot/fofoThemes.ts": {
-    "mtime": 1793195743.451388,
-    "seen": 1793198280.4309363,
-    "ast_hash": "57207cd08b0c3a8bc983d4bd4931b95c",
+    "mtime": 1793323917.264977,
+    "seen": 1793324637.239557,
+    "ast_hash": "2f58ee7ba2b70c909915edc4c5a1b8c5",
     "semantic_hash": ""
   },
   ".agents/skills/fofoia-specialist/SKILL.md": {
@@ -3612,15 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793315144.8884695,
-    "seen": 1793315855.3856652,
-    "ast_hash": "345817c1e380a17a5a8052fd0de8fba0",
-    "semantic_hash": ""
-  },
-  "src/features/mascot/ThematicPerimeter.tsx": {
-    "mtime": 1793156117.737612,
-    "seen": 1793188570.589555,
-    "ast_hash": "a48d0e092773c477c2478e26089af0c8",
+    "mtime": 1793318808.2490537,
+    "seen": 1793323737.3945897,
+    "ast_hash": "be9da23d3509de1e9b0b25f99db4e428",
     "semantic_hash": ""
   },
   ".agents/skills/ui-design-specialist/SKILL.md": {
@@ -3696,9 +3690,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/CONTEXT.md": {
-    "mtime": 1793315914.2346635,
-    "seen": 1793318149.5944552,
-    "ast_hash": "dfcbc66415770541912f9e86360e60db",
+    "mtime": 1793323757.6564996,
+    "seen": 1793324637.3950365,
+    "ast_hash": "e3cf7dba58afe513ec8210601fd7279e",
     "semantic_hash": ""
   },
   "src/__tests__/lawParser.test.ts": {
@@ -3714,15 +3708,15 @@
     "semantic_hash": ""
   },
   "src/__tests__/useQuestionKeyboardShortcuts.test.ts": {
-    "mtime": 1793311668.6530495,
-    "seen": 1793311715.630164,
-    "ast_hash": "50b09c338327ada6a82c47cb6906b2c1",
+    "mtime": 1793322581.2755735,
+    "seen": 1793323736.9294405,
+    "ast_hash": "dc6ac7952d73081331a6478eb019fbb3",
     "semantic_hash": ""
   },
   "src/features/questions/useQuestionKeyboardShortcuts.ts": {
-    "mtime": 1793311579.0047522,
-    "seen": 1793311715.6629376,
-    "ast_hash": "3e50ce37b928e665ce3e27dc3aa6a3e7",
+    "mtime": 1793322690.6431859,
+    "seen": 1793323736.9940336,
+    "ast_hash": "d3235ab48962692bb9a6ab1c19d6be9f",
     "semantic_hash": ""
   },
   "src/lib/laws/catalog.ts": {
@@ -3762,9 +3756,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/lawResolver.test.ts": {
-    "mtime": 1793312070.367032,
-    "seen": 1793313506.5534296,
-    "ast_hash": "62c72c5f8e94c06039e8ea1b35b7ecd7",
+    "mtime": 1793322744.6843169,
+    "seen": 1793323736.9116452,
+    "ast_hash": "ce5f73e53a6567f42069b4b79146267d",
     "semantic_hash": ""
   },
   "src/features/fofoia/useLawExcerpts.ts": {
@@ -3780,9 +3774,9 @@
     "semantic_hash": ""
   },
   "src/lib/laws/resolver.ts": {
-    "mtime": 1793311616.3351164,
-    "seen": 1793311715.6903586,
-    "ast_hash": "714325e0d9cd9e92163af02f81266bbb",
+    "mtime": 1793323031.3152454,
+    "seen": 1793323737.1911764,
+    "ast_hash": "bf9a08406cde8a64fb629db7d3bb457a",
     "semantic_hash": ""
   },
   "src/__tests__/lawPills.test.tsx": {
@@ -3792,14 +3786,14 @@
     "semantic_hash": ""
   },
   "src/features/laws/LawPillsBar.tsx": {
-    "mtime": 1793317669.1274452,
-    "seen": 1793318149.432319,
+    "mtime": 1793318357.2748325,
+    "seen": 1793318367.8304443,
     "ast_hash": "1f485dba9ca99f4b0b6c2beb2529c5be",
     "semantic_hash": ""
   },
   "src/features/laws/LawReaderModal.tsx": {
-    "mtime": 1793317656.8268905,
-    "seen": 1793318149.432322,
+    "mtime": 1793318357.866265,
+    "seen": 1793318367.8304513,
     "ast_hash": "ce17bd6365495a883a6acc4260818825",
     "semantic_hash": ""
   },
@@ -3828,9 +3822,15 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionPacingTimer.tsx": {
-    "mtime": 1793318054.1097648,
-    "seen": 1793318149.4439514,
-    "ast_hash": "3d7e7ef18b03d8359150a01654b403c1",
+    "mtime": 1793318274.2371273,
+    "seen": 1793318367.8896632,
+    "ast_hash": "c382b9af114241a338710e8b6e0ebec3",
+    "semantic_hash": ""
+  },
+  "src/__tests__/fofoThemes.test.ts": {
+    "mtime": 1793323888.1802366,
+    "seen": 1793324637.1865106,
+    "ast_hash": "24d446d66d5190edee6484390a544f67",
     "semantic_hash": ""
   }
 }

@@ -1309,6 +1309,7 @@ export default function App() {
                         onGenerateDissection={handleGenerateDissection}
                         onOpenImport={() => setImportOpen(true)}
                         aiConfigured={aiStatus.configured}
+                        blockRunning={studyBlock.state.phase === 'FOCUS' && studyBlock.state.running}
                       />
                     )}
 

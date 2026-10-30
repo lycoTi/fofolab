@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { getQuestionComplexityProfile } from '../../lib/aiRouter';
 import { deriveDiagnosis } from '../../lib/dailyReview';
+import { getAllowedDiagnoses } from '../../lib/diagnosis';
 import { parseQuestionOptions } from '../../lib/questionOptions';
 import {
   findNextSameSubjectQuestion,
@@ -67,6 +68,8 @@ export interface QuestionWorkbenchProps {
   };
   /** O acervo ainda está abrindo (primeira vez na sessão): ainda não dá para dizer que o tópico não tem questões. */
   loading?: boolean;
+  /** Se há um bloco de foco ativo rodando no Pomodoro / FofoDoro */
+  blockRunning?: boolean;
 }
 
 interface AttemptState {
@@ -75,6 +78,7 @@ interface AttemptState {
   firstContact: boolean;
   attemptId: string | null;
   diagnosis: SelfDiagnosisType | null;
+  timeSpentSeconds?: number;
 }
 
 const FRESH: AttemptState = { confidence: null, picked: null, firstContact: false, attemptId: null, diagnosis: null };
@@ -207,17 +211,25 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     if (!active) return;
     const isCorrect = picked !== null && picked === active.question.final_answer.trim().toUpperCase();
     const diagnosis = confidence && picked ? deriveDiagnosis(confidence, isCorrect) : 'BASE_GAP';
+    const timeSpentSeconds = Math.round((Date.now() - shownAt.current) / 1000);
     const saved = onAnswer({
       question: active.question,
       selectedOptionLetter: picked,
       isCorrect,
       confidence,
       diagnosis,
-      timeSpentSeconds: Math.round((Date.now() - shownAt.current) / 1000),
+      timeSpentSeconds,
       usedAiReview: usedAi.current || picked === null,
     });
     // O diagnóstico visual começa desmarcado (null) para o estudante avaliar conscientemente sem viés
-    setCurrent({ confidence, picked, firstContact: picked === null, attemptId: saved?.attemptId ?? null, diagnosis: null });
+    setCurrent({
+      confidence,
+      picked,
+      firstContact: picked === null,
+      attemptId: saved?.attemptId ?? null,
+      diagnosis: null,
+      timeSpentSeconds,
+    });
   };
 
   const changeDiagnosis = (diagnosis: SelfDiagnosisType) => {
@@ -232,6 +244,14 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     [active?.question.options_json]
   );
 
+  const isCorrect = Boolean(
+    active && current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase()
+  );
+  const allowedDiagnoses = useMemo(
+    () => getAllowedDiagnoses({ kind: 'answered', isCorrect }),
+    [isCorrect]
+  );
+
   const toggleEliminate = (key: string) => {
     setEliminatedKeys((prev) =>
       prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
@@ -243,6 +263,9 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     confidence: current.confidence,
     answered,
     options: activeOptions,
+    allowedDiagnoses,
+    onDiagnosis: changeDiagnosis,
+    onDeepen: onAskFofoIa && active ? () => onAskFofoIa({ kind: 'deepen', question: active.question }) : undefined,
     onConfidence: (confidence) => setCurrent({ ...current, confidence }),
     onPick: (key) => {
       if (!current.confidence || answered) return;
@@ -250,7 +273,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     },
     onToggleEliminate: toggleEliminate,
     onFirstContact: () => record(null, null),
-    onHint: onAskFofoIa
+    onHint: onAskFofoIa && active
       ? () => {
           usedAi.current = true;
           onAskFofoIa({ kind: 'hint', question: active.question });
@@ -365,7 +388,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     );
   }
 
-  const isCorrect = current.picked !== null && current.picked === active.question.final_answer.trim().toUpperCase();
+  const frozenSeconds = current.timeSpentSeconds ?? active.attemptSummary?.lastTimeSpentSeconds ?? null;
 
   return (
     <div className="mx-auto max-w-3xl space-y-4">
@@ -377,6 +400,8 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         confidence={current.confidence}
         picked={current.picked}
         locked={answered}
+        frozenSeconds={frozenSeconds}
+        blockRunning={props.blockRunning}
         eliminated={eliminatedKeys}
         onToggleEliminate={toggleEliminate}
         position={pagination}
