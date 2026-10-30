@@ -72,6 +72,7 @@ function todaysSun(now: Date) {
 /**
  * Roupas de agora, refeitas a cada minuto: passar do pôr do sol, das 22:00 ou virar o mês troca sozinho.
  * `automatic` é a que valeria sem roupa fixa (mostrada no guarda-roupa como "Automática").
+ * `now` e `sun` saem do mesmo relógio, para a janela do Fofo trocar o céu junto com a roupa, sem outro timer.
  */
 export function useFofoOutfit(input: { examDates: string[]; appointed?: boolean; fixedOutfit?: OutfitId | null }) {
   const [now, setNow] = useState(() => new Date());
@@ -79,10 +80,13 @@ export function useFofoOutfit(input: { examDates: string[]; appointed?: boolean;
     const timer = window.setInterval(() => setNow(new Date()), REFRESH_MS);
     return () => window.clearInterval(timer);
   }, []);
-  const base = { now, examDates: input.examDates, appointed: input.appointed, sun: todaysSun(now) };
+  const sun = todaysSun(now);
+  const base = { now, examDates: input.examDates, appointed: input.appointed, sun };
   return {
     app: pickOutfit({ ...base, fixedOutfit: input.fixedOutfit }),
     fofodoro: pickOutfit({ ...base, fixedOutfit: input.fixedOutfit, place: 'fofodoro' }),
     automatic: pickOutfit(base),
+    now,
+    sun,
   };
 }

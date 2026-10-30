@@ -51,13 +51,15 @@ export interface OutfitInput {
 /** Fazendeiro enquanto há sol; explorador com a lanterna ao anoitecer; madrugada das 22:00 ao nascer do sol. */
 const LATE_NIGHT_HOUR = 22;
 
-function sunOrDefault(now: Date, sun: SunTimes | null | undefined): SunTimes {
+/** Sol de hoje, ou 06:00–18:00 quando o fuso é desconhecido (o mesmo padrão vale para a janela do Fofo). */
+export function sunOrDefault(now: Date, sun: SunTimes | null | undefined): SunTimes {
   if (sun) return sun;
   const day = (hour: number) => new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, 0);
   return { sunrise: day(6), sunset: day(18) };
 }
 
-function timeOfDayOutfit(now: Date, sun: SunTimes | null | undefined): OutfitId {
+/** Roupa do período do dia; a paisagem da janela usa os mesmos limites, por isso é exportada. */
+export function timeOfDayOutfit(now: Date, sun: SunTimes | null | undefined): OutfitId {
   const { sunrise, sunset } = sunOrDefault(now, sun);
   if (now.getHours() >= LATE_NIGHT_HOUR || now < sunrise) return 'madrugada';
   if (now < sunset) return 'fazendeiro';

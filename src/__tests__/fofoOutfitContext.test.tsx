@@ -63,6 +63,22 @@ describe('Roupa do Fofo no app', () => {
     expect(result.current.fofodoro).toBe('fofodeck');
   });
 
+  it('entrega a hora e o sol do mesmo relógio que troca a roupa, para a janela do Fofo não ter outro timer', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 7, 12, 21, 59, 30));
+    const { result } = renderHook(() => useFofoOutfit({ examDates: [] }));
+    expect(result.current.now.getTime()).toBe(new Date(2026, 7, 12, 21, 59, 30).getTime());
+    // O sol depende do fuso de quem roda: ou é desconhecido, ou é o de hoje
+    const { sun } = result.current;
+    if (sun) expect(sun.sunrise.getDate()).toBe(12);
+    else expect(sun).toBeNull();
+
+    act(() => {
+      vi.advanceTimersByTime(60_000);
+    });
+    expect(result.current.now.getTime()).toBe(new Date(2026, 7, 12, 22, 0, 30).getTime());
+  });
+
   it('a data da prova cadastrada veste a roupa da prova; roupa fixa ganha, mas a automática continua calculada', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(2026, 11, 6, 8, 0));
