@@ -79,6 +79,17 @@ describe('Roupa do Fofo no app', () => {
     expect(result.current.now.getTime()).toBe(new Date(2026, 7, 12, 22, 0, 30).getTime());
   });
 
+  it('o sol mantém a mesma referência durante o dia, para efeitos que dependem dele não rodarem a cada minuto', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 7, 12, 10, 0));
+    const { result } = renderHook(() => useFofoOutfit({ examDates: [] }));
+    const first = result.current.sun;
+    act(() => {
+      vi.advanceTimersByTime(60_000);
+    });
+    expect(result.current.sun).toBe(first);
+  });
+
   it('a data da prova cadastrada veste a roupa da prova; roupa fixa ganha, mas a automática continua calculada', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(2026, 11, 6, 8, 0));

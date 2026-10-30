@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { sceneKey, sceneViewAt, type SceneInput } from '../features/fofo-window/sceneView';
 import type { SunTimes } from '../features/mascot/sun';
+import { pickOutfit } from '../features/mascot/wardrobe';
 
 /** Datas locais: os limites não dependem do fuso de quem roda o teste. */
 const at = (hour: number, minute: number, month = 7, day = 12) => new Date(2026, month, day, hour, minute);
@@ -97,6 +98,16 @@ describe('Festa vem da roupa, não do calendário', () => {
 
   it('festa ainda sem camada (Halloween) fica só com céu e paisagem', () => {
     expect(sceneViewAt(input({ now: at(15, 0, 9, 20), outfit: 'halloween' })).festival).toBeNull();
+  });
+
+  it.each([
+    [10, 30, null],
+    [11, 1, 'natal'],
+    [11, 31, null],
+  ] as const)('roupa automática no dia %i/%i (mês base 0) → festa %s', (month, day, festival) => {
+    const now = at(15, 0, month, day);
+    const outfit = pickOutfit({ now, examDates: [], sun: null });
+    expect(sceneViewAt(input({ now, outfit })).festival).toBe(festival);
   });
 });
 

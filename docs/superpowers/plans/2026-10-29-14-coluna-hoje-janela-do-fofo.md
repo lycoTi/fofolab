@@ -118,7 +118,7 @@ export function sceneKey(view: SceneView): string; // muda só quando algo visí
 ```
 
 - [ ] **Passo 1: testes que falham** (sol de referência: nascer 06:00, pôr 18:00):
-  - céu: 06:39 → `'dourado'`; 06:41 → `'dia'`; 17:21 → `'dia'`; 17:20 → `'dourado'`; 18:40 → `'dourado'`; 18:41 → `'noite'`
+  - céu: 06:39 → `'dourado'`; 06:41 → `'dia'`; 17:19 → `'dia'`; 17:21 → `'dourado'`; 17:20 → `'dourado'`; 18:40 → `'dourado'`; 18:41 → `'noite'`
   - paisagem: 12:00 → `'fazenda'`; 18:00 → `'trilha'`; 21:59 → `'trilha'`; 22:00 → `'cidade'`; 05:59 → `'cidade'`
   - `sun: null` dá o mesmo que nascer 06:00 / pôr 18:00
   - festa vem da roupa: `outfit: 'natal'` em 15/03 → `'natal'`; `outfit: 'prova'` em 10/12 → `null`; `'halloween'` → `null`

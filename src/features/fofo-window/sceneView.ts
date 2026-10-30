@@ -1,5 +1,5 @@
 import type { SunTimes } from '../mascot/sun';
-import { sunOrDefault, timeOfDayOutfit, type OutfitId } from '../mascot/wardrobe';
+import { sunOrDefault, timeOfDayOutfit, type OutfitId, type PeriodOutfit } from '../mascot/wardrobe';
 import type { BlockPhase } from '../study-block/studyBlockMachine';
 
 /**
@@ -49,7 +49,7 @@ function skyAt(now: Date, sun: SunTimes | null): SkyPhase {
   return 'noite';
 }
 
-const LANDSCAPE_BY_PERIOD: Partial<Record<OutfitId, Landscape>> = {
+const LANDSCAPE_BY_PERIOD: Record<PeriodOutfit, Landscape> = {
   fazendeiro: 'fazenda',
   explorador: 'trilha',
   madrugada: 'cidade',
@@ -57,7 +57,7 @@ const LANDSCAPE_BY_PERIOD: Partial<Record<OutfitId, Landscape>> = {
 
 /** Pelo período do relógio, nunca pela roupa vestida: roupa fixada não troca o lugar. */
 function landscapeAt(now: Date, sun: SunTimes | null): Landscape {
-  return LANDSCAPE_BY_PERIOD[timeOfDayOutfit(now, sun)] ?? 'fazenda';
+  return LANDSCAPE_BY_PERIOD[timeOfDayOutfit(now, sun)];
 }
 
 /** Só o Natal tem camada própria; as outras festas ficam com céu e paisagem. */

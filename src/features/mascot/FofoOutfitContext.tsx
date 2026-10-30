@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { FofoSprite, type FofoMotion } from './FofoSprite';
 import { applyFofoThemeToDom, getFofoTheme, type FofoThemeTokens } from './fofoThemes';
 import type { PoseId } from './poses';
@@ -80,7 +80,9 @@ export function useFofoOutfit(input: { examDates: string[]; appointed?: boolean;
     const timer = window.setInterval(() => setNow(new Date()), REFRESH_MS);
     return () => window.clearInterval(timer);
   }, []);
-  const sun = todaysSun(now);
+  const day = now.toDateString();
+  // Um sol por dia: a referência só muda na virada (chave `day`), para efeitos que dependem dele não rodarem a cada minuto
+  const sun = useMemo(() => todaysSun(now), [day]);
   const base = { now, examDates: input.examDates, appointed: input.appointed, sun };
   return {
     app: pickOutfit({ ...base, fixedOutfit: input.fixedOutfit }),

@@ -58,8 +58,11 @@ export function sunOrDefault(now: Date, sun: SunTimes | null | undefined): SunTi
   return { sunrise: day(6), sunset: day(18) };
 }
 
+/** Roupas do período do dia (sem festa, prova ou roupa fixa). */
+export type PeriodOutfit = 'fazendeiro' | 'explorador' | 'madrugada';
+
 /** Roupa do período do dia; a paisagem da janela usa os mesmos limites, por isso é exportada. */
-export function timeOfDayOutfit(now: Date, sun: SunTimes | null | undefined): OutfitId {
+export function timeOfDayOutfit(now: Date, sun: SunTimes | null | undefined): PeriodOutfit {
   const { sunrise, sunset } = sunOrDefault(now, sun);
   if (now.getHours() >= LATE_NIGHT_HOUR || now < sunrise) return 'madrugada';
   if (now < sunset) return 'fazendeiro';
