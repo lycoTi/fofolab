@@ -22,8 +22,9 @@ export interface FofoThemeTokens {
 
 /**
  * Paleta Oficial FofoLab (raiz FofoDeck: Laranja Hamster #F97316 + Azul Céu #38BDF8 + Warm Onyx #0B0E17).
- * Cada profissão e época comemorativa traz sua atmosfera única para a moldura/perímetro,
- * mantendo a prancheta de leitura sempre limpa, com alto contraste e zero distração.
+ * Cada profissão e época comemorativa tinge os destaques, as linhas e o brilho de fundo do app.
+ * Destaque e linhas ficam longe das cores de status (verde, azul, vermelho/rosa) para não serem lidos
+ * como acerto, mapeamento ou lacuna.
  */
 export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
   fofodeck: {
@@ -97,9 +98,9 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ground: '#070814',
       surface: '#0E1124',
       surfaceHighlight: '#161B36',
-      borderSubtle: 'rgba(129, 140, 248, 0.2)',
+      borderSubtle: 'rgba(167, 139, 250, 0.2)',
       ambientGradient:
-        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(99, 102, 241, 0.25), rgba(192, 132, 252, 0.12), transparent 80%)',
+        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(167, 139, 250, 0.25), rgba(192, 132, 252, 0.12), transparent 80%)',
     },
   },
   halloween: {
@@ -135,9 +136,9 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ground: '#12080D',
       surface: '#1A0D14',
       surfaceHighlight: '#26131D',
-      borderSubtle: 'rgba(244, 63, 94, 0.2)',
+      borderSubtle: 'rgba(232, 182, 76, 0.2)',
       ambientGradient:
-        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(244, 63, 94, 0.24), rgba(16, 185, 129, 0.12), transparent 80%)',
+        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(232, 182, 76, 0.24), rgba(232, 182, 76, 0.12), transparent 80%)',
     },
   },
   anonovo: {
@@ -211,9 +212,9 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ground: '#080B10',
       surface: '#0F131C',
       surfaceHighlight: '#161C28',
-      borderSubtle: 'rgba(2, 132, 199, 0.18)',
+      borderSubtle: 'rgba(249, 115, 22, 0.18)',
       ambientGradient:
-        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(2, 132, 199, 0.18), rgba(100, 116, 139, 0.08), transparent 80%)',
+        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(249, 115, 22, 0.18), rgba(100, 116, 139, 0.08), transparent 80%)',
     },
   },
   nomeado: {
@@ -230,9 +231,9 @@ export const FOFO_THEMES: Record<OutfitId, FofoThemeTokens> = {
       ground: '#07120D',
       surface: '#0D1E16',
       surfaceHighlight: '#142C20',
-      borderSubtle: 'rgba(16, 185, 129, 0.2)',
+      borderSubtle: 'rgba(212, 167, 44, 0.2)',
       ambientGradient:
-        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(16, 185, 129, 0.24), rgba(245, 158, 11, 0.14), transparent 80%)',
+        'radial-gradient(ellipse 90% 60% at 50% -15%, rgba(212, 167, 44, 0.24), rgba(245, 158, 11, 0.14), transparent 80%)',
     },
   },
 };
