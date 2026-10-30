@@ -1,12 +1,13 @@
 import type { FofoContext } from './context';
 import type { EditalCandidate } from './editalMatch';
+import type { FofoPromptExtra } from './prompts';
 import type { FofoMode } from './signals';
 
 /**
  * Respostas de exemplo sem chave de IA (a tela sempre as rotula como "Exemplo simulado"). Mostram o formato de cada
  * jeito; nunca entregam gabarito e nunca são gravadas como explicação real.
  */
-export function demoFofoReply(mode: FofoMode, ctx: FofoContext, message: string, extra: { editalCandidates?: EditalCandidate[] } = {}): string {
+export function demoFofoReply(mode: FofoMode, ctx: FofoContext, message: string, extra: FofoPromptExtra = {}): string {
   const topic = `${ctx.student.currentTopicCode} ${ctx.student.currentTopicTitle}`.trim();
   const anchor = ctx.student.strongTopics[0] ?? 'um assunto que você já domina';
   switch (mode) {
@@ -34,6 +35,9 @@ export function demoFofoReply(mode: FofoMode, ctx: FofoContext, message: string,
     case 'CONTRAST':
       return `Para você nunca mais cair nessa dúvida sobre ${topic}:\n\n| No que prestar atenção | O que é certo (Gabarito) | Onde tentam te pegar |\n| :--- | :--- | :--- |\n| **Ideia central** | A regra geral prevista na norma ou conceito oficial. | Confundir com uma exceção ou hipótese parecida. |\n| **Na prática** | Aplica-se diretamente à situação apresentada no enunciado. | Generalizações como "sempre" ou "apenas". |\n| **Onde costuma confundir** | A finalidade e o momento exato em que a regra age. | Trocar a causa pelo efeito. |\n\n**Cuidado na prova:** A questão tenta induzir ao erro usando uma palavra restritiva. Lembre-se: verifique sempre se o enunciado está cobrando a regra geral ou a exceção.`;
     case 'RETRIEVAL':
+      if (extra?.isEvaluatingRetrieval) {
+        return `Exato! Você pegou o ponto central: a omissão de requisito secundário ou vício sanável não acarreta nulidade absoluta imediata, permitindo convalidação.\n\nÓtima recuperação ativa. Guarde esse detalhe para a prova!`;
+      }
       return `Vamos testar se você fixou a ideia central de ${topic}:\n\nImagine que um usuário acessou o sistema e disparou uma solicitação em que a regra geral deveria ser aplicada, mas um parâmetro secundário foi omitido. O ato continuará válido ou será nulo?\n\nPode responder de cabeça ou mandar aqui para conferir!`;
   }
 }

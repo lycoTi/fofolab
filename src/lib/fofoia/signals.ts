@@ -86,6 +86,8 @@ export interface ModeSignals {
   activeQuestion: { answered: boolean; diagnosis: SelfDiagnosisType | null; falseCertainty: boolean } | null;
   /** Perguntas do estudante já feitas nesta conversa. */
   followUps: number;
+  /** Se o último turno do tutor foi um desafio de fixação aguardando resposta do estudante. */
+  isAnsweringRetrieval?: boolean;
 }
 
 function needsFromZero(s: ModeSignals): boolean {
@@ -111,6 +113,7 @@ export function chooseMode(s: ModeSignals): FofoMode {
   if (s.requested) return s.requested;
   if (isEditalQuestion(s.text)) return 'EDITAL';
   if (isContrastQuestion(s.text)) return 'CONTRAST';
+  if (s.isAnsweringRetrieval) return 'RETRIEVAL';
   if (isRetrievalQuestion(s.text)) return 'RETRIEVAL';
   return needsFromZero(s) ? 'FROM_ZERO' : 'QUICK';
 }

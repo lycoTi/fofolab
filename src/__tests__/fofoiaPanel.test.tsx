@@ -143,6 +143,14 @@ describe('Painel da FofoIA (spec 11)', () => {
     expect(screen.getByText(/1.1 Monolitos e microsserviços/)).toBeTruthy();
   });
 
+  it('pergunta alheia ao edital recebe guardrail local a zero tokens', async () => {
+    render(<FofoIaPanel {...props()} />);
+    await ask('como fazer bolo de cenoura com cobertura?');
+    expect(screen.getByText(/Como seu tutor focado no edital/)).toBeTruthy();
+    expect(screen.getAllByText(/Microsserviços/).length).toBeGreaterThan(0);
+    expect(within(screen.getByRole('log', { name: 'Conversa com a FofoIA' })).queryByText('Rápida')).toBeNull();
+  });
+
   it('exibe atalhos dinâmicos conforme o estado do estudante', () => {
     const { rerender } = render(<FofoIaPanel {...props()} />);
     expect(screen.getByRole('button', { name: 'Aula completa' })).toBeTruthy();
@@ -456,5 +464,12 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
 
     expect(badge('Fixação')).toBeTruthy();
     expect(screen.getByText(/testar se você fixou/i)).toBeTruthy();
+
+    // 2º passo: o estudante responde ao desafio de fixação
+    await ask('acho que o ato é nulo');
+    // A FofoIA continua no modo Fixação e avalia a resposta
+    const fixacaoBadges = screen.getAllByText('Fixação');
+    expect(fixacaoBadges.length).toBeGreaterThanOrEqual(2);
+    expect(screen.getByText(/Exato! Você pegou o ponto central/)).toBeTruthy();
   });
 });

@@ -70,9 +70,12 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
   - `summary.ts`: Parser e formatador do resumo de 6 linhas para o caderno.
   - `editalMatch.ts`: Casamento léxico local de tópicos do edital.
   - `lessonPart.ts`: Leitura e continuação de aulas multipartes ("Parte N de M").
+  - `offTopicGuard.ts`: Barreira local anti-desvio flagrante a custo zero de tokens (receitas, apostas, horóscopos, esportes e saúde).
   - `demo.ts`: Respostas simuladas rotuladas para modo offline/sem chave.
 - **Testes:**
   - `src/__tests__/fofoia.test.ts`: Testes unitários de prompts, sinais, cortes e modos.
+  - `src/__tests__/offTopicGuard.test.ts`: Testes do guardrail local anti-desvio e imunidade de termos do edital.
+  - `src/__tests__/fofoiaRetrieval.test.ts`: Testes do ciclo multi-turn de recuperação ativa (desafio + avaliação).
   - `src/__tests__/fofoiaPanel.test.tsx`: Renderização do painel e interações.
   - `e2e/fofoia.spec.ts`: Teste ponta a ponta da conversa e do resumo.
 
@@ -83,5 +86,8 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 - [x] **Fatia 11.2.2:** Parser de Artigos do `ctresb/leis` & Armazenamento Local Sob Demanda (IndexedDB / Cache Local).
 - [x] **Fatia 11.2.3:** Detector & Resolvedor (Questão / Tópico ↔ Artigo Exato).
 - [x] **Fatia 11.2.4:** Interface Tátil & Pílula da Lei (Link Planalto + Leitura na Mesa de Estudos + Envio ao Caderno).
+- [x] **Barreira Local Anti-Desvio a 0 Tokens (`offTopicGuard.ts`):** Interceptação local de consultas fora do edital (receitas culinárias, apostas, horóscopo, esportes, fofocas) antes da IA, economizando 100% dos tokens nessas interações.
+- [x] **Ciclo Socrático Multi-Turn de Fixação (`RETRIEVAL`):** Avaliação direta da resposta do estudante ao desafio de recuperação ativa sem canibalizar questões reais do acervo.
+- [ ] Auto-Cache de Dissecações Inéditas no Acervo Local (`ai_dissections` / IndexedDB).
 - [ ] Ativação de modelo mais forte (`VITE_*_MODEL_STRONG`) para Aula Completa e Edital quando configurado.
-- [ ] Perfil de bancas integrado quando o banco oficial classificado estiver populado.
+- [ ] Botão "+ Flashcard" a partir da resposta da FofoIA para a Revisão do Dia.

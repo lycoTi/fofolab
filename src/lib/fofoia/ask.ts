@@ -3,6 +3,7 @@ import type { FofoContext } from './context';
 import { trimCutReply } from './cut';
 import { demoFofoReply } from './demo';
 import type { EditalCandidate } from './editalMatch';
+import { checkOffTopic } from './offTopicGuard';
 import { buildFofoPrompt, type FofoPromptExtra } from './prompts';
 import type { FofoMode } from './signals';
 import { isTrueFalseQuestion, trueFalseHint } from './trueFalseHint';
@@ -42,6 +43,17 @@ export async function askFofoIa(input: {
   if (mode === 'HINT' && active && !active.answered && isTrueFalseQuestion(active.question)) {
     const topicLabel = `${ctx.student.currentTopicCode} ${ctx.student.currentTopicTitle}`.trim();
     return { reply: trueFalseHint(topicLabel, extra?.hintsGiven ?? 0), provider: 'LOCAL', simulated: false };
+  }
+  const offTopic = checkOffTopic(message, {
+    currentTopicTitle: ctx.student.currentTopicTitle,
+    currentTopicCode: ctx.student.currentTopicCode,
+    editalTopics: extra?.editalCandidates?.map((c) => ({
+      code: c.topic.code,
+      title: c.topic.title,
+    })),
+  });
+  if (offTopic.isOffTopic && offTopic.reply) {
+    return { reply: offTopic.reply, provider: 'LOCAL', simulated: false };
   }
   if (!getAiStatus().configured) {
     return { reply: demoFofoReply(mode, ctx, message, extra), provider: 'OFFLINE_DEMO', simulated: true };

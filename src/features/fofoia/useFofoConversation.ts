@@ -5,9 +5,19 @@ import type { FofoContext } from '../../lib/fofoia/context';
 import { replyTail } from '../../lib/fofoia/cut';
 import { matchEditalTopics, type EditalTopicEntry } from '../../lib/fofoia/editalMatch';
 import { readLessonPart } from '../../lib/fofoia/lessonPart';
-import { chooseMode, shouldSuggestLesson, type FofoMode, type ModeSignals } from '../../lib/fofoia/signals';
+import { checkOffTopic } from '../../lib/fofoia/offTopicGuard';
+import {
+  chooseMode,
+  isRetrievalQuestion,
+  shouldSuggestLesson,
+  type FofoMode,
+  type ModeSignals,
+} from '../../lib/fofoia/signals';
 import { smallTalkReply } from '../../lib/fofoia/smallTalk';
 import { parseSummary, type ReviewSummary } from '../../lib/fofoia/summary';
+import { FOFO_CONVERSATION_KEY, loadSavedTurns, saveSessionTurns } from './conversationStorage';
+
+export { FOFO_CONVERSATION_KEY, loadSavedTurns };
 
 export interface FofoTurn {
   id: string;
@@ -42,60 +52,6 @@ const isQuestionOpen = (s: BaseSignals) => s.activeQuestion !== null && !s.activ
 
 let seq = 0;
 const nextId = (prefix: string) => `${prefix}-${Date.now()}-${(seq += 1)}`;
-
-/** Conversas em andamento neste computador: mapa indexado por questão ou tópico para não perder nem misturar contextos. */
-export const FOFO_CONVERSATION_KEY = 'fofolab_fofoia_conversa_v1';
-/** Depois disso a conversa é dada como encerrada (contado da última mensagem). */
-const RESTORE_WINDOW_MS = 20 * 60 * 1000;
-
-interface SavedSession {
-  savedAt: number;
-  turns: FofoTurn[];
-}
-
-type SavedSessionsMap = Record<string, SavedSession>;
-
-function loadAllSavedSessions(): SavedSessionsMap {
-  try {
-    const raw = JSON.parse(localStorage.getItem(FOFO_CONVERSATION_KEY) ?? 'null');
-    if (!raw || typeof raw !== 'object') return {};
-    // Retrocompatibilidade se tiver formato legado { topicKey, savedAt, turns }
-    if ('topicKey' in raw && Array.isArray((raw as { turns?: unknown }).turns)) {
-      const leg = raw as { topicKey?: string; savedAt?: number; turns: FofoTurn[] };
-      return { [`t:${leg.topicKey}`]: { savedAt: leg.savedAt ?? Date.now(), turns: leg.turns } };
-    }
-    return raw as SavedSessionsMap;
-  } catch {
-    return {};
-  }
-}
-
-export function loadSavedTurns(sessionKey: string): FofoTurn[] {
-  const sessions = loadAllSavedSessions();
-  const session = sessions[sessionKey];
-  if (!session || typeof session.savedAt !== 'number' || !Array.isArray(session.turns)) return [];
-  if (Date.now() - session.savedAt > RESTORE_WINDOW_MS) return [];
-  return session.turns;
-}
-
-function saveSessionTurns(sessionKey: string, turns: FofoTurn[]) {
-  try {
-    const sessions = loadAllSavedSessions();
-    if (turns.length === 0) {
-      delete sessions[sessionKey];
-    } else {
-      sessions[sessionKey] = { savedAt: Date.now(), turns };
-    }
-    // Retém até 50 sessões recentes ativas no limite de 20 minutos para segurar espaço
-    const entries = Object.entries(sessions)
-      .filter(([, s]) => Date.now() - s.savedAt <= RESTORE_WINDOW_MS)
-      .sort((a, b) => b[1].savedAt - a[1].savedAt)
-      .slice(0, 50);
-    localStorage.setItem(FOFO_CONVERSATION_KEY, JSON.stringify(Object.fromEntries(entries)));
-  } catch {
-    // Sem localStorage (janela privada)
-  }
-}
 
 /**
  * Conversa da FofoIA: isolada por questão ativa (ou tópico em navegação livre) para não poluir
@@ -159,12 +115,37 @@ export function useFofoConversation(input: {
       ]);
       return;
     }
+    // Guardrail local contra desvios flagrantes a custo zero de tokens
+    const offTopic =
+      requested === null
+        ? checkOffTopic(text, {
+            currentTopicTitle: input.ctx.student.currentTopicTitle,
+            currentTopicCode: input.ctx.student.currentTopicCode,
+            editalTopics: input.editalTopics.map((e) => ({
+              code: e.topic.code,
+              title: e.topic.title,
+            })),
+          })
+        : { isOffTopic: false };
+    const offTopicReply = offTopic.reply;
+    if (offTopic.isOffTopic && offTopicReply) {
+      setTurns((prev) => [
+        ...prev,
+        { id: nextId('s'), role: 'student', content: text, smallTalk: true },
+        { id: nextId('t'), role: 'tutor', content: offTopicReply, smallTalk: true },
+      ]);
+      return;
+    }
     const conversation: ChatTurn[] = turns
       .filter((t) => t.role !== 'notice' && !t.failed && !t.smallTalk)
       .map((t) => ({ id: t.id, role: t.role === 'student' ? 'student' : 'tutor', content: t.content, createdAt: '' }));
     const followUps = turns.filter((t) => t.role === 'student' && !t.smallTalk).length;
-    const signals: ModeSignals = { ...input.baseSignals, requested, text, followUps };
+    const lastTutorTurn = [...turns].reverse().find((t) => t.role === 'tutor' && !t.smallTalk);
+    const isAnsweringRetrieval =
+      lastTutorTurn?.mode === 'RETRIEVAL' && requested === null && !isRetrievalQuestion(text);
+    const signals: ModeSignals = { ...input.baseSignals, requested, text, followUps, isAnsweringRetrieval };
     const mode = chooseMode(signals);
+    const isEvaluatingRetrieval = mode === 'RETRIEVAL' && isAnsweringRetrieval;
     const editalCandidates = mode === 'EDITAL' ? matchEditalTopics(text, input.editalTopics) : undefined;
     const resumeAfter = options.resumeOf ? replyTail(options.resumeOf.content) : undefined;
 
@@ -178,7 +159,14 @@ export function useFofoConversation(input: {
         ctx: input.ctx,
         conversation,
         message: text,
-        extra: { editalCandidates, part: options.part, partTotal: options.partTotal, hintsGiven, resumeAfter },
+        extra: {
+          editalCandidates,
+          part: options.part,
+          partTotal: options.partTotal,
+          hintsGiven,
+          resumeAfter,
+          isEvaluatingRetrieval,
+        },
       });
       if (myGeneration !== generation.current) return;
       if (reply.failed) console.warn('FofoIA: nenhum provedor respondeu.');

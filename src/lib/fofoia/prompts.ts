@@ -67,6 +67,13 @@ Estrutura:
 3) Termine convidando o estudante: "Como você julgaria esse caso? Pode responder de cabeça ou mandar aqui para conferir."</jeito>`,
 };
 
+const RETRIEVAL_EVALUATION_INSTRUCTION = `<jeito nome="Fixação">O estudante está respondendo ao desafio de fixação (Retrieval Practice) proposto na mensagem anterior.
+Responda em até ~120 palavras com linguagem direta e acolhedora.
+Estrutura:
+1) Avalie diretamente a resposta do estudante: diga com clareza se o julgamento está correto, parcialmente correto ou se houve confusão com outra regra.
+2) Explique em 2 a 3 frases o porquê técnico (o dispositivo legal, a regra geral vs exceção ou o detalhe que a banca cobra).
+3) Feche com uma frase de fixação definitiva sobre o que lembrar na hora da prova.</jeito>`;
+
 /** Texto longo que o estudante colou (uma questão, um trecho): curto demais é pergunta solta, não âncora. */
 const PASTED_MIN_CHARS = 200;
 const PASTED_MAX_CHARS = 2000;
@@ -108,6 +115,8 @@ export interface FofoPromptExtra {
   resumeAfter?: string;
   /** Pistas já concedidas nesta conversa para guiar o andaime progressivo. */
   hintsGiven?: number;
+  /** Se o estudante está respondendo a um desafio de fixação anterior e a IA deve avaliar o acerto. */
+  isEvaluatingRetrieval?: boolean;
 }
 
 function continuationXml(extra: FofoPromptExtra): string {
@@ -141,6 +150,10 @@ export function buildFofoPrompt(
   const hintLadder = mode === 'HINT' ? hintLadderXml(extra.hintsGiven) : '';
   const lawXml = lawExcerptsXml(ctx.lawExcerpts);
   const lawLine = lawXml ? `\n${lawXml}` : '';
+  const modeInstruction =
+    mode === 'RETRIEVAL' && extra.isEvaluatingRetrieval
+      ? RETRIEVAL_EVALUATION_INSTRUCTION
+      : MODE_INSTRUCTIONS[mode];
   return `${buildStudentContextXml(ctx.student)}
 <caderno_do_topico>${escapeXml(ctx.notebookExcerpt ?? 'sem anotações ainda')}</caderno_do_topico>
 <pre_requisitos>${escapeXml(ctx.prerequisites.join(' | ') || 'nenhum cadastrado')}</pre_requisitos>
@@ -148,7 +161,7 @@ ${activeQuestionXml(ctx)}${lawLine}
 ${editalXml(extra.editalCandidates)}
 ${conversationXml(conversation)}
 ${FOFO_RULES}
-${MODE_INSTRUCTIONS[mode]}
+${modeInstruction}
 ${hintLadder}
 ${partLine}
 <mensagem_do_estudante>${escapeXml(message)}</mensagem_do_estudante>`;
