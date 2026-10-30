@@ -27,8 +27,8 @@ export const SKY_PALETTES = {
   },
   dourado: {
     gradient: ['#2a2c5a', '#4b3d73', '#7c4c7d', '#b65e74', '#e3805f', '#f6b26b'],
-    // Sol mais baixo e maior, ainda acima da cabeça do Fofo e longe da lâmpada do poste da cidade.
-    sun: { x: 22, y: 24, r: 7, glow: '#e98a6a', disc: '#ffb347', core: '#ffe3a3' },
+    // Sol maior que o do dia e um pouco mais baixo; o halo para antes do braço do poste da cidade (linha 32).
+    sun: { x: 22, y: 20, r: 7, glow: '#e98a6a', disc: '#ffb347', core: '#ffe3a3' },
     clouds: { body: '#f4b08a', shade: '#c8707a' },
   },
   noite: {
@@ -51,6 +51,9 @@ const CLOUD_SPOTS = [
 /** Largura de uma nuvem de escala 1 (bolha mais à direita: deslocamento 13 + raio 2,5). */
 const CLOUD_REACH = 16;
 
+/** Nuvem da janela estreita: colunas 11 a 25, linhas 26 a 32 (fora do relógio, do Fofo e do poste). */
+const NARROW_CLOUD = [13, 28, 0.75] as const;
+
 // Estrelas grandes em cruz, fixas no alto à esquerda, perto da lua.
 const BRIGHT_STARS = [
   [44, 8],
@@ -68,10 +71,16 @@ function paintSun(p: Painter, sun: Sun): void {
 }
 
 function paintClouds(p: Painter, width: number, colors: CloudColors): void {
+  let drawn = 0;
   for (const [x, y, scale] of CLOUD_SPOTS) {
     if (x + CLOUD_REACH * scale >= clockLeft(width)) continue;
     cloud(p, x, y, scale, colors);
+    drawn++;
   }
+  if (drawn > 0) return;
+  // Janela estreita: o relógio cobre o céu à direita, então uma nuvem pequena fica abaixo do sol, acima do Fofo.
+  const [x, y, scale] = NARROW_CLOUD;
+  cloud(p, x, y, scale, colors);
 }
 
 function paintNight(p: Painter, width: number, rnd: () => number): void {
@@ -79,7 +88,8 @@ function paintNight(p: Painter, width: number, rnd: () => number): void {
   p.glow(moon.x, moon.y, moon.r + 1, moon.r * 2 + 1, moon.glow);
   p.disc(moon.x, moon.y, moon.r, moon.disc);
   p.disc(moon.x + 3, moon.y - 2, moon.r - 1, moon.cut);
-  // Sorteia x antes de y e só então a cor, na ordem do esboço, para o céu de 142 colunas bater com ele.
+  // Sorteia x antes de y e só então a cor, na ordem do esboço, para o céu de 142 colunas bater com ele. O céu tem
+  // sorteio próprio: as estrelas não deslocam o sorteio da paisagem.
   const count = Math.round((STARS_PER_142 * width) / 142);
   for (let i = 0; i < count; i++) {
     const x = rnd() * width;
@@ -92,7 +102,7 @@ function paintNight(p: Painter, width: number, rnd: () => number): void {
   }
 }
 
-/** Pinta o céu do topo até a linha do chão, na largura toda. É sempre a primeira coisa pintada na cena. */
+/** Pinta o céu do topo até a linha do chão, na largura toda. É sempre a primeira coisa pintada no fundo. */
 export function paintSky(p: Painter, sky: SkyPhase, width: number, rnd: () => number): void {
   p.gradV(0, GROUND_Y, SKY_PALETTES[sky].gradient);
   if (sky === 'noite') {

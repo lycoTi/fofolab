@@ -40,8 +40,9 @@ function paintSkyline(p: Painter, width: number, rnd: () => number): void {
 const POOL_X = FOFO_FOOT.x;
 
 /**
- * Poste à esquerda do Fofo com o braço curvado por cima dele. No esboço o poste ficava à direita (coluna 46,
- * topo na linha 36), o que cai debaixo do relógio na coluna estreita; à esquerda ele cabe em qualquer largura.
+ * Poste à esquerda do Fofo com um braço reto que avança por cima dele e a lâmpada pendurada na ponta. No esboço o
+ * poste ficava à direita (coluna 46, topo na linha 36), o que cai debaixo do relógio na coluna estreita; à esquerda
+ * ele cabe em qualquer largura.
  */
 function paintStreetLamp(p: Painter): void {
   const post = '#2a2f55';

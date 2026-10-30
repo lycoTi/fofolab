@@ -84,10 +84,23 @@ describe('cenário pintado: céu, fazenda e cidade', () => {
     }
   });
 
-  it('céu, paisagem e chão mudam juntos: dia, dourado e noite dão desenhos diferentes', () => {
+  it('dia, dourado e noite dão céus diferentes', () => {
     for (const landscape of DRAWN) {
       const digests = SKIES.map((sky) => bufferDigest(paintScene(view({ landscape, sky }), 142).back));
       expect(new Set(digests).size).toBe(3);
+    }
+  });
+
+  it('trocar só o céu não mexe na paisagem: chão e frente ficam iguais', () => {
+    for (const width of WIDTHS) {
+      for (const landscape of ALL) {
+        const [first, ...others] = SKIES.map((sky) => paintScene(view({ landscape, sky }), width));
+        const groundOf = (buf: PixelBuffer) => buf.pixels.slice(GROUND_Y * width);
+        for (const other of others) {
+          expect(groundOf(other.back), `${landscape} em ${width}`).toEqual(groundOf(first.back));
+          expect(other.front.pixels, `${landscape} em ${width}`).toEqual(first.front.pixels);
+        }
+      }
     }
   });
 
@@ -172,6 +185,12 @@ describe('cenário pintado: céu, fazenda e cidade', () => {
       }
       expect(lit, `largura ${width}`).toBeGreaterThan(8);
     }
+  });
+
+  it('a cerca da fazenda só aparece quando cabe: na janela estreita não sobra um toco', () => {
+    const FENCE_POST = '#7a5a35';
+    expect(colorsOf(paintScene(view({ landscape: 'fazenda' }), 102).back).has(FENCE_POST)).toBe(false);
+    expect(colorsOf(paintScene(view({ landscape: 'fazenda' }), 142).back).has(FENCE_POST)).toBe(true);
   });
 
   it('a trilha ainda não tem desenho: só céu e chão, sem nada na frente', () => {

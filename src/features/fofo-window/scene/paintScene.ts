@@ -7,14 +7,7 @@ import { FOFO_FOOT, type LandscapePainter } from './stage';
 
 export { FOFO_SLOT } from './stage';
 
-/**
- * Pinta a janela do Fofo em duas camadas: `back` (céu, paisagem, chão e a sombra do Fofo) fica atrás do sprite e
- * `front` (o que passa na frente dele, como trigo e tufos) fica por cima. Determinística: mesma cena e mesma
- * largura dão sempre o mesmo desenho, porque o sorteio tem semente fixa e é consumido sempre na mesma ordem
- * (céu, fundo, frente).
- */
-
-/** Semente única da cena: a janela sai igual em qualquer máquina e a cada repintura. */
+/** Semente da cena: a janela sai igual em qualquer máquina e a cada repintura. */
 const SCENE_SEED = 11;
 
 /**
@@ -35,17 +28,22 @@ const LANDSCAPES: Record<Landscape, LandscapePainter> = {
   trilha: bareGround,
 };
 
+/**
+ * Pinta a janela do Fofo em duas camadas: `back` (céu, paisagem, chão e a sombra do Fofo) fica atrás do sprite e
+ * `front` (o que passa na frente dele, como trigo e tufos) fica por cima. Determinística: mesma cena e mesma
+ * largura dão sempre o mesmo desenho. Céu, fundo e frente têm cada um o seu sorteio (sementes vizinhas), para que
+ * a troca do céu (estrelas só à noite) não mude os prédios, o chão nem a frente.
+ */
 export function paintScene(view: SceneView, widthCells: number): { back: PixelBuffer; front: PixelBuffer } {
   const width = Math.max(1, Math.floor(widthCells));
   const back = createBuffer(width, SCENE_HEIGHT);
   const front = createBuffer(width, SCENE_HEIGHT);
-  const rnd = seeded(SCENE_SEED);
   const landscape = LANDSCAPES[view.landscape];
 
   const behind = painter(back);
-  paintSky(behind, view.sky, width, rnd);
-  landscape.back(behind, { width, rnd });
-  landscape.front(painter(front), { width, rnd });
+  paintSky(behind, view.sky, width, seeded(SCENE_SEED));
+  landscape.back(behind, { width, rnd: seeded(SCENE_SEED + 1) });
+  landscape.front(painter(front), { width, rnd: seeded(SCENE_SEED + 2) });
 
   return { back, front };
 }

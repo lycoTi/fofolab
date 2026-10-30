@@ -57,7 +57,11 @@ function backHillTop(width: number): (x: number) => number {
   };
 }
 
+/** Cerca mais curta que isso vira um toco solto ao lado do celeiro: melhor não pintar. */
+const MIN_FENCE = 12;
+
 function paintFence(p: Painter, end: number): void {
+  if (end - FIELD_START < MIN_FENCE) return;
   for (let x = FIELD_START; x < end; x++) {
     if ((x - FIELD_START) % 6 === 0) p.rect(x, GY - 5, 1, 6, '#7a5a35');
     p.px(x, GY - 4, '#9a7448');
