@@ -8,6 +8,17 @@
 - **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
 - **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE] [Claude Code]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. **12d [DONE] [Antigravity]** (`docs/specs/12d-auto-sync-e-fila-questoes.md`): sincronização automática do acervo sem clique manual (`/__acervo/index.json` + pacotes por banca), fila inteligente na aba Questões (`Inéditas`, `Errei ou chutei`, `Todas`, ordenação `Certo/Errado` antes de `Múltipla escolha`, anuladas fora da contagem do bloco) e reta final flexível (migração **v13**).
 - **27/10/2026 [Antigravity]:** Bancada de Questões polida no padrão Anti-IA (filtros colapsáveis compactos com resumo, paginação de questões seguindo o fluxo do olhar do estudante, complexidade intrínseca de 3 níveis Fácil/Média/Difícil estável, diagnóstico pós-resolução desmarcado por padrão para avaliação sem viés). Sincronização automática com stamp estritamente determinístico (notificação recorrente eliminada). Acervo Cebraspe ampliado com +500 questões pelo DeepSeek (28.344 itens com assunto, vocabulário v1694). Todos os 82 arquivos de teste (743 testes), E2E e build verificados e passando.
+- **30/10/2026 [Antigravity]:** Auto-Cache de Dissecações Inéditas no Acervo Local na FofoIA (DoD 100% verificado):
+  - **Auto-Cache em `ai_dissections` (`useFofoConversation.ts`, `App.tsx`):** Quando o estudante aprofunda numa questão inédita (`Aprofundar com a FofoIA` ou `Destrinchar alternativas`) sem dissecação prévia, a FofoIA gera a análise e o app automaticamente materializa a questão no SQLite (`materializeQuestion`) e persiste a dissecação em `ai_dissections` via `saveAiDissection`;
+  - **Zero Tokens & Zero Latência Futura:** Questões já dissecadas passam a ser abertas instantaneamente a **0 tokens de IA e 0ms de espera** via `sendStored`, mantendo paridade com o acervo minerado e poupando custos de API em consultas recorrentes;
+  - **Verificação Total:** 100 arquivos de teste (969 testes passando 100%), incluindo `useFofoConversation.test.tsx`, `fofoiaPanel.test.tsx` e `noEmojiInUi.test.ts`, build de produção limpo em 14.47s e grafo `graphify` atualizado.
+- **30/10/2026 [Antigravity]:** Bancada de Questões - Fases 15a e 15b: Ergonomia de Prova, Modo Consulta Protegido e Folha Contínua (DoD 100% verificado):
+  - **15a — Ergonomia de Prova e Folha Contínua (`QuestionCard.tsx`, `QuestionCorrection.tsx`, `AnswerCorrection.tsx`):** Eliminação da borda dupla e da "boneca russa de cards". A correção agora flui como continuação natural da prancheta (`embedded`), com régua suave de 1px. Removida a setinha `>` redundante de navegação mantendo o foco no botão primário `[ Próxima questão → ↵ ]`. Removido o círculo redundante `(i)` de explicabilidade do cronômetro para limpeza visual no padrão Anti-IA;
+  - **15b — Modo Consulta / Revisão Protegida (`QuestionWorkbench.tsx`, `topicQuestions.ts`):** Questões já resolvidas na sessão ou em blocos anteriores abrem em **Modo Consulta** com selo discreto `Modo consulta`, exibindo a tentativa anterior e o gabarito travado sem contaminar as estatísticas do bloco. Adicionado botão tátil `[ Refazer ]` para estudantes que desejam voluntariamente resolver a questão novamente;
+  - **Verificação Total:** Suites `questionWorkbench.test.tsx` (28 testes), `noEmojiInUi.test.ts` e `topicQuestions.test.ts` 100% verdes.
+- **30/10/2026 [Antigravity]:** Fofo Window - Cenário da Trilha Finalizado (`trilha.ts`, `paintScene.ts`):
+  - Desenho em pixel art da paisagem de trilha do explorador com silhueta de montanhas, pinheiros, ponto de luz quente e chão de terra com sombra projetada do Fofo, compatível com os 3 períodos celestes (dia, dourado, noite);
+  - Testes em `fofoScenePaint.test.ts` atualizados e passando 100%.
 - **29/10/2026 [Antigravity]:** Barreira Local Anti-Desvio a Zero Tokens & Ciclo Socrático Multi-Turn de Fixação na FofoIA (DoD 100% verificado):
   - **Barreira Local Anti-Desvio (`offTopicGuard.ts`):** interceptação local de perguntas desvinculadas de concursos (receitas culinárias, apostas/jogos de azar, horóscopo/esoterismo, resultados esportivos, fofocas de celebridades e prescrições médicas de saúde) **antes** de qualquer chamada à IA. Retorna imediatamente a custo **zero de tokens e 0ms de rede** com a voz acolhedora do hamster convidando a voltar ao edital ativo; imune a falsos positivos (termos do edital como receita orçamentária ou blockchain de TI são respeitados);
   - **Ciclo Socrático Multi-Turn de Fixação (`RETRIEVAL`):** quando o estudante responde ao micro-cenário do "Testar se fixei" (ex.: "acho que o ato é nulo"), o motor reconhece `isAnsweringRetrieval` em `signals.ts` e `prompts.ts`, mantendo o modo `Fixação` e ativando a instrução de avaliação direta `<avaliacao_de_fixacao>` para julgar se o estudante acertou, apontar a distinção técnica e fechar a recuperação ativa;
@@ -163,18 +174,18 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
-- [ ] **Bancada de Questões — Refino de Alto Rendimento, Navegação Protegida & Inteligência de Ritmo (Fase 15 / Fatia 15)** (29/10/2026 [Antigravity], desenhado com o dono):
-  - **15a — Ergonomia de Prova e Limpeza Visual (UI/UX Anti-IA):**
+- [PARCIAL] **Bancada de Questões — Refino de Alto Rendimento, Navegação Protegida & Inteligência de Ritmo (Fase 15 / Fatia 15)** (30/10/2026 [Antigravity]):
+  - [DONE] **15a — Ergonomia de Prova e Limpeza Visual (UI/UX Anti-IA):**
     - Remoção da redundância da setinha `>` na paginação da folha (manter apenas `[ ← Anterior ]`, `Questão X de Y` e o botão primário `[ Próxima questão → ↵ ]` com destaque tátil);
     - Fim da "boneca russa de cards" na folha de questões: eliminar a borda dupla interna da correção, integrando veredito e diagnóstico como continuação contínua da prancheta via régua de 1px (`border-t border-white/[0.06]`);
     - Limpeza de ícones informativos redundantes no cabeçalho editorial (eliminar os dois círculos `(i)` concorrentes de complexidade e cronômetro);
     - Estabilidade espacial ancorada na barra inferior para evitar layout shift entre estado antes e depois de responder.
-  - **15b — Modo Consulta / Revisão Protegida de Questões Anteriores:**
+  - [DONE] **15b — Modo Consulta / Revisão Protegida de Questões Anteriores:**
     - Permitir recuar livremente com `[ ← Anterior ]` (ou atalho `←`) em questões já feitas do bloco/sessão;
     - A questão revisitada abre em **Modo Consulta Travado** (exibe a tentativa anterior, o gabarito oficial, o veredito e a dissecação);
-    - **Blindagem das Estatísticas:** impede resolução duplicada acidental no meio do bloco, preservando a pureza das métricas de acerto e tempo da sessão;
+    - **Blindagem das Estatísticas:** impede resolução duplicada acidental no meio do bloco, preservando a pureza das métricas de acerto e tempo da sessão, com opção voluntária de `Refazer`;
     - Diálogo com a FofoIA (`Explicar com a FofoIA`) e envio de notas ao caderno totalmente liberados na questão revisitada.
-  - **15c — Ferramentas Ativas de Resolução na Folha (Grifo & Caderno Rápido):**
+  - [ ] **15c — Ferramentas Ativas de Resolução na Folha (Grifo & Caderno Rápido):**
     - **Grifo no Enunciado:** ferramenta de marca-texto sutil para palavras-chave e termos restritivos típicos da Cebraspe/FGV ("exclusivamente", "vedado", "sempre", conceitos técnicos);
     - **Nota Rápida no Caderno (`+ Caderno`):** campo compacto pós-questão para registrar insights e pegadinhas direto nas anotações do tópico sem sair do fluxo de resolução.
   - **15d — Inteligência de Ritmo & Simulação de Prova Real (Micro na Bancada & Macro no App):**
