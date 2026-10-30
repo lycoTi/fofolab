@@ -3,7 +3,7 @@ import { Loader2, Send } from 'lucide-react';
 import type { StudentContextSnapshot } from '../../lib/aiRouter';
 import { buildFofoContext, type LawExcerpt } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
-import type { AiDissection, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
+import type { AiDissection, AiProviderUsed, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
 import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import { LawPillsBar } from '../laws/LawPillsBar';
 import { FofoMessage } from './FofoMessage';
@@ -55,10 +55,9 @@ export interface FofoIaPanelProps {
   warmupEnabled: boolean;
   topicHasQuestions: boolean;
   onTryQuestions: () => void;
-  /** O pedido foi atendido: o App o limpa (senão voltaria a ser enviado quando o painel reaparecer). */
   onRequestHandled: () => void;
-  /** Fragmentos oficiais da letra da lei (Fatia 11.2.3). */
   lawExcerpts?: LawExcerpt[];
+  onAutoSaveDissection?: (params: { question: Question; provider: AiProviderUsed; dissectionMarkdown: string }) => void;
 }
 
 /** FofoIA (spec 11): um só professor na coluna direita, com jeitos de ensinar escolhidos pelos sinais do estudante. */
@@ -83,6 +82,9 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
       activeQuestion: activeQuestion ? { answered: activeQuestion.answered, diagnosis: activeQuestion.diagnosis, falseCertainty: activeQuestion.falseCertainty } : null,
     },
     editalTopics: props.editalTopics,
+    onAutoSaveDissection: props.onAutoSaveDissection && activeQuestion
+      ? (d) => props.onAutoSaveDissection?.({ question: activeQuestion.question, ...d })
+      : undefined,
   });
   const [draft, setDraft] = useState('');
   const [warmup, setWarmup] = useState(false);
@@ -142,7 +144,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
           `**Dissecação oficial do acervo:**\n\n${stored.trim()}`
         );
       } else {
-        void send('Me explique esta questão e por que as outras alternativas estão erradas.');
+        void send('Me explique esta questão e por que as outras alternativas estão erradas.', null, { saveAsDissection: true });
       }
     }
     props.onRequestHandled();
@@ -218,7 +220,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
           talked={talked}
           onHint={hint}
           onLesson={() => lesson()}
-          onSend={(msg, mode) => void send(msg, mode ?? null)}
+          onSend={(msg, mode, opts) => void send(msg, mode ?? null, opts)}
         />
         <form onSubmit={(e) => { e.preventDefault(); submit(); }} className="flex items-end gap-2">
           <textarea

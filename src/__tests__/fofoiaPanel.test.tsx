@@ -184,6 +184,24 @@ describe('Painel da FofoIA (spec 11)', () => {
     expect(screen.getAllByText(/Me explique esta questão/).length).toBeGreaterThan(0);
     expect(props().onRequestHandled).toBeDefined();
   });
+
+  it('pedido "Aprofundar" com dissecação já guardada usa sendStored a 0 tokens', async () => {
+    const storedDissection = {
+      id: 'd1',
+      question_id: question.id,
+      provider_used: 'EXAMPLE' as const,
+      dissection_markdown: 'Gabarito E: Monolitos não exigem comunicação por rede.',
+      prerequisites_json: '[]',
+      chat_history_json: '[]',
+      created_at: new Date().toISOString(),
+    };
+    const q = { question, answered: true, dissection: storedDissection, diagnosis: null, falseCertainty: false };
+    const onAutoSave = vi.fn();
+    render(<FofoIaPanel {...props({ activeQuestion: q, request: { id: 2, kind: 'deepen' }, onAutoSaveDissection: onAutoSave })} />);
+    expect(screen.getByText(/Dissecação oficial do acervo:/)).toBeTruthy();
+    expect(screen.getByText(/Monolitos não exigem comunicação por rede/)).toBeTruthy();
+    expect(onAutoSave).not.toHaveBeenCalled();
+  });
 });
 
 describe('Aquecimento antes da aula (spec 11 §5.4, camada 3)', () => {

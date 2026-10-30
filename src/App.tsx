@@ -1447,6 +1447,16 @@ export default function App() {
                   onWiden={(minWidth) => {
                     if (rightWidth.width < minWidth) rightWidth.setWidth(minWidth);
                   }}
+                  onAutoSaveDissection={(params) => {
+                    materializeQuestion(params.question);
+                    saveAiDissection({
+                      questionId: params.question.id,
+                      provider: params.provider,
+                      dissectionMarkdown: params.dissectionMarkdown,
+                      prerequisites: [],
+                    });
+                    setQuestionsVersion((v) => v + 1);
+                  }}
                 />
               ) : (
                 <p className="p-4 text-xs text-slate-400">Escolha um tópico para conversar com a FofoIA.</p>

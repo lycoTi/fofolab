@@ -13,7 +13,7 @@ import { SKY_PALETTES, paintSky } from '../features/fofo-window/scene/sky';
 import type { Landscape, SceneView, SkyPhase } from '../features/fofo-window/sceneView';
 
 const SKIES: SkyPhase[] = ['dia', 'dourado', 'noite'];
-const DRAWN: Landscape[] = ['fazenda', 'cidade'];
+const DRAWN: Landscape[] = ['fazenda', 'cidade', 'trilha'];
 const ALL: Landscape[] = ['fazenda', 'cidade', 'trilha'];
 // Coluna de 240 px, a do esboço e a de 520 px.
 const WIDTHS = [102, 142, 242];
@@ -193,15 +193,21 @@ describe('cenário pintado: céu, fazenda e cidade', () => {
     expect(colorsOf(paintScene(view({ landscape: 'fazenda' }), 142).back).has(FENCE_POST)).toBe(true);
   });
 
-  it('a trilha ainda não tem desenho: só céu e chão, sem nada na frente', () => {
+  it('a trilha tem montanhas e pinheiros em silhueta, ponto de luz quente e chão de terra com sombra', () => {
     for (const width of WIDTHS) {
       for (const sky of SKIES) {
         const { back, front } = paintScene(view({ landscape: 'trilha', sky }), width);
         const reference = skyOnly(sky, width);
-        for (let y = 0; y < GROUND_Y; y++) {
-          for (let x = 0; x < width; x++) expect(at(back, x, y)).toBe(at(reference, x, y));
+        // Não é mais só céu e chão liso: há desenho nas camadas
+        let mountainPixels = 0;
+        for (let y = 30; y < GROUND_Y; y++) {
+          for (let x = 0; x < width - CLOCK_COLUMNS; x++) {
+            if (at(back, x, y) !== at(reference, x, y)) mountainPixels++;
+          }
         }
-        expect(front.pixels.every((c) => c === null)).toBe(true);
+        expect(mountainPixels, `montanhas em ${width}/${sky}`).toBeGreaterThan(30);
+        // Há elementos na frente também
+        expect(front.pixels.some((c) => c !== null), `frente em ${width}`).toBe(true);
       }
     }
   });

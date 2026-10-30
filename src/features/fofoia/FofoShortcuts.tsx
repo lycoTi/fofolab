@@ -1,4 +1,5 @@
 import type { FofoActiveQuestion } from './FofoIaPanel';
+import type { SendOptions } from './useFofoConversation';
 import type { FofoMode } from '../../lib/fofoia/signals';
 
 const shortcut =
@@ -12,7 +13,7 @@ export interface FofoShortcutsProps {
   talked: boolean;
   onHint: () => void;
   onLesson: () => void;
-  onSend: (message: string, mode?: FofoMode) => void;
+  onSend: (message: string, mode?: FofoMode, options?: SendOptions) => void;
 }
 
 /**
@@ -86,6 +87,8 @@ export function FofoShortcuts({
               onClick={() =>
                 onSend(
                   `Por que o gabarito oficial é ${activeQuestion.question.final_answer} e quais são os erros das outras alternativas?`,
+                  undefined,
+                  { saveAsDissection: !activeQuestion.dissection }
                 )
               }
               className={shortcut}

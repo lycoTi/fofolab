@@ -88,6 +88,6 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 - [x] **Fatia 11.2.4:** Interface Tátil & Pílula da Lei (Link Planalto + Leitura na Mesa de Estudos + Envio ao Caderno).
 - [x] **Barreira Local Anti-Desvio a 0 Tokens (`offTopicGuard.ts`):** Interceptação local de consultas fora do edital (receitas culinárias, apostas, horóscopo, esportes, fofocas) antes da IA, economizando 100% dos tokens nessas interações.
 - [x] **Ciclo Socrático Multi-Turn de Fixação (`RETRIEVAL`):** Avaliação direta da resposta do estudante ao desafio de recuperação ativa sem canibalizar questões reais do acervo.
-- [ ] Auto-Cache de Dissecações Inéditas no Acervo Local (`ai_dissections` / IndexedDB).
+- [x] **Auto-Cache de Dissecações Inéditas no Acervo Local (`ai_dissections` / IndexedDB):** Quando o estudante pede "Aprofundar com a FofoIA" ou "Destrinchar alternativas" numa questão sem dissecação no acervo, a análise gerada pela IA real é automaticamente materializada e persistida no banco SQLite local (`ai_dissections`), tornando qualquer consulta futura imediata a custo zero de tokens e 0ms de rede via `sendStored`.
 - [ ] Ativação de modelo mais forte (`VITE_*_MODEL_STRONG`) para Aula Completa e Edital quando configurado.
 - [ ] Botão "+ Flashcard" a partir da resposta da FofoIA para a Revisão do Dia.

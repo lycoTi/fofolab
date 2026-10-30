@@ -1,6 +1,7 @@
 import type { Landscape, SceneView } from '../sceneView';
 import { cidade } from './landscapes/cidade';
 import { fazenda } from './landscapes/fazenda';
+import { trilha } from './landscapes/trilha';
 import { SCENE_HEIGHT, createBuffer, painter, seeded, type PixelBuffer } from './pixelBuffer';
 import { paintSky } from './sky';
 import { FOFO_FOOT, type LandscapePainter } from './stage';
@@ -10,22 +11,10 @@ export { FOFO_SLOT } from './stage';
 /** Semente da cena: a janela sai igual em qualquer máquina e a cada repintura. */
 const SCENE_SEED = 11;
 
-/**
- * A trilha do explorador ainda não tem desenho aprovado (spec 7.2): enquanto isso, a janela mostra o céu da hora e
- * um chão de terra liso com a sombra do Fofo, sem fingir montanhas nem fogueira.
- */
-const bareGround: LandscapePainter = {
-  back(p, { rnd }) {
-    p.ground('#5a4a3a', '#76624c', '#4b3d30', '#3f3328', rnd);
-    p.ellipse(FOFO_FOOT.x, FOFO_FOOT.y, 11, 2, '#2e251d');
-  },
-  front() {},
-};
-
 const LANDSCAPES: Record<Landscape, LandscapePainter> = {
   fazenda,
   cidade,
-  trilha: bareGround,
+  trilha,
 };
 
 /**

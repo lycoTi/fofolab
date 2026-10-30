@@ -15,6 +15,7 @@ import {
 } from '../../lib/fofoia/signals';
 import { smallTalkReply } from '../../lib/fofoia/smallTalk';
 import { parseSummary, type ReviewSummary } from '../../lib/fofoia/summary';
+import type { AiProviderUsed } from '../../types/database';
 import { FOFO_CONVERSATION_KEY, loadSavedTurns, saveSessionTurns } from './conversationStorage';
 
 export { FOFO_CONVERSATION_KEY, loadSavedTurns };
@@ -44,6 +45,8 @@ export interface SendOptions {
   partTotal?: number;
   /** Resposta cortada que a IA deve continuar de onde parou. */
   resumeOf?: FofoTurn;
+  /** Salva a explicação gerada no acervo local (ai_dissections) para consultas futuras a 0 tokens. */
+  saveAsDissection?: boolean;
 }
 
 export type BaseSignals = Omit<ModeSignals, 'requested' | 'text' | 'followUps'>;
@@ -64,6 +67,7 @@ export function useFofoConversation(input: {
   ctx: FofoContext;
   baseSignals: BaseSignals;
   editalTopics: EditalTopicEntry[];
+  onAutoSaveDissection?: (dissection: { provider: AiProviderUsed; dissectionMarkdown: string }) => void;
 }) {
   const currentKey = input.sessionKey ?? `t:${input.topicKey}`;
   const [turns, setTurns] = useState<FofoTurn[]>(() => loadSavedTurns(currentKey));
@@ -170,6 +174,22 @@ export function useFofoConversation(input: {
       });
       if (myGeneration !== generation.current) return;
       if (reply.failed) console.warn('FofoIA: nenhum provedor respondeu.');
+
+      if (
+        options.saveAsDissection &&
+        !reply.failed &&
+        !reply.simulated &&
+        !reply.cut &&
+        reply.reply &&
+        reply.provider !== 'LOCAL' &&
+        reply.provider !== 'OFFLINE_DEMO'
+      ) {
+        input.onAutoSaveDissection?.({
+          provider: reply.provider as AiProviderUsed,
+          dissectionMarkdown: reply.reply,
+        });
+      }
+
       // O resto de uma parte cortada não tem "Parte N de M" no topo: herda a parte, para o "Continuar" aparecer
       const part = mode === 'LESSON' ? (readLessonPart(reply.reply) ?? options.resumeOf?.part ?? null) : null;
       const tutor: FofoTurn = {

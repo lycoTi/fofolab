@@ -192,4 +192,54 @@ describe('Conversa da FofoIA: sobrevive a recarregar a página por 20 minutos', 
     );
     expect(reopened.result.current.turns).toEqual([]);
   });
+
+  it('salva a explicação gerada no acervo (onAutoSaveDissection) apenas com IA real e saveAsDissection', async () => {
+    const onAutoSave = vi.fn();
+    const hook = renderHook(() =>
+      useFofoConversation({
+        sessionKey: 'q:555',
+        topicKey: 'topico-1',
+        topicLabel: 'Tópico 1',
+        ctx,
+        baseSignals: base,
+        editalTopics: [],
+        onAutoSaveDissection: onAutoSave,
+      }),
+    );
+
+    // 1. Pergunta normal sem saveAsDissection: não salva no acervo
+    act(() => {
+      void hook.result.current.send('uma pergunta qualquer');
+    });
+    await act(async () => {
+      resolveReply({ reply: 'uma resposta', provider: 'GROQ_FREE', simulated: false });
+    });
+    expect(onAutoSave).not.toHaveBeenCalled();
+
+    // 2. Com saveAsDissection, mas em modo simulado (offline demo): não polui o acervo
+    act(() => {
+      void hook.result.current.send('explique a questão', null, { saveAsDissection: true });
+    });
+    await act(async () => {
+      resolveReply({ reply: 'exemplo simulado', provider: 'OFFLINE_DEMO', simulated: true });
+    });
+    expect(onAutoSave).not.toHaveBeenCalled();
+
+    // 3. Com saveAsDissection e IA real: salva no acervo para consultas futuras a 0 tokens
+    act(() => {
+      void hook.result.current.send('explique a questão', null, { saveAsDissection: true });
+    });
+    await act(async () => {
+      resolveReply({
+        reply: 'Análise detalhada da questão e das alternativas...',
+        provider: 'GROQ_FREE',
+        simulated: false,
+      });
+    });
+    expect(onAutoSave).toHaveBeenCalledTimes(1);
+    expect(onAutoSave).toHaveBeenCalledWith({
+      provider: 'GROQ_FREE',
+      dissectionMarkdown: 'Análise detalhada da questão e das alternativas...',
+    });
+  });
 });
