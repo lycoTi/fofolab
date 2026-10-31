@@ -358,6 +358,30 @@ describe('Importação de questões, tópicos e explicações', () => {
     expect(updated.dissection_markdown).toBe('v2');
     expect(updated.provider_used).toBe('DEEPSEEK_FALLBACK');
   });
+
+  it('cria uma questão personalizada (flashcard) associada ao tópico com dissecação', async () => {
+    const { db } = await openDatabase();
+    const plan = db.getActiveStudyPlan()!;
+    const subjects = db.getSubjectsByPlan(plan.id);
+    const topics = db.getTopicsBySubject(subjects[0].id);
+    const topic = topics[0];
+    const created = db.createCustomQuestion({
+      topicId: topic.id,
+      statement: 'O princípio da publicidade veda sigilo em atos administrativos com dados pessoais.',
+      finalAnswer: 'E',
+      dissectionMarkdown: 'Dados pessoais são exceção de sigilo legal (LGPD e LAI).',
+    });
+
+    expect(created.id).toMatch(/^q/);
+    expect(created.topic_id).toBe(topic.id);
+    expect(created.subject_id).toBe(topic.subject_id);
+    expect(created.final_answer).toBe('E');
+    expect(created.source_label).toBe('Flashcard · FofoIA');
+
+    const item = db.getQuestionWithDissection(created.id);
+    expect(item).not.toBeNull();
+    expect(item?.dissection?.dissection_markdown).toBe('Dados pessoais são exceção de sigilo legal (LGPD e LAI).');
+  });
 });
 
 describe('Plano montado a partir do edital (docs/specs/07)', () => {

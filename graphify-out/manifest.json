@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793404384.7947605,
-    "seen": 1793404915.865517,
-    "ast_hash": "d0f0c14168494be9edbd0b81e5a1b7ae",
+    "mtime": 1793405127.8718798,
+    "seen": 1793405792.8946757,
+    "ast_hash": "81b1165f10cc6b68737fefccd132c91e",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793404772.0856829,
-    "seen": 1793404916.2781048,
-    "ast_hash": "56968f41a486c93f77c459775f6b6208",
+    "mtime": 1793405740.8548274,
+    "seen": 1793405793.1198974,
+    "ast_hash": "e1748fdee1c2f39cd5915117264c0e03",
     "semantic_hash": ""
   },
   "README.md": {
@@ -300,9 +300,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/database.test.ts": {
-    "mtime": 1793129524.1486385,
-    "seen": 1793134833.7255616,
-    "ast_hash": "f76f8c95fb7b7d02b152f622ccfdf098",
+    "mtime": 1793405552.5754316,
+    "seen": 1793405792.907067,
+    "ast_hash": "6b6ab7d13b45deea4fccffd39c31117a",
     "semantic_hash": ""
   },
   "src/__tests__/fixtures/schema-v1.sql": {
@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "src/__tests__/fofoiaPanel.test.tsx": {
-    "mtime": 1793402753.051876,
-    "seen": 1793403201.0443804,
-    "ast_hash": "0dbfd8270cefbac5816c47ffc8383edc",
+    "mtime": 1793405560.7222526,
+    "seen": 1793405792.9183533,
+    "ast_hash": "2b86a49672beb8f940ecc50b27d8be12",
     "semantic_hash": ""
   },
   "src/__tests__/questionWorkbench.test.tsx": {
@@ -1674,9 +1674,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoIaPanel.tsx": {
-    "mtime": 1793394751.9220703,
-    "seen": 1793395568.7094567,
-    "ast_hash": "b3394412738b1f3e4c9bee311cea3daa",
+    "mtime": 1793405028.749498,
+    "seen": 1793405792.975314,
+    "ast_hash": "2055b05f6b75cab5340ffb3cfbb58d74",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
@@ -3612,9 +3612,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CONTEXT.md": {
-    "mtime": 1793403122.6690712,
-    "seen": 1793403201.2898614,
-    "ast_hash": "640cda154ff5d1c8d09acd9caccc957d",
+    "mtime": 1793405717.7708948,
+    "seen": 1793405793.1384275,
+    "ast_hash": "c92ef37c180f454528bbcd26c9f299ff",
     "semantic_hash": ""
   },
   ".agents/skills/ui-design-specialist/SKILL.md": {
@@ -4008,9 +4008,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/CreateFlashcardModal.tsx": {
-    "mtime": 1793404747.2464771,
-    "seen": 1793404915.9901655,
-    "ast_hash": "499022f00d7519e2b06e25475c094799",
+    "mtime": 1793405466.6803408,
+    "seen": 1793405792.975309,
+    "ast_hash": "306ec7288367a4074b4c8da0b4456dbf",
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoInputArea.tsx": {
@@ -4035,6 +4035,12 @@
     "mtime": 1793403869.6911664,
     "seen": 1793404916.0942059,
     "ast_hash": "4074f106c4d44d900416697a1e0d30f4",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/fofoTypes.ts": {
+    "mtime": 1793405008.2458484,
+    "seen": 1793405792.9786189,
+    "ast_hash": "d53441b70095cf4b56feb1a956a8bcbc",
     "semantic_hash": ""
   }
 }

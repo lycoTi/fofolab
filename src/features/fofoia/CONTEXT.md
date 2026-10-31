@@ -48,10 +48,13 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 
 ## 4. Estrutura de Código & Onde as Coisas Moram
 - **Componentes de Interface (`src/features/fofoia/`):**
-  - `FofoIaPanel.tsx`: Painel mestre na coluna direita (<= 250 linhas), gerenciamento de largura (`LESSON_MIN_WIDTH = 560`), rolagem e entrada multilinhas com auto-expand (até ~35% de altura da tela, Enter envia e Shift+Enter quebra linha).
+  - `FofoIaPanel.tsx`: Painel mestre na coluna direita (<= 250 linhas), gerenciamento de largura (`LESSON_MIN_WIDTH = 560`), rolagem e integração com flashcards da revisão.
+  - `FofoInputArea.tsx`: Área de texto multilinhas com auto-expand (até ~35% de altura da tela, Enter envia e Shift+Enter quebra linha) e atalhos contextuais.
+  - `CreateFlashcardModal.tsx`: Diálogo modal acessível e tátil para formulação de flashcards (Certo/Errado ou Conceito Aberto com gabarito e explicação) acionado por `+ Flashcard`.
+  - `fofoTypes.ts`: Tipos compartilhados (`FofoActiveQuestion`, `FofoStudentAttempt`).
   - `FofoPanelHeader.tsx`: Cabeçalho compacto com visual do hamster, indicador de tópico e botão "Limpar" para reiniciar a lousa da questão ativa.
   - `FofoShortcuts.tsx`: Barra de atalhos contextuais orientados ao momento pedagógico (questão em aberto: Pista/Conceito-base; erro: Por que errei?/Aula/Resumo; acerto: Destrinchar alternativas/Aula/Resumo; livre: Aula/Do zero/Resumo).
-  - `FofoMessage.tsx`: Balão de mensagem, expressão do hamster, selinho de jeito, ações de aula/resumo, e ação `+ Caderno` para transferir explicações diretamente para o caderno do tópico.
+  - `FofoMessage.tsx`: Balão de mensagem, expressão do hamster, selinho de jeito, ações de aula/resumo, `+ Caderno` e `+ Flashcard` para a Revisão do Dia.
   - `useFofoConversation.ts`: Hook de ciclo de vida da conversa, isolamento por `sessionKey` (`q:<id>` por questão, ou `t:<topico>` em navegação livre), sobrevivência a recarregamento por até 20 minutos e retomada de partes cortadas.
   - `useFofoIaInputs.ts`: Coleta de insumos (caderno até 1.500 caracteres, questão ativa com tentativa calibrada, pontos fortes).
   - `WarmupInvite.tsx` & `warmup.ts`: Convite de aquecimento pré-aula (opcional para tópicos sem tentativas).
@@ -90,4 +93,4 @@ O app escolhe o jeito automaticamente através de **sinais heurísticos locais**
 - [x] **Ciclo Socrático Multi-Turn de Fixação (`RETRIEVAL`):** Avaliação direta da resposta do estudante ao desafio de recuperação ativa sem canibalizar questões reais do acervo.
 - [x] **Auto-Cache de Dissecações Inéditas no Acervo Local (`ai_dissections` / IndexedDB):** Quando o estudante pede "Aprofundar com a FofoIA" ou "Destrinchar alternativas" numa questão sem dissecação no acervo, a análise gerada pela IA real é automaticamente materializada e persistida no banco SQLite local (`ai_dissections`), tornando qualquer consulta futura imediata a custo zero de tokens e 0ms de rede via `sendStored`.
 - [x] **Ativação de modelo mais forte (`VITE_*_MODEL_STRONG`) para Aula Completa e Edital quando configurado:** Suporte ponta a ponta a modelos avançados de raciocínio profundo no Groq (`VITE_GROQ_MODEL_STRONG`), Gemini (`VITE_GEMINI_MODEL_STRONG`), DeepSeek (`VITE_DEEPSEEK_MODEL_STRONG`) e ponte agy local (`VITE_AGY_MODEL_STRONG` com `gemini-3.8-flash-high`), exibindo o selo discreto `Modelo forte` nas respostas e mantendo o modelo rápido e econômico no chat cotidiano.
-- [ ] Botão "+ Flashcard" a partir da resposta da FofoIA para a Revisão do Dia.
+- [x] **Botão "+ Flashcard" a partir da resposta da FofoIA para a Revisão do Dia:** Criação sob demanda de flashcards com formatação Certo/Errado ou Conceito Aberto, salvando imediatamente no banco SQLite com tag `source_label = 'Flashcard · FofoIA'` e dissecação associada, alimentando o ciclo espaçado da Revisão do Dia (spec 09).

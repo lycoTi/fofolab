@@ -133,6 +133,7 @@ export function CreateFlashcardModal({
             rows={3}
             value={statement}
             onChange={(e) => setStatement(e.target.value)}
+            aria-label="Afirmação ou pergunta do flashcard"
             placeholder="Ex.: Em contratos administrativos de TI, a repactuação só pode ser solicitada após 12 meses..."
             className="w-full resize-none rounded-lg border border-slate-800 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none placeholder:text-slate-500 focus:border-amber-500/70"
           />

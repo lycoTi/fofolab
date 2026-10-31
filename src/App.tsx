@@ -95,6 +95,7 @@ import {
   restoreDatabaseBackup,
   restoreDatabaseFromBytes,
   saveAiDissection,
+  createCustomQuestion,
   savePdfSourceProgress,
   saveSelfAssessment,
   setActiveStudyPlan,
@@ -1460,6 +1461,10 @@ export default function App() {
                       dissectionMarkdown: params.dissectionMarkdown,
                       prerequisites: [],
                     });
+                    setQuestionsVersion((v) => v + 1);
+                  }}
+                  onCreateFlashcard={(params) => {
+                    createCustomQuestion(params);
                     setQuestionsVersion((v) => v + 1);
                   }}
                 />

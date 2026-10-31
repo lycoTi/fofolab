@@ -510,4 +510,49 @@ describe('Gestão da conversa, memória por questão e envio ao caderno', () => 
     expect(fixacaoBadges.length).toBeGreaterThanOrEqual(2);
     expect(screen.getByText(/Exato! Você pegou o ponto central/)).toBeTruthy();
   });
+
+  it('permite criar um flashcard a partir de uma resposta da FofoIA para a Revisão do Dia', async () => {
+    vi.stubEnv('VITE_GEMINI_API_KEY', 'test-gemini-key');
+    vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        candidates: [
+          { content: { parts: [{ text: 'SQL Injection ocorre quando dados não confiáveis alteram consultas SQL.' }] } },
+        ],
+      }),
+    } as any);
+
+    const onCreateFlashcard = vi.fn();
+    render(<FofoIaPanel {...props({ onCreateFlashcard, aiConfigured: true })} />);
+
+    await ask('o que é SQL Injection?');
+
+    // Botão + Flashcard na resposta real do tutor
+    const flashcardBtn = screen.getByRole('button', { name: '+ Flashcard' });
+    expect(flashcardBtn).toBeTruthy();
+    expect((flashcardBtn as HTMLButtonElement).disabled).toBe(false);
+
+    await act(async () => {
+      fireEvent.click(flashcardBtn);
+    });
+
+    // Modal aberto com diálogo
+    expect(screen.getByRole('dialog', { name: 'Criar flashcard de revisão' })).toBeTruthy();
+    expect(screen.getByLabelText('Afirmação ou pergunta do flashcard')).toBeTruthy();
+
+    // Salva o flashcard
+    const saveBtn = screen.getByRole('button', { name: 'Salvar na Revisão' });
+    await act(async () => {
+      fireEvent.click(saveBtn);
+    });
+
+    expect(onCreateFlashcard).toHaveBeenCalledTimes(1);
+    expect(onCreateFlashcard).toHaveBeenCalledWith(
+      expect.objectContaining({
+        topicId: 't1',
+        statement: expect.any(String),
+        finalAnswer: expect.stringMatching(/^[CE]$/),
+      })
+    );
+  });
 });

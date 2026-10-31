@@ -1,40 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
-import { Loader2, Send } from 'lucide-react';
 import type { StudentContextSnapshot } from '../../lib/aiRouter';
 import { buildFofoContext, type LawExcerpt } from '../../lib/fofoia/context';
 import type { EditalTopicEntry } from '../../lib/fofoia/editalMatch';
-import type { AiDissection, AiProviderUsed, Question, ReviewConfidence, SelfDiagnosisType } from '../../types/database';
+import type { AiProviderUsed, Question } from '../../types/database';
 import { CurrentFofo } from '../mascot/FofoOutfitContext';
 import { LawPillsBar } from '../laws/LawPillsBar';
+import { CreateFlashcardModal } from './CreateFlashcardModal';
+import { FofoInputArea } from './FofoInputArea';
 import { FofoMessage } from './FofoMessage';
 import { FofoPanelHeader } from './FofoPanelHeader';
-import { FofoShortcuts } from './FofoShortcuts';
-import { useFofoConversation } from './useFofoConversation';
+import { useFofoConversation, type FofoTurn } from './useFofoConversation';
 import { WarmupInvite } from './WarmupInvite';
 import { markWarmupSeen, warmupSeen } from './warmup';
+import type { FofoActiveQuestion, FofoStudentAttempt } from './fofoTypes';
+
+export type { FofoActiveQuestion, FofoStudentAttempt };
 
 /** Largura mínima da coluna enquanto se lê uma aula completa (spec 11 §5.1). */
 export const LESSON_MIN_WIDTH = 560;
-
-export interface FofoStudentAttempt {
-  selectedOption: string;
-  isCorrect: boolean;
-  confidence: ReviewConfidence | null;
-  diagnosis: SelfDiagnosisType | null;
-  timeSpentSeconds?: number;
-  falseCertainty: boolean;
-}
-
-export interface FofoActiveQuestion {
-  question: Question;
-  answered: boolean;
-  dissection: AiDissection | null;
-  diagnosis: SelfDiagnosisType | null;
-  falseCertainty: boolean;
-  attempt?: FofoStudentAttempt | null;
-  onNextSameSubject?: () => void;
-  nextSameSubjectLabel?: string | null;
-}
 
 export interface FofoIaPanelProps {
   context: StudentContextSnapshot;
@@ -58,6 +41,14 @@ export interface FofoIaPanelProps {
   onRequestHandled: () => void;
   lawExcerpts?: LawExcerpt[];
   onAutoSaveDissection?: (params: { question: Question; provider: AiProviderUsed; dissectionMarkdown: string }) => void;
+  /** Cria um flashcard na revisão do dia a partir de uma resposta da FofoIA */
+  onCreateFlashcard?: (params: {
+    topicId: string;
+    statement: string;
+    finalAnswer: string;
+    dissectionMarkdown: string;
+    options?: string[];
+  }) => void;
 }
 
 /** FofoIA (spec 11): um só professor na coluna direita, com jeitos de ensinar escolhidos pelos sinais do estudante. */
@@ -88,29 +79,16 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   });
   const [draft, setDraft] = useState('');
   const [warmup, setWarmup] = useState(false);
+  const [flashcardTurn, setFlashcardTurn] = useState<FofoTurn | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const handledRequest = useRef<number | null>(null);
   const unanswered = activeQuestion !== null && !activeQuestion.answered;
 
-  // Ajusta altura do textarea até ~35% da altura da janela com rolagem vertical
-  useEffect(() => {
-    const el = textareaRef.current;
-    if (!el) return;
-    el.style.height = 'auto';
-    if (draft) {
-      const maxHeight = Math.min(el.scrollHeight, Math.floor(window.innerHeight * 0.35));
-      el.style.height = `${maxHeight}px`;
-    }
-  }, [draft]);
-
-  // Rola só a lista de mensagens (scrollIntoView rolaria também as colunas de fora e deslocaria a tela)
   useEffect(() => {
     const list = listRef.current;
     if (list) list.scrollTop = list.scrollHeight;
   }, [turns.length, loading]);
 
-  // Depois de conversar (uma questão colada, uma dúvida), aula e resumo são sobre isso, não o tópico genérico
   const talked = turns.some((t) => t.role === 'student' && !t.smallTalk);
   const subject = talked ? `o que conversamos (tópico ${topicLabel})` : topicLabel;
 
@@ -119,7 +97,6 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     const palpite = guess.trim() ? ` Meu palpite antes da aula: ${guess.trim()}` : '';
     void send(part ? `Continue a aula (Parte ${part})` : `Aula completa sobre ${subject}.${palpite}`, 'LESSON', { part, partTotal });
   };
-  // Tópico nunca tentado: antes da primeira aula, o aquecimento (uma vez por tópico)
   const lesson = (part?: number, partTotal?: number) => {
     if (!part && props.warmupEnabled && props.firstContact && !warmupSeen(props.topicKey)) {
       setWarmup(true);
@@ -131,7 +108,6 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
 
   useEffect(() => {
     const request = props.request;
-    // Com a FofoIA pensando, o pedido espera (senão seria marcado como atendido e sumiria)
     if (!request || loading || handledRequest.current === request.id) return;
     handledRequest.current = request.id;
     if (request.kind === 'hint') {
@@ -139,19 +115,14 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     } else {
       const stored = activeQuestion?.dissection?.dissection_markdown;
       if (stored && stored.trim()) {
-        sendStored(
-          'Me explique esta questão e por que as outras alternativas estão erradas.',
-          `**Dissecação oficial do acervo:**\n\n${stored.trim()}`
-        );
+        sendStored('Me explique esta questão e por que as outras alternativas estão erradas.', `**Dissecação oficial do acervo:**\n\n${stored.trim()}`);
       } else {
         void send('Me explique esta questão e por que as outras alternativas estão erradas.', null, { saveAsDissection: true });
       }
     }
     props.onRequestHandled();
-    // Cada pedido (id) é atendido uma vez; send/hint mudam a cada render
   }, [props.request, loading, activeQuestion?.dissection]);
 
-  // Trocou de tópico: o convite de aquecimento era do tópico anterior
   useEffect(() => setWarmup(false), [props.topicKey]);
 
   const submit = () => {
@@ -160,6 +131,15 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
     void send(text);
     setDraft('');
   };
+
+  const flashcardInitial = flashcardTurn ? (() => {
+    const idx = turns.indexOf(flashcardTurn);
+    const prev = idx > 0 ? turns.slice(0, idx).reverse().find((t) => t.role === 'student' && !t.smallTalk) : null;
+    return {
+      statement: prev ? prev.content : '',
+      explanation: flashcardTurn.content,
+    };
+  })() : null;
 
   return (
     <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
@@ -186,6 +166,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
             onSummary={() => void send(talked ? `Resumo de revisão do que conversamos (tópico ${topicLabel}).` : `Resumo de revisão de ${topicLabel}`, 'SUMMARY')}
             onSaveSummary={props.onSaveSummary}
             onRetry={() => turn.retry && void send(turn.retry.message, turn.retry.requested, turn.retry.options)}
+            onFlashcard={props.onCreateFlashcard ? (t) => setFlashcardTurn(t) : undefined}
           />
         ))}
         {warmup && (
@@ -212,38 +193,38 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
         )}
       </div>
 
-      <div className="space-y-2 border-t border-slate-800/80 bg-slate-950/60 p-3">
-        <FofoShortcuts
-          unanswered={unanswered}
-          activeQuestion={activeQuestion}
+      <FofoInputArea
+        unanswered={unanswered}
+        activeQuestion={activeQuestion}
+        topicLabel={topicLabel}
+        talked={talked}
+        draft={draft}
+        loading={loading}
+        onChangeDraft={setDraft}
+        onSubmit={submit}
+        onHint={hint}
+        onLesson={() => lesson()}
+        onSend={(msg, mode, opts) => void send(msg, mode ?? null, opts)}
+      />
+
+      {flashcardTurn && (
+        <CreateFlashcardModal
+          open={Boolean(flashcardTurn)}
+          onClose={() => setFlashcardTurn(null)}
           topicLabel={topicLabel}
-          talked={talked}
-          onHint={hint}
-          onLesson={() => lesson()}
-          onSend={(msg, mode, opts) => void send(msg, mode ?? null, opts)}
+          initialStatement={flashcardInitial?.statement}
+          initialExplanation={flashcardInitial?.explanation}
+          onSave={(params) => {
+            props.onCreateFlashcard?.({
+              topicId: props.topicKey,
+              statement: params.statement,
+              finalAnswer: params.finalAnswer,
+              dissectionMarkdown: params.dissectionMarkdown,
+              options: params.options,
+            });
+          }}
         />
-        <form onSubmit={(e) => { e.preventDefault(); submit(); }} className="flex items-end gap-2">
-          <textarea
-            ref={textareaRef}
-            rows={1}
-            value={draft}
-            onChange={(e) => setDraft(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                submit();
-              }
-            }}
-            placeholder="Pergunte sobre o tópico ou a questão…"
-            aria-label="Pergunte à FofoIA"
-            className="max-h-[35vh] flex-1 resize-none rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs leading-relaxed text-white outline-none focus:border-orange-500"
-          />
-          <button type="submit" disabled={loading || !draft.trim()} aria-label="Enviar pergunta" className="rounded-xl bg-orange-500 p-2 text-white shadow-sm transition-transform duration-100 hover:bg-orange-600 active:scale-95 disabled:opacity-40">
-            {loading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
-          </button>
-        </form>
-        <p className="text-[10px] text-slate-500">Suas anotações deste tópico vão junto com a pergunta para a IA.</p>
-      </div>
+      )}
     </section>
   );
 }
