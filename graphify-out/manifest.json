@@ -18,9 +18,9 @@
     "semantic_hash": "33fad9c02cb0ec6d6030369ef6347d57"
   },
   "src/App.tsx": {
-    "mtime": 1793402274.195525,
-    "seen": 1793402559.0233433,
-    "ast_hash": "2f5016bfba9a4adf9570cb9d09d4c86d",
+    "mtime": 1793404384.7947605,
+    "seen": 1793404915.865517,
+    "ast_hash": "d0f0c14168494be9edbd0b81e5a1b7ae",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1793403147.581593,
-    "seen": 1793403201.232291,
-    "ast_hash": "dc78fad4421a7ab485d4185d23b90a13",
+    "mtime": 1793404772.0856829,
+    "seen": 1793404916.2781048,
+    "ast_hash": "56968f41a486c93f77c459775f6b6208",
     "semantic_hash": ""
   },
   "README.md": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "src/lib/database.ts": {
-    "mtime": 1793138370.7113144,
-    "seen": 1793140211.1631563,
-    "ast_hash": "85e1b299a5a4d6ccbf5227fb8471c0db",
+    "mtime": 1793404328.0791378,
+    "seen": 1793404916.070198,
+    "ast_hash": "12bcd30a17f3f226c5a637d1be97de2a",
     "semantic_hash": ""
   },
   "src/types/database.ts": {
@@ -1518,9 +1518,9 @@
     "semantic_hash": ""
   },
   "src/features/good-morning/GoodMorningView.tsx": {
-    "mtime": 1793200992.5400524,
-    "seen": 1793201912.924967,
-    "ast_hash": "876dbda09926b4d18b975bca2844e83f",
+    "mtime": 1793404325.5221622,
+    "seen": 1793404915.9953215,
+    "ast_hash": "2c32ad9a7f96d502de2de4179a511f88",
     "semantic_hash": ""
   },
   "src/features/good-morning/ReviewOpenPrompt.tsx": {
@@ -1680,9 +1680,9 @@
     "semantic_hash": ""
   },
   "src/features/fofoia/FofoMessage.tsx": {
-    "mtime": 1793402394.492198,
-    "seen": 1793402559.103008,
-    "ast_hash": "471ffa2cc03c346b34c084f09501ccec",
+    "mtime": 1793404491.6770706,
+    "seen": 1793404915.9906154,
+    "ast_hash": "33ef1e085fb91ccd9edbd6940a23cc2f",
     "semantic_hash": ""
   },
   "src/features/fofoia/WarmupInvite.tsx": {
@@ -1728,9 +1728,9 @@
     "semantic_hash": ""
   },
   "src/features/questions/QuestionWorkbench.tsx": {
-    "mtime": 1793402261.0485702,
-    "seen": 1793402559.1367552,
-    "ast_hash": "5b2c18842a25cdb4da79a78ac2025d60",
+    "mtime": 1793404465.6155975,
+    "seen": 1793404916.0406406,
+    "ast_hash": "cab49d2e428dbc1e8b0f9ad644da00ec",
     "semantic_hash": ""
   },
   "src/lib/answerLabels.ts": {
@@ -3906,8 +3906,8 @@
     "semantic_hash": ""
   },
   "src/features/fofo-window/scene/landscapes/trilha.ts": {
-    "mtime": 1793402435.464808,
-    "seen": 1793402559.0976617,
+    "mtime": 1793403463.0417213,
+    "seen": 1793404915.9856284,
     "ast_hash": "4d380860c33130d8bb165a7542eddd5f",
     "semantic_hash": ""
   },
@@ -3987,6 +3987,54 @@
     "mtime": 1793402038.4210968,
     "seen": 1793402559.1367579,
     "ast_hash": "0fab986aeea7dd442ec123e88e442702",
+    "semantic_hash": ""
+  },
+  "src/__tests__/examPacingModal.test.tsx": {
+    "mtime": 1793404667.0146916,
+    "seen": 1793404915.877322,
+    "ast_hash": "cfd41dccd133edb151bcbb8d84ef50d0",
+    "semantic_hash": ""
+  },
+  "src/__tests__/pacingEngine.test.ts": {
+    "mtime": 1793403853.4488132,
+    "seen": 1793404915.9235804,
+    "ast_hash": "6a307dc9ea4b4561ffcac23e16fa2f30",
+    "semantic_hash": ""
+  },
+  "src/__tests__/workbenchSessionHud.test.tsx": {
+    "mtime": 1793404549.445104,
+    "seen": 1793404915.9375358,
+    "ast_hash": "512197d79717d8a076e43a4f17e470db",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/CreateFlashcardModal.tsx": {
+    "mtime": 1793404747.2464771,
+    "seen": 1793404915.9901655,
+    "ast_hash": "499022f00d7519e2b06e25475c094799",
+    "semantic_hash": ""
+  },
+  "src/features/fofoia/FofoInputArea.tsx": {
+    "mtime": 1793404747.5312388,
+    "seen": 1793404915.9906113,
+    "ast_hash": "da42bffd7fd4aef4a43708b7b4281eb8",
+    "semantic_hash": ""
+  },
+  "src/features/pacing/ExamPacingModal.tsx": {
+    "mtime": 1793404223.717116,
+    "seen": 1793404916.0072513,
+    "ast_hash": "c181d7d62ece73cf0db9887ca48dd887",
+    "semantic_hash": ""
+  },
+  "src/features/questions/WorkbenchSessionHud.tsx": {
+    "mtime": 1793403907.2321148,
+    "seen": 1793404916.0406451,
+    "ast_hash": "2e4c74fbfb07202a66c475cd909d5836",
+    "semantic_hash": ""
+  },
+  "src/lib/pacingEngine.ts": {
+    "mtime": 1793403869.6911664,
+    "seen": 1793404916.0942059,
+    "ast_hash": "4074f106c4d44d900416697a1e0d30f4",
     "semantic_hash": ""
   }
 }
