@@ -37,6 +37,7 @@ import {
   type OnboardingProfile,
 } from './features/onboarding-wizard/OnboardingWizardModal';
 import { QuestionImportModal } from './features/question-import/QuestionImportModal';
+import { ExamPacingModal } from './features/pacing/ExamPacingModal';
 import { useTopicQuestionCount, useTopicQuestions } from './features/acervo/useTopicQuestions';
 import { AcervoImportPanel } from './features/acervo/AcervoImportPanel';
 import { useAcervoAutoSync } from './features/acervo/useAcervoAutoSync';
@@ -231,6 +232,7 @@ export default function App() {
 
   const [crudModalOpen, setCrudModalOpen] = useState(false);
   const [crudInitialSection, setCrudInitialSection] = useState<CurriculumSection>('topics');
+  const [pacingModalOpen, setPacingModalOpen] = useState(false);
 
   const { confirm, dialog: confirmDialog } = useConfirmDialog();
   const aiStatus = useMemo(() => getAiStatus(), []);
@@ -1287,6 +1289,7 @@ export default function App() {
                           rightPanel.setOpen(true);
                           selectTab('questions');
                         }}
+                        onOpenPacingModal={() => setPacingModalOpen(true)}
                       />
                     )}
 
@@ -1311,6 +1314,7 @@ export default function App() {
                         aiConfigured={aiStatus.configured}
                         blockRunning={studyBlock.state.phase === 'FOCUS' && studyBlock.state.running}
                         onSaveToNotebook={fofoInputs?.onSaveSummary ?? ((markdown) => notebook.appendAndSave(markdown))}
+                        onOpenPacingModal={() => setPacingModalOpen(true)}
                       />
                     )}
 
@@ -1592,6 +1596,14 @@ export default function App() {
         onLoadBackups={listDatabaseBackups}
         onRestoreBackup={handleRestoreBackup}
         onResetSeed={handleResetSeed}
+      />
+
+      <ExamPacingModal
+        open={pacingModalOpen}
+        onClose={() => setPacingModalOpen(false)}
+        attempts={attempts}
+        questions={topicQuestions}
+        subjects={subjects}
       />
 
       {confirmDialog}

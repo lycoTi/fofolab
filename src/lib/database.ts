@@ -1908,6 +1908,66 @@ export function saveAiDissection(params: {
   ])!;
 }
 
+/**
+ * Cria uma questão personalizada (ex.: Flashcard criado a partir da FofoIA ou formulado pelo estudante).
+ * Entra imediatamente no acervo local do tópico e passa a ser elegível para a Revisão do Dia (spec 09).
+ */
+export function createCustomQuestion(params: {
+  topicId: string;
+  subjectId?: string;
+  statement: string;
+  options?: string[];
+  finalAnswer: string;
+  dissectionMarkdown?: string;
+  sourceLabel?: string;
+}): Question {
+  const db = getDb();
+  let subjectId = params.subjectId;
+  if (!subjectId) {
+    const t = queryOne<{ subject_id: string }>(db, 'SELECT subject_id FROM topics WHERE id = ?', [params.topicId]);
+    subjectId = t?.subject_id || '';
+  }
+
+  const id = newId('q');
+  const examYear = new Date().getFullYear();
+  const options = params.options && params.options.length > 0
+    ? params.options
+    : ['C) Certo', 'E) Errado'];
+  const optionsJson = JSON.stringify(options);
+  const sourceLabel = params.sourceLabel || 'Flashcard · FofoIA';
+
+  db.run(
+    `INSERT INTO questions (
+      id, subject_id, topic_id, exam_board, exam_year, organ,
+      statement, options_json, preliminary_answer, final_answer,
+      is_annulled, annulment_reason, source_label, acervo_uncertain
+    ) VALUES (?, ?, ?, 'FofoLab', ?, NULL, ?, ?, NULL, ?, 0, NULL, ?, 0)`,
+    [
+      id,
+      subjectId,
+      params.topicId,
+      examYear,
+      params.statement.trim(),
+      optionsJson,
+      params.finalAnswer.trim().toUpperCase(),
+      sourceLabel,
+    ]
+  );
+
+  if (params.dissectionMarkdown?.trim()) {
+    saveAiDissection({
+      questionId: id,
+      provider: 'EXAMPLE',
+      dissectionMarkdown: params.dissectionMarkdown.trim(),
+      prerequisites: [],
+    });
+  }
+
+  persistDatabase();
+
+  return queryOne<Question>(db, 'SELECT * FROM questions WHERE id = ?', [id])!;
+}
+
 export function getNotebookForTopic(topicId: string): Notebook | null {
   return queryOne<Notebook>(
     getDb(),

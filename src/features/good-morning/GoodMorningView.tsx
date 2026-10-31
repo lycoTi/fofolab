@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Play, Sun } from 'lucide-react';
+import { Gauge, Play, Sun } from 'lucide-react';
 import { getLastOpenedPdf, getStudySessionsSince, getTopicFirstStudyDates } from '../../lib/database';
 import type { SubjectCycleAllocation, TopicHeatItem } from '../../lib/cycleEngine';
 import { REVIEW_LOOKBACK_DAYS } from '../../lib/dailyReview';
@@ -41,6 +41,8 @@ export interface GoodMorningViewProps {
   notebooks: Notebook[];
   onOpenPdf: (subjectId: string, topicId: string) => void;
   onOpenNotes: (subjectId: string, topicId: string) => void;
+  /** Abre o simulador de tempo e ritmo de prova real */
+  onOpenPacingModal?: () => void;
   now?: () => Date;
 }
 
@@ -126,6 +128,30 @@ export function GoodMorningView(props: GoodMorningViewProps) {
         <StudyCalendar days={studyCalendar(facts?.sessions ?? [], now())} />
         <CalibrationCard lines={confidenceCalibration(props.attempts)} />
       </div>
+
+      {props.onOpenPacingModal && (
+        <aside
+          aria-label="Simulador de prova e ritmo"
+          className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-slate-800/80 bg-slate-900/50 p-4 text-xs"
+        >
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <Gauge size={16} className="text-[var(--fofo-accent)]" />
+              <h3 className="font-semibold text-slate-100">Inteligência de Ritmo & Simulação de Prova Real</h3>
+            </div>
+            <p className="text-slate-400">
+              Analise se a sua velocidade de leitura e resolução garante terminar a prova sem esgotar o tempo.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={props.onOpenPacingModal}
+            className="rounded-lg border border-[var(--fofo-accent)]/40 bg-[var(--fofo-accent)]/10 px-3.5 py-1.5 font-medium text-[var(--fofo-accent-text)] transition-colors hover:bg-[var(--fofo-accent)]/20"
+          >
+            Simular tempo de prova
+          </button>
+        </aside>
+      )}
 
       {props.nextBlock && (
         <div className="border-t border-slate-800/60 pt-6">

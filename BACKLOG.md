@@ -8,6 +8,15 @@
 - **25/10/2026:** **Plano de estudo (spec 13): 13a pronta** — horas por dia, folgas, "mudar o tempo de hoje" e a semana dia a dia. Spec 12 (minerador da Cebraspe) e entrega **12a** prontas — acervo de 29,9 mil itens em `acervo/` (revisão independente feita e corrigida); **12b [PARCIAL]** — vocabulário de assuntos e os primeiros 300 itens classificados pela IA. FofoIA: cumprimento respondido pelo app e resposta surgindo por parágrafo.
 - **27/10/2026:** 13b e o Fofo no app prontos (abaixo). **12b [PARCIAL]** — 630 itens classificados (Gemini + DeepSeek com teto de R$ 5 por dia), vocabulário v27. **12c [DONE] [Claude Code]** (`docs/specs/12c-acervo-no-app.md`): o acervo da Cebraspe entra no app ligado aos tópicos do plano (pacote real: 273 de 275 tópicos da CGU pelo nome); banco na migração **v12**. **12d [DONE] [Antigravity]** (`docs/specs/12d-auto-sync-e-fila-questoes.md`): sincronização automática do acervo sem clique manual (`/__acervo/index.json` + pacotes por banca), fila inteligente na aba Questões (`Inéditas`, `Errei ou chutei`, `Todas`, ordenação `Certo/Errado` antes de `Múltipla escolha`, anuladas fora da contagem do bloco) e reta final flexível (migração **v13**).
 - **27/10/2026 [Antigravity]:** Bancada de Questões polida no padrão Anti-IA (filtros colapsáveis compactos com resumo, paginação de questões seguindo o fluxo do olhar do estudante, complexidade intrínseca de 3 níveis Fácil/Média/Difícil estável, diagnóstico pós-resolução desmarcado por padrão para avaliação sem viés). Sincronização automática com stamp estritamente determinístico (notificação recorrente eliminada). Acervo Cebraspe ampliado com +500 questões pelo DeepSeek (28.344 itens com assunto, vocabulário v1694). Todos os 82 arquivos de teste (743 testes), E2E e build verificados e passando.
+- **30/10/2026 [Antigravity]:** Bancada de Questões - Fase 15d: Inteligência de Ritmo & Simulação de Prova Real (Conclusão total da Fase 15) (DoD 100% verificado):
+  - **Micro (HUD da Sessão em Tempo Real - `WorkbenchSessionHud.tsx`):** Placar discreto no topo da prancheta exibindo taxa de acerto (`8/10 acertos · 80%`), ritmo médio de resolução medido por item (`01:15/q`), tempo acumulado de foco no bloco e atalho direto para simulação de prova;
+  - **Motor de Ritmo e Simulação de Prova Real (`pacingEngine.ts`):**
+    - Diferenciação de ritmo por formato de item: itens Certo/Errado (Cebraspe) separados de Múltipla Escolha (FGV/FCC/Vunesp);
+    - Detecção de gargalos críticos por disciplina (ex.: Português com enunciados extensos consumindo > 180s/item);
+    - Filtro de anomalias (ignora itens com pausas > 15min para não enviesar a métrica);
+    - Simulação de prova real com inclusão de margens realistas de preenchimento de cartão-resposta (15–30 min) e pausas/banheiro (5–15 min), projetando diagnósticos claros (`DEFICIT` de tempo / `TIGHT` ritmo no limite / `COMFORTABLE`);
+  - **Macro (Modal de Simulação & Ritmo Histórico - `ExamPacingModal.tsx`):** Acessível a partir do HUD da bancada e da aba Início (`GoodMorningView.tsx`), com presets rápidos para provas reais (FGV 70q / 4h, FGV 80q / 4h30, Cebraspe 120 itens / 3h30) e customização livre de parâmetros;
+  - **Verificação Total:** 418 testes passando em 39 arquivos (suites `pacingEngine.test.ts`, `workbenchSessionHud.test.tsx`, `examPacingModal.test.tsx`, `goodMorningView.test.tsx`, `questionWorkbench.test.tsx` e `noEmojiInUi.test.ts`), build de produção limpo em 1.48s e regras de arquitetura ($\le 250$ linhas) estritamente cumpridas.
 - **30/10/2026 [Antigravity]:** Modelos Fortes de Raciocínio sob Demanda na FofoIA (`VITE_*_MODEL_STRONG`) (DoD 100% verificado):
   - **Raciocínio Profundo sob Demanda (`aiRouter.ts`, `ask.ts`, `vite.config.ts`):** Ativação seletiva de modelos de alta capacidade exclusivamente para os modos que exigem síntese analítica profunda (`LESSON` - Aula Completa e `EDITAL` - Cai no meu edital?), preservando os modelos rápidos e econômicos para o fluxo cotidiano (Pista, Rápida, Fixação);
   - **Suporte Multiprovedor Completo:**
@@ -188,7 +197,7 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
 6. Trocar os [A VERIFICAR] verificados por [DONE]; o que falhar vira tarefa com o motivo.
 
 ## 🔜 Próximas fatias
-- [PARCIAL] **Bancada de Questões — Refino de Alto Rendimento, Navegação Protegida & Inteligência de Ritmo (Fase 15 / Fatia 15)** (30/10/2026 [Antigravity]):
+- [DONE] **Bancada de Questões — Refino de Alto Rendimento, Navegação Protegida & Inteligência de Ritmo (Fase 15 / Fatia 15)** (30/10/2026 [Antigravity]):
   - [DONE] **15a — Ergonomia de Prova e Limpeza Visual (UI/UX Anti-IA):**
     - Remoção da redundância da setinha `>` na paginação da folha (manter apenas `[ ← Anterior ]`, `Questão X de Y` e o botão primário `[ Próxima questão → ↵ ]` com destaque tátil);
     - Fim da "boneca russa de cards" na folha de questões: eliminar a borda dupla interna da correção, integrando veredito e diagnóstico como continuação contínua da prancheta via régua de 1px (`border-t border-white/[0.06]`);
@@ -202,12 +211,12 @@ Legenda: **[DONE]** verificado • **[PARCIAL]** funciona com limitações lista
   - [DONE] **15c — Ferramentas Ativas de Resolução na Folha (Grifo & Caderno Rápido):**
     - **Grifo no Enunciado (`QuestionStatement.tsx`, `questionHighlights.ts`):** Ferramenta de marca-texto tátil no enunciado para destacar termos restritivos ("vedado", "sempre", "exclusivamente") e conceitos-chave, com atalho `G`, balão flutuante, remoção com 1 clique e persistência local por questão;
     - **Nota Rápida no Caderno (`+ Caderno` em `QuestionCorrection.tsx`):** Editor compacto pós-resolução para registrar insights e pegadinhas direto nas anotações do tópico sem quebrar o fluxo de estudo.
-  - **15d — Inteligência de Ritmo & Simulação de Prova Real (Micro na Bancada & Macro no App):**
-    - **Micro (HUD do Bloco em Tempo Real):** indicador compacto no topo da prancheta mostrando acertos da sessão atual (`8/10 acertos · 80%`), ritmo médio (`Ø 01:25/q`) e tempo de foco do bloco;
-    - **Macro (Painel de Ritmo & Simulação de Prova Real nas abas Início e Plano de Estudo):**
-      - Projeção de tempo de prova real com base no ritmo histórico medido por estilo de item (Certo/Errado vs Múltipla Escolha) com estimativa de folga para preenchimento de cartão-resposta e banheiro;
-      - Matriz de Desempenho (*Tempo Médio × Taxa de Acerto*) para identificar gargalos críticos por matéria (ex.: Português/Interpretação FGV consumindo tempo excessivo vs Direito rápido);
-      - Integração com o ciclo de estudos para balancear o orçamento de matérias que exigem mais tempo de treino de velocidade.
+  - [DONE] **15d — Inteligência de Ritmo & Simulação de Prova Real (Micro na Bancada & Macro no App):**
+    - **Micro (HUD do Bloco em Tempo Real - `WorkbenchSessionHud.tsx`):** indicador compacto no topo da prancheta mostrando acertos da sessão atual (`8/10 acertos · 80%`), ritmo médio (`01:15/q`), tempo de foco do bloco e botão para simulação;
+    - **Macro (Painel de Ritmo & Simulação de Prova Real nas abas Início e Bancada - `ExamPacingModal.tsx`, `pacingEngine.ts`):**
+      - Projeção de viabilidade de tempo de prova real com base no ritmo histórico medido por estilo de item (Certo/Errado vs Múltipla Escolha) com estimativa de folga para preenchimento de cartão-resposta e banheiro;
+      - Diagnóstico e alertas antecipados de risco de esgotamento de tempo (inspirado na dor real de provas extensas como SEFAZ/FGV);
+      - Matriz de gargalos por disciplina e atalho integrado na aba Início.
 - [ ] **Coluna Hoje com a janela do Fofo** (28/10/2026 [Claude Code], brainstorming em andamento; começo da reestruturação
   do app inteiro por roupa do Fofo). Decidido com o dono: ordem tópico de agora → janela do Fofo (FofoDoro com cenário em
   pixel, mesmo tamanho de pixel do Fofo, que pisa no chão) → trilho do resto do dia com hora estimada até o fim do roteiro;

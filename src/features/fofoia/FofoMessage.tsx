@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookPlus, CheckCircle2, RotateCcw } from 'lucide-react';
+import { BookPlus, CheckCircle2, Layers, RotateCcw } from 'lucide-react';
 import { RichText, revealDelayMs } from '../../components/RichText';
 import { MODE_BADGE } from '../../lib/fofoia/signals';
 import { formatSummaryForNotebook } from '../../lib/fofoia/summary';
@@ -21,6 +21,7 @@ export function FofoMessage({
   onSummary,
   onSaveSummary,
   onRetry,
+  onFlashcard,
   reveal = false,
 }: {
   turn: FofoTurn;
@@ -37,6 +38,7 @@ export function FofoMessage({
   onSummary: () => void;
   onSaveSummary: (markdown: string) => void;
   onRetry: () => void;
+  onFlashcard?: (turn: FofoTurn) => void;
 }) {
   const [saved, setSaved] = useState(false);
 
@@ -139,6 +141,18 @@ export function FofoMessage({
           >
             {saved ? <CheckCircle2 size={11} className="text-emerald-400" /> : <BookPlus size={11} />}
             {saved ? 'Salvo no caderno' : '+ Caderno'}
+          </button>
+        )}
+        {turn.role === 'tutor' && turn.mode !== 'HINT' && onFlashcard && (
+          <button
+            type="button"
+            disabled={!aiConfigured || turn.simulated}
+            title={turn.simulated ? 'No modo de exemplo nada vai para a revisão' : 'Criar flashcard a partir desta resposta para a Revisão do Dia'}
+            onClick={() => onFlashcard(turn)}
+            className={`${action} flex items-center gap-1 disabled:opacity-40`}
+          >
+            <Layers size={11} className="text-amber-400" />
+            <span>+ Flashcard</span>
           </button>
         )}
       </div>

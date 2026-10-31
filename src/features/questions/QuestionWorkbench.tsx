@@ -14,6 +14,7 @@ import { isCertoErradoOptions } from '../answer-flow/AnswerOptions';
 import { EmptyTopicQuestions } from './EmptyTopicQuestions';
 import { QuestionCard } from './QuestionCard';
 import { QuestionCorrection } from './QuestionCorrection';
+import { WorkbenchSessionHud } from './WorkbenchSessionHud';
 import {
   QuestionFilters,
   type QuestionFormatFilter,
@@ -71,6 +72,8 @@ export interface QuestionWorkbenchProps {
   blockRunning?: boolean;
   /** Envia anotação/insight diretamente para o caderno do tópico */
   onSaveToNotebook?: (markdown: string) => void;
+  /** Abre o modal de simulação de prova e ritmo histórico */
+  onOpenPacingModal?: () => void;
 }
 
 interface AttemptState {
@@ -80,6 +83,7 @@ interface AttemptState {
   attemptId: string | null;
   diagnosis: SelfDiagnosisType | null;
   timeSpentSeconds?: number;
+  isCorrect?: boolean;
 }
 
 const FRESH: AttemptState = { confidence: null, picked: null, firstContact: false, attemptId: null, diagnosis: null };
@@ -187,6 +191,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
         attemptId: null,
         diagnosis: sum.lastDiagnosis,
         timeSpentSeconds: sum.lastTimeSpentSeconds,
+        isCorrect: sum.lastIsCorrect,
       };
     }
     return FRESH;
@@ -255,6 +260,7 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
       attemptId: saved?.attemptId ?? null,
       diagnosis: null,
       timeSpentSeconds,
+      isCorrect,
     });
   };
 
@@ -318,6 +324,23 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
     onPrev: () => setIndex(Math.max(0, safeIndex - 1)),
     onNext: () => setIndex(Math.min(filtered.length - 1, safeIndex + 1)),
   };
+
+  const sessionStats = useMemo(() => {
+    const list = Object.values(attempts).filter((a) => a.picked !== null || a.firstContact);
+    if (list.length === 0) return null;
+    const answeredCount = list.length;
+    const correctCount = list.filter((a) => a.isCorrect).length;
+    const accuracyPercent = Math.round((correctCount / answeredCount) * 100);
+    const totalSessionSeconds = list.reduce((acc, a) => acc + (a.timeSpentSeconds ?? 0), 0);
+    const avgSecondsPerQuestion = Math.round(totalSessionSeconds / answeredCount);
+    return {
+      answeredCount,
+      correctCount,
+      accuracyPercent,
+      avgSecondsPerQuestion,
+      totalSessionSeconds,
+    };
+  }, [attempts]);
 
   const inTopic = props.scopeFilter === 'topic';
   const acervo = props.acervo;
@@ -422,6 +445,13 @@ export function QuestionWorkbench(props: QuestionWorkbenchProps) {
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       {filters}
+      {sessionStats && (
+        <WorkbenchSessionHud
+          {...sessionStats}
+          blockRunning={props.blockRunning}
+          onOpenSimulation={props.onOpenPacingModal}
+        />
+      )}
       <QuestionCard
         question={active.question}
         complexity={active.complexity}
