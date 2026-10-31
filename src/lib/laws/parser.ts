@@ -76,7 +76,12 @@ export function parseLawMarkdown(
   const title = metadata.titulo || fallback.title || firstTitleLine || 'Norma Federal';
   const shortName = fallback.shortName || metadata.sigla || title.slice(0, 30);
   const sourceMatch = body.match(/>\s*Fonte:\s*\[.*?\]\((https?:\/\/[^\s\)]+)\)/i);
-  const sourceUrl = metadata.fonte || metadata.url || (sourceMatch ? sourceMatch[1] : '') || fallback.sourceUrl || '';
+  const rawSource = metadata.fonte || metadata.url || (sourceMatch ? sourceMatch[1] : '');
+  const isNormasLeg = /normas\.leg\.br/i.test(rawSource);
+  // Se o link vier do normas.leg.br (LexML que costuma travar em tela branca no navegador), prefere a URL direta do Planalto
+  const sourceUrl = isNormasLeg && fallback.sourceUrl
+    ? fallback.sourceUrl
+    : (rawSource || fallback.sourceUrl || '');
   const urn = metadata.urn;
   const description = metadata.ementa || metadata.descricao;
 
@@ -100,11 +105,14 @@ export function parseLawMarkdown(
     };
   };
 
+  const STRUCTURAL_HEADER_REGEX = /^#{1,6}\s+|^[#\s]*(?:LIVRO|T[ÍI]TULO|CAP[ÍI]TULO|SE[ÇC][ÃA]O|SUBSE[ÇC][ÃA]O|PARTE)\s+[IVXLCDM\d]+/i;
+
   for (const line of rawLines) {
     if (/ATO DAS DISPOSIÇÕES CONSTITUCIONAIS TRANSITÓRIAS/i.test(line)) {
       isAdct = true;
     }
-    const match = line.trim().match(ARTICLE_LINE_REGEX);
+    const trimmed = line.trim();
+    const match = trimmed.match(ARTICLE_LINE_REGEX);
     if (match) {
       flushCurrent();
       const rawNum = match[1].replace(/[.]/g, '');
@@ -112,6 +120,12 @@ export function parseLawMarkdown(
       currentKey = isAdct ? `adct-${baseKey}` : baseKey;
       currentLabel = isAdct ? `ADCT Art. ${rawNum}` : `Art. ${rawNum}`;
       currentLines = [line];
+    } else if (STRUCTURAL_HEADER_REGEX.test(trimmed)) {
+      // Cabeçalho estrutural de capítulo/seção (ex.: "#### CAPÍTULO IV — DA SUBSTITUIÇÃO")
+      // Encerra o artigo anterior para não vazar títulos de capítulos subsequentes no texto do artigo
+      flushCurrent();
+      currentKey = null;
+      currentLines = [];
     } else if (currentKey) {
       currentLines.push(line);
     }

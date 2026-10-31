@@ -133,4 +133,34 @@ Art. 37. A administração pública direta e indireta obedecerá aos princípios
       expect(art37.fullText).toContain('§ 6º As pessoas jurídicas de direito público');
     });
   });
+
+  describe('robustez de parsing e links oficiais', () => {
+    it('não vaza títulos de capítulos e seções subsequentes no texto do artigo anterior', () => {
+      const raw = `
+Art. 37. Redistribuição é o deslocamento de cargo de provimento efetivo, ocupado ou vago...
+
+#### CAPÍTULO IV — DA SUBSTITUIÇÃO
+
+Art. 38. Os servidores investidos em cargo ou função de direção ou chefia terão substitutos...
+`;
+      const parsed = parseLawMarkdown(raw);
+      expect(parsed.articles['37']).toBeDefined();
+      expect(parsed.articles['37'].fullText).not.toContain('CAPÍTULO IV');
+      expect(parsed.articles['37'].fullText).not.toContain('SUBSTITUIÇÃO');
+      expect(parsed.articles['38']).toBeDefined();
+      expect(parsed.articles['38'].caput).toContain('Os servidores investidos');
+    });
+
+    it('prefere o sourceUrl oficial do Planalto quando o metadado traz link frágil do normas.leg.br', () => {
+      const raw = `---
+fonte: https://normas.leg.br/?urn=urn:lex:br:federal:lei:1990-12-11;8112
+titulo: Lei 8112
+---
+Art. 1º Teste.`;
+      const parsed = parseLawMarkdown(raw, {
+        sourceUrl: 'https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm',
+      });
+      expect(parsed.sourceUrl).toBe('https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm');
+    });
+  });
 });

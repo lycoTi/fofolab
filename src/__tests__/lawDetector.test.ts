@@ -91,6 +91,35 @@ describe('Detector de Referências a Leis (Fatia 11.2.3)', () => {
     expect(detected[0].lawId).toBe('lei-8429-1992');
   });
 
+  it('detecta LGPD (Lei 13.709/2018) e Marco Civil da Internet (Lei 12.965/2014)', () => {
+    const textLgpd = 'o uqe é a lei 13.709/2018';
+    const detectedLgpd = detectLawReferences(textLgpd);
+    expect(detectedLgpd).toHaveLength(1);
+    expect(detectedLgpd[0].lawId).toBe('lei-13709-2018');
+    expect(detectedLgpd[0].articleKey).toBe('1');
+
+    const textMci = 'Com base no Marco Civil da Internet, art. 19...';
+    const detectedMci = detectLawReferences(textMci);
+    expect(detectedMci).toHaveLength(1);
+    expect(detectedMci[0].lawId).toBe('lei-12965-2014');
+    expect(detectedMci[0].articleKey).toBe('19');
+  });
+
+  it('evita falso produto cartesiano ao associar artigos por proximidade quando mais de uma lei é citada', () => {
+    const text = 'De acordo com o art. 37 da CF/88 e a Lei 8.112...';
+    const detected = detectLawReferences(text);
+
+    // CF/88 fica com o Art. 37 (próximo), Lei 8.112 não ganha Art. 37 e fica com seu Art. 1º basilar
+    const cf = detected.find((d) => d.lawId === 'cf88');
+    const l8112 = detected.find((d) => d.lawId === 'lei-8112-1990');
+
+    expect(cf).toBeDefined();
+    expect(cf?.articleKey).toBe('37');
+
+    expect(l8112).toBeDefined();
+    expect(l8112?.articleKey).toBe('1');
+  });
+
   it('retorna array vazio quando o texto não contém menção a normas ou artigos', () => {
     expect(detectLawReferences('Em microsserviços, a comunicação assíncrona desacopla os serviços.')).toEqual([]);
     expect(detectLawReferences('O algoritmo de Dijkstra calcula o caminho mais curto.')).toEqual([]);

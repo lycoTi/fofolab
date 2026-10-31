@@ -107,7 +107,10 @@ function needsFromZero(s: ModeSignals): boolean {
  */
 export function chooseMode(s: ModeSignals): FofoMode {
   const unansweredQuestion = s.activeQuestion !== null && !s.activeQuestion.answered;
-  const isLawInquiry = s.requested === null && detectLawReferences(s.text).length > 0;
+  const isLawInquiry =
+    s.requested === null &&
+    (detectLawReferences(s.text).length > 0 ||
+      /\b(?:lei(?:\s+n[ºo°.]?)?\s*\d+|art(?:igo|\.)?\s*\d+|lgpd|marco\s+civil|c[óo]digo\s+(?:civil|penal|processo|tribut[áa]rio)|estatuto)\b/i.test(s.text));
   if (unansweredQuestion && !isLawInquiry && (s.requested === null || s.requested === 'HINT')) return 'HINT';
   if (s.requested === 'HINT') return 'QUICK';
   if (s.requested) return s.requested;

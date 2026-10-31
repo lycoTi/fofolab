@@ -39,6 +39,19 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
       return;
     }
 
+    // 1b. Cabeçalho estrutural com markdown residual (ex: #### CAPÍTULO IV)
+    if (/^#{1,6}\s+/i.test(trimmed)) {
+      const cleanHeading = trimmed.replace(/^#{1,6}\s+/, '').trim();
+      if (cleanHeading) {
+        elements.push(
+          <div key={idx} className="my-3 border-t border-slate-800/80 pt-2 text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
+            {cleanHeading}
+          </div>
+        );
+      }
+      return;
+    }
+
     // 2. Primeira linha / Caput do artigo
     if (isFirstLine) {
       isFirstLine = false;

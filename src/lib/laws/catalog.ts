@@ -53,6 +53,22 @@ export const CORE_LAWS_CATALOG: LawCatalogEntry[] = [
     sourceUrl: 'https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm',
     year: 2011,
   },
+  {
+    id: 'lei-13709-2018',
+    shortName: 'LGPD',
+    title: 'Lei Geral de Proteção de Dados Pessoais (LGPD)',
+    githubPath: 'federal/leis-ordinarias/2018/lei-13709-2018-08-14.md',
+    sourceUrl: 'https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm',
+    year: 2018,
+  },
+  {
+    id: 'lei-12965-2014',
+    shortName: 'Marco Civil da Internet',
+    title: 'Marco Civil da Internet',
+    githubPath: 'federal/leis-ordinarias/2014/lei-12965-2014-04-23.md',
+    sourceUrl: 'https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm',
+    year: 2014,
+  },
 ];
 
 const CATALOG_BY_ID = new Map(CORE_LAWS_CATALOG.map((entry) => [entry.id, entry]));
