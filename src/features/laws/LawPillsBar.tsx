@@ -37,7 +37,7 @@ export function LawPillsBar({
 
   const handleOpen = (excerpt: LawExcerpt) => {
     setSelected(excerpt);
-    onWiden?.(540);
+    onWiden?.(480);
   };
 
   if (allExcerpts.length === 0) return null;

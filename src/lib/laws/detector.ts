@@ -9,32 +9,37 @@ export interface DetectedLawReference {
 interface LawPattern {
   lawId: string;
   regex: RegExp;
+  acronymRegex?: RegExp;
 }
 
 const LAW_PATTERNS: LawPattern[] = [
   {
     lawId: 'cf88',
-    regex: /(?:constitui[çc][ãa]o(?:\s+federal|\s+da\s+rep[úu]blica)?(?:\s+de\s+1988)?|cf\s*(?:\/|\s*)?88|carta\s+magna)/i,
+    regex: /(?:constitui[çc][ãa]o(?:\s+federal|\s+da\s+rep[úu]blica)?(?:\s+de\s+1988)?|carta\s+magna|cf\s*(?:\/|\s*)?88)/iu,
   },
   {
     lawId: 'lei-8112-1990',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?112(?:\/(?:19)?9[0-9])?|estatuto\s+dos\s+servidores(?:\s+da\s+uni[ãa]o)?|\brju\b|regime\s+jur[íi]dico\s+[úu]nico)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?112(?:\/(?:19)?9[0-9])?|estatuto\s+dos\s+servidores(?:\s+da\s+uni[ãa]o)?|regime\s+jur[íi]dico\s+[úu]nico)/iu,
+    acronymRegex: /(?<!\p{L})RJU(?!\p{L})/u,
   },
   {
     lawId: 'lei-9784-1999',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?9\.?784(?:\/(?:19)?9[0-9])?|processo\s+administrativo(?:\s+federal)?)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?9\.?784(?:\/(?:19)?9[0-9])?|processo\s+administrativo(?:\s+federal)?)/iu,
   },
   {
     lawId: 'lei-14133-2021',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?14\.?133(?:\/(?:20)?2[0-9])?|nova\s+lei\s+de\s+licita[çc][õo]es|\bnllc\b|lei\s+de\s+licita[çc][õo]es)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?14\.?133(?:\/(?:20)?2[0-9])?|nova\s+lei\s+de\s+licita[çc][õo]es|lei\s+de\s+licita[çc][õo]es)/iu,
+    acronymRegex: /(?<!\p{L})NLLC(?!\p{L})/u,
   },
   {
     lawId: 'lei-8429-1992',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?429(?:\/(?:19)?9[0-9])?|lei\s+de\s+improbidade(?:\s+administrativa)?|\blia\b)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?8\.?429(?:\/(?:19)?9[0-9])?|lei\s+de\s+improbidade(?:\s+administrativa)?)/iu,
+    acronymRegex: /(?<!\p{L})LIA(?!\p{L})/u,
   },
   {
     lawId: 'lei-12527-2011',
-    regex: /(?:lei\s+(?:n[ºo°.]\s*)?12\.?527(?:\/(?:20)?1[0-9])?|lei\s+de\s+acesso\s+[àa]\s+informa[çc][ãa]o|\blai\b)/i,
+    regex: /(?:lei\s+(?:n[ºo°.]\s*)?12\.?527(?:\/(?:20)?1[0-9])?|lei\s+de\s+acesso\s+[àa]\s+informa[çc][ãa]o)/iu,
+    acronymRegex: /(?<!\p{L})LAI(?!\p{L})/u,
   },
 ];
 
@@ -48,8 +53,8 @@ export function detectLawReferences(text: string): DetectedLawReference[] {
   if (!text || text.trim().length === 0) return [];
 
   const detectedLaws: string[] = [];
-  for (const { lawId, regex } of LAW_PATTERNS) {
-    if (regex.test(text)) {
+  for (const { lawId, regex, acronymRegex } of LAW_PATTERNS) {
+    if (regex.test(text) || (acronymRegex && acronymRegex.test(text))) {
       detectedLaws.push(lawId);
     }
   }

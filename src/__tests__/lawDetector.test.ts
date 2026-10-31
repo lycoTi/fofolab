@@ -78,6 +78,19 @@ describe('Detector de Referências a Leis (Fatia 11.2.3)', () => {
     expect(detected3[0].articleKey).toBe('1');
   });
 
+  it('não dispara falso positivo para palavras da língua portuguesa como "família", "Brasília" ou o verbo "lia"', () => {
+    expect(detectLawReferences('Na verdade, em NoSQL (o qual grafos pertencem à família)...')).toEqual([]);
+    expect(detectLawReferences('Enquanto ele lia o enunciado da questão sobre modelagem relacional...')).toEqual([]);
+    expect(detectLawReferences('O concurso ocorreu na cidade de Brasília.')).toEqual([]);
+    expect(detectLawReferences('A alíquota aplicada era de 15%.')).toEqual([]);
+  });
+
+  it('detecta a sigla LIA somente quando em caixa alta ou explícita', () => {
+    const detected = detectLawReferences('Nos termos da LIA, o ato doloso configura improbidade.');
+    expect(detected).toHaveLength(1);
+    expect(detected[0].lawId).toBe('lei-8429-1992');
+  });
+
   it('retorna array vazio quando o texto não contém menção a normas ou artigos', () => {
     expect(detectLawReferences('Em microsserviços, a comunicação assíncrona desacopla os serviços.')).toEqual([]);
     expect(detectLawReferences('O algoritmo de Dijkstra calcula o caminho mais curto.')).toEqual([]);

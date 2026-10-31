@@ -19,3 +19,4 @@ export interface FofoActiveQuestion {
   onNextSameSubject?: () => void;
   nextSameSubjectLabel?: string | null;
 }
+

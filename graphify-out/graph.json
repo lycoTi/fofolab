@@ -16223,7 +16223,7 @@
       "file_type": "code",
       "norm_label": "detectlawreferences()",
       "source_file": "src/lib/laws/detector.ts",
-      "source_location": "L47"
+      "source_location": "L52"
     },
     {
       "id": "src_lib_laws_parser_extractcaput",
@@ -34047,7 +34047,7 @@
       "file_type": "code",
       "norm_label": "law_patterns",
       "source_file": "src/lib/laws/detector.ts",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "src_lib_laws_index",
@@ -53545,7 +53545,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/laws/detector.ts",
-      "source_location": "L67",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -118447,7 +118447,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/laws/detector.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -118469,7 +118469,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/laws/detector.ts",
-      "source_location": "L47",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -129953,5 +129953,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a6a624c562133274c05706275e844a328dda9aeb"
+  "built_at_commit": "146d311dde7dfd6f36c7baf38547edce928de187"
 }

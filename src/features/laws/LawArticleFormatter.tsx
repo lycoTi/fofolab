@@ -46,11 +46,11 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
       const caputText = artMatch ? artMatch[2] : trimmed;
 
       elements.push(
-        <div key={idx} className="space-y-1.5 pb-2">
-          <div className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-xs font-semibold text-amber-300">
+        <div key={idx} className="space-y-2 pb-2.5">
+          <div className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 text-xs font-semibold text-amber-300">
             <span>{articleLabel}</span>
           </div>
-          <p className="font-serif text-[13.5px] leading-relaxed tracking-wide text-slate-100 selection:bg-orange-500/30">
+          <p className="font-serif text-[14px] leading-relaxed tracking-wide text-slate-100 selection:bg-orange-500/30">
             {renderInline(caputText)}
           </p>
         </div>
@@ -64,11 +64,11 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
       const paraLabel = paraMatch[1].replace(/[\*\:]/g, '').trim();
       const paraContent = paraMatch[2];
       elements.push(
-        <div key={idx} className="mt-2.5 space-y-1 border-l-2 border-sky-500/30 pl-3">
+        <div key={idx} className="mt-3.5 space-y-1.5 border-l-2 border-sky-500/35 pl-3.5 py-0.5">
           <span className="text-[11px] font-semibold tracking-wider text-sky-400 uppercase">
             {paraLabel}
           </span>
-          <p className="font-serif text-[13px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
+          <p className="font-serif text-[13.5px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
             {renderInline(paraContent)}
           </p>
         </div>
@@ -84,12 +84,12 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
       elements.push(
         <div
           key={idx}
-          className="group mt-1.5 flex items-start gap-2 border-l-2 border-slate-700/60 pl-3.5 py-0.5 transition-colors hover:border-amber-400/50"
+          className="group mt-2.5 flex items-start gap-2.5 border-l-2 border-slate-700/60 pl-3.5 py-0.5 transition-colors hover:border-amber-400/50"
         >
           <span className="font-mono text-xs font-semibold text-amber-400/90 shrink-0 select-none pt-0.5">
             {romanNumeral}
           </span>
-          <p className="font-serif text-[13px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
+          <p className="font-serif text-[13.5px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
             {renderInline(incisoContent)}
           </p>
         </div>
@@ -103,11 +103,11 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
       const alineaLetter = alineaMatch[1].trim();
       const alineaContent = alineaMatch[2];
       elements.push(
-        <div key={idx} className="mt-1 flex items-start gap-2 border-l-2 border-emerald-500/20 pl-6 py-0.5">
+        <div key={idx} className="mt-1.5 flex items-start gap-2 border-l-2 border-emerald-500/25 pl-6 py-0.5">
           <span className="font-mono text-xs font-medium text-emerald-400 shrink-0 select-none">
             {alineaLetter}
           </span>
-          <p className="font-serif text-[12.5px] leading-relaxed text-slate-300 selection:bg-orange-500/30">
+          <p className="font-serif text-[13px] leading-relaxed text-slate-300 selection:bg-orange-500/30">
             {renderInline(alineaContent)}
           </p>
         </div>
@@ -117,12 +117,12 @@ export function LawArticleFormatter({ articleLabel, fullText }: LawArticleFormat
 
     // 6. Texto contínuo / outro parágrafo comum
     elements.push(
-      <p key={idx} className="mt-1.5 font-serif text-[13px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
+      <p key={idx} className="mt-2 font-serif text-[13.5px] leading-relaxed text-slate-200 selection:bg-orange-500/30">
         {renderInline(trimmed)}
       </p>
     );
   });
 
-  return <div className="space-y-1.5 text-xs">{elements}</div>;
+  return <div className="space-y-2 text-xs">{elements}</div>;
 }
 

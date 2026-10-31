@@ -142,7 +142,7 @@ export function FofoIaPanel(props: FofoIaPanelProps) {
   })() : null;
 
   return (
-    <section aria-label="FofoIA" className="flex h-full min-w-0 flex-col bg-slate-900/75">
+    <section aria-label="FofoIA" className="relative flex h-full min-w-0 flex-col bg-slate-900/75">
       <FofoPanelHeader topicLabel={topicLabel} aiConfigured={props.aiConfigured} hasTurns={turns.length > 0} onClear={clear} />
       <LawPillsBar excerpts={props.lawExcerpts} conversationText={turns.length > 0 ? turns.map((t) => t.content).join(' ') : undefined} onWiden={props.onWiden} onSaveToNotebook={props.onSaveSummary} />
 
